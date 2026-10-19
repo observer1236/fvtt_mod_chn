@@ -1457,7 +1457,7 @@
                 "Message": "选择一个敌人以及最多等同于你熟练加值数量的盟友作为目标！"
             },
             "Disengage": {
-                "CunningAction": "狡诈动作",
+                "CunningAction": "灵巧动作",
                 "StepOfTheWind": "疾步如风"
             },
             "DivineIntervention": {
@@ -4913,8 +4913,8 @@
         "Animations.CastBurst": "爆发法术",
         "Animations.CastTouch": "接触法术",
         "Animations.CelestialSummon": "天界召唤",
-        "Animations.CunningActionDash.Name": "狡诈动作：疾走",
-        "Animations.CunningActionDisengage.Name": "狡诈动作：撤离",
+        "Animations.CunningActionDash.Name": "灵巧动作：疾走",
+        "Animations.CunningActionDisengage.Name": "灵巧动作：撤离",
         "Animations.Darkness.Name": "黑暗术",
         "Animations.Darkness.OpacityHint": "黑云的不透明度，0 为不可见，1 为完全不透明。",
         "Animations.Darkness.ScaleHint": "黑云相对于黑暗区域的大小。",
