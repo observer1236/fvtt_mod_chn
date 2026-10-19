@@ -16,7 +16,7 @@
 	"TOKENATTACHER.info.ObjectsDetached": "从 token 中分离的选定对象。",
 	"TOKENATTACHER.info.SelectionSaved": "保存所选对象，以便将来依附。",
 	"TOKENATTACHER.info.MigrationInProgress": "数据迁移到 {version} 正在进行中。这需要一些时间，并会打开你的所有场景。请耐心等待。",
-	"TOKENATTACHER.info.MigratedScene": "场景 {scename} 的数据迁移已完成。",
+	"TOKENATTACHER.info.MigratedScene": "场景 {scenename} 的数据迁移已完成。",
 	"TOKENATTACHER.info.DataModelMergedTo": "数据迁移已完成。新数据模型版本： {version}",
 	"TOKENATTACHER.info.MigratedActors": "角色目录完成迁移。",
 	"TOKENATTACHER.info.MigratingCompendium": "目录 {compendium} 的迁移正在进行中...",

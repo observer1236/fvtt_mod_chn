@@ -118,7 +118,7 @@
 	"MAGICITEMS.ToggleActiveEffectDialogYes": "是",
 	"MAGICITEMS.ToggleActiveEffectDialogNo": "否",
 	"MAGICITEMS.ToggleActiveEffectError": "添加激活效果时发生错误，请检查控制台。",
-    "MAGICITEMS.ShowChargesMessage": "魔法物品\"{name}\"的剩余充能为{chargesLeft}。",
+    "MAGICITEMS.ShowChargesMessage": "魔法物品\"{name}\"的剩余充能为 {chargesLeft}/{chargesMax}。",
     "MAGICITEMS.SummoningDialogTitle": "召唤选项",
     "MAGICITEMS.SummoningDialogButton": "确认召唤"
 }

@@ -187,8 +187,8 @@
 					"caption.hint": "在分享的媒体旁边显示实体名称。",
 					"sheetMenu.label": "表单右键菜单",
 					"sheetMenu.hint": "将媒体分享项添加到表单右键菜单中。",
-					"sheetHeader.label": "卡片标题按钮",
-					"sheetHeader.hint": "将媒体共享按钮添加到卡片标题。"
+					"sheetHeader.label": "角色卡标题按钮",
+					"sheetHeader.hint": "将媒体共享按钮添加到角色卡标题。"
 				}
 			},
 			"blacklistSettings": {

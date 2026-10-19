@@ -1954,7 +1954,7 @@
   "CALENDARIA.Release.Title": "欢迎使用 Calendaria v{version}！",
   "CALENDARIA.Reminder.Dismiss": "关闭",
   "CALENDARIA.Reminder.Hours": "{hours}小时",
-  "CALENDARIA.Reminder.HoursMinutes": "{hours}小时{minutes}分钟",
+  "CALENDARIA.Reminder.HoursMinutes": "{hours} 小时 {mins} 分钟",
   "CALENDARIA.Reminder.HoursPlural": "{hours}小时",
   "CALENDARIA.Reminder.Label": "提醒",
   "CALENDARIA.Reminder.Minutes": "{mins}分钟",

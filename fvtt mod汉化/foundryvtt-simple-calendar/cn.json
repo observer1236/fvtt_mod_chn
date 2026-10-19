@@ -496,7 +496,7 @@
 	"FSC.Configuration.Moon.Month": "新月参照月",
 	"FSC.Configuration.Moon.MonthHelp": "用于参照新月的月份。",
 	"FSC.Configuration.Moons": "月亮",
-	"FSC.Info.ThemeChange": "Simple Calendar 的主题已被系统/模组/宏更改为。主题可以在 Simple Calendar 的设置中改回。",
+	"FSC.Info.ThemeChange": "Simple Calendar 的主题已被系统/模组/宏更改为 <strong>“{THEME}”</strong>。主题可以在 Simple Calendar 的设置中改回。",
 	"FSC.Warn.Time.ActiveCombats": "正在进行战斗，请在开启真实时间时钟之前将战斗结算完毕。",
 	"FSC.Warn.Macros.GMUpdate": "只有GM可以更新日历日期！",
 	"FSC.Warn.Calendar.NotGM": "游戏中现在没有GM，需要GM登录来为玩家更改日期/时间。",

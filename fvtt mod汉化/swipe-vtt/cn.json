@@ -673,7 +673,7 @@
 			"ReloadNow": "立即重新加载",
 			"ReloadLater": "稍后",
 			"SaveFailed": "无法保存您的选择 - 主持人离线。他们上线后重试。",
-			"StandaloneLegacy": "独立（在 V14 上不可用 — 视为仅卡片）"
+			"StandaloneLegacy": "独立（在 V14 上不可用 — 视为仅角色卡）"
 		},
 		"ConnectPhone": {
 			"Title": "滑动显示二维码",
@@ -834,7 +834,7 @@
 			"BundlesRefreshed": "紫晶圈功能焕然一新。",
 			"PatronNameUnknown": "（未知）",
 			"FeatureLocked": "连接 Patreon 账户",
-			"UpgradeHint": "优化卡片专供 Patreon 会员使用。连接或使用常规 Foundry 板材。",
+			"UpgradeHint": "优化角色卡专供 Patreon 会员使用。连接或使用常规 Foundry 角色卡。",
 			"TokenExpired": "SwipePatreon 会话已过期。GM 需重新连接 Patreon 以解锁功能。",
 			"GMReloadRequest": "主持人加载紫晶圈功能。正在重新加载...",
 			"LinkCodeFieldset": "使用链接代码认证",
@@ -850,7 +850,7 @@
 			"ConnectRequestNoGM": "当前没有主持人在线。请在主持人加入后，请其连接 Patreon。",
 			"ConnectRequestFailed": "无法联系主持人。请确认 socketlib 已启用。",
 			"GMConnectRequest": "{name} 请求你连接 Patreon，以便使用优化的角色卡。",
-			"SheetsForcedOn": "您的主持人已为您的帐户启用移动卡片，因此无法在此处禁用它们。"
+			"SheetsForcedOn": "您的主持人已为您的帐户启用移动端角色卡，因此无法在此处禁用它们。"
 		},
 		"Diagnostics": {
 			"CollectionActors": "角色",

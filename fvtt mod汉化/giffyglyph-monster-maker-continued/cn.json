@@ -945,7 +945,7 @@
 	"gmm.settings.deferral_countdown.font.name": "字体",
 	"gmm.settings.deferral_countdown.size.name": "体型",
 	"gmm.settings.deferral_countdown.preview.name": "预览",
-	"gmm.action.artifact.duration.save": "直流{ability}",
+	"gmm.action.artifact.duration.save": "DC {ability}",
 	"gmm.action.artifact.range.km.long": "{normal}/{long} 公里",
 	"gmm.action.artifact.range.km.normal": "{normal}公里",
 	"gmm.action.artifact.range.m.long": "{normal}/{long}米",

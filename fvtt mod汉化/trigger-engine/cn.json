@@ -551,7 +551,7 @@
 						"title": "缓存世界用户"
 					},
 					"text-value.inputs.plain.title": "文本",
-					"list-value.inputs.entry.title": "参赛作品",
+					"list-value.inputs.entry.title": "条目",
 					"list-value.inputs.entry.tooltip": "逗号分隔列表",
 					"list-value.title": "缓存文本列表",
 					"number-value.title": "缓存数值",
@@ -969,7 +969,7 @@
 					"create-effect-source.customs.inputs.marks.label": "代币标记",
 					"create-effect-source.customs.inputs.marks.tooltip": "<ul><li>slug:&lt;slug&gt;:&lt;uuid&gt;</li></ul>",
 					"create-effect-source.groups.marks": "TokenMark 选择项",
-					"create-effect-source.groups.origin": "system.context",
+					"create-effect-source.groups.origin": "系统上下文",
 					"create-effect-source.title": "根据来源创建效果",
 					"toggle-option.inputs.checked.title": "启用",
 					"toggle-option.inputs.item.title": "商品编号",

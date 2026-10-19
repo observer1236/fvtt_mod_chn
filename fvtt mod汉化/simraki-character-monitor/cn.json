@@ -106,8 +106,8 @@
 				"Name": "监控死亡豁免",
 				"Hint": "追踪角色卡上死亡豁免检定结果的变化"
 			},
-			"PartyMonitor.Name": "队伍图纸监视",
-			"PartyMonitor.Hint": "监视队伍图纸的更改：成员、货币和共享背包",
+			"PartyMonitor.Name": "队伍角色卡监视",
+			"PartyMonitor.Hint": "监视队伍角色卡的更改：成员、货币和共享背包",
 			"MonitorPartyMembers.Name": "监视队伍成员",
 			"MonitorPartyMembers.Hint": "监视队伍成员的加入和移除",
 			"ShowChangedBy.Name": "显示修改人员",

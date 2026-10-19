@@ -57,7 +57,7 @@
             "CollegeOfLore": {
               "CuttingWords": {
                 "CuttingWordsReducedAttackHit": "生物遭受惊人之语，攻击检定降低了 {reduction}，但仍然击中了目标。",
-                "CuttingWordsReducedAttackMiss": "生物遭受惊人之语，攻击检定降低了 {reduction，并攻击失手。",
+                "CuttingWordsReducedAttackMiss": "生物遭受惊人之语，攻击检定降低了 {reduction}，并攻击失手。",
                 "DamageReduced": "生物遭受惊人之语，伤害被降低了 {reduction}。",
                 "ReactionAvailable": "{actorName} 可因 {workflowType} 用反应触发 {itemProperName}。",
                 "SeemsNotBeEffectedBy": "目标似乎无法被你的 {itemProperName} 影响。"

@@ -44,10 +44,10 @@
 		"showMapTooltips.Hint": "在作为角色/物品表显示的可填写PDF上，为每个字段添加提示，显示PDF字段名称以及映射到的角色/物品字段(如果有)",
 		"showFieldMenus.Name": "编辑字段映射",
 		"showFieldMenus.Hint": "将每个可编辑字段替换为下拉菜单，可从中选择角色/物品中的字段(如果字段已配置使用getter/setter函数，则该字段不可编辑)",
-		"showTitleBarButtons.Name": "在卡片控件菜单中显示按钮",
+		"showTitleBarButtons.Name": "在角色卡控件菜单中显示按钮",
 		"showTitleBarButtons.Hint": "选中后，会在角色/PDF物品表的表控制菜单中显示有用的按钮",
-		"showGmButtons.Name": "在卡片控制菜单中显示主持人按钮",
-		"showGmButtons.Hint": "在卡片控制菜单中显示“记录 PDF 字段”和“检查数据”按钮",
+		"showGmButtons.Name": "在角色卡控制菜单中显示主持人按钮",
+		"showGmButtons.Hint": "在角色卡控制菜单中显示“记录 PDF 字段”和“检查数据”按钮",
 		"autoScrollToc.Name": "自动滚动目录",
 		"autoScrollToc.Hint": "当PDF视图变化时，自动滚动日志目录以确保当前视图可见",
 		"labelClickableColor": {
@@ -105,7 +105,7 @@
 		"itemSheet.Name": "物品表: '{name}'",
 		"itemSheet.Hint": "选择用于'{name}'物品的PDF文件",
 		"inspector": {
-			"help1": "你可以保持此窗口打开并返回到系统表。窗口将每10秒刷新一次以反映对角色所做的更改，但你也可以通过标题栏上的'刷新'按钮手动刷新。",
+			"help1": "你可以保持此窗口打开并返回到系统角色卡。窗口将每10秒刷新一次以反映对角色所做的更改，但你也可以通过标题栏上的'刷新'按钮手动刷新。",
 			"help2": "在PDF中使用这些数据路径时应非常小心。颜色编码是'最佳猜测'，虽然通常正确，但某些系统可能有例外或导致你输入表的更改被系统覆盖。",
 			"help3": "虽然提供了复制 /roll 语法的按钮以方便使用，但系统可能会在掷骰时省略或更改数据。如果/roll语法未产生预期结果，这不是错误。",
 			"DANGER": {

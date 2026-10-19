@@ -32,7 +32,7 @@
 	"BEAVERS_MOBILE.sheet": "移动端角色卡",
 	"BEAVERS_MOBILE.device.name": "此设备上的角色卡",
 	"BEAVERS_MOBILE.device.hint": "此设备是否使用移动端角色卡：单列、宽度适合手机，并在手机上全屏显示。按设备分别存储。",
-	"BEAVERS_MOBILE.device.auto": "手机上的移动卡片（屏幕宽度最大为 600 像素）",
+	"BEAVERS_MOBILE.device.auto": "手机上的移动端角色卡（屏幕宽度最大为 600 像素）",
 	"BEAVERS_MOBILE.device.always": "始终是移动表",
 	"BEAVERS_MOBILE.device.never": "从来没有手机表"
 }

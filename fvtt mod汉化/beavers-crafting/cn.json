@@ -55,7 +55,7 @@
 			"beaversTests.test": "测试",
 			"beaversTests.hitsHint": "在此测试成功之前需要进行成功检查",
 			"beaversTests.failsHint": "进程失败之前检查失败",
-			"beaversTests.dc": "直流电",
+			"beaversTests.dc": "DC",
 			"beaversTests.consume": "消耗",
 			"beaversTests.consumeHint": "测试失败会消耗成本",
 			"beaversTests.andTestHint": "添加额外的测试",

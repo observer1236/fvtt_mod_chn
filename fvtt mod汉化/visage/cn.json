@@ -585,7 +585,7 @@
 	"_comment_V5_5_KEYS": "--- V5.5 KEYS ---",
 	"VISAGE.Editor.DAT.Title": "Dylan 动画 Token",
 	"VISAGE.Editor.DAT.SpriteSheet": "启用精灵图集",
-	"VISAGE.Editor.DAT.SheetImage": "图纸图像",
+	"VISAGE.Editor.DAT.SheetImage": "角色卡图像",
 	"VISAGE.Editor.DAT.SheetStyle": "图集排列方式",
 	"VISAGE.Editor.DAT.SeparateIdle": "独立待机帧",
 	"VISAGE.Settings.SanitizeSelected.Name": "重置选定的Token灯",

@@ -90,5 +90,5 @@
 	"daavy-chat.Feedback.Invalid": "选择一个类别并输入最多 3,000 个字符的消息。",
 	"daavy-chat.Feedback.Success": "反馈已发送。",
 	"daavy-chat.Feedback.Error": "无法发送反馈。稍后再试。",
-	"daavy-chat.Discord.Label": "不和谐"
+	"daavy-chat.Discord.Label": "Discord"
 }

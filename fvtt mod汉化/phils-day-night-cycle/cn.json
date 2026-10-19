@@ -525,7 +525,7 @@
 		"CalendarMoonTitle": "{phase} - 第 {day}/{cycle} 天",
 		"CalendarEventCount": "{count} 个事件",
 		"SetCurrentDate": "设为当前日期",
-		"ConfirmDateChange": "确定要向前/向后跳转 {days} 天吗？",
+		"ConfirmDateChange": "确定要向 {direction} 跳转 {days} 天吗？",
 		"NoEventsFound": "未找到事件。",
 		"DirectionForward": "向前",
 		"DirectionBackward": "向后",

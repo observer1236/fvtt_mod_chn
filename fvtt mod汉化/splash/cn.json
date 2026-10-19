@@ -442,7 +442,7 @@
 			"library.types.drop-zone.name": "降落区",
 			"library.types.drop-zone.hint": "接受匹配的可拖动对象并运行操作。",
 			"arrangement.title": "排列选定的对象",
-			"arrangement.group": "集团",
+			"arrangement.group": "分组",
 			"arrangement.layer": "图层",
 			"arrangement.chooseAlignment": "选择边缘...",
 			"arrangement.chooseLayer": "更改订单...",

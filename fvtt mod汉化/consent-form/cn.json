@@ -337,7 +337,7 @@
 		"GM_APP_TITLE": "同意仪表板",
 		"OPEN_PLAYER_APP": "打开我的表格",
 		"OPEN_PLAYER_APP_HINT": "检查并更新您的界限和游戏偏好。",
-		"OPEN_GM_APP": "打开主播仪表板",
+		"OPEN_GM_APP": "打开主持人仪表板",
 		"OPEN_GM_APP_HINT": "查看玩家表格和表格摘要。",
 		"SETTINGS_ROLE_NOTICE_GM": "<div class='consent-settings-notice__content'><strong>您以主持人身份登录。</strong><ul><li>仪表板可让您查看表格摘要和已完成的表格。</li><li>个人表格和网站连接仅对使用自己的身份登录的玩家显示账户。</li><li>表格、网站和同步是可选的。 X卡在游戏过程中始终保持可用状态。</li></ul></div>",
 		"SETTINGS_ROLE_NOTICE_PLAYER": "<div class='consent-settings-notice__content'><strong>您以玩家身份登录。</strong><ul><li>您的表格是个人且可选的；您不需要回答每个主题。</li><li>网站和同步也是可选的。</li><li>即使没有填写表格，您也可以在游戏过程中始终使用X卡。</li></ul></div>",

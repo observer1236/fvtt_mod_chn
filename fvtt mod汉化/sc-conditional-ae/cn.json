@@ -193,7 +193,7 @@
 			"FormulaFieldStyle.Expand": "扩展行 - 更改下的全角字段",
 			"FormulaFieldStyle.Single": "单个字段 - 值字段切换为公式",
 			"FormulaFieldStyle.Column": "公式列 — 始终可见的带标签列",
-			"DiscordLink.Label": "不和谐",
+			"DiscordLink.Label": "Discord",
 			"DiscordLink.Hint": "加入 Shattered Codex 的 Discord 服务器。",
 			"CommunityLinks.Aria": "社区链接"
 		},
@@ -226,7 +226,7 @@
 		"AdvancedConditions.Builder.Empty": "No conditions.过滤器通过。",
 		"AdvancedConditions.Builder.KeyPlaceholder": "例如attributes.HP.value",
 		"AdvancedConditions.Builder.ValuePlaceholder": "例如5、真“火”",
-		"AdvancedConditions.Builder.GroupOperator": "集团运营商",
+		"AdvancedConditions.Builder.GroupOperator": "分组运算符",
 		"AdvancedConditions.Builder.ComparisonOperator": "比较运算符",
 		"AdvancedConditions.Builder.ValueHint": "值支持 JSON 字面量。字符串显示时带引号，因此 \"5\" 仍是文本，不带引号的 5 则是数字。",
 		"AdvancedConditions.Builder.InvalidJson": "在打开可视化生成器之前更正 JSON。",

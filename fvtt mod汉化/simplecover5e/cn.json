@@ -37,7 +37,7 @@
 			},
 			"coverHintsGmMessage": {
 				"Name": "封面变化指标",
-				"Hint": "当骰子对话框中的封面发生变化时，添加一个警告图标来攻击目标行和行李检定总数。 Visible to the 主持人 only."
+				"Hint": "当骰子对话框中的封面发生变化时，添加一个警告图标来攻击目标行和豁免检定总数。 Visible to the 主持人 only."
 			},
 			"CreaturesHalfOnly": {
 				"Name": "生物至多提供半身掩护",
@@ -206,8 +206,8 @@
 			},
 			"Save": {
 				"none": "没有盖子。",
-				"half": "<strong>+2</strong> 为灵巧行李检定。",
-				"threeQuarters": "<strong>+5</strong> 为灵巧行李检定。",
+				"half": "<strong>+2</strong> 为灵巧豁免检定。",
+				"threeQuarters": "<strong>+5</strong> 为灵巧豁免检定。",
 				"total": "无法直接针对。"
 			},
 			"CoverModeChanged": "掩护模式已更改",
