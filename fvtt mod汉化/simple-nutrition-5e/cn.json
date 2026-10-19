@@ -98,7 +98,7 @@
 		"Settings.CalendarMode.Off": "始终关闭",
 		"Settings.DisableGroupSheet.Name": "禁用组表集成",
 		"Settings.DisableGroupSheet.Hint": "隐藏成员条目上的营养跟踪器以及组表上的免费食物和水按钮。",
-		"Settings.DisableActivityNutrition.Name": "禁用活动对话框集成",
+		"Settings.DisableActivityNutrition.Name": "禁用行动对话框集成",
 		"Settings.DisableActivityNutrition.Hint": "不要将营养选项添加到食物物品的使用对话框中。",
 		"Calendar.DayChangeFailed": "无法更新 {actor} 的营养"
 	}

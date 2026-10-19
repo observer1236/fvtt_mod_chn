@@ -1334,7 +1334,7 @@
 	"TIDY5E.SETTINGS.World.SheetConfiguration.Label": "{sheetName} 表配置",
 	"TIDY5E.SETTINGS.World.Tab.DefaultSheets": "默认角色卡",
 	"TIDY5E.SETTINGS.World.Tab.Overview": "概述",
-	"TIDY5E.SPELLS.CastActivity.MissingSpell": "此活动不附带任何符咒。",
+	"TIDY5E.SPELLS.CastActivity.MissingSpell": "此行动未关联任何法术。",
 	"TIDY5E.SPELLS.Sections.Title": "法术部分",
 	"TIDY5E.SPELLS.SourceItem.Identifier": "源物品标识符",
 	"TIDY5E.SPELLS.SourceItem.IdentifierHint": "交易的来源物品标识符出现在此处。要分配角色不拥有的标识符，请在此文本字段中输入带有物品类型前缀的标识符，例如 class:cleric。",

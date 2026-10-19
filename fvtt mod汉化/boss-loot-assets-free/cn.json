@@ -50,7 +50,7 @@
 		"title": "BLFX 动画迁移",
 		"contentPhrase1": "{boldStart}免费版转高级版{boldEnd}：将自定义动画从免费版迁移至高级版！",
 		"contentPhrase2": "迁移后，建议使用{boldStart}迁移物品{boldEnd}功能，通过音效等新特性增强动画效果。",
-		"contentPhrase3": "{boldStart}DnD v3转v4{boldEnd}：将动画从DnD5e v3迁移至DnD5e v4。注意：此过程仅对包含单一动画和活动的物品有效。",
+		"contentPhrase3": "{boldStart}DnD v3转v4{boldEnd}：将动画从DnD5e v3迁移至DnD5e v4。注意：此过程仅对包含单一动画和行动的物品有效。",
 		"contentPhrase4": "所有场景中的Token和物品栏中的物品都将参与此过程。",
 		"button1Label": "迁移动画 <span>(免费版转高级版)</span>",
 		"button2Label": "迁移动画 <span>(DnD5e v3转v4)</span>",
@@ -142,7 +142,7 @@
 	"boss-loot-assets-free.afterActivityUse": {
 		"triggerName": "{trigger}",
 		"triggerInfo": "行动",
-		"triggerLabel": "使用活动 {trigger} 后播放动画。访问“sourceToken”、“[targetTokens]”、“物品”、“掷骰”和“活动”",
+		"triggerLabel": "使用行动 {trigger} 后播放动画。可访问 sourceToken、[targetTokens]、item、roll 和 activity。",
 		"triggerLabelShort": "使用行动'{trigger}'后播放动画",
 		"primaryAnimationDesc": "在来源Token上",
 		"secondaryAnimationDesc": "从来源到目标",

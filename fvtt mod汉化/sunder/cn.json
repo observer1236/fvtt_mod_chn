@@ -70,7 +70,7 @@
 	"SUNDER.Notification.FailedResolveActorItem": "无法解析破损检定的角色或物品。",
 	"SUNDER.Notification.NoAttacker": "未找到破损检定的攻击者。",
 	"SUNDER.Notification.InvalidDurabilityJSON": "按稀有度设置耐久度的JSON无效。",
-	"SUNDER.Notification.ErrorPreUseActivity": "处理破损检定的攻击活动时出错。",
+	"SUNDER.Notification.ErrorPreUseActivity": "处理破损检定的攻击行动时出错。",
 	"SUNDER.Notification.InvalidItem": "提供的破损检定物品无效。",
 	"SUNDER.Notification.NoActiveGM": "未找到在线GM来处理破损检定。",
 	"SUNDER.Notification.FailedBreakageRoll": "评估破损检定失败。",

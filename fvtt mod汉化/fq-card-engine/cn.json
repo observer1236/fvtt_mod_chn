@@ -704,7 +704,7 @@
 	"FQCARDENGINE.TooltipCancelled": "优势与劣势抵消",
 	"FQCARDENGINE.TooltipAutoFail": "自动故障：{reasons}",
 	"FQCARDENGINE.TooltipDefenseless": "无防备：{reasons}",
-	"FQCARDENGINE.ReasonOnCaster": "{reason}（脚轮）",
+	"FQCARDENGINE.ReasonOnCaster": "{reason}（施法者）",
 	"FQCARDENGINE.ReasonOnTarget": "{reason}（目标）",
 	"FQCARDENGINE.ReasonArmor": "未经训练的装甲",
 	"FQCARDENGINE.ReasonSheet": "角色卡",

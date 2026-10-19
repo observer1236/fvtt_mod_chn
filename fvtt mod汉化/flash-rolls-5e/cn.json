@@ -249,7 +249,7 @@
 					"chatMessages": "聊天消息",
 					"visibility": "可见性",
 					"dndBeyond": "D&D Beyond（Patreon 功能）",
-					"activityChatCards": "活动聊天卡"
+					"activityChatCards": "行动聊天卡"
 				}
 			},
 			"ddbImportOwnership": {
@@ -593,12 +593,12 @@
 				"label": "旧版Token关联迁移状态",
 				"hint": "内部标记，用于追踪旧版Token关联是否已迁移至新的基于场景的格式。"
 			},
-			"compactActivityCards.label": "紧凑型活动卡",
-			"compactActivityCards.hint": "将攻击、伤害和治疗骰子折叠到创建它们的活动卡中，作为右侧总计的行和带有骰子细分的抽屉。需要 DnD5e 5.3 或更高版本，并且在 midi-qol 处于活动状态时不可用。在 DnD5e 6.0 上，它与系统的“摘要聊天卡”客户端设置保持同步：更改其中一项会同时更改两者。当 Carolingian UI 处于活动状态时，无论哪个模块发布了此功能的新版本，都会运行它。",
+			"compactActivityCards.label": "紧凑型行动卡",
+			"compactActivityCards.hint": "将攻击、伤害和治疗掷骰合并到生成它们的行动卡片中，按行显示，右侧为总数，并可展开骰子明细。需要 dnd5e 5.3 或更高版本，启用 midi-qol 时不可用。在 dnd5e 6.0 中，与系统的“汇总聊天卡片”客户端设置保持同步，修改其中一项会同时修改另一项。启用 Carolingian UI 时，由提供较新版本此功能的模组负责处理。",
 			"collapseCardTags.label": "默认折叠卡片标签",
-			"collapseCardTags.hint": "在紧凑型活动卡上仅显示最有用的标签（激活、范围、关键属性），并使用 +N 芯片显示其余标签。",
+			"collapseCardTags.hint": "在紧凑行动卡片上仅显示最有用的标签（激活、射程、关键属性），并用 +N 标记展开其余标签。",
 			"labeledCardButtons.label": "带标签的卡片按钮",
-			"labeledCardButtons.hint": "在活动卡按钮上的图标旁边显示一个简短的文本标签（攻击、伤害、保存、模板...）。取消选中以使用仅图标按钮。",
+			"labeledCardButtons.hint": "在行动卡片按钮（攻击、伤害、豁免、模板等）的图标旁显示简短文字。取消勾选则仅使用图标按钮。",
 			"retroAdvantageButtons.label": "追溯优势按钮",
 			"retroAdvantageButtons.hint": "显示攻击总数两侧的按钮，检查并保存掷骰后应用优势或劣势的掷骰，再掷 1 个 d20 并保持最高或最低。只有掷骰的作者和主持人才能看到它们。",
 			"ddbSyncToDDB.label": "Foundry → D&D Beyond：自动将角色更改从 Foundry 发送到 D&D Beyond",
@@ -942,9 +942,9 @@
 		"compactCards.retroNormal": "回到正常掷骰子",
 		"compactCards.retroChanged": "掷骰后更改",
 		"compactCards.retroFailed": "骰子无法更改。",
-		"compactCards.enabledSummarySetting": "Flash Token Bar 打开了 DnD5e 客户端设置“摘要聊天卡”以匹配其紧凑活动卡设置。",
-		"compactCards.disabledSummarySetting": "Flash Token Bar 关闭了 DnD5e 客户端设置“摘要聊天卡”以匹配其紧凑活动卡设置。",
-		"compactCards.needsSummarySetting": "紧凑型活动卡需要启用 DnD5e 设置“摘要聊天卡”。",
+		"compactCards.enabledSummarySetting": "Flash Token Bar 打开了 DnD5e 客户端设置“摘要聊天卡”以匹配其紧凑行动卡设置。",
+		"compactCards.disabledSummarySetting": "Flash Token Bar 关闭了 DnD5e 客户端设置“摘要聊天卡”以匹配其紧凑行动卡设置。",
+		"compactCards.needsSummarySetting": "紧凑型行动卡需要启用 DnD5e 设置“摘要聊天卡”。",
 		"compactCards.pendingSave": "还没滚",
 		"compactCards.addTargeted": "添加目标Token作为目标",
 		"compactCards.addSelected": "添加选定的Token作为目标",
@@ -954,7 +954,7 @@
 		"compactCards.failures": "失败",
 		"compactCards.showAllTags": "显示所有标签",
 		"compactCards.showFewerTags": "显示更少的标签",
-		"compactCards.handledBy": "紧凑型活动卡在此客户端上由 {module} 处理。应用其设置并忽略以下设置。",
+		"compactCards.handledBy": "紧凑型行动卡在此客户端上由 {module} 处理。应用其设置并忽略以下设置。",
 		"compactCards.selectTargeted": "选择本次掷骰目标的Token",
 		"compactCards.noRecordedTargets": "本次掷骰在当前场景中没有记录任何目标。"
 	},

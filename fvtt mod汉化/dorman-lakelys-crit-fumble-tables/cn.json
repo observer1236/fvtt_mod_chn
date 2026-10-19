@@ -69,9 +69,9 @@
 				"PlayError": "播放音效失败"
 			},
 			"DamageCardMode.Name": "额外伤害卡牌风格",
-			"DamageCardMode.Hint": "如何发布暴击/掉球额外伤害。 “自动”（推荐）发布一张 DnD5e 伤害活动卡，让玩家对自己的目标施加伤害。显然，“伤害活动”是同一张牌。 “普通掷骰卡”使用传统的掷骰卡，只有主持人可以申请。",
+			"DamageCardMode.Hint": "选择如何发布暴击或大失败的额外伤害。“自动”（推荐）会发布 dnd5e 伤害行动卡片，允许玩家对自己拥有控制权限的目标应用伤害。“伤害行动”会明确使用同一种卡片。“普通掷骰卡片”使用旧版掷骰卡片，只有主持人能通过它应用伤害。",
 			"DamageCardMode.Auto": "自动（推荐）",
-			"DamageCardMode.Activity": "伤害活动（玩家可以申请）",
+			"DamageCardMode.Activity": "伤害行动（玩家可应用伤害）",
 			"DamageCardMode.Roll": "普通骰子卡（主持人适用）",
 			"WildMagicTable.Name": "狂野魔法桌",
 			"WildMagicTable.Hint": "当法术摸索触发狂野的魔法涌动时，桌子就会掷骰。接受表 UUID 或普通表名称，因此您可以指向 PHB 2024 表（默认）、Tasha 或您自己的自制表。留空以禁用浪涌。",
