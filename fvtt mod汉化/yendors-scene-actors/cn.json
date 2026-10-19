@@ -1,4 +1,5 @@
-{"Menu":{
+{
+	"Menu": {
 		"enableSceneActorsOnScene": "启用角色场景",
 		"hideSceneActorsOnScene": "暂时隐藏角色场景"
 	},
@@ -71,7 +72,7 @@
 		"tooltipItemDisable": "对玩家禁用",
 		"tooltipItemEnable": "对玩家启用",
 		"notification": {
-			"noCharacter": "必须为玩家分配一个角色。"
+			"noCharacter": "The player must be assigned a character."
 		}
 	}
 }

@@ -1,4 +1,4 @@
-﻿{
+{
     "TYPES": {
         "RegionBehavior": {
             "ionrift-waterline": {
@@ -7,27 +7,31 @@
         }
     },
 
-    "IonriftWaterline.SettingsEnableTokenWake": "Token water wake (ripples)",
-    "IonriftWaterline.SettingsEnableTokenWakeHint": "When enabled, tokens moving through Ionrift water regions emit expanding ring ripples on your client.",
+    "IonriftWaterline.SettingsEnableTokenWake": "Token ripples",
+    "IonriftWaterline.SettingsEnableTokenWakeHint": "When enabled, tokens moving through water drop ripples",
 
-    "IonriftWaterline.SettingsRippleTuning": "Ripple Tuning",
-    "IonriftWaterline.SettingsRippleTuningLabel": "Open Ripple Tuning",
-    "IonriftWaterline.SettingsRippleTuningHint": "Fine-tune ripple lifetime, radius, variance, and shader parameters. Client-local; safe to adjust mid-session.",
+    "IonriftWaterline.SettingsWaterlineStudio": "Waterline",
+    "IonriftWaterline.SettingsWaterlineStudioLabel": "Open Waterline",
+    "IonriftWaterline.SettingsWaterlineStudioHint": "Configure water regions and ripples.",
+
+    "IonriftWaterline.SettingsRippleTuning": "Waterline",
+    "IonriftWaterline.SettingsRippleTuningLabel": "Open Waterline",
+    "IonriftWaterline.SettingsRippleTuningHint": "Configure water regions and ripples.",
 
     "IonriftWaterline.SettingsDebug": "Debug Logging",
-    "IonriftWaterline.SettingsDebugHint": "Enable verbose console logging for water and ripple state. Useful for troubleshooting; can be chatty in combat.",
+    "IonriftWaterline.SettingsDebugHint": "Enable verbose console logging",
 
-    "IonriftWaterline.WakeTuningTitle": "Token Ripple Tuning",
-    "IonriftWaterline.WakeTuningHint": "Client-only ripple tuning. Shader / Sprites / Both = how you preview the effect.",
-    "IonriftWaterline.WakeTuningPreview": "Preview mode",
-    "IonriftWaterline.WakeTuningVisualMode": "Visual output",
+    "IonriftWaterline.WakeTuningTitle": "Waterline: Ripples",
+    "IonriftWaterline.WakeTuningHint": "Fine-tune water ripples",
+    "IonriftWaterline.WakeTuningPreview": "Preview style",
+    "IonriftWaterline.WakeTuningVisualMode": "Visual style",
 
-    "IonriftWaterline.WakeTuningRippleTiming": "Ripple -- shape and feel",
-    "IonriftWaterline.WakeTuningRippleVariance": "Ripple -- randomness",
-    "IonriftWaterline.WakeTuningRippleSpawnTrail": "Ripple -- spawn and trail",
-    "IonriftWaterline.WakeTuningShader": "Shader refraction",
-    "IonriftWaterline.WakeTuningSprites": "Sprite rings",
-    "IonriftWaterline.WakeTuningSpriteColor": "Ring color",
+    "IonriftWaterline.WakeTuningRippleTiming": "Wave Shape & Lifetime",
+    "IonriftWaterline.WakeTuningRippleVariance": "Wave Dispersion & Randomness",
+    "IonriftWaterline.WakeTuningRippleSpawnTrail": "Motion & Ripples",
+    "IonriftWaterline.WakeTuningShader": "Surface Distortion & Refraction",
+    "IonriftWaterline.WakeTuningSprites": "Stylized Crest Rings",
+    "IonriftWaterline.WakeTuningSpriteColor": "Crest Color",
 
     "IonriftWaterline.WakeTuningPresetSave": "Save current settings as a new preset",
     "IonriftWaterline.WakeTuningPresetDelete": "Delete selected preset",

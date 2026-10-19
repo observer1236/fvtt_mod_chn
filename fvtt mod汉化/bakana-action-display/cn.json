@@ -1,83 +1,234 @@
 {
-    "BAD": {
-        "settings": {
-            "hudOpacity": {
-                "name": "HUD 不透明度",
-                "hint": "控制动作显示 HUD 覆盖层的透明度。"
-            },
-            "hudScale": {
-                "name": "HUD 缩放",
-                "hint": "按比例控制 HUD 窗口及其所有内容的整体缩放。"
-            },
-            "fontSize": {
-                "name": "字体大小（px）",
-                "hint": "控制文本和图标的基准字体大小。HUD 窗口大小将保持独立。"
-            },
-            "logVerbosity": {
-                "name": "日志详细级别",
-                "hint": "控制打印到浏览器控制台的详细信息级别。",
-                "choices": {
-                    "error": "仅错误",
-                    "warn": "警告与错误（默认）",
-                    "info": "信息、警告与错误",
-                    "debug": "调试（全部）"
-                }
-            },
-            "persistDetached": {
-                "name": "点击别处时保持分离 HUD",
-                "hint": "启用后，点击 Token 以外的地方时，分离的 HUD 会保持打开，只有再次右键单击同一 Token 才会关闭。"
-            },
-
-            "persistTabState": {
-                "name": "记住标签页选择",
-                "hint": "启用后，每个角色的当前标签页选择会被保存，并在您重新打开 HUD 或刷新 Foundry 时恢复。"
-            },
-            "toggleTabSelection": {
-                "name": "左键点击切换标签页选择",
-                "hint": "启用后，左键点击标签页会切换其选中状态（多选），而不会清除其他已选标签页。只有再次点击它们或点击「全部」才会清除选择。"
-            },
-            "hudAnchorSide": {
-                "name": "HUD 附着方位",
-                "hint": "控制附着式 HUD 相对于 Token 是垂直锚定（上方 / 下方）还是水平锚定（左侧 / 右侧）。",
-                "choices": {
-                    "vertical": "垂直（上方 / 下方）",
-                    "horizontal": "水平（左侧 / 右侧）"
-                }
-            },
-            "hudGridOffset": {
-                "name": "HUD 网格偏移（垂直）",
-                "hint": "控制 HUD 在 Token 上方或下方的垂直偏移距离（以网格单位计）。"
-            },
-            "hudGridOffsetHorizontal": {
-                "name": "HUD 网格偏移（水平）",
-                "hint": "控制 HUD 在 Token 左侧或右侧的水平偏移距离（以网格单位计）。"
-            }
-        },
-        "core": {
-            "filterNoResources": "隐藏已耗尽",
-            "hidden": "已隐藏",
-            "hideAction": "隐藏动作",
-            "unhideAction": "取消隐藏动作",
-            "noActions": "没有可用动作。",
-            "allItems": "全部物品",
-            "other": "其他",
-            "allActions": "全部动作",
-            "none": "无"
-        },
-        "common": {
-            "actionEconomy": "动作经济",
-            "itemCharges": "物品充能",
-            "prepareSpell": "准备法术",
-            "unprepareSpell": "取消准备法术",
-            "equipItem": "装备物品",
-            "unequipItem": "卸下物品",
-            "allSpells": "全部法术",
-            "allWeapons": "全部武器",
-            "allEquipment": "全部装备",
-            "spellComponents": "法术成分"
-        },
-        "dnd5e": {
-            "upcast": "升环施法"
-        }
-    }
+	"BAD": {
+		"settings": {
+			"hudOpacity": {
+				"name": "HUD 不透明度",
+				"hint": "控制动作显示 HUD 覆盖层的透明度。"
+			},
+			"hudScale": {
+				"name": "HUD 缩放",
+				"hint": "按比例控制 HUD 窗口及其所有内容的整体缩放。"
+			},
+			"fontSize": {
+				"name": "字体大小（px）",
+				"hint": "控制文本和图标的基准字体大小。HUD 窗口大小将保持独立。"
+			},
+			"logVerbosity": {
+				"name": "日志详细级别",
+				"hint": "控制打印到浏览器控制台的详细信息级别。",
+				"choices": {
+					"error": "仅错误",
+					"warn": "警告与错误（默认）",
+					"info": "信息、警告与错误",
+					"debug": "调试（全部）"
+				}
+			},
+			"persistDetached": {
+				"name": "点击别处时保持分离 HUD",
+				"hint": "启用后，点击 Token 以外的地方时，分离的 HUD 会保持打开，只有再次右键单击同一 Token 才会关闭。"
+			},
+			"persistTabState": {
+				"name": "记住标签页选择",
+				"hint": "启用后，每个角色的当前标签页选择会被保存，并在您重新打开 HUD 或刷新 Foundry 时恢复。"
+			},
+			"toggleTabSelection": {
+				"name": "左键点击切换标签页选择",
+				"hint": "启用后，左键点击标签页会切换其选中状态（多选），而不会清除其他已选标签页。只有再次点击它们或点击「全部」才会清除选择。"
+			},
+			"hudAnchorSide": {
+				"name": "HUD 附着方位",
+				"hint": "控制附着式 HUD 相对于 Token 是垂直锚定（上方 / 下方）还是水平锚定（左侧 / 右侧）。",
+				"choices": {
+					"vertical": "垂直（上方 / 下方）",
+					"horizontal": "水平（左侧 / 右侧）"
+				}
+			},
+			"hudGridOffset": {
+				"name": "HUD 网格偏移（垂直）",
+				"hint": "控制 HUD 在 Token 上方或下方的垂直偏移距离（以网格单位计）。"
+			},
+			"hudGridOffsetHorizontal": {
+				"name": "HUD 网格偏移（水平）",
+				"hint": "控制 HUD 在 Token 左侧或右侧的水平偏移距离（以网格单位计）。"
+			},
+			"economyColorsMenu.label": "配置颜色",
+			"hudConfigMenu.name": "HUD配置",
+			"showTooltips.name": "显示提示信息",
+			"categorizationMenu.name": "HUD 项目分类",
+			"categorizationMenu.label": "配置分类",
+			"categorizationMenu.hint": "定义自定义类别部分、子部分和布尔表达式以过滤 HUD 项目。",
+			"moduleIntegrationsMenu.label": "配置模块集成",
+			"moduleIntegrationsMenu.hint": "配置活跃在这个世界上的集成第三方模块的选项和行为。",
+			"enableCenterOnToken.name": "令牌按钮居中",
+			"enableCenterOnToken.hint": "在 HUD 控制栏中显示一个按钮，以将画布视图置于活动令牌的中心位置。",
+			"autoCenterOnToken.name": "自动居中标记",
+			"autoCenterOnToken.hint": "当战斗进展到您负责的令牌时，自动将画布视图重新居中。",
+			"enableItemSummaryButton.name": "项目摘要工具提示按钮",
+			"enableItemSummaryButton.hint": "显示一个？ HUD 控制栏中的按钮可切换丰富的项目摘要工具提示，而无需按住 ?钥匙。",
+			"enableToggleHotkey.name": "启用 HUD 切换热键",
+			"enableToggleHotkey.hint": "允许玩家使用配置的键绑定（默认：Shift+Space）切换打开或关闭动作显示 HUD。",
+			"enableCombatButtons.name": "战斗动作按钮",
+			"enableCombatButtons.hint": "战斗期间在 HUD 页脚中显示上下文战斗按钮（例如掷骰先攻、结束回合）。",
+			"enableCombatAutoTrackButton.name": "战斗自动跟踪按钮",
+			"enableCombatAutoTrackButton.hint": "在 HUD 控制栏中显示战斗回合跟踪按钮（剑图标），以在战斗期间自动跟踪活动角色的回合。",
+			"economyColorsMenu.hint": "为该系统的每个动作经济类型自定义指示条颜色。",
+			"hudConfigMenu.label": "配置平视显示器",
+			"hudConfigMenu.hint": "自定义 HUD 不透明度、比例、字体大小、附件侧和网格偏移。",
+			"persistHUD.name": "点击关闭时保持 HUD",
+			"persistHUD.hint": "控制 HUD 是否在外部单击时保持打开状态，直到右键单击令牌或明确关闭为止。",
+			"showTooltips.hint": "显示 HUD 控制按钮、页面选项和选项卡右键单击操作的上下文悬停工具提示。"
+		},
+		"core": {
+			"filterNoResources": "隐藏已耗尽",
+			"hidden": "已隐藏",
+			"hideAction": "隐藏动作",
+			"unhideAction": "取消隐藏动作",
+			"noActions": "没有可用动作。",
+			"allItems": "全部物品",
+			"other": "其他",
+			"allActions": "全部动作",
+			"none": "无",
+			"searchPlaceholder": "过滤动作...",
+			"endTurn": "结束转弯",
+			"rollInitiative": "掷骰先攻"
+		},
+		"common": {
+			"actionEconomy": "动作经济",
+			"itemCharges": "物品充能",
+			"prepareSpell": "准备法术",
+			"unprepareSpell": "取消准备法术",
+			"equipItem": "装备物品",
+			"unequipItem": "卸下物品",
+			"allSpells": "全部法术",
+			"allWeapons": "全部武器",
+			"allEquipment": "全部装备",
+			"spellComponents": "法术成分",
+			"save": "保存更改",
+			"cancel": "取消",
+			"add": "添加",
+			"resetDefaults": "重置默认值"
+		},
+		"dnd5e": {
+			"upcast": "升环施法"
+		},
+		"settingsSections.world": "世界设置",
+		"settingsSections.user": "用户设置",
+		"categorization.others": "其他动作",
+		"controlButtons.close.label": "关闭HUD",
+		"controlButtons.close.tooltip": "关闭HUD",
+		"page2.tools": "工具",
+		"page2.tool": "工具",
+		"page3.inspiration": "激励",
+		"page3.inspired": "鼓舞",
+		"page3.movementSpeed": "移动速度",
+		"page3.resistances": "伤害抗性",
+		"page3.immunities": "免疫",
+		"page3.damageImmunities": "伤害免疫",
+		"page3.conditionImmunities": "状态免疫",
+		"page3.languages": "语言",
+		"page3.senses": "感官",
+		"page3.none": "无",
+		"settingsSections.client": "客户端设置",
+		"categorization.title": "Bakana 的 HUD 分类配置",
+		"categorization.enable": "启用自定义分类",
+		"categorization.addCategory": "添加类别",
+		"categorization.categoryNamePlaceholder": "（可选）类别名称",
+		"categorization.categoryExprPlaceholder": "布尔表达式",
+		"categorization.subCategoryNamePlaceholder": "（可选）子类别名称",
+		"categorization.subCategoryExprPlaceholder": "布尔表达式",
+		"categorization.loadPresets": "加载预设",
+		"categorization.saved": "分类配置保存成功。",
+		"categorization.noCategories": "未定义自定义类别。单击“+ 添加类别”即可开始。",
+		"categorization.invalidExpressionWarning": "表达式“{expr}”包含语法错误。",
+		"categorization.expressionHelp.evaluation": "根据每个类别从上到下评估操作，并将操作放置在第一个匹配规则 ({true}) 中。",
+		"categorization.expressionHelp.fallthrough": "{fallthrough}：在某个类别上启用时，匹配的操作会出现在该类别中，并继续评估后面的类别，就好像它们尚未匹配一样。",
+		"categorization.expressionHelp.unmatched": "{otherActions} 中出现不匹配的操作。",
+		"categorization.expressionHelp.variablesTitle": "布尔表达式中的可用变量：",
+		"categorization.expressionHelp.item": "铸造项目文档（例如 {example}）",
+		"categorization.expressionHelp.action": "HUD 操作实例（例如 {example}）",
+		"categorization.expressionHelp.actor": "Foundry角色文档（例如{example}）",
+		"categorization.expressionHelp.token": "Foundry 代币文档（例如 {example}）",
+		"categorization.expressionHelp.user": "当前 Foundry 用户文档（例如 {example}）",
+		"actionMenu.addFavorite": "添加到收藏夹",
+		"actionMenu.removeFavorite": "从收藏夹中删除",
+		"economyColors.title": "行动经济色彩",
+		"economyColors.enable": "启用行动经济指标",
+		"economyColors.description": "配置用于指示每种操作类型的操作经济性的彩色垂直条。",
+		"economyColors.resetDefaults": "重置为默认值",
+		"economyColors.saved": "动作经济颜色已成功保存。",
+		"economyColors.presetLabel": "调色板预设",
+		"economyColors.presets.select": "自定义/选择预设...",
+		"economyColors.presets.default": "默认（充满活力）",
+		"economyColors.presets.protanopia": "红色盲/绿色盲（红绿无障碍）",
+		"economyColors.presets.tritanopia": "蓝色盲（蓝黄无障碍）",
+		"economyColors.presets.highContrast": "高对比度（无障碍）",
+		"economyColors.presets.pastel": "柔和/柔和",
+		"moduleIntegrations.title": "模块集成配置",
+		"moduleIntegrations.description": "为这个世界上活跃的受支持的第三方模块配置选项和功能切换。",
+		"moduleIntegrations.active": "活跃",
+		"moduleIntegrations.inactive": "不活跃",
+		"moduleIntegrations.noActiveModules": "目前，这个世界上没有活跃的受支持的模块集成。",
+		"moduleIntegrations.saved": "模块集成配置已成功保存。",
+		"moduleIntegrations.midiQol.filterAutomationOnly.name": "过滤仅自动化活动",
+		"moduleIntegrations.midiQol.filterAutomationOnly.hint": "启用后，由 Midi-QOL 标记为仅自动化的活动将被操作显示 HUD 完全忽略。",
+		"hudConfig.title": "配置平视显示器",
+		"hudConfig.description": "自定义操作显示 HUD 的外观、缩放比例和令牌附件偏移。",
+		"hudConfig.resetDefaults": "重置为默认值",
+		"hudConfig.saved": "HUD 配置保存成功。",
+		"hudConfig.appearance": "外观和尺寸",
+		"hudConfig.positioning": "代币定位和附件",
+		"controlButtons.filterResources.label": "过滤资源",
+		"controlButtons.filterResources.tooltipShow": "显示耗尽的物品",
+		"controlButtons.filterResources.tooltipHide": "隐藏耗尽的物品",
+		"controlButtons.combatTrack.label": "战斗回合追踪器",
+		"controlButtons.combatTrack.tooltip": "<b>左键单击：</b> 跟随活跃战斗人员转弯\n<b>右键：</b> 切换自动打开/自动关闭",
+		"controlButtons.itemSummary.label": "项目摘要工具提示",
+		"controlButtons.itemSummary.tooltipEnable": "启用丰富的项目摘要（无需按住？）",
+		"controlButtons.itemSummary.tooltipDisable": "禁用丰富的项目摘要",
+		"controlButtons.recenter.label": "最近视图",
+		"controlButtons.recenter.tooltip": "<b>左键单击：现役战斗人员上的 </b> 居中画布\n<b>右键单击：</b> 切换转弯时自动居中",
+		"controlButtons.anchor.label": "HUD 放置和持久性",
+		"controlButtons.anchor.tooltipAttached": "<b>左键单击：</b> 将HUD与令牌分离\n<b>右键单击：</b> 外部单击时切换HUD持久性",
+		"controlButtons.anchor.tooltipDetached": "<b>左键单击：</b> 将HUD附加到令牌\n<b>右键单击：</b> 外部单击时切换HUD持久性",
+		"dnd5eAutoBan.title": "龙与地下城 5e 配置",
+		"dnd5eAutoBan.menuName": "龙与地下城 5e 配置",
+		"dnd5eAutoBan.menuLabel": "配置D&D5e",
+		"dnd5eAutoBan.menuHint": "配置 D&D 5e 特定设置，例如自动禁用法术组件。",
+		"dnd5eAutoBan.description": "配置应用时自动禁止角色上的言语和体力成分的状态条件。",
+		"dnd5eAutoBan.enableAutoBan": "启用自动禁用法术组件",
+		"dnd5eAutoBan.verbalTitle": "言语（声音）成分",
+		"dnd5eAutoBan.verbalHint": "当角色有以下任一条件时，需要言语成分的法术将被禁止：",
+		"dnd5eAutoBan.somaticTitle": "体细胞成分",
+		"dnd5eAutoBan.somaticHint": "当角色有以下任一条件时，需要体细胞成分的法术将被禁止：",
+		"dnd5eAutoBan.noConditions": "没有配置条件",
+		"dnd5eAutoBan.saved": "D&D 5e 配置已保存。",
+		"dnd5eAutoBan.autoBanned": "自动禁止",
+		"dnd5eAutoBan.autoBannedComponents": "自动禁止的组件",
+		"dnd5eAutoBan.causingEffects": "造成的影响：",
+		"page2.savingThrow": "登机检定",
+		"page2.abilityCheck": "属性检测",
+		"page2.ability": "能力",
+		"page3.tokenInfo": "代币信息",
+		"page3.armorClass": "护甲等级",
+		"page3.moved": "搬家了",
+		"page3.movedThisTurn": "本回合移动的距离",
+		"page3.vulnerabilities": "损害漏洞",
+		"page3.creatureType": "生物类型",
+		"page3.biography": "传记",
+		"page3.noBiography": "没有传记详细信息。",
+		"page3.walk": "步行",
+		"page3.fly": "飞翔",
+		"page3.swim": "游泳",
+		"page3.climb": "攀登",
+		"page3.burrow": "洞穴",
+		"page3.hover": "悬停",
+		"keybindings.toggleHUD.name": "切换操作显示 HUD",
+		"keybindings.toggleHUD.hint": "打开或关闭当前控制的令牌的操作显示 HUD。",
+		"tabs.allTooltip": "<b>右键：</b> 切换显示全部（已装备和未装备的物品、已准备和未准备的法术）",
+		"tabs.unpreparedSpellsTooltip": "<b>右键：</b> 切换显示未准备法术",
+		"tabs.unequippedWeaponsTooltip": "<b>右键：</b> 切换显示未装备的武器",
+		"tabs.unequippedEquipmentTooltip": "<b>右键：</b> 切换显示未装备的装备",
+		"tabs.unequippedItemsTooltip": "<b>右键单击：</b> 切换显示未装备的物品",
+		"tabs.inactiveBuffsTooltip": "<b>右键单击：</b> 切换显示非活动增益"
+	}
 }

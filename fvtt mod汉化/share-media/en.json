@@ -25,6 +25,15 @@
         "label": "Fullscreen &rarr; specific users",
         "description": "Select specific users to share with"
       },
+      "chatAll": {
+        "label": "Chat",
+        "description": "Share media in the chat"
+      },
+
+      "chatSelection": {
+        "label": "Chat &rarr; specific users",
+        "description": "Select specific users to share with"
+      },
 
       "sceneFit": {
         "label": "Scene",
@@ -56,8 +65,8 @@
         "label": "Immersive",
         "description": "Hide FoundryVTT UI controls"
       },
-	  
-	  "controls": {
+
+      "controls": {
         "label": "Controls",
         "description": "Show fullscreen controls to players"
       },
@@ -94,33 +103,55 @@
       }
     },
 
-    "layers.fullscreen": {
-      "dismiss": {
-        "label": "Dismiss"
+    "ui.browser": {
+      "label": "Media Browser",
+      "empty": "No media available. Please navigate to another folder.",
+      "upload.label": "Drag and drop files into this window",
+      "fileNames.label": "Toggle file names",
+      "layout.label": "Number of media columns to display",
+      "drop.label": "Drop files here to upload to this folder",
+      "convert.label": "Convert Images to WebP",
+      "convert.description": "Some files will be converted to WebP for better performance. Choose a quality value (10-100): lower values reduce size and quality, higher values increase both."
+    },
+
+    "layers": {
+      "fullscreen": {
+        "dismiss": {
+          "label": "Dismiss"
+        },
+
+        "minimize": {
+          "label": "Minimize"
+        },
+
+        "maximize": {
+          "label": "Maximize"
+        }
       },
 
-      "minimize": {
-        "label": "Minimize"
-      },
-
-      "maximize": {
-        "label": "Maximize"
+      "chat": {
+        "share": "Share this again"
       }
     },
 
     "canvas.layer": {
-      "tool": {
-        "label": "Toggle Media Layer",
-        "zero": "No media shared on the current scene, share media on the scene before activating the media layer."
+      "control.label": "Media Controls",
+      "control.type": "Media",
+
+      "tools": {
+        "select.label": "Select Media",
+        "link.label": "Media Link",
+        "clear.label": "Clear Media"
       },
 
       "tile": {
         "label": "Share Media Configuration",
         "enabled.label": "Share Media Tile",
-        "enabled.description": "Enable this tile as a boundary for scene media sharing.",
-        "name.label": "Tile Name",
-        "name.description": "Tile identifier to easily identify which tile you are selecting for scene sharing.",
-        "name.default": "Share Media Tile"
+        "enabled.description": "Enable this tile as a boundary for scene media sharing."
+      },
+
+      "hud": {
+        "share": "Share this again"
       }
     },
 
@@ -131,7 +162,8 @@
       "area": {
         "label": "Area Selector",
         "description": "Choose an area from the list. Hover to preview the area, then select your preferred area.",
-        "zero": "No Share Media areas detected.<br><br><strong><u>Region</u></strong>: you must create at least one Scene Region with <strong>at least one shape</strong> and with at least one <strong>enabled</strong> behavior type: \"{type}\" <strong>on the current scene</strong>.<br><br><strong><u>Tile</u></strong>: you must create <strong>at least one tile</strong> with Share Media enabled <strong>on the current scene</strong>."
+        "zero": "No Share Media areas detected.<br><br><strong><u>Region</u></strong>: you must create at least one Scene Region with <strong>at least one shape</strong> and with at least one <strong>enabled</strong> behavior type: \"{type}\" <strong>on the current scene</strong>.<br><br><strong><u>Tile</u></strong>: you must create <strong>at least one tile</strong> with Share Media enabled <strong>on the current scene</strong>.",
+        "tile.no-name": "Untitled tile"
       },
 
       "user": {
@@ -186,6 +218,8 @@
             "popout.hint": "Display media shared in popout windows in the sidebar.",
             "fullscreen.label": "Fullscreen Sharing",
             "fullscreen.hint": "Display media shared in fullscreen mode in the sidebar.",
+            "chat.label": "Chat Sharing",
+            "chat.hint": "Display media shared in the chat in the sidebar",
             "scene.label": "Scene Sharing",
             "scene.hint": "Display media shared to scenes in the sidebar."
           }
@@ -198,8 +232,10 @@
         "hint": "Configure how sharing buttons and context menu entries appear for game entities.",
         "description": "Control the display and behavior of media sharing settings for entities. Configure whether sharing options appear on tokens, as context menu entries on sheets, or both, and whether entity names are displayed as captions.",
         "options": {
-          "sheet.label": "Sheet Context Menu",
-          "sheet.hint": "Add media sharing entries to the sheet context menu.",
+          "sheetHeader.label": "Sheet Header Button",
+          "sheetHeader.hint": "Add media sharing button to the sheet header.",
+          "sheetMenu.label": "Sheet Context Menu",
+          "sheetMenu.hint": "Add media sharing entries to the sheet context menu.",
           "hud.label": "HUD Button",
           "hud.hint": "Display media sharing buttons directly on the HUD.",
           "caption.label": "Show Entity Caption",

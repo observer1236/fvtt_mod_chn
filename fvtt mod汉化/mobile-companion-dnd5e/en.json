@@ -1,4 +1,4 @@
-﻿{
+{
   "Mobile-Companion": {
     "Settings": {
       "UseCurrency": {
@@ -41,7 +41,11 @@
         "Self": "» Self «",
         "None": "» None «"
       },
-      "RollRequestUserErrorOnSelfAndMidi": "You have the midi-qol option '{midi}' enabled. This does NOT work with player facing self rolls!. Either disable the midi-qol option or set the roll request user to a GM or » None «."
+      "RollRequestUserErrorOnSelfAndMidi": "You have the midi-qol option '{midi}' enabled. This does NOT work with player facing self rolls!. Either disable the midi-qol option or set the roll request user to a GM or » None «.",
+      "RollRequestConfirmDialog": {
+        "Name": "Roll Request Confirmation",
+        "Hint": "When enabled, a confirmation dialog is shown before sending a roll request."
+      }
     },
     "Input": {
       "Set": "Set",
@@ -80,45 +84,10 @@
       "Container": "Container",
       "YourCharacters": "Your Characters",
       "OtherCharacters": "Other Characters"
+    },
+    "RollRequestConfirmDialog":{
+      "title": "Send Roll Request",
+      "text": "Do you want to send this roll request?"
     }
-  },
-  "Mobile-Companion-TradeApp": {
-    "Qty": "Qty",
-    "Price": "Price",
-    "NotForSale": "Not for sale",
-    "Buy": "Buy",
-    "Sell": "Sell",
-    "YouTake": "You Take",
-    "GM-Window-Empty": {
-      "DropPlayers": "Drop player(s) here. ",
-      "ClickHere": "click here",
-      "AddViaDropdown": "Or add them via dropdown above.",
-      "DropChestOrMerchant": "Drop loot chest or merchant actor here or select a token and"
-    },
-    "ItemsTaken": "Items Taken",
-    "ItemsOffered": "Items Offered",
-    "CantAfford": "Can't afford",
-    "Balance": "Balance",
-    "MerchantSettings": {
-      "InfiniteQty": "Infinite Quantity",
-      "InfiniteMoney": "Infinite Money",
-      "MerchantBuys": "Merchant Buys",
-      "SellPriceMod": "Selling Price Modifier",
-      "BuyPriceMod": "Buying Price Modifier"
-    },
-    "Type": "Type",
-    "Merchant": "Merchant",
-    "Pile": "Pile",
-    "Save": "Save",
-    "Reset": "Reset",
-    "CloseRequest": "Close Request",
-    "SendRequest": "Send Request",
-    "All": "All",
-    "Split": "Split",
-    "None": "None",
-    "Close": "Close",
-    "ConfirmTradeTooltip": "Confirm Trade and give the player the items they want.",
-    "CancelTradeTooltip": "Cancel trade an return everything back.",
-    "RemoveCharacterTooltip": "Removes this character from the trade."
   }
 }

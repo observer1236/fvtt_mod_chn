@@ -24,6 +24,8 @@
   "BOUNTYBOARD.Empty.Unavailable": "The bounty board is currently unavailable.",
   "BOUNTYBOARD.Empty.NoMatches": "No contracts match the current filters.",
   "BOUNTYBOARD.Editor.ContractId": "Contract ID",
+  "BOUNTYBOARD.Editor.Scene": "Location / Scene",
+  "BOUNTYBOARD.Editor.NoScene": "No linked scene",
   "BOUNTYBOARD.Card.ContractId": "Contract identifier",
   "BOUNTYBOARD.Card.Target": "Target",
   "BOUNTYBOARD.Card.Reward": "Reward",
@@ -53,5 +55,9 @@
   "BOUNTYBOARD.Action.Hide": "Hide",
   "BOUNTYBOARD.Action.Archive": "Archive",
   "BOUNTYBOARD.Action.Delete": "Delete",
-  "BOUNTYBOARD.Action.Request": "Request contract"
+  "BOUNTYBOARD.Action.Request": "Request contract",
+  "BOUNTYBOARD.Link.DropHint": "Drop Actor / Token onto this bounty to link its target",
+  "BOUNTYBOARD.Link.Unlink": "Unlink target",
+  "BOUNTYBOARD.Link.Invalid": "Drop a world Actor or Token onto a bounty.",
+  "BOUNTYBOARD.Link.MissingBounty": "Bounty not found."
 }

@@ -1,16 +1,36 @@
 {
   "CRLNGN_UI": {
     "ui": {
+      "sceneHiddenFromPlayers": "Hidden from players",
+      "sidebar": {
+        "resizeDrag": "Drag to resize",
+        "resizeReset": "Double-click to reset"
+      },
+      "compactNotifications": {
+        "fromOne": "{name} ({count})",
+        "fromOneOther": "{name} and 1 other ({count})",
+        "fromMany": "{name} and {others} others ({count})",
+        "count": "Notifications ({count})",
+        "originCore": "Foundry VTT",
+        "originScript": "Script"
+      },
+      "broadcastView": {
+        "toolTitle": "Broadcast View to Players",
+        "firstHint": "Sharing scene position and zoom with players"
+      },
       "generalSettingsLabel": "General Settings",
       "clientSettingsLabel": "Player Settings (Client)",
       "worldSettingsLabel": "World Settings (GM)",
       "toggleHints": "Toggle Hints",
+      "detachWindow": "Detach Window",
+      "attachWindow": "Attach Window",
       "navDisabled": "Scene Navigation is disabled in the 'Elements' tab. The settings below will only have effect if Custom Layout is enabled for Scene Navigation.",
       "reloadRequiredTitle": "Reload Foundry",
       "reloadRequiredLabel": "A reload is required. Reload now?",
       "macroBarTooltipKeepOpen": "Keep open",
       "macroBarTooltipAutoHide": "Hide",
       "enforcementTooltip": "Click to cycle lock state. Right-click (or Alt+Click) to toggle GM mode",
+      "lockedByGM": "Locked by GM",
       "reset": "Reset",
       "save": "Save",
       "reloadButton": "Reload",
@@ -56,6 +76,7 @@
         "hint": "Tracks the last displayed update notification"
       },
       "toggleChatBox": "Toggle Chat Box",
+      "moreSidebarTabs": "More tabs",
       "carouselWelcome": {
         "title": "New feature: Combat Encounter Carousel",
         "message": "Carolingian UI has a new draggable and dockable Combat Encounter Carousel. Would you like to enable this feature?",
@@ -64,6 +85,15 @@
         "enabledNotification": "Combat Carousel has been enabled. You can change this in module settings.",
         "disabledNotification": "Combat Carousel has been disabled. You can enable it later in module settings.",
         "moduleWarning": "Warning: The Combat Carousel module is currently active. Consider disabling it to avoid conflicts."
+      },
+      "dhFearDock": {
+        "title": "Daggerheart Fear Tracker position",
+        "message": "Daggerheart system now allows setting position of fear tracker at the bottom of screen. You can continue to use Carolingian UI docking instead, but this will set the system's tracker setting to \"Free\". Confirm?",
+        "yes": "Yes, use Carolingian UI.",
+        "no": "No, keep system setting.",
+        "enabledNotification": "Daggerheart's Fear Tracker position was set to \"Free\". Drag the tracker near the macro hotbar to dock it.",
+        "disabledNotification": "Fear Tracker docking has been disabled. You can enable it later in module settings.",
+        "releasedNotification": "Daggerheart is now positioning the Fear Tracker, so Carolingian UI docking has been released."
       }
     },
     "settings": {
@@ -121,6 +151,31 @@
         "reset": "Reset",
         "save": "Save"
       },
+      "customCssMenu": {
+        "label": "Custom CSS",
+        "title": "Custom CSS",
+        "buttonLabel": "Edit Custom CSS",
+        "hint": "Write custom CSS for the whole world, or for individual players.",
+        "save": "Save Styles",
+        "tabs": {
+          "world": "World",
+          "users": "Users"
+        },
+        "fields": {
+          "worldStyles": {
+            "label": "World CSS",
+            "hint": "Applied to everyone in this world, including you. You may include Google Fonts by pasting the @import link, and the font will be listed in the Custom Fonts settings."
+          },
+          "playerStyles": {
+            "label": "Player CSS",
+            "hint": "Applied on top of the World CSS. Pick All Players to reach every player - Game Masters are never included - or a single user, including a Game Master, to target just them."
+          },
+          "target": {
+            "label": "Apply to",
+            "allPlayers": "All Players"
+          }
+        }
+      },
       "hideInterface": {
         "label": "Toggle Hide/Show Interface",
         "hint": "Hides or shows the UI. This will affect all elements inside the `#interface` html block"
@@ -136,6 +191,10 @@
       "combatNext": {
         "label": "Combat: Next Turn",
         "hint": "Advance to the next turn in combat. Only works when you own the current combatant."
+      },
+      "broadcastView": {
+        "label": "Toggle View Broadcast",
+        "hint": "Starts or stops sharing your canvas view with the players. GM only."
       },
       "sidebarTabs": {
         "ChatLog": "Chat Messages",
@@ -178,6 +237,27 @@
           "preventMacroBarReposition": {
             "label": "Prevent Macro Bar Reposition",
             "hint": "When enabled, hiding the chat input box also prevents the macro hotbar from being repositioned when sidebar tab changes. Keeps the macro hotbar in its original position regardless of sidebar state."
+          },
+          "compactNotifications": {
+            "label": "Compact Notifications",
+            "hint": "Show notifications as small pills at the top center of the screen. Several stack behind the newest one; click the stack to spread them out. Loading progress bars are left as they are."
+          },
+          "broadcastViewMode": {
+            "label": "View Broadcast",
+            "hint": "Lets a GM share their canvas view: while a broadcast is on, every pan or zoom of the GM's canvas moves the view of players on the same scene. Choose whether it is started with the keybinding only (Z by default, configurable in Controls) or also with a toggle on the token controls.",
+            "options": {
+              "off": "Disabled",
+              "keybinding": "Keybinding only",
+              "toggle": "Keybinding and controls toggle"
+            }
+          },
+          "broadcastViewZoom": {
+            "label": "Include Zoom in Broadcast",
+            "hint": "Match the players' zoom to the GM's view: each player sees the same height of map as the GM, whatever the size of their window. When disabled, players keep their own zoom and only follow the position."
+          },
+          "followBroadcastView": {
+            "label": "Follow GM Broadcast View",
+            "hint": "When a GM broadcasts their view, move this client's canvas along with it. Disable to keep control of your own view."
           },
           "enableCombatTrackerCarousel": {
             "label": "Use Draggable Combat Carousel",
@@ -236,6 +316,10 @@
           "carouselHideDefeated": {
             "label": "Hide Defeated Combatants",
             "hint": "When enabled, defeated combatants are removed from the carousel so remaining positions are recalculated."
+          },
+          "carouselGroupCombatants": {
+            "label": "Group Combatants (D&D 5e)",
+            "hint": "When enabled, combatants that the D&D 5e tracker groups together (same actor, disposition and initiative) collapse into a single card with a badge showing the group size. Click the badge to expand the group to the right, or collapse it again. The group with the current turn always shows the active combatant."
           },
           "carouselRequirePlayerOwner": {
             "label": "Require Player Character",
@@ -384,6 +468,10 @@
             "label": "Sidebar width",
             "hint": "Width of the sidebar panel on the right side of the screen."
           },
+          "enableSidebarDragResize": {
+            "label": "Enable drag resize",
+            "hint": "Resize the sidebar by dragging its left edge. Double-click the edge to reset the width."
+          },
           "openChatLogOnLoad": {
             "label": "Open Chat Log on Load",
             "hint": "When enabled, the sidebar will automatically expand to show the Chat Log when the module loads."
@@ -395,6 +483,10 @@
           "useHorizontalSidebarTabs": {
             "label": "Use Horizontal Sidebar Tabs",
             "hint": "When enabled, changes the sidebar tabs to horizontal orientation, at the top of the sidebar, instead of vertically on the side. (v12 style)"
+          },
+          "horizontalTabsSingleRow": {
+            "label": "Keep Horizontal Tabs in a Single Row",
+            "hint": "When horizontal sidebar tabs are enabled, keeps the tab icons in one row. Tabs that don't fit are moved behind a '...' button on either side of the row. Disable to let the tabs wrap into multiple rows instead."
           },
           "showChatNotificationsOnTop": {
             "label": "Show Chat Notifications From the Top",
@@ -556,6 +648,10 @@
             "label": "Hide Defeated Combatants",
             "hint": "When enabled, defeated combatants are removed from the carousel so remaining positions are recalculated."
           },
+          "carouselGroupCombatants": {
+            "label": "Group Combatants (D&D 5e)",
+            "hint": "When enabled, combatants that the D&D 5e tracker groups together (same actor, disposition and initiative) collapse into a single card with a badge showing the group size. Click the badge to expand the group to the right, or collapse it again. The group with the current turn always shows the active combatant."
+          },
           "carouselRequirePlayerOwner": {
             "label": "Require Player Character",
             "hint": "When enabled, the carousel only opens automatically when a player character is added to combat. When disabled, it opens for any combatant."
@@ -695,6 +791,22 @@
             "label": "Enable chat and tooltip icons on sheets",
             "hint": "Show 'Display in Chat' overlay on item images and scroll icons for item tooltips on character sheets"
           },
+          "compactActivityCards": {
+            "label": "Compact activity cards",
+            "hint": "Fold attack, damage and healing rolls into the activity card that created them, as rows with a total on the right and a drawer with the dice breakdown. Requires dnd5e 6.0. Kept in sync with the system's 'Summary Chat Cards' client setting: changing either one changes both."
+          },
+          "collapseCardTags": {
+            "label": "Collapse card tags by default",
+            "hint": "Show only the most useful tags (activation, range, key properties) on compact activity cards, with a +N chip to reveal the rest."
+          },
+          "labeledCardButtons": {
+            "label": "Labeled card buttons",
+            "hint": "Show a short text label next to the icon on activity card buttons (attack, damage, save, template...). Uncheck to use icon-only buttons."
+          },
+          "retroAdvantageButtons": {
+            "label": "Retroactive advantage buttons",
+            "hint": "Show buttons flanking the total of attack, check and save rolls that apply advantage or disadvantage after the roll, rolling one more d20 and keeping the highest or lowest. Only the roll's author and the GM see them."
+          },
           "applyBladeRunnerTweaks": {
             "label": "Apply UI tweaks to Blade Runner system",
             "hint": "Enable to apply UI adjustments and style tweaks to Blade Runner sheets and windows"
@@ -743,6 +855,10 @@
       "debugMode": {
         "label": "Debug Mode",
         "hint": "Enable or disable debug messages on browser console. This should be turned off unless the module developer asks you to turn it on for verification."
+      },
+      "lockOtherModules": {
+        "label": "Enable client settings lock for core and other modules",
+        "hint": "Adds GM lock icons to Foundry core's and other modules' client settings in Configure Settings, so you can set them for everyone (soft), keep them fixed (locked), or fix them for players only (right-click)."
       },
       "disableUI": {
         "label": "Disable UI in this client",
@@ -800,10 +916,28 @@
       "configureResourceMessage": "The carousel is set to show resource/HP bars for all combatants, but no tracked resource is configured. Select a resource to track below:",
       "trackedResource": "Tracked Resource",
       "startCombatShort": "Start",
-      "endCombatShort": "End"
+      "endCombatShort": "End",
+      "groupExpand": "Show all",
+      "groupCollapse": "Hide all"
     },
     "dnd5e": {
       "chatCard": {
+        "enabledSummarySetting": "Carolingian UI turned on the dnd5e client setting 'Summary Chat Cards' to match its Compact activity cards setting.",
+        "disabledSummarySetting": "Carolingian UI turned off the dnd5e client setting 'Summary Chat Cards' to match its Compact activity cards setting.",
+        "needsSummarySetting": "Compact activity cards need the dnd5e setting 'Summary Chat Cards' to be enabled.",
+        "pendingSave": "Has not rolled yet",
+        "addTargeted": "Add targeted tokens as targets",
+        "addSelected": "Add selected tokens as targets",
+        "noTargeted": "You have no targeted tokens.",
+        "noSelected": "You have no selected tokens.",
+        "details": "Roll details",
+        "hits": "hits",
+        "misses": "misses",
+        "successes": "successes",
+        "failures": "failures",
+        "targets": "targets",
+        "showAllTags": "Show all tags",
+        "showFewerTags": "Show fewer tags",
         "buttons": {
           "summons": "Summons",
           "attack": "Attack",
@@ -815,7 +949,16 @@
           "macro": "Macro",
           "savedc": "Save DC",
           "save": "Save"
-        }
+        },
+        "handledBy": "Compact activity cards are handled by {module} on this client. Its settings apply and these ones are ignored.",
+        "selectTargeted": "Select the tokens this roll targeted",
+        "retroAdvantage": "Apply advantage",
+        "retroDisadvantage": "Apply disadvantage",
+        "retroNormal": "Back to a normal roll",
+        "retroChanged": "Changed after the roll",
+        "retroFailed": "The roll could not be changed.",
+        "normalRoll": "Normal",
+        "noRecordedTargets": "This roll recorded no targets on the current scene."
       }
     }
   }

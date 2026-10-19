@@ -1,6 +1,53 @@
 {
     "BAD": {
+        "settingsSections": {
+            "world": "World Settings",
+            "user": "User Settings",
+            "client": "Client Settings"
+        },
         "settings": {
+            "categorizationMenu": {
+                "name": "HUD Item Categorization",
+                "label": "Configure Categorization",
+                "hint": "Define custom category sections, sub-sections, and boolean expressions for filtering HUD items."
+            },
+            "moduleIntegrationsMenu": {
+                "label": "Configure Module Integrations",
+                "hint": "Configure options and behaviors for integrated third-party modules active in this world."
+            },
+            "enableCenterOnToken": {
+                "name": "Center on Token Button",
+                "hint": "Display a button in the HUD control bar to recenter the canvas view on the active token."
+            },
+            "autoCenterOnToken": {
+                "name": "Auto-Center on Token",
+                "hint": "Automatically recenters the canvas view when combat advances to a token you are in charge of."
+            },
+            "enableItemSummaryButton": {
+                "name": "Item Summary Tooltip Button",
+                "hint": "Display a ? button in the HUD control bar to toggle rich item summary tooltips without holding the ? key."
+            },
+            "enableToggleHotkey": {
+                "name": "Enable HUD Toggle Hotkey",
+                "hint": "Allow players to toggle open or close the Action Display HUD using the configured keybinding (default: Shift+Space)."
+            },
+            "enableCombatButtons": {
+                "name": "Combat Action Buttons",
+                "hint": "Display contextual combat buttons (e.g. Roll Initiative, End Turn) in the HUD footer during combat."
+            },
+            "enableCombatAutoTrackButton": {
+                "name": "Combat Auto-Track Button",
+                "hint": "Display a combat turn tracking button (sword icon) in the HUD control bar to automatically follow the active character's turn during combat."
+            },
+            "economyColorsMenu": {
+                "label": "Configure Colors",
+                "hint": "Customize the indicator bar color for each action economy type for this system."
+            },
+            "hudConfigMenu": {
+                "name": "HUD Configuration",
+                "label": "Configure HUD",
+                "hint": "Customize HUD opacity, scale, font size, attachment side, and grid offsets."
+            },
             "hudOpacity": {
                 "name": "HUD Opacity",
                 "hint": "Controls the transparency of the Action Display HUD overlay."
@@ -13,24 +60,13 @@
                 "name": "Font Size (px)",
                 "hint": "Controls the base font size of the text and icons. The HUD window size will remain independent."
             },
-            "logVerbosity": {
-                "name": "Log Verbosity Level",
-                "hint": "Controls the level of detail printed to the browser console.",
-                "choices": {
-                    "error": "Errors Only",
-                    "warn": "Warnings & Errors (Default)",
-                    "info": "Info, Warnings & Errors",
-                    "debug": "Debug (Everything)"
-                }
-            },
-            "persistDetached": {
-                "name": "Persist Detached HUD on Click-Off",
-                "hint": "If enabled, a detached HUD will stay open when clicking off the token, and will only close if you right-click the same token again."
-            },
-
             "persistTabState": {
                 "name": "Persist Tab Selections",
                 "hint": "If enabled, your active tab selections for each character are saved and restored whenever you re-open the HUD or refresh Foundry."
+            },
+            "persistHUD": {
+                "name": "Persist HUD on Click-Off",
+                "hint": "Controls whether the HUD stays open across outside clicks until right-clicking the token or explicitly closing."
             },
             "toggleTabSelection": {
                 "name": "Toggle Tab Selections on Left-Click",
@@ -51,10 +87,120 @@
             "hudGridOffsetHorizontal": {
                 "name": "HUD Grid Offset (Horizontal)",
                 "hint": "Controls the horizontal distance (in grid units) to offset the HUD to the left or right of the token."
+            },
+            "showTooltips": {
+                "name": "Show Tooltips",
+                "hint": "Display contextual hover tooltips for HUD control buttons, page options, and tab right-click actions."
+            },
+            "logVerbosity": {
+                "name": "Log Verbosity Level",
+                "hint": "Controls the level of detail printed to the browser console.",
+                "choices": {
+                    "error": "Errors Only",
+                    "warn": "Warnings & Errors (Default)",
+                    "info": "Info, Warnings & Errors",
+                    "debug": "Debug (Everything)"
+                }
+            }
+        },
+        "categorization": {
+            "title": "Bakana's HUD Categorization Configuration",
+            "enable": "Enable Custom Categorization",
+            "addCategory": "Add Category",
+            "categoryNamePlaceholder": "(Optional) Category Name",
+            "categoryExprPlaceholder": "Boolean Expression",
+            "subCategoryNamePlaceholder": "(Optional) Subcategory Name",
+            "subCategoryExprPlaceholder": "Boolean Expression",
+            "loadPresets": "Load Presets",
+            "saved": "Categorization configuration saved successfully.",
+            "noCategories": "No custom categories defined. Click '+ Add Category' to start.",
+            "others": "Other Actions",
+            "invalidExpressionWarning": "The expression \"{expr}\" contains a syntax error.",
+            "expressionHelp": {
+                "evaluation": "Actions are evaluated against each category from top to bottom and placed in the first matching rule ({true}).",
+                "fallthrough": "{fallthrough}: When enabled on a category, matching actions appear in that category and continue evaluating into later categories as though they haven't been matched yet.",
+                "unmatched": "Unmatched actions appear in {otherActions}.",
+                "variablesTitle": "Available Variables in Boolean Expressions:",
+                "item": "Foundry Item document (e.g. {example})",
+                "action": "HUD Action instance (e.g. {example})",
+                "actor": "Foundry Actor document (e.g. {example})",
+                "token": "Foundry Token document (e.g. {example})",
+                "user": "Current Foundry User document (e.g. {example})"
+            }
+        },
+        "actionMenu": {
+            "addFavorite": "Add to Favorites",
+            "removeFavorite": "Remove from Favorites"
+        },
+        "economyColors": {
+            "title": "Action Economy Colors",
+            "enable": "Enable Action Economy Indicators",
+            "description": "Configure the colored vertical bars used to indicate action economy for each action type.",
+            "resetDefaults": "Reset to Defaults",
+            "saved": "Action economy colors saved successfully.",
+            "presetLabel": "Color Palette Preset",
+            "presets": {
+                "select": "Custom / Choose Preset...",
+                "default": "Default (Vibrant)",
+                "protanopia": "Protanopia / Deuteranopia (Red-Green Accessible)",
+                "tritanopia": "Tritanopia (Blue-Yellow Accessible)",
+                "highContrast": "High Contrast (Accessible)",
+                "pastel": "Pastel / Soft"
+            }
+        },
+        "moduleIntegrations": {
+            "title": "Module Integration Configuration",
+            "description": "Configure options and feature toggles for supported third-party modules active in this world.",
+            "active": "Active",
+            "inactive": "Inactive",
+            "noActiveModules": "No supported module integrations are currently active in this world.",
+            "saved": "Module integration configuration saved successfully.",
+            "midiQol": {
+                "filterAutomationOnly": {
+                    "name": "Filter Automation-Only Activities",
+                    "hint": "When enabled, activities flagged as automation-only by Midi-QOL are ignored entirely by the Action Display HUD."
+                }
+            }
+        },
+        "hudConfig": {
+            "title": "Configure HUD",
+            "description": "Customize the appearance, scaling, and token attachment offsets for the Action Display HUD.",
+            "resetDefaults": "Reset to Defaults",
+            "saved": "HUD configuration saved successfully.",
+            "appearance": "Appearance & Sizing",
+            "positioning": "Token Positioning & Attachment"
+        },
+        "controlButtons": {
+            "filterResources": {
+                "label": "Filter Resources",
+                "tooltipShow": "Show Depleted Items",
+                "tooltipHide": "Hide Depleted Items"
+            },
+            "combatTrack": {
+                "label": "Combat Turn Tracker",
+                "tooltip": "<b>Left Click:</b> Follow Active Combatant Turn\n<b>Right Click:</b> Toggle Auto-Open / Auto-Close on Turn Change"
+            },
+            "itemSummary": {
+                "label": "Item Summary Tooltips",
+                "tooltipEnable": "Enable Rich Item Summaries (without holding ?)",
+                "tooltipDisable": "Disable Rich Item Summaries"
+            },
+            "recenter": {
+                "label": "Recenter View",
+                "tooltip": "<b>Left Click:</b> Recenter Canvas on Active Combatant\n<b>Right Click:</b> Toggle Auto-Centering on Turn Change"
+            },
+            "anchor": {
+                "label": "HUD Placement & Persistence",
+                "tooltipAttached": "<b>Left Click:</b> Detach HUD from Token\n<b>Right Click:</b> Toggle HUD Persistence on Outside Click",
+                "tooltipDetached": "<b>Left Click:</b> Attach HUD to Token\n<b>Right Click:</b> Toggle HUD Persistence on Outside Click"
+            },
+            "close": {
+                "label": "Close HUD",
+                "tooltip": "Close HUD"
             }
         },
         "core": {
-            "filterNoResources": "Hide Depleted",
+            "searchPlaceholder": "Filter actions...",
             "hidden": "Hidden",
             "hideAction": "Hide Action",
             "unhideAction": "Unhide Action",
@@ -62,9 +208,15 @@
             "allItems": "All Items",
             "other": "Other",
             "allActions": "All Actions",
-            "none": "None"
+            "none": "None",
+            "endTurn": "End Turn",
+            "rollInitiative": "Roll Initiative"
         },
         "common": {
+            "save": "Save Changes",
+            "cancel": "Cancel",
+            "add": "Add",
+            "resetDefaults": "Reset Defaults",
             "actionEconomy": "Action Economy",
             "itemCharges": "Item Charges",
             "prepareSpell": "Prepare Spell",
@@ -76,8 +228,72 @@
             "allEquipment": "All Equipment",
             "spellComponents": "Spell Components"
         },
+        "dnd5eAutoBan": {
+            "title": "D&D 5e Configuration",
+            "menuName": "D&D 5e Configuration",
+            "menuLabel": "Configure D&D5e",
+            "menuHint": "Configure D&D 5e specific settings such as automatic spell component banning.",
+            "description": "Configure status conditions that automatically ban Verbal and Somatic spell components on actors when applied.",
+            "enableAutoBan": "Enable Auto-Ban Spell Components",
+            "verbalTitle": "Verbal (Vocal) Components",
+            "verbalHint": "Spells requiring Verbal components will be banned when the actor has any of these conditions:",
+            "somaticTitle": "Somatic Components",
+            "somaticHint": "Spells requiring Somatic components will be banned when the actor has any of these conditions:",
+            "noConditions": "No conditions configured",
+            "saved": "D&D 5e configuration saved.",
+            "autoBanned": "Auto-Banned",
+            "autoBannedComponents": "Auto-Banned Components",
+            "causingEffects": "Causing Effect(s):"
+        },
         "dnd5e": {
             "upcast": "Upcast"
+        },
+        "page2": {
+            "savingThrow": "Saving Throw",
+            "abilityCheck": "Ability Check",
+            "ability": "Ability",
+            "tools": "Tools",
+            "tool": "Tools"
+        },
+        "page3": {
+            "tokenInfo": "Token Information",
+            "inspiration": "Inspiration",
+            "inspired": "Inspired",
+            "armorClass": "Armor Class",
+            "movementSpeed": "Movement Speed",
+            "moved": "moved",
+            "movedThisTurn": "Distance moved this turn",
+            "resistances": "Damage Resistances",
+            "immunities": "Immunities",
+            "damageImmunities": "Damage Immunities",
+            "conditionImmunities": "Condition Immunities",
+            "vulnerabilities": "Damage Vulnerabilities",
+            "languages": "Languages",
+            "creatureType": "Creature Type",
+            "biography": "Biography",
+            "senses": "Senses",
+            "noBiography": "No biography details available.",
+            "none": "None",
+            "walk": "Walk",
+            "fly": "Fly",
+            "swim": "Swim",
+            "climb": "Climb",
+            "burrow": "Burrow",
+            "hover": "Hover"
+        },
+        "keybindings": {
+            "toggleHUD": {
+                "name": "Toggle Action Display HUD",
+                "hint": "Open or close the Action Display HUD for the currently controlled token."
+            }
+        },
+        "tabs": {
+            "allTooltip": "<b>Right Click:</b> Toggle Show All (Equipped & Unequipped Items, Prepared & Unprepared Spells)",
+            "unpreparedSpellsTooltip": "<b>Right Click:</b> Toggle Show Unprepared Spells",
+            "unequippedWeaponsTooltip": "<b>Right Click:</b> Toggle Show Unequipped Weapons",
+            "unequippedEquipmentTooltip": "<b>Right Click:</b> Toggle Show Unequipped Equipment",
+            "unequippedItemsTooltip": "<b>Right Click:</b> Toggle Show Unequipped Items",
+            "inactiveBuffsTooltip": "<b>Right Click:</b> Toggle Show Inactive Buffs"
         }
     }
 }

@@ -6,7 +6,7 @@
         },
         "rebindMouseButtons": {
             "name": "Rebind mouse buttons",
-            "hint": "Overrides the default mouse button behavior to increase the stack count with left click and decrease it with right click. The status overlay can be set with Shift + Left click. A specific stack amount can be set with Alt + Left click."
+            "hint": "Overrides the default mouse button behavior to increase the stack count with left click and decrease it with right click. The status overlay can be set with Shift + Left click. The counter can be configured with Ctrl + Left click."
         },
         "multiSelect": {
             "name": "Modify all selected tokens",
@@ -31,6 +31,14 @@
             "name": "Countdown color",
             "hint": "The color of combat countdowns in RRGGBB format."
         },
+        "defaultDurationUnit": {
+            "name": "Default duration unit",
+            "hint": "The duration unit for new statuses without their own defaults."
+        },
+        "defaultModifyDuration": {
+            "name": "Always modify duration",
+            "hint": "Change the duration (instead of the amount) with mouse and keyboard inputs for new statuses without their own defaults. Holding the Alt key temporarily inverts this setting."
+        },
         "counterDefaults": {
             "name": "Reset defaults",
             "hint": "Opens a dialog to reset default configurations for one or more status effects.",
@@ -44,14 +52,16 @@
                 "name": "Type",
                 "default": "Simple"
             },
-            "durationType": {
+            "durationUnit": {
                 "name": "Duration",
                 "hint": "Determines how the remaining duration of the effect is displayed.",
-                "none": "None",
-                "round": "Rounds",
-                "turn": "Turns"
+                "none": "None"
             },
             "localEffect": "Local effect {name} cannot be configured.",
+            "hideDuration": {
+                "name": "Hide duration",
+                "hint": "Don't display a duration, even when the effect is temporary."
+            },
             "modifyDuration": {
                 "name": "Modify duration",
                 "hint": "Mouse and keyboard inputs for the token change the duration (instead of the amount)."

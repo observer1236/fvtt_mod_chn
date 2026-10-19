@@ -1,4 +1,5 @@
-{"TOKEN-LEAN": {
+{
+	"TOKEN-LEAN": {
 		"Keybindings": {
 			"lean": {
 				"Name": "倾斜",
@@ -19,7 +20,7 @@
 				"Hint": "玩家可以在暂停时倾斜。"
 			},
 			"canLeanInCombat": {
-				"Name": "仅限战斗",
+				"Name": "Token Lean：仅限战斗",
 				"Hint": "玩家只能在战斗时倾斜。"
 			},
 			"combatLeanToggle": {
@@ -38,7 +39,10 @@
 			"notifySound": {
 				"Name": "通知声音",
 				"Hint": "发送通知信息时播放声音。留空表示禁用。"
-			}
+			},
+			"notifyMessage.Name": "通知消息",
+			"notifyMessage.Hint": "耳语的内容。",
+			"notifyMessage.Default": "我倾斜了"
 		}
 	}
 }

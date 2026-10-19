@@ -1,15 +1,45 @@
-{"ACDC": {
-    "ButtonHint": "修改核心骰子配置",
-    "Manual": "FVTT掷骰改为手动掷骰！",
-    "Auto": "FVTT掷骰改为自动掷骰！",
-    "SelectedManual": "用户选择FVTT掷骰改为手动掷骰！",
-    "Config": "ACDC控制",
-    "ToggleMode": "切换模式",
-    "Keybind": "切换ACDC掷骰模式",
-    "CPR_INTEGRATION_TOGGLE": {
-      "NAME": "切换CPR手动掷骰",
-      "HINT": "你还需要调整CPR手动掷骰设置以确保功能正常工作",
-      "Manual": "FVTT的掷骰现在使用CPR手动掷骰对话框！"
-    }
-  }
+{
+	"ACDC": {
+		"ButtonHint": "修改核心骰子配置",
+		"Manual": "FVTT掷骰改为手动掷骰！",
+		"Auto": "FVTT掷骰改为自动掷骰！",
+		"SelectedManual": "用户选择FVTT掷骰改为手动掷骰！",
+		"Config": "ACDC控制",
+		"ToggleMode": "切换模式",
+		"Keybind": "切换ACDC掷骰模式",
+		"CPR_INTEGRATION_TOGGLE": {
+			"NAME": "切换CPR手动掷骰",
+			"HINT": "你还需要调整CPR手动掷骰设置以确保功能正常工作",
+			"Manual": "FVTT的掷骰现在使用CPR手动掷骰对话框！"
+		},
+		"Modes.auto.Label": "自动",
+		"Modes.auto.Notification": "FVTT掷骰改为自动掷骰！",
+		"Modes.manual.Notification": "FVTT掷骰改为手动掷骰！",
+		"Settings.RollTypes.attack": "攻击检定",
+		"Settings.RollTypes.skill": "技能检定",
+		"Settings.RollTypes.tool": "工具检定",
+		"Settings.RollTypes.save": "豁免检定",
+		"Settings.RollTypes.check": "属性检定",
+		"LinksMenu.Name": "模块支持",
+		"LinksMenu.Label": "友情链接",
+		"LinksMenu.Hint": "打开 ACDC 文档、问题跟踪器和支持链接。",
+		"LinksMenu.GitHubMessage": "GitHub 链接",
+		"LinksMenu.DiscordMessage": "进入书房",
+		"LinksMenu.SupportMessage": "向你的小熊扔一枚硬币",
+		"LinksMenu.Title": "资源与支持：ACDC",
+		"Modes.manual.Label": "手册",
+		"Modes.smart.Label": "智能路由",
+		"Modes.smart.Notification": "铸造骰子掷骰现在使用 ACDC 智能路由！",
+		"Settings.RollMode.Name": "ACDC 掷骰子模式",
+		"Settings.RollMode.Hint": "选择 ACDC 是否将骰子履行设置为自动、本机手动或智能路由。",
+		"Settings.ManualRollTypes.Name": "智能路由掷骰类型",
+		"Settings.ManualRollTypes.Hint": "选择掷骰类型手动解决，其他掷骰类型自动掷骰。如果未选择任何选项，ACDC 会在自动和手动之间切换所有掷骰。",
+		"Settings.ManualNonRegisteredDenominations.Name": "包括非注册面额",
+		"Settings.ManualNonRegisteredDenominations.Hint": "在手动或智能路由掷骰中包括未在 Foundry 骰子履行设置中注册的面额，例如 1d7。",
+		"Settings.RollTypes.initiative": "先攻掷骰子",
+		"Settings.RollTypes.damage": "伤害掷骰",
+		"Settings.RollTypes.healing": "治疗掷骰子",
+		"Settings.RollTypes.deathSave": "死亡候检定",
+		"Settings.RollTypes.concentration": "注意力检查"
+	}
 }

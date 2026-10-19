@@ -1,7 +1,9 @@
 {
   "MINIEDIT": {
+    "welcomePageHTML" : "<div> <h4><strong>Welcome to Mini Edit</strong></h4> <strong>Get involved</strong> <p><a href=\"https://discord.com/invite/fycwH79s2y\" class=\"button\"><i class=\"fab fa-discord\"></i> Discord</a></p> <p><a href=\"https://bsky.app/profile/wgtngm.bsky.social\" class=\"button\"> <i class=\"fab fa-bluesky\"></i> Bluesky</a></p> <p><a href=\"https://github.com/xthesaintx/wgtngm/issues\" class=\"button\"><i class=\"fas fa-bug\"></i> Bug Reports</a></p> <hr> <strong>Documentation</strong> <p><a href=\"https://campaigncodex.wgtngm.com/mini-edit\" class=\"button\"><i class=\"fas fa-book\"></i> wgtngm.com</a></p> <p><a href=\"https://www.youtube.com/@WgtnGM\" class=\"button\"><i class=\"fab fa-youtube\"></i> youtube.com/@WgtnGM</a></p> <hr> <strong>Support the modules</strong> <p><a href=\"https://www.patreon.com/wgtngm\" class=\"button\"><i class=\"fab fa-patreon\"></i> Patreon.com/wgtngm</a></p> <p><a href=\"https://ko-fi.com/wgtngm\" class=\"button\"><i class=\"fas fa-coffee\"></i> ko-fi.com/wgtngm</a></p> <hr> <strong>See what else is available</strong> <p><a href=\"https://www.wgtngm.com/\" class=\"button\"><i class=\"fas fa-globe\"></i> www.wgtngm.com</a></p> <p><a href=\"https://foundryvtt.com/community/xthesaintx/packages\" class=\"button\"><i class=\"fas fa-cubes\"></i> All my foundry VTT Packages</a></p> <hr> </div>",
     "controls": {
-      "open": "Mini Edit"
+      "open": "Mini Edit",
+      "behavior": "Apply this behavior to all selected Regions"
     },
     "dialog": {
       "title": "Mini Edit",
@@ -22,7 +24,8 @@
       "gmOnly": "Mini Edit is GM-only.",
       "canvasNotReady": "Canvas is not ready.",
       "updateFailed": "Failed to update selected {documentName} documents.",
-      "noSheetClass": "No sheet class found for {documentName}."
+      "noSheetClass": "No AppV2 sheet class found for {documentName}.",
+      "nonV2Sheet": "The active sheet for {documentName} is not AppV2-compatible."
     }
   }
 }

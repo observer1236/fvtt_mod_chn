@@ -48,7 +48,7 @@
             "value": "Value (current/max)",
             "color": "Color (min/max)",
             "position": "Position",
-			"moveInHint": "Move away from token edge",
+            "moveInHint": "Move away from token edge",
             "moveOutHint": "Move towards token edge",
             "advanced": "Advanced configuration",
             "indent": "Indentation",
@@ -76,8 +76,14 @@
             "fgImageHint": "Replaces the usual bar with an image that is clipped based on the fill percentage.",
             "bgImage": "Background image",
             "bgImageHint": "Replaces the usual bar background with an image. It is recommended that both images have the same width as the scene's grid size.",
-			"hideBg": "Hide background",
-            "opacity": "Opacity"
+            "hideBg": "Hide background",
+            "opacity": "Opacity",
+            "tabs": {
+                "visibility": "Visibility",
+                "position": "Position",
+                "value": "Value",
+                "display": "Display"
+            }
         },
         "attribute": {
             "none": "None (remove)",

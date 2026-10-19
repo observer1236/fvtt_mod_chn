@@ -48,15 +48,17 @@
 			"Title": "Editor",
 			"TokenWarning": "Altering override data may temporarily break the actor. Re-opening the sheet should be enough to fix it.",
 			"TypeWarning": "You're changing the datatype. Be careful!",
+			"UnsupportedMode": "Editing not supported in \"{mode}\" mode!",
 			"Dangerous": "THIS IS POTENTIALLY VERY DANGEROUS."
 		},
 		"Data": {
 			"Mixed": "Mixed",
-			"Roll": "Roll Data",
-			"Source": "Source",
-			"Derived": "Derived",
-			"Override": "Override",
-			"Flags": "Flags",
+			"rolldata": "Roll Data",
+			"source": "Source",
+			"derived": "Derived",
+			"override": "Override",
+			"new": "New Document",
+			"flags": "Flags",
 			"Legend": "Roll data – used for formulas.<br>Derived data – as seen by the system, macros, modules, etc.<br>Source data – permanently stored data."
 		},
 		"DataValue": {
@@ -74,7 +76,9 @@
 		"Error": {
 			"NavigationFailure": "Failed to navigate to the target datapath: {path}",
 			"NoGetterEdit": "Can't edit values inside getters.",
-			"UnsupportedEditType": "Unsupported type for editing: {type}"
+			"UnsupportedEditType": "Unsupported type for editing: {type}",
+			"NoEdit": "Editing has been disabled.",
+			"NoUpdate": "Target object does not support updates."
 		},
 		"Types": {
 			"undefined": "Undefined",

@@ -15,16 +15,15 @@
       "SummaryLegend": "Summary",
       "LegendFood": "Food",
       "LegendWater": "Water",
-      "DaysWithoutFoodLabel": "Days without food",
-      "FreshWater": "Fresh Water Source Available",
+      "StarvationLabel": "Days without food",
+      "FreshWater": "Fresh Water Source",
       "FreshWaterHint": "Drink from a fresh water source instead of consuming stored water.",
-      "FreeFood": "Free Food Source Available",
+      "FreeFood": "Free Food Source",
       "FreeFoodHint": "Eat from a free food source instead of consuming stored rations.",
       "RequiredLabel": "Required",
       "SelectedLabel": "Selected",
       "Each": "{amount} each",
       "AmountFullDay": "full day",
-      "AmountWater": "{value} gal",
       "DropLegend": "Add Consumable",
       "DropHint": "Drag a consumable from this actor's inventory here to add it to the list.",
       "Owned": "Owned: {quantity}",
@@ -49,6 +48,9 @@
       "FoodNotRequiredTooltip": "Food is not required for this actor.",
       "WaterNotRequiredTooltip": "Water is not required for this actor."
     },
+    "Group": {
+      "Title": "Free Food and Water for the Group"
+    },
     "Config": {
       "Title": "Nutrition",
       "Configure": "Configure Nutrition",
@@ -62,18 +64,51 @@
       "FoodPerDay": "Food per Day",
       "WaterPerDay": "Water per Day",
       "StarvationLimit": "Days Without Food",
+      "StarvationLimitLegacy": "Safe Days Without Food",
       "DefaultValue": "Default: {value}",
       "DefaultDays": "Default: {days} days",
       "SaveDC": "Save DC",
-      "MalnutritionDCHint": "Constitution saving throw DC when insufficient food is consumed."
+      "SaveDCHintFood": "Constitution saving throw DC when insufficient food is consumed.",
+      "SaveDCHintWater": "Constitution saving throw DC when insufficient water is consumed."
     },
     "Chat": {
       "Title": "Nutrition",
-      "StarvationLabel": "Days without food"
+      "StarvationLabel": "Days without food",
+      "ExhaustionLabel": "Exhaustion"
     },
     "Rest": {
-      "MalnutritionSaveHint": "On a failed save, use the button below to apply 1 level of &Reference[exhaustion apply=false] and the &Reference[malnutrition apply=false] condition.",
-      "MalnutritionApply": "Apply Malnutrition"
+      "FoodSaveHint": "On a failed save, use the button below to apply 1 level of &Reference[exhaustion apply=false] and the &Reference[malnutrition apply=false] condition.",
+      "WaterSaveHint": "On a failed save, use the button below to apply 1 level of &Reference[exhaustion apply=false] (2 levels if already exhausted).",
+      "ApplyExhaustion": "Apply Exhaustion",
+      "NutritionFailed": "Could not update nutrition for {actor}"
+    },
+    "Usage": {
+      "Legend": "Nutrition",
+      "Label": "Counts As",
+      "Food": "Food",
+      "Water": "Water",
+      "Both": "Food and Water",
+      "None": "None"
+    },
+    "Settings": {
+      "CalendarMode": {
+        "Name": "Calendar Mode",
+        "Hint": "Whether nutrition is evaluated once per calendar midnight or on a long rest that starts a new day. Default: automatic, active when Calendaria, Ember, or dnd5e's own \"Daily Recovery Mode\" is set to Calendar Recovery.",
+        "Default": "Default (Auto-Detect)",
+        "On": "Always On",
+        "Off": "Always Off"
+      },
+      "DisableGroupSheet": {
+        "Name": "Disable Group Sheet Integration",
+        "Hint": "Hide the nutrition tracker on the member entries and the free food and water button on the Group sheet."
+      },
+      "DisableActivityNutrition": {
+        "Name": "Disable Activity Dialog Integration",
+        "Hint": "Do not add the nutrition option to the usage dialog of food items."
+      }
+    },
+    "Calendar": {
+      "DayChangeFailed": "Could not update nutrition for {actor}"
     }
   }
 }

@@ -35,6 +35,9 @@
   "IMAGEVIEWER.Settings.Intercept.Name": "Open chat images in the viewer",
   "IMAGEVIEWER.Settings.Intercept.Hint": "When enabled, clicking an image in chat opens the shared viewer instead of the default image popout.",
 
+  "IMAGEVIEWER.Settings.InterceptJournal.Name": "Open journal images in the viewer",
+  "IMAGEVIEWER.Settings.InterceptJournal.Hint": "When enabled, clicking an image in a journal entry — an Image page or a picture inside the text — opens the shared viewer instead of the default image popout.",
+
   "IMAGEVIEWER.Settings.Support.Name": "Support development",
   "IMAGEVIEWER.Settings.Support.Label": "Support",
   "IMAGEVIEWER.Settings.Support.Hint": "The module is free and open-source, and every feature stays available either way. If it saves you prep time, a one-time tip is welcome — opens in a browser tab."

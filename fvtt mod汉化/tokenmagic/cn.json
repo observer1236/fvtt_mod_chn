@@ -1,4 +1,5 @@
-{"TMFX.TokenMagic": "TokenMagic",
+{
+	"TMFX.TokenMagic": "TokenMagic",
 	"TMFX.preset.add.success": "特效已成功添加到预设库中。",
 	"TMFX.preset.add.permission.failure": "你不能在预设库中添加特效。",
 	"TMFX.preset.add.params.failure": "无法将特效添加到预置库中。参数不正确。",
@@ -15,7 +16,7 @@
 	"TMFX.preset.reset.success": "你的预设库已成功重置。",
 	"TMFX.settings.importOverwrite.name": "导入时覆盖",
 	"TMFX.settings.importOverwrite.hint": "如果想在导入时替换同名预设，请选中此选项。",
-	"TMFX.template.opacity": "纹理不透明度",
+	"TMFX.template.opacity": "区域不透明度",
 	"TMFX.template.fx": "特殊效果",
 	"TMFX.template.tint": "效果色调",
 	"TMFX.settings.autoFPS.name": "自动FPS",
@@ -90,5 +91,13 @@
 	"TMFX.app.searchPreset.controls.templateToggle": "切换测量板预设",
 	"TMFX.app.editPreset.option.library": "库",
 	"TMFX.app.editPreset.option.defaultTexture": "默认纹理",
-	"TMFX.save": "保存"
+	"TMFX.save": "保存",
+	"TMFX.app.editPreset.option.defaultColor": "默认颜色",
+	"TMFX.matt.preset": "预设",
+	"TMFX.settings.autoTemplateSettings.color.label": "区域颜色（可选）",
+	"TMFX.app.searchPreset.controls.regionToggle": "Toggle Region Presets",
+	"TMFX.app.editPreset.option.defaultOpacity": "默认不透明度",
+	"TMFX.matt.togglePreset": "Toggle Preset",
+	"TMFX.matt.transient.label": "瞬态",
+	"TMFX.matt.transient.hint": "检查将预设设置为瞬态/短暂效果。它不会在场景重新加载后保留下来，并且只会显示给选定的用户。"
 }

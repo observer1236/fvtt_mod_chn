@@ -46,7 +46,7 @@
     "dnd5e-spellpoints.leveledProgressionGained": "Maximum {SpellPoints}.",
     "dnd5e-spellpoints.maxSpellPointsOverride": "Maximum {SpellPoints}.",
     "dnd5e-spellpoints.neededToCastHeader": "{SpellPoints} Needed to Cast.",
-	"dnd5e-spellpoints.itemUsage": "Add this item to the character sheet to give them the ability to use Spell Points / Mana / Spell Points.",
+    "dnd5e-spellpoints.itemUsage": "Add this item to the character sheet to give them the ability to use Spell Points / Mana / Spell Points.",
     "dnd5e-spellpoints.notEnoughSp": "{ActorName} doesn't have enough {SpellPoints} to cast this spell.",
     "dnd5e-spellpoints.oldResourceFound": "Found an old Spell Point resource.",
     "dnd5e-spellpoints.oldResourceFoundDesc": "An old resource has been found on this character for use with Spell Points. Would you like to import the resource data and remove it?",
@@ -56,7 +56,7 @@
     "dnd5e-spellpoints.pleaseCreateV3": "Please create a 'Class Feature' Item with the custom label: '{SpellPoints}' to cast this spell.",
     "dnd5e-spellpoints.poptitle": "Spell Points System 5e Configuration.",
     "dnd5e-spellpoints.progressionTitle": "Progression and spell's Costs",
-	"dnd5e-spellpoints.settingReset": "Default settings restored.",
+    "dnd5e-spellpoints.settingReset": "Default settings restored.",
     "dnd5e-spellpoints.settingResetConfirmTitle": "Spell Points System 5e Configuration Reset.",
     "dnd5e-spellpoints.settingResetConfirmText": "Every configuration will be reset to default. Are you sure you want to do this?",
     "dnd5e-spellpoints.reset": "Reset.",
@@ -66,7 +66,7 @@
     "dnd5e-spellpoints.settingsTitle": "Spell Points Module Settings.",
     "dnd5e-spellpoints.spAtLevel": "Spell Points at Level {characterLevel}.",
     "dnd5e-spellpoints.spellCost": "Costs {amount} {SpellPoints}.",
-	"dnd5e-spellpoints.spFormulaPreset": "Choose the formula preset",
+    "dnd5e-spellpoints.spFormulaPreset": "Choose the formula preset",
     "dnd5e-spellpoints.spellLevelHeader": "Spell Level.",
     "dnd5e-spellpoints.spellPointsCostsNote": "You don't need to change the spell point costs if you are using the default spell point rules in DMG (page 288). You can use formulas to determine the cost.",
     "dnd5e-spellpoints.spellPointsCostsTitle": "{SpellPoints} Costs.",
@@ -96,5 +96,8 @@
     "dnd5e-spellpoints.spResourceBarActive": "View the spellpoints resource bar on the character sheet",
     "dnd5e-spellpoints.spResourceBind": "Bind the Spell Points Item to an actor resource.",
     "dnd5e-spellpoints.spResourceBindNote": "Choose a resource to bind to, or leave blank to disable binding. Each time the Spell Points Item is updated, it will also update the bound resource on the character sheet. Each time the resource is updated, the Spell Points Item will also be updated.",
-    "dnd5e-spellpoints.spResourceBindWarn": "Warning: Binding to a resource will overwrite the resource values on every actor with the Spell Points Item. Also the binded resource will appear on the character sheet favorites list. This cannot be prevented."
+    "dnd5e-spellpoints.spResourceBindWarn": "Warning: Binding to a resource will overwrite the resource values on every actor with the Spell Points Item. Also the binded resource will appear on the character sheet favorites list. This cannot be prevented.",
+    "dnd5e-spellpoints.formulaValidationBlocked": "Cannot save: found {count} invalid formula(s). {details}",
+    "dnd5e-spellpoints.formulaValidationEntry": "[{field}] \"{formula}\" -> {reason}",
+    "dnd5e-spellpoints.formulaRuntimeFallback": "Invalid formula \"{formula}\". Using 0 as a safe fallback. ({reason})"
 }

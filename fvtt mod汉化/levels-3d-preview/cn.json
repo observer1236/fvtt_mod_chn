@@ -1,4 +1,5 @@
-{"levels3dpreview": {
+{
+	"levels3dpreview": {
 		"controls": {
 			"preview3d": "切换3D模式",
 			"miniCanvas": "弹出/恢复画布",
@@ -37,7 +38,8 @@
 				"scroll": "滚动",
 				"loadingdone": "3D Canvas已准备就绪！- 按下 <i class='fas fa-question control-highlighted'></i> 关闭此屏幕。",
 				"loadingarrow": "点击箭头指向的'？'图标以关闭加载屏幕。"
-			}
+			},
+			"3dtools": "3D 画布工具"
 		},
 		"errors": {
 			"initfailed": "3D Canvas：初始化失败。这可能是缓存问题，请尝试按CTRL+F5刷新页面。请确保你有一个激活的场景。或者，3D Canvas或其依赖项可能已过时或损坏。请确保模组已更新，如果其他方法都失败，请尝试重新安装。",
@@ -59,7 +61,8 @@
 				"onend": "粒子系统：.onEnd() - 一个或多个参数不是Particle3D的实例。"
 			},
 			"critical": "3D Canvas：在渲染循环中遇到致命错误。正在尝试恢复...",
-			"notarget": "3D Canvas：未找到拖放目标。请确保你至少有一个3D对象或已启用背景。"
+			"notarget": "3D Canvas：未找到拖放目标。请确保你至少有一个3D对象或已启用背景。",
+			"gmNotConnected": "必须连接主机才能使用此功能"
 		},
 		"notifications": {
 			"initialviewcleared": "初始视角已清除",
@@ -457,13 +460,13 @@
 			"sunIntensity": {
 				"label": "太阳强度"
 			},
-            "ambientLightIntensity": {
-                "label": "环境光照强度",
-                "notes": "控制全局光源的强度，该光源会均匀照亮所有表面。此光源是均匀的，不会投射或接收阴影。"
-            },
-            "ambientLightColor": {
-                "label": "环境光照颜色"
-            },
+			"ambientLightIntensity": {
+				"label": "环境光照强度",
+				"notes": "控制全局光源的强度，该光源会均匀照亮所有表面。此光源是均匀的，不会投射或接收阴影。"
+			},
+			"ambientLightColor": {
+				"label": "环境光照颜色"
+			},
 			"shadowBias": {
 				"label": "阴影偏移",
 				"notes": "决定阴影渲染的数字，如果你在场景中的实体上注意到黑色条纹，可以调整此数字。此数字的正确值通常非常小，建议以0.00001或更小的增量进行调整。"
@@ -494,10 +497,11 @@
 				"label": "渲染场景灯光"
 			},
 			"mirrorLevels": {
-				"label": "镜像Levels图块可见性"
+				"label": "启用图块遮挡"
 			},
 			"object3dSight": {
-				"label": "使用3D几何进行视线计算"
+				"label": "使用3D几何进行视线计算",
+				"notes": "使用瓷砖而不是墙壁来获得视线和碰撞。"
 			},
 			"enableGameCamera": {
 				"label": "启用游戏相机",
@@ -749,9 +753,9 @@
 			"animSpeed": {
 				"label": "动画速度"
 			},
-            "forceFlyingMode": {
-                "label": "强制飞行模式"
-            },
+			"forceFlyingMode": {
+				"label": "强制飞行模式"
+			},
 			"paused": {
 				"label": "暂停"
 			},
@@ -1115,28 +1119,28 @@
 			"autoApply": {
 				"name": "自动应用材质",
 				"hint": "选择材质后，将立即应用到所选对象上。"
-			  },
-			  "autoClose": {
+			},
+			"autoClose": {
 				"name": "关闭材质浏览器",
 				"hint": "选择材质后，材质浏览器将自动关闭。"
-			  },
-			  "allTokens": {
+			},
+			"allTokens": {
 				"name": "显示所有Token",
 				"hint": "禁用时仅显示彩色Token，启用时显示所有可用Token。"
-			  },
-			  "autoAssignToken": {
+			},
+			"autoAssignToken": {
 				"name": "自动分配3D模型",
 				"hint": "在画布上放置未链接的Token时，如果未分配3D模型，则自动为其分配一个。",
 				"options": {
-				  "0": "禁用",
-				  "1": "仅3D模型",
-				  "2": "3D模型与俯视Token"
+					"0": "禁用",
+					"1": "仅3D模型",
+					"2": "3D模型与俯视Token"
 				}
-			  },
-			  "assetBrowserCustomPath": {
+			},
+			"assetBrowserCustomPath": {
 				"name": "自定义资源路径",
 				"hint": "如需为资源浏览器设置自定义路径，请在此处填写。"
-			  },
+			},
 			"rangeFinder": {
 				"name": "距离测量",
 				"hint": "悬停在Token上时显示距离。",
@@ -1269,7 +1273,7 @@
 					"misc": "杂项",
 					"perm": "权限",
 					"gc": "游戏相机",
-                    "tools": "工具"
+					"tools": "工具"
 				}
 			},
 			"baseStyle": {
@@ -1501,7 +1505,15 @@
 			"debugMode": {
 				"name": "调试模式",
 				"hint": "显示有用的调试信息以进行故障排除。"
-			}
+			},
+			"exactTokenVisibility.name": "准确的代币可见性",
+			"exactTokenVisibility.hint": "启用后，将测试令牌高度上不同点的令牌可见性。",
+			"dynamicTokenVisibility.name": "动态大代币可见性",
+			"dynamicTokenVisibility.hint": "启用后，与较小的令牌相比，较大的令牌可见性将被测试更多的点。警告：此功能的计算成本可能很高。",
+			"highlighted.important.legend": "3D 核心设置",
+			"highlighted.important.hint": "仅在将场景用作 3D 场景时应启用这些设置。",
+			"regionsAlwaysFlat.name": "始终平坦的区域",
+			"regionsAlwaysFlat.hint": "启用后，所有放置的区域都将是平坦的。"
 		},
 		"exporter": {
 			"title": "将对象导出为GLTF",
@@ -1583,7 +1595,7 @@
 		},
 		"welcome": {
 			"title": "欢迎使用3D Canvas",
-			"content": "<h1>欢迎来到3D世界！</h1>\n欢迎使用3D Canvas！首先，感谢你支持我的开发项目，让这个项目成为可能！\n只需<b>点击<i class='fas fa-cube'></i>按钮</b>（Token控件，左上角）即可将场景切换到3D模式。<p><h2>重要模组</h2>\n在开始使用3D Canvas之前，请安装：<ul><li><a href='https://wiki.theripper93.com/levels-3d-preview/canvas3dcompendium'>地图制作包</a></li><li><a href='https://wiki.theripper93.com/levels-3d-preview/canvas3dtokencompendium'>Token合集</a></li></ul> 你将获得大量3D道具、Token以及许多易于使用的工具！<p><h2>入门指南</h2>\n启用<b>地图制作包</b>后，你将获得一个简单快速的<b>快速入门教程</b>。完成快速入门后，如果你想深入了解高级设置，强烈建议<b>阅读文档</b>（点击<b><i class='fas fa-book'></i> 入门指南</b>按钮）。你以后可以在你的合集中找到文档！文档中还提供了一系列视频教程供你参考。<p><h2>故障排除</h2>\n如果你遇到任何<b>问题</b>或在<b>配置</b>或<b>3D模型</b>方面遇到困难，请随时在Discord频道中<b>联系我们</b>！<hr>",
+			"content": "<h1>欢迎使用3D！</h1>欢迎使用3D画布！首先，感谢您支持我的开发工作并使这个项目成为可能！只需 <b> 单击 <i class='fas fa-cube'></i> 按钮 </b>（令牌控件，左上角）即可将场景切换为 3D。<p><h2> 重要模块</h2> 在开始使用 3D Canvas 之前，请安装： <ul><li><a href='https://foundryvtt.com/packages/canvas3dcompendium' target='_blank'>地图制作包</a></li><li><a href='https://foundryvtt.com/packages/canvas3dtokencompendium' target='_blank'>代币收藏</a></li></ul>您将获得大量3D道具和代币！<p><a href='https://join.theripper93.com' target='_blank'>Patreon 支持者</a> 还将获得许多额外的高级构建工具：</p><ul><li><a href='https://foundryvtt.com/packages/canvas3d-premium' target='_blank'>Advanced工具</a></li></ul><p><h2>入门</h2> 启用<b>地图制作包</b>后，您将可以访问简单快速的<b>快速入门教程</b>。完成快速入门后，如果您想深入了解高级设置，强烈建议您阅读 <a href='https://wiki.theripper93.com/levels-3d-preview' target='_blank'> 文档 </a>（通过单击下面的 <b><i class='fas fa-book'></i> 入门</b> 按钮）。您稍后可以随时在您的合集中找到文档！该文档还包含一系列视频教程可供您参考。<p><h2>故障排除</h2>如果您遇到任何<b>问题</b>或在<b>配置</b>或<b>3d方面遇到问题型号</b>不要依赖<b>在<a href='https://discord.theripper93.com' target='_blank'>discord</a>频道上联系</b>！<hr>",
 			"ok": "关闭",
 			"dontshowagain": "不再显示",
 			"opencompendium": "入门指南"
@@ -1591,7 +1603,8 @@
 		"newuserexperience": {
 			"title": "欢迎使用3D Canvas",
 			"content": "<h1>3D快速入门！</h1> 欢迎使用3D Canvas，这是一个快速入门教程，帮助你立即轻松制作地图！点击<b>开始导览！</b>按钮以开始导览。<hr>",
-			"starttour": "开始导览！"
+			"starttour": "开始导览！",
+			"importdemo": "导入演示场景"
 		},
 		"performance": {
 			"verylow": "非常低",
@@ -2015,7 +2028,7 @@
 				},
 				"step-7": {
 					"title": "拖放",
-					"content": "像使用2D图块一样拖放3D模型。使用控件参考来操作图块。3D Canvas宏合集中包含有用的宏来操作图块。"
+					"content": "拖放 3D 模型的方式与拖放 2D 图块的方式相同。使用控件参考来根据您的喜好操纵图块。"
 				}
 			},
 			"scene-configuration": {
@@ -2184,7 +2197,7 @@
 				},
 				"step-4": {
 					"title": "放置",
-					"content": "你可以使用这些选项来确定资产的放置方式。例如，如果你希望它们与网格对齐。"
+					"content": "您可以使用这些切换来确定资产的放置方式。例如，如果您希望它们网格对齐。"
 				},
 				"step-5": {
 					"title": "碰撞",
@@ -2210,7 +2223,7 @@
 			"quick-environment": {
 				"title": "面板：环境",
 				"description": "此导览将引导你了解环境面板。",
-				"requires": "你需要安装3D Canvas地图制作包并打开环境面板才能开始此导览。",
+				"requires": "您需要安装 3D 画布 - 高级工具并打开环境面板才能开始本次游览。",
 				"step-0": {
 					"title": "环境面板",
 					"content": "此面板允许你通过几次点击快速设置场景氛围。"
@@ -2231,7 +2244,7 @@
 			"quick-terrain": {
 				"title": "面板：地形",
 				"description": "此导览将引导你了解地形面板。",
-				"requires": "你需要安装3D Canvas地图制作包并打开地形面板才能开始此导览。",
+				"requires": "您需要安装 3D 画布 - 高级工具并打开地形面板才能开始此游览。",
 				"step-0": {
 					"title": "地形面板",
 					"content": "此面板允许你快速设置地形，作为场景的基础。"
@@ -2256,7 +2269,7 @@
 			"material-browser": {
 				"title": "面板：材质",
 				"description": "此导览将引导你了解材质面板。",
-				"requires": "你需要安装3D Canvas地图制作包并打开材质面板才能开始此导览。",
+				"requires": "您需要安装 3D 画布 - 高级工具并打开材质面板才能开始本次导览。",
 				"step-0": {
 					"title": "材质面板",
 					"content": "此面板允许你快速浏览并更改所选图块的材质。"
@@ -2277,7 +2290,7 @@
 			"effect-browser": {
 				"title": "面板：效果",
 				"description": "此导览将引导你了解效果面板。",
-				"requires": "你需要安装3D Canvas地图制作包并打开效果面板才能开始此导览。",
+				"requires": "您需要安装 3D 画布 - 高级工具并打开效果面板才能开始本次游览。",
 				"step-0": {
 					"title": "效果面板",
 					"content": "此面板允许你将效果拖放到场景中。<hr>效果是作为贴图投影的纹理，放置后你将看到一个红色锥体，指示投影方向。此方向仅在图块层中对GM可见。"
@@ -2298,7 +2311,7 @@
 			"cutscene-panel": {
 				"title": "面板：过场动画",
 				"description": "此导览将引导你了解过场动画面板。",
-				"requires": "你需要安装3D Canvas地图制作包并打开过场动画面板才能开始此导览。",
+				"requires": "您需要安装 3D 画布 - 高级工具并打开过场动画面板才能开始本次游览。",
 				"step-0": {
 					"title": "过场动画面板",
 					"content": "此面板允许你快速为场景设置一个或多个过场动画。"
@@ -2347,7 +2360,7 @@
 			"room-builder": {
 				"title": "面板：地牢与室内",
 				"description": "此导览将引导你了解地牢与室内面板。",
-				"requires": "你需要安装3D Canvas地图制作包并打开地牢与室内面板才能开始此导览。",
+				"requires": "您需要安装 3D 画布 - 高级工具并打开地下城和室内面板才能开始本次游览。",
 				"step-0": {
 					"title": "地牢与室内面板",
 					"content": "此面板允许你创建地牢、洞穴和建筑内部。"
@@ -2480,6 +2493,8 @@
 			"cloudsScale": {
 				"label": "云缩放"
 			}
-		}
-	}
+		},
+		"ERROR.TokenCollide": "尝试的移动与至少一个物体发生碰撞。"
+	},
+	"TYPES.RegionBehavior.levels-3d-preview.obscureVision": "模糊 3D 视觉"
 }

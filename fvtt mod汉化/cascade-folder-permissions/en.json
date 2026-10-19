@@ -5,6 +5,7 @@
     "CascadeNote": "This will overwrite existing permissions on every document in this folder tree.",
     "SuccessCascade": "Cascade Permissions: Updated {count} document(s) across {folders} sub-folder(s).",
     "NoDocuments": "Cascade Permissions: No documents found in this folder tree.",
-    "ErrorCascade": "Cascade Permissions: An error occurred. Check the browser console (F12) for details."
+    "ErrorCascade": "Cascade Permissions: An error occurred. Check the browser console (F12) for details.",
+    "PartialError": "Cascade Permissions: Updated some documents, but {failed} failed. Check the browser console (F12) for details."
   }
 }

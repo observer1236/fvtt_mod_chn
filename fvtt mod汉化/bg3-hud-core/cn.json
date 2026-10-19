@@ -1,331 +1,343 @@
 {
-  "bg3-hud-core": {
-    "Settings": {
-      "Theme": {
-        "Name": "主题设置",
-        "Label": "配置主题",
-        "Hint": "自定义BG3 HUD的颜色、尺寸和外观",
-        "Title": "主题设置",
-        "General": "通用",
-        "GeneralHint": "如果未指定，则应用于下方所有组件的参数。",
-        "UseGeneralEverywhere": "在所有地方使用通用颜色",
-        "UseGeneralEverywhereHint": "启用后，仅使用通用部分。禁用可自定义每个部分。",
-        "Normal": "正常",
-        "Hover": "悬停",
-        "BorderColor": "边框颜色",
-        "ContainerBackgroundColor": "容器背景",
-        "TertiaryBackgroundColor": "三级背景",
-        "TextColor": "文本颜色",
-        "TextSecondaryColor": "次要文本",
-        "ContainerBorderSize": "容器边框尺寸",
-        "ContainerBorderRadius": "容器边框半径",
-        "TertiaryBorderSize": "三级边框尺寸",
-        "TertiaryBorderRadius": "三级边框半径",
-        "PortraitSize": "立绘尺寸",
-        "CellSize": "单元格尺寸",
-        "Portrait": "立绘",
-        "Hotbar": "快捷栏",
-        "SubContainer": "子容器",
-        "SubBackgroundColor": "子容器背景",
-        "Cell": "单元格",
-        "DragbarColor": "容器分隔符",
-        "WeaponSets": "武器套装",
-        "SmallContainers": "小型容器",
-        "SmallContainersHint": "控件、视图、过滤、被动和主动效果容器的共享样式。",
-        "Tooltip": "提示",
-        "ComponentColor": "组件颜色",
-        "GridCells": "网格单元格",
-        "CellBorderWidth": "单元格边框宽度",
-        "CellBorderRadius": "单元格边框半径",
-        "GridGap": "网格间距",
-        "Save": "保存",
-        "Reset": "重置为默认",
-        "ResetSuccess": "主题已重置为默认"
-      },
-      "NormalOpacity": {
-        "Name": "正常透明度",
-        "Hint": "HUD可见时的透明度（0.1到1.0）"
-      },
-      "FadedOpacity": {
-        "Name": "淡出透明度",
-        "Hint": "HUD在无行动后淡出时的透明度（设置为1.0可禁用淡出）"
-      },
-      "FadeOutDelay": {
-        "Name": "淡出延迟（秒）",
-        "Hint": "淡出HUD前的等待时间（1到30秒）"
-      },
-      "AutoScale": {
-        "Name": "自动缩放",
-        "Hint": "根据屏幕高度自动缩放UI"
-      },
-      "UIScale": {
-        "Name": "UI缩放",
-        "Hint": "手动UI缩放百分比（50%到300%）。仅在禁用自动缩放时使用。"
-      },
-      "UIPosition": {
-        "Name": "UI位置",
-        "Hint": "在屏幕上定位HUD的位置",
-        "Center": "居中",
-        "Left": "左侧",
-        "Right": "右侧"
-      },
-      "PosPadding": {
-        "Name": "位置内边距",
-        "Hint": "距离屏幕边缘的水平内边距（像素）"
-      },
-      "PosPaddingBottom": {
-        "Name": "底部内边距",
-        "Hint": "距离屏幕底部的内边距（像素）"
-      },
-      "PassivesContainerIconsPerRow": {
-        "Name": "被动特性图标每行数量",
-        "Hint": "每行显示的被动特性图标数量，超出则换行"
-      },
-      "ActiveEffectsContainerIconsPerRow": {
-        "Name": "主动效果图标每行数量",
-        "Hint": "每行显示的主动效果图标数量，超出则换行"
-      },
-      "ShowPassiveActiveEffects": {
-        "Name": "显示被动效果",
-        "Hint": "启用后，除了临时效果外，还会显示永久/被动效果（无持续时间）"
-      },
-      "ShowFilters": {
-        "Name": "显示过滤图标",
-        "Hint": "在快捷栏上方显示法术位和动作类型过滤图标"
-      },
-      "ShowPortrait": {
-        "Name": "显示立绘",
-        "Hint": "显示角色立绘、HP 覆盖层和立绘数据纹章。禁用后，角色信息按钮（d20）仍可使用。"
-      },
-      "BorderPortraitPreferences": {
-        "Name": "立绘边框",
-        "Hint": "HUD 立绘图像周围的装饰性边框。",
-        "None": "无",
-        "Simple": "简单",
-        "Styled": "装饰样式（圆形环）"
-      },
-      "ShowPortraitHPControls": {
-        "Name": "显示立绘生命值控件",
-        "Hint": "在立绘界面中显示设置生命值为最小值（骷髅）、最大值（心形）的按钮和生命值输入框"
-      },
-      "LayoutAppearance": {
-        "MenuTitle": "布局与外观",
-        "MenuName": "布局与外观",
-        "MenuLabel": "布局与外观设置",
-        "MenuHint": "调整透明度、缩放、定位和容器密度",
-        "OpacityLegend": "透明度与淡出",
-        "ScalePositionLegend": "缩放与位置",
-        "ContainerConfigurationLegend": "容器配置"
-      },
-      "Appearance": {
-        "MenuTitle": "外观设置",
-        "MenuName": "外观设置",
-        "MenuLabel": "外观设置",
-        "MenuHint": "调整HUD的透明度和淡出时间",
-        "Legend": "外观"
-      },
-      "Layout": {
-        "MenuTitle": "布局与位置",
-        "MenuName": "布局与位置",
-        "MenuLabel": "布局与位置设置",
-        "MenuHint": "调整HUD的缩放和定位",
-        "Legend": "布局与位置"
-      },
-      "FoundryUI": {
-        "MenuTitle": "FVTT UI",
-        "MenuName": "FVTT UI",
-        "MenuLabel": "FVTT UI设置",
-        "MenuHint": "控制宏栏可见性和提示时间",
-        "Legend": "FVTT UI",
-        "NameOnlyTooltipsName": "仅名称提示",
-        "NameOnlyTooltipsHint": "对物品、法术和特性使用简单的原生提示，而非系统富文本提示。"
-      },
-      "GMHotbar": {
-        "MenuTitle": "GM快捷栏",
-        "MenuName": "GM快捷栏",
-        "MenuLabel": "GM快捷栏设置",
-        "MenuHint": "配置GM快捷栏可见性",
-        "Legend": "GM快捷栏"
-      },
-      "TargetSelector": {
-        "MenuTitle": "目标选择",
-        "MenuName": "目标选择",
-        "MenuLabel": "目标选择设置",
-        "MenuHint": "配置法术和特性的BG3风格目标选择",
-        "Legend": "目标选择",
-        "EnableName": "启用目标选择",
-        "EnableHint": "启用后，点击需要目标的法术/特性将提示选择目标",
-        "SkipName": "如果存在有效目标则跳过",
-        "SkipHint": "如果已选择有效目标，则跳过目标选择",
-        "RangeName": "强制执行范围检查",
-        "RangeHint": "防止选择超出范围的目标Token",
-        "AutoSelfName": "自动选择自身",
-        "AutoSelfHint": "为'自身'目标特性自动选择自身",
-        "RangeIndicatorLegend": "范围指示",
-        "ShowRangeIndicatorsName": "显示范围指示",
-        "ShowRangeIndicatorsHint": "在画布上显示显示特性范围的视觉指示",
-        "RangeShapeName": "指示形状",
-        "RangeShapeHint": "范围指示的形状（圆形或方形）",
-        "RangeShapeCircle": "圆形",
-        "RangeShapeSquare": "方形",
-        "RangeAnimationName": "指示动画",
-        "RangeAnimationHint": "范围指示的动画样式",
-        "RangeAnimationPulse": "脉冲",
-        "RangeAnimationStatic": "静态",
-        "RangeLineWidthName": "线宽",
-        "RangeLineWidthHint": "范围指示线的粗细",
-        "RangeLineWidthThin": "细（1像素）",
-        "RangeLineWidthNormal": "正常（2像素）",
-        "RangeLineWidthThick": "粗（3像素）",
-        "RangeLineWidthExtraThick": "超粗（4像素）",
-        "RangeColorName": "指示颜色",
-        "RangeColorHint": "范围指示的颜色（十六进制格式）"
-      },
-      "PortraitData": {
-        "Title": "立绘数据配置",
-        "MenuName": "立绘数据",
-        "MenuLabel": "配置立绘数据",
-        "MenuHint": "在立绘周围显示数据纹章（AC、HP、速度等）",
-        "ShowName": "显示立绘数据",
-        "ShowHint": "在角色立绘周围显示数据纹章",
-        "TopLeft": "左上",
-        "TopRight": "右上",
-        "MiddleLeft": "中左",
-        "MiddleRight": "中右",
-        "BottomLeft": "左下",
-        "BottomRight": "右下",
-        "Saved": "立绘数据配置已保存",
-        "WorldOverride": "使用世界配置（所有玩家）",
-        "SyncToWorld": "同步到世界",
-        "SyncedToWorld": "立绘数据已同步到世界 - 所有玩家现在都将使用此配置",
-        "WorldConfigActive": "GM已设置世界配置",
-        "UseMyOwnConfig": "改用我自己的配置"
-      },
-      "AutoPopulate": {
-        "Options": "选项",
-        "HotbarGrid": "快捷栏网格 {number}"
-      }
-    },
-    "Controls": {
-      "Lock": {
-        "Tooltip": "锁定设置<br>（右键单击查看选项）",
-        "NoSettingsWarning": "请右键单击锁定按钮以选择要锁定的设置。",
-        "DeselectToken": "取消选择Token",
-        "Opacity": "透明度",
-        "DragDrop": "拖放"
-      },
-      "GMToggle": {
-        "Tooltip": "在 GM 快捷栏和 Token 快捷栏之间切换"
-      },
-      "Row": {
-        "Add": "添加行",
-        "Remove": "移除行"
-      },
-      "Settings": {
-        "Tooltip": "设置<br>（右键单击查看快捷操作）",
-        "ResetLayout": "重置布局",
-        "ClearAllItems": "清空所有物品",
-        "SaveLayout": "保存布局为角色默认",
-        "ExportLayout": "导出布局",
-        "ImportLayout": "导入布局"
-      }
-    },
-    "ContextMenu": {
-      "EditItem": "编辑物品",
-      "RemoveItem": "移除物品",
-      "SortContainer": "整理容器",
-      "ClearContainer": "清空容器",
-      "AutoPopulateContainer": "自动填充容器",
-      "AutoPopulateHint": "手动用角色身上的物品填充此容器。注意：NPC 在创建 Token 时会自动填充，但玩家角色应使用此选项。"
-    },
-    "Filters": {
-      "LeftClick": "左键单击：高亮匹配的物品",
-      "RightClick": "右键单击：标记为已使用"
-    },
-    "Tooltips": {
-      "InfoButton": "角色信息<br><small>右键单击查看先攻</small>",
-      "SwitchWeaponSet": "单击：切换到武器套装{number}"
-    },
-    "TargetSelector": {
-      "Instructions": "选择{min}-{max}个目标。按{confirm}确认，{cancel}取消。",
-      "AdjustTargets": "使用{plus}/{minus}调整目标",
-      "Activated": "目标选择已激活。按{confirm}确认，{cancel}取消。",
-      "Confirm": "确认",
-      "Cancel": "取消",
-      "SelectedTargets": "已选择目标",
-      "NoTargetsSelected": "未选择目标",
-      "RemoveTarget": "移除目标",
-      "Unlimited": "无限制",
-      "InvalidTarget": "无效目标",
-      "NoActor": "目标没有角色",
-      "TokenNotVisible": "目标不可见",
-      "SelfOnly": "只能选择自身",
-      "CannotTargetSelf": "不能选择自身",
-      "MustBeEnemy": "必须选择敌人",
-      "MustBeAlly": "必须选择盟友",
-      "MustBeCreature": "必须选择生物",
-      "OutOfRange": "目标超出范围",
-      "Flanked": "被夹击",
-      "MaxTargetsReached": "已达到最大{max}个目标",
-      "MinTargetsRequired": "至少需要{min}个目标",
-      "IncreaseMax": "增加最大目标数",
-      "DecreaseMax": "减少最大目标数"
-    },
-    "Notifications": {
-      "AutoSortNotAvailable": "自动整理不可用",
-      "SortFailed": "整理容器失败",
-      "AutoPopulateFailed": "自动填充容器失败",
-      "ClearContainerFailed": "清空容器失败",
-      "CrossContainerMoveBlocked": "无法在容器和快捷栏之间移动物品",
-      "DuplicateItem": "此物品已存在于 HUD 的其他位置",
-      "DuplicateSpellSlot": "此法术位已在 HUD 中",
-      "DuplicateInHud": "此 {label} 已在 HUD 中",
-      "NoActorSelected": "未选择角色",
-      "ItemOwnerMismatch": "此 {type} 属于 {owner}，而非 {current}",
-      "MacroNotFound": "未找到宏",
-      "NoItemsToSort": "没有可整理的物品",
-      "SortContainerFailed": "整理容器失败。详情请查看控制台。",
-      "NoActorForAutoPopulate": "没有可用于自动填充的角色",
-      "NoItemTypesForAutoPopulate": "没有可用于自动填充的物品类型",
-      "NoMatchingItems": "未找到匹配的物品",
-      "AllItemsAlreadyInHud": "所有选中的物品已在 HUD 中",
-      "NoItemTypesForConfig": "没有可用于配置的物品类型",
-      "PassivesNotImplemented": "此系统尚未实现被动特性配置",
-      "ClearAllFailed": "清空所有物品失败",
-      "ImportLayoutFailed": "导入布局失败",
-      "NoActorForSave": "没有可保存布局的角色。",
-      "SaveLayoutSuccess": "已将布局保存为角色默认，供未来的 Token 使用。",
-      "SaveLayoutFailed": "将布局保存为角色默认失败。",
-      "GMHotbarNotEnabled": "GM 快捷栏未在模组设置中启用。",
-      "SelectTokenToSwitch": "选择一个 Token 以切换到 Token 快捷栏",
-      "MinRowsReached": "无法移除行：快捷栏已处于最小高度。"
-    },
-    "Views": {
-      "CreateTitle": "创建新视图",
-      "EditTitle": "编辑视图",
-      "CreateButton": "创建",
-      "SaveButton": "保存",
-      "DefaultNewName": "新视图",
-      "DefaultEditName": "视图",
-      "NameLabel": "视图名称",
-      "NamePlaceholder": "输入视图名称...",
-      "IconLabel": "选择图标",
-      "CustomIconLabel": "或输入自定义 Font Awesome 类名：",
-      "CustomIconPlaceholder": "例如：fa-sparkles",
-      "ErrorEmptyName": "视图名称不能为空",
-      "MaxViewsReached": "最多允许 {max} 个视图",
-      "Created": "已创建视图：{name}",
-      "CreateFailed": "创建视图失败",
-      "RenameFailed": "重命名视图失败",
-      "DuplicateFailed": "复制视图失败",
-      "DeleteTitle": "删除视图",
-      "DeleteConfirm": "Are you sure you want to delete the view <strong>\"{name}\"</strong>?",
-      "DeleteWarning": "此操作无法撤销。",
-      "DeleteFailed": "删除视图失败",
-      "ContextEdit": "编辑视图",
-      "ContextDuplicate": "复制视图",
-      "ContextDelete": "删除视图"
-    },
-    "MaxSelectionsReached": "已达到最大选择数量 {max}"
-  }
+	"bg3-hud-core": {
+		"Settings": {
+			"Theme": {
+				"Name": "主题设置",
+				"Label": "配置主题",
+				"Hint": "自定义BG3 HUD的颜色、尺寸和外观",
+				"Title": "主题设置",
+				"General": "通用",
+				"GeneralHint": "如果未指定，则应用于下方所有组件的参数。",
+				"UseGeneralEverywhere": "在所有地方使用通用颜色",
+				"UseGeneralEverywhereHint": "启用后，仅使用通用部分。禁用可自定义每个部分。",
+				"Normal": "正常",
+				"Hover": "悬停",
+				"BorderColor": "边框颜色",
+				"ContainerBackgroundColor": "容器背景",
+				"TertiaryBackgroundColor": "三级背景",
+				"TextColor": "文本颜色",
+				"TextSecondaryColor": "次要文本",
+				"ContainerBorderSize": "容器边框尺寸",
+				"ContainerBorderRadius": "容器边框半径",
+				"TertiaryBorderSize": "三级边框尺寸",
+				"TertiaryBorderRadius": "三级边框半径",
+				"PortraitSize": "立绘尺寸",
+				"CellSize": "单元格尺寸",
+				"Portrait": "立绘",
+				"Hotbar": "快捷栏",
+				"SubContainer": "子容器",
+				"SubBackgroundColor": "子容器背景",
+				"Cell": "单元格",
+				"DragbarColor": "容器分隔符",
+				"WeaponSets": "武器套装",
+				"SmallContainers": "小型容器",
+				"SmallContainersHint": "控件、视图、过滤、被动和主动效果容器的共享样式。",
+				"Tooltip": "提示",
+				"ComponentColor": "组件颜色",
+				"GridCells": "网格单元格",
+				"CellBorderWidth": "单元格边框宽度",
+				"CellBorderRadius": "单元格边框半径",
+				"GridGap": "网格间距",
+				"Save": "保存",
+				"Reset": "重置为默认",
+				"ResetSuccess": "主题已重置为默认"
+			},
+			"NormalOpacity": {
+				"Name": "正常透明度",
+				"Hint": "HUD可见时的透明度（0.1到1.0）"
+			},
+			"FadedOpacity": {
+				"Name": "淡出透明度",
+				"Hint": "HUD在无行动后淡出时的透明度（设置为1.0可禁用淡出）"
+			},
+			"FadeOutDelay": {
+				"Name": "淡出延迟（秒）",
+				"Hint": "HUD 显示后（且指针不在其上方）多长时间才会淡入淡出不透明度"
+			},
+			"AutoScale": {
+				"Name": "自动缩放",
+				"Hint": "根据屏幕高度自动缩放UI"
+			},
+			"UIScale": {
+				"Name": "UI缩放",
+				"Hint": "手动UI缩放百分比（50%到300%）。仅在禁用自动缩放时使用。"
+			},
+			"UIPosition": {
+				"Name": "UI位置",
+				"Hint": "在屏幕上定位HUD的位置",
+				"Center": "居中",
+				"Left": "左侧",
+				"Right": "右侧"
+			},
+			"PosPadding": {
+				"Name": "位置内边距",
+				"Hint": "距离屏幕边缘的水平内边距（像素）"
+			},
+			"PosPaddingBottom": {
+				"Name": "底部内边距",
+				"Hint": "从屏幕底部开始填充（像素）。启用极简视图时将被忽略。"
+			},
+			"PassivesContainerIconsPerRow": {
+				"Name": "被动特性图标每行数量",
+				"Hint": "每行显示的被动特性图标数量，超出则换行"
+			},
+			"ActiveEffectsContainerIconsPerRow": {
+				"Name": "主动效果图标每行数量",
+				"Hint": "每行显示的主动效果图标数量，超出则换行"
+			},
+			"ShowPassiveActiveEffects": {
+				"Name": "显示被动效果",
+				"Hint": "启用后，除了临时效果外，还会显示永久/被动效果（无持续时间）"
+			},
+			"ShowFilters": {
+				"Name": "显示过滤图标",
+				"Hint": "在热键栏上方显示资源和操作过滤器图标"
+			},
+			"ShowPortrait": {
+				"Name": "显示立绘",
+				"Hint": "显示角色立绘、HP 覆盖层和立绘数据纹章。禁用后，角色信息按钮（d20）仍可使用。"
+			},
+			"BorderPortraitPreferences": {
+				"Name": "立绘边框",
+				"Hint": "HUD 立绘图像周围的装饰性边框。",
+				"None": "无",
+				"Simple": "简单",
+				"Styled": "装饰样式（圆形环）"
+			},
+			"ShowPortraitHPControls": {
+				"Name": "显示立绘生命值控件",
+				"Hint": "在立绘界面中显示设置生命值为最小值（骷髅）、最大值（心形）的按钮和生命值输入框"
+			},
+			"LayoutAppearance": {
+				"MenuTitle": "布局与外观",
+				"MenuName": "布局与外观",
+				"MenuLabel": "布局与外观设置",
+				"MenuHint": "调整透明度、缩放、定位和容器密度",
+				"OpacityLegend": "透明度与淡出",
+				"ScalePositionLegend": "缩放与位置",
+				"ContainerConfigurationLegend": "容器配置"
+			},
+			"Appearance": {
+				"MenuTitle": "外观设置",
+				"MenuName": "外观设置",
+				"MenuLabel": "外观设置",
+				"MenuHint": "调整HUD的透明度和淡出时间",
+				"Legend": "外观"
+			},
+			"Layout": {
+				"MenuTitle": "布局与位置",
+				"MenuName": "布局与位置",
+				"MenuLabel": "布局与位置设置",
+				"MenuHint": "调整HUD的缩放和定位",
+				"Legend": "布局与位置"
+			},
+			"FoundryUI": {
+				"MenuTitle": "FVTT UI",
+				"MenuName": "FVTT UI",
+				"MenuLabel": "FVTT UI设置",
+				"MenuHint": "控制宏栏可见性和提示时间",
+				"Legend": "FVTT UI",
+				"NameOnlyTooltipsName": "仅名称提示",
+				"NameOnlyTooltipsHint": "对物品、法术和特性使用简单的原生提示，而非系统富文本提示。"
+			},
+			"GMHotbar": {
+				"MenuTitle": "GM快捷栏",
+				"MenuName": "GM快捷栏",
+				"MenuLabel": "GM快捷栏设置",
+				"MenuHint": "配置GM快捷栏可见性",
+				"Legend": "GM快捷栏"
+			},
+			"TargetSelector": {
+				"MenuTitle": "目标选择",
+				"MenuName": "目标选择",
+				"MenuLabel": "目标选择设置",
+				"MenuHint": "配置法术和特性的BG3风格目标选择",
+				"Legend": "目标选择",
+				"EnableName": "启用目标选择",
+				"EnableHint": "启用后，需要目标的法术/能力会暂停，直到您确认目标，然后恢复使用。仅检查目标数量、自身/敌人类型和范围。",
+				"SkipName": "如果存在有效目标则跳过",
+				"SkipHint": "如果已选择有效目标，则跳过目标选择",
+				"RangeName": "强制执行范围检查",
+				"RangeHint": "拒绝超出能力范围的目标",
+				"AutoSelfName": "自动选择自身",
+				"AutoSelfHint": "为'自身'目标特性自动选择自身",
+				"RangeIndicatorLegend": "范围指示",
+				"ShowRangeIndicatorsName": "显示范围指示",
+				"ShowRangeIndicatorsHint": "在画布上显示显示特性范围的视觉指示",
+				"RangeShapeName": "指示形状",
+				"RangeShapeHint": "范围指示的形状（圆形或方形）",
+				"RangeShapeCircle": "圆形",
+				"RangeShapeSquare": "方形",
+				"RangeAnimationName": "指示动画",
+				"RangeAnimationHint": "范围指示的动画样式",
+				"RangeAnimationPulse": "脉冲",
+				"RangeAnimationStatic": "静态",
+				"RangeLineWidthName": "线宽",
+				"RangeLineWidthHint": "范围指示线的粗细",
+				"RangeLineWidthThin": "细（1像素）",
+				"RangeLineWidthNormal": "正常（2像素）",
+				"RangeLineWidthThick": "粗（3像素）",
+				"RangeLineWidthExtraThick": "超粗（4像素）",
+				"RangeColorName": "指示颜色",
+				"RangeColorHint": "范围指示的颜色（十六进制格式）",
+				"IgnoreTypeName": "无视自己/敌人的限制",
+				"IgnoreTypeHint": "允许选择任何令牌，无论自己/敌人的定位规则如何。启用后，目标计数和范围检查仍然适用。"
+			},
+			"PortraitData": {
+				"Title": "立绘数据配置",
+				"MenuName": "立绘数据",
+				"MenuLabel": "配置立绘数据",
+				"MenuHint": "在立绘周围显示数据纹章（AC、HP、速度等）",
+				"ShowName": "显示立绘数据",
+				"ShowHint": "在角色立绘周围显示数据纹章",
+				"TopLeft": "左上",
+				"TopRight": "右上",
+				"MiddleLeft": "中左",
+				"MiddleRight": "中右",
+				"BottomLeft": "左下",
+				"BottomRight": "右下",
+				"Saved": "立绘数据配置已保存",
+				"WorldOverride": "使用世界配置（所有玩家）",
+				"SyncToWorld": "同步到世界",
+				"SyncedToWorld": "立绘数据已同步到世界 - 所有玩家现在都将使用此配置",
+				"WorldConfigActive": "GM已设置世界配置",
+				"UseMyOwnConfig": "改用我自己的配置"
+			},
+			"AutoPopulate": {
+				"Options": "选项",
+				"HotbarGrid": "快捷栏网格 {number}"
+			},
+			"MinimalistView.Name": "极简主义观点",
+			"MinimalistView.Hint": "可选的边缘停靠布局：隐藏热栏视图选项卡并将 HUD 与屏幕底部齐平。默认关闭；带有视图选项卡的普通浮动 HUD 保持不变。"
+		},
+		"Controls": {
+			"Lock": {
+				"Tooltip": "锁定设置<br>（右键单击查看选项）",
+				"NoSettingsWarning": "请右键单击锁定按钮以选择要锁定的设置。",
+				"DeselectToken": "取消选择Token",
+				"Opacity": "透明度",
+				"DragDrop": "拖放"
+			},
+			"GMToggle": {
+				"Tooltip": "在 GM 快捷栏和 Token 快捷栏之间切换"
+			},
+			"Row": {
+				"Add": "添加行",
+				"Remove": "移除行"
+			},
+			"Settings": {
+				"Tooltip": "设置<br>（右键单击查看快捷操作）",
+				"ResetLayout": "重置布局",
+				"ClearAllItems": "清空所有物品",
+				"SaveLayout": "保存布局为角色默认",
+				"ExportLayout": "导出布局",
+				"ImportLayout": "导入布局"
+			},
+			"DockToggle.Tooltip": "显示/隐藏 HUD 底座",
+			"DockToggle.Hide": "隐藏 HUD 底座",
+			"DockToggle.Show": "显示 HUD 底座"
+		},
+		"ContextMenu": {
+			"EditItem": "编辑物品",
+			"RemoveItem": "移除物品",
+			"SortContainer": "整理容器",
+			"ClearContainer": "清空容器",
+			"AutoPopulateContainer": "自动填充容器",
+			"AutoPopulateHint": "手动用角色身上的物品填充此容器。注意：NPC 在创建 Token 时会自动填充，但玩家角色应使用此选项。"
+		},
+		"Filters": {
+			"LeftClick": "左键单击：高亮匹配的物品",
+			"RightClick": "右键单击：标记为已使用"
+		},
+		"Tooltips": {
+			"InfoButton": "角色信息<br><small>右键单击查看先攻</small>",
+			"SwitchWeaponSet": "单击：切换到武器套装{number}"
+		},
+		"TargetSelector": {
+			"Instructions": "选择{min}-{max}个目标。按{confirm}确认，{cancel}取消。",
+			"AdjustTargets": "使用{plus}/{minus}调整目标",
+			"Activated": "目标选择已激活。按{confirm}确认，{cancel}取消。",
+			"Confirm": "确认",
+			"Cancel": "取消",
+			"SelectedTargets": "已选择目标",
+			"NoTargetsSelected": "未选择目标",
+			"RemoveTarget": "移除目标",
+			"Unlimited": "无限制",
+			"InvalidTarget": "无效目标",
+			"NoActor": "目标没有角色",
+			"TokenNotVisible": "目标不可见",
+			"SelfOnly": "只能选择自身",
+			"CannotTargetSelf": "不能选择自身",
+			"MustBeEnemy": "必须选择敌人",
+			"MustBeAlly": "必须选择盟友",
+			"MustBeCreature": "必须选择生物",
+			"OutOfRange": "目标超出范围",
+			"Flanked": "被夹击",
+			"MaxTargetsReached": "已达到最大{max}个目标",
+			"MinTargetsRequired": "至少需要{min}个目标",
+			"IncreaseMax": "增加最大目标数",
+			"DecreaseMax": "减少最大目标数"
+		},
+		"Notifications": {
+			"AutoSortNotAvailable": "自动整理不可用",
+			"SortFailed": "整理容器失败",
+			"AutoPopulateFailed": "自动填充容器失败",
+			"ClearContainerFailed": "清空容器失败",
+			"CrossContainerMoveBlocked": "无法在容器和快捷栏之间移动物品",
+			"DuplicateItem": "此物品已存在于 HUD 的其他位置",
+			"DuplicateSpellSlot": "该资源条目已存在于 HUD 中",
+			"DuplicateInHud": "此 {label} 已在 HUD 中",
+			"NoActorSelected": "未选择角色",
+			"ItemOwnerMismatch": "此 {type} 属于 {owner}，而非 {current}",
+			"MacroNotFound": "未找到宏",
+			"NoItemsToSort": "没有可整理的物品",
+			"SortContainerFailed": "整理容器失败。详情请查看控制台。",
+			"NoActorForAutoPopulate": "没有可用于自动填充的角色",
+			"NoItemTypesForAutoPopulate": "没有可用于自动填充的物品类型",
+			"NoMatchingItems": "未找到匹配的物品",
+			"AllItemsAlreadyInHud": "所有选中的物品已在 HUD 中",
+			"NoItemTypesForConfig": "没有可用于配置的物品类型",
+			"PassivesNotImplemented": "此系统尚未实现被动特性配置",
+			"ClearAllFailed": "清空所有物品失败",
+			"ImportLayoutFailed": "导入布局失败",
+			"NoActorForSave": "没有可保存布局的角色。",
+			"SaveLayoutSuccess": "已将布局保存为角色默认，供未来的 Token 使用。",
+			"SaveLayoutFailed": "将布局保存为角色默认失败。",
+			"GMHotbarNotEnabled": "GM 快捷栏未在模组设置中启用。",
+			"SelectTokenToSwitch": "选择一个 Token 以切换到 Token 快捷栏",
+			"MinRowsReached": "无法移除行：快捷栏已处于最小高度。",
+			"OccupancyWrongKind": "只有持有的物品才属于武器组。",
+			"OccupancySameSet": "该物品已经在该武器集中了。",
+			"OccupancyReserved": "该插槽供双手武器使用。",
+			"OccupancyOccupied": "该插槽已被填满。"
+		},
+		"Views": {
+			"CreateTitle": "创建新视图",
+			"EditTitle": "编辑视图",
+			"CreateButton": "创建",
+			"SaveButton": "保存",
+			"DefaultNewName": "新视图",
+			"DefaultEditName": "视图",
+			"NameLabel": "视图名称",
+			"NamePlaceholder": "输入视图名称...",
+			"IconLabel": "选择图标",
+			"CustomIconLabel": "或输入自定义 Font Awesome 类名：",
+			"CustomIconPlaceholder": "例如：fa-sparkles",
+			"ErrorEmptyName": "视图名称不能为空",
+			"MaxViewsReached": "最多允许 {max} 个视图",
+			"Created": "已创建视图：{name}",
+			"CreateFailed": "创建视图失败",
+			"RenameFailed": "重命名视图失败",
+			"DuplicateFailed": "复制视图失败",
+			"DeleteTitle": "删除视图",
+			"DeleteConfirm": "Are you sure you want to delete the view <strong>\"{name}\"</strong>?",
+			"DeleteWarning": "此操作无法撤销。",
+			"DeleteFailed": "删除视图失败",
+			"ContextEdit": "编辑视图",
+			"ContextDuplicate": "复制视图",
+			"ContextDelete": "删除视图"
+		},
+		"MaxSelectionsReached": "已达到最大选择数量 {max}",
+		"EndTurn": "结束转弯"
+	}
 }

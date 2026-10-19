@@ -1,8 +1,29 @@
 {
+	"AC5E.RegistryImport.InvalidSnapshot": "AC5E: This file is not a supported JSON export for this registry.",
+	"AC5E.RegistryImport.InvalidEntry": "AC5E: Entry {index} is invalid or repeats a key or ID. No entries were imported.",
+	"AC5E.RegistryImport.NoActiveGM": "AC5E: An active GM is required to import changes to persistent entries.",
+	"AC5E.RegistryImport.SaveFailed": "AC5E: Unable to save imported entries. The previous registry state was restored.",
+	"AC5E.RegistryExport.Skipped": "AC5E: Skipped {count} entries during JSON export because they contain callbacks or other values JSON cannot preserve. See the skipped entries below.",
+	"AC5E.StatusEffectsOverrides.ConditionError": "AC5E: Status override \"{name}\" (id: {id}) was skipped for {status}/{hook}/{type}. Condition: {condition}. Error: {error}. Correct its condition using ac5e.statusEffectsOverrides.register with the same id, or remove it using ac5e.statusEffectsOverrides.remove({removeId}). Access to game/canvas identifiers is prohibited; use sandbox fields instead. Quoted names containing those words are allowed.",
 	"AC5E.AutomateStatuses": {
 		"Name": "D&D 5e Condition Rules",
-    "Hint": "Enables AC5E handling for D&D 5e conditions, expanding on the D&D 5e system's built-in advantage mode automation with broader and more precise rule handling, especially for attack rolls."
+		"Hint": "Enables AC5E handling for D&D 5e conditions, expanding on the D&D 5e system's built-in advantage mode automation with broader and more precise rule handling, especially for attack rolls."
 	},
+	"AC5E.Ui": {
+		"Name": "Disable AC5E UI",
+		"Hint": "Disables the AC5E wand button for the Active Effect value editor."
+	},
+	"AC5E.LinksMenu": {
+		"Name": "Module Support",
+		"Label": "Links",
+		"Hint": "Open AC5E documentation, issue tracker, and support links.",
+		"GitHubMessage": "GitHub Links",
+		"DiscordMessage": "Enter the Den",
+		"SupportMessage": "Toss a Coin to your Bugbear",
+		"Title": "Resources & Support"
+	},
+	"AC5E.ActiveEffect.ChangeTypes.AC5E": "AC5E",
+	"AC5E.ActiveEffect.ChangeTypes.AutomatedConditions5e": "Automated Conditions 5e",
 	"AC5E.ShowTooltipsName": "Show AC5E Tooltips",
 	"AC5E.ShowTooltipsHint": "Shows AC5E tooltips in roll dialogs, chat messages, or both, explaining the reasons behind the suggested outcome.",
 	"AC5E.ShowToolTipsChoicesBoth": "Roll dialogs and chat messages",
@@ -10,17 +31,36 @@
 	"AC5E.ShowToolTipsChoicesChat": "Only on chat messages",
 	"AC5E.ShowToolTipsChoicesNone": "Do not show",
 	"AC5E.ShowModuleNameInTooltipsName": "Show Module Name in Tooltips",
-	"AC5E.ShowTooltipChatVisibility.Name": "Show chat tooltips for",
-	"AC5E.ShowTooltipChatVisibility.Hint": "Choose whose rolls display AC5E chat tooltips. The GM always sees all tooltips.",
-	"AC5E.ShowTooltipChatVisibility.All": "All",
+	"AC5E.ShowTooltipChatVisibility.Name": "Show Chat Tooltips to Players for",
+	"AC5E.ShowTooltipChatVisibility.Hint": "Choose whose rolls players can see AC5E chat tooltips for. None hides them from all players. GMs bypass this filter, but still follow their own Show AC5E Tooltips setting.",
+	"AC5E.ShowTooltipChatVisibility.All": "All Actors",
 	"AC5E.ShowTooltipChatVisibility.None": "None",
 	"AC5E.ShowTooltipChatVisibility.Owned": "Owned",
 	"AC5E.ShowTooltipChatVisibility.Players": "Players",
 	"AC5E.ExpandedConditionsName": "Expanded Conditions",
+	"AC5E.HeavyWeapon": "Heavy Weapon",
 	"AC5E.ExpandedConditionsHint": "Enables automation for additional conditions and combat states such as Dodging, Hiding, Rage spell restrictions, and Underwater Combat.",
+	"AC5E.AdditionalAutomations": {
+		"Name": "Additional Automated Rules",
+		"Hint": "Choose which additional rules AC5E automates: Dodging, Hiding, Rage spell restrictions, Underwater Combat, and the Heavy weapon property.",
+		"Migration": {
+			"Notification": "AC5E: Your additional automation settings were migrated. See the private chat message for details.",
+			"None": "None",
+			"Message": "<h3>Automated Conditions 5e: Settings Migrated</h3><p>Your saved Expanded Conditions and Heavy weapon settings were moved to the Additional Automated Rules multiselect. Expanded Conditions enables Dodging, Hiding, Raging spell restrictions, and Underwater Combat; Heavy is enabled only if its previous setting was on.</p><p><strong>Enabled rules:</strong> {selected}</p><p>You can now select each rule independently under Configure Settings → Automated Conditions 5e → Additional Automated Rules.</p>"
+		}
+	},
 	"AC5E.VisibilityChecksSetting": {
 		"Name": "Visibility Rules",
 		"Hint": "Uses AC5E attack visibility rules based on token sight and senses. When enabled, AC5E adds 'Cannot See Target' and 'Target Cannot See Attacker' attack reasons. These reasons are skipped when MidiQOL already applies its invisibility or hidden-attacker rules."
+	},
+	"AC5E.WavesCover": {
+		"SettingName": "Automate WAVES Cover",
+		"SettingHint": "Use WAVES to suggest adjustable cover bonuses for attack rolls and Dexterity saving throws.",
+		"Label": "WAVES Cover",
+		"none": "None",
+		"half": "Half (+2)",
+		"threeQuarters": "Three-Quarters (+5)",
+		"total": "Total"
 	},
 	"AC5E.ActivityUse": {
 		"Name": "Item Use Rules",
@@ -84,7 +124,7 @@
 	"AC5E.TokenlessActorWarning": {
 		"Hint": "Shows a warning when rolling for an actor that has no token on the current scene.",
 		"Name": "Show Tokenless Actor Warning",
-		"Text": "AC5E warning: The actor being rolled does not have a token on the scene. Results may be inaccurate."
+		"Text": "AC5E warning: The actor being rolled does not have a token on the scene. Actor-based rules still apply; distance, visibility, cover, and aura checks require a scene token."
 	},
 	"AC5E.Statuses": {
 		"UnderwaterCombat": "Underwater Combat"
@@ -145,6 +185,7 @@
 	"AC5E.CannotSeeTarget": "Cannot See Target",
 	"AC5E.TargetCannotSeeAttacker": "Target Cannot See Attacker",
 	"AC5E.Bonus": "Bonus",
+	"AC5E.AbilityOverride": "Ability Override",
 	"AC5E.ExtraDice": "Extra dice",
 	"AC5E.Success": "Success",
 	"AC5E.AbbreviationAdvantage": "adv",
@@ -155,6 +196,9 @@
 	"AC5E.Flags": "flags",
 	"AC5E.FlagsInitiativeAdv": "System advantage on Initiative",
 	"AC5E.FlagsInitiativeDisadv": "System disadvantage on Initiative",
+	"AC5E.TargetCharmedByYou": "Target is Charmed by you",
+	"AC5E.TargetCharmedByYouDescription": "Grants advantage on this check. Uncheck if this is not a social interaction with the Charmed target.",
+	"AC5E.TargetIsYourCharmer": "Target is your Charmer. Block use?",
 	"AC5E.TargetGrantsAdvantageAbbreviated": "Granted adv",
 	"AC5E.TargetGrantsDisadvantageAbbreviated": "Granted dis",
 	"AC5E.TargetGrantsCriticalAbbreviated": "Granted crit",
@@ -164,6 +208,7 @@
 	"AC5E.TargetGrantsBonus": "Granted bonus",
 	"AC5E.TargetGrantsModifier": "Granted modifier",
 	"AC5E.TargetGrantsExtraDice": "Granted extra dice",
+	"AC5E.TargetGrantsAbilityOverride": "Granted ability override",
 	"AC5E.NoChanges": "No changes",
 	"AC5E.SystemMode": "System mode",
 	"AC5E.OptinDescription.Roll.Attack": "attack rolls",
@@ -186,6 +231,11 @@
 	"AC5E.OptinDescription.SetsTargetAC": "Sets target AC to {value}",
 	"AC5E.OptinDescription.ModifiesTargetACBy": "Modifies target AC by {value}",
 	"AC5E.OptinDescription.ModifiesTargetAC": "Modifies target AC",
+	"AC5E.OptinDescription.DCLabel.Save": "save DC",
+	"AC5E.OptinDescription.DCLabel.Check": "check DC",
+	"AC5E.OptinDescription.SetsTargetSpecificDC": "Sets {dcLabel} to {value}",
+	"AC5E.OptinDescription.ModifiesTargetSpecificDCBy": "Modifies {dcLabel} by {value}",
+	"AC5E.OptinDescription.ModifiesTargetSpecificDC": "Modifies {dcLabel}",
 	"AC5E.OptinDescription.SetsMinimumD20": "Sets minimum d20 result to {value}",
 	"AC5E.OptinDescription.SetsMaximumD20": "Sets maximum d20 result to {value}",
 	"AC5E.OptinDescription.AppliesRollModifier": "Applies roll modifier",
@@ -200,6 +250,12 @@
 	"AC5E.OptinDescription.ModifiesFumbleThreshold": "Modifies fumble threshold",
 	"AC5E.OptinDescription.AddsExtraDamageDice": "Adds extra damage dice",
 	"AC5E.OptinDescription.AddsExtraDamageDiceWithValue": "Adds extra damage dice ({value})",
+	"AC5E.OptinDescription.OverridesDamageType": "Overrides damage type",
+	"AC5E.OptinDescription.OverridesDamageTypeWithValue": "Overrides damage type ({value})",
+	"AC5E.OptinDescription.OverridesDcAbility": "Overrides Save/Check DC ability ({value})",
+	"AC5E.OptinDescription.OverridesDcAbilityGeneric": "Overrides Save/Check DC ability",
+	"AC5E.Keybinding.AllowEffectApplicationBypassModifier.Name": "Effect Apply Override Modifier",
+	"AC5E.Keybinding.AllowEffectApplicationBypassModifier.Hint": "GM only. Hold this while clicking Apply Effect to ignore allowEffectApplication checks.",
 	"AC5E.OptinDescription.UpgradesDamageDice": "Upgrades damage dice",
 	"AC5E.OptinDescription.UpgradesDamageDiceWithValue": "Upgrades damage dice ({value})",
 	"AC5E.OptinDescription.DowngradesDamageDice": "Downgrades damage dice",
@@ -211,6 +267,13 @@
 	"AC5E.OptinCadence.OncePerTurn": "(1/turn)",
 	"AC5E.OptinCadence.OncePerRound": "(1/round)",
 	"AC5E.OptinCadence.OncePerCombat": "(1/combat)",
+	"AC5E.OptinSpellSlot.EditorHint": "Use spell[slot,pact], spell[slot], or spell[pact] with optin. The actor's available pools appear in a dropdown. Consumption is always one slot. Enable Scaling to restrict slot levels with Min and Max; these bounds also apply to Pact slots.",
+	"AC5E.OptinSpellSlot.Unavailable": "AC5E: {actor} no longer has the selected {slot} slot available at its selected level. Slot consumption was skipped.",
+	"AC5E.OptinSpellSlot.Choice": "Spell slot to consume",
+	"AC5E.OptinSpellSlot.Spell": "Spell slot {level} ({available} available)",
+	"AC5E.OptinSpellSlot.Pact": "Pact slot level {level} ({available} available)",
+	"AC5E.OptinSpellSlot.Cost": "(consumes 1 slot)",
+	"AC5E.OptinSpellSlot.Hint": "Consume one slot from the selected pool. optinScale and bonusScale use its level. Only available slots within the configured bounds are offered.",
 	"AC5E.OptinLegend.Optional": "AC5E",
 	"AC5E.OptinLegend.FromOtherSources": "AC5E From other sources (ask for permission)",
 	"AC5E.EnvironmentalHazards": {
@@ -271,15 +334,15 @@
 		},
 		"flags.automated-conditions-5e.damage.typeOverride": {
 			"name": "Override the damage type set of base damage rolls",
-			"description": "Use set=fire to force one type or set=fire,lightning,thunder to offer multiple types. addTo=... targets matching base damage parts only."
+			"description": "Use override=fire to force one type or override=fire,lightning,thunder to offer multiple types. set=... is still supported for backwards compatibility. addTo=base, addTo=bonus, addTo=all, addTo=types(fire,cold), addTo=!types(poison,acid), or combined clauses such as addTo=base;!types(force) control which damage parts are affected."
 		},
 		"flags.automated-conditions-5e.grants.damage.typeOverride": {
 			"name": "Grant a damage type override to the opponent's base damage rolls",
-			"description": "Use set=fire to force one type or set=fire,lightning,thunder to offer multiple types. addTo=... targets matching base damage parts only."
+			"description": "Use override=fire to force one type or override=fire,lightning,thunder to offer multiple types. set=... is still supported for backwards compatibility. addTo=base, addTo=bonus, addTo=all, addTo=types(fire,cold), addTo=!types(poison,acid), or combined clauses such as addTo=base;!types(force) control which damage parts are affected."
 		},
 		"flags.automated-conditions-5e.aura.damage.typeOverride": {
 			"name": "An aura overriding the damage type set of base damage rolls in radius",
-			"description": "Use radius=10;set=fire or radius=10;set=fire,lightning,thunder. addTo=... targets matching base damage parts only."
+			"description": "Use radius=10;override=fire or radius=10;override=fire,lightning,thunder. set=... is still supported for backwards compatibility. addTo=base, addTo=bonus, addTo=all, addTo=types(fire,cold), addTo=!types(poison,acid), or combined clauses such as addTo=base;!types(force) control which damage parts are affected."
 		},
 		"flags.automated-conditions-5e.modifyAC": {
 			"name": "Modify the AC of the actor against incoming attacks",
@@ -293,166 +356,170 @@
 			"name": "An aura modifying the AC of the relevant tokens in radius",
 			"description": "Use radius=10;bonus=1d4; or radius=15;set=15. The former will give a bonus to AC and the latter will set to the value provided"
 		},
+		"flags.automated-conditions-5e.abilityOverride": {
+			"name": "Override Save/Check DC ability",
+			"description": "Overrides the ability used to calculate Save/Check DCs for the activity. Use override=cha. Example: override=(item.type==='spell' ? spellcastingAbility : wis). abilityOverride=... and set=... are still supported."
+		},
+		"flags.automated-conditions-5e.grants.abilityOverride": {
+			"name": "Grant Save/Check DC ability override",
+			"description": "Overrides the affected actor's Save/Check DC ability via grants. Use override=cha. Example: override=(opponentActor?.details?.type?.value==='fiend' ? cha : wis). abilityOverride=... and set=... are still supported."
+		},
+		"flags.automated-conditions-5e.aura.abilityOverride": {
+			"name": "An aura overriding Save/Check DC ability",
+			"description": "Overrides Save/Check DC ability for tokens affected by the aura. Use radius as usual plus override=cha. Example: radius=30;allies;includeSelf;override=wis. abilityOverride=... and set=... are still supported."
+		},
+		"flags.automated-conditions-5e.allowEffectApplication": {
+			"name": "Allow Effect Application",
+			"description": "Evaluates at effect creation time. If this expression resolves to false, AC5E blocks the effect application. On evaluation errors, application proceeds with default system behavior."
+		},
 		"flags.automated-conditions-5e.ACTIONTYPE": {
 			"advantage": {
 				"name": "Roll with advantage",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
 			},
 			"bonus": {
 				"name": "Roll gets bonus",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool. eg bonus=1d4 + 5 - rollingActor.abilities.dex.mod;"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool. eg bonus=1d4 + 5 - rollingActor.abilities.dex.mod;"
 			},
 			"critical": {
 				"name": "Roll is critical (nat20 or crit damage)",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
 			},
 			"disadvantage": {
 				"name": "Roll with disadvantage",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
 			},
 			"modifier": {
 				"name": "min and max modifiers for d20 rolls modifiers for max and any for damage rolls",
-				"description": "Replace ACTIONTYPE with one of: attack/check/concentration/damage/death/initiative/save/skill/tool. eg modifier=(rollingActor.attributes.hp.pct < 50 ? max8 : min12)"
+				"description": "Replace ACTIONTYPE with one of: d20/attack/check/concentration/damage/death/initiative/save/skill/tool. eg modifier=(rollingActor.attributes.hp.pct < 50 ? max8 : min12)"
 			},
 			"modifyDC": {
 				"name": "Modify the DC of your actions. Will work for concentation checks and death saves you make too",
-				"description": "Replace ACTIONTYPE with one of: save/conc/death (check/skill/tool are supported but usually they don't have DC set). Use bonus=5 to add 5 to DC or set=15 to set it to the value provided. You can use roll data, dice formulas and evaluate conditions too."
+				"description": "Replace ACTIONTYPE with one of: save/conc/death (check/skill/tool/d20 are supported but usually they don't have DC set). Use bonus=5 to add 5 to DC or set=15 to set it to the value provided. You can use roll data, dice formulas and evaluate conditions too."
 			},
 			"noAdvantage": {
 				"name": "Suppress advantage mode",
-				"description": "Replace ACTIONTYPE with one of all/attack/check/concentration/damage/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
 			},
 			"noCritical": {
 				"name": "Suppress criticals",
-				"description": "Replace ACTIONTYPE with one of all/attack/damage"
+				"description": "Replace ACTIONTYPE with one of all/d20/attack/damage"
 			},
 			"noDisadvantage": {
 				"name": "Suppress disadvantage mode",
-				"description": "Replace ACTIONTYPE with one of all/attack/check/concentration/damage/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
 			},
 			"fail": {
 				"name": "d20 rolls fail",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/death/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/death/save/skill/tool"
 			},
 			"fumble": {
 				"name": "d20 rolls fumble (nat1)",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/death/initiative/save/skill/tool"
 			},
 			"success": {
 				"name": "d20 rolls succeed",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/save/skill/tool"
-			},
-			"abilityOverride": {
-				"name": "Override the ability used for the roll",
-				"description": "Attack only. Use override=cha or abilityOverride=cha."
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/save/skill/tool"
 			}
 		},
 		"flags.automated-conditions-5e.grants.ACTIONTYPE": {
 			"advantage": {
 				"name": "Grant advantage to opponent's d20 rolls",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
 			},
 			"bonus": {
 				"name": "Grant bonus to opponent's rolls",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool. Lead with the bonus= followed by a ; separator, eg bonus=1d4 + 5 - opponentActor.abilities.dex.mod;"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool. Lead with the bonus= followed by a ; separator, eg bonus=1d4 + 5 - opponentActor.abilities.dex.mod;"
 			},
 			"critical": {
 				"name": "Grant critical (nat20 or damage) to opponent's rolls",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
 			},
 			"disadvantage": {
 				"name": "Grant disadvantage to opponent's d20 rolls",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
 			},
 			"modifier": {
 				"name": "Grant min and max modifiers for d20 rolls modifiers for max and any for damage rolls",
-				"description": "Replace ACTIONTYPE with one of: attack/check/concentration/damage/death/initiative/save/skill/tool. eg modifier=min10"
+				"description": "Replace ACTIONTYPE with one of: d20/attack/check/concentration/damage/death/initiative/save/skill/tool. eg modifier=min10"
 			},
 			"modifyDC": {
 				"name": "Modify the DC of a roll you make against an action taken by another",
-				"description": "Replace ACTIONTYPE with one of: save/conc/death (check/skill/tool are supported but usually they don't have DC set). Use bonus=5 to add 5 to DC or set=15 to set it to the value provided. You can use roll data, dice formulas and evaluate conditions too."
+				"description": "Replace ACTIONTYPE with one of: save/conc/death (check/skill/tool/d20 are supported but usually they don't have DC set). Use bonus=5 to add 5 to DC or set=15 to set it to the value provided. You can use roll data, dice formulas and evaluate conditions too."
 			},
 			"noAdvantage": {
 				"name": "Grant no advantage mode",
-				"description": "Replace ACTIONTYPE with one of all/attack/check/concentration/damage/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
 			},
 			"noCritical": {
 				"name": "Grant no criticals",
-				"description": "Replace ACTIONTYPE with one of all/attack/damage"
+				"description": "Replace ACTIONTYPE with one of all/d20/attack/damage"
 			},
 			"noDisadvantage": {
 				"name": "Grant no disadvantage mode",
-				"description": "Replace ACTIONTYPE with one of all/attack/check/concentration/damage/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
 			},
 			"fail": {
 				"name": "Grant failure to opponent's d20 rolls",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/death/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/death/save/skill/tool"
 			},
 			"fumble": {
 				"name": "Grant fumble (nat1) to opponent's d20 rolls",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/death/initiative/save/skill/tool"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/death/initiative/save/skill/tool"
 			},
 			"success": {
 				"name": "d20 rolls against or caused by you succeed",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/death/save/skill/tool"
-			},
-			"abilityOverride": {
-				"name": "Grant an overridden ability to opponent rolls",
-				"description": "Attack only. Use override=cha or abilityOverride=cha."
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/death/save/skill/tool"
 			}
 		},
 		"flags.automated-conditions-5e.aura.ACTIONTYPE": {
 			"advantage": {
 				"name": "An aura giving advantage",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool. Change value format example for a save ACTIONTYPE and: radius=15;includeSelf;allies;str;cha; would give to all allies including self in 15ft radius advantage to strength or charisma saves."
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool. Change value format example for a save ACTIONTYPE and: radius=15;includeSelf;allies;str;cha; would give to all allies including self in 15ft radius advantage to strength or charisma saves."
 			},
 			"bonus": {
 				"name": "An aura giving bonuses",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool. Change value format example for initiative ACTIONTYPE and effect value of: radius=20;bonus=-auraActor.abilities.cha.mod;opponentActor.statuses.surprised ALL within 20ft will have their rolls reduced by the source actor's cha mod if they are surprised"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool. Change value format example for initiative ACTIONTYPE and effect value of: radius=20;bonus=-auraActor.abilities.cha.mod;opponentActor.statuses.surprised ALL within 20ft will have their rolls reduced by the source actor's cha mod if they are surprised"
 			},
 			"critical": {
 				"name": "An aura forcing critical (nat20 or damage)",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool. Change value format: radius=Number;allies or enemies or omit for ALL;other conditions"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool. Change value format: radius=Number;allies or enemies or omit for ALL;other conditions"
 			},
 			"disadvantage": {
 				"name": "An aura giving disadvantage",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/damage/death/initiative/save/skill/tool. Change value format: radius=Number;allies or enemies or omit for ALL;other conditions"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool. Change value format: radius=Number;allies or enemies or omit for ALL;other conditions"
 			},
 			"modifier": {
 				"name": "An aura giving min and max modifiers for d20 rolls modifiers for max and any for damage rolls",
-				"description": "Replace ACTIONTYPE with one of: attack/check/concentration/damage/death/initiative/save/skill/tool. eg modifier=min10; radius=(rollingActor.details.level < 10 ? 15 : 30); modifier=min10"
+				"description": "Replace ACTIONTYPE with one of: d20/attack/check/concentration/damage/death/initiative/save/skill/tool. eg modifier=min10; radius=(rollingActor.details.level < 10 ? 15 : 30); modifier=min10"
 			},
 			"modifyDC": {
 				"name": "An aura that modifies the DC of actions the affected tokens take.",
-				"description": "Replace ACTIONTYPE with one of: save/conc/death (check/skill/tool are supported but usually they don't have DC set). Use bonus/set, radius as usual"
+				"description": "Replace ACTIONTYPE with one of: save/conc/death (check/skill/tool/d20 are supported but usually they don't have DC set). Use bonus/set, radius as usual"
 			},
 			"noAdvantage": {
 				"name": "An aura that suppresses advantage mode",
-				"description": "Replace ACTIONTYPE with one of all/attack/check/concentration/damage/death/initiative/save/skill/tool. Use radius as usual"
+				"description": "Replace ACTIONTYPE with one of all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool. Use radius as usual"
 			},
 			"noCritical": {
 				"name": "An aura that suppresses criticals",
-				"description": "Replace ACTIONTYPE with one of all/attack/damage. Use radius as usual"
+				"description": "Replace ACTIONTYPE with one of all/d20/attack/damage. Use radius as usual"
 			},
 			"noDisadvantage": {
 				"name": "An aura that suppresses disadvantage mode",
-				"description": "Replace ACTIONTYPE with one of all/attack/check/concentration/damage/death/initiative/save/skill/tool. Use radius as usual"
+				"description": "Replace ACTIONTYPE with one of all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool. Use radius as usual"
 			},
 			"fail": {
 				"name": "An aura forcing d20 rolls to fail",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration/death/save/skill/tool. Change value format: radius=Number;allies or enemies or omit for ALL;other conditions"
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/death/save/skill/tool. Change value format: radius=Number;allies or enemies or omit for ALL;other conditions"
 			},
 			"fumble": {
 				"name": "An aura forcing d20 rolls to fumble",
-				"description": "An aura around the actor that has the effect on. Replace ACTIONTYPE with one of: all/attack/check/concentration/death/initiative/save/skill/tool. Change value format: radius=Number;allies or enemies or omit for ALL;other conditions"
+				"description": "An aura around the actor that has the effect on. Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/death/initiative/save/skill/tool. Change value format: radius=Number;allies or enemies or omit for ALL;other conditions"
 			},
 			"success": {
 				"name": "An aura forcing success",
-				"description": "Replace ACTIONTYPE with one of: all/attack/check/concentration//death/save/skill/tool. Change value format: radius=Number;allies or enemies or omit for ALL;other conditions"
-			},
-			"abilityOverride": {
-				"name": "An aura overriding the ability used for rolls",
-				"description": "Attack only. Use radius as usual plus override=cha or abilityOverride=cha."
+				"description": "Replace ACTIONTYPE with one of: all/d20/attack/check/concentration/death/save/skill/tool. Change value format: radius=Number;allies or enemies or omit for ALL;other conditions"
 			}
 		}
 	},
@@ -469,5 +536,167 @@
 	"AC5E.advantageBehaviorDisadvantageFormula": {
 		"Name": "Disadvantage Penalty Formula",
 		"Hint": "Applied when transient disadvantage is present and the override is enabled. Example: -3d6kh1 or -2."
+	},
+	"AC5E.EffectValueEditor": {
+		"WindowTitle": "AC5E Effect Value Editor",
+		"ChangeHeader": "{effect} (change index: {index})",
+		"Label": {
+			"Effect": "Effect",
+			"AttributeKey": "Attribute Key",
+			"ToggleBehavior": "Toggle Behavior",
+			"Cadence": "Cadence",
+			"Name": "Name",
+			"Description": "Description",
+			"UsesCount": "Uses Count",
+			"Update": "Update",
+			"Condition": "Condition",
+			"Bonus": "Bonus",
+			"Override": "Override",
+			"Modify": "Modify",
+			"Modifier": "Modifier",
+			"AddTo": "Add To",
+			"Set": "Set",
+			"Threshold": "Threshold",
+			"Radius": "Radius",
+			"Chance": "Chance",
+			"EnforceMode": "Enforce Mode",
+			"Optin": "Optin",
+			"OptinId": "Optin Id",
+			"OptinPreselected": "Optin preselected",
+			"ItemLimited": "Item Limited",
+			"CriticalStatic": "Critical Static",
+			"Cancel": "Cancel roll",
+			"RangeBonus": "Range Bonus",
+			"ShortRange": "Short Range",
+			"LongRange": "Long Range",
+			"Reach": "Reach",
+			"RangeAuraBehavior": "Range / Aura Behavior",
+			"RangeBehavior": "Range Behavior",
+			"AuraBehavior": "Aura Behavior",
+			"Allies": "Allies",
+			"Enemies": "Enemies",
+			"IncludeSelf": "Include Self",
+			"SingleAura": "Single Aura",
+			"WallsBlock": "Walls Block",
+			"LongDisadvantage": "Long Disadvantage",
+			"NoLongDisadvantage": "No Long Disadvantage",
+			"NearbyFoeDisadvantage": "Nearby Foe Disadvantage",
+			"NoNearbyFoeDisadvantage": "No Nearby Foe Disadvantage",
+			"OutOfRangeFail": "Out Of Range Fail",
+			"NoOutOfRangeFail": "No Out Of Range Fail",
+			"Recover": "Recover",
+			"Scaling": "Scaling",
+			"Partial": "Partial",
+			"Min": "Min",
+			"Max": "Max",
+			"Step": "Step",
+			"Spellcasting": "Spellcasting",
+			"All": "All",
+			"BaseDamage": "Base Damage",
+			"BonusDamage": "Bonus Damage",
+			"SelectedOptin": "Selected Optin",
+			"IncludeTypes": "Include Types",
+			"ExcludeTypes": "Exclude Types",
+			"ConsumptionType": "Consumption Type",
+			"UpdateTarget": "Update Target",
+			"Amount": "Amount"
+		},
+		"Cadence": {
+			"Once": "Once",
+			"OncePerTurn": "Once Per Turn",
+			"OncePerRound": "Once Per Round",
+			"OncePerCombat": "Once Per Combat"
+		},
+		"Button": {
+			"Apply": "Apply",
+			"ApplyClose": "Apply & Close",
+			"Reset": "Reset",
+			"Expand": "Expand {label}",
+			"Roots": "Roots",
+			"Back": "Back"
+		},
+		"Title": {
+			"Edit": "Edit {label}"
+		},
+		"Assist": {
+			"Root": "Root",
+			"Values": "Values",
+			"Operators": "Operators",
+			"UsesCountQuickTargets": "UsesCount quick targets (actor with this effect)",
+			"UpdateQuickTargets": "Update quick targets",
+			"DamageTypes": "Damage Types",
+			"HealingTypes": "Healing Types",
+			"AddTypeChoices": "Add to existing type choices",
+			"AddTypeChoicesHint": "Adds the selected types to each affected part's existing dropdown choices instead of replacing them. Does not add extra damage. Stores a + prefix in the override value.",
+			"AbilityOverrideEntries": "Ability Override entries",
+			"WhichDamageParts": "Which Damage Parts",
+			"SelectedOptin": "Selected Optin",
+			"TypeFilters": "Type Filters",
+			"ActorEntries": "Actor entries",
+			"ItemActivityEntries": "Item/Activity entries",
+			"RollAwareEntries": "Roll-aware entries",
+			"Functions": "AC5E functions",
+			"Ternary": "Ternary",
+			"PathFields": "Path fields: {path}",
+			"Idle": "Type or select a supported root/path to browse available entries.",
+			"NoPaths": "No paths available",
+			"NoEntries": "No entries"
+		},
+		"Placeholder": {
+			"AddToExamples": "Examples: base | bonus | types(fire,cold) | base,!types(acid)",
+			"UsesCountAmount": "1 or =5",
+			"UpdateAmount": "1, -1 or =5"
+		},
+		"Hint": {
+			"AttributeKey": "For AC5E keys and examples, see <a href=\"https://github.com/thatlonelybugbear/automated-conditions-5e/wiki\">the wiki</a>.",
+			"OptinPreselected": "Enable this optional entry by default when the dialog opens.",
+			"ShowCadence": "Show cadence controls (once, once per turn, round, or combat).",
+			"ShowName": "Include a custom display name for this entry.",
+			"ShowDescription": "Include a short description for display/tooltip text.",
+			"ShowUsesCount": "Enable uses-count configuration for this entry.",
+			"ShowUpdate": "Enable actor update configuration for this entry.",
+			"SetMode": "Treat the bonus field as an absolute set value instead of additive bonus.",
+			"EnableUsesCountScaling": "Enable min/max/step scaling inputs for usesCount consume value. When scaling is active, use scaleValue in formulas/conditions to reference the computed scaled amount.",
+			"UsesCountAmount": "Positive values consume. Negative values recover. Use =value to set an absolute value.",
+			"UpdateAmount": "Positive values add. Negative values subtract. Use =value to set an absolute value.",
+			"UpdateAmountStatus": "Positive values or =1 apply the status. Zero, negative values, or =0 remove it.",
+			"UpdateAmountConcentration": "Positive values or =1 apply the generic Concentrating status. Zero, negative values, or =0 remove it.",
+			"UpdateAmountInspiration": "Positive values or =1 grant Inspiration. Zero, negative values, or =0 remove it.",
+			"UpdateAmountExhaustion": "Positive values add Exhaustion levels. Negative values remove levels. Use =0 to clear Exhaustion.",
+			"ToggleOptin": "Show this entry as optional for users to enable per roll.",
+			"ToggleCancel": "Cancel the roll before dice evaluation when this info entry applies. For opt-ins, cancellation requires selection. Selected updates and usesCount consumption still apply.",
+			"ToggleItemLimited": "Only apply when the originating item/activity matches the limited source context.",
+			"ToggleCriticalStatic": "Apply this damage bonus or extra dice as is, without following the normal critical hit rules.",
+			"ToggleAllies": "Aura applies to allied tokens.",
+			"ToggleEnemies": "Aura applies to enemy tokens.",
+			"ToggleIncludeSelf": "Aura can apply to the source actor as well.",
+			"ToggleSingleAura": "Only allow one active aura source to apply at a time.",
+			"ToggleWallsBlock": "Walls can block aura reach/pathing.",
+			"ToggleRecover": "Reverse uses consumption and restore the configured amount.",
+			"UsesCountSet": "Set the target to an absolute amount using =amount syntax.",
+			"TogglePartialConsume": "Allow spending what is available instead of blocking when short.",
+			"ToggleRangeLongDisadvantage": "Force long-range disadvantage on.",
+			"ToggleRangeNoLongDisadvantage": "Force long-range disadvantage off.",
+			"ToggleRangeNearbyFoeDisadvantage": "Force nearby-foe ranged disadvantage on.",
+			"ToggleRangeNoNearbyFoeDisadvantage": "Force nearby-foe ranged disadvantage off.",
+			"ToggleRangeOutOfRangeFail": "Force out-of-range usage to fail.",
+			"ToggleRangeNoOutOfRangeFail": "Force out-of-range usage not to fail.",
+			"RangeShort": "Modify short range using +value, -value, or a bare value to set.",
+			"RangeLong": "Modify long range using +value, -value, or a bare value to set.",
+			"RangeReach": "Modify melee reach using +value, -value, or a bare value to set.",
+			"RangeBonus": "Modify every matching range value using +value, -value, or a bare value to set."
+		}
+	},
+	"AC5E.Optin.UpdateSummary": {
+		"Updates": "Updates {target}",
+		"UpdatesCompact": "Updates {target}",
+		"Sets": "Sets {target} to {value}",
+		"AppliesTo": "Applies {value} to {target}",
+		"RemovesFrom": "Removes {value} from {target}",
+		"AppliesWithUnit": "Applies {value} {target} {unit}",
+		"RemovesWithUnit": "Removes {value} {target} {unit}",
+		"Exhaustion": "Exhaustion",
+		"ExhaustionLevel": "level",
+		"ExhaustionLevels": "levels"
 	}
 }

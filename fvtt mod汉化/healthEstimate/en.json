@@ -1,11 +1,23 @@
 {
 	"healthEstimate": {
+		"SETTINGS": {
+			"display": {
+				"name": "Display Estimates",
+				"hint": "",
+				"options": {
+					"default": "On Mouse Hover",
+					"always": "Always Display",
+					"nameplate": "Color Names",
+					"disabled": "Never Display"
+				}
+			}
+		},
 		"core": {
 			"sample": "Sample",
 			"custom": {
 				"FractionHP": {
 					"name": "Hit Points Attribute Data Path",
-					"hint": "Your system might be using another data path. If the estimate isn't showing correctly, input the data path to the correct attribute (e.g. actor.system.health)."
+					"hint": "Your system might be using another data path. If the estimate isn't showing correctly, input the data path to the correct attribute."
 				},
 				"FractionMath": {
 					"name": "Fraction Equation",
@@ -49,8 +61,9 @@
 				"newTable": "New Table",
 				"default": "Default",
 				"deleteTable": "Delete Table",
+				"actorTypes": "Actor Types",
 				"estimate": "Estimate",
-				"jsRule": "JavaScript Rule",
+				"statusEffects": "Status Effects",
 				"prioDecrease": "Decrease Priority",
 				"prioIncrease": "Increase Priority",
 				"ignoreColor": {
@@ -63,42 +76,14 @@
 					"name": "Mark as Dead",
 					"hint": "Marks all the selected tokens as Dead. If all the selected tokens are already Dead, they'll be reset to alive."
 				},
-				"customEstimates": {
-					"name": "Custom Estimates",
-					"hint": "Sets custom estimates for the selected tokens. Leave it blank to reset it.",
-					"options": {
-						"1": "Tokens & Actors",
-						"2": "Only Tokens"
-					}
-				},
 				"dontMarkDead": {
 					"name": "Don't Mark as Dead",
-					"hint": "Makes NPCs to not be shown as Dead when its HP reaches 0 (e.g. it'll show Unconscious). This is only useful if you're using the {setting} setting."
+					"hint": "Makes NPCs to not be shown as Dead when its estimate reaches 0. This is only useful if you're using the {setting} setting."
 				},
 				"hideEstimates": {
-					"name": "Hide Estimates",
-					"hint": "Hides the estimates of selected tokens from the players. Hidden estimates will not be output to chat if the setting is on, and will be shown with an asterisk (*) for the GM."
-				},
-				"hideNames": {
-					"name": "Hide Names",
-					"hint": "Hides the names of selected tokens when you're using the {setting} setting."
-				},
-				"hideEstimatesAndNames": {
-					"name": "Hide Estimates and Names",
-					"hint": "Hides both the estimates and names of selected tokens."
+					"name": "Hide Estimates from Players",
+					"hint": "Hidden estimates will be shown with an asterisk (*) for the GM."
 				}
-			},
-			"isNow": "{name} is now {desc}.",
-			"unknownEntity": {
-				"name": "Unknown Entity Name",
-				"hint": "Sets how a hidden character shall be called.{warning}",
-				"default": "Unknown Entity",
-				"warningCUB": "If you are using CUB's feature to hide names, it will take priority over this setting.",
-				"warningPF2eWorkbench": "If you are using PF2e Workbench's feature to mystify names, it will take priority over this setting."
-			},
-			"alwaysShow": {
-				"name": "Always Show Estimates",
-				"hint": "Makes the estimates always visible instead of just when hovering over a token."
 			},
 			"combatOnly": {
 				"name": "Show Only on Combat",
@@ -125,7 +110,7 @@
 				"hint2": "Show token as defined on the {setting} setting when it has been marked as defeated on combat."
 			},
 			"deathStateName": {
-				"name": "Death State Name",
+				"name": "Dead State Name",
 				"hint": "The description shown when a token is dead.",
 				"default": "Dead"
 			},
@@ -143,16 +128,12 @@
 				}
 			},
 			"NPCsJustDie": {
-				"name": "NPCs die immediately",
-				"hint": "The last stage of tokens whose actors aren't selected by players is replaced by the {setting}. For more information on what \"selected by players\" means, read the User Configuration section in Foundry's \"Users and Permissions\" article."
-			},
-			"outputChat": {
-				"name": "Output Estimate to Chat",
-				"hint": "Output any estimate changes to chat. Characters flagged with the Hide Names token configuration will be shown as the description of the {setting} setting."
+				"name": "NPCs Just Die",
+				"hint": "NPCs are shown as Dead when they reach the last health stage."
 			},
 			"addTemp": {
 				"name": "Add Temporary Health",
-				"hint": "Include temporary health points in calculating what description to show.\nE.g. with the setting turned on the token receiving temp HP will look \"healthier\" unless it's already at max health."
+				"hint": "Include temporary health points in calculating what description to show."
 			},
 			"breakOnZeroMaxHP": {
 				"name": "Hide Estimates on Tokens",
@@ -168,10 +149,6 @@
 				"behaviorSettings": {
 					"name": "Behavior Setting",
 					"plural": "Behavior Settings"
-				},
-				"deathSettings": {
-					"name": "Death Setting",
-					"plural": "Death Settings"
 				},
 				"styleSettings": {
 					"name": "Style Setting",
@@ -214,7 +191,11 @@
 				},
 				"scaleToGridSize": {
 					"name": "Scale Estimates to Grid Size",
-					"hint": "Scales the estimate based on the grid size, assuming 100px as the baseline."
+					"hint": "Scales the estimate based on the grid size."
+				},
+				"gridSize": {
+					"name": "Base Grid Size",
+					"hint": "The baseline grid size for the scaling. Useful for map packs that use different grid sizes."
 				},
 				"scaleToTokenSize": {
 					"name": "Scale to Token Size",
@@ -237,10 +218,7 @@
 					"plural": "hidden"
 				}
 			},
-			"toggleEstimate": "{tokenName}'s health estimate is being {term} from players.",
-			"toggleName": "{tokenName}'s name is being {term} from players.",
-			"toggleEstimateName": "{tokenName}'s health estimate and name are being {term} from players.",
-			"invalidFontSize": "Your Font Size style setting has been reset. Check the Style Settings to change it. Previous value: {fontSize}"
+			"toggleEstimate": "{tokenName}'s health estimate is being {term} from players."
 		},
 		"custom-system-builder": {
 			"FractionHP": {
@@ -269,22 +247,16 @@
 				"hint": "Sets the maximum health level (current / maximum, fraction 0.0 - 1.0) that can be reported for a PC that is Debilitated on the Death Track"
 			}
 		},
+		"draw-steel": {
+			"hideObjectHP": {
+				"name": "Hide Object's Estimate",
+				"hint": "Hides the estimate from Objects."
+			}
+		},
 		"PF1": {
 			"addNonlethal": {
 				"name": "Use Nonlethal Damage",
 				"hint": "If enabled nonlethal damage will be substracted from current health for estimation."
-			},
-			"showExtra": {
-				"name": "Show {condition1} & {condition2}",
-				"hint": "Shows the {condition1} and {condition2} descriptions when their prerequisites are fulfilled."
-			},
-			"disabledName": {
-				"name": "Staggered Stage",
-				"default": "Staggered"
-			},
-			"dyingName": {
-				"name": "Unconscious Stage",
-				"default": "Unconscious"
 			}
 		},
 		"PF2E": {
@@ -299,10 +271,6 @@
 			"hideVehicleHP": {
 				"name": "Hide Vehicle's Estimate",
 				"hint": "Hides the estimate from Vehicles."
-			},
-			"workbenchMystifier": {
-				"name": "(EXPERIMENTAL) PF2e Workbench's Mystifier Support",
-				"hint": "If the NPC Mystification settings are enabled, Chat Outputs will ignore the {setting} setting's name and use the token's name if it is different from its actor's Prototype Token's name."
 			}
 		},
 		"numenera": {
@@ -312,10 +280,6 @@
 			}
 		},
 		"starfinder": {
-			"useThreshold": {
-				"name": "Use Vehicle Threshold",
-				"hint": "Defines which estimation table will be used when calculating a Vehicle's estimatives."
-			},
 			"addStamina": {
 				"name": "Account for Stamina",
 				"hint": "With this setting on, Stamina will be added to HP for calculations."
@@ -331,10 +295,6 @@
 			"defaultWildCardMaxWounds": {
 				"name": "Default Wild Card's Max Wounds",
 				"hint": "This is used to calculate the max wounds a Wild Card NPC should have by default for estimations."
-			},
-			"showIncap": {
-				"name": "{incap} Status Effect",
-				"hint": "Tokens with the {incap} Status Effect will be shown as {incap} instead of their current estimates. Doesn't work for tokens that are vehicles or dead."
 			}
 		}
 	}

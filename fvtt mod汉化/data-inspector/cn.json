@@ -1,4 +1,5 @@
-{"DataInspector": {
+{
+	"DataInspector": {
 		"DataButton": "数据",
 		"Instructions": "左键单击展开。<wbr>右键单击<em>key</em>可将路径复制到剪贴板，<wbr>右键单击<em>value</em>可将该值复制到剪贴板。",
 		"Search": "搜索",
@@ -46,7 +47,8 @@
 			"Title": "编辑器",
 			"TokenWarning": "更改覆盖数据可能会暂时破坏角色。重新打开角色表就可以修复。",
 			"TypeWarning": "小心！你正在更改数据类型。",
-			"Dangerous": "这是非常危险的。"
+			"Dangerous": "这是非常危险的。",
+			"UnsupportedMode": "“{mode}”模式不支持编辑！"
 		},
 		"Data": {
 			"Mixed": "混合",
@@ -55,7 +57,13 @@
 			"Derived": "衍生",
 			"Override": "覆盖",
 			"Flags": "标志",
-			"Legend": "掷骰数据–用于计算公式。<br>衍生数据–如系统、宏、模组等所见。<br>源数据–永久存储数据。"
+			"Legend": "掷骰数据–用于计算公式。<br>衍生数据–如系统、宏、模组等所见。<br>源数据–永久存储数据。",
+			"rolldata": "掷骰数据",
+			"source": "源",
+			"derived": "衍生",
+			"override": "覆盖",
+			"flags": "标志",
+			"new": "新文件"
 		},
 		"DataValue": {
 			"Getter": "getter",
@@ -72,7 +80,9 @@
 		"Error": {
 			"NavigationFailure": "导航至目标数据路径失败： {path}",
 			"NoGetterEdit": "无法编辑 getter 内部的值。",
-			"UnsupportedEditType": "不支持的编辑类型： {type}"
+			"UnsupportedEditType": "不支持的编辑类型： {type}",
+			"NoEdit": "编辑已被禁用。",
+			"NoUpdate": "目标对象不支持更新。"
 		},
 		"Types": {
 			"undefined": "未定义",
@@ -107,6 +117,7 @@
 		"RepeatData": "数据同时存在于",
 		"StringLength": "长度",
 		"Update": "更新",
-		"Delete": "删除"
+		"Delete": "删除",
+		"Title": "数据检查员"
 	}
 }

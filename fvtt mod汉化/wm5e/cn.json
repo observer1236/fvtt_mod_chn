@@ -1,7 +1,9 @@
-{"WM5E": {
+{
+	"WM5E": {
 		"AutoMasteries": {
-			"Name": "自动触发武器精通",
-			"Hint": "启用时（每个用户必须单独启用），使用适用武器进行攻击时将自动触发相关的武器精通。"
+			"Name": "自动精通",
+			"Hint": "选择哪些用户客户端自动触发相关武器掌握。",
+			"SelectAll": "选择全部"
 		},
 		"Effects": {
 			"Sap": "削弱",
@@ -25,6 +27,27 @@
 			"ToppleAlreadyProne": "目标已处于倒地状态。",
 			"VexRequiresSuccess": "侵扰只能在攻击检定成功时使用。",
 			"VexAlreadyApplied": "目标已受到你的侵扰影响。"
-		}
+		},
+		"WeaponIdsMenu.Label": "配置",
+		"WeaponIdsMenu.Uuid": "物品 UUID",
+		"LinksMenu.Name": "模块支持",
+		"LinksMenu.Label": "友情链接",
+		"LinksMenu.Hint": "打开 WM5E 文档、问题跟踪器和支持链接。",
+		"LinksMenu.Title": "资源与支持",
+		"LinksMenu.GitHubMessage": "GitHub 链接",
+		"LinksMenu.DiscordMessage": "社区",
+		"LinksMenu.SupportMessage": "向你的小熊扔一枚硬币",
+		"WeaponIdsMenu.Name": "自定义武器 ID",
+		"WeaponIdsMenu.Hint": "将任意基本项目键映射到 DnD5e 武器掌握选择器的项目 UUID。",
+		"WeaponIdsMenu.Title": "自定义武器 ID",
+		"WeaponIdsMenu.BaseItem": "基础项目",
+		"WeaponIdsMenu.BaseItemPlaceholder": "例如：心灵之刃",
+		"WeaponIdsMenu.UuidPlaceholder": "拖动合集项目或粘贴其 UUID",
+		"WeaponIdsMenu.HintText": "选择一个简短的自定义键，然后通过将项目拖动到此处或粘贴其 UUID 将其链接到合集项目。使用与基础物品相同的钥匙和配置的掌握的武器可以出现在 DnD5e 武器掌握选择中。",
+		"WeaponIdsMenu.Add": "添加",
+		"NickReminder.Name": "帖子昵称提醒",
+		"NickReminder.Hint": "启用后，尼克会在攻击掷骰完成时发布提醒消息。",
+		"NpcMasteries.Name": "启用 NPC 精通",
+		"NpcMasteries.Hint": "启用后，具有配置的精通的 NPC 武器可以在攻击时使用该精通。"
 	}
 }

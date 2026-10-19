@@ -75,7 +75,8 @@
 			"preview": "预览",
 			"openHandout": "打开讲义",
 			"edit": "打开编辑器",
-			"triggers": "触发器"
+			"triggers": "触发器",
+			"stream": "在直播中显示"
 		},
 		"triggers": {
 			"title": "闪屏触发器",
@@ -108,13 +109,20 @@
 				"typeButton": "按钮",
 				"typeObject": "对象",
 				"groupName": "组 {n}",
-				"stateCopy": "{label} 副本"
+				"stateCopy": "{label} 副本",
+				"typeVideo": "视频",
+				"typeDraggable": "可拖动",
+				"typeGauge": "仪表",
+				"typeHotspot": "热点",
+				"typeTextInput": "文字输入",
+				"typeDropZone": "降落区"
 			},
 			"editor": {
 				"undo": "撤销",
 				"undoTooltip": "撤销（Ctrl+Z）",
 				"redo": "重做",
-				"redoTooltip": "重做（Ctrl+Shift+Z）"
+				"redoTooltip": "重做（Ctrl+Shift+Z）",
+				"guide": "用户指南"
 			},
 			"originEditor": {
 				"sublabel": "原点——点击添加，拖动移动，右键移除",
@@ -131,7 +139,13 @@
 				"textContent": "文本",
 				"panelName": "面板",
 				"buttonName": "按钮",
-				"buttonLabel": "按钮"
+				"buttonLabel": "按钮",
+				"videoName": "视频",
+				"draggableName": "可拖动",
+				"gaugeName": "仪表",
+				"hotspotName": "热点",
+				"textInputName": "文字输入",
+				"dropZoneName": "降落区"
 			},
 			"actionEditor": {
 				"typeMacro": "运行宏",
@@ -145,11 +159,11 @@
 				"pickMacro": "选择宏",
 				"loadStates": "加载状态…",
 				"unloadStates": "卸载状态…",
-				"conditionsLabel": "条件（值门控）",
+				"conditionsLabel": "仅当这些值匹配时才运行",
 				"removeCondition": "移除条件",
 				"addCondition": "添加条件",
 				"valueKey": "值键",
-				"key": "键",
+				"key": "值名称",
 				"value": "值",
 				"step": "步长",
 				"min": "最小值",
@@ -159,7 +173,8 @@
 				"scriptGlobals": "内联宏——全局变量",
 				"scriptScope": "（此元素的节点）",
 				"scriptContext": "（其数据）",
-				"scriptApi": "（changeState / setValue / close）"
+				"scriptApi": "（changeState / setValue / close）",
+				"scriptHint": "Inline 宏 — 全局变量：范围（此元素的节点）、上下文（其数据）、api (changeState / setValue / close)"
 			},
 			"effectsEditor": {
 				"heading": "效果（仅 WebGL）",
@@ -168,7 +183,20 @@
 				"removeEffect": "移除效果",
 				"bands": "条纹",
 				"intensity": "强度",
-				"tint": "色调"
+				"tint": "色调",
+				"pixelate": "像素化",
+				"thickness": "粗细",
+				"curvature": "曲率",
+				"scanlines": "扫描线",
+				"blockWidth": "W座",
+				"blockHeight": "H座",
+				"offsetX": "偏移 X",
+				"offsetY": "偏移 Y",
+				"strength": "实力",
+				"curveStart": "曲线起点",
+				"curveEnd": "曲线末端",
+				"lineColor": "线条颜色",
+				"steps": "步骤"
 			},
 			"splashTab": {
 				"layerScene": "场景（画布之上）",
@@ -232,7 +260,9 @@
 				"bands": "条纹",
 				"intensity": "强度",
 				"tint": "色调",
-				"invert": "反转"
+				"invert": "反转",
+				"typePixelate": "像素化",
+				"block": "块大小"
 			},
 			"objectTab": {
 				"alignLeft": "左",
@@ -283,7 +313,23 @@
 				"z": "Z",
 				"stateAnimationIn": "状态入场动画",
 				"stateAnimationOut": "状态退场动画",
-				"placeInState": "摆放到“{state}”中"
+				"placeInState": "摆放到“{state}”中",
+				"min": "最小值",
+				"max": "最大值",
+				"fillColor": "填充颜色",
+				"bgColor": "背景颜色",
+				"placeholder": "占位符",
+				"muted": "静音",
+				"autoplay": "自动播放",
+				"onDrop": "掉落时",
+				"tag": "标签",
+				"accepts": "接受标签",
+				"highlightColor": "突出显示颜色",
+				"valueKey": "共享价值",
+				"vertical": "垂直",
+				"fontSize": "字体大小",
+				"videoSource": "视频来源",
+				"loop": "循环"
 			},
 			"statesPanel": {
 				"renameTitle": "重命名状态",
@@ -340,12 +386,87 @@
 				"rowInStateOn": "在此状态中——点击移除",
 				"rowInStateOff": "不在此状态中——点击添加",
 				"toggleInState": "切换在状态中的显示",
-				"placePrefabTitle": "摆放预制件"
-			}
+				"placePrefabTitle": "摆放预制件",
+				"addVideo": "视频",
+				"addDraggable": "可拖动",
+				"addGauge": "仪表",
+				"addHotspot": "热点",
+				"addTextInput": "文字输入",
+				"addDropZone": "降落区"
+			},
+			"inspector.placement": "放置",
+			"inspector.behaviour": "行为",
+			"library.types.image.name": "图像",
+			"library.types.text.name": "文本",
+			"library.types.panel.name": "面板",
+			"library.types.video.name": "视频",
+			"library.types.button.name": "按钮",
+			"arrangement.align": "对齐",
+			"arrangement.left": "左",
+			"arrangement.right": "右",
+			"save.closeTitle": "放弃未保存的更改？",
+			"inspector.appearance": "外观",
+			"inspector.advanced": "高级：宏数据",
+			"inspector.presets": "可重复使用的预设",
+			"inspector.noBehaviour": "该对象显示内容。使用按钮、热点、输入或可拖动对象来添加交互。",
+			"inspector.hotspotAppearance": "播放期间热点不可见。将其放在讲义中玩家应该点击的部分上。",
+			"inspector.selectObject": "在画布上或对象列表中选择一个对象以更改其外观、位置或行为。",
+			"inspector.artworkVariants": "悬停、压制和九片图稿",
+			"inspector.motion": "动画和效果",
+			"inspector.valueHint": "选择现有值名称或键入新值名称。在对象应共享该值的任何地方使用相同的名称。",
+			"inspector.showAdvancedActions": "显示脚本和宏",
+			"inspector.hideAdvancedActions": "隐藏脚本和宏",
+			"start.title": "你想做什么？",
+			"start.intro": "从对象构建讲义，或从可重复使用的预制件开始。当玩家与之互动时，各州允许相同的讲义发生变化。",
+			"start.scratch": "从头开始",
+			"start.scratchHint": "选择你的第一个对象。随时添加艺术作品、文本和互动。",
+			"library.title": "添加对象",
+			"library.intro": "选择讲义的这一部分应该做什么。您可以在放置后更改其设置。",
+			"library.prefab": "使用现有的预制件",
+			"library.prefabHint": "放置可重复使用的组或现成的交互式对象。",
+			"library.display": "显示内容",
+			"library.interaction": "添加互动",
+			"library.types.image.hint": "展示艺术品、地图或讲义背景。",
+			"library.types.text.hint": "添加标题、线索或说明。",
+			"library.types.panel.hint": "添加彩色背景或边框。",
+			"library.types.video.hint": "播放讲义中的视频。",
+			"library.types.button.hint": "为玩家提供一个带有标签的点击操作。",
+			"library.types.hotspot.name": "热点",
+			"library.types.hotspot.hint": "使图像的一部分可点击，而无需可见的按钮。",
+			"library.types.text-input.name": "文字输入",
+			"library.types.text-input.hint": "让玩家输入答案或其他文本。",
+			"library.types.gauge.name": "仪表",
+			"library.types.gauge.hint": "将值显示为进度条。",
+			"library.types.draggable.name": "可拖动对象",
+			"library.types.draggable.hint": "让玩家将物体移动到放置区。",
+			"library.types.drop-zone.name": "降落区",
+			"library.types.drop-zone.hint": "接受匹配的可拖动对象并运行操作。",
+			"arrangement.title": "排列选定的对象",
+			"arrangement.group": "集团",
+			"arrangement.layer": "图层",
+			"arrangement.chooseAlignment": "选择边缘...",
+			"arrangement.chooseLayer": "更改订单...",
+			"arrangement.center": "水平中心",
+			"arrangement.top": "顶部",
+			"arrangement.middle": "垂直中心",
+			"arrangement.bottom": "底部",
+			"validation.valueName": "为此操作选择一个值名称。",
+			"validation.macro": "选择此操作应运行的宏。",
+			"validation.script": "Add the script this action should run.",
+			"validation.vote": "Enter the option this vote should count toward.",
+			"validation.chooseStates": "至少选择一种状态进行加载或卸载。",
+			"validation.missingState": "此操作引用不再存在的状态：{state}。选择替代者。",
+			"validation.connections": "需要注意的动作连接：{count}",
+			"save.failed": "无法保存更改。您的编辑仍然在这里； keep this editor open and retry saving.",
+			"save.retry": "重试保存",
+			"save.saving": "正在保存...",
+			"save.saved": "已保存",
+			"save.closeWarning": "无法保存这些编辑。 Closing now discards the unsaved draft.选择“否”继续编辑或重试保存。"
 		},
 		"ui": {
 			"splashUI": {
-				"loading": "加载中"
+				"loading": "加载中",
+				"failed": "飞溅无法启动。关闭它并重试。"
 			},
 			"triggersPanel": {
 				"introLead": "启动来源",
@@ -416,7 +537,16 @@
 		"preview": {
 			"previewHost": {
 				"exitPreview": "退出预览",
-				"escHint": "（Esc）"
+				"escHint": "（Esc）",
+				"states": "状态",
+				"loaded": "已加载",
+				"testControls": "测试讲义",
+				"restart": "重新启动预览",
+				"localTest": "与讲义交互并观察其状态和值的变化。 Restart returns it to its initial configuration.",
+				"closed": "该讲义要求关闭。 Restart to test it again.",
+				"values": "当前值",
+				"unloaded": "已卸载",
+				"noValues": "尚未设置任何值。"
 			}
 		},
 		"behavior": {
@@ -447,6 +577,13 @@
 				"emptyPinned": "没有固定到此场景的闪屏。",
 				"emptyGlobal": "没有全局闪屏。"
 			}
-		}
+		},
+		"director.tabLabel": "闪屏",
+		"director.handouts": "玩家资料",
+		"director.spectate": "观看",
+		"director.spectateUser": "观看",
+		"director.stopSpectate": "停止观望",
+		"director.clearAll": "Clear all open splashes on stream",
+		"director.noPlayers": "这个世界上没有用户。"
 	}
 }

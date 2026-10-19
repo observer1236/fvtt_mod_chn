@@ -3,14 +3,18 @@
     "WindowTitle": "Yuuko's Chat Interface Overhaul (GM can override this in settings)",
     "MinimizeIcon": "Minimize",
     "Warning": {
+      "SendAssociationAmbiguous": "Message sent, but another integration submitted an indistinguishable message. YCIO could not safely apply its speaker/avatar snapshot or check recipient display restrictions.",
+      "WhisperSceneRouteLimited": "Whisper sent, but {recipients} cannot currently display it in YCIO because they lack access to that scene. You can contact them separately using an OOC identity.",
       "NoLabeledAvatars": "The current speaker has no avatars with labels.",
       "FailedMsg": "Message failed to send.",
       "InitialRenderFailed": "The YCIO chat window could not be opened. Check the console for details.",
-      "NoAvailableSpeaker": "There is no available speaking identity in the current tab."
+      "NoAvailableSpeaker": "There is no available speaking identity in the current tab.",
+      "UpdateCollapsedTabsFailed": "The collapsed chat-tab state could not be updated. Check the console for details."
     },
     "Menu": {
       "ExportLog": "Export Chat Log",
       "ClearLog": "Clear Chat Log",
+      "ToggleTimestampMode": "Toggle Message Timestamp Mode",
       "MosaicSpeaker": "Blur Speakers (for screenshots)",
       "MosaicSpeakerOff": "Remove Blurs",
       "Settings": "Module Settings",
@@ -18,7 +22,12 @@
     },
     "Tabs": {
       "Label": "Chat tabs",
-      "OOC": "OOC"
+      "OOC": "OOC",
+      "CollapsedLabel": "Collapsed chat tabs",
+      "ShowCollapsed": "Show collapsed chat tabs",
+      "Collapse": "Collapse chat tab",
+      "Restore": "Move to primary tab bar",
+      "CollapsedActive": "Collapsed (currently active and temporarily shown in the primary tab bar)"
     },
     "Input": {
       "Placeholder": "Type a message...",
@@ -49,6 +58,9 @@
       "OOC": "OOC",
       "Actor": "Actor",
       "NoAvailableToken": "No Token available for speaking"
+    },
+    "OOCBubble": {
+      "Fallback": "New OOC message"
     },
     "Settings": {
       "Sections": {
@@ -90,6 +102,16 @@
       "BackgroundOpacity": {
         "Name": "➤ Floating Chat Window Background Opacity",
         "Hint": "Adjust the background opacity of your floating chat window (minimum 30%)."
+      },
+      "OOCBubble": {
+        "Enabled": {
+          "Name": "➤ Show OOC Chat Bubble",
+          "Hint": "While viewing a scene tab, show new messages from the OOC tab in a chat bubble."
+        },
+        "Duration": {
+          "Name": "➤ OOC Chat Bubble Duration",
+          "Hint": "Set how many seconds each OOC chat bubble remains visible (1–30 seconds)."
+        }
       },
       "CleanSender": {
         "Name": "➤ Clean Speaker Info",
@@ -174,6 +196,36 @@
       "WarningResourceFailures": "{count} external resources were omitted; the exported file may display incomplete content.",
       "ErrorFailed": "Chat log export failed: {error}",
       "ButtonStart": "Start Export",
+      "ProgressPreparing": "Preparing messages…",
+      "ProgressStyles": "Reading stylesheets",
+      "ProgressAssets": "Embedding style resources",
+      "ProgressMessages": "Processing messages",
+      "ProgressImages": "Processing image references in this tab",
+      "ProgressAssembling": "Assembling HTML…",
+      "InfoBackground": "Export continues. Reopen Export Chat Log to view progress.",
+      "ButtonCancel": "Cancel Export",
+      "ButtonDownloadWarnings": "Download with Warnings",
+      "ButtonDiscard": "Discard Result",
+      "Cancelling": "Cancelling export…",
+      "Cancelled": "Cancelled. No download was triggered. Your selections are retained.",
+      "Discarded": "Result discarded. No download was triggered.",
+      "NoMessages": "No messages match your selections.",
+      "DownloadHandedOff": "Generated a log of {count} messages and handed it to the browser for download.",
+      "FailureDownload": "Could not hand the file to the browser. Export again; your selections are retained.",
+      "FailureUnexpected": "An unexpected processing error occurred.",
+      "FailedStage": "Export stopped without a download. Stage: {stage}. {reason} Your selections are retained for another export.",
+      "WarningSummary": "Processed {messages} messages. Could not embed {count} resource groups, affecting {references} references. Offline images or styles may be missing.",
+      "FailureDetails": "Missing Resource Details",
+      "AffectedMessages": "Identifiable affected messages: {count}.",
+      "FailureGroupingHint": "Entries group the same type and safe path; URL parameters are hidden. Style failures cannot be attributed to specific messages.",
+      "ReferenceCount": "{count} references",
+      "FailureTimeout": "Resource request timed out",
+      "FailureHTTP": "Server could not provide the resource",
+      "FailureResource": "Could not read or convert resource",
+      "FailureMessage": "Could not process message {id} in tab “{tab}”.",
+      "FailurePreparingMessage": "Could not determine whether message {id} is eligible for export.",
+      "FailureChanged": "Message {id} in tab “{tab}” no longer exists or is no longer eligible for export.",
+      "MissingImage": "[Image could not be embedded]",
       "HtmlTitle": "Chat Log Export"
     },
     "Clearer": {

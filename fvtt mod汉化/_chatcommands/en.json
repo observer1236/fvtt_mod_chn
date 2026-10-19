@@ -22,6 +22,9 @@
                 "gm": "Gamemasters",
                 "players": "Players"
             },
+            "gm": "Send a private message to all gamemasters.",
+            "players": "Send a private message to all players that aren't gamemasters.",
+            "reply": "Reply to the most recent whisper.",
             "roll": {
                 "basic": "Roll some dice.",
                 "gm": "Roll some dice that are only visible for you and the game master.",
@@ -33,6 +36,12 @@
                 "modifierInfo": "Modifiers: See <a href='https://foundryvtt.com/article/dice-modifiers/'>Dice Modifiers</a>.",
                 "advancedInfo": "Pools, variables & functions: See <a href='https://foundryvtt.com/article/dice-advanced/'>Advanced Dice</a>.",
                 "recent": "Recently used"
+            },
+            "macro": {
+                "description": "Execute a macro.",
+                "info": "Syntax: <span class='parameter'>Name</span> <span class='parameter'>Parameter</span>=<span class='parameter'>Value</span>",
+                "available": "Available macros",
+                "none": "No macros available."
             }
         }
     }

@@ -23,5 +23,9 @@
   "DOORSOUNDS.export": "Export",
   "DOORSOUNDS.exportTitle": "Import Export Menu",
   "DOORSOUNDS.confirmHeader": "Delete Sound Set",
-  "DOORSOUNDS.confirmText": "Are you sure you wish to delete this sound set?"
+  "DOORSOUNDS.confirmText": "Are you sure you wish to delete this sound set?",
+  "DOORSOUNDS.allowVolumeLabel": "Allow Volume adjustment?",
+  "DOORSOUNDS.allowVolumeHint": "Adds a volume slider to the Wall Config and alters the Wall Placeable to make use of it.",
+  "DOORSOUNDS.gmModeLabel": "GM hears doors as Players?",
+  "DOORSOUNDS.gmModeHint": "When ticked the GM hears doors just like the player does, WARNING: This means that you (the GM) have a token selected and your token is out of range you will NOT hear a door open possibly missing cues of what the player is doing."
 }

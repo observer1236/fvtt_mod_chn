@@ -20,11 +20,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Merge all mod cn.json into one cn.json
-        run: python scripts/merge_cn.py
-
-      - name: Build mod_chn.zip
-        run: zip -r -9 mod_chn.zip cn.json module.json welcome.js
+      - name: Validate and build mod_chn.zip
+        run: python scripts/build_release.py
 
       - name: Upload to release
         if: github.event_name == 'release'

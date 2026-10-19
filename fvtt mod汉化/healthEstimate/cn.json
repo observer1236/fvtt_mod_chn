@@ -1,4 +1,5 @@
-{"healthEstimate": {
+{
+	"healthEstimate": {
 		"core": {
 			"sample": "示例",
 			"custom": {
@@ -55,7 +56,9 @@
 				"ignoreColor": {
 					"name": "忽略颜色",
 					"hint": "忽略此表的颜色并为Token使用下一个有效表中的颜色。这意味着状态会比健康状况有更高的优先级，但是仍使用健康状况的颜色。"
-				}
+				},
+				"actorTypes": "角色类型",
+				"statusEffects": "状态效果"
 			},
 			"keybinds": {
 				"markDead": {
@@ -76,7 +79,7 @@
 				},
 				"hideEstimates": {
 					"name": "隐藏健康状况",
-					"hint": "对玩家隐藏选中Token的健康状况。若设置为“是”，隐藏的健康状况会发送至聊天，并为GM显示*号标记。"
+					"hint": "对玩家隐藏选中指示物的健康状况。若设置为“是”，隐藏的健康状况会发送至聊天，并为GM显示*号标记。"
 				},
 				"hideNames": {
 					"name": "隐藏姓名",
@@ -143,7 +146,7 @@
 			},
 			"NPCsJustDie": {
 				"name": "NPC 立刻死亡",
-				"hint": "未被玩家选择的角色的Token的健康状况的最后一个阶段会被{setting}替代。有关“玩家选择的角色”的更多信息，请阅读FVTT知识库里的“用户和权限”一文中的用户配置部分。"
+				"hint": "当 NPC 达到最后的生命值阶段时，他们会显示为死亡。"
 			},
 			"outputChat": {
 				"name": "将健康状况发到聊天栏",
@@ -151,7 +154,7 @@
 			},
 			"addTemp": {
 				"name": "添加临时生命值",
-				"hint": "显示描述时将临时生命值也计算在内。\n例如：启用此选项后，有临时生命值的Token会看起来更“健康”，除非它正处于最大生命值。"
+				"hint": "显示描述时将临时生命值也计算在内。\n例如：启用此选项后，有临时生命值的指示物会看起来更“健康”，除非它正处于最大生命值。"
 			},
 			"breakOnZeroMaxHP": {
 				"name": "在Token上隐藏健康状况",
@@ -159,7 +162,7 @@
 				"options": {
 					"none": "不隐藏健康状况",
 					"zero": "最大生命值为0",
-					"one": "最大生命值为1", 
+					"one": "最大生命值为1",
 					"zeroOrOne": "最大生命值为0或1"
 				}
 			},
@@ -213,7 +216,7 @@
 				},
 				"scaleToGridSize": {
 					"name": "网格大小调整",
-					"hint": "根据网格大小调整健康状况，假设基值为 100px。"
+					"hint": "根据网格大小调整估计值。"
 				},
 				"scaleToTokenSize": {
 					"name": "根据Token大小调整",
@@ -222,7 +225,9 @@
 				"scaleToZoom": {
 					"name": "调整健康状况缩放",
 					"hint": "根据缩放调整健康状况文字尺寸。"
-				}
+				},
+				"gridSize.name": "基础网格尺寸",
+				"gridSize.hint": "缩放的基线网格大小。对于使用不同网格大小的地图包很有用。"
 			}
 		},
 		"notifications": {
@@ -335,6 +340,14 @@
 				"name": "{incap}状态效果",
 				"hint": "带有{incap}状态效果的Token将被显示为{incap}而非实时的健康状况。这对载具或已死亡的Token无效。"
 			}
-		}
+		},
+		"SETTINGS.display.options.always": "始终可见",
+		"SETTINGS.display.name": "Display Estimates",
+		"SETTINGS.display.hint": "",
+		"SETTINGS.display.options.default": "鼠标悬停时",
+		"SETTINGS.display.options.nameplate": "颜色名称",
+		"SETTINGS.display.options.disabled": "Never Display",
+		"draw-steel.hideObjectHP.name": "隐藏对象的估计",
+		"draw-steel.hideObjectHP.hint": "隐藏对象的估计。"
 	}
 }

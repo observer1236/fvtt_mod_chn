@@ -1,6 +1,13 @@
 {
 	"SIMPLEFOG": {
 		"fogConfiguration": "Fog Configuration",
+		"BrushControls": {
+			"label": "Simplefog Palette",
+			"opacity": "Brush Opacity",
+			"size": "Brush Size",
+			"hide": "Hide",
+			"reveal": "Reveal"
+		},
 		"SETTINGS": {
 			"config": {
 				"name": "Default Fog Configuration",
@@ -15,43 +22,28 @@
 				"name": "Auto Enable Scene Fog",
 				"hint": "When enabled, Simple Fog will automatically be enabled for a scene when it is first created."
 			},
-			"toolHotKeys": {
-				"name": "Hotkey Tool",
-				"hint": "Define which tool will be selected when using the keybinding.",
-				"choices": {
-					"brush": "Brush",
-					"grid": "Grid",
-					"room": "Room",
-					"polygon": "Polygon",
-					"box": "Box",
-					"ellipse": "Ellipse"
-				}
+			"previewPlayerVision": {
+				"name": "Preview Player Vision",
+				"hint": "Selecting a player-owned token will preview the canvas as if seem by a player."
 			},
 			"zIndex": {
 				"name": "Z-Index",
 				"hint": "Displays the overlay over specific canvas layers and its objects.",
 				"choices": {
-					"tokens": "Tokens",
-					"controls": "Controls, such as doors",
-					"interface": "Interface, such as scrolling numbers",
-					"healthEstimate": "Interface, such as Health Estimates"
+					"belowTokens": "Under Tokens",
+					"tokens": "Above Tokens",
+					"controls": "Above Controls (e.g. doors, mouse cursors, pings)",
+					"interface": "Above Interfaces, such as scrolling numbers"
 				}
 			}
 		},
-		"brushOpacity": "Brush Opacity",
-		"brushSize": "Brush Size",
-		"hide": "Hide",
-		"reveal": "Reveal",
 
-		"gmFogSettings": "GM Fog Settings",
-		"gmColorTint": "Color",
-		"gmColorAlpha": "Color Opacity",
+		"gmFogSettings": "Fog Settings",
+		"gmColorTint": "GM Background Color",
+		"gmColorAlpha": "GM Background Opacity",
+		"playerColorTint": "Player Background Color",
 
-		"playerFogSettings": "Player Fog Settings",
-		"playerColorTint": "Color",
-		"playerColorAlpha": "Color Opacity",
-
-		"fogImageOverlaySettings": "Fog Overlay Image",
+		"fogImageOverlaySettings": "Overlay Image",
 		"fogImageOverlay": "Image",
 		"fogImageOverlayNotes": "Selected image will display above/below the tint color. This image should be the same height and width of the scene background image.",
 		"fogImageOverlayGMAlpha": "GM Image Opacity",
@@ -62,19 +54,7 @@
 			"6000": "Overlay Image Above Color Tint"
 		},
 
-		"filterSettings": "Filter Settings",
-		"blurEnable": "Enable Reveal Blur",
-		"blurRadius": "Blur Radius",
-		"blurQuality": "Blur Quality",
-		"blurQualityDesc": "Higher blur quality improves the appearance of the blur effect, but may cause slower performance.",
-		"transitionSettings": "Transition Settings",
-		"enableTransitions": "Enable Transitions",
-		"transitionSpeed": "Transition Speed",
-		"visibilitySettings": "Visibility Settings",
-		"enableAutovis": "Enable Automatic Visibility",
-		"enableForGM": "Enable for GM",
-		"enableAutoFog": "Enable fog Automatically for new scenes",
-		"visThreshold": "Visibility Threshold",
+		"blurEnable": "Enable Blur",
 		"saveAsDef": "Save as Default",
 		"sf": "Simple Fog",
 		"onoff": "Enable/Disable Simple Fog",
@@ -85,11 +65,11 @@
 		"polygonTool": "Polygon Tool",
 		"boxTool": "Box Tool",
 		"ellipseTool": "Ellipse Tool",
+		"eraser": "Erase Fog",
+		"expand": "Expand to Room Size",
 		"sceneConfig": "Scene Configuration",
 		"reset": "Reset Simple Fog",
 		"confirmReset": "Are you sure? Fog of war will be reset.",
-		"autoFogSettings": "AutoFog Settings",
-		"autoFogNotes": "When enabled AND saved as default, fog will automatically render when you create a scene. Please check box and click 'Save current setings as defualt' in order to enable. Do the same to disable",
 
 		"confirmDisableFog": "Are you sure you want to toggle off Simple Fog for this scene?",
 		"disableFog": "Disable Simple Fog",

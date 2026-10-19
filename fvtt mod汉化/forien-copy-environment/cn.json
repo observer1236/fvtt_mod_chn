@@ -1,35 +1,40 @@
-{"forien-copy-environment": {
-    "menu": {
-      "copy": "复制为文本",
-      "save": "复制为JSON",
-      "export": "导出设置",
-      "import": "导入设置"
-    },
-    "settings": {
-      "max-diff": "字符数",
-      "max-diff-hint": "每个差值显示的最大字符数。设置为 0 则显示全部。"
-    },
-    "title": "导入设置",
-    "intro": "通过此表，你可以选择要导入的世界和玩家设置。",
-    "message": "使用 Forien's Copy Environment 生成的列表： https://github.com/League-of-Foundry-Developers/foundryvtt-forien-copy-environment",
-    "copiedToClipboard": "环境数据复制到剪贴板！",
-    "updatedReloading": "更新了世界设置。5 秒内重加载世界...",
-    "import": {
-      "title": "世界设置",
-      "save": "导入设置",
-      "playerList": "为以下玩家导入设置：",
-      "existing": "导入现有导出文件：",
-      "property": "属性",
-      "newValue": "新值",
-      "currentValue": "当前值",
-      "notFound": "导入文件中的下列用户在此世界中不存在，将被跳过。",
-      "existingValue": "保持不变并将跳过的现有值：",
-      "existingPlayerValues": "现有玩家没有变化，将被跳过：",
-      "updatedPlayer": "更新了玩家设置：{name}",
-      "noChanges": "当前世界和导入的设置没有任何区别。",
-      "showSettings": "显示 {count} 设置",
-      "warning": "警告",
-      "warningMessage": "你选择不导入所选模组。如果这是无意的，请启用上面的\"core.moduleConfiguration\"值。"
-    }
-  }
+{
+	"forien-copy-environment": {
+		"menu": {
+			"copy": "复制为文本",
+			"save": "复制为JSON",
+			"export": "导出设置",
+			"import": "导入设置",
+			"export-hint": "将每个更改的世界、玩家和客户端设置保存到 JSON 文件中。",
+			"import-hint": "加载之前导出的设置文件并选择要应用的设置。"
+		},
+		"settings": {
+			"max-diff": "对比预览长度",
+			"max-diff-hint": "在导入比较窗口中显示每个值的字符数。仅显示截断：它永远不会影响导出或导入的内容。设置为 0 以显示完整值。",
+			"include-defaults": "在导出中包含默认值设置",
+			"include-defaults-hint": "打开以进行完整备份导出，否则关闭以排除默认值（注意：导入将完全跳过该值）。"
+		},
+		"title": "导入设置",
+		"intro": "通过此表，你可以选择要导入的世界和玩家设置。",
+		"message": "使用 Forien's Copy Environment 生成的列表： https://github.com/League-of-Foundry-Developers/foundryvtt-forien-copy-environment",
+		"copiedToClipboard": "环境数据复制到剪贴板！",
+		"updatedReloading": "更新了世界设置。5 秒内重加载世界...",
+		"import": {
+			"title": "世界设置",
+			"save": "导入设置",
+			"playerList": "为以下玩家导入设置：",
+			"existing": "导入现有导出文件：",
+			"property": "属性",
+			"newValue": "新值",
+			"currentValue": "当前值",
+			"notFound": "导入文件中的下列用户在此世界中不存在，将被跳过。",
+			"existingValue": "保持不变并将跳过的现有值：",
+			"existingPlayerValues": "现有玩家没有变化，将被跳过：",
+			"updatedPlayer": "更新了玩家设置：{name}",
+			"noChanges": "当前世界和导入的设置没有任何区别。",
+			"showSettings": "显示 {count} 设置",
+			"warning": "警告",
+			"warningMessage": "您已取消选择“core.moduleConfiguration”，因此将不会导入已启用模块的列表。勾选上面的以显示导出世界的模块选择。"
+		}
+	}
 }

@@ -1,146 +1,150 @@
 {
-  "crunch-my-party": {
-    "setting": {
-      "modVersion": {
-        "name": "版本",
-        "hint": "当前安装的模组版本（此处无法更改）。"
-      },
-      "debug": {
-        "name": "调试模式",
-        "hint": "客户端设置，启用扩展调试日志记录。"
-      },
-      "forceUniqueTargetToken": {
-        "name": "强制选择目标Token",
-        "hint": "当未选择唯一的小组成员时阻止“压缩”。对于使用层级和高程的场景最为重要，因为小组成员会被传送到与目标相同的位置和高程！"
-      },
-      "maxNoOfParties": {
-        "name": "小队最大数量",
-        "hint": "一次最多可维护多少个独立定义的小队？"
-      },
-      "memberTokenNames#": {
-        "name": "小队 # - 成员（已弃用）",
-        "hint": "自 v14 起不再使用。仅为便于沿用旧设置而显示。"
-      },
-      "partyTokenName#": {
-        "name": "小队 # - 小队名称（已弃用）",
-        "hint": "自 v14 起不再使用。仅为便于沿用旧设置而显示。"
-      },
-      "hideChatInfo": {
-        "name": "在聊天窗口中隐藏模组信息",
-        "hint": "在游戏开始时隐藏聊天窗口中关于此模组的信息文本，使其不会反复显示（停用此选项可再次查看）。"
-      },
-      "animationFileCRUNCHED": {
-        "name": "“压缩”动画（可选）",
-        "hint": "将单个 Token 压缩为小队 Token 时播放的动画。需要安装 JB2A（见 Readme）。"
-      },
-      "playAudioCRUNCHED": {
-        "name": "在“压缩”时播放音频？",
-        "hint": "若启用，则播放下方指定的音频文件。"
-      },
-      "audioFileCRUNCHED": {
-        "name": "“压缩”时的音频文件",
-        "hint": "在“压缩”时播放的音频文件（相对路径）？"
-      },
-      "animationFileEXPLODED": {
-        "name": "“展开”动画（可选）",
-        "hint": "将小队 Token 展开为单个成员 Token 时播放的动画。需要安装 JB2A（见 Readme）。"
-      },
-      "playAudioEXPLODED": {
-        "name": "在“展开”时播放音频？",
-        "hint": "若启用，则播放下方指定的音频文件。"
-      },
-      "audioFileEXPLODED": {
-        "name": "“展开”时的音频文件",
-        "hint": "在“展开”时播放的音频文件（相对路径）？"
-      }
-    },
-    "labels" : {
-      "partyTokenName": "小队 Token",
-      "memberTokenNames": "成员",
-      "partyState": "状态"
-    },
-    "partyState": {
-      "CRUNCHED": "已分组",
-      "EXPLODED": "已分离",
-      "UNKNOWN":  "?"
-    },
-    "chatInfoContent": {
-      "title": "压缩我的小队！",
-      "text1": "\"从前有三个小地精...渴望组成一支小队！<br/>所以这是他们的故事...\"",
-      "text2": "轻松将场景中的任意Token小队（代表小队）折叠成易于使用的单个\"小队Token\"，反之亦然。最多可管理5个独立小队，每个小队最多25名成员！",
-      "text3": "请参考游戏设置中的各种模组偏好设置。在GitHub上查找更多详细信息",
-      "footer": "此聊天卡片只会显示一次。如有需要，可在模组设置中再次激活。"
-    },
-    "errMsg": {
-      "pleaseCheckYourTokenSelection": "请检查你的 Token 选择",
-      "invalidTokenCount": "要求：恰好一个小队和超过一个成员",
-      "duplicateTokens": "所选包含同名的 Token（可能被隐藏？）。同名 Token 会妨碍一致的小队配置。",
-      "tooManyMemberTokens": "成员列表过长",
-      "invalidNumberOfMemberTokens": "选择的 Token 数量无效！一个小队必须由 2 到 {maxMembers} 名成员组成。",
-      "notUniqueInScene": "Token [{tokenName}] 在场景中不唯一！",
-      "notUniqueInScenePlural": "以下 Token 在场景中不唯一。当前操作不支持这种情况：",
-      "tokensMissingInScene": "缺少 Token：此场景中没有可见的小队 Token 或任何成员，无法确定小队 #{partyNo} [{partyName}] 的适当操作。",
-      "partyTokenMissingInConfig": "小队配置中缺少名为“#tokenName”的小队 Token 数据。请将其添加到场景中，或使用“分组”宏重新创建小队。",
-      "cannotDetermineAction": "无法确定操作！",
-      "noTokensVisible": "场景中必须可见（激活）小队 Token 或至少一名小队成员才能执行此操作。",
-      "membersAndPartyTokenVisible": "小队 Token 和成员不能同时可见以执行此操作。",
-      "pleaseWaitStillBusy": "请等待当前操作完成。若此问题持续，请重新加载场景。",
-      "partyConfigNotDefined": "小队 #{partyNo} 似乎未配置。请检查你的小队定义列表。"
-    },
-    "promptForPartyDefinition": {
-      "title": "小队定义",
-      "text": "选中的 Token 中哪一个应作为共享的小队 Token？",
-      "partyTokenMode": {
-        "text": "这个 Token 是独立的占位符，还是小队的成员？",
-        "placeholder": "占位符",
-        "member": "成员"
-      },
-      "partyNo": {
-        "text": "你想分配哪个小队槽位？<br/>（可用槽位数量可在模组设置中更改）"
-      }
-    },
-    "promptForPartySelection": {
-      "windowTitle": "选择小队",
-      "tableTitle": "你想对哪个小队执行此操作？"
-    },
-    "promptForCrunchAfterGrouping" : {
-      "title": "立即应用？",
-      "text": "你想立即“压缩”新小队的成员吗？",
-      "yes": "是，压缩它们！",
-      "no": "不，保持它们分开。"
-    },
-    "promptForDuplicateReplaceOrKeep" : {
-      "title": "Token 已存在于场景中。",
-      "text": "Token [{tokenName}] 在此场景中存在 {count} 个。你想怎么做？",
-      "disallowKeepText": "由于存在多个，无法保留它们。请选择“替换”以替换全部（!）{count} 个 Token，\n或者选择“取消”，删除此名称的多余 Token，然后重复此过程。",
-      "replace": "替换",
-      "keep": "保留"
-    },
-    "promptForSimpleConfirmation":  "需要确认",
-    "confirmDeleteParty": "你想从列表中删除包含 {noOfMembers} 名成员的小队 # ({partyName})，并释放此槽位吗？",
-    "okButton": "确定",
-    "saveButton": "保存",
-    "cancelButton": "取消",
-    "closeButton": "关闭",
-    "partyTable": {
-      "deleteButton": "Delete\n#{partyNo}",
-      "findButton": "Find\n#{partyNo}"
-    },
-    "empty": "空",
-    "groupingConfirmation": "The following tokens have been assigned to <strong>party #{partyNo} [{partyTokenName}]</strong>",
-    "applyToAll": "应用到全部！",
-    "keybindingLabels": {
-      "find": "查找小队 #",
-      "findGeneric": "查找任意小队（从列表选择）",
-      "toggle": "切换小队 #",
-      "toggleGeneric": "切换任意小队（从列表选择）",
-      "groupGeneric": "将选中的 Token 分组为小队",
-      "showConfig": "显示小队配置"
-    },
-    "settingsMenu": {
-      "behaviourSection": "行为",
-      "partyConfigSection": "小队成员配置",
-      "animationsSection": "动画与音频（需要 JB2A 与 Automated Animations）"
-    }
-  }
+	"crunch-my-party": {
+		"setting": {
+			"modVersion": {
+				"name": "版本",
+				"hint": "当前安装的模组版本（此处无法更改）。"
+			},
+			"debug": {
+				"name": "调试模式",
+				"hint": "客户端设置，启用扩展调试日志记录。"
+			},
+			"forceUniqueTargetToken": {
+				"name": "强制选择目标Token",
+				"hint": "当未选择唯一的小组成员时阻止“压缩”。对于使用层级和高程的场景最为重要，因为小组成员会被传送到与目标相同的位置和高程！"
+			},
+			"maxNoOfParties": {
+				"name": "小队最大数量",
+				"hint": "一次最多可维护多少个独立定义的小队？"
+			},
+			"memberTokenNames#": {
+				"name": "小队 # - 成员（已弃用）",
+				"hint": "自 v14 起不再使用。仅为便于沿用旧设置而显示。"
+			},
+			"partyTokenName#": {
+				"name": "小队 # - 小队名称（已弃用）",
+				"hint": "自 v14 起不再使用。仅为便于沿用旧设置而显示。"
+			},
+			"hideChatInfo": {
+				"name": "在聊天窗口中隐藏模组信息",
+				"hint": "在游戏开始时隐藏聊天窗口中关于此模组的信息文本，使其不会反复显示（停用此选项可再次查看）。"
+			},
+			"animationFileCRUNCHED": {
+				"name": "“压缩”动画（可选）",
+				"hint": "将单个 Token 压缩为小队 Token 时播放的动画。需要安装 JB2A（见 Readme）。"
+			},
+			"playAudioCRUNCHED": {
+				"name": "在“压缩”时播放音频？",
+				"hint": "若启用，则播放下方指定的音频文件。"
+			},
+			"audioFileCRUNCHED": {
+				"name": "“压缩”时的音频文件",
+				"hint": "在“压缩”时播放的音频文件（相对路径）？"
+			},
+			"animationFileEXPLODED": {
+				"name": "“展开”动画（可选）",
+				"hint": "将小队 Token 展开为单个成员 Token 时播放的动画。需要安装 JB2A（见 Readme）。"
+			},
+			"playAudioEXPLODED": {
+				"name": "在“展开”时播放音频？",
+				"hint": "若启用，则播放下方指定的音频文件。"
+			},
+			"audioFileEXPLODED": {
+				"name": "“展开”时的音频文件",
+				"hint": "在“展开”时播放的音频文件（相对路径）？"
+			}
+		},
+		"labels": {
+			"partyTokenName": "小队 Token",
+			"memberTokenNames": "成员",
+			"partyState": "状态"
+		},
+		"partyState": {
+			"CRUNCHED": "已分组",
+			"EXPLODED": "已分离",
+			"UNKNOWN": "?"
+		},
+		"chatInfoContent": {
+			"title": "压缩我的小队！",
+			"text1": "\"从前有三个小地精...渴望组成一支小队！<br/>所以这是他们的故事...\"",
+			"text2": "轻松将场景中的任意Token小队（代表小队）折叠成易于使用的单个\"小队Token\"，反之亦然。最多可管理5个独立小队，每个小队最多25名成员！",
+			"text3": "请参考游戏设置中的各种模组偏好设置。在GitHub上查找更多详细信息",
+			"footer": "此聊天卡片只会显示一次。如有需要，可在模组设置中再次激活。"
+		},
+		"errMsg": {
+			"pleaseCheckYourTokenSelection": "请检查你的 Token 选择",
+			"invalidTokenCount": "要求：恰好一个小队和超过一个成员",
+			"duplicateTokens": "所选包含同名的 Token（可能被隐藏？）。同名 Token 会妨碍一致的小队配置。",
+			"tooManyMemberTokens": "成员列表过长",
+			"invalidNumberOfMemberTokens": "选择的 Token 数量无效！一个小队必须由 2 到 {maxMembers} 名成员组成。",
+			"notUniqueInScene": "Token [{tokenName}] 在场景中不唯一！",
+			"notUniqueInScenePlural": "以下 Token 在场景中并非唯一。目前的行动不支持这一点",
+			"tokensMissingInScene": "缺少 Token：此场景中没有可见的小队 Token 或任何成员，无法确定小队 #{partyNo} [{partyName}] 的适当操作。",
+			"partyTokenMissingInConfig": "小队配置中缺少名为“#tokenName”的小队 Token 数据。请将其添加到场景中，或使用“分组”宏重新创建小队。",
+			"cannotDetermineAction": "无法确定操作！",
+			"noTokensVisible": "场景中必须可见（激活）小队 Token 或至少一名小队成员才能执行此操作。",
+			"membersAndPartyTokenVisible": "小队 Token 和成员不能同时可见以执行此操作。",
+			"pleaseWaitStillBusy": "请等待当前操作完成。若此问题持续，请重新加载场景。",
+			"partyConfigNotDefined": "小队 #{partyNo} 似乎未配置。请检查你的小队定义列表。",
+			"notActiveScene": "参与方操作只能在当前活动场景 ({sceneName}) 上执行。请切换到活动场景（如果没有，则激活一个场景），然后重试。",
+			"targetOnOtherLevel": "该方的目标代币[{tokenName}]处于另一个级别({levelName})。请切换到该级别并重试。"
+		},
+		"promptForPartyDefinition": {
+			"title": "小队定义",
+			"text": "选中的 Token 中哪一个应作为共享的小队 Token？",
+			"partyTokenMode": {
+				"text": "这个 Token 是独立的占位符，还是小队的成员？",
+				"placeholder": "占位符",
+				"member": "成员"
+			},
+			"partyNo": {
+				"text": "你想分配哪个小队槽位？<br/>（可用槽位数量可在模组设置中更改）"
+			}
+		},
+		"promptForPartySelection": {
+			"windowTitle": "选择小队",
+			"tableTitle": "你想对哪个小队执行此操作？"
+		},
+		"promptForCrunchAfterGrouping": {
+			"title": "立即应用？",
+			"text": "你想立即“压缩”新小队的成员吗？",
+			"yes": "是，压缩它们！",
+			"no": "不，保持它们分开。"
+		},
+		"promptForDuplicateReplaceOrKeep": {
+			"title": "Token 已存在于场景中。",
+			"text": "Token [{tokenName}] 在此场景中存在 {count} 个。你想怎么做？",
+			"disallowKeepText": "由于存在多个，无法保留它们。请选择“替换”以替换全部（!）{count} 个 Token，\n或者选择“取消”，删除此名称的多余 Token，然后重复此过程。",
+			"replace": "替换",
+			"keep": "保留"
+		},
+		"promptForSimpleConfirmation": "需要确认",
+		"confirmDeleteParty": "你想从列表中删除包含 {noOfMembers} 名成员的小队 # ({partyName})，并释放此槽位吗？",
+		"okButton": "确定",
+		"saveButton": "保存",
+		"cancelButton": "取消",
+		"closeButton": "关闭",
+		"partyTable": {
+			"deleteButton": "Delete\n#{partyNo}",
+			"findButton": "Find\n#{partyNo}"
+		},
+		"empty": "空",
+		"groupingConfirmation": "The following tokens have been assigned to <strong>party #{partyNo} [{partyTokenName}]</strong>",
+		"applyToAll": "应用到全部！",
+		"keybindingLabels": {
+			"find": "查找小队 #",
+			"findGeneric": "查找任意小队（从列表选择）",
+			"toggle": "切换小队 #",
+			"toggleGeneric": "切换任意小队（从列表选择）",
+			"groupGeneric": "将选中的 Token 分组为小队",
+			"showConfig": "显示小队配置"
+		},
+		"settingsMenu": {
+			"behaviourSection": "行为",
+			"partyConfigSection": "小队成员配置",
+			"animationsSection": "动画与音频（需要 JB2A 与 Automated Animations）"
+		},
+		"confirmDifferentLevelsOrElevations": "党员目前处于不同的级别或高度。如果继续，它们将全部移动到 [{tokenName}] 的标高和标高（{levelName}、{elevation}）。您想继续吗？",
+		"none": "无"
+	}
 }

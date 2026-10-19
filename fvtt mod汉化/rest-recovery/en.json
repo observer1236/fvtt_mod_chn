@@ -17,14 +17,14 @@
     },
     "FeatureNames": {
       "ArcaneRecovery": "Arcane Recovery",
-	  "ArcaneGrimoire": "Arcane Grimoire",
+      "ArcaneGrimoire": "Arcane Grimoire",
       "NaturalRecovery": "Natural Recovery",
       "NaturalRecoveryActivity": "Recover Spell Slots",
       "SongOfRest": "Song of Rest",
       "ChefFeat": "Chef",
       "ChefTools": "Cook's Utensils",
       "PeriaptItem": "Periapt of Wound Closure",
-	  "Resourceful": "Resourceful",
+      "Resourceful": "Resourceful",
       "WoundClosureBlessing": "Blessing of Wound Closure",
       "DurableFeat": "Durable",
       "BlackBloodFeature": "Black Blood Healing"
@@ -249,7 +249,7 @@
           "Title": "Magic Recovery",
           "SpellSlotFeature": "Recover Spell Slots with {featureName}",
           "SpellSlotRule": "Recover Spell Slots",
-		  "SpellSlotsLeftPlural": "You have {spellSlotsLeft} levels of spell slots left to recover.",
+          "SpellSlotsLeftPlural": "You have {spellSlotsLeft} levels of spell slots left to recover.",
           "SpellSlotsLeft": "You have {spellSlotsLeft} level of spell slots left to recover.",
           "NoFeatureUse": "You do not have any uses left of your {featureName}, so you cannot regain any spell slots during this short rest.",
           "FullSpells": "You're full on spells, you have no need to regain any spell slots."
@@ -388,7 +388,7 @@
         },
         "EnablePromptRestTimePassing": {
           "Title": "Enable automatic time passage on prompt rest",
-          "Hint": "This enables time passing whenever players and prompted to rest by a GM. This may cause time-based active effects on characters to expire."
+          "Hint": "This enables time passing whenever players are prompted to rest by a GM. This may cause time-based active effects on characters to expire."
         },
         "EnableCalendarIntegration": {
           "Title": "Enable calendar integration",
@@ -502,7 +502,7 @@
           "Title": "Feat uses recovery fraction",
           "Hint": "The fraction of feat uses to recover on a short rest, if the feature has charges with limited uses per short rest."
         },
-		"SpellSlotsShortRecoveryFraction": {
+        "SpellSlotsShortRecoveryFraction": {
           "Title": "Spell slots recovery fraction",
           "Hint": "The fraction of spell slots to recover on a short rest."
         },
@@ -650,7 +650,7 @@
           "Title": "Durable feat name",
           "Hint": "Here you can configure what the Durable feat is called in your game. This can be a localized string."
         },
-		"Resourceful": {
+        "Resourceful": {
           "Title": "Resourceful name",
           "Hint": "Here you can configure what a human's Resourceful feature is called in your game. This can be a localized string."
         },

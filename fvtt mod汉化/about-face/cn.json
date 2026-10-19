@@ -1,4 +1,5 @@
-{"about-face": {
+{
+	"about-face": {
 		"tokenConfig": {
 			"rotationOffset": {
 				"name": "旋转偏移"
@@ -74,7 +75,9 @@
 			"indicator-sprite": {
 				"name": "指示器大小",
 				"hint": "更改指示器图标的大小。"
-			}
+			},
+			"fasterAnimations.name": "加快运动动画速度",
+			"fasterAnimations.hint": "每当令牌移动时，都会加快镜像动画的速度。"
 		}
 	}
 }
