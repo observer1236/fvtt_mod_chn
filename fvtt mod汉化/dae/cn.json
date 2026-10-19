@@ -6,7 +6,7 @@
 	"dae.int": "智力",
 	"dae.cha": "魅力",
 	"dae.All_Modifiers/Checks": "属性检定(数值)",
-	"dae.ac": "AC",
+	"dae.ac": "护甲等级（AC）",
 	"dae.hp": "HP",
 	"dae.di": "伤害免疫",
 	"dae.idi": "忽略伤害免疫",
@@ -91,7 +91,7 @@
 	"dae.senses": "感官",
 	"dae.blindsight": "盲视",
 	"dae.darkvision": "黑暗视觉",
-	"dae.tremorsense": "颤动感知",
+	"dae.tremorsense": "震颤感知",
 	"dae.truesight": "真实视觉",
 	"dae.weaponProf": "武器熟练",
 	"dae.armorProf": "护甲熟练",
@@ -345,16 +345,16 @@
 	"dae.not-transferred": "物品效果已保存。设定要转移的所持物品效果不会自动转移效果。",
 	"dae.ATLHint": "译者注意 - 以下字符串仅用于 Active Token Lighting",
 	"dae.ATL": "ATL",
-	"dae.dimLight": "昏暗光照",
+	"dae.dimLight": "微光光照",
 	"dae.brightLight": "明亮光照",
 	"dae.light": "光照",
 	"dae.bright": "明亮",
-	"dae.dim": "昏暗",
+	"dae.dim": "微光",
 	"dae.color": "光照颜色",
 	"dae.animation": "动画",
 	"dae.alpha": "透明度",
 	"dae.angle": "角度",
-	"dae.dimSight": "昏暗视觉",
+	"dae.dimSight": "微光视觉",
 	"dae.brightSight": "明亮视觉",
 	"dae.sightAngle": "视野角度",
 	"dae.lightColor": "光照颜色",
@@ -372,7 +372,7 @@
 	"dae.DontApply.Name": "不应用效果",
 	"dae.DontApply.Hint": "当 Dae（和 midi）应用主动效果时，跳过这一项",
 	"dae.DIMEditor.Name": "DIME",
-	"dae.IncapacitatedDisabled": "如果角色陷入失能，则效果结束",
+	"dae.IncapacitatedDisabled": "角色陷入失能时停用效果",
 	"dae.DIMESyncItemacro.Name": "同步 DIME 和 Itemacro",
 	"dae.DIMESyncItemacro.Hint": "选中意味着 DIME 宏和 Itemacro 宏将保持同步，你可以使用其中任何一个进行编辑。取消选中则 DIME 编辑器优先。",
 	"dae.halfHealthEffectLabel": "半生命值",
@@ -452,7 +452,7 @@
 			"description": "详见\"特殊特质\"。"
 		},
 		"flags.dnd5e.reliableTalent": {
-			"name": "可靠才能（盗贼）",
+			"name": "可靠才能（游荡者）",
 			"description": "详见\"特殊特质\"。"
 		},
 		"flags.dnd5e.remarkableAthlete": {
@@ -625,7 +625,7 @@
 		},
 		"system.attributes.ac.cover": {
 			"name": "AC(掩护)",
-			"description": "掩护效果，必须通过主动效果或模组设置"
+			"description": "掩护提供的护甲等级加值（通常仅由掩护状态效果提供）。"
 		},
 		"system.attributes.ac.EC": {
 			"name": "(Midi)闪避等级",
@@ -669,11 +669,11 @@
 		},
 		"system.attributes.concentration.roll.max": {
 			"name": "专注最大值",
-			"description": "专注豁免时D20可投出的最大D20掷骰值。。"
+			"description": "专注豁免时，d20 可掷出的最大点数。"
 		},
 		"system.attributes.concentration.roll.min": {
 			"name": "专注最小值",
-			"description": "专注豁免时D20可投出的最小D20掷骰值。。"
+			"description": "专注豁免时，d20 可掷出的最小点数。"
 		},
 		"system.attributes.concentration.roll.mode": {
 			"name": "专注豁免模式",
@@ -689,11 +689,11 @@
 		},
 		"system.attributes.death.roll.max": {
 			"name": "死亡豁免最大值",
-			"description": "死亡豁免时D20可投出的最大D20掷骰值。。"
+			"description": "死亡豁免时，d20 可掷出的最大点数。"
 		},
 		"system.attributes.death.roll.min": {
 			"name": "死亡豁免最小值",
-			"description": "死亡豁免时D20可投出的最小D20掷骰值。。"
+			"description": "死亡豁免时，d20 可掷出的最小点数。"
 		},
 		"system.attributes.death.roll.mode": {
 			"name": "死亡豁免模式",
@@ -2496,8 +2496,8 @@
 			"description": "在附魔菜单中不相关。"
 		},
 		"effects": {
-			"name": "应用效应",
-			"description": "一个对象数组，其中\"_id\"等于物品上应在使用行动时应用的效应id。"
+			"name": "应用效果",
+			"description": "一个对象数组，各对象的“_id”对应物品上应在使用行动时应用的效果 ID。"
 		},
 		"range.value": {
 			"name": "射程",

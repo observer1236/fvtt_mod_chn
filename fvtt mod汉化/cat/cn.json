@@ -144,9 +144,9 @@
 						"Label": "替代伤害公式"
 					},
 					"Range": {
-						"Field": "法术射程",
-						"Hint": "加入符合条件法术射程的公式，可叠加。",
-						"Label": "法术射程加值"
+						"Field": "施法距离",
+						"Hint": "加到符合条件法术的施法距离上的公式，可叠加。",
+						"Label": "施法距离加值"
 					},
 					"RollModifier": {
 						"Field": "修饰符",
@@ -1389,8 +1389,8 @@
 			"Grappling": "擒抱 {name}",
 			"GrappleImmune": "目标无法被擒抱!",
 			"GrappleSize": "目标过大，无法被擒抱!",
-			"ShoveSize": "目标太大，推不动！",
-			"ShoveProneImmune": "目标不能被推倒！",
+			"ShoveSize": "目标体型过大，无法推撞！",
+			"ShoveProneImmune": "目标无法因推撞而陷入倒地状态！",
 			"Surrendered": "袭击者投降"
 		},
 		"Macros": {
