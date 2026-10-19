@@ -5,7 +5,7 @@
 			"custom": {
 				"FractionHP": {
 					"name": "生命值属性数据路径",
-					"hint": "你的游戏系统可能有着与默认不同的数据路径。如果健康评估显示不正确，请手动输入数据路径（比如actor.system.health）。"
+					"hint": "你的游戏系统可能使用不同的数据路径。若健康状况估计显示不正确，请输入正确属性的数据路径。"
 				},
 				"FractionMath": {
 					"name": "生命值计算方式",
@@ -75,11 +75,11 @@
 				},
 				"dontMarkDead": {
 					"name": "不要标记为死亡",
-					"hint": "使NPC的生命值降为0使不会被标记为死亡(比如会被标记为失去意识)。仅当你开启{setting}设置时有效。"
+					"hint": "当 NPC 的健康状况估计降为 0 时，不将其显示为死亡。仅在使用 {setting} 设置时有用。"
 				},
 				"hideEstimates": {
-					"name": "隐藏健康状况",
-					"hint": "对玩家隐藏选中指示物的健康状况。若设置为“是”，隐藏的健康状况会发送至聊天，并为GM显示*号标记。"
+					"name": "对玩家隐藏健康状况估计",
+					"hint": "对玩家隐藏的健康状况估计，会为主持人加上星号（*）。"
 				},
 				"hideNames": {
 					"name": "隐藏姓名",
@@ -154,7 +154,7 @@
 			},
 			"addTemp": {
 				"name": "添加临时生命值",
-				"hint": "显示描述时将临时生命值也计算在内。\n例如：启用此选项后，有临时生命值的指示物会看起来更“健康”，除非它正处于最大生命值。"
+				"hint": "计算应显示的健康状况说明时，将临时生命值也计入。"
 			},
 			"breakOnZeroMaxHP": {
 				"name": "在Token上隐藏健康状况",
@@ -342,11 +342,11 @@
 			}
 		},
 		"SETTINGS.display.options.always": "始终可见",
-		"SETTINGS.display.name": "Display Estimates",
+		"SETTINGS.display.name": "显示健康状况估计",
 		"SETTINGS.display.hint": "",
 		"SETTINGS.display.options.default": "鼠标悬停时",
 		"SETTINGS.display.options.nameplate": "颜色名称",
-		"SETTINGS.display.options.disabled": "Never Display",
+		"SETTINGS.display.options.disabled": "从不显示",
 		"draw-steel.hideObjectHP.name": "隐藏对象的估计",
 		"draw-steel.hideObjectHP.hint": "隐藏对象的估计。"
 	}

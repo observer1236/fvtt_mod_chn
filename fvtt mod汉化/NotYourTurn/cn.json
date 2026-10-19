@@ -40,5 +40,5 @@
 	"NotYourTurn.ControlBtn": "阻止非战斗移动",
 	"NotYourTurn.Enable": "阻止战斗移动",
 	"NotYourTurn.OnlyOncePerCombatTurn": "每个战斗回合仅询问一次",
-	"NotYourTurn.OnlyOncePerCombatTurn_Hint": "Only ask or report once per combat turn if movement is allowed, keep last turn decision until next turn"
+	"NotYourTurn.OnlyOncePerCombatTurn_Hint": "每个战斗回合只询问或报告一次是否允许移动，并将决定保留到下一回合"
 }

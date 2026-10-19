@@ -388,7 +388,7 @@
 				},
 				"EnablePromptRestTimePassing": {
 					"Title": "启用提示休息后自动计时功能",
-					"Hint": "每当主持人提示玩家休息时，这都可以让时间流逝。 This may cause time-based 主动效果 on characters to expire."
+					"Hint": "主持人提示玩家休息时，让世界时间相应流逝。这可能使角色身上按时间计的主动效果到期。"
 				},
 				"EnableCalendarIntegration": {
 					"Title": "启用日历整合",

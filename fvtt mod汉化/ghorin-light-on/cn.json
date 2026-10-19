@@ -32,8 +32,8 @@
 	"ghorin.light-on.theme-contemporain": "当代",
 	"ghorin.light-on.theme-scifi": "科幻小说",
 	"ghorin.light-on.source-lampe-huile": "油灯",
-	"ghorin.light-on.source-lanterne-reflecteur": "Bullseye lantern",
-	"ghorin.light-on.source-lumiere-magique": "Magic light",
+	"ghorin.light-on.source-lanterne-reflecteur": "牛眼提灯",
+	"ghorin.light-on.source-lumiere-magique": "魔法光源",
 	"ghorin.light-on.source-baton-lumineux": "荧光棒",
 	"ghorin.light-on.source-lanterne-led": "LED灯笼",
 	"ghorin.light-on.source-projecteur-portatif": "便携式泛光灯",
@@ -41,6 +41,6 @@
 	"ghorin.light-on.source-lanterne-gaz": "煤气灯",
 	"ghorin.light-on.source-lampe-arc": "弧光灯",
 	"ghorin.light-on.source-torche-plasma": "等离子炬",
-	"ghorin.light-on.source-balise": "Light beacon",
-	"ghorin.light-on.source-lampe-tactique": "Tactical light"
+	"ghorin.light-on.source-balise": "信标光源",
+	"ghorin.light-on.source-lampe-tactique": "战术灯光"
 }

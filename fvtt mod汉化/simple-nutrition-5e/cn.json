@@ -16,7 +16,7 @@
 			"LegendFood": "食物",
 			"LegendWater": "饮水",
 			"DaysWithoutFoodLabel": "未进食天数",
-			"FreshWater": "Fresh Water Source",
+			"FreshWater": "新鲜水源",
 			"FreshWaterHint": "从淡水水源饮水，而非消耗储存的水。",
 			"FreeFood": "免费食物来源",
 			"FreeFoodHint": "从免费食物来源进食，而非消耗储存的口粮。",
@@ -81,7 +81,7 @@
 			"MalnutritionApply": "施加营养不良",
 			"FoodSaveHint": "豁免失败时，使用下方按钮施加 1 级 &Reference[exhaustion apply=false] 和 &Reference[malnutrition apply=false] 状态。",
 			"WaterSaveHint": "如果保存失败，请使用下面的按钮应用 1 级 &Reference[exhaustion apply=false]（如果已经耗尽，则为 2 级）。",
-			"ApplyExhaustion": "应用疲惫",
+			"ApplyExhaustion": "应用力竭",
 			"NutritionFailed": "无法更新 {actor} 的营养"
 		},
 		"Usage.Legend": "营养",
@@ -89,7 +89,7 @@
 		"Usage.Water": "饮水",
 		"Settings.CalendarMode.On": "总是显示",
 		"Group.Title": "为团体提供免费食物和水",
-		"Usage.Label": "Counts As",
+		"Usage.Label": "视为",
 		"Usage.Both": "食物和水",
 		"Usage.None": "无",
 		"Settings.CalendarMode.Name": "日历模式",
@@ -99,7 +99,7 @@
 		"Settings.DisableGroupSheet.Name": "禁用组表集成",
 		"Settings.DisableGroupSheet.Hint": "隐藏成员条目上的营养跟踪器以及组表上的免费食物和水按钮。",
 		"Settings.DisableActivityNutrition.Name": "禁用活动对话框集成",
-		"Settings.DisableActivityNutrition.Hint": "不要将营养选项添加到食物项目的使用对话框中。",
+		"Settings.DisableActivityNutrition.Hint": "不要将营养选项添加到食物物品的使用对话框中。",
 		"Calendar.DayChangeFailed": "无法更新 {actor} 的营养"
 	}
 }

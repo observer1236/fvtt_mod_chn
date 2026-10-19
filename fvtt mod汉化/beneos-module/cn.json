@@ -2419,7 +2419,7 @@
 	"BENEOS.Settings.WhatsNewEnabled.Hint": "世界启动时打开一个简短窗口，列出自你上次确认以来你的账户解锁的内容。仅向游戏主持人显示。",
 	"BENEOS.Cloud.Footer.Retry": "刷新",
 	"BENEOS.Cloud.Install.Report.Cat.unknown": "未知",
-	"BENEOS.Cloud.Bmap.Overwrite.WarnKeep": "这些场景上您自己的令牌、图块、注释和图画保留在原处。仅更新 Beneos 内容。",
+	"BENEOS.Cloud.Bmap.Overwrite.WarnKeep": "这些场景上您自己的Token、图块、注释和图画保留在原处。仅更新 Beneos 内容。",
 	"BENEOS.Cloud.Bmap.Overwrite.WarnRebuild": "从头开始重建会丢弃您在这些场景上放置的所有内容。",
 	"BENEOS.Cloud.Bmap.Overwrite.YesKeep": "重新安装并保留我的更改",
 	"BENEOS.Cloud.Bmap.Overwrite.YesUpdateKeep": "更新并保留我的更改",

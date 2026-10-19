@@ -74,7 +74,7 @@
 			"DamageCardMode.Activity": "伤害活动（玩家可以申请）",
 			"DamageCardMode.Roll": "普通骰子卡（主持人适用）",
 			"WildMagicTable.Name": "狂野魔法桌",
-			"WildMagicTable.Hint": "当法术摸索触发狂野的魔法涌动时，桌子就会滚动。接受表 UUID 或普通表名称，因此您可以指向 PHB 2024 表（默认）、Tasha 或您自己的自制表。留空以禁用浪涌。",
+			"WildMagicTable.Hint": "当法术摸索触发狂野的魔法涌动时，桌子就会掷骰。接受表 UUID 或普通表名称，因此您可以指向 PHB 2024 表（默认）、Tasha 或您自己的自制表。留空以禁用浪涌。",
 			"DmGuru.Name": "地下城主大师",
 			"DmGuru.Label": "拜访地下城主大师",
 			"DmGuru.Hint": "SRD 规则和 DM 工具。地下城大师的免费资源，请访问 dungeonmaster.guru。"

@@ -168,7 +168,7 @@
 						"fullscreen.hint": "在侧边栏中显示在全屏模式下分享的媒体。",
 						"scene.label": "场景分享",
 						"scene.hint": "在侧边栏中显示分享到场景的媒体。",
-						"chat.label": "Chat Sharing",
+						"chat.label": "聊天共享",
 						"chat.hint": "在侧边栏中显示聊天中共享的媒体"
 					}
 				}
@@ -187,8 +187,8 @@
 					"caption.hint": "在分享的媒体旁边显示实体名称。",
 					"sheetMenu.label": "表单右键菜单",
 					"sheetMenu.hint": "将媒体分享项添加到表单右键菜单中。",
-					"sheetHeader.label": "工作表标题按钮",
-					"sheetHeader.hint": "将媒体共享按钮添加到工作表标题。"
+					"sheetHeader.label": "卡片标题按钮",
+					"sheetHeader.hint": "将媒体共享按钮添加到卡片标题。"
 				}
 			},
 			"blacklistSettings": {

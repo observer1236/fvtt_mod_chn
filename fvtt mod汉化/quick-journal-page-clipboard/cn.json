@@ -99,10 +99,10 @@
 			},
 			"markdownSettings.name": "降价设置",
 			"markdownSettings.label": "降价设置",
-			"markdownSettings.hint": "Configure additonal Markdown export settings.",
+			"markdownSettings.hint": "配置其他 Markdown 导出设置。",
 			"htmlSettings.name": "HTML设置",
 			"htmlSettings.label": "HTML设置",
-			"htmlSettings.hint": "Configure additional HTML export settings."
+			"htmlSettings.hint": "配置其他 HTML 导出设置。"
 		},
 		"controls": {
 			"clipboard": {

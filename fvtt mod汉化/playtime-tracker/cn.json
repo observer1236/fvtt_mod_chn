@@ -1,6 +1,6 @@
 {
 	"PLAYTIME-TRACKER.name": "游戏时间追踪器",
-	"PLAYTIME-TRACKER.description": "Tracks the total connected playtime of every user in the world.",
+	"PLAYTIME-TRACKER.description": "统计世界中每位用户的在线游玩总时长。",
 	"PLAYTIME-TRACKER.total": "总时间",
 	"PLAYTIME-TRACKER.user": "用户",
 	"PLAYTIME-TRACKER.online": "在线",
@@ -9,7 +9,7 @@
 	"PLAYTIME-TRACKER.confirmReset": "确认重置",
 	"PLAYTIME-TRACKER.title": "时间编年史",
 	"PLAYTIME-TRACKER.eyebrow": "竞选纪事",
-	"PLAYTIME-TRACKER.subtitle": "A record of time spent within this world.",
+	"PLAYTIME-TRACKER.subtitle": "在此世界中游玩时间的记录。",
 	"PLAYTIME-TRACKER.players": "玩家",
 	"PLAYTIME-TRACKER.active": "现在活跃",
 	"PLAYTIME-TRACKER.currentLeader": "现任领导人",
@@ -20,12 +20,12 @@
 	"PLAYTIME-TRACKER.reset": "重置",
 	"PLAYTIME-TRACKER.close": "关闭",
 	"PLAYTIME-TRACKER.resetTitle": "重置游戏时间",
-	"PLAYTIME-TRACKER.resetQuestion": "Reset all recorded playtime?",
-	"PLAYTIME-TRACKER.resetWarning": "This will permanently reset every user's accumulated playtime to zero. Players currently online will begin counting again from the moment of the reset.",
+	"PLAYTIME-TRACKER.resetQuestion": "重置全部已记录的游玩时长？",
+	"PLAYTIME-TRACKER.resetWarning": "这会将所有用户累计的游玩时长永久清零。当前在线的玩家会从重置时刻开始重新计时。",
 	"PLAYTIME-TRACKER.cancel": "取消",
-	"PLAYTIME-TRACKER.resetComplete": "All playtime has been reset.",
+	"PLAYTIME-TRACKER.resetComplete": "全部游玩时长已重置。",
 	"PLAYTIME-TRACKER.resetGMOnly": "Only a 主持人 can reset playtime.",
 	"PLAYTIME-TRACKER.resetPrimaryGMOnly": "Only the active 主持人 can reset playtime.",
-	"PLAYTIME-TRACKER.error.dialog": "Unable to open the Playtime Tracker.",
-	"PLAYTIME-TRACKER.error.save": "Unable to save playtime data."
+	"PLAYTIME-TRACKER.error.dialog": "无法打开游玩时长统计。",
+	"PLAYTIME-TRACKER.error.save": "无法保存游玩时长数据。"
 }

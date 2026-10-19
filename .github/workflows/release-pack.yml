@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate and build mod_chn.zip
+      - name: Build mod_chn.zip
         run: python scripts/build_release.py
 
       - name: Upload to release

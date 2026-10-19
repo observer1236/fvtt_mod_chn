@@ -240,11 +240,11 @@
 			},
 			"BullseyeLantern": {
 				"name": "牛眼提灯",
-				"description": "一盏牛眼提灯可以为前方60尺的锥状区域提供明亮光照，以及该范围外60尺的微光光照。点亮的牛眼提灯每6小时消耗一扁瓶的灯油（1品脱）"
+				"description": "提供 60 度锥形的提灯光照，持续 6 小时。"
 			},
 			"Candle": {
 				"name": "蜡烛",
-				"description": "一只蜡烛可以为其身边5尺半径范围提供明亮光照，以及该范围外5尺的微光光照。蜡烛的照明效果可以持续1小时"
+				"description": "提供蜡烛光照，持续 1 小时。"
 			},
 			"CatsGrace": {
 				"name": "猫之优雅",
@@ -252,7 +252,7 @@
 			},
 			"ChannelDivinitySacredWeapon": {
 				"name": "引导神力: 神圣武器",
-				"description": "引导神力：神圣武器Channel Divinity: Sacred Weapon，攻击检定加上魅力调整值（至少为 +1）。20尺半径明亮光照，+20尺半径微光光照"
+				"description": "所有武器攻击检定加上魅力调整值（至少 +1），并发出 20/40 尺光照，持续 1 分钟。"
 			},
 			"ChannelDivinityTurnTheUnholy": {
 				"name": "引导神力: 驱散不洁",
@@ -528,11 +528,11 @@
 			},
 			"HolyAura": {
 				"name": "圣洁灵光",
-				"description": "所有豁免均具有优势，对其进行的攻击检定具有劣势，5尺半径的微光光照"
+				"description": "豁免检定具有优势，对其进行的攻击检定具有劣势，并发出半径 5 尺的微光，持续 1 分钟。"
 			},
 			"HoodedLantern": {
 				"name": "附盖提灯",
-				"description": "放下盖子：一盏附盖提灯可以为其身边30尺半径范围提供明亮光照，以及该范围外30尺的微光光照，点亮的提灯每6小时消耗一扁瓶的灯油（1品脱），你可以使用一个动作放下盖子，使其光照减弱为5尺范围的微光照明"
+				"description": "提供遮光提灯的光照，持续 6 小时。"
 			},
 			"HuntersMark": {
 				"name": "猎人印记",
@@ -572,11 +572,11 @@
 			},
 			"Lantern": {
 				"name": "提灯",
-				"description": "揭开盖子：一盏附盖提灯可以为其身边30尺半径范围提供明亮光照，以及该范围外30尺的微光光照，点亮的提灯每6小时消耗一扁瓶的灯油（1品脱），你可以使用一个动作放下盖子，使其光照减弱为5尺范围的微光照明"
+				"description": "提供提灯光照，持续 6 小时。"
 			},
 			"Light": {
 				"name": "光亮术",
-				"description": "20尺半径明亮光照，+20尺半径微光光照，持续时间：1小时"
+				"description": "发出 20/40 尺光照，持续 1 小时。"
 			},
 			"Longstrider": {
 				"name": "大步奔行",
@@ -854,7 +854,7 @@
 			},
 			"Torch": {
 				"name": "火把",
-				"description": "一支火把可以为其身边20尺半径范围提供明亮光照，以及其外20尺范围的微光光照，火把的照明效果可以持续1小时，你还可以使用一支燃烧的火把发动一次近战攻击，命中时，该攻击可以造成1点火焰伤害"
+				"description": "提供火把光照，持续 1 小时。"
 			},
 			"TrueStrike": {
 				"name": "克敌机先",
@@ -891,7 +891,7 @@
 			"Sleeping.name": "睡觉",
 			"Surprised.name": "惊讶",
 			"Burrowing.name": "挖洞",
-			"Burrowing.description": "应用挖洞状态，将令牌隐藏在所有视野和检测范围内",
+			"Burrowing.description": "应用挖洞状态，将Token隐藏在所有视野和检测范围内",
 			"ExceedingCarryingCapacity.description": "将速度降低至 5 英尺并强制爬行",
 			"Flying.name": "飞行",
 			"Flying.description": "应用飞行状态，击败颤抖感",
@@ -917,7 +917,7 @@
 		"Triggers.TargetUuidLabel": "行动起来",
 		"Triggers.TargetUuidHint": "留空以使用触发器所涉及的角色。将角色拖到此处即可始终使用该角色。",
 		"Triggers.OverlayLabel": "作为叠加层",
-		"Triggers.OverlayHint": "在整个令牌上而不是在角落中显示效果的图标。",
+		"Triggers.OverlayHint": "在整个Token上而不是在角落中显示效果的图标。",
 		"Triggers.AddEffect.Label": "添加便捷效果",
 		"Triggers.AddEffect.Description": "将您方便的效果之一添加到角色上。",
 		"Triggers.RemoveEffect.Label": "去除方便效果",

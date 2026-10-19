@@ -36,7 +36,7 @@
 			},
 			"enable-icon-in-chat-message": {
 				"Name": "在聊天消息中显示颜色标记",
-				"Hint": "在聊天消息中按目标名称显示令牌颜色标记。"
+				"Hint": "在聊天消息中按目标名称显示Token颜色标记。"
 			},
 			"max-font-size": {
 				"Name": "标记文字最大像素尺寸",

@@ -66,7 +66,7 @@
 			"resetConfirmContent": "确定要重置所有模组数据吗？这将删除所有派系、地点、关系和设置。此操作无法撤销！",
 			"resetSuccess": "所有数据已重置",
 			"dynamicDispositionColors.name": "动态配置颜色",
-			"dynamicDispositionColors.hint": "将标准令牌边框颜色（部署，秘密除外）替换为 NPC 对所选令牌的态度颜色，或在未选择任何内容时对活动方的态度颜色",
+			"dynamicDispositionColors.hint": "将标准Token边框颜色（部署，秘密除外）替换为 NPC 对所选Token的态度颜色，或在未选择任何内容时对活动方的态度颜色",
 			"exportError": "数据导出错误"
 		},
 		"keybindings": {
@@ -224,7 +224,7 @@
 			"toggle-relation-hidden": "对玩家显示/隐藏这种关系",
 			"increase-rep": "+1 到该值（Ctrl：+5）",
 			"decrease-rep": "-1 到该值（Ctrl：-5）",
-			"open-sheet": "打开角色表",
+			"open-sheet": "打开角色卡",
 			"edit-description": "编辑描述",
 			"add-child-location": "添加一个嵌套在该位置内的位置",
 			"add-child-faction": "在该派系下添加一个子派系",

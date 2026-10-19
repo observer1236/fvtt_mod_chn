@@ -1,7 +1,7 @@
 {
 	"FATEBRINGER": {
 		"Hotkey": "神圣选择键",
-		"HotkeyHint": "按此键可调用神圣干预并从您选择的令牌中随机选择。",
+		"HotkeyHint": "按此键可调用神圣干预并从您选择的Token中随机选择。",
 		"SelectTokens": "在进行神圣选择前，你必须选择至少1个Token。",
 		"CriticalTables": {
 			"NoTable": "未找到随机表UUID",
@@ -32,7 +32,7 @@
 		"Menus.CriticalTablesConfig.Label": "配置",
 		"TableEnhancements.TargetAllPlayers": "所有玩家",
 		"KeybindingName": "神圣的选择",
-		"KeybindingHint": "从您控制的令牌中随机选择带有神圣祝福信息的令牌。 仅限主持人。在“设置”→“控制”中配置。",
+		"KeybindingHint": "从您控制的Token中随机选择带有神圣祝福信息的Token。 仅限主持人。在“设置”→“控制”中配置。",
 		"Settings.EnableDivineSelection.Name": "启用神圣选择",
 		"Settings.EnableDivineSelection.Hint": "启用神圣选择功能。禁用后，键绑定将不起作用，并且该功能完全无效。",
 		"Settings.DivineSelectionKey.Hint": "触发神圣选择的键盘键码（仅限主持人）。使用 KeyboardEvent 代码格式 - 例如KeyZ、KeyG、F5、空格。在 keycode.info 中查找您的钥匙代码。",
@@ -58,7 +58,7 @@
 		"TableEnhancements.AddEffect": "添加效果",
 		"TableEnhancements.TargetSelf": "自（滚轮）",
 		"TableEnhancements.TargetChoose": "选择目标...",
-		"TableEnhancements.TargetAllTokens": "所有场景代币",
+		"TableEnhancements.TargetAllTokens": "所有场景Token",
 		"TableEnhancements.MacroLabel": "宏（可选）：",
 		"TableEnhancements.UuidPlaceholder": "ActiveEffect UUID…（或拖放）",
 		"TableEnhancements.CountTitle": "可供选择的目标数量",

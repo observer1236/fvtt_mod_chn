@@ -95,9 +95,9 @@
 	"TMFX.app.editPreset.option.defaultColor": "默认颜色",
 	"TMFX.matt.preset": "预设",
 	"TMFX.settings.autoTemplateSettings.color.label": "区域颜色（可选）",
-	"TMFX.app.searchPreset.controls.regionToggle": "Toggle Region Presets",
+	"TMFX.app.searchPreset.controls.regionToggle": "切换区域预设",
 	"TMFX.app.editPreset.option.defaultOpacity": "默认不透明度",
-	"TMFX.matt.togglePreset": "Toggle Preset",
+	"TMFX.matt.togglePreset": "切换预设",
 	"TMFX.matt.transient.label": "瞬态",
 	"TMFX.matt.transient.hint": "检查将预设设置为瞬态/短暂效果。它不会在场景重新加载后保留下来，并且只会显示给选定的用户。"
 }

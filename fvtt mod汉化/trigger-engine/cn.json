@@ -93,7 +93,7 @@
 				"save": "保存触发器",
 				"invalid": "此触发器无效<br>它很可能包含丢失的节点",
 				"locked": "该触发器无法修改",
-				"toggle": "Toggle all triggers",
+				"toggle": "切换全部触发器",
 				"updated": "自上次保存以来此触发器已被修改"
 			},
 			"variable": {
@@ -232,9 +232,9 @@
 						"subtitle": "出口门"
 					},
 					"__gate_return__.customs.inputs.return.label": "入口",
-					"__gate_return__.subtitle": "Return Gate",
+					"__gate_return__.subtitle": "返回门控",
 					"__gate_return__.tooltip": "到达这个节点就会中断当前门的进程。",
-					"return": "Add Return Gate"
+					"return": "添加返回门控"
 				},
 				"action": {
 					"await-confirm": {
@@ -322,18 +322,18 @@
 					"execute-animation.inputs.name.title": "名称",
 					"move-region.states.coord": "坐标",
 					"attach-region.detach": "Detach 场景 Region",
-					"attach-region.inputs.center.title": "Center to Token",
-					"attach-region.inputs.token.tooltip": "如果提供，仅当与当前令牌匹配时才会分离",
+					"attach-region.inputs.center.title": "视图居中到 Token",
+					"attach-region.inputs.token.tooltip": "如果提供，仅当与当前Token匹配时才会分离",
 					"attach-region.title": "Attach 场景 Region",
-					"await-delay.alias.repeat.title": "Repeat With Delay",
-					"await-delay.inputs.delay.title": "Delay (ms)",
+					"await-delay.alias.repeat.title": "延迟后重复",
+					"await-delay.inputs.delay.title": "延迟（毫秒）",
 					"await-delay.inputs.delay.tooltip": "执行前的时间（以毫秒为单位）",
 					"await-delay.inputs.repeat.tooltip": "指定延迟执行次数（1~10）",
-					"await-delay.inputs.start.title": "Starts at 1",
+					"await-delay.inputs.start.title": "从 1 开始",
 					"await-delay.inputs.start.tooltip": "<code>index</code> 应该从 <code>1</code> 开始，而不是 <code>0</code> 吗？",
 					"await-delay.states.delay": "延迟",
 					"await-delay.title": "等待延迟",
-					"await-input.inputs.label.title": "Input Label",
+					"await-input.inputs.label.title": "输入标签",
 					"await-input.label": "用户输入",
 					"await-input.title": "等待用户输入",
 					"await-select.inputs.json.title": "选项列表",
@@ -346,7 +346,7 @@
 					"await-select.title": "等待选择",
 					"create-behavior.inputs.events.tooltip": "逗号分隔的行为事件列表",
 					"create-behavior.inputs.source.title": "系统源码",
-					"create-behavior.states.source": "Source Code",
+					"create-behavior.states.source": "源代码",
 					"create-behavior.states.trigger": "触发事件",
 					"create-behavior.title": "创建区域行为",
 					"execute-animation.groups.custom": "自定义输入",
@@ -362,8 +362,8 @@
 					"execute-trigger.title": "执行触发器",
 					"move-region.inputs.point.title": "目标位置",
 					"move-region.title": "移动场景区域",
-					"user-targets.alias.only.title": "Get Only Target",
-					"user-targets.outputs.target.tooltip": "Returns a target only when a single one exist",
+					"user-targets.alias.only.title": "获取唯一目标",
+					"user-targets.outputs.target.tooltip": "仅在恰有一个目标时返回该目标",
 					"user-targets.states.all": "所有目标",
 					"user-targets.states.only": "唯一目标",
 					"user-targets.title": "获取用户目标"
@@ -430,10 +430,10 @@
 					"delete-item-event.title": "物品 Removed from 角色",
 					"hook-called-event.inputs.gm.tooltip": "单个主持人用户将执行此触发器",
 					"hook-called-event.inputs.name.title": "钩子名称",
-					"hook-called-event.title": "On Hook Called",
+					"hook-called-event.title": "钩子被调用时",
 					"update-item-event.outputs.paths.title": "更新路径",
 					"update-item-event.outputs.paths.tooltip": "已更新的扁平化数据路径",
-					"update-item-event.title": "嵌入式项目已更新"
+					"update-item-event.title": "嵌入式物品已更新"
 				},
 				"extractor": {
 					"extract-actor": {
@@ -451,7 +451,7 @@
 						"alias.find.title": "查找目标",
 						"alias.loop.title": "遍历目标"
 					},
-					"extract-region.title": "Extract From Region"
+					"extract-region.title": "从区域提取"
 				},
 				"logic": {
 					"actors-match": {
@@ -534,7 +534,7 @@
 						"title": "缓存当前战斗者"
 					},
 					"scene-targets": {
-						"title": "缓存场景令牌"
+						"title": "缓存场景Token"
 					},
 					"user-value": {
 						"inputs": {
@@ -554,14 +554,14 @@
 					"list-value.inputs.entry.title": "参赛作品",
 					"list-value.inputs.entry.tooltip": "逗号分隔列表",
 					"list-value.title": "缓存文本列表",
-					"number-value.title": "Cached Number",
-					"text-value.inputs.content.title": "Enriched Text",
-					"text-value.states.description": "Enriched Text",
+					"number-value.title": "缓存数值",
+					"text-value.inputs.content.title": "富文本",
+					"text-value.states.description": "富文本",
 					"text-value.title": "缓存文本"
 				},
 				"__special__.__persistent_collection__.in": "添加",
 				"__special__.__persistent_collection__.outputs.collection.title": "收藏",
-				"__special__.__persistent_collection__.title": "Persistent Collection"
+				"__special__.__persistent_collection__.title": "持久化集合"
 			},
 			"region": {
 				"gm": "仅GM",
@@ -586,7 +586,7 @@
 				"strings.localize.tooltip": "可以是本地化键",
 				"user-query.timeout.label": "超时时间(秒)",
 				"user-query.title.label": "对话框标题",
-				"item-event.type.tooltip": "Comma separated list of 物品 types",
+				"item-event.type.tooltip": "以逗号分隔的物品类型列表",
 				"loop.after.label": "循环后",
 				"loop.after.tooltip": "即使使用 <strong>Break Current Process</strong> 节点，在完整循环完成后仅执行一次"
 			},
@@ -597,7 +597,7 @@
 				"loop": "可循环遍历",
 				"state": "具有多个状态",
 				"warning": "使用此节点时请格外小心",
-				"delay": "Can Delay Execution",
+				"delay": "允许延迟执行",
 				"stop": "可能不会调用下一个节点"
 			},
 			"state": {
@@ -962,15 +962,15 @@
 							"decrease": "减少资源",
 							"increase": "增加资源"
 						},
-						"alias.decrease.title": "Decrease Special Resource",
-						"alias.increase.title": "Increase Special Resource"
+						"alias.decrease.title": "减少特殊资源",
+						"alias.increase.title": "增加特殊资源"
 					},
 					"update-initiative.title": "更新先攻",
 					"create-effect-source.customs.inputs.marks.label": "代币标记",
 					"create-effect-source.customs.inputs.marks.tooltip": "<ul><li>slug:&lt;slug&gt;:&lt;uuid&gt;</li></ul>",
-					"create-effect-source.groups.marks": "TokenMark Selections",
-					"create-effect-source.groups.origin": "系统上下文",
-					"create-effect-source.title": "Create Effect From Source",
+					"create-effect-source.groups.marks": "TokenMark 选择项",
+					"create-effect-source.groups.origin": "system.context",
+					"create-effect-source.title": "根据来源创建效果",
 					"toggle-option.inputs.checked.title": "启用",
 					"toggle-option.inputs.item.title": "商品编号",
 					"toggle-option.inputs.option.title": "选项",
@@ -1146,7 +1146,7 @@
 						"title": "受到伤害",
 						"outputs.types.title": "类型",
 						"states.everything": "任何",
-						"alias.everything.title": "Damage Taken & Heal Received",
+						"alias.everything.title": "受到的伤害与治疗量",
 						"outputs.types.tooltip": "类型段列表",
 						"states.select": "选择"
 					},
@@ -1161,7 +1161,7 @@
 							}
 						}
 					},
-					"spell-cast-event.outputs.rank.title": "演员等级",
+					"spell-cast-event.outputs.rank.title": "施法环阶",
 					"spell-cast-event.title": "施展",
 					"template-placed-event.title": "已放置模板"
 				},
@@ -1193,7 +1193,7 @@
 						},
 						"title": "获取掷骰选项值"
 					},
-					"find-item.title": "查找项目实例"
+					"find-item.title": "查找物品实例"
 				},
 				"logic": {
 					"compare-alliances": {
@@ -1298,7 +1298,7 @@
 				"item.slug.title": "物品短标识符",
 				"aura.origin.title": "包括原产地",
 				"toolbelt.targets.title": "工具带目标",
-				"toolbelt.targets.tooltip": "Only used if the <u>Target Helper</u> feature of the <u>PF2e Toolbelt</u> module is enabled"
+				"toolbelt.targets.tooltip": "仅在 <u>PF2e Toolbelt</u> 模块的<u>目标助手</u>功能启用时使用"
 			},
 			"state": {
 				"fixed": "固定",

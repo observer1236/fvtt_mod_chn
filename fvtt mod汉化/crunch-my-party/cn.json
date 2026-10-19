@@ -87,7 +87,7 @@
 			"pleaseWaitStillBusy": "请等待当前操作完成。若此问题持续，请重新加载场景。",
 			"partyConfigNotDefined": "小队 #{partyNo} 似乎未配置。请检查你的小队定义列表。",
 			"notActiveScene": "参与方操作只能在当前活动场景 ({sceneName}) 上执行。请切换到活动场景（如果没有，则激活一个场景），然后重试。",
-			"targetOnOtherLevel": "该方的目标代币[{tokenName}]处于另一个级别({levelName})。请切换到该级别并重试。"
+			"targetOnOtherLevel": "该方的目标Token[{tokenName}]处于另一个级别({levelName})。请切换到该级别并重试。"
 		},
 		"promptForPartyDefinition": {
 			"title": "小队定义",

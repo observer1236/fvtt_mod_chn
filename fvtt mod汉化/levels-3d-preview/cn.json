@@ -1506,10 +1506,10 @@
 				"name": "调试模式",
 				"hint": "显示有用的调试信息以进行故障排除。"
 			},
-			"exactTokenVisibility.name": "准确的代币可见性",
-			"exactTokenVisibility.hint": "启用后，将测试令牌高度上不同点的令牌可见性。",
-			"dynamicTokenVisibility.name": "动态大代币可见性",
-			"dynamicTokenVisibility.hint": "启用后，与较小的令牌相比，较大的令牌可见性将被测试更多的点。警告：此功能的计算成本可能很高。",
+			"exactTokenVisibility.name": "准确的Token可见性",
+			"exactTokenVisibility.hint": "启用后，将测试Token高度上不同点的Token可见性。",
+			"dynamicTokenVisibility.name": "动态大Token可见性",
+			"dynamicTokenVisibility.hint": "启用后，与较小的Token相比，较大的Token可见性将被测试更多的点。警告：此功能的计算成本可能很高。",
 			"highlighted.important.legend": "3D 核心设置",
 			"highlighted.important.hint": "仅在将场景用作 3D 场景时应启用这些设置。",
 			"regionsAlwaysFlat.name": "始终平坦的区域",
@@ -1595,7 +1595,7 @@
 		},
 		"welcome": {
 			"title": "欢迎使用3D Canvas",
-			"content": "<h1>欢迎使用3D！</h1>欢迎使用3D画布！首先，感谢您支持我的开发工作并使这个项目成为可能！只需 <b> 单击 <i class='fas fa-cube'></i> 按钮 </b>（令牌控件，左上角）即可将场景切换为 3D。<p><h2> 重要模块</h2> 在开始使用 3D Canvas 之前，请安装： <ul><li><a href='https://foundryvtt.com/packages/canvas3dcompendium' target='_blank'>地图制作包</a></li><li><a href='https://foundryvtt.com/packages/canvas3dtokencompendium' target='_blank'>代币收藏</a></li></ul>您将获得大量3D道具和代币！<p><a href='https://join.theripper93.com' target='_blank'>Patreon 支持者</a> 还将获得许多额外的高级构建工具：</p><ul><li><a href='https://foundryvtt.com/packages/canvas3d-premium' target='_blank'>Advanced工具</a></li></ul><p><h2>入门</h2> 启用<b>地图制作包</b>后，您将可以访问简单快速的<b>快速入门教程</b>。完成快速入门后，如果您想深入了解高级设置，强烈建议您阅读 <a href='https://wiki.theripper93.com/levels-3d-preview' target='_blank'> 文档 </a>（通过单击下面的 <b><i class='fas fa-book'></i> 入门</b> 按钮）。您稍后可以随时在您的合集中找到文档！该文档还包含一系列视频教程可供您参考。<p><h2>故障排除</h2>如果您遇到任何<b>问题</b>或在<b>配置</b>或<b>3d方面遇到问题型号</b>不要依赖<b>在<a href='https://discord.theripper93.com' target='_blank'>discord</a>频道上联系</b>！<hr>",
+			"content": "<h1>欢迎进入 3D！</h1>欢迎使用 3D Canvas！感谢你支持我的开发工作，让这个项目成为可能！只需<b>点击 <i class='fas fa-cube'></i> 按钮</b>（左上角的 Token 控件），即可将场景切换为 3D。<p><h2>重要模块</h2>开始使用 3D Canvas 前，请安装：<ul><li><a href='https://foundryvtt.com/packages/canvas3dcompendium' target='_blank'>地图制作包</a></li><li><a href='https://foundryvtt.com/packages/canvas3dtokencompendium' target='_blank'>Token 合集</a></li></ul>你将获得大量 3D 道具和 Token！<p><a href='https://join.theripper93.com' target='_blank'>Patreon 支持者</a>还可使用更多高级搭建工具：</p><ul><li><a href='https://foundryvtt.com/packages/canvas3d-premium' target='_blank'>高级工具</a></li></ul><p><h2>开始使用</h2>启用<b>地图制作包</b>后，即可查看简单快捷的<b>快速入门教程</b>。完成后，若要了解高级设置，强烈建议<a href='https://wiki.theripper93.com/levels-3d-preview' target='_blank'>阅读文档</a>（点击下方的 <b><i class='fas fa-book'></i> 开始使用</b>按钮）。之后也可随时在合集中找到文档，其中还收录了可供参考的视频教程。<p><h2>故障排查</h2>若遇到任何<b>问题</b>，或在<b>配置</b>和 <b>3D 模型</b>方面需要帮助，欢迎<b>联系我们</b>，前往 <a href='https://discord.theripper93.com' target='_blank'>Discord</a> 频道即可！<hr>",
 			"ok": "关闭",
 			"dontshowagain": "不再显示",
 			"opencompendium": "入门指南"

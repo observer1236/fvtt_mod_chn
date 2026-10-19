@@ -33,7 +33,7 @@
 				"hint": "是否向玩家显示尺寸吸附按钮。（需要重新加载）"
 			},
 			"samePositionOnly.name": "仅相同位置",
-			"samePositionOnly.hint": "Scatter only Token with exactly the same x and y coordinates.不同尺寸设置仍然适用。"
+			"samePositionOnly.hint": "仅分散 x、y 坐标完全相同的 Token。不同体型设置仍然生效。"
 		}
 	}
 }

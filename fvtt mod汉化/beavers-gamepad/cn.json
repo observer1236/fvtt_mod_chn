@@ -26,7 +26,7 @@
 			"info": "按游戏手柄上的按钮即可连接。当使用按钮或操纵杆时，一行会亮起。",
 			"user": "用户",
 			"addUser": "分配用户",
-			"userHint": "使用此游戏手柄玩游戏的用户。它移动该用户角色的令牌。",
+			"userHint": "使用此游戏手柄玩游戏的用户。它移动该用户角色的Token。",
 			"actorLabel": "角色:",
 			"reversedLabel": "颠倒的",
 			"addModule": "添加游戏手柄模块",
@@ -73,8 +73,8 @@
 		"detect.release": "明白了，现在就放手吧。",
 		"detect.cancel": "取消",
 		"detect.timeout": "海狸的游戏手柄：未检测到任何内容。游戏手柄名称下方的行显示浏览器从中接收到的内容。",
-		"TokenMovement.desc": "该模块允许移动您的令牌",
-		"openDoor.desc": "该模块打开或关闭您令牌前面最近的门",
+		"TokenMovement.desc": "该模块允许移动您的Token",
+		"openDoor.desc": "该模块打开或关闭您Token前面最近的门",
 		"uiModule.characterSelection": "选择角色",
 		"uiModule.openDoor": "打开/关闭门"
 	}

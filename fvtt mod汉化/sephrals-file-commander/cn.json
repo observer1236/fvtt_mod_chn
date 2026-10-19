@@ -49,7 +49,7 @@
 	"SFC.Status.ActivePane": "活动面板：{pane}",
 	"SFC.Status.Selection": "选择：{selection}",
 	"SFC.Status.None": "选择：无",
-	"SFC.Status.Help": "Hotkeys: Arrow keys navigate, Enter opens, F3 views, Tab switches pane, F5 copies, F7 creates a folder, Ctrl+U uploads, Ctrl+C copies the path, Backspace goes up, Ctrl+R refreshes.",
+	"SFC.Status.Help": "快捷键：方向键导航，Enter 打开，F3 查看，Tab 切换窗格，F5 复制，F7 新建文件夹，Ctrl+U 上传，Ctrl+C 复制路径，Backspace 返回上级，Ctrl+R 刷新。",
 	"SFC.Dialog.NewFolder.Title": "创建目录",
 	"SFC.Dialog.NewFolder.Label": "目录名称",
 	"SFC.Dialog.NewFolder.Confirm": "创建",
@@ -89,8 +89,8 @@
 	"SFC.Notification.CopyCancelled": "“{name}”的副本已取消。",
 	"SFC.Notification.UploadCancelled": "{count} 文件后上传取消。",
 	"SFC.Notification.SkippedExisting": "跳过 {count} 现有文件。",
-	"SFC.Notification.PathCopied": "Copied path: {path}",
+	"SFC.Notification.PathCopied": "已复制路径：{path}",
 	"SFC.Error.NoBrowsePermission": "打开文件管理器需要浏览文件的权限。",
 	"SFC.Error.NoUploadPermission": "该命令需要上传文件的权限。",
-	"SFC.Storage.forgevtt": "Assets Library"
+	"SFC.Storage.forgevtt": "资源库"
 }

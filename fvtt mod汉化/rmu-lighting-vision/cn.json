@@ -45,7 +45,7 @@
 	"rmu.keybinds.checkLighting.name": "检查目标照明",
 	"rmu.keybinds.checkLighting.hint": "输出所选Token与其目标之间的确切RMU Lighting惩罚。",
 	"rmu.warnings.selectOneTarget": "你必须只选择一个Token并只瞄准一个Token来计算它们之间的照明惩罚。",
-	"rmu.chat.lightingReport": "Lighting & Vision For RMU Report",
+	"rmu.chat.lightingReport": "RMU 光照与视觉报告",
 	"rmu.chat.observer": "观察者",
 	"rmu.chat.target": "目标",
 	"rmu.chat.condition": "照明条件",
@@ -72,8 +72,8 @@
 	"rmu.lighting.heatmap.disabled": "RMU Lighting：热图已禁用。",
 	"rmu.lighting.heatmap.generating": "RMU Lighting：生成热图中...请稍候。",
 	"rmu.lighting.heatmap.complete": "RMU Lighting：热图完成。",
-	"rmu.keybinds.heatmap.name": "Toggle Diagnostic Heatmap",
-	"rmu.keybinds.heatmap.hint": "Toggles a visual overlay showing the mathematical boundaries of all RMU lighting tiers. Restricted to Game Masters.",
-	"rmu.light.isConstant.name": "Environmental / Constant Illumination",
-	"rmu.light.isConstant.hint": "Prevents light degradation.选定的基础层将填充整个手动指定的半径。 Ideal for moonlight, starlight, or other ambient environmental light sources."
+	"rmu.keybinds.heatmap.name": "切换诊断热力图",
+	"rmu.keybinds.heatmap.hint": "切换显示 RMU 各光照等级数学边界的可视化覆盖层。仅限主持人使用。",
+	"rmu.light.isConstant.name": "环境光 / 恒定照明",
+	"rmu.light.isConstant.hint": "防止光照衰减。所选基础光照等级会覆盖整个手动指定的半径，适用于月光、星光或其他环境光源。"
 }

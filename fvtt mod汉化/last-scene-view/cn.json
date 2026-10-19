@@ -13,6 +13,6 @@
 	"last-scene-view.position-restored": "最后场景视角位置已恢复！",
 	"last-scene-view.positions-deleted": "场景\"{sceneName}\"的所有保存位置记录已清除！",
 	"last-scene-view.restore-level": "恢复上次查看的级别。",
-	"last-scene-view.restore-level-note": "启用后，重新打开或重新激活场景会恢复每个用户最近查看的级别。 When disabled, level restoration is skipped and Foundry uses the 场景's default level.",
+	"last-scene-view.restore-level-note": "启用后，重新打开或激活场景时，会恢复每位用户上次查看的楼层。关闭时不恢复楼层，Foundry 将使用场景的默认楼层。",
 	"last-scene-view.position-and-level-restored": "最后场景视图位置和级别已恢复！"
 }

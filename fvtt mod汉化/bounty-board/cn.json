@@ -56,8 +56,8 @@
 	"BOUNTYBOARD.Action.Request": "申请合同",
 	"BOUNTYBOARD.Editor.Scene": "地点/场景",
 	"BOUNTYBOARD.Editor.NoScene": "没有链接的场景",
-	"BOUNTYBOARD.Link.DropHint": "将角色/令牌放入此赏金中以链接其目标",
+	"BOUNTYBOARD.Link.DropHint": "将角色/Token放入此赏金中以链接其目标",
 	"BOUNTYBOARD.Link.Unlink": "取消链接目标",
-	"BOUNTYBOARD.Link.Invalid": "将世界角色或代币投放到赏金中。",
+	"BOUNTYBOARD.Link.Invalid": "将世界角色或Token投放到赏金中。",
 	"BOUNTYBOARD.Link.MissingBounty": "未找到赏金。"
 }

@@ -14,7 +14,7 @@
 	"MonksEnhancedJournal.show-permissions.name": "显示玩家权限",
 	"MonksEnhancedJournal.show-permissions.hint": "在日志条目上显示玩家权限",
 	"MonksEnhancedJournal.start-collapsed.name": "打开 折叠",
-	"MonksEnhancedJournal.start-collapsed.hint": "Open Enhanced Journal with the side directory collapsed",
+	"MonksEnhancedJournal.start-collapsed.hint": "打开增强日志时默认折叠侧边目录",
 	"MonksEnhancedJournal.use-objectives.name": "使用任务目标",
 	"MonksEnhancedJournal.use-objectives.hint": "为任务条目添加目标",
 	"MonksEnhancedJournal.open-outside.name": "打开链接",

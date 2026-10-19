@@ -741,7 +741,7 @@
 						"hint": "启用后，将对Blade Runner系统的角色卡和窗口应用界面调整与样式优化"
 					},
 					"compactActivityCards.label": "紧凑活动卡片",
-					"compactActivityCards.hint": "将攻击、伤害和治疗掷骰折叠到生成它们的活动卡片中，以右侧显示总数的行呈现，并提供带骰子明细的抽屉。需要 dnd5e 6.0 及其自带的“汇总聊天卡片”设置。",
+					"compactActivityCards.hint": "将攻击、伤害和治疗掷骰合并到生成它们的活动卡片中，按行显示，右侧为总数，并可展开骰子明细。需要 dnd5e 6.0。与系统的“汇总聊天卡片”客户端设置保持同步，修改其中一项会同时修改另一项。",
 					"collapseCardTags.label": "默认折叠卡片标签",
 					"collapseCardTags.hint": "在紧凑活动卡片上仅显示最有用的标签（激活、射程、关键属性），并用 +N 标记展开其余标签。",
 					"labeledCardButtons.label": "带文字的卡片按钮",

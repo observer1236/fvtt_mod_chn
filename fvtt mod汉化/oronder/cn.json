@@ -94,7 +94,7 @@
 	"oronder.Auth-Unset-Error": "Oronder Discord应用尚未与FVTT链接！",
 	"oronder.Game": "游戏",
 	"oronder.Server-URL": "订购服务器",
-	"oronder.Server-URL-Hint": "Leave blank to use the public Oronder server (https://api.oronder.com). Set this only if you host your own Oronder server, e.g. https://oronder.example.com.",
+	"oronder.Server-URL-Hint": "留空以使用公共 Oronder 服务器(https://api.oronder.com)。仅在自行托管 Oronder 服务器时设置，例如 https://oronder.example.com.",
 	"oronder.No-Ancestry": "角色没有祖先。",
 	"oronder.No-Characteristics": "角色没有特征。"
 }

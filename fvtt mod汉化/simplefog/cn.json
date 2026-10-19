@@ -31,15 +31,15 @@
 				"name": "Z轴层级",
 				"hint": "在特定画布图层及其对象上方显示覆盖层",
 				"choices": {
-					"tokens": "以上代币",
+					"tokens": "以上Token",
 					"controls": "上方控件（例如门、鼠标光标、ping）",
 					"interface": "上面的界面，比如滚动数字",
 					"healthEstimate": "界面（如Health Estimates）",
-					"belowTokens": "代币下"
+					"belowTokens": "Token下"
 				}
 			},
 			"previewPlayerVision.name": "预览玩家愿景",
-			"previewPlayerVision.hint": "选择玩家拥有的令牌将预览画布，就像玩家看到的一样。"
+			"previewPlayerVision.hint": "选择玩家拥有的Token将预览画布，就像玩家看到的一样。"
 		},
 		"brushOpacity": "战争迷雾透明度",
 		"brushSize": "笔刷大小",

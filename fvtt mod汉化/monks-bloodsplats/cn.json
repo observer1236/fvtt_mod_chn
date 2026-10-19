@@ -9,7 +9,7 @@
 	"MonksBloodsplats.edit-types.name": "编辑类型",
 	"MonksBloodsplats.edit-types.hint": "选择要应用于Token的图像和颜色类型",
 	"MonksBloodsplats.disabled-bloodsplats.name": "禁用控件",
-	"MonksBloodsplats.disabled-bloodsplats.hint": "Add button to the Token menu to toggle defeated Token being disabled.",
+	"MonksBloodsplats.disabled-bloodsplats.hint": "在 Token 菜单中添加按钮，用于切换是否禁用已被击败的 Token。",
 	"MonksBloodsplats.remove-effects.name": "移除战败特效",
 	"MonksBloodsplats.remove-effects.hint": "移除战败Token上的所有动画效果",
 	"MonksBloodsplats.remove-overlay.name": "移除战败覆盖层",

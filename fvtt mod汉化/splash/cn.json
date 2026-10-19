@@ -452,16 +452,16 @@
 			"arrangement.bottom": "底部",
 			"validation.valueName": "为此操作选择一个值名称。",
 			"validation.macro": "选择此操作应运行的宏。",
-			"validation.script": "Add the script this action should run.",
-			"validation.vote": "Enter the option this vote should count toward.",
+			"validation.script": "添加此操作应执行的脚本。",
+			"validation.vote": "输入此投票应计入的选项。",
 			"validation.chooseStates": "至少选择一种状态进行加载或卸载。",
 			"validation.missingState": "此操作引用不再存在的状态：{state}。选择替代者。",
 			"validation.connections": "需要注意的动作连接：{count}",
-			"save.failed": "无法保存更改。您的编辑仍然在这里； keep this editor open and retry saving.",
+			"save.failed": "无法保存更改。编辑内容仍保留在此，请保持编辑器打开并重试保存。",
 			"save.retry": "重试保存",
 			"save.saving": "正在保存...",
 			"save.saved": "已保存",
-			"save.closeWarning": "无法保存这些编辑。 Closing now discards the unsaved draft.选择“否”继续编辑或重试保存。"
+			"save.closeWarning": "无法保存这些编辑。现在关闭会丢弃未保存的草稿。选择“否”可继续编辑或重试保存。"
 		},
 		"ui": {
 			"splashUI": {
@@ -542,8 +542,8 @@
 				"loaded": "已加载",
 				"testControls": "测试讲义",
 				"restart": "重新启动预览",
-				"localTest": "与讲义交互并观察其状态和值的变化。 Restart returns it to its initial configuration.",
-				"closed": "该讲义要求关闭。 Restart to test it again.",
+				"localTest": "与讲义互动，观察其状态和数值变化。重新开始会恢复初始配置。",
+				"closed": "讲义请求关闭。重新开始可再次测试。",
 				"values": "当前值",
 				"unloaded": "已卸载",
 				"noValues": "尚未设置任何值。"
@@ -583,7 +583,7 @@
 		"director.spectate": "观看",
 		"director.spectateUser": "观看",
 		"director.stopSpectate": "停止观望",
-		"director.clearAll": "Clear all open splashes on stream",
+		"director.clearAll": "清除直播中所有已打开的展示画面",
 		"director.noPlayers": "这个世界上没有用户。"
 	}
 }

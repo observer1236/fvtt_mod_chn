@@ -171,7 +171,7 @@
 	"PGT.CONDITION.DC20.REPEATED_KEY": "重复保存密钥",
 	"PGT.CONDITION.DC20.REPEATED_DC": "重复保存DC",
 	"PGT.ADVENTURERS.DC20.TAB.ATTRIBUTES": "属性",
-	"PGT.ADVENTURERS.COMBAT.DC20.SAVE_DC": "保存 DC",
+	"PGT.ADVENTURERS.COMBAT.DC20.SAVE_DC": "豁免 DC",
 	"PGT.TRACKER.FINISH_TRACKER": "完成追踪",
 	"PGT.TRACKER.TRIGGER_LISTENER": "触发掷骰监听器",
 	"PGT.TRACKER.DC20.INCREASE_COUNTER": "增加计数器（每 5 个 + 暴击）",
@@ -189,5 +189,5 @@
 	"PGT.GM_SCREEN.MERGE_RIGHT": "与右侧的单元格合并",
 	"PGT.GM_SCREEN.MERGE_DOWN": "与下面的单元格合并",
 	"PGT.GM_SCREEN.UNMERGE": "取消合并该单元格",
-	"PGT.GM_SCREEN.MERGE_OCCUPIED": "Move or remove one of the documents before merging two occupied cells."
+	"PGT.GM_SCREEN.MERGE_OCCUPIED": "合并两个均有内容的格子前，请先移动或移除其中一个文档。"
 }

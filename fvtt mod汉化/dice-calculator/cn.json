@@ -74,7 +74,7 @@
 			}
 		},
 		"SETTINGS": {
-			"DiceCreator": "模具编辑器",
+			"DiceCreator": "骰子编辑器",
 			"DiceRowSettings": "骰子行数配置",
 			"autoOpenPopout": {
 				"name": "自动打开弹出",

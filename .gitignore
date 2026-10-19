@@ -2,3 +2,6 @@ __pycache__/
 /cn.json
 /mod_chn.zip
 .cache/
+/tests/
+/scripts/validate_v14.py
+/.github/workflows/validate.yml

@@ -102,7 +102,7 @@
 			"cyberPunkCanMiss_hint": "如果DV未被击败，显示子弹没有击中目标Token。若无法找到DV表，将按命中播放动画",
 			"cyberPunkElevation": "计算命中时考虑高度",
 			"cyberPunkElevation_hint": "启用时，将token之间的垂直距离差计算为额外距离",
-			"forceRegionLayerOnly_name": "隐藏令牌层上的区域",
+			"forceRegionLayerOnly_name": "隐藏Token层上的区域",
 			"forceRegionLayerOnly_hint": "强制使用“仅在区域图层”可见性模式创建区域"
 		},
 		"colors": {

@@ -177,7 +177,7 @@
 				"noBennies": "没有剩余的本尼。",
 				"noGMBennies": "GM 没有剩余的本尼。",
 				"invalidModifier": "请输入介于 {min} 和 {max} 之间的值。",
-				"noActiveGM": "未连接主机 - 结果无法保存。请等待主持人上线。"
+				"noActiveGM": "没有主持人在线，无法保存结果。请等待主持人上线。"
 			},
 			"dramatic": {
 				"presetStandard": "标准（3/3）",
@@ -282,7 +282,7 @@
 			"dramaticTaskFailureRoundsLine2": "任务失败",
 			"dramaticTaskFailureComplicationLine1": "意外状况期间失败",
 			"dramaticTaskFailureComplicationLine2": "任务失败",
-			"noPlayerCharacters": "没有可用的角色玩家。此处仅显示玩家设置为所有者的类型为“Character”的角色。",
+			"noPlayerCharacters": "没有可用的玩家角色。此处仅显示类型为“Character”且由玩家拥有的角色。",
 			"sectionOwnedNPCs": "NPC（玩家拥有）",
 			"dramaticComplicationLine": "（-2 由于复杂性。失败会导致整个任务失败）",
 			"dramaticJokerLine": "（+2 由于小丑）"
@@ -386,7 +386,7 @@
 			"enableKeepDice.name": "“最高/最低”按钮（例如 D&D 或 Dragonbane）",
 			"enableKeepDice.hint": "骰子窗口中有两个按钮：所有骰子都会掷出，但只有最高或最低的骰子才算数。",
 			"enableCthulhuDice.name": "“奖励/惩罚骰子”按钮（克苏鲁的呼唤）",
-			"enableCthulhuDice.hint": "d100 的两个按钮：滚动一个或两个额外的十骰子；奖励骰子保持最低的十位，惩罚骰子保持最高的（00+0 = 100）。"
+			"enableCthulhuDice.hint": "d100 的两个按钮：掷骰一个或两个额外的十骰子；奖励骰子保持最低的十位，惩罚骰子保持最高的（00+0 = 100）。"
 		},
 		"individualResults": {
 			"toggle": "各项结果 <i>（点击）</i>",

@@ -18,7 +18,7 @@
 	"MonksCombatDetails.combat-position.name": "战斗对话框位置",
 	"MonksCombatDetails.combat-position.hint": "设置战斗对话框打开时的位置，而非屏幕中央",
 	"MonksCombatDetails.opencombat.name": "弹出战斗对话框",
-	"MonksCombatDetails.opencombat.hint": "当遭遇开始时，弹出战斗列表，并跳转聊天栏",
+	"MonksCombatDetails.opencombat.hint": "开始战斗时弹出战斗窗口",
 	"MonksCombatDetails.switch-combat-tab.name": "切换到战斗标签",
 	"MonksCombatDetails.switch-combat-tab.hint": "创建战斗时自动切换到战斗标签",
 	"MonksCombatDetails.switch-chat-tab.name": "切换到聊天标签",
@@ -155,9 +155,9 @@
 	"MonksCombatDetails.spelloptions.true": "显示聊天消息",
 	"MonksCombatDetails.spelloptions.false": "忽略",
 	"MonksCombatDetails.nextup-file.name": "下一个模板",
-	"MonksCombatDetails.nextup-file.hint": "Set the template file to use for the next up notification, leave blank to use notifications instead",
+	"MonksCombatDetails.nextup-file.hint": "设置“即将轮到你”提示使用的模板文件；留空则使用通知消息。",
 	"MonksCombatDetails.turn-file.name": "轮到你了模板",
-	"MonksCombatDetails.turn-file.hint": "Set the template file to use for your turn notification, leave blank to use notifications instead",
+	"MonksCombatDetails.turn-file.hint": "设置“你的回合”提示使用的模板文件；留空则使用通知消息。",
 	"MonksCombatDetails.hide-defeated-main.name": "隐藏失败的侧面板",
-	"MonksCombatDetails.hide-defeated-main.hint": "If Hide Defeated is turned on for combats, also hide the combatants on the side bar 先攻 tracker"
+	"MonksCombatDetails.hide-defeated-main.hint": "如果战斗中启用了“隐藏已击败者”，也会在侧栏先攻列表中隐藏这些参战者。"
 }

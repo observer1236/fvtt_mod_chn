@@ -12,5 +12,5 @@
 	"HEART_CONTAINERS.SettingsPathNameTempmax": "临时最大生命值",
 	"HEART_CONTAINERS.SettingsPathNameTempmaxHint": "增加角色最大生命值的数据路径。显示为黄色。",
 	"HEART_CONTAINERS.SettingsFontAwesomeIcon": "Font Awesome图标",
-	"HEART_CONTAINERS.SettingsFontAwesomeIconHint": "The icon used for the 'hearts'.默认为“fa-heart”。请注意，并非所有图标都应具有“空”等效图标。您可以在这里浏览免费图标：https://fontawesome.com/search?ic=free-collection"
+	"HEART_CONTAINERS.SettingsFontAwesomeIconHint": "“心形”所用的图标，默认为 'fa-heart'。注意，并非所有图标都有对应的“空心”版本。可在此浏览免费图标：https://fontawesome.com/search?ic=free-collection"
 }

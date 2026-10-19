@@ -3,7 +3,7 @@
 		"Settings": {
 			"CoverScope": {
 				"Name": "掩护移除范围",
-				"Hint": "控制当掩体被清除时哪些令牌受到影响。",
+				"Hint": "控制当掩体被清除时哪些Token受到影响。",
 				"Options": {
 					"All": "场景上的所有Token",
 					"Combatants": "仅战斗人员",
@@ -15,20 +15,20 @@
 				"Hint": "自动掩护计算仅在战斗遭遇活跃时运行。"
 			},
 			"RemoveOnCombat": {
-				"Name": "Clear Cover on Turn Change",
+				"Name": "切换回合时清除掩护",
 				"Hint": "在配置的掩体移除范围内移除战斗回合变化时的掩体效果。"
 			},
 			"RemoveOnMove": {
 				"Name": "运动时透明盖",
-				"Hint": "当令牌在配置的覆盖移除范围内移动时移除覆盖效果。"
+				"Hint": "当Token在配置的覆盖移除范围内移动时移除覆盖效果。"
 			},
 			"losCheck": {
 				"Name": "墙视线",
-				"Hint": "还可以测试视线阻挡墙壁的视线。 Detects targets fully obstructed by walls."
+				"Hint": "同时检测阻挡视线的墙壁，以识别被墙壁完全遮挡的目标。"
 			},
 			"coverHints": {
 				"Name": "在掷骰对话框中显示掩护状态提示",
-				"Hint": "在攻击和登机检定掷骰对话框中显示封面注释。 Not available when Midi-QOL manages cover.",
+				"Hint": "在攻击和豁免检定对话框中显示掩护说明。由 Midi-QOL 管理掩护时不可用。",
 				"Options": {
 					"None": "从不显示",
 					"Conditional": "仅当掩护生效时",
@@ -40,12 +40,12 @@
 				"Hint": "当骰子对话框中的封面发生变化时，添加一个警告图标来攻击目标行和行李检定总数。 Visible to the 主持人 only."
 			},
 			"CreaturesHalfOnly": {
-				"Name": "Half Cover from Creatures",
-				"Hint": "Creatures grant at most Half Cover.被生物阻挡的线路只能产生半掩护，而不会产生四分之三掩护。墙遵循标准 DMG 规则。"
+				"Name": "生物至多提供半身掩护",
+				"Hint": "生物至多提供半身掩护。视线仅被生物阻挡时，只能产生半身掩护，不会产生四分之三掩护。墙壁仍遵循《地下城主指南》的标准规则。"
 			},
 			"IgnoreFriendly": {
 				"Name": "忽略友好封面",
-				"Hint": "覆盖检查忽略对攻击者友好的令牌。"
+				"Hint": "覆盖检查忽略对攻击者友好的Token。"
 			},
 			"IgnoreAllAOE": {
 				"Name": "忽略所有范围效果的掩护",
@@ -70,7 +70,7 @@
 			},
 			"HoverLabelPosition": {
 				"Name": "悬停标签位置",
-				"Hint": "悬停标签相对于目标令牌的锚点位置。",
+				"Hint": "悬停标签相对于目标Token的锚点位置。",
 				"Options": {
 					"Above": "Token上方",
 					"On": "Token居中",
@@ -87,30 +87,30 @@
 			},
 			"GridlessDistanceMode": {
 				"Name": "无网格距离测量模式",
-				"Hint": "Distance measurement mode for gridless 场景. Between Token measures between Token boundaries.到目标空间将正方形/六角形网格上的对角线结果与精确 (√2) 对角线设置相匹配。",
+				"Hint": "无网格场景的距离测量方式。“Token 之间”测量 Token 边界间的距离；“到目标占据空间”会得到与方格或六边形网格中“精确（√2）”对角线设置相匹配的结果。",
 				"Options": {
 					"EdgeEdge": "Token边界间距离",
 					"EdgeToCenter": "到目标空间距离"
 				}
 			},
 			"GridlessTokenShape": {
-				"Name": "无网格令牌形状",
-				"Hint": "在无网格场景上新创建的令牌会自动使用选定的形状。",
+				"Name": "无网格Token形状",
+				"Hint": "在无网格场景上新创建的Token会自动使用选定的形状。",
 				"Options": {
 					"None": "不更改",
 					"Square": "矩形",
 					"Circle": "椭圆形"
 				},
-				"ApplyExisting": "适用于现有令牌",
-				"ApplyTitle": "应用无网格令牌形状",
-				"ApplyHint": "更新现有令牌以使用选定的无网格令牌默认形状。",
+				"ApplyExisting": "适用于现有Token",
+				"ApplyTitle": "应用无网格Token形状",
+				"ApplyHint": "更新现有Token以使用选定的无网格Token默认形状。",
 				"ApplyCurrentScene": "当前场景",
 				"ApplyAllScenes": "所有无网格场景",
-				"ApplyUpdated": "更新了 {count} 代币。"
+				"ApplyUpdated": "更新了 {count} Token。"
 			},
 			"CreaturesProne": {
 				"Name": "俯卧覆盖物高度",
-				"Hint": "3D 覆盖计算中用于俯卧令牌的高度。影响攻击者、目标和阻挡生物的几何形状。",
+				"Hint": "3D 覆盖计算中用于俯卧Token的高度。影响攻击者、目标和阻挡生物的几何形状。",
 				"Options": {
 					"None": "正常身高",
 					"LowerSize": "小一号",
@@ -184,7 +184,7 @@
 				"LibraryModeWarning": "库模式已启用。自动化功能已禁用。请参阅 Wiki：https://github.com/Kapuzenjoe/simplecover5e/wiki/API-(Library-Mode)。某些模组可能会自动启用库模式（例如 Midi-QOL）。"
 			},
 			"IgnoreAOECover.Options.None": "禁用",
-			"IgnoreAOECover.Name": "Ignore Cover: AoE Templates",
+			"IgnoreAOECover.Name": "忽略掩护：范围效果模板",
 			"IgnoreAOECover.Hint": "何时跳过效果区域模板的覆盖检查。范围 AoE 会跳过具有范围原点（非自/触摸/特殊）的模板的覆盖。每当定义任何模板时，所有 AoE 都会跳过覆盖。",
 			"IgnoreAOECover.Options.Range": "远程范围",
 			"IgnoreAOECover.Options.All": "所有范围"
@@ -293,12 +293,12 @@
 		"RegionBehavior.CoverObstacle.label": "覆盖障碍物",
 		"RegionBehavior.CoverObstacle.hint": "块覆盖穿过该区域的光线。",
 		"RegionBehavior.CoverObstacle.FIELDS.sizes.label": "忽略的尺寸",
-		"RegionBehavior.CoverObstacle.FIELDS.sizes.hint": "这些大小的目标代币会忽略这个障碍。",
+		"RegionBehavior.CoverObstacle.FIELDS.sizes.hint": "这些大小的目标Token会忽略这个障碍。",
 		"RegionBehavior.CoverObstacle.FIELDS.types.label": "被忽视的生物类型",
-		"RegionBehavior.CoverObstacle.FIELDS.types.hint": "这些生物类型的目标令牌会忽略此障碍。",
-		"RegionBehavior.CoverObstacle.FIELDS.interiorNeverBlocks.hint": "当两个令牌都在该区域内时，封面永远不会被阻挡。",
+		"RegionBehavior.CoverObstacle.FIELDS.types.hint": "这些生物类型的目标Token会忽略此障碍。",
+		"RegionBehavior.CoverObstacle.FIELDS.interiorNeverBlocks.hint": "当两个Token都在该区域内时，封面永远不会被阻挡。",
 		"RegionBehavior.CoverObstacle.FIELDS.interiorBlockDistance.label": "内部块距离",
-		"RegionBehavior.CoverObstacle.FIELDS.interiorBlockDistance.hint": "一旦该区域内的两个令牌相距远于该值，则块会覆盖。 0 总是阻塞；选中“无限”以永不阻塞。",
+		"RegionBehavior.CoverObstacle.FIELDS.interiorBlockDistance.hint": "一旦该区域内的两个Token相距远于该值，则块会覆盖。 0 总是阻塞；选中“无限”以永不阻塞。",
 		"RegionBehavior.CoverObstacle.FIELDS.cover.label": "封面",
 		"RegionBehavior.CoverObstacle.FIELDS.cover.hint": "该障碍物阻挡时授予的掩护线水平。",
 		"SheetClass.CoverObstacle": "覆盖障碍物"

@@ -9,10 +9,10 @@
 				"name": "Token图像为圆形",
 				"hint": "是否应以圆形模式散布伤口？如果你使用方形Token图像，请关闭此选项，这样伤口可以出现在Token的任何位置（以方形模式），而不会总是留下空白角落。如果你使用俯视视角的Token，可能仍希望保持此设置开启。"
 			},
-			"shake-tokens-on-hit.name": "损坏时摇动令牌",
-			"shake-tokens-on-hit.hint": "当令牌受到损坏时，它是否应该摇晃一下？",
+			"shake-tokens-on-hit.name": "伤害时摇动Token",
+			"shake-tokens-on-hit.hint": "当Token受到伤害时，它是否应该摇晃一下？",
 			"manual-override-hp-keys.name": "手动覆盖 HP 键（适用于自制/稀有系统），留空以禁用",
-			"manual-override-hp-keys.hint": "格式：'addressToValue;addressToMax;zeroIsBad'，例如Pathfinder2e 的“system.attributes.HP.value;system.attributes.HP.max;true”。欢迎您制作 PR 并添加此系统以帮助所有未来的模块用户！"
+			"manual-override-hp-keys.hint": "格式：'addressToValue;addressToMax;zeroIsBad'，例如 Pathfinder2e 使用 'system.attributes.hp.value;system.attributes.hp.max;true'。欢迎提交 PR，添加对此系统的支持，帮助其他模块用户！"
 		},
 		"dialog": {
 			"common": {

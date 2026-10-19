@@ -71,5 +71,5 @@
 	"smarttarget.settings.pipPosition.centerbottom": "底部居中",
 	"smarttarget.settings.pipPosition.random": "随机",
 	"smarttarget.settings.templateTargeting.name": "测量板目标选择",
-	"smarttarget.settings.templateTargeting.hint": "当按 Alt + 单击某个区域时，定位该区域内的所有令牌"
+	"smarttarget.settings.templateTargeting.hint": "当按 Alt + 单击某个区域时，定位该区域内的所有Token"
 }

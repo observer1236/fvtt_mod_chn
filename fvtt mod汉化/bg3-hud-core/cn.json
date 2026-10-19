@@ -181,7 +181,7 @@
 				"RangeColorName": "指示颜色",
 				"RangeColorHint": "范围指示的颜色（十六进制格式）",
 				"IgnoreTypeName": "无视自己/敌人的限制",
-				"IgnoreTypeHint": "允许选择任何令牌，无论自己/敌人的定位规则如何。启用后，目标计数和范围检查仍然适用。"
+				"IgnoreTypeHint": "允许选择任何Token，无论自己/敌人的定位规则如何。启用后，目标计数和范围检查仍然适用。"
 			},
 			"PortraitData": {
 				"Title": "立绘数据配置",

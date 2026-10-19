@@ -80,5 +80,5 @@
 	"poitp.backfill.doneNotification": "回填完成：已在 {scenes} 个场景中更新 {updated} 个笔记。",
 	"poitp.destInstalledPartial": "“{title}”已安装，但此目标不是该安装的一部分。",
 	"poitp.destInstalledRemoved": "场景“{scene}”已安装，不再存在于您的世界中。",
-	"poitp.destSceneUnlinked": "场景“{scene}”在您的世界中，但未链接到此引脚。 Please report this to Beneos."
+	"poitp.destSceneUnlinked": "场景“{scene}”存在于世界中，但未关联到此图钉。请向 Beneos 反馈此问题。"
 }

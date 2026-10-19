@@ -47,7 +47,7 @@
 			"MenuName": "Wayfinder 控制面板",
 			"MenuLabel": "打开仪表板",
 			"MenuHint": "管理所有 Wayfinder 模组。",
-			"UpdateCheckName": "Check for module updates",
+			"UpdateCheckName": "检查模块更新",
 			"UpdateCheckHint": "启用后可在 Wayfinder 控制面板的模块列表中查看具有可用更新的任何模块。"
 		}
 	}

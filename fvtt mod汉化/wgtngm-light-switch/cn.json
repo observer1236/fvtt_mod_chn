@@ -40,7 +40,7 @@
 	"LIGHT_SWITCH.LightGraphicRotationHint": "使用滑块将图形从 0 度旋转到 360 度。",
 	"LIGHT_SWITCH.LightGraphicSpeedLabel": "播放速度",
 	"LIGHT_SWITCH.TagPanelExcludedTagsSettingName": "从场景灯面板中排除的标签",
-	"LIGHT_SWITCH.TagPanelExcludedTagsSettingHint": "Comma-separated Tagger tag names to hide from the 场景 Light Panel.名称区分大小写；周围的空间被忽略。留空以显示所有标签。全部控制仍然影响所有场景灯光。",
+	"LIGHT_SWITCH.TagPanelExcludedTagsSettingHint": "在场景灯光面板中隐藏的 Tagger 标签名称，以逗号分隔。名称区分大小写，忽略两侧空格。留空显示所有标签。“全部”控件仍会影响场景中的所有灯光。",
 	"LIGHT_SWITCH.LightGraphicSpeedHint": "设置此灯的视频播放速度。 Images are unaffected.更改实时预览。",
 	"LIGHT_SWITCH.LightGraphicSpeedSlow": "Slow (0.75×)",
 	"LIGHT_SWITCH.LightGraphicSpeedNormal": "Normal (1×)",

@@ -43,7 +43,7 @@
 			},
 			"RollRequestUserErrorOnSelfAndMidi": "你已启用 midi-qol 选项 '{midi}'。这不适用于玩家面向自身的掷骰！请禁用该 midi-qol 选项，或将掷骰请求用户设置为 GM 或 » 无 «。",
 			"RollRequestConfirmDialog.Name": "掷骰请求确认",
-			"RollRequestConfirmDialog.Hint": "When enabled, a confirmation dialog is shown before sending a 掷骰 request."
+			"RollRequestConfirmDialog.Hint": "启用后，发送掷骰请求前会显示确认对话框。"
 		},
 		"Input": {
 			"Set": "设置",

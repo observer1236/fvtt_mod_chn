@@ -28,10 +28,10 @@
 			"queueAllPlayersOnlyHint": "启用时，“添加所有到队列”仅包括具有玩家角色的用户。禁用时，包括每个连接的用户（包括GM和助手）。每次顺序随机。",
 			"xCardRequest": "出示X卡",
 			"xCardRequestHint": "显示 X 卡按钮。确认，然后向所有人显示匿名提示（不加入队列）。",
-			"xCardRequestSound": "X Card Sound File",
+			"xCardRequestSound": "X 卡音效文件",
 			"xCardRequestSoundHint": "当有人使用 X 卡时播放的音频文件。",
 			"useCharacterName": "使用角色名称",
-			"useCharacterNameHint": "在请求队列、标注和提示中显示每个玩家分配的角色名称，而不是他们的用户名。当未分配字符时，回退到用户名。"
+			"useCharacterNameHint": "在请求队列、提示和标注中显示玩家所分配角色的名称，而非用户名。未分配角色时使用用户名。"
 		},
 		"chatMessage": {
 			"activateRequest": "{name} 发出了请求！"
@@ -61,11 +61,11 @@
 			"needMessage": "请输入要发送的消息。",
 			"needDieAndCount": "选择骰子数量和骰子类型。",
 			"rollFailed": "无法掷骰。请检查公式或你的系统。",
-			"hideLabel": "Hide Result",
+			"hideLabel": "隐藏结果",
 			"advantageLabel": "优势 (Keep Highest)",
 			"disadvantageLabel": "劣势（保持最低）"
 		},
-		"xCard.confirmTitle": "Use X card?",
+		"xCard.confirmTitle": "使用 X 卡？",
 		"xCard.confirmContent": "这将匿名提醒每个人 X 卡已被使用。继续？",
 		"xCard.promptHeadline": "用户已使用X卡",
 		"xCard.anonName": "有人"

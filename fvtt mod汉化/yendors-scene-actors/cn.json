@@ -72,7 +72,7 @@
 		"tooltipItemDisable": "对玩家禁用",
 		"tooltipItemEnable": "对玩家启用",
 		"notification": {
-			"noCharacter": "The player must be assigned a character."
+			"noCharacter": "必须先为此玩家分配一个角色。"
 		}
 	}
 }

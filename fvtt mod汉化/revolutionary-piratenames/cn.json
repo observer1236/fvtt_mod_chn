@@ -5,16 +5,16 @@
 				"given": "抽取一个{gender}{nation}名字。",
 				"surname": "抽取一个{nation}姓氏。",
 				"full": "抽取一个{gender}{nation}姓名。",
-				"ship": "Draws a name for a {nation} {role}.",
+				"ship": "为 {nation} 的{role}随机生成姓名。",
 				"personal": "画一个个人名字。"
 			},
 			"speaker": "海盗名称生成器",
 			"ship": "<p class=\"revolutionary-piratenames-ship-whisper\"><img src=\"{src}\" alt=\"{alt}\" />{name}</p>",
-			"versions.lede": "<p><em>A {gender} {nationality} name&hellip;</em></p>",
+			"versions.lede": "<p><em>一个{gender}{nationality}姓名&hellip;</em></p>",
 			"versions.full": "<p><em>全称：</em> {full}</p>",
-			"versions.short": "<p><em>Short Form:</em> {short}</p>",
+			"versions.short": "<p><em>简称：</em> {short}</p>",
 			"versions.personal": "<p><em>个人：</em> {personal}</p>",
-			"versions.formal": "<p><em>Formal:</em> {formal}</p>"
+			"versions.formal": "<p><em>正式名称：</em> {formal}</p>"
 		},
 		"dialog": {
 			"person": {

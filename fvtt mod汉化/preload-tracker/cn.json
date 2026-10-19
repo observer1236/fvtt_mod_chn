@@ -44,16 +44,16 @@
 			"skipAudioOnPreloadHint": "启用后，场景的播放列表音频不会预加载（播放列表播放时仍会加载）。当大循环轨道停止场景预加载时使用此选项。"
 		},
 		"logSelectUser": "用户:",
-		"finalizing": "At 100% (finalizing, not yet confirmed done)",
+		"finalizing": "已达 100%（正在收尾，尚未确认完成）",
 		"viewLog": "资产加载时间",
-		"viewLogHint": "Show per-asset load times for this preload run",
+		"viewLogHint": "显示本次预加载中各资源的加载时长",
 		"logTitle": "预加载资源加载时间",
-		"logNoRun": "No preload run has been recorded yet.",
-		"logNoAssets": "No asset timings recorded for this user (they may not have finished loading).",
+		"logNoRun": "尚无预加载记录。",
+		"logNoAssets": "没有此用户的资源加载计时记录，可能尚未完成加载。",
 		"logAssets": "资产",
 		"logTotalLoad": "总加载时间",
 		"logFinished": "完成",
-		"logStuck": "reached 100% but never reported finished (stuck)",
+		"logStuck": "已达到 100%，但始终未报告完成（可能卡住）",
 		"logNeverFinished": "从未完成",
 		"logFailed": "失败"
 	}

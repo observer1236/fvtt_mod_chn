@@ -2584,7 +2584,7 @@
 	"dae.expireRoundEffectsOnCombatEnd.Name": "战斗结束时回合效果失效",
 	"dae.expireRoundEffectsOnCombatEnd.Hint": "启用后，具有回合/回合持续时间的效果将在战斗结束或战斗员被移除时过期",
 	"dae.expiryEvent.updateWorldTime": "经过时间",
-	"dae.expiryEvent.sourceStart": "源转动开始",
+	"dae.expiryEvent.sourceStart": "来源回合开始时",
 	"dae.expiryEvent.sourceEnd": "源转端",
 	"dae.expiryEvent.targetStart": "目标回合开始",
 	"dae.expiryEvent.targetEnd": "目标回合结束",

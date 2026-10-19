@@ -47,7 +47,7 @@
 				"Hint": "如果音频文件的 MiniUploader 播放列表不存在，则自动创建。"
 			},
 			"uploadDialog.Name": "上传对话框",
-			"uploadDialog.Hint": "A dialog will open with each upload confirming upload location."
+			"uploadDialog.Hint": "每次上传时都会打开对话框，确认上传位置。"
 		},
 		"Notifications": {
 			"UploadSuccess": "已将 {name} 上传到日志",
