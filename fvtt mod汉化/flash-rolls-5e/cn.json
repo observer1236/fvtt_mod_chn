@@ -598,7 +598,7 @@
 			"collapseCardTags.label": "默认折叠卡片标签",
 			"collapseCardTags.hint": "在紧凑行动卡片上仅显示最有用的标签（激活、射程、关键属性），并用 +N 标记展开其余标签。",
 			"labeledCardButtons.label": "带标签的卡片按钮",
-			"labeledCardButtons.hint": "在行动卡片按钮（攻击、伤害、豁免、模板等）的图标旁显示简短文字。取消勾选则仅使用图标按钮。",
+			"labeledCardButtons.hint": "在行动卡片按钮（攻击、伤害、豁免、测量板等）的图标旁显示简短文字。取消勾选则仅使用图标按钮。",
 			"retroAdvantageButtons.label": "追溯优势按钮",
 			"retroAdvantageButtons.hint": "在攻击、检定和豁免掷骰后，于结果两侧显示按钮，可应用优势或劣势：再掷 1 个 d20 并取较高或较低值。只有掷骰作者和主持人可见。",
 			"ddbSyncToDDB.label": "Foundry → D&D Beyond：自动将角色更改从 Foundry 发送到 D&D Beyond",

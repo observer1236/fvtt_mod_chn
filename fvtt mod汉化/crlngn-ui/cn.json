@@ -745,7 +745,7 @@
 					"collapseCardTags.label": "默认折叠卡片标签",
 					"collapseCardTags.hint": "在紧凑行动卡片上仅显示最有用的标签（激活、射程、关键属性），并用 +N 标记展开其余标签。",
 					"labeledCardButtons.label": "带文字的卡片按钮",
-					"labeledCardButtons.hint": "在行动卡片按钮（攻击、伤害、豁免、模板等）的图标旁显示简短文字。取消勾选则仅使用图标按钮。",
+					"labeledCardButtons.hint": "在行动卡片按钮（攻击、伤害、豁免、测量板等）的图标旁显示简短文字。取消勾选则仅使用图标按钮。",
 					"retroAdvantageButtons.label": "事后优势按钮",
 					"retroAdvantageButtons.hint": "在攻击、检定和豁免掷骰的结果两侧显示按钮，可在掷骰后应用优势或劣势：再掷一个 d20，取较高或较低值。仅掷骰者和 GM 可见。"
 				},

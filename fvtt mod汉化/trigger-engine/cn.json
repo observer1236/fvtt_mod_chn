@@ -1053,7 +1053,7 @@
 					},
 					"has-item-slug.title": "拥有与 Slug 相关的物品",
 					"inside-template.inputs.name.title": "起源蛞蝓",
-					"inside-template.title": "位于模板内"
+					"inside-template.title": "位于测量板内"
 				},
 				"event": {
 					"action-chat-event": {
@@ -1163,7 +1163,7 @@
 					},
 					"spell-cast-event.outputs.rank.title": "施法环阶",
 					"spell-cast-event.title": "施展",
-					"template-placed-event.title": "已放置模板"
+					"template-placed-event.title": "已放置测量板"
 				},
 				"extractor": {
 					"choiceset-selection": {

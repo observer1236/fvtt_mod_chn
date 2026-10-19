@@ -46,7 +46,7 @@
 	"tokencover.settings.display-secret-cover.Name": "秘密token上显示掩护",
 	"tokencover.settings.display-secret-cover.Hint": "切换是否在有秘密倾向的token上显示掩护图标。",
 	"tokencover.settings.templates-use-cover.Name": "测量板上显示掩护",
-	"tokencover.settings.templates-use-cover.Hint": "切换是否从模板应用掩护。",
+	"tokencover.settings.templates-use-cover.Hint": "是否对测量板应用掩护。",
 	"tokencover.settings.only-cover-icons.Name": "只使用掩护图标",
 	"tokencover.settings.only-cover-icons.Hint": "启用后，只显示掩护图标，不使用掩护效果。如果你的系统不支持此功能，请尝试启用。",
 	"tokencover.settings.cover-chat-message.Name": "在聊天中显示掩护",

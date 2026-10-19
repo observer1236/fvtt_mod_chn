@@ -37,7 +37,7 @@
     "walledtemplates.MeasuredTemplateConfiguration.hide-highlighting.Hint": "覆盖设置以始终显示或隐藏此测量板的高亮显示。",
 	
     "walledtemplates.MeasuredTemplateConfiguration.show-hover.Name": "悬停时显示",
-    "walledtemplates.MeasuredTemplateConfiguration.show-hover.Hint": "当鼠标悬停在模板中的标记上时，覆盖始终或从不显示测量板的设置。",
+    "walledtemplates.MeasuredTemplateConfiguration.show-hover.Hint": "覆盖默认设置，指定鼠标悬停在测量板内的 Token 上时，始终显示或从不显示该测量板。",
 	
     "walledtemplates.MeasuredTemplateConfiguration.elevation.Name": "高度",
 

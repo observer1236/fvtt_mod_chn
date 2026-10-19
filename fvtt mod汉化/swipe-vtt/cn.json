@@ -183,7 +183,7 @@
 			},
 			"MiniCanvasPrompt": {
 				"Title": "简化Token地图",
-				"Content": "你要启用简化Token地图吗？它会显示一个轻量级网格，允许你在角色卡模式下移动Token、选择目标和放置模板。",
+				"Content": "你要启用简化Token地图吗？它会显示一个轻量级网格，允许你在角色卡模式下移动Token、选择目标和放置测量板。",
 				"Yes": "启用",
 				"No": "不用了，谢谢"
 			},
@@ -417,7 +417,7 @@
 			"DeleteSelectedRegionsTitle": "删除所选区域",
 			"DeleteSelectedRegionsConfirm": "删除 {count} 选定的区域？这无法撤消。",
 			"DeletedRegions": "{count} 区域已删除",
-			"NoTemplatesSelectRegion": "画布上没有模板。点击一个区域将其选中，然后点击垃圾桶将其删除。",
+			"NoTemplatesSelectRegion": "画布上没有测量板。点击一个区域将其选中，然后点击垃圾桶将其删除。",
 			"DeleteTemplatesFailed": "无法删除：您无权删除这些内容。"
 		},
 		"Sheet": {

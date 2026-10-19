@@ -32,11 +32,11 @@
                 "NoSound": "无音效"
             },
             "Template": {
-                "Circle": "圆形模板",
-                "Cone": "锥形模板",
-                "Rectangle": "矩形模板",
-                "Ray": "射线模板",
-                "Unknown": "未知模板"
+                "Circle": "圆形测量板",
+                "Cone": "锥形测量板",
+                "Rectangle": "矩形测量板",
+                "Ray": "射线测量板",
+                "Unknown": "未知测量板"
             },
             "Tile": {
                 "Background": "背景图块",

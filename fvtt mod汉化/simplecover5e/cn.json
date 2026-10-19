@@ -184,8 +184,8 @@
 				"LibraryModeWarning": "库模式已启用。自动化功能已禁用。请参阅 Wiki：https://github.com/Kapuzenjoe/simplecover5e/wiki/API-(Library-Mode)。某些模组可能会自动启用库模式（例如 Midi-QOL）。"
 			},
 			"IgnoreAOECover.Options.None": "禁用",
-			"IgnoreAOECover.Name": "忽略掩护：范围效果模板",
-			"IgnoreAOECover.Hint": "何时跳过效果区域模板的覆盖检查。范围 AoE 会跳过具有范围原点（非自/触摸/特殊）的模板的覆盖。每当定义任何模板时，所有 AoE 都会跳过覆盖。",
+			"IgnoreAOECover.Name": "忽略掩护：范围效果测量板",
+			"IgnoreAOECover.Hint": "选择何时跳过范围效果测量板的掩护检查。“远程范围效果”仅对起点为远程的测量板跳过检查，不包括自身、接触或特殊射程。“全部范围效果”则在定义了任意测量板时跳过检查。",
 			"IgnoreAOECover.Options.Range": "远程范围",
 			"IgnoreAOECover.Options.All": "所有范围"
 		},

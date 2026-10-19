@@ -1,7 +1,7 @@
 {"REGION-ATTACHER": {
         "RegionAttacher": "区域附加",
         "AttachRegion": "附加区域",
-        "AttachRegionToTemplate": "将区域附加到模板",
+        "AttachRegionToTemplate": "将区域附加到测量板",
         "AttachRegionToTile": "将区域附加到图块",
         "ConfigureRegion": "配置区域",
 		"DetachRegion": "分离区域",
