@@ -209,7 +209,7 @@
           "transferNotImplemented": "转移功能未实现。",
           "transferNotImplementedItem": "\"{name}\" - 转移功能未实现。",
           "noActorsAvailable": "没有可用的角色进行转移。",
-          "backpackModuleMissing": "未找到背包模组。请确保'backpack'模组处于活动状态。",
+          "backpackModuleMissing": "未找到背包模组。请确保已启用 backpack 模组。",
           "transferSuccess": "\"{name}\"已成功添加到背包。",
           "transferFailed": "将物品转移到背包失败。"
         },

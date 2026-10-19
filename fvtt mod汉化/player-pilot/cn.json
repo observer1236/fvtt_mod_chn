@@ -24,7 +24,7 @@
   "PlayerPilot.settings.combatLock.name": "遵循战斗回合",
   "PlayerPilot.settings.combatLock.hint": "启用后，玩家只能在其拥有某个 Token 为当前行动战斗者时进行移动和使用动作。",
   "PlayerPilot.settings.useWakeLock.name": "保持屏幕常亮",
-  "PlayerPilot.settings.useWakeLock.hint": "启用后，Player Pilot 处于活动状态时设备不会休眠或锁屏。",
+  "PlayerPilot.settings.useWakeLock.hint": "启用后，Player Pilot 运行时设备不会休眠或锁屏。",
   "PlayerPilot.panel.players": "玩家",
   "PlayerPilot.panel.enabled": "启用",
   "PlayerPilot.panel.save": "保存"

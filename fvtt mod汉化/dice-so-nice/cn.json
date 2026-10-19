@@ -335,7 +335,7 @@
 	"DICESONICE.advancedGlass": "高级半透明渲染",
 	"DICESONICE.ambiance": "氛围",
 	"DICESONICE.AmbianceNeutral": "中性",
-	"DICESONICE.skipAnimationOnInactiveTab": "选项卡处于非活动状态时跳过动画",
+	"DICESONICE.skipAnimationOnInactiveTab": "选项卡未激活时跳过动画",
 	"DICESONICE.enableFlavorColorsetHint": "带有游戏标记为可选角色的骰子，例如伤害类型，采用该角色的外观。关掉看看你自己的骰子。无论哪种方式，重要角色都会保持其外观。",
 	"DICESONICE.persistentDiceCapReached": "骰子真好：已达到持久骰子限制。在生成更多骰子之前移除一些持久骰子。",
 	"DICESONICE.loadMessage": "加载骰子配置文件“{name}”",

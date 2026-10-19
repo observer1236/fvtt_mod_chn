@@ -637,7 +637,7 @@
 	"AC5E.EffectValueEditor.Hint.ShowUsesCount": "为此条目启用使用计数配置。",
 	"AC5E.EffectValueEditor.Hint.ShowUpdate": "启用此条目的角色更新配置。",
 	"AC5E.EffectValueEditor.Hint.SetMode": "将奖金字段视为绝对设定值而不是附加奖金。",
-	"AC5E.EffectValueEditor.Hint.EnableUsesCountScaling": "为usesCount消耗值启用最小/最大/步长缩放输入。当缩放处于活动状态时，在公式/条件中使用scaleValue来引用计算的缩放量。",
+	"AC5E.EffectValueEditor.Hint.EnableUsesCountScaling": "为 usesCount 消耗值启用最小值、最大值和步长的缩放输入。启用缩放后，可在公式或条件中使用 scaleValue 引用计算出的缩放值。",
 	"AC5E.EffectValueEditor.Hint.UsesCountAmount": "正值消耗。负值恢复。使用 =value 设置绝对值。",
 	"AC5E.EffectValueEditor.Hint.UpdateAmount": "正值会增加。负值相减。使用 =value 设置绝对值。",
 	"AC5E.EffectValueEditor.Hint.UpdateAmountStatus": "正值或 =1 应用该状态。零、负值或 =0 将其删除。",

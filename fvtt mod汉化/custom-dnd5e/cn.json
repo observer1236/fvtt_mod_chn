@@ -1143,7 +1143,7 @@
 	"CUSTOM_DND5E.form.movementTypes.travel.label": "旅游佩斯集团",
 	"CUSTOM_DND5E.form.movementTypes.travel.land": "土地",
 	"CUSTOM_DND5E.form.movementTypes.travel.water": "水",
-	"CUSTOM_DND5E.form.movementTypes.walkFallback.hint": "当此运动类型处于活动状态但没有值时，使用步行速度。",
+	"CUSTOM_DND5E.form.movementTypes.walkFallback.hint": "已启用此移动类型但未设置速度时，使用步行速度。",
 	"CUSTOM_DND5E.form.movementTypes.walkFallback.label": "步行回退",
 	"CUSTOM_DND5E.form.proficiencyBonus.enable.character.label": "启用角色配置",
 	"CUSTOM_DND5E.form.proficiencyBonus.enable.npc.label": "启用 NPC 配置",

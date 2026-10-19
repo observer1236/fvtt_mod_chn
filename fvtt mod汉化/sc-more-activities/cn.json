@@ -172,7 +172,7 @@
 	"SCMOREACTIVITIES.Migration.Scope.Packs": "已扫描的合集包",
 	"SCMOREACTIVITIES.Migration.Scope.Duration": "耗时",
 	"SCMOREACTIVITIES.Migration.Scope.FailedPacks": "无法读取的合集包",
-	"SCMOREACTIVITIES.Migration.Warning.LegacyModuleActive": "旧版 more-activities 模组仍处于活动状态。仅在预览或迁移期间同时启用两个模组。",
+	"SCMOREACTIVITIES.Migration.Warning.LegacyModuleActive": "旧版 more-activities 模组仍处于启用状态。请仅在预览或迁移期间同时启用两个模组。",
 	"SCMOREACTIVITIES.Migration.Warning.CompendiumScanDisabled": "模组设置中已禁用合集扫描，因此未检查合集包。",
 	"SCMOREACTIVITIES.Migration.Warning.ExternalPacksSkipped": "{count} 个系统/模组合集被跳过。启用“包含系统与模组合集”以扫描它们。",
 	"SCMOREACTIVITIES.Migration.Warning.LockedPacksAutoUnlock": "这些合集已锁定，将在应用期间自动解锁，之后重新锁定：{packs}。",

@@ -255,7 +255,7 @@
 			"NoSellableItems": "无可出售物品。",
 			"SuppressedStock": "缺货",
 			"SuppressedCap": "超过定居点上限",
-			"SuppressedNotFound": "未找到物品 - 检查其来源的合集或模块是否处于活动状态",
+			"SuppressedNotFound": "未找到物品，请检查是否已启用其来源合集或模组",
 			"None": "尚无物品。",
 			"SearchItems": "搜索物品",
 			"SortByName": "按名称排序",

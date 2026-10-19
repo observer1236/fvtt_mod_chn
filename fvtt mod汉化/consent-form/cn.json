@@ -390,7 +390,7 @@
 		"SETTING_GATEWAY_TOKEN_HINT": "可选的个人玩家连接：从同意书网站创建一个链接，然后将您的一次性令牌粘贴到此处。连接后，表单将同步，并且网站 X-Card 会取代 Foundry 快捷方式。",
 		"SETTING_GATEWAY_URL": "网关地址",
 		"SETTING_GATEWAY_URL_HINT": "用于同步的公众同意书网站地址。仅当站点托管在另一个域上时才更改它。",
-		"GATEWAY_CONNECTED": "与同意书网站的连接处于活动状态。",
+		"GATEWAY_CONNECTED": "与同意书网站的连接已建立。",
 		"GATEWAY_STATUS_UNCONFIGURED": "同意书网站未连接",
 		"GATEWAY_STATUS_CHECKING": "检查网站连接...",
 		"GATEWAY_STATUS_CONNECTED": "连接到consent.yanklinnomme.fr",

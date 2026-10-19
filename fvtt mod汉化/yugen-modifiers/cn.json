@@ -8,7 +8,7 @@
   "yugen-modifiers.settings.enable-token-hover-effects.name": "悬停时显示 Token 效果",
   "yugen-modifiers.settings.enable-token-hover-effects.hint": "悬停在 Token 上时，显示一个浮动界面，列出该 Token 的生效状态、专注和临时效果。",
   "yugen-modifiers.settings.hide-in-measuring-tool.name": "测量工具中隐藏详情",
-  "yugen-modifiers.settings.hide-in-measuring-tool.hint": "当测量工具或标尺处于活动状态时，阻止显示 Token 详情悬停弹窗。",
+  "yugen-modifiers.settings.hide-in-measuring-tool.hint": "使用测量工具或标尺时，不显示 Token 详情悬停弹窗。",
   "yugen-modifiers.settings.show-non-physical-weapons.name": "显示非实体武器",
   "yugen-modifiers.settings.show-non-physical-weapons.hint": "在悬停提示框中显示徒手打击、天生武器攻击和法术动作武器。禁用此选项可防止元游戏行为。",
   "yugen-modifiers.settings.show-equipped-weapons.name": "显示已装备武器",

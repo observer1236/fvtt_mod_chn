@@ -93,7 +93,7 @@
 		"Usage.Both": "食物和水",
 		"Usage.None": "无",
 		"Settings.CalendarMode.Name": "日历模式",
-		"Settings.CalendarMode.Hint": "是否在每个日历午夜或在开始新的一天的长时间休息时评估一次营养。默认值：自动，当 Calendaria、Ember 或 DnD5e 自己的“每日恢复模式”设置为日历恢复时处于活动状态。",
+		"Settings.CalendarMode.Hint": "选择在每天午夜检查营养，还是在开启新一天的长休时检查。默认为自动：当 Calendaria、Ember 或 dnd5e 自带的“每日恢复模式”设置为“按日历恢复”时，启用按日历检查。",
 		"Settings.CalendarMode.Default": "默认（自动检测）",
 		"Settings.CalendarMode.Off": "始终关闭",
 		"Settings.DisableGroupSheet.Name": "禁用组表集成",

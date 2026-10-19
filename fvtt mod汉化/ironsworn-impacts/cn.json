@@ -30,9 +30,9 @@
 			},
 			"ChatCard": {
 				"Heading": "状态变更",
-				"HeadingActive": "活动状态",
+				"HeadingActive": "当前生效的状态",
 				"Title": {
-					"Active": "活动状态",
+					"Active": "当前生效的状态",
 					"Added": "已添加状态",
 					"Removed": "已移除状态"
 				},
@@ -89,7 +89,7 @@
 					"NoToken": "应用状态失败。未提供 Token",
 					"NoCondition": "应用状态失败。找不到状态：",
 					"NoIcon": "应用状态失败。找不到图标。",
-					"AlreadyActive": "已处于活动状态。应用状态失败"
+					"AlreadyActive": "已生效。应用状态失败"
 				}
 			},
 			"GetConditions": {
@@ -104,7 +104,7 @@
 					"NoToken": "移除状态失败。未提供 Token",
 					"NoCondition": "移除状态失败。找不到名为以下内容的状态：",
 					"NoIcon": "移除状态失败。找不到图标",
-					"NotActive": "在 Token 上不处于活动状态。移除状态失败。"
+					"NotActive": "未在该 Token 上生效。移除状态失败。"
 				}
 			},
 			"RemoveAllConditions": {
@@ -121,7 +121,7 @@
 					"Unsaved": "（未保存的更改）"
 				},
 				"ActiveEffects": {
-					"Title": "活动效果配置",
+					"Title": "主动效果配置",
 					"TitleDisabledNew": "请先保存映射",
 					"TitleDisabledDefault": "无法编辑默认映射"
 				},
@@ -180,7 +180,7 @@
 				"RemoveDefaultEffectsH": "从 Token HUD 中移除现有的状态效果图标",
 				"DefaultOutputChatN": "将默认状态输出到聊天",
 				"DefaultOutputChatH": "将所有默认状态输出到聊天",
-				"MapTypeN": "活动状态映射类型",
+				"MapTypeN": "当前状态映射类型",
 				"MapTypeH": "当前使用的状态映射类型 -- default、custom 或 other",
 				"MapType": {
 					"Choices": {
@@ -190,7 +190,7 @@
 						"other": "其他/导入"
 					}
 				},
-				"ActiveConditionMapN": "活动状态映射",
+				"ActiveConditionMapN": "当前状态映射",
 				"ActiveConditionMapH": "存储活动的状态映射",
 				"SuppressPreventativeSaveReminderN": "抑制预防性保存提醒",
 				"SuppressPreventativeSaveReminderH": "抑制保存 Ironsworn Impacts 以防问题的提醒（例如用户已经保存过）",

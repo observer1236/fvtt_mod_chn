@@ -42,11 +42,11 @@
       },
       "HoveredWallHotkeyTypeChange": {
         "Name": "墙类型快捷键更新悬停的 Foundry 墙",
-        "Hint": "启用后，当墙控制处于活动状态时，墙类型快捷键可更改鼠标下方的 Foundry 墙。编辑形状时，Indy 形状分段快捷键仍然有效。"
+        "Hint": "启用后，使用墙壁控制工具时，可通过墙壁类型快捷键更改鼠标下方的 Foundry 墙壁。编辑形状时，Indy 形状分段快捷键仍然有效。"
       },
       "KeepWallSelectionOnCanvasClick": {
         "Name": "点击空白处时保持墙选中",
-        "Hint": "启用后，当墙控制处于活动状态时，点击画布空白区域会保持当前选中的墙仍处于选中状态。"
+        "Hint": "启用后，使用墙壁控制工具时，点击画布空白处会保留当前选中的墙壁。"
       },
       "ShowWallLengthsWhileDrawing": {
         "Name": "绘制时显示墙长度",

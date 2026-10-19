@@ -879,7 +879,7 @@
 			"FogTokenTrailSettleTime": "Token 移动后，被清除的雾路径恢复所需的时间（秒）。",
 			"SynchronizedDirection": "对此特效使用活动的风或尘暴方向。",
 			"SynchronizedDirectionControlledBy": "Controlled by {source}.",
-			"SynchronizedDirectionWaiting": "当风或尘暴处于活动状态时，由它控制。",
+			"SynchronizedDirectionWaiting": "启用风或尘暴时，由相应效果控制。",
 			"DirectionRandomization": "随时间随机改变特效方向。为 1 时，方向可在整个罗盘范围内任意随机化。",
 			"DirectionChangeTime": "平滑随机方向变更之间的平均时间（秒）。",
 			"DirectionRandomizationRadius": "每次随机方向变更可从当前方向移动的最大角度。为 1 时，每次变更可使用完整的随机方向范围。",

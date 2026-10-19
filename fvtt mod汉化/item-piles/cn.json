@@ -282,7 +282,7 @@
       },
       "GiveItemUserNotActive": {
         "Title": "给予物品",
-        "Content": "“{actor_name}”属于玩家\"{user_name}\"，但是该玩家与角色未处于活动状态，你无法将这个物品给予该角色。"
+        "Content": "“{actor_name}”由玩家“{user_name}”控制，但该玩家当前不在线，因此无法将此物品交给他们。"
       },
       "RemoveMerchantTable": {
         "Title": "移除商人随机表",
@@ -664,7 +664,7 @@
           "SplitAllEnabled": "启用Split With Players按钮",
           "SplitAllEnabledExplanation": "在获取物品堆时启用\"Split [number] ways\"按钮。按下此按钮后，所有玩家（或仅活跃玩家，见下文）都能获得自己在物品堆中的份额。",
           "InactivePlayers": "仅与活跃玩家拆分",
-          "InactivePlayersExplanation": "只有在该物品堆被获取时处于活动状态的玩家才能获得自己的那份。",
+          "InactivePlayersExplanation": "只有在此物品堆被拾取时在线的玩家，才能获得自己的一份物品。",
           "ResetSharingData": "重置共享数据",
           "ResetSharingDataExplanation": "如果物品堆的内容在玩家获取时被手动更改，则分享数据可能会与玩家的实际份额不一致。按下此按钮将重置每个人在该物品堆中的份额。"
         },

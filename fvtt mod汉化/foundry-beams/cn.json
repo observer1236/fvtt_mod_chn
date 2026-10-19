@@ -35,7 +35,7 @@
       },
       "UseProviderStyles": {
         "Name": "从Styles Hub模组加载样式",
-        "Hint": "如果'foundry-beams-styles'模组处于活动状态，导入并注册其所有样式。"
+        "Hint": "若已启用 foundry-beams-styles 模组，则导入并注册其全部样式。"
       },
 		"ControlHudMode": "HUD模式",
 		"ControlHudModeTooltip": "选择悬停HUD应允许你为此Token配置的内容。",
