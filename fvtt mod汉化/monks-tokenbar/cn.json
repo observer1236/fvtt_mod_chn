@@ -1,23 +1,20 @@
-{"MonksTokenBar.EditCharacter": "编辑角色",
+{
+	"MonksTokenBar.EditCharacter": "编辑角色",
 	"MonksTokenBar.EditToken": "编辑Token",
 	"MonksTokenBar.TargetToken": "目标Token",
 	"MonksTokenBar.PrivateMessage": "私聊",
 	"MonksTokenBar.ExcludeFromTokenBar": "移除Token",
 	"MonksTokenBar.DisablePanning": "禁止镜头追踪",
-	
 	"MonksTokenBar.easy": "简单",
 	"MonksTokenBar.average": "一般",
 	"MonksTokenBar.challenging": "挑战",
 	"MonksTokenBar.hard": "困难",
 	"MonksTokenBar.epic": "史诗",
-	
 	"MonksTokenBar.FreeMovement": "自由移动",
 	"MonksTokenBar.NoMovement": "禁止移动",
 	"MonksTokenBar.CombatTurn": "战斗模式",
 	"MonksTokenBar.Ignore": "忽略",
-	
 	"MonksTokenBar.MovementChanged": "移动方式更改为 ",
-	
 	"MonksTokenBar.RequestRoll": "请求掷骰",
 	"MonksTokenBar.RequestRollGM": "请求掷骰，仅 GM",
 	"MonksTokenBar.ContestedRoll": "对抗掷骰",
@@ -25,7 +22,6 @@
 	"MonksTokenBar.Lootables": "转换战利品",
 	"MonksTokenBar.HideNPCName": "隐藏 NPC 姓名",
 	"MonksTokenBar.Inspiration": "激励",
-	
 	"MonksTokenBar.Attribute": "数值",
 	"MonksTokenBar.Ability": "属性",
 	"MonksTokenBar.AbilityCheck": "属性检定",
@@ -52,7 +48,6 @@
 	"MonksTokenBar.Unknown": "未知",
 	"MonksTokenBar.Level": "等级",
 	"MonksTokenBar.RecalculateXP": "重新计算XP",
-	
 	"MonksTokenBar.UnknownError": "发生了未知错误",
 	"MonksTokenBar.CombatTurnMovementLimited": "移动方式已被设为战斗模式，当前并非你的回合",
 	"MonksTokenBar.NormalMovementLimited": "移动已被锁定",
@@ -67,14 +62,12 @@
 	"MonksTokenBar.UnknownSystem": "Tokenbar并不支持你正在使用的游戏系统。",
 	"MonksTokenBar.ActorNotCombatant": "角色并非战斗中的参与者，无法投掷先攻",
 	"MonksTokenBar.CombatNotStarted": "无法切换到战斗移动，没有进行的战斗",
-	
 	"MonksTokenbar.TokenbarSettings": "Tokenbar设置",
 	"MonksTokenbar.IconSettings": "图标设置",
 	"MonksTokenbar.MovementSettings": "移动设置",
 	"MonksTokenbar.AfterCombatSettings": "战后设置",
 	"MonksTokenbar.LootableSettings": "战利品设置",
 	"MonksTokenbar.RequestRollSettings": "请求掷骰设置",
-	
 	"MonksTokenBar.notify-on-change.name": "移动方式改变时发出提醒",
 	"MonksTokenBar.notify-on-change.hint": "GM 改变允许的移动方式时，向所有玩家发出提醒",
 	"MonksTokenBar.show-xp-dialog.name": "弹出 XP 对话框",
@@ -186,10 +179,8 @@
 	"MonksTokenBar.free-vehicle-combat.hint": "允许载具在战斗中移动",
 	"MonksTokenBar.allow-fade.name": "允许淡化",
 	"MonksTokenBar.allow-fade.hint": "允许Token栏使用界面淡化效果",
-	
 	"MonksTokenBar.orientation.vertical": "纵向",
 	"MonksTokenBar.orientation.horizontal": "横向",
-	
 	"MonksTokenBar.XP": "XP",
 	"MonksTokenBar.Actors": "角色",
 	"MonksTokenBar.Experience": "经验值",
@@ -244,9 +235,9 @@
 	"MonksTokenBar.LootEntry": "战利品 {{#}}",
 	"MonksTokenBar.FromCombat": "战斗中角色",
 	"MonksTokenBar.Combat": "战斗",
-	"MonksTokenBar.TransferLoot": "从选中的token中转移战利品",		
+	"MonksTokenBar.TransferLoot": "从选中的token中转移战利品",
 	"MonksTokenBar.RequestRollConfig": "请求掷骰配置",
-	"MonksTokenBar.Silent": "静默",	
+	"MonksTokenBar.Silent": "静默",
 	"MonksTokenBar.FastForward": "快进",
 	"MonksTokenBar.DC": "DC",
 	"MonksTokenBar.FlavorText": "聊天文本",
@@ -268,20 +259,24 @@
 	"MonksTokenBar.SelectCriticalSaved": "选择大成功豁免",
 	"MonksTokenBar.SelectCriticalFailed": "选择大失败豁免",
 	"MonksTokenBar.DefaultTheme": "默认主题",
-	
 	"MonksTokenBar.None": "无",
 	"MonksTokenBar.GMOnly": "仅 GM",
 	"MonksTokenBar.PlayersOnly": "玩家",
 	"MonksTokenBar.Everyone": "所有人",
-
 	"MonksTokenBar.THEME": {
 		"savingthrow": "豁免检定",
 		"assignxp": "分配经验值",
 		"lootables": "战利品"
 	},
-
 	"MonksTokenBar.ASSIGNXP.TABS": {
 		"monsters": "怪物",
 		"players": "玩家"
-	}
+	},
+	"MonksTokenBar.TokenbarSettings": "Token栏设置",
+	"MonksTokenBar.IconSettings": "图标设置",
+	"MonksTokenBar.MovementSettings": "移动设置",
+	"MonksTokenBar.AfterCombatSettings": "战后设置",
+	"MonksTokenBar.LootableSettings": "战利品设置",
+	"MonksTokenBar.RequestRollSettings": "请求掷骰设置",
+	"MonksTokenBar.Dice": "骰子"
 }

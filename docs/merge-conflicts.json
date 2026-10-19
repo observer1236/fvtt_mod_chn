@@ -1,0 +1,4244 @@
+[
+  {
+    "key": "NpcBuilder.Session.Expired",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Generate.FormNotFound",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Generate.Success",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Create.Failed",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Undo.Deleted",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Undo.Failed",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.ImageGen.NoNpc",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.ImageGen.Generating",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.ImageGen.SetSuccess",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.ImageConfirm.ForName",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.ImageConfirm.CostNote",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.ImageConfirm.ArtStyle",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.ClearHistory.Title",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.ClearHistory.Confirm",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.QuickEdit.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.QuickEdit.Confirm",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.RawData.Content",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Feedback.MissingMessage",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Feedback.Success",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Settings.ResetWelcome.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Settings.ResetWelcome.ConfirmContent",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Settings.ResetWelcome.Success",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Settings.ClearSession.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "NpcBuilder.Settings.ClearSession.ConfirmContent",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.IncomeJitter.Name",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.IncomeJitter.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.HighContrast.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ArmyTravelDays.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ResetWelcome.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ResetWelcome.ConfirmContent",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ResetWelcome.Success",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ClearSettlements.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ClearSettlements.ConfirmContent",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ResetCalendar.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ResetCalendar.ConfirmContent",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ResetCalendar.NotActive",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.FixtureSheet.Name",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.FixtureSheet.Label",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.FixtureSheet.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.CreateArmy.Label",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.HireMercenaries.Name",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.HireMercenaries.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.HireMercenaries.NotActive",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.HireMercenaries.NoSettlements",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ImportPrebuiltSettlement.Name",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ImportPrebuiltSettlement.Label",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ImportPrebuiltSettlement.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ImportPrebuiltNation.Name",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ImportPrebuiltNation.Label",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "SettlementBuilder.Settings.ImportPrebuiltNation.Hint",
+    "previous": "DnD5eNpcMaker/cn.json",
+    "incoming": "Dnd5eItemGenerator/cn.json",
+    "winner": "Dnd5eItemGenerator/cn.json"
+  },
+  {
+    "key": "about-time.notMaster",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.GTM.hint",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.RTU.name",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.RTU.hint",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.SPR.name",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.SPR.hint",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.MCT.name",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.MCT.hint",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.CAL.name",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.weekDays",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.display.advance1min",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.display.advance10min",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.display.advance1h",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.display.advance8h",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.display.advance7am",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.display.advance7pm",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.display.advanceMidDay",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.display.advanceMidnight",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "about-time.countDown.startStop",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "I18N.LANGUAGE",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "about-time-next/cn.json",
+    "incoming": "about-time/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "BBH.COMMON.RangeLow",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.COMMON.RangeHigh",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.CreatureTypeTables.Name",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.CreatureTypeTables.Hint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.CreatureTypeTables.Menu.Hint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.AutoRollHarvest.Name",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.AutoRollHarvest.Hint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.AutoEnableQuantityOnNewTables.Name",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.AutoEnableQuantityOnNewTables.Hint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.RollTableCompendium.Hint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.HarvestAttemptsBySize.Name",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.HarvestAttemptsBySize.Hint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.HarvestAttemptsBySize.Menu.Name",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.HarvestAttemptsBySize.Menu.Label",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.HarvestAttemptsBySize.Menu.Hint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.HarvestAttemptsBySize.Menu.HintWithDefaultBehavior",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.HarvestAttemptsBySize.WindowTitle",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.Debug.Name",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SETTINGS.Debug.Hint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.KEYBINDINGS.OpenTablesModifier.Name",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.KEYBINDINGS.OpenTablesModifier.Hint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SHEETS.RollTable.Label",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.SHEETS.TableResult.Label",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.TABLES.WindowTitle",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.TABLES.Hint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.TABLES.CustomTypePromptLabel",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.TABLES.CustomTypePromptHint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.TABLES.UuidPlaceholder",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.TABLES.OpenLinkedRollTable",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.TABLES.ClearInput",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.ROLL_TABLE.HarvestDataLabel",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.ROLL_TABLE.HarvestDataHint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.ROLL_TABLE.QuantityDataHint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.RESULTS.ApplySkillToAllAria",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.RESULTS.ApplySelectedSkillToAllAria",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.RESULT_CONFIG.HarvestSkillLabel",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.RESULT_CONFIG.HarvestSkillHint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.RESULT_CONFIG.HarvestDcLabel",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.RESULT_CONFIG.HarvestDcHint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.RESULT_CONFIG.QuantityHint",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CONTROLS.GroupTitle",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CONTROLS.HarvestTarget",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CONTROLS.ResetHarvestedResults",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.INFO.ResetHarvestedResultsDone",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.NoHarvestTableForType",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.HarvestTableNoResults",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.ResultMissingSkillOrDc",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.ResultMissingItemLink",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.SelectOne.Actor",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.SelectOne.Target",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.SelectOne.TargetActor",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.SelectOne.Creature",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.HarvestPayloadUnresolved",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.TargetMustBeAtZeroHp",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.NoHarvestableResultsRemaining",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.HarvestTableMissingResultConfig",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.HarvestAttemptsReached",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.DropRollTable",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.TableNameOrUuidNotResolved",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.UuidNotRollTable",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.WARN.SelectTargetsOrControlledForReset",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CHAT.RollFlavor",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CHAT.HarvestAttemptTitle",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CHAT.AttemptBody",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CHAT.CheckLine",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CHAT.SelectSkillPrompt",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CHAT.RollHarvestCheck",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CHAT.UnnamedResult",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CHAT.HarvestResultFallback",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CHAT.HarvestSucceeded",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CHAT.HarvestFailed",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "BBH.CHAT.OutcomeBody",
+    "previous": "bbh/cn.json",
+    "incoming": "bugbears-harvester/cn.json",
+    "winner": "bbh/cn.json"
+  },
+  {
+    "key": "I18N.LANGUAGE",
+    "previous": "about-time/cn.json",
+    "incoming": "chat-images/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "about-time/cn.json",
+    "incoming": "chat-images/cn.json",
+    "winner": "about-time/cn.json"
+  },
+  {
+    "key": "I18N.LANGUAGE",
+    "previous": "about-time/cn.json",
+    "incoming": "chat-media/cn.json",
+    "winner": "chat-media/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "about-time/cn.json",
+    "incoming": "chat-media/cn.json",
+    "winner": "chat-media/cn.json"
+  },
+  {
+    "key": "I18N.LANGUAGE",
+    "previous": "combat-theme-expansion-pack/cn.json",
+    "incoming": "foundrytodiscord/cn.json",
+    "winner": "foundrytodiscord/cn.json"
+  },
+  {
+    "key": "FSC.AddNewCalendar",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.ApplyPredefinedText",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.CalendarConfiguration",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Right",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Left",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Down",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.AddCalendar.Button",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.AddCalendar.CalendarName",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.AddCalendar.CalendarNameHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.OpenOnLoad.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.OpenOnLoad.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.OpenCompact.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.OpenCompact.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.RememberPosition.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.RememberPosition.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.RememberCompactPosition.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.RememberCompactPosition.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.NoteReminderNotification.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.NoteReminderNotification.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.NoteReminderNotification.Whisper",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.NoteReminderNotification.Render",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.NoteListOpenDirection.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.NoteListOpenDirection.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.AlwaysShowNoteList.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.AlwaysShowNoteList.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.PersistentOpen.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.PersistentOpen.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.CompactViewScale.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Client.CompactViewScale.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.CombatPauseRule.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.CombatPauseRule.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.CombatPauseRule.Active",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.CombatPauseRule.Current",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Display.DateTimeFormat",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Display.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Display.Compact",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Display.CompactControls.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Display.CompactControls.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.CalendarNameHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.PlayersChangeActiveCalendar",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.PlayersChangeActiveCalendarHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Global.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Global.SameTimestamp.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Global.SameTimestamp.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Global.SyncCalendars.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Global.SyncCalendars.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Global.ShowNoteFolder.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Global.ShowNoteFolder.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Global.InGameChatTimestamp.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Global.InGameChatTimestamp.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.ImportExport.ExportDescription",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.ImportExport.ImportDescription",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.ImportExport.ImportDetailsText",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Notes.PostNoteRemindersOnFoundryLoadHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.QuickSetup.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.QuickSetup.ChooseCurrentDateDescription",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.QuickSetup.ChoosePredefinedTitle",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.QuickSetup.ChoosePredefinedDescription",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.QuickSetup.ImportNotes",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.QuickSetup.ImportNotesDescription",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Theme.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Theme.Dark",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Theme.Light",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Theme.WFRP4E",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Details",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Documentation",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.ImportInto",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Includes",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.MakeActive",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.FullControls",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.QuickIncrement",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Migration.v1v2.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Migration.v1v2.Help",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Migration.v1v2.Calendar",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Migration.v1v2.GlobalConfiguration",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Migration.v1v2.Notes",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Migration.v1v2.CleanupSuccess",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Migration.v1v2.CleanupFail",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Migration.v1v2.Complete",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Migration.APIDialog.Content",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Notes.UserPermissionHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Predefined.Eberron",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Predefined.Harptos",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Predefined.Greyhawk",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.RemoveCalendarConfirmText",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Search.Options.Fields.Details",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Search.Options.Fields.Categories",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.ViewingDifferentCalendar",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Day",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Days",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.HourShorthand",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.MinuteShorthand",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.RoundShorthand",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.SecondShorthand",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Back",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Description",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.YearOptions",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.MonthOptions",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.DayOptions",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.WeekdayOptions",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.HourOptions",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.MinuteOptions",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.SecondOptions",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Text",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Year.Full",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Year.FullExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Year.Short",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Year.ShortExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Year.Name",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Year.Prefix",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Year.Postfix",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Month.Number",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Month.NumberExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Month.NumberPadded",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Month.NumberPaddedExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Month.AbbreviatedName",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Month.AbbreviatedNameExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Month.Name",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Month.NameExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Day.Number",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Day.NumberExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Day.NumberPadded",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Day.NumberPaddedExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Day.NumberSuffix",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Day.NumberSuffixExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Weekday.Number",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Weekday.NumberExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Weekday.NumberPadded",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Weekday.NumberPaddedExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Weekday.AbbreviatedName",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Weekday.AbbreviatedNameExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Weekday.Name",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Weekday.NameExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Hour.12Hour",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Hour.12HourExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Hour.24Hour",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Hour.24HourExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Hour.12HourPadded",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Hour.12HourPaddedExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Hour.24HourPadded",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Hour.24HourPaddedExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Hour.ampm",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Hour.AMPM",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Minute.Number",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Minute.NumberExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Minute.NumberPadded",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Minute.NumberPaddedExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Second.Number",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Second.NumberExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Second.NumberPadded",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.Second.NumberPaddedExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.TextDescription",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DateFormat.TextExample",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.ExampleResult",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Token",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.ShowAdvanced",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.HideAdvanced",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.SetCurrentDateDialog.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.SetCurrentDateDialog.Content",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.SearchEmpty",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.DeleteConfirmText",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.NoteDirtyText",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.ChangeNextMonth",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.ChangePreviousMonth",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.MoveForwardOne",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.MoveForwardFive",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.MoveBackwardOne",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.MoveBackwardFive",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Time.Start",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Time.Stop",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Notes.New",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Notes.Empty",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Notes.For",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Notes.ReminderHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Notes.Repeating",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Notes.RepeatingHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Notes.Repeat.Never",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Notes.DateTime.Help",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Notes.MacroHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Notes.Permissions.AllPlayers",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Date.Sunday",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Date.Monday",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Date.Tuesday",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Date.Wednesday",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Date.Thursday",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Date.Friday",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Date.Saturday",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Moon.Phase.WaxingCrescent",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.GameWorldTime",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.GameWorldTimeHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.None",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.Self",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.ThirdParty",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.Mixed",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.PF2ESync",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.PF2ESyncHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.PF2ESyncDisabledSettings",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.ShowClockHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.PlayerAddNotesHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.PlayerReorderNotes",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.PlayerReorderNotesHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.Permissions.Note",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.CalendarPlayerVisibleHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.PlayersChangeDateTimeHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.DisplayOptions",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.Display.DateFormat.DateHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.Display.DateFormat.TimeHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.Display.DateFormat.MonthYearHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.Display.DateFormat.ChatTime",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.General.Display.DateFormat.ChatTimeHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Notes.NoteCategories",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.NoteCategories.Name",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.NoteCategories.NameHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.NoteCategories.Color",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.NoteCategories.ColorHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.NoteCategories.Add",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.NoteCategories.RemoveAll",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Notes.NoteCategoriesHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Year.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Year.CurrentHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Year.PrefixHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Year.PostfixHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Year.YearZero",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Year.YearZeroHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Year.YearNamesStart",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Year.YearNamesStartHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Year.YearNameBehaviour",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Year.YearNameBehaviourHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.Name",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.StartingDate",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.StartingDateHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.ColorHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.ColorWhite",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.ColorSpring",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.ColorSummer",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.ColorFall",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.ColorWinter",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.IconHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.SunriseSunsetHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Season.DescriptionHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.Name",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.NameHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.DaysHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.IntercalaryHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.Abbreviation",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.AbbreviationHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.DescriptionHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.IntercalaryInclude",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.IntercalaryIncludeHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.DayOffset",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.DayOffsetHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.Number",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.NumberHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.StartingWeekDay",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Month.StartingWeekDayHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.Title",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.ShowHeadings",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.ShowHeadingsHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.Name",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.NameHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.Abbreviation",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.AbbreviationHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.WeekendHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.DescriptionField",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.DescriptionHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.Add",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.RemoveAll",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekdays",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.FirstWeekDay",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Weekday.FirstWeekDayHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.DefaultNoteVisibility",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.DefaultNoteVisibilityHint",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.LeapYear.RuleHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.LeapYear.CustomMod",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.LeapYear.CustomModHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.LeapYear.Rules.Gregorian",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.LeapYear.DaysHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.HoursInDay",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.HoursInDayHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.MinutesInHour",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.MinutesInHourHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.SecondsInMinute",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.SecondsInMinuteHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.SecondsInCombatRound",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.SecondsInCombatRoundHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.GameTimeRatio",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.GameTimeRatioHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.UpdateFrequencyHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.UnifyGameAndClock",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Time.UnifyGameAndClockHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.Name",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.NameHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.CycleLengthHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.CycleAdjustmentHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.ColorHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.PhaseName",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.PhaseLength",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.PhaseLengthHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.PhaseSingleDayHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.PhaseIconHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.FirstNewMoon",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.YearReset",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.YearResetHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.YearResetNo",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.YearResetLeap",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.YearResetX",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.YearX",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.YearXHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.Year",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.YearHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.Month",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Configuration.Moon.MonthHelp",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Info.ThemeChange",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Warn.Time.ActiveCombats",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Warn.Macros.GMUpdate",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Warn.Calendar.NotGM",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.Error.Calendar.GMCurrent",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "FSC.KeyBinding.Toggle.Hint",
+    "previous": "foundryvtt-simple-calendar-reborn/cn.json",
+    "incoming": "foundryvtt-simple-calendar/cn.json",
+    "winner": "foundryvtt-simple-calendar-reborn/cn.json"
+  },
+  {
+    "key": "I18N.LANGUAGE",
+    "previous": "foundrytodiscord/cn.json",
+    "incoming": "fxmaster/cn.json",
+    "winner": "fxmaster/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "chat-media/cn.json",
+    "incoming": "fxmaster/cn.json",
+    "winner": "fxmaster/cn.json"
+  },
+  {
+    "key": "I18N.LANGUAGE",
+    "previous": "fxmaster/cn.json",
+    "incoming": "gambitsEmoteBar/cn.json",
+    "winner": "gambitsEmoteBar/cn.json"
+  },
+  {
+    "key": "I18N.LANGUAGE",
+    "previous": "gambitsEmoteBar/cn.json",
+    "incoming": "gambitsTemplatePreviewer/cn.json",
+    "winner": "gambitsEmoteBar/cn.json"
+  },
+  {
+    "key": "I18N.LANGUAGE",
+    "previous": "gambitsEmoteBar/cn.json",
+    "incoming": "ghorin-toolbar/cn.json",
+    "winner": "ghorin-toolbar/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "fxmaster/cn.json",
+    "incoming": "ginzzzu-portraits/cn.json",
+    "winner": "ginzzzu-portraits/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.OutputChatConfirm.Title",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.ConditionLab.FilterInputTitle",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.ConditionLab.FilterButtonTitle",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.ConditionLab.SortDirectionSave.Title",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.ConditionLab.SortDirectionSave.Content",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.ChatCard.HeadingActive",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.ChatCard.Title.Active",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.ChatCard.Title.Added",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.ChatCard.Title.Removed",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.MacroConfig.Description",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.OptionConfig.Description",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.OptionConfig.SpecialStatusEffects.Description",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.OptionConfig.BlindToken.Label",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.OptionConfig.BlindToken.Notes",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.OptionConfig.MarkInvisible.Notes",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.OptionConfig.SpecialStatusEffectOverride.Content",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.OptionConfig.SaveNote",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Warnings.ApplyCondition",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.MapMismatch",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.ApplyCondition.Failed.NoToken",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.ApplyCondition.Failed.AlreadyActive",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.GetConditions.Failed.NoToken",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.GetConditions.Failed.NoResults",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.RemoveCondition.Failed.NoToken",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.RemoveCondition.Failed.NoCondition",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.RemoveCondition.Failed.NotActive",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.RemoveAllConditions.Failed.NoToken",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.RemoveAllConditions.Failed.NoCondition",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.Title",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.ActiveEffects.Title",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.ActiveEffects.TitleDisabledNew",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.Import.NoFile",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.ConfirmDeleteContent",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.RestoreDefaultsContent",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.ResetFormContent",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.SaveFailed",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.SaveSuccess",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.Options.RemoveOthers.Label",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.Options.MarkDefeated.Label",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.Options.Overlay.Title",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.Options.MarkDefeated.Title",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.ENHANCED_CONDITIONS.Lab.Options.OutputChat.Title",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.KEYBINDINGS.openConditionLab.name",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.KEYBINDINGS.openTriggler.name",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.EnhancedConditions.SystemH",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.EnhancedConditions.OutputCombatH",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.EnhancedConditions.RemoveDefaultEffectsH",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.EnhancedConditions.MapTypeN",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.EnhancedConditions.MapTypeH",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.EnhancedConditions.ActiveConditionMapN",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.EnhancedConditions.ActiveConditionMapH",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.EnhancedConditions.SuppressPreventativeSaveReminderH",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.TokenUtility.TokenEffectSizeN",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.TokenUtility.TokenEffectSizeH",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.TokenUtility.TokenEffectSize.choices.small",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.TokenUtility.TokenEffectSize.choices.xLarge",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.Triggler.TriggersN",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.Triggler.TriggersH",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.SceneControls.Name",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.SETTINGS.SceneControls.Hint",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.TriggerMismatch",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.Labels.Property",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.Labels.Operator",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.ActorProperty.Label",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.ActorProperty.Note",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.ActorProperty.Placeholder",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.ActorProperty2.Label",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.ActorProperty2.Note",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.ActorProperty2.Placeholder",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.TokenProperty.Label",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.TokenProperty.Note",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.TokenProperty.Placeholder",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.TokenProperty2.Label",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.TokenProperty2.Note",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.TokenProperty2.Placeholder",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.Property.Hint",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.OperatorValue.Heading",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.OperatorValue.Note",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.AdvancedTrigger.Name.Warning",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "CLT.TRIGGLER.App.SaveSuccessful",
+    "previous": "condition-lab-triggler/cn.json",
+    "incoming": "ironsworn-impacts/cn.json",
+    "winner": "ironsworn-impacts/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "ginzzzu-portraits/cn.json",
+    "incoming": "minimal-ui/cn.json",
+    "winner": "ginzzzu-portraits/cn.json"
+  },
+  {
+    "key": "APSJournal.color-theme-none.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.color-theme-red.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.stylish-menu.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.stylish-text-menu.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.text-heading-title.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.text-heading.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.text-data-heading.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.text-data.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.text-paragraph.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block.heading",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-black.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-black.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-black.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-blue.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-blue.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-blue.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-cyan.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-cyan.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-cyan.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-green.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-green.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-green.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-orange.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-orange.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-orange.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-purple.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-purple.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-purple.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-red.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-red.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-red.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-yellow.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-yellow.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-yellow.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-card.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-card.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-card.heading",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-card.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-scroll.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-scroll.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-scroll.heading",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-scroll.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-encounter.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-encounter.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-encounter.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-read-aloud.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-read-aloud.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-read-aloud.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-blue-left.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-blue-right.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-cyan-left.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-cyan-right.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-green-left.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-green-right.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-orange-left.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-orange-right.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-purple-left.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-purple-right.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-red-left.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-red-right.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-yellow-left.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue-yellow-right.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.block-dialogue.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-bonus.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-bonus.heading",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-bonus.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-effect.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-effect.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-info.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-info.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-loot.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-loot.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-note.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-note.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-trap.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-trap.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-warning.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-warning.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-blue.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-blue.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-cyan.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-cyan.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-green.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-green.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-orange.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-orange.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-purple.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-purple.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-red.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-red.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-yellow.name",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel-yellow.description",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "APSJournal.panel.body",
+    "previous": "apsj-styles/cn.json",
+    "incoming": "monks-enhanced-journal/cn.json",
+    "winner": "monks-enhanced-journal/cn.json"
+  },
+  {
+    "key": "healthMonitor.control.title",
+    "previous": "health-monitor/cn.json",
+    "incoming": "shr1mps-character-monitor/cn.json",
+    "winner": "shr1mps-character-monitor/cn.json"
+  },
+  {
+    "key": "healthMonitor.chatMessage.heals",
+    "previous": "health-monitor/cn.json",
+    "incoming": "shr1mps-character-monitor/cn.json",
+    "winner": "shr1mps-character-monitor/cn.json"
+  },
+  {
+    "key": "healthMonitor.chatMessage.takes",
+    "previous": "health-monitor/cn.json",
+    "incoming": "shr1mps-character-monitor/cn.json",
+    "winner": "shr1mps-character-monitor/cn.json"
+  },
+  {
+    "key": "healthMonitor.chatMessage.gains",
+    "previous": "health-monitor/cn.json",
+    "incoming": "shr1mps-character-monitor/cn.json",
+    "winner": "shr1mps-character-monitor/cn.json"
+  },
+  {
+    "key": "healthMonitor.chatMessage.loses",
+    "previous": "health-monitor/cn.json",
+    "incoming": "shr1mps-character-monitor/cn.json",
+    "winner": "shr1mps-character-monitor/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "ginzzzu-portraits/cn.json",
+    "incoming": "simple-dice-roller/cn.json",
+    "winner": "simple-dice-roller/cn.json"
+  },
+  {
+    "key": "StoryTeller2.SingleSheetClean",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.SingleSheetMinimal",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.BaseJournalEntry",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.StorySheet",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.FullscreenStorySheet",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.ChangeImage",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.StoryName",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.Settings.Theme",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.Settings.ThemeHint",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.Settings.ThemeBook",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.Settings.Size",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.Settings.SizeHint",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.Settings.BookOpenSound",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "StoryTeller2.Settings.BookOpenSoundHint",
+    "previous": "story-teller-x/cn.json",
+    "incoming": "storyteller2/cn.json",
+    "winner": "story-teller-x/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "simple-dice-roller/cn.json",
+    "incoming": "theatre/cn.json",
+    "winner": "theatre/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "theatre/cn.json",
+    "incoming": "token-mold/cn.json",
+    "winner": "token-mold/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "token-mold/cn.json",
+    "incoming": "token-tooltip-alt/cn.json",
+    "winner": "token-mold/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "token-mold/cn.json",
+    "incoming": "torch/cn.json",
+    "winner": "torch/cn.json"
+  },
+  {
+    "key": "MODULE_NAME",
+    "previous": "chatgpt-item-generator/cn.json",
+    "incoming": "trap-automator/cn.json",
+    "winner": "trap-automator/cn.json"
+  },
+  {
+    "key": "MODULE_DESCRIPTION",
+    "previous": "chatgpt-item-generator/cn.json",
+    "incoming": "trap-automator/cn.json",
+    "winner": "trap-automator/cn.json"
+  },
+  {
+    "key": "I18N.LANGUAGE",
+    "previous": "torch/cn.json",
+    "incoming": "window-controls-next/cn.json",
+    "winner": "window-controls-next/cn.json"
+  },
+  {
+    "key": "I18N.MAINTAINERS",
+    "previous": "torch/cn.json",
+    "incoming": "window-controls-next/cn.json",
+    "winner": "window-controls-next/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Title",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.ButtonLabel",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.JournalButton",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Settings.OpenAIApiKey.Name",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Settings.OpenAIApiKey.Hint",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Settings.ImageModel.Hint",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Settings.ImageModel.Choices.mini",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Settings.ImageModel.Choices.standard",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Dialog.Title",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Dialog.DescriptionPlaceholder",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Dialog.PromptPlaceholder",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Dialog.Type",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Dialog.AspectRatios.square",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Dialog.AspectRatios.landscape",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Dialog.AspectRatios.portrait",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Notifications.NoApiKey",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Notifications.Generating",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Notifications.Error",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Notifications.Saved",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Notifications.GalleryUpdated",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Gallery.Title",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  },
+  {
+    "key": "QUICKBRUSH.Gallery.Description",
+    "previous": "quickbrush/cn.json",
+    "incoming": "wizzlethorpe-labs/cn.json",
+    "winner": "wizzlethorpe-labs/cn.json"
+  }
+]

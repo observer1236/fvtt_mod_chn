@@ -19,7 +19,7 @@
         "settings": {
             "enable-button": {
               "Name": "Display Token Color Marker Button",
-              "Hint": "Controls whether or not the Token Color Marker palatte can be opened from the token hud"
+              "Hint": "Controls whether or not the Token Color Marker palette can be opened from the token hud"
             },
             "enable-button-for-gm-only": {
                 "Name": "Display Button for the GM only",
@@ -36,7 +36,7 @@
             },
             "enable-icon-in-chat-message": {
                 "Name": "Show Color Markers In Chat Message",
-                "Hint": "Shows the token color markers by the tarket's name in the chat message."
+                "Hint": "Shows the token color markers by the target's name in the chat message."
             },
             "max-font-size": {
                 "Name": "Max Pixel Size Of Marker Text",

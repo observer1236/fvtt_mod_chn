@@ -26,6 +26,8 @@
         "font-family": "Font Family",
         "font-size": "Font Size",
         "text-color": "Text Color",
+        "level": "Level",
+        "default-level": "(Default Level)",
         "icon": "Icon",
         "icons": {
           "stairway": "Stairway (Default)",

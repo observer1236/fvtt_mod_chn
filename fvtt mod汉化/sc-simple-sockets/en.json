@@ -18,6 +18,8 @@
       "CannotOpenGem": "Could not open the gem item.",
       "SocketGemChanged": "The socketed gem changed since this sheet was opened. Close it and open the gem again.",
       "MaxReached": "Maximum number of sockets reached.",
+      "EditPermissionDenied": "You do not have permission to modify sockets on this item.",
+      "RemoveGemPermissionDenied": "You do not have permission to remove the gem already in this socket.",
       "GemRequiresSocket": "This gem must be socketed before it can be used.",
       "HostNotSocketable": "This item type cannot receive sockets.",
       "SocketConditionFailed": "That gem does not meet this socket's requirements.",
@@ -27,7 +29,9 @@
       "InsufficientSocketGems": "Not enough socketed gems to consume ({available}/{required}).",
       "SourceGemMissing": "The gem that provides this activity is no longer socketed.",
       "InvalidConsumptionSlot": "The socket slot configured for consumption does not exist.",
-      "InvalidConsumptionTarget": "This socket consumption target is not configured."
+      "InvalidConsumptionTarget": "This socket consumption target is not configured.",
+      "GemUnavailable": "That gem is no longer available.",
+      "GemBroken": "This gem is broken and must be repaired before it can be socketed."
     },
     "Effects": {
       "DefaultName": "Gem Effect"
@@ -189,7 +193,8 @@
       "Saved": "Slot settings saved.",
       "Tabs": {
         "Description": "Description",
-        "Condition": "Condition"
+        "Condition": "Condition",
+        "Checks": "Checks"
       },
       "Hidden": {
         "Label": "Hide slot",
@@ -236,6 +241,14 @@
         "PickerLabel": "Color picker",
         "Clear": "Clear"
       },
+      "FrameImg": {
+        "Label": "Empty socket image",
+        "Hint": "Artwork shown while the slot is empty, such as a battery bay or a rune notch. Leave it blank to use the default socket.",
+        "Placeholder": "Default socket image",
+        "Pick": "Change the empty socket image",
+        "Reset": "Restore the default socket image",
+        "ResetLabel": "Default"
+      },
       "Validation": {
         "InvalidCondition": "The slot condition has invalid code."
       },
@@ -249,6 +262,56 @@
         "Label": "Recharge",
         "Hint": "When and how this gem's charges change automatically — rests, combat periods, or the Recharge d6 check — recovering all charges, losing all charges, or rolling a custom formula.",
         "FormulaPlaceholder": "e.g. 1d4"
+      },
+      "Checks": {
+        "Hint": "Override, for this slot only, the checks configured in the module settings. Anything left on the global setting follows it.",
+        "NoCheck": "No check for this slot",
+        "DcMode": {
+          "Label": "DC",
+          "Hint": "Use the global DC, or give this slot its own: a number or formula, or a DC for each gem rarity.",
+          "Global": "Use the global DC",
+          "Custom": "Number or formula",
+          "Rarity": "By gem rarity"
+        },
+        "DcHint": "A number or a formula without dice, e.g. 10 + 2 * @gem.rarity. A DC of 0 removes the check from this slot.",
+        "RarityDcs": {
+          "Label": "DC by gem rarity",
+          "Hint": "The DC for each rarity of the gem. A DC of 0 needs no check."
+        }
+      },
+      "InsertionCheck": {
+        "Title": "Insertion check",
+        "Disabled": "This check is turned off in the module settings. These overrides only apply once it is enabled.",
+        "Type": {
+          "Label": "Check",
+          "Hint": "The roll made to socket a gem into this slot, instead of the global check."
+        },
+        "Dc": {
+          "Label": "Insertion check DC",
+          "Hint": "A number or a formula without dice. Leave blank to use the global DC; 0 removes the check from this slot."
+        },
+        "Failure": {
+          "Label": "On a failed insertion check",
+          "Hint": "What happens to the gem when the check to socket it into this slot fails."
+        }
+      },
+      "RemovalCheck": {
+        "Title": "Removal check",
+        "Disabled": "This check is turned off in the module settings. These overrides only apply once it is enabled.",
+        "Type": {
+          "Label": "Check",
+          "Hint": "The roll made to take the gem out of this slot, instead of the global check."
+        },
+        "Dc": {
+          "Label": "Removal check DC",
+          "Hint": "A number or a formula without dice. Leave blank to use the global DC; 0 removes the check from this slot.",
+          "Placeholder": "Global"
+        },
+        "Failure": {
+          "Label": "On a failed removal check",
+          "Hint": "What happens to the gem in this slot when the removal check fails.",
+          "Inherit": "Use the global setting"
+        }
       }
     },
     "SocketDescriptions": {
@@ -267,9 +330,23 @@
       "ShowSlot": "Show this slot to players."
     },
     "Settings": {
-      "EditPermission": {
-        "Name": "Edit Socket Permission",
-        "Hint": "The minimum role required to add or remove sockets from items."
+      "Permissions": {
+        "AddSlot": {
+          "Name": "Add Slots",
+          "Hint": "The minimum role required to add new socket slots to items."
+        },
+        "RemoveSlot": {
+          "Name": "Remove Slots",
+          "Hint": "The minimum role required to remove socket slots from items."
+        },
+        "AddGem": {
+          "Name": "Add Gems to Slots",
+          "Hint": "The minimum role required to socket gems into slots."
+        },
+        "RemoveGem": {
+          "Name": "Remove Gems from Slots",
+          "Hint": "The minimum role required to remove gems from slots."
+        }
       },
       "SocketableItemTypes": {
         "Name": "Socketable Item Types",
@@ -387,15 +464,20 @@
         "Name": "Enable Socket Tab on all items",
         "Hint": "If enabled, the Sockets tab appears on every socketable item. If disabled, it must be enabled per item in Details."
       },
-      "SupportMenu": {
-        "Name": "Support the developer",
-        "Label": "Open support popup",
-        "Hint": "Open the Shattered Codex popup with release notes, module highlights, Patreon, Discord, and wiki links."
-      },
-      "DocumentationMenu": {
-        "Name": "Documentation",
+      "WikiLink": {
         "Label": "Open wiki",
         "Hint": "Open the SC - Simple Sockets documentation wiki."
+      },
+      "PatreonLink": {
+        "Label": "Patreon support",
+        "Hint": "Support Shattered Codex development on Patreon."
+      },
+      "DiscordLink": {
+        "Label": "Discord",
+        "Hint": "Join the Shattered Codex Discord server."
+      },
+      "CommunityLinks": {
+        "Aria": "Community links"
       },
       "SocketBehaviorMenu": {
         "Name": "Socket settings",
@@ -407,7 +489,11 @@
         "Cancel": "Cancel",
         "Sections": {
           "Rules": "Socket rules",
-          "RulesHint": "Control who can edit sockets and how gems behave when attached or removed.",
+          "RulesHint": "Set how many sockets an item can have and what happens to gems in them.",
+          "Permissions": "Permissions",
+          "PermissionsHint": "Choose the minimum role needed to change the sockets of an item.",
+          "Checks": "Gem checks",
+          "ChecksHint": "Optionally require a roll to socket a gem or to take one out, and decide what a failure does.",
           "Display": "Display",
           "DisplayHint": "Adjust how gem damage and the socket tab are presented in the UI."
         }
@@ -425,7 +511,9 @@
           "Types": "Item types",
           "TypesHint": "Choose which item types can receive sockets.",
           "Subtypes": "Gem subtypes",
-          "SubtypesHint": "Select which loot subtypes count as gems and manage custom subtypes. New custom subtypes appear in the selection above as soon as they are added."
+          "SubtypesHint": "Select which loot subtypes count as gems and manage custom subtypes. New custom subtypes appear in the selection above as soon as they are added.",
+          "Advanced": "Advanced",
+          "AdvancedHint": "Personal options for this browser: the What's New popup and troubleshooting logs."
         },
         "CustomBadge": "custom",
         "Save": "Save Changes",
@@ -438,6 +526,94 @@
       "HideSupportCard": {
         "Name": "Hide automatic What's New popup until next update",
         "Hint": "After the What's New popup appears for the current version, this option can keep it hidden until the next update. Uncheck it if you want the popup to appear whenever the world loads."
+      },
+      "DebugTrace": {
+        "Name": "Debug trace logging",
+        "Hint": "Logs item updates, sheet renders, and focus changes to the browser console to diagnose socket UI issues."
+      },
+      "InsertionCheck": {
+        "Section": "Gem insertion check",
+        "Enabled": {
+          "Name": "Require a check to socket gems",
+          "Hint": "When enabled, a player dropping a gem on a socket must pass a check against a DC. A failed check can break or lose the gem."
+        },
+        "Type": {
+          "Name": "Check",
+          "Hint": "The roll made by the actor that owns the item: a tool, skill or ability check, or a flat d20."
+        },
+        "DcMode": {
+          "Name": "DC",
+          "Hint": "How the DC is calculated. Each socket can override it in its own settings; a DC of 0 means no check."
+        },
+        "Dc": {
+          "Name": "Fixed DC",
+          "Hint": "The DC used for every gem."
+        },
+        "DcFormula": {
+          "Name": "DC formula",
+          "Hint": "A formula without dice. It can use the roll data of the item that holds the socket, plus @gem.rarity (0 for no rarity, 1 common … 6 artifact)."
+        },
+        "RarityDcs": {
+          "Name": "DC by gem rarity",
+          "Hint": "The DC used for each rarity of the gem being socketed."
+        },
+        "Failure": {
+          "Name": "On a failed check",
+          "Hint": "The gem can stay in the inventory untouched, break (it must be repaired before it can be socketed) or be destroyed.",
+          "Choices": {
+            "Keep": "Nothing happens: the gem stays in the inventory",
+            "Break": "The gem breaks",
+            "Lose": "The gem is lost"
+          }
+        },
+        "Gm": {
+          "Name": "GMs also roll",
+          "Hint": "By default a GM sockets gems without rolling."
+        }
+      },
+      "RemovalCheck": {
+        "Section": "Gem removal check",
+        "Enabled": {
+          "Name": "Require a check to remove gems",
+          "Hint": "When enabled, a player removing a gem from a socket must pass a check against a DC. A failed check can lose or break the gem."
+        },
+        "Type": {
+          "Name": "Check",
+          "Hint": "The roll made by the actor that owns the item: a tool, skill or ability check, or a flat d20."
+        },
+        "DcMode": {
+          "Name": "DC",
+          "Hint": "How the DC is calculated. Each socket can override it in its own settings; a DC of 0 means no check."
+        },
+        "Dc": {
+          "Name": "Fixed DC",
+          "Hint": "The DC used for every gem."
+        },
+        "DcFormula": {
+          "Name": "DC formula",
+          "Hint": "A formula without dice. It can use the roll data of the item that holds the socket, plus @gem.rarity (0 for no rarity, 1 common … 6 artifact)."
+        },
+        "RarityDcs": {
+          "Name": "DC by gem rarity",
+          "Hint": "The DC used for each rarity of the gem being removed."
+        },
+        "Failure": {
+          "Name": "On a failed check",
+          "Hint": "A broken gem returns to the inventory but cannot be socketed until it is repaired. A lost gem is destroyed.",
+          "Choices": {
+            "Break": "The gem breaks",
+            "Lose": "The gem is lost",
+            "Stay": "The gem stays in the socket"
+          }
+        },
+        "Gm": {
+          "Name": "GMs also roll",
+          "Hint": "By default a GM removes gems without rolling."
+        }
+      },
+      "ConcealUnidentified": {
+        "Name": "Hide gems of unidentified items",
+        "Hint": "Players see gems socketed into an unidentified item, and gems that are themselves unidentified, without their name, image, or description. GMs always see the real gem."
       }
     },
     "SupportCard": {
@@ -445,6 +621,7 @@
       "Intro": "Support us on Patreon to help us keep creating.",
       "Exclusive": "Get access to the exclusive <strong>SC - More Gems</strong> module with 120+ gems and monthly updates. We are also building <strong>SC - Setforge</strong> so you can create item sets.",
       "Discord": "Discord",
+      "DiscordRequests": "Discord & Requests",
       "DiscordInvite": "Join the community",
       "Issues": "Issues / Requests",
       "Link": "Patreon",
@@ -457,12 +634,12 @@
       "ReleaseSubtitle": "SC - Simple Sockets Changelog",
       "ViewModule": "View on wiki",
       "DontShowAgain": "Don't show again until the next update",
-      "FeatureRequest": "Feature Request",
       "Close": "Close",
       "Status": {
         "Free": "Free",
         "Patreon": "Patreon",
-        "New": "New"
+        "New": "New",
+        "EarlyAccess": "Early Access"
       }
     },
     "RollLayout": {
@@ -845,6 +1022,102 @@
             "Subtitle": "{item} has {count} charge pools with missing charges. Choose which one to recharge.",
             "Title": "Choose Charge Pool"
           }
+        },
+        "GemRepair": {
+          "Title": "Gem Repair",
+          "Hint": "Repair broken gems from the user's inventory, or break intact ones, optionally after a check.",
+          "Sections": {
+            "Configuration": "Gem Repair Configuration",
+            "Check": "Repair Check"
+          },
+          "Fields": {
+            "TargetingHint": "When used, this activity lists the gems in the inventory of the actor using it that it can act on and asks which ones to choose.",
+            "Action": {
+              "Label": "Action",
+              "Hint": "Repair lists the actor's broken gems. Break lists the intact ones and marks the chosen gems as broken.",
+              "Choices": {
+                "Repair": "Repair gems",
+                "Break": "Break gems"
+              }
+            },
+            "Amount": {
+              "Mode": {
+                "Label": "Gems per use",
+                "Hint": "How many gems one use can repair or break. Each unit of a stack counts as one gem, and each gem gets its own check.",
+                "Choices": {
+                  "Count": "Limited number",
+                  "All": "All listed gems"
+                }
+              },
+              "Count": {
+                "Label": "Maximum gems"
+              }
+            },
+            "Check": {
+              "Type": {
+                "Label": "Check",
+                "Hint": "Optional roll required to repair or break the gem. On a failure the gem stays as it was.",
+                "Choices": {
+                  "None": "No check",
+                  "Tool": "Tool check",
+                  "Skill": "Skill check",
+                  "Ability": "Ability check",
+                  "Flat": "Flat d20"
+                }
+              },
+              "Tool": {
+                "Label": "Tool"
+              },
+              "Skill": {
+                "Label": "Skill"
+              },
+              "Ability": {
+                "Label": "Ability"
+              },
+              "DcMode": {
+                "Label": "DC",
+                "Hint": "Use a fixed DC, a formula, or a DC for each gem rarity."
+              },
+              "Dc": {
+                "Label": "Fixed DC"
+              },
+              "Formula": {
+                "Label": "DC formula",
+                "Hint": "A formula without dice. It can use the activity's roll data, plus @gem.rarity (0 for no rarity, 1 common … 6 artifact)."
+              },
+              "Rarity": {
+                "Hint": "The DC used for each rarity of the gem being repaired or broken."
+              }
+            }
+          },
+          "App": {
+            "Title": "Choose Gems to Repair",
+            "Subtitle": "{actor} has {count} broken gems. Choose up to {limit} to repair.",
+            "SubtitleAll": "{actor} has {count} broken gems. Choose which ones to repair.",
+            "Confirm": "Repair",
+            "Selected": "{count} selected",
+            "SelectedOf": "{count} of {limit} selected"
+          },
+          "BreakApp": {
+            "Title": "Choose Gems to Break",
+            "Subtitle": "{actor} has {count} intact gems. Choose up to {limit} to break.",
+            "SubtitleAll": "{actor} has {count} intact gems. Choose which ones to break.",
+            "Confirm": "Break"
+          },
+          "RollFlavor": "Gem repair: {gem}",
+          "BreakRollFlavor": "Gem break: {gem}",
+          "Notifications": {
+            "Repaired": "{name} was repaired.",
+            "Failed": "The attempt to repair {name} failed.",
+            "Broken": "{name} was broken.",
+            "BreakFailed": "The attempt to break {name} failed."
+          },
+          "Warnings": {
+            "NoActor": "This activity must be used by an actor.",
+            "NoBrokenGems": "{actor} has no broken gems to repair.",
+            "NoIntactGems": "{actor} has no gems to break.",
+            "InvalidDcFormula": "The repair DC formula \"{formula}\" could not be resolved; using DC {dc}."
+          }
         }
       }
     },
@@ -877,6 +1150,7 @@
         "SourceSlot": "Source gem (this activity)",
         "SlotShort": "slot {slot}",
         "AnyGem": "any socketed gem (slot order)",
+        "GemTag": "gems tagged \"{tag}\"",
         "NameMatch": "gems matching \"{pattern}\""
       },
       "FromLabel": "From",
@@ -899,6 +1173,7 @@
         "sourceSlot": "Source gem (this activity)",
         "any": "Any gem with resource",
         "anyGem": "Any gem (slot order)",
+        "gemTag": "Gem by tag",
         "gemName": "Gem by name",
         "gemNameMatch": "Gem name matches",
         "slot": "Specific slot"
@@ -908,10 +1183,67 @@
         "ResourcePlaceholder": "e.g. battery",
         "GemName": "Gem Name",
         "GemNamePlaceholder": "e.g. Battery Gem",
+        "GemTag": "Gem Tag",
+        "GemTagPlaceholder": "e.g. poison",
         "Slot": "Slot Number",
         "NamePattern": "Name Pattern",
         "NamePatternPlaceholder": "e.g. Fire* or Battery"
       }
+    },
+    "GemCheck": {
+      "DcLabel": "DC {dc}",
+      "Types": {
+        "Flat": "Flat d20",
+        "Tool": "Tool",
+        "Skill": "Skill",
+        "Ability": "Ability"
+      },
+      "DcModes": {
+        "Fixed": "Fixed DC",
+        "Formula": "Formula",
+        "Rarity": "By gem rarity"
+      },
+      "Rarity": {
+        "None": "No rarity"
+      }
+    },
+    "InsertionCheck": {
+      "Flavor": "Gem socketing",
+      "FlavorNamed": "Gem socketing: {gem}",
+      "Notifications": {
+        "Keep": "The check failed: the gem was not socketed.",
+        "Broke": "The check failed: the gem broke while being socketed.",
+        "Lost": "The check failed: the gem was destroyed while being socketed.",
+        "RollFailed": "The insertion check could not be rolled, so the gem was not socketed."
+      }
+    },
+    "RemovalCheck": {
+      "Flavor": "Gem removal",
+      "FlavorNamed": "Gem removal: {gem}",
+      "Notifications": {
+        "ReplaceBlocked": "Remove the gem in this socket first: taking it out requires a check.",
+        "Stay": "The check failed: the gem stays in the socket.",
+        "Broke": "The check failed: the gem broke while being removed.",
+        "Lost": "The check failed: the gem was destroyed while being removed.",
+        "RollFailed": "The removal check could not be rolled, so the gem was not removed."
+      }
+    },
+    "BrokenGem": {
+      "Label": "Broken gem",
+      "Actions": {
+        "Repair": "Repair gem",
+        "Break": "Mark gem as broken",
+        "Toggle": "Break or repair gem"
+      },
+      "Notifications": {
+        "Repaired": "{name} was repaired.",
+        "Broken": "{name} is now broken."
+      }
+    },
+    "UnidentifiedGem": {
+      "Name": "Unidentified Gem",
+      "CannotInspect": "This gem cannot be inspected until it is identified.",
+      "Description": "This gem has not been identified."
     }
   }
 }

@@ -1,4 +1,5 @@
-{"DICE_TRAY": {
+{
+	"DICE_TRAY": {
 		"Adv": "优势",
 		"Advantage": "优势",
 		"DiceTray": "骰子托盘",
@@ -6,8 +7,8 @@
 		"Disadvantage": "劣势",
 		"FateDice": "命运骰",
 		"For": "好运",
-		"Fortune": "好运(kh)",
-		"Misfortune": "厄运(kl)",
+		"Fortune": "幸运",
+		"Misfortune": "不幸",
 		"Mis": "厄运",
 		"Wild": "狂野",
 		"Ace": "Ace",
@@ -20,9 +21,7 @@
 		"KeepHighest": "保持最高",
 		"KeepLowest": "保持最低",
 		"Roll": "掷骰",
-
 		"Optional": "可选",
-
 		"DiceCreator": {
 			"CreateDice": "创建骰子",
 			"Formula": {
@@ -47,34 +46,35 @@
 			"Color": {
 				"name": "颜色",
 				"hint": "填充图像的颜色。"
-			}
+			},
+			"Alternative.name": "替代显示",
+			"Alternative.hint": "如果未加载图像，请选择此选项。"
 		},
-
 		"DiceRows": {
 			"compactMode": {
 				"label": "紧凑模式",
 				"hint": "禁用所有额外的骰子行，并将原有的两行合并为一行。"
 			},
 			"hideNumberInput": {
-				"label": "隐藏数字输入框"
+				"label": "隐藏修改器输入"
 			},
 			"hideNumberButtons": {
-				"label": "隐藏 +/- 按钮"
+				"label": "隐藏修改器按钮"
 			},
 			"hideRollButton": {
 				"label": "隐藏掷骰按钮"
 			},
-			"Instruction1": "点击任意骰子按钮进行编辑。右键点击任意骰子按钮进行删除。"
+			"Instruction1": "点击任意骰子按钮进行编辑。右键点击任意骰子按钮进行删除。",
+			"Preview": "预览",
+			"Pool": "骰子池"
 		},
-
 		"KEYBINGINDS": {
 			"popout": {
 				"name": "切换骰子托盘弹出"
 			}
 		},
-
 		"SETTINGS": {
-			"DiceCreator": "骰子创建",
+			"DiceCreator": "模具编辑器",
 			"DiceRowSettings": "骰子行数配置",
 			"autoOpenPopout": {
 				"name": "自动打开弹出",

@@ -1,5 +1,494 @@
 {
+  "FLASH_TOKEN_BAR": {
+    "ui": {
+      "menus": {
+        "tokenBarTitle": "Flash Token Bar",
+        "dragHandleTooltip": "Drag to reposition menu",
+        "pcs": "Player Characters",
+        "npcs": "NPCs",
+        "groups": "Groups",
+        "noActors": "No actors available",
+        "noActorsDropHint": "No actors (drop actors here or select tokens)",
+        "noGroups": "No groups available",
+        "noGroupsDropHint": "No groups available (drop actors to create)",
+        "noStatusEffects": "No status effects available",
+        "customRoll": "Custom Roll",
+        "rollTypesNotConfigured": "Roll types not configured for this system"
+      },
+      "search": {
+        "placeholder": "Search..."
+      },
+      "tabs": {
+        "statusEffects": "Status",
+        "actions": "Actions",
+        "rollTypes": "Rolls"
+      },
+      "inputs": {
+        "lockMenu": "Lock Menu",
+        "toggleRequests": "Toggle Roll Requests",
+        "skipRollDialog": "Skip Roll Dialogs",
+        "groupRollsMsg": "Toggle Group Rolls",
+        "showOptionsListOnHover": "Show Options on Hover",
+        "openSettings": "Open Settings",
+        "selectAll": "Select All",
+        "filterActors": "Filter Actors",
+        "toggleTargets": "Toggle Targets",
+        "placeTokens": "Place Tokens",
+        "teleportTokens": "Teleport Tokens",
+        "healAll": "Heal All",
+        "killAll": "Kill All",
+        "removeStatus": "Remove Status Effects",
+        "openSheets": "Open Sheets",
+        "groupSelected": "Group Actors",
+        "toggleMovement": "Toggle Movement Lock"
+      },
+      "tooltips": {
+        "favorite": "Drag out to remove",
+        "movementLocked": "Movement locked"
+      },
+      "dialogs": {
+        "worldSettingsLabel": "World Settings",
+        "userSettingsLabel": "User Settings",
+        "userSettingsGMHint": "Your choices here are the defaults for every user. Players may change them for themselves; Reset on their side returns to your defaults.",
+        "toggleHints": "Show/Hide Hints",
+        "rollPromptsFieldset": "Roll & Request Prompts",
+        "customRollTitle": "Custom Roll",
+        "rollFormula": "Roll Formula",
+        "formulaValid": "Formula is valid",
+        "formulaInvalid": "Formula is invalid",
+        "rollButton": "Roll",
+        "formulaPlaceholder": "Type a formula or pick dice below",
+        "reloadRequired": "Some settings require a reload to take effect. Reload now?"
+      },
+      "settings": {
+        "moduleActionsTitle": "Module Actions",
+        "actorActionsTitle": "Actor Actions",
+        "systemDefault": "System default",
+        "firstResource": "First available resource"
+      },
+      "filters": {
+        "title": "Filter Actors",
+        "inCombat": "In Combat",
+        "visible": "Visible Tokens Only",
+        "removeDead": "Hide Dead NPCs"
+      },
+      "contextMenu": {
+        "allGroups": "All Groups",
+        "removeIcon": "Remove Icon",
+        "createMacro": "Create Macro"
+      },
+      "buttons": {
+        "createMacro": "Create Macro",
+        "reset": "Reset",
+        "save": "Save"
+      },
+      "groupRolls": {
+        "selectLeader": "Click an actor to select as Leader",
+        "selectWeakest": "Click an actor to select as Weakest Link",
+        "selectedBadge": "Selected",
+        "targetNumber": "Target",
+        "groupResult": "Group Result",
+        "success": "Success",
+        "failure": "Failure",
+        "successes": "{count} Successes",
+        "failures": "{count} Failures",
+        "pending": "Click to roll",
+        "rollForActor": "Roll for {actor}",
+        "title": "Group Roll",
+        "states": {
+          "requested": "Waiting for player…",
+          "declined": "Declined",
+          "timedOut": "Timed out",
+          "error": "Roll failed",
+          "helping": "Helping"
+        },
+        "details": {
+          "standard": "{successes} successes, {failures} failures (need {required})",
+          "average": "Average: {average}",
+          "averageTarget": "Average: {average} vs {target}",
+          "leader": "Leader: {leader} + {successes} help - {failures} failures = {total}",
+          "weakest": "Weakest: {weakest} + {successes} successes = {total}",
+          "noRolls": "No rolls to evaluate",
+          "noSelection": "No actor selected",
+          "leaderWithAdvantage": "Leader rolled {successes} successes for the group"
+        },
+        "leaderWithAdvantageDescription": "{leader} takes on the challenge, helped with {die}",
+        "followTheExpertDescription": "{expert} ({rank}) leads: followers get +{bonus} circumstance, and untrained followers add their level",
+        "noHelp": "no help",
+        "makeLeader": "Click to take on the challenge instead"
+      },
+      "groups": {
+        "createTitle": "Save Selection as Group",
+        "nameLabel": "Group name",
+        "createButton": "Save Group",
+        "deleteTitle": "Delete Group",
+        "deleteConfirm": "Delete the group \"{name}\"? The actors themselves are not affected.",
+        "toggleMembers": "Show or hide members",
+        "allGroupsTitle": "All Saved Groups",
+        "noSavedGroups": "No groups have been saved yet. Select actors in the bar and use Group Actors to save one.",
+        "memberSummary": "{stored} members, {onScene} on this scene",
+        "memberCount": "{count} members",
+        "createGroup": "Create group",
+        "savedGroupsSource": "Flash Token Bar groups",
+        "actorTypeSource": "{type} actors",
+        "memberCountOne": "{count} member",
+        "selectInBar": "Select in the token bar",
+        "panToToken": "Pan to token",
+        "removeMember": "Remove from group",
+        "removeMemberTitle": "Remove from Group",
+        "removeMemberConfirm": "Remove {member} from {group}? This changes the group in the game system.",
+        "deleteEmptyTitle": "Delete Empty Group",
+        "deleteEmptyConfirm": "{member} was the last member of {group}. Delete the group too?"
+      }
+    },
+    "settings": {
+      "moduleSettingsMenu": {
+        "label": "Flash Token Bar Settings",
+        "title": "Flash Token Bar Settings",
+        "hint": "Configure Flash Token Bar module settings",
+        "tabs": {
+          "generalSettings": "General Settings",
+          "interfaceSettings": "Interface",
+          "rollRequestsSettings": "Roll Requests",
+          "groupRollsSettings": "Group Rolls"
+        }
+      },
+      "showTokenVisionOnHover": {
+        "label": "Show Token Vision on Hover",
+        "hint": "When enabled, the GM can hover over a token on menu list to temporarily see what the token sees. "
+      },
+      "templateAutoTarget": {
+        "label": "Template Auto Targeting",
+        "hint": "When a template is drawn on canvas, should tokens be automatically targeted / selected?",
+        "choices": {
+          "all": {
+            "label": "Target all tokens"
+          },
+          "notFriendly": {
+            "label": "Target non-friendly"
+          },
+          "none": {
+            "label": "Disable auto targetting"
+          }
+        }
+      },
+      "showMenuOnLoad": {
+        "label": "Show Menu on Load",
+        "hint": "When enabled, the flash token bar menu will automatically be visible when you reload Foundry."
+      },
+      "compactMode": {
+        "label": "Use Compact Mode",
+        "hint": "Use compact layout for the flash token bar menu. The character information will only show on hover."
+      },
+      "actorImageSource": {
+        "label": "Portrait Source",
+        "hint": "Show the token image or the actor's portrait on the rows of the bar.",
+        "choices": {
+          "token": "Token image",
+          "actor": "Actor portrait"
+        }
+      },
+      "menuLayout": {
+        "label": "Menu Layout",
+        "hint": "Choose the layout direction for the flash token bar menu.",
+        "choices": {
+          "vertical": "Vertical",
+          "horizontal": "Horizontal"
+        }
+      },
+      "maxIconsPerRow": {
+        "label": "Max Action Icons Visible",
+        "hint": "Maximum number of actor action icons to show at once. When more icons are enabled, navigation arrows will appear to scroll through them."
+      },
+      "menuIconsLayout": {
+        "label": "Menu Icon Layout",
+        "hint": "Customize which icons appear in the menu and their order. Drag icons to reorder them and toggle them on/off."
+      },
+      "rollRequestsEnabled": {
+        "label": "Enable Roll Requests",
+        "hint": "When enabled, rolls for player-owned actors will be sent as requests for the player to roll instead of being rolled by the GM. Requires the socketlib module."
+      },
+      "skipRollDialog": {
+        "label": "Skip Roll Dialogs (GM)",
+        "hint": "Skip the system roll configuration dialog and roll with the system defaults. Choose which rolls it applies to below. Holding Shift, Alt, Ctrl or Cmd while rolling always skips the dialog, whether this is on or not."
+      },
+      "skipRollDialogOption": {
+        "label": "Which Roll Dialogs to Skip (GM)",
+        "hint": "Which dialogs are skipped while Skip Roll Dialogs is on. Requested rolls skip the dialog on the player’s side; local rolls skip it on yours. Systems whose adapter ignores the option still show their dialog.",
+        "choices": {
+          "1": "All roll dialogs",
+          "2": "Only when sending roll requests",
+          "3": "Only on local rolls"
+        }
+      },
+      "showRequestPrompt": {
+        "label": "Show Roll Dialog to Player on Request",
+        "hint": "When enabled, a requested roll is triggered on the player's client right away and they get the system roll dialog. When disabled, the request is posted to chat and the player must click the dice button on the card to roll."
+      },
+      "autoRollNPCs": {
+        "label": "Auto-Roll for GM-Controlled Characters",
+        "hint": "When enabled, actors you control roll immediately. When disabled, their roll is posted to chat and you click the dice button on the card to roll."
+      },
+      "rollPacingDelay": {
+        "label": "Delay Between Rolls (GM)",
+        "hint": "How long to wait between the rolls of a multi-actor action, so they arrive one at a time instead of all at once. When Dice So Nice is installed each roll waits for its dice animation to finish and this delay is only used for rolls it does not animate. Set to 0 to roll everyone at once."
+      },
+      "publicPlayerRolls": {
+        "label": "Public Player Rolls",
+        "hint": "When enabled, player rolls (including roll requests) will always be public. When disabled, players use their current roll privacy setting. GMs always use their own roll privacy setting."
+      },
+      "initiateCombatOnInitiative": {
+        "label": "Initiate Combat on Request",
+        "hint": "When enabled, requesting a roll will automatically start combat if not already in combat."
+      },
+      "useGMTargetTokens": {
+        "label": "Use GM Target Tokens",
+        "hint": "When enabled, the player will use the GM's currently targeted tokens when rolling. When disabled, the player will use their own targets."
+      },
+      "groupRollsMsgEnabled": {
+        "label": "Enable Group Roll Messages",
+        "hint": "When enabled, rolling for multiple actors will create a single group roll chat message instead of individual messages."
+      },
+      "groupRollResultMode": {
+        "label": "Group Roll Calculation Method",
+        "hint": "How to calculate the group roll result. 'Half Must Succeed' requires half to succeed, 'Group Average' averages all rolls, 'Leader with Help' and 'Weakest Link' require GM to select an actor after rolls complete. 'Follow the Expert' (Pathfinder 2e) lets the most proficient actor, at least Expert, lead: everyone else gets a circumstance bonus from the expert's rank (+2 Expert, +3 Master, +4 Legendary) and untrained followers add their level; each character keeps their own degree of success.",
+        "choices": {
+          "0": "System default",
+          "1": "Half Must Succeed",
+          "2": "Group Average",
+          "3": "Leader with Help",
+          "4": "Weakest Link",
+          "5": "Follow the Expert",
+          "6": "Leader with Advantage"
+        },
+        "followTheExpertBonus": "Follow the Expert"
+      },
+      "showTargetValueToPlayers": {
+        "label": "Show Target Value to Players",
+        "hint": "When enabled, players can see the target value/DC in group roll messages. When disabled, only the GM can see it."
+      },
+      "showGroupResultToPlayers": {
+        "label": "Show Group Result to Players",
+        "hint": "When enabled, players can see the success/failure summary in group roll messages. When disabled, only the GM can see it."
+      },
+      "groupRollNPCHidden": {
+        "label": "Hide NPC Rolls from Players",
+        "hint": "When enabled, NPC rolls in group messages will be hidden from players. GMs can always see all rolls."
+      },
+      "concealNPCNames": {
+        "label": "Conceal NPC Names",
+        "hint": "When enabled, NPC names in group roll messages will be replaced with '???' for players. GMs can always see true names."
+      },
+      "playerAccess": {
+        "label": "Show Bar to Players",
+        "hint": "Players get the bolt icon and a bar limited to player characters and their groups. They can only select and act on characters they own; GM-only actions are hidden."
+      },
+      "groupSources": {
+        "label": "Group actor types to use",
+        "hint": "Which groups the Groups tab shows: groups saved with Flash Token Bar, and any actor type in this system that holds members. Group actor types left out here don't show in the PCs or NPCs tabs either."
+      },
+      "showOnlyPCsWithToken": {
+        "label": "Only Show Actors with Tokens",
+        "hint": "The PCs and Groups tabs on the menu will only show actors with tokens in the current scene, unless you explicitly drag an actor from directory into the menu. If disabled, all characters with player ownership will be shown."
+      },
+      "showOptionsListOnHover": {
+        "label": "Show Roll/Status Menu on Hover",
+        "hint": "When enabled, the roll options accordion will appear when you hover over the menu with actors selected. When disabled, click the toggle list button to show roll options."
+      },
+      "autoHideActionIcons": {
+        "label": "Auto-Hide Action Icons",
+        "hint": "When enabled, the action icons will be hidden until you hover over the token bar."
+      },
+      "tooltipAutoDismiss": {
+        "label": "Tooltip Auto-Dismiss (seconds)",
+        "hint": "Time in seconds before tooltips automatically disappear. Set to 0 to disable tooltips entirely. Default is 2 seconds."
+      },
+      "tokenMovementSpeed": {
+        "label": "Token Movement Speed (sq/second)",
+        "hint": "Controls how fast tokens animate when dragged (grid spaces per second). Foundry default is 6. Higher = faster, lower = slower."
+      },
+      "autoBlockMovementInCombat": {
+        "label": "Auto Block Movement in Combat",
+        "hint": "When enabled, players won't be able to move tokens when out of turn. The GM can still move tokens at all times, and can momentarily unblock them for players during combat via menu when needed."
+      },
+      "debugMode": {
+        "label": "Debug Mode",
+        "hint": "Enable debug mode to show additional logging information"
+      },
+      "supportPatreon": {
+        "label": "Support on Patreon",
+        "buttonLabel": "Support on Patreon",
+        "hint": "Support the development of Flash Token Bar and other Carolingian modules"
+      },
+      "flashIconInSceneControls": {
+        "label": "Bolt Icon in Scene Controls",
+        "hint": "Show the token bar toggle in the scene controls on the left instead of next to the chat controls. Used automatically when the chat controls are hidden."
+      },
+      "lockMenuPosition": {
+        "label": "Lock Menu Position",
+        "hint": "When the menu is locked, also prevent it from being dragged."
+      },
+      "selectedTrackedResource": {
+        "label": "Tracked Resource",
+        "hint": "Resource shown as the bar under each actor and used by Heal All and Kill All. Leave empty to use the first resource the system provides."
+      },
+      "addMacrosToFolder": {
+        "label": "Add Macros to Folder",
+        "hint": "Place macros created from the token bar in a \"Flash Token Bar\" macro folder."
+      },
+      "rollRequestTimeout": {
+        "label": "Roll Request Timeout (seconds)",
+        "hint": "How long the GM waits for a player to answer a roll request before the group roll marks it as timed out. Set to 0 to wait forever."
+      },
+      "showOfflineNotifications": {
+        "label": "Offline Owner Notifications",
+        "hint": "Notify the GM when a roll for a player-owned actor is rolled locally because its owner is offline."
+      }
+    },
+    "contextMenu": {
+      "blockFromMenu": "Block from Token Bar",
+      "unblockFromMenu": "Unblock from Token Bar",
+      "toggleFavorite": "Toggle Token Bar Favorite",
+      "removeFavorite": "Remove from Token Bar favourites"
+    },
+    "notifications": {
+      "rollRequest": "{gm} requested a {rollType} roll for {actor}",
+      "rollRequestSent": "Roll request sent to {player} for {actor}",
+      "rollRequestsSent": "Roll requests sent for {actors}",
+      "rollRequestsPosted": "Roll requests posted to chat for {actors}",
+      "rollError": "Failed to execute roll for {actor}",
+      "noPermissionToRoll": "You do not have permission to roll for this actor",
+      "socketlibMissing": "socketlib module is required for roll requests. Please install and enable it.",
+      "followTheExpert": "{expert} ({rank}) is leading the group",
+      "noExpertFound": "No actor has at least Expert proficiency. Rolling without Follow the Expert bonus.",
+      "actorBlocked": "{actor} has been blocked from the token bar",
+      "actorUnblocked": "{actor} has been unblocked from the token bar",
+      "noValidActorsSelected": "No valid actors selected",
+      "actorsHealed": "Selected actors are fully healed",
+      "actorsKilled": "Selected actors HP set to 0",
+      "statusEffectsRemoved": "Removed {count} status effect(s) from {actors} actor(s)",
+      "noStatusEffectsToRemove": "No status effects to remove",
+      "noActorsSelected": "No actors selected",
+      "selectTokensToGroup": "Select tokens to group",
+      "noOwnedActorsSelected": "None of the selected actors are owned by you",
+      "movementLocked": "Movement locked for {count} token(s)",
+      "movementUnlocked": "Movement unlocked for {count} token(s)",
+      "movementRestricted": "The GM has restricted movement for this token",
+      "noTokensForMovementLock": "No tokens found for selected actors",
+      "settingsUpdated": "Settings updated successfully",
+      "tokensPlaced": "Placed {count} token(s)",
+      "tokenPlacementCancelled": "Token placement cancelled",
+      "noActorsSelectedForPlacement": "No actors selected for token placement",
+      "tokensTeleported": "Teleported {count} token(s)",
+      "teleportCancelled": "Teleport cancelled",
+      "teleportReady": "Teleporting {count} token(s). Navigate to desired scene and click canvas to place them. Right-click to cancel.",
+      "noTokensSelectedForTeleport": "No tokens selected for teleport",
+      "iconRemoved": "Icon {iconName} removed from menu",
+      "iconRemoveFailed": "Failed to remove icon from menu",
+      "macroCreated": "Macro \"{macroName}\" created successfully",
+      "macroCreationFailed": "Failed to create macro",
+      "libWrapperRecommended": "Flash Token Bar 5e: libWrapper is not required, but it is recommended for token movement speed and tooltip auto-dismiss.",
+      "invalidFormula": "Invalid formula: {formula}",
+      "statusEffectApplied": "Applied \"{effectName}\" to {success}/{total} actor(s)",
+      "statusEffectRemoved": "Removed \"{effectName}\" from {success}/{total} actor(s)",
+      "statusEffectNotFound": "Status effect \"{effectId}\" not found",
+      "menuNotOpen": "Open the token bar first",
+      "groupCreated": "Group \"{name}\" created",
+      "conflictingModule": "{module} did not start because {conflicts} is active and already includes the token bar. Enable only one of the two modules.",
+      "systemSpecificModule": "{system} has a dedicated module with more features: {module} ({url}). You can keep using Flash Token Bar or switch to it.",
+      "actorNotFound": "Actor not found",
+      "dropError": "Error adding actor to menu",
+      "actorAlreadyAdded": "{actor} is already in the menu",
+      "actorsHealedCount": "Fully healed {affected} of {total} selected actor(s)",
+      "actorsKilledCount": "Set {affected} of {total} selected actor(s) to 0",
+      "noActorsAffected": "No changes made to the {total} selected actor(s)",
+      "gmOnlyTeleport": "Only GMs can teleport tokens to another scene",
+      "teleportInProgress": "Teleportation already in progress",
+      "teleportFailed": "Failed to teleport tokens",
+      "noValidTokensForTeleport": "No valid tokens found for teleportation",
+      "invalidTeleportDestination": "Invalid destination scene or location provided for teleportation",
+      "sceneNotFound": "Scene \"{scene}\" not found",
+      "someTokensSkippedForTeleport": "Some token IDs were invalid and skipped. {count} token(s) will be teleported.",
+      "gmOnlyPlacement": "Only GMs can place tokens",
+      "placementInProgress": "Token placement already in progress",
+      "placementReady": "Click to place {count} token(s) one at a time, right-click to skip current token",
+      "invalidPlacementLocation": "Invalid location provided for token placement",
+      "movementUpdateFailed": "Failed to update token movement restrictions",
+      "rollRequestTimedOut": "Roll request for {actor} timed out",
+      "ownerOffline": "{player} is offline; rolling for {actor} locally",
+      "ownersOffline": "Owners offline; rolled locally for {actors}",
+      "macroNotAvailable": "No macro is available for the {iconName} icon",
+      "macroFolderFailed": "Failed to create the Flash Token Bar macro folder. The macro will be created without a folder.",
+      "groupNotOnScene": "No member of this group is on the current scene",
+      "memberRemoved": "{member} removed from {group}",
+      "memberRemoveFailed": "Could not remove {member} from {group}"
+    },
+    "systemConfig": {
+      "menuName": "System Config",
+      "menuLabel": "System Config",
+      "menuHint": "Set up which rolls the Rolls tab offers in {system}. Only used because no Flash Token Bar adapter supports this system yet.",
+      "title": "System Config",
+      "intro": "Pick what actors can roll in <strong>{system}</strong>. Tick the rolls to show in the Rolls tab; <em>Roll with</em> uses the system's own rolls (actor rolls first, then the system's API), and <em>Options from</em> lists what can be rolled (skills, attributes…).",
+      "formulaHelp": "The formula is optional: when set, it is rolled instead of the system's roll. <code>{value}</code> is the chosen option's value, and <code>@</code> paths read the actor's roll data, e.g. <code>{value}d10cs&gt;=6</code> or <code>1d20 + {value}</code>.",
+      "noMethods": "No roll methods or system API were found, so rolls use formulas.",
+      "showInRolls": "Show in the Rolls tab",
+      "labelPlaceholder": "Name shown in the Rolls tab",
+      "remove": "Remove",
+      "rollWith": "Roll with",
+      "formulaOnly": "Formula only",
+      "actorRolls": "Actor rolls",
+      "dataRolls": "Character data rolls",
+      "optionsFrom": "Options from",
+      "noOptions": "None (single roll)",
+      "formula": "Formula",
+      "formulaOptional": "Optional: replaces the system roll",
+      "formulaRequired": "Required, e.g. 1d20 + {value}",
+      "addRow": "Add roll type",
+      "detectAgain": "Detect again",
+      "detected": "{count} new suggestions added",
+      "clear": "Remove setup",
+      "clearConfirm": "Remove your roll setup for this system? Flash Token Bar's built-in setup is used again when there is one; otherwise the Rolls tab stays empty until it is set up again.",
+      "saved": "System setup saved: {count} roll types in the Rolls tab",
+      "untitled": "Roll",
+      "apiRolls": "System API",
+      "passes": "Passes: {params}",
+      "sheetRolls": "Sheet rolls",
+      "usingProfile": "Using Flash Token Bar's built-in setup for {title} (tested with version {version}). Changes you save here replace it for this world; Remove setup brings it back.",
+      "sheetRollsGroup": "Character sheet rolls",
+      "itemRolls": "Item rolls",
+      "profileRolls": "From the built-in setup",
+      "resultLabel": "Result",
+      "result": {
+        "total": "Total vs target",
+        "successes": "Counts successes",
+        "atMost": "Lower is better"
+      }
+    }
+  },
   "FLASH_ROLLS": {
+    "ddbCookieGuide": {
+      "title": "Finding your D&D Beyond cookie",
+      "warning": "Your CobaltSession cookie works like a password. Never share it or post screenshots of it. Logging out of D&D Beyond invalidates it. Flash Token Bar never saves it beyond this browser's local storage, and uses it on the proxy only to talk to D&D Beyond.",
+      "importer": {
+        "title": "Already using DDB Importer?",
+        "body": "Close this guide and click the \"Use DDB Importer cookie\" button under the cookie field. Flash Rolls will reuse the cookie DDB Importer already has."
+      },
+      "manual": {
+        "title": "Copy it from your browser's developer tools",
+        "body": "Do this in Chrome (or Edge, Brave, Opera), signed in to D&D Beyond. Not in the Foundry desktop app."
+      },
+      "common": {
+        "signIn": "Open <a href=\"https://www.dndbeyond.com\" target=\"_blank\" rel=\"noopener noreferrer\">dndbeyond.com</a> and make sure you're signed in.",
+        "openDevtools": "Open the developer tools: press <kbd>F12</kbd> on Windows/Linux or <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> on Mac.",
+        "paste": "Paste the value into the <strong>Cobalt Session Cookie</strong> field in Flash Rolls. It's a long text that usually starts with <code>eyJ</code>."
+      },
+      "chromium": {
+        "tab": "Click the <strong>Application</strong> tab. If you don't see it, click <strong>»</strong> to show more tabs.",
+        "tree": "In the left sidebar, under <strong>Storage</strong>, expand <strong>Cookies</strong> and click <strong>https://www.dndbeyond.com</strong>.",
+        "copy": "Click the <strong>CobaltSession</strong> row, then select and copy its value from the <strong>Cookie Value</strong> panel at the bottom (or double-click the Value cell and press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>C</kbd>)."
+      },
+      "tip": "Flash Rolls also accepts the value with the \"CobaltSession=\" prefix or DDB Importer's JSON format, and cleans it up for you."
+    },
     "notifications": {
       "playerOffline": "{player} is offline. Rolling locally",
       "rollRequestSent": "Roll request for {actor} sent to {player}",
@@ -15,15 +504,17 @@
       "noTargetedTokens": "No targeted tokens found for the roll.",
       "settingsUpdated": "Settings updated",
       "invalidFormula": "Invalid formula: {formula}",
-	  "invalidActorIds": "{numIds} actor(s) not found and skipped: {invalidIds}",
+      "invalidActorIds": "{numIds} actor(s) not found and skipped: {invalidIds}",
       "noActorsSelected": "No actors found for the roll request",
       "invalidActorIdsFormat": "Invalid actor IDs format - must be an array",
       "invalidMacroData": "Invalid macro data - options must be an object",
       "missingRequestType": "Invalid macro data - requestType is required",
       "macroExecutionFailed": "Failed to execute roll request. Please check the macro configuration and try again.",
-	  "clickMapToPlaceTemplate": "Click on the map to place the template",
+      "clickMapToPlaceTemplate": "Click on the map to place the template",
       "macroDataMalformed": "Macro execution failed. The macro data may be malformed.",
       "unknownRequestType": "Unknown request type '{requestType}'. Please check the macro configuration.",
+      "missingRollKey": "Request type '{requestType}' requires a rollKey.",
+      "invalidRollKey": "Unknown rollKey '{rollKey}' for request type '{requestType}'. Valid keys are listed in {lookup}.",
       "macroCreated": "Macro \"{macroName}\" created successfully",
       "actorAddedToFavorites": "{actor} was added to Flash Token Bar favorites",
       "actorRemovedFromFavorites": "{actor} was removed from Flash Token Bar favorites",
@@ -32,7 +523,7 @@
       "actorsSkippedInitiative": "No tokens found for {actors}. Initiative not rolled.",
       "noTokensForInitiative": "The selected actors do not have tokens on the scene. Initiative not rolled.",
       "noCharactersForHitDie": "Hit dice can only be rolled for player characters, not NPCs.",
-	  "noValidActorsSelected": "No valid actors selected.",
+      "noValidActorsSelected": "No valid actors selected.",
       "actorAdded": "{actor} added to Flash Token Bar menu",
       "actorAlreadyAdded": "{actor} is already in the menu",
       "actorNotFound": "Actor not found",
@@ -72,9 +563,14 @@
       "libWrapperRecommended": "Flash Rolls 5e: libWrapper module is not required, but is recommended",
       "autoRollTimeout": "Flash Token Bar: Auto-rolling for {actor} (Midi-QoL timeout expired)",
       "ddbConnected": "Connected to D&D Beyond.",
-      "ddbConnectionFailed": "Failed to connect to D&D Beyond. Check your settings and try again."
+      "ddbConnectionFailed": "Failed to connect to D&D Beyond. Check your settings and try again.",
+      "ddbAuthFailed": "D&D Beyond rejected your Cobalt cookie. It has probably expired: copy a fresh one from dndbeyond.com into the Flash Rolls D&D Beyond settings.",
+      "ddbSessionLimit": "You already have {max} active D&D Beyond Game Log connections. Close one of your other Foundry worlds, then reconnect.",
+      "ddbServerBusy": "The D&D Beyond Game Log relay is at capacity. Flash Rolls will retry in {minutes} minutes.",
+      "ddbCookieMovedToBrowser": "Flash Rolls: your D&D Beyond Cobalt cookie is now stored only in this browser. If you run this world from another browser or computer, enter the cookie there again.",
+      "ddbSyncPushSkipped": "Flash Token Bar: D&D Beyond didn't allow changes to {name} from your account, so Foundry changes to that character won't be sent this session."
     },
-	"rollModePlayerChoice": "Player's Choice",
+    "rollModePlayerChoice": "Player's Choice",
     "contextMenu": {
       "addToFavorites": "Add to Flash Token Bar Menu",
       "removeFromFavorites": "Remove from Flash Token Bar Menu",
@@ -108,19 +604,19 @@
         "label": "Show Group DC to Players",
         "hint": "Enable to show the group DC in the group roll message to players."
       },
-	  "showGroupResultToPlayers": {
+      "showGroupResultToPlayers": {
         "label": "Show Group Result to Players",
         "hint": "Enable to show the group roll result footer (success/failure summary) to players. When disabled, only the GM sees the result summary."
       },
-	  "groupRollNPCHidden": {
+      "groupRollNPCHidden": {
         "label": "Hide NPC rolls in group messages from players",
         "hint": "When enabled, players will not see roll results from actors they don't have observer permission on in group roll messages. GMs always see all results."
       },
-	  "concealNPCNames": {
+      "concealNPCNames": {
         "label": "Conceal NPC Names in Group Rolls",
         "hint": "When enabled, NPC actor names will be replaced with '???' for players in group roll messages. Only applies to NPCs that are visible (not hidden by the 'Hide NPC rolls' setting). GM always sees the actual names."
       },
-	  "interceptTidySheetsGroupRolls": {
+      "interceptTidySheetsGroupRolls": {
         "label": "Intercept Group Rolls from Tidy5e Sheets ",
         "hint": "When enabled, group skill rolls from Tidy5e Sheets will use Flash Token Bar group roll system instead of the default chat prompt. Requires Tidy5e Sheets module."
       },
@@ -134,11 +630,11 @@
           "4": "Weakest Link"
         }
       },
-	  "groupCalculationForSaves": {
+      "groupCalculationForSaves": {
         "label": "Show Group Calculation for Saves",
         "hint": "When enabled, group roll messages for saving throws will include the group calculation result summary. When disabled, save group messages will only show individual results without the group calculation footer."
       },
-	  "autoSelectOnGroupRoll": {
+      "autoSelectOnGroupRoll": {
         "label": "Auto-Select Tokens on Group Roll Complete",
         "hint": "Automatically select tokens on the canvas when a group roll with DC completes. Useful for quickly applying damage or effects to failed/passed saves.",
         "choices": {
@@ -152,7 +648,7 @@
         "label": "Hide Messages from Automatic Save Request by Midi-QOL",
         "hint": "Activate this to reduce repetition especially with Midi-QoL. Save roll messages will be hidden 1 second after all rolls complete and then deleted. This prevents duplicate information with what's shown on Midi-QoL cards."
       },
-	  "fastForwardChatMsgRoll": {
+      "fastForwardChatMsgRoll": {
         "label": "Fast Forward Roll from Chat Requests",
         "hint": "When enabled, clicking on a roll request in chat messages will skip the roll dialog and roll immediately. Players can still hold modifier keys to roll with advantage/disadvantage."
       },
@@ -164,7 +660,7 @@
         "label": "Always Send Requests as Public Rolls",
         "hint": "When GM sends a roll request to player, the roll mode for that specific request will default to 'public'. It can still be changed on the roll dialog. Disable this to use the GM's current roll mode as default."
       },
-	  "useCondensedRollMessage": {
+      "useCondensedRollMessage": {
         "label": "Use Condensed Message for Single Roll Requests",
         "hint": "If enabled, single-actor roll requests will post a condensed roll message similar to group rolls format. This will override the regular roll result message if the roll is a request from GM."
       },
@@ -189,11 +685,11 @@
         "label": "Send Roll Requests from Player Sheets and Other Modules",
         "hint": "When enabled, rolls made by the GM for player characters will be automatically redirected to the owner player, if they are online, from character sheets or other modules."
       },
-	  "showRequestPrompt": {
+      "showRequestPrompt": {
         "label": "Show Roll Dialog to Player on Request",
         "hint": "When enabled, the roll will be immediately triggered on player side and show the roll dialog for them to click on. When disabled, player will only get the chat message on chat log and must click to roll."
       },
-	  "showNPCRequestPrompt": {
+      "showNPCRequestPrompt": {
         "label": "Auto-Roll for GM-Controlled Characters",
         "hint": "When enabled, GM-controlled characters (NPCs) will roll immediately when requested. When disabled, only a chat message is shown and the GM must click to roll."
       },
@@ -213,9 +709,10 @@
           "2": "Skip dialog for player",
           "3": "Skip dialog for GM",
           "4": "Do not skip dialog"
-        }
+        },
+        "midiWarning": "This setting is supplanted by midi-qol consumption rules."
       },
-	  "placeTemplateForPlayer": {
+      "placeTemplateForPlayer": {
         "label": "Place Template for Player on Request",
         "hint": "When enabled, only GM will be prompted to place template. When disabled, the player will be prompted to place template, not the GM."
       },
@@ -225,10 +722,9 @@
         "hint": "",
         "tabs": {
           "generalSettings": "General Settings",
-		  "interfaceSettings": "Interface",
+          "interfaceSettings": "Interface",
           "groupRolls": "Group Rolls",
-          "rollRequests": "Roll Requests",
-          "integrations": "Integrations"
+          "rollRequests": "Roll Requests"
         },
         "fieldsets": {
           "rollDialog": "Roll Dialog",
@@ -240,10 +736,10 @@
           "initiativeOptions": "Combat & Initiative",
           "chatMessages": "Chat Messages",
           "visibility": "Visibility",
-          "dndBeyond": "D&D Beyond (Patreon features)"
+          "activityChatCards": "Activity Chat Cards"
         }
       },
-	  "ddbImportOwnership": {
+      "ddbImportOwnership": {
         "label": "Add ownership to all players",
         "hint": "When enabled, all players will be given ownership of characters imported from D&D Beyond. When disabled, they will have Observer permission."
       },
@@ -259,7 +755,7 @@
         "label": "Do not auto-consume spell slots",
         "hint": "When enabled, D&D Beyond rolls will not automatically consume spell slots in Foundry - they should be tracked manually."
       },
-	  "ddbImportSourcePriority": {
+      "ddbImportSourcePriority": {
         "label": "Character Import Source Priority",
         "hint": "When importing characters from D&D Beyond, choose which rules version to prioritize when multiple compendium sources are available.",
         "choices": {
@@ -284,13 +780,14 @@
         "ddbImporterFailed": "DDB Importer failed to import the character.",
         "ddbImporterError": "An error occurred while importing via DDB Importer.",
         "success": "Character \"{name}\" created ({tier} import, {count} items matched).",
-        "createFailed": "Failed to create character: {error}"
+        "createFailed": "Failed to create character: {error}",
+        "classAddFailed": "Couldn't add the {name} class to the imported character: {error}"
       },
       "initiateCombatOnRequest": {
         "label": "Initiate Combat when Requesting Initiative",
         "hint": "Enable to automatically initiate the a combat encounter when using the menu to request initiative rolls."
       },
-	  "autoRequestInitiativeOnCombatant": {
+      "autoRequestInitiativeOnCombatant": {
         "label": "Auto-Request Initiative for New Combatants",
         "hint": "When enabled, automatically sends initiative roll requests to players when their characters are added to combat. NPCs will roll locally."
       },
@@ -306,7 +803,7 @@
         "label": "Show Menu on Load",
         "hint": "When enabled, the roll requests menu will automatically be visible when you reload Foundry."
       },
-	  "showTokenVisionOnHover": {
+      "showTokenVisionOnHover": {
         "label": "Show Token Vision on Hover",
         "hint": "When enabled, hovering over an actor in the roll requests menu will switch the canvas view to that token's vision. Disable this if you prefer manual token selection."
       },
@@ -329,7 +826,7 @@
         "label": "Remove Template after Damage",
         "hint": "When enabled, the template will be removed when the damage roll is executed."
       },
-	  "templateRemovalTimeout": {
+      "templateRemovalTimeout": {
         "label": "Template Removal Timeout (seconds)",
         "hint": "How many seconds to wait before automatically removing templates, up to 30 seconds. Only works if 'Remove Template' setting is checked."
       },
@@ -338,7 +835,7 @@
         "buttonLabel": "Patreon support",
         "hint": "If you like Flash Token Bar 5e and my other modules, consider giving your support to the development on Patreon."
       },
-	  "exportSettings": {
+      "exportSettings": {
         "label": "Troubleshooting",
         "buttonLabel": "Export settings",
         "hint": "Export your Flash Token Bar 5e settings and active modules to a JSON file for troubleshooting.",
@@ -355,7 +852,13 @@
         "reloadTitle": "Reload Required",
         "reloadPrompt": "Settings have been imported. Reload the page to apply all changes?"
       },
-	  "premiumFeatures": {
+      "premiumFeatures": {
+        "useDdbImporterCookie": "Use DDB Importer cookie",
+        "ddbImporterCookieUsed": "Copied the Cobalt cookie from DDB Importer.",
+        "ddbImporterNoCookie": "DDB Importer doesn't have a Cobalt cookie saved for this browser.",
+        "findCookieGuide": "How to find your cookie",
+        "ddbRollOptions": "Roll Options",
+        "ddbImportOptions": "Import Options",
         "label": "Patreon Features",
         "buttonLabel": "Patreon Features",
         "title": "Patreon Features",
@@ -363,7 +866,8 @@
         "description": "Click 'Authenticate with Patreon' to get access to D&D Beyond features. Free access will be given to all Patreon members (free or not) at least until August 2026.",
         "tabs": {
           "authentication": "Member Authentication",
-          "ddbSettings": "D&D Beyond Options"
+          "ddbSettings": "D&D Beyond Options",
+          "ddbImport": "D&D Beyond Import"
         },
         "patreonAuth": "Patreon Authentication",
         "apiKey": "API Key",
@@ -376,7 +880,7 @@
         "patronName": "Patron",
         "patronTier": "Tier",
         "popupBlocked": "Popup blocked! Please allow popups for this site and try again.",
-		"linkCodeFieldset": "Authenticate with Link Code",
+        "linkCodeFieldset": "Authenticate with Link Code",
         "linkCodeHint": "Can't use popups? Get a code from another device.",
         "getLinkCode": "Click to Get an Auth Code",
         "saveCode": "Save",
@@ -387,9 +891,11 @@
         "testConnectionBtn": "Test Connection",
         "testGameLogBtn": "Test DDB Connection",
         "ddbSettings": "D&D Beyond (Patreon features)",
-        "ddbWarning": "For rolls to be fully captured, characters must be in the D&D Beyond campaign and linked to a Foundry actor. Add your cobalt cookie, campaign id and user id in the fields below.",
-        "ddbWarningImportItems": "If you did not purchase official Foundry D&D modules, *DDB Importer* is recommended to add items, spells and features to compendium before importing the character.",
-        "ddbWarningAfter": "If DDB Importer module is active, it is used for character import. If not available, Flash Token Bar will try to find features, items and spells present in any compendiums. This might not work for your case - either use DDB Importer or create missing items",
+        "ddbImporterActive": "DDB Importer module is active.",
+        "ddbImporterInactive": "DDB Importer module is not active.",
+        "ddbWarningImportItems": "Unless you purchased official Foundry D&D modules, *DDB Importer* is recommended to add items, spells and features to compendium *before* importing the character.",
+        "ddbWarningAfterImporter": "DDB Importer is active, so it is used for character import.",
+        "ddbWarningAfterCompendium": "Flash Token Bar will try to find features, items and spells present in any compendiums. This might not work for your case - either use DDB Importer or create missing items.",
         "noApiKey": "Please enter an API key first.",
         "connectionSuccess": "Connection successful! Welcome, {name}.",
         "connectionFailed": "Authentication failed. Please re-authenticate with Patreon.",
@@ -397,7 +903,7 @@
         "notPatron": "Your Patreon membership does not have access. Reason: {reason}",
         "patreonVerified": "Patreon membership verified",
         "patreonNotVerified": "Patreon membership not verified",
-        "statusConnected": "Connected to D&D Beyond",
+        "statusConnected": "Connection established with D&D Beyond",
         "statusConnecting": "Testing connection...",
         "statusDisconnected": "Disconnected",
         "statusError": "Connection failed",
@@ -443,7 +949,7 @@
         "bulkSyncProgress": "Syncing {current}/{total}: {name}...",
         "bulkImportComplete": "Import complete: {imported} imported, {failed} failed.",
         "bulkSyncComplete": "Sync complete: {synced} synced, {failed} failed.",
-		"importCharacterCompendium": "Import with Compendium Matching",
+        "importCharacterCompendium": "Import with Compendium Matching",
         "importCharacterCompendiumHint": "Import character by matching items from local compendiums (DDB Importer not required)",
         "fetchFailed": "Failed to fetch character data from D&D Beyond.",
         "successDDBImporter": "{name} imported via DDB Importer.",
@@ -459,23 +965,44 @@
         "tooltipOn": "ON",
         "tooltipOff": "OFF",
         "contextReconnect": "Reconnect to Patreon",
-        "patreonRequired": "Connect to Patreon to access special features."
+        "patreonRequired": "Connect to Patreon to access special features.",
+        "ddbSyncOptions": "Character Sync",
+        "ddbSyncIntro": "For characters linked to D&D Beyond, these are kept in step:",
+        "syncCharactersNow": "Sync characters now (D&D Beyond → Foundry)",
+        "syncCharactersDone": "Character sync finished: {synced} synced, {failed} failed.",
+        "ddbSyncFields": {
+          "hitPoints": "Hit points and temporary hit points",
+          "maxHp": "Max HP modifier and max HP override",
+          "spellSlots": "Spell slots and pact slots",
+          "hitDice": "Hit dice",
+          "featureUses": "Feature uses (Lay on Hands, Channel Divinity, free spell casts…)",
+          "equipment": "Equipment: equipped, attuned, quantity and charges",
+          "deathSaves": "Death saves",
+          "inspiration": "Heroic inspiration",
+          "exhaustion": "Exhaustion",
+          "conditions": "Conditions (Blinded, Prone, Invisible…)"
+        },
+        "ddbSyncDirections": "Choose below which direction changes travel."
       },
       "ddbCampaignId": {
-        "label": "D&D Beyond Campaign ID",
-        "hint": "ID found in your campaign URL: dndbeyond.com/campaigns/XXXXXX)."
+        "label": "D&D Beyond Campaign",
+        "hint": "Your campaigns load from your D&D Beyond account. If they can't be loaded, enter the campaign ID or paste the campaign URL (dndbeyond.com/campaigns/XXXXXX).",
+        "choose": "Choose a campaign…",
+        "dm": "DM",
+        "refresh": "Reload campaigns from D&D Beyond",
+        "placeholder": "Campaign ID or URL",
+        "loading": "Loading your D&D Beyond campaigns…",
+        "loadFailed": "Couldn't load your campaigns from D&D Beyond. You can enter the campaign ID instead.",
+        "noCampaigns": "This D&D Beyond account isn't in any campaigns yet.",
+        "savedCampaign": "Saved campaign #{id}"
       },
       "ddbUserId": {
         "label": "D&D Beyond User ID",
-        "hint": "User ID found in browser console - go to campaign page and type console.log(Cobalt.User.ID) in the developer console. This is required to capture D&D Beyond rolls"
+        "hint": "Filled in automatically from your cookie when your campaigns load. To find it manually, open your campaign page on D&D Beyond and run console.log(Cobalt.User.ID) in the browser console."
       },
       "ddbCobaltCookie": {
         "label": "Cobalt Session Cookie",
-        "hint": "Your CobaltSession cookie value from D&D Beyond (required for authentication)"
-      },
-      "proxyApiKey": {
-        "label": "Proxy API Key",
-        "hint": "API key for the Carolingian proxy service (obtained after Patreon authentication)"
+        "hint": "Your CobaltSession cookie value from D&D Beyond (required for authentication). Stored only in this browser."
       },
       "ddbCharacterMappings": {
         "label": "D&D Beyond Character Mappings",
@@ -485,7 +1012,7 @@
         "label": "Use Compact Mode",
         "hint": "Use compact layout for the roll requests menu. The character information will only show on hover."
       },
-	  "actorStatsToShow": {
+      "actorStatsToShow": {
         "label": "Actor Stats to Show",
         "hint": "Choose which stats are displayed for actors in the token bar menu",
         "hp": "HP (Hit Points)",
@@ -493,7 +1020,7 @@
         "dc": "DC (Spell DC)",
         "prc": "PRC (Perception)"
       },
-	  "menuLayout": {
+      "menuLayout": {
         "label": "Menu Layout",
         "hint": "Choose the layout direction for the roll requests menu.",
         "choices": {
@@ -501,7 +1028,7 @@
           "horizontal": "Horizontal"
         }
       },
-	  "maxIconsPerRow": {
+      "maxIconsPerRow": {
         "label": "Max Action Icons Visible",
         "hint": "Maximum number of actor action icons to show at once. When more icons are enabled, navigation arrows will appear to scroll through them."
       },
@@ -521,7 +1048,7 @@
         "label": "Auto Block Movement in Combat",
         "hint": "When enabled, players won't be able to move tokens when out of turn. The GM can still move tokens at all times, and can momentarily unblock them for players during combat via menu when needed."
       },
-	  "tokenMovementSpeed": {
+      "tokenMovementSpeed": {
         "label": "Token Movement Speed (sq/second)",
         "hint": "Controls how fast tokens animate when dragged (grid spaces per second). Foundry default is 6. Higher = faster, lower = slower."
       },
@@ -529,25 +1056,49 @@
         "label": "Tooltip Auto-Dismiss (seconds)",
         "hint": "Time in seconds before tooltips automatically disappear. Set to 0 to disable tooltips entirely. Default is 2 seconds."
       },
-	  "teleportAnimationPath": {
+      "teleportAnimationPath": {
         "label": "Teleport Animation Video",
         "hint": "Path to the video file to play when teleporting tokens. If JB2A is installed, the blue teleportation animation will be used by default. Leave empty to disable animations."
       },
-	  "disableNotifications": {
+      "disableNotifications": {
         "label": "Disable Notification Toasts",
         "hint": "If you are very familiar with Flash Token Bar, you may want to disable the notification snippets for common actions. Error notifications will still be shown"
       },
-	  "lockMenuPosition": {
+      "lockMenuPosition": {
         "label": "Prevent Menu Drag When Locked",
         "hint": "When enabled, toggling the 'Lock Menu' icon will also prevent the menu from being dragged to a new position. The menu will remain fixed in place until unlocked."
       },
-	  "flashIconInSceneControls": {
+      "flashIconInSceneControls": {
         "label": "Show Toggle Button in Scene Controls",
         "hint": "When enabled, the Flash Token Bar toggle button will appear in the left-side Scene Controls instead of the chat controls area. Useful when chat controls are hidden."
       },
       "legacyTokenAssociationsMigrated": {
         "label": "Legacy Token Associations Migration Status",
         "hint": "Internal flag tracking whether legacy token associations have been migrated to the new scene-based format."
+      },
+      "compactActivityCards": {
+        "label": "Compact activity cards",
+        "hint": "Fold attack, damage and healing rolls into the activity card that created them, as rows with a total on the right and a drawer with the dice breakdown. Requires dnd5e 5.3 or newer and is unavailable while midi-qol is active. On dnd5e 6.0 it is kept in sync with the system's 'Summary Chat Cards' client setting: changing either one changes both. When Carolingian UI is active, whichever module ships the newer version of this feature runs it."
+      },
+      "collapseCardTags": {
+        "label": "Collapse card tags by default",
+        "hint": "Show only the most useful tags (activation, range, key properties) on compact activity cards, with a +N chip to reveal the rest."
+      },
+      "labeledCardButtons": {
+        "label": "Labeled card buttons",
+        "hint": "Show a short text label next to the icon on activity card buttons (attack, damage, save, template...). Uncheck to use icon-only buttons."
+      },
+      "retroAdvantageButtons": {
+        "label": "Retroactive advantage buttons",
+        "hint": "Show buttons flanking the total of attack, check and save rolls that apply advantage or disadvantage after the roll, rolling one more d20 and keeping the highest or lowest. Only the roll's author and the GM see them."
+      },
+      "ddbSyncToDDB": {
+        "label": "Foundry → D&D Beyond: Auto-send character changes from Foundry to D&D Beyond",
+        "hint": "When checked, changes made in Foundry are sent to the linked D&D Beyond character a few seconds after they settle. Your Cobalt cookie's account must be allowed to edit the character on D&D Beyond (its owner, or the DM of its campaign). Note: an open D&D Beyond character sheet doesn't update live; refresh the page on D&D Beyond to see the changes."
+      },
+      "ddbSyncFromDDB": {
+        "label": "D&D Beyond → Foundry: auto-sync character changes from D&D Beyond",
+        "hint": "When checked, changes made on D&D Beyond are applied to the linked Foundry character within a few seconds. When unchecked, D&D Beyond changes are only applied when you click \"Sync characters now\"."
       }
     },
     "groupRoll": {
@@ -594,32 +1145,33 @@
         "save": "Save",
         "reloadButton": "Reload",
         "cancelButton": "Cancel",
-		"delete": "Delete",
+        "delete": "Delete",
         "createMacro": "Create Macro",
         "request": "Request",
-        "showCode": "Show Code"
+        "showCode": "Show Code",
+        "selectTargeted": "Select Targeted"
       },
       "inputs": {
         "lockMenu": "Lock Visibility",
         "toggleRollRequests": "Request Rolls",
         "skipRollDialog": "Skip Roll Dialog",
         "groupRollsMsg": "Group Rolls",
-		"selectAll": "Select All",
-		"toggleTargets": "Toggle Targets",
+        "selectAll": "Select All",
+        "toggleTargets": "Toggle Targets",
         "healAll": "Heal Selected",
         "killAll": "Kill Selected",
         "removeStatus": "Remove Status",
         "openSheets": "Open Sheets",
         "showOptionsListOnHover": "Toggle List",
         "openSettings": "Open Settings",
-		"premiumFeatures": "Patreon Features",
+        "premiumFeatures": "Patreon Features",
         "filterActors": "Filter Actors",
         "groupSelected": "Create Group",
         "toggleMovement": "Toggle Movement",
         "contestedRoll": "Contested Roll",
-		"placeTokens": "Place Tokens",
+        "placeTokens": "Place Tokens",
         "teleportTokens": "Teleport Tokens",
-		"transform": "Transformation",
+        "transform": "Transformation",
         "selectTokens": "Select",
         "removeAssociations": "Remove Associations"
       },
@@ -628,7 +1180,7 @@
         "noTokensInScene": "No associated tokens in this scene",
         "associationsRemoved": "Token associations removed for {actor}"
       },
-	  "contextMenu": {
+      "contextMenu": {
         "removeIcon": "Remove Icon",
         "createMacro": "Create Macro"
       },
@@ -651,7 +1203,7 @@
         "toggleHints": "Toggle Hints",
         "reloadRequiredTitle": "Reload Foundry",
         "reloadRequiredLabel": "A reload is required. Reload now?",
-		"uiConfigReloadLabel": "Foundry UI configuration has changed. A reload is recommended to ensure proper theming. Reload now?",
+        "uiConfigReloadLabel": "Foundry UI configuration has changed. A reload is recommended to ensure proper theming. Reload now?",
         "multipleActors": "Multiple Actors",
         "noCombatActive": "There is no active combat encounter. Would you like to create one before rolling initiative?",
         "rerollInitiativeTitle": "Re-roll Initiative?",
@@ -677,7 +1229,7 @@
           "refillAndRoll": "Refill & Roll",
           "refilled": "Hit dice refilled for {actor}"
         },
-		"transformation": {
+        "transformation": {
           "title": "Actor Transformation",
           "transformingActors": "Transforming",
           "favorites": "Favorites",
@@ -806,7 +1358,7 @@
       "menus": {
         "npcs": "NPCs",
         "pcs": "PCs",
-		"groups": "Groups",
+        "groups": "Groups",
         "rollRequestsTitle": "Roll Requests",
         "dragHandleTooltip": "Drag menu",
         "noActors": "No actors",
@@ -854,6 +1406,33 @@
         "entityHelp": "Select which actors should make the roll",
         "skipRollDialog": "Skip Roll Dialog"
       }
+    },
+    "compactCards": {
+      "retroAdvantage": "Apply advantage",
+      "retroDisadvantage": "Apply disadvantage",
+      "retroNormal": "Back to a normal roll",
+      "retroChanged": "Changed after the roll",
+      "retroFailed": "The roll could not be changed.",
+      "normalRoll": "Normal",
+      "enabledSummarySetting": "Flash Token Bar turned on the dnd5e client setting 'Summary Chat Cards' to match its Compact activity cards setting.",
+      "disabledSummarySetting": "Flash Token Bar turned off the dnd5e client setting 'Summary Chat Cards' to match its Compact activity cards setting.",
+      "needsSummarySetting": "Compact activity cards need the dnd5e setting 'Summary Chat Cards' to be enabled.",
+      "pendingSave": "Has not rolled yet",
+      "addTargeted": "Add targeted tokens as targets",
+      "addSelected": "Add selected tokens as targets",
+      "noTargeted": "You have no targeted tokens.",
+      "noSelected": "You have no selected tokens.",
+      "details": "Roll details",
+      "hits": "hits",
+      "misses": "misses",
+      "successes": "successes",
+      "failures": "failures",
+      "targets": "targets",
+      "showAllTags": "Show all tags",
+      "showFewerTags": "Show fewer tags",
+      "handledBy": "Compact activity cards are handled by {module} on this client. Its settings apply and the ones below are ignored.",
+      "selectTargeted": "Select the tokens this roll targeted",
+      "noRecordedTargets": "This roll recorded no targets on the current scene."
     }
   }
 }

@@ -1,28 +1,112 @@
 {
-  "DCHAT.Settings.cleanerChat.Name": "Cleaner Chat",
-  "DCHAT.Settings.cleanerChat.Hint": "Hides avatars and usernames in chat headers for a cleaner appearance.",
-  "DCHAT.Settings.compactChat.Name": "Compact Chat",
-  "DCHAT.Settings.compactChat.Hint": "Applies visual changes to the chat to make it more compact.",
-  "DCHAT.Settings.CollapsibleFormula.Name": "Collapsible Formula",
-  "DCHAT.Settings.CollapsibleFormula.Hint": "Hides dice formulas and makes them collapsible.",
-  "DCHAT.Settings.hideDamageTraits.Name": "Hide Damage Traits",
-  "DCHAT.Settings.hideDamageTraits.Hint": "Hides traits in damage rolls.",
-  "DCHAT.Settings.traitFilter.Name": "Trait Filter",
-  "DCHAT.Settings.traitFilter.Hint": "Hides low-impact traits and limits the number of visible chat traits to 3 (shows all traits when clicked).",
-  "DCHAT.Settings.HideDamageButtons.Name": "Hide Damage Buttons",
-  "DCHAT.Settings.HideDamageButtons.Hint": "Hides damage buttons once they have been used.",
-  "DCHAT.Settings.Groups.Settings": "Settings",
-  "DCHAT.Settings.Groups.PF2eOnly": "PF2e Only",
-  "DCHAT.HideDamageButtons.Show": "Show damage buttons",
-  "DCHAT.HideDamageButtons.Hide": "Hide damage buttons",
-  "DCHAT.HideDamageButtons.ToggleLabel": "Toggle damage buttons",
-  "DCHAT.Tabs.Chat": "Chat",
-  "DCHAT.Tabs.Game": "Game",
-  "DCHAT.Tabs.Whispers": "Whispers",
-  "DCHAT.Tabs.All": "All Tabs",
-  "DCHAT.Clear.NoMessages": "{label}: No messages to clear.",
-  "DCHAT.Clear.Title": "Clear {label}",
-  "DCHAT.Clear.Confirm": "Delete <strong>{count}</strong> message(s) from <strong>{label}</strong>?",
-  "DCHAT.Clear.Success": "{label}: {count} message(s) cleared.",
-  "DCHAT.Clear.Tooltip": "Clear active tab (SHIFT to clear all)"
+  "daavy-chat": {
+    "Settings": {
+      "Groups": {
+        "Settings": "Settings",
+        "PF2eOnly": "PF2e only"
+      },
+      "cleanerChat": {
+        "Name": "Cleaner chat",
+        "Hint": "Hide avatars and usernames in chat headers."
+      },
+      "HideChatFormatting": {
+        "Name": "Hide formatting toolbar",
+        "Hint": "Hide the formatting toolbar in chat."
+      },
+      "CollapsibleFormula": {
+        "Name": "Collapsible formula",
+        "Hint": "Hide dice formulas until clicked."
+      },
+      "hideChatInitiative": {
+        "Name": "Hide initiative messages",
+        "Hint": "Prevent initiative roll messages from being created in chat."
+      },
+      "HidePrivateMessages": {
+        "Name": "Hide private rolls",
+        "Hint": "Hide private rolls from users who cannot see their content."
+      },
+      "AllowPlayerMedia": {
+        "Name": "Allow player media uploads",
+        "Hint": "Allow players to send images and GIFs in chat."
+      },
+      "hideDamageTraits": {
+        "Name": "Hide damage traits",
+        "Hint": "Hide trait tags on damage rolls."
+      },
+      "traitFilter": {
+        "Name": "Trait filter",
+        "Hint": "Hide low-impact traits and limit visible chat traits to 3. Click to expand."
+      },
+      "HideDamageButtons": {
+        "Name": "Hide damage buttons",
+        "Hint": "Hide damage buttons by default."
+      }
+    },
+    "Tabs": {
+      "Chat": "Chat",
+      "Game": "Game",
+      "Whispers": "Whispers",
+      "All": "All tabs"
+    },
+    "Whisper": {
+      "To": "To:",
+      "NoRecipient": "No whisper is available to reply to."
+    },
+    "Mentions": {
+      "Next": "Jump to next mention"
+    },
+    "Clear": {
+      "NoMessages": "No messages to clear in {label}.",
+      "Title": "Clear {label}",
+      "Confirm": "Delete the messages in <strong>{label}</strong>? Total: <strong>{count}</strong>.",
+      "Success": "Deleted messages from {label}. Total: {count}.",
+      "Tooltip": "Clear the active tab. Hold Shift to clear all tabs."
+    },
+    "Pin": {
+      "Pin": "Pin message",
+      "Unpin": "Unpin message",
+      "Manager": "Pin manager",
+      "ManagerEmpty": "No pinned messages.",
+      "ManagerUnpinAll": "Unpin all",
+      "DeletePinned": "Pinned messages cannot be deleted.",
+      "Request": "Request a pin",
+      "RequestTitle": "Pin request",
+      "Requester": "Requested by:",
+      "Accept": "Accept",
+      "Deny": "Deny",
+      "Busy": "A pin request is already in progress.",
+      "NoGm": "No active GM is available for pin requests.",
+      "Sent": "Pin request sent.",
+      "Approved": "Pin request approved.",
+      "Denied": "Pin request denied.",
+      "Error": "Unable to pin the message. Try again."
+    },
+    "HideDamageButtons": {
+      "Show": "Show damage buttons",
+      "Hide": "Hide damage buttons",
+      "ToggleLabel": "Toggle damage buttons"
+    },
+    "Feedback": {
+      "MenuLabel": "Send feedback",
+      "MenuHint": "Send anonymous feedback about Daavy's Chat.",
+      "Category": "Category",
+      "Categories": {
+        "Bug": "Bug",
+        "Suggestion": "Suggestion"
+      },
+      "Message": "Message",
+      "MessageHint": "Describe the bug or suggestion. Leave out personal or private information.",
+      "Cancel": "Cancel",
+      "Send": "Send feedback",
+      "Invalid": "Choose a category and enter a message of up to 3,000 characters.",
+      "Success": "Feedback sent.",
+      "Error": "Unable to send feedback. Try again later."
+    },
+    "Donate": {
+      "Label": "Donate"
+    },
+    "Discord": {
+      "Label": "Discord"
+    }
+  }
 }

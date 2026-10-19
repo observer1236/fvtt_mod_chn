@@ -9,6 +9,13 @@
         }
     },
     "trigger-engine": {
+        "__generic__": {
+            "hint": "A generic triggers application for testing in this system. This application only shows if no other application is registered in your world.",
+            "label": "Register Triggers"
+        },
+        "application": {
+            "await-modules": "Modules Triggers are finishing to be prepared, just wait a second please."
+        },
         "blueprint": {
             "entry": {
                 "add": {
@@ -49,6 +56,15 @@
                     "title": "Switch: {label}"
                 }
             },
+            "special": {
+                "collection": {
+                    "add": {
+                        "title": "Create Persistent Collection",
+                        "type": "Type",
+                        "yes": "Create"
+                    }
+                }
+            },
             "trigger": {
                 "back": "Back To Triggers",
                 "collapse": "Collapse Window",
@@ -79,17 +95,22 @@
                 }
             },
             "triggers": {
-                "close": "Close Window",
+                "close": "Exit Application",
                 "create": "Create Trigger",
                 "export": "Export Triggers",
+                "invalid": "This trigger is invalid<br>It most likely contains missing nodes",
                 "import": "Import Triggers",
+                "locked": "This trigger can't be modified",
+                "save": "Save Triggers",
                 "search": {
                     "clear": "Clear Search",
                     "label": "Search Trigger"
                 },
                 "tags": {
                     "placeholder": "Trigger Tags"
-                }
+                },
+                "toggle": "Toggle all triggers",
+                "updated": "This trigger has been modified since last save"
             },
             "variable": {
                 "delete": {
@@ -122,8 +143,9 @@
             },
             "convertor": {
                 "item-target": "The parent actor",
-                "user-target": "The assigned actor",
-                "target-user": "The primary owner "
+                "region-target": "The targets inside the region",
+                "target-user": "The primary owner ",
+                "user-target": "The assigned actor"
             },
 
             "custom": {
@@ -141,6 +163,9 @@
                 "any": {
                     "title": "Any"
                 },
+                "attachment": {
+                    "title": "Attachment"
+                },
                 "b": {
                     "title": "Entry B"
                 },
@@ -156,17 +181,26 @@
                 "current": {
                     "title": "Current"
                 },
+                "default": {
+                    "title": "Default"
+                },
                 "entry": {
                     "title": "Entry"
                 },
                 "formula": {
                     "title": "Formula"
                 },
+                "index": {
+                    "title": "Index"
+                },
                 "input": {
                     "title": "Input"
                 },
                 "item": {
                     "title": "Item"
+                },
+                "list": {
+                    "title": "List"
                 },
                 "localization": {
                     "title": "Localization Key"
@@ -180,6 +214,21 @@
                 "number": {
                     "title": "Number"
                 },
+                "once": {
+                    "title": "Execute Once"
+                },
+                "path": {
+                    "title": "Trigger Path"
+                },
+                "placeholder": {
+                    "title": "Placeholder"
+                },
+                "point": {
+                    "title": "Point"
+                },
+                "step": {
+                    "title": "Step"
+                },
                 "target": {
                     "title": "Target"
                 },
@@ -189,6 +238,9 @@
                 "text": {
                     "title": "Text"
                 },
+                "token": {
+                    "title": "Token"
+                },
                 "uuid": {
                     "title": "Source UUID"
                 },
@@ -197,6 +249,12 @@
                 },
                 "value": {
                     "title": "Value"
+                },
+                "x": {
+                    "title": "X"
+                },
+                "y": {
+                    "title": "Y"
                 }
             },
             "group": {
@@ -205,13 +263,55 @@
             "node": {
                 "__gate__": {
                     "__gate_entry__": {
+                        "outs": {
+                            "return": "Out"
+                        },
                         "subtitle": "Entry Gate"
                     },
                     "__gate_exit__": {
                         "subtitle": "Exit Gate"
+                    },
+                    "__gate_return__": {
+                        "customs": {
+                            "inputs": {
+                                "return": {
+                                    "label": "Entry"
+                                }
+                            }
+                        },
+                        "subtitle": "Return Gate",
+                        "tooltip": "Reaching this node will break the process of the current gate."
+                    },
+                    "return": "Add Return Gate"
+                },
+                "__special__": {
+                    "__persistent_collection__": {
+                        "in": "Add",
+                        "outputs": {
+                            "collection": {
+                                "title": "Collection"
+                            }
+                        },
+                        "title": "Persistent Collection"
                     }
                 },
                 "action": {
+                    "attach-region": {
+                        "detach": "Detach Scene Region",
+                        "inputs": {
+                            "center": {
+                                "title": "Center to Token"
+                            },
+                            "token": {
+                                "tooltip": "If provided, will only detach if it matches the current token"
+                            }
+                        },
+                        "states": {
+                            "attach": "Attach",
+                            "detach": "Detach"
+                        },
+                        "title": "Attach Scene Region"
+                    },
                     "await-confirm": {
                         "inputs": {
                             "content": {
@@ -219,19 +319,95 @@
                             },
                             "plain": {
                                 "title": "Prompt Text"
-                            },
-                            "timeout": {
-                                "title": "Timeout (s)"
-                            },
-                            "title": {
-                                "title": "Dialog Title",
-                                "tooltip": "Can be a localization key"
                             }
                         },
                         "title": "Await Confirmation"
                     },
+                    "await-delay": {
+                        "alias": {
+                            "repeat": {
+                                "title": "Repeat With Delay"
+                            }
+                        },
+                        "inputs": {
+                            "delay": {
+                                "title": "Delay (ms)",
+                                "tooltip": "Time in milliseconds before execution"
+                            },
+                            "repeat": {
+                                "title": "Repeat",
+                                "tooltip": "Number of execution with the specified delay (1~10)"
+                            },
+                            "start": {
+                                "title": "Starts at 1",
+                                "tooltip": "Should the <code>index</code> start at <code>1</code> instead of <code>0</code>?"
+                            }
+                        },
+                        "states": {
+                            "delay": "Delay",
+                            "repeat": "Repeat"
+                        },
+                        "title": "Await Delay"
+                    },
+                    "await-input": {
+                        "inputs": {
+                            "label": {
+                                "title": "Input Label",
+                                "tooltip": "Can be a localization key"
+                            }
+                        },
+                        "label": "User Input",
+                        "outputs": {
+                            "number": {
+                                "title": "Value"
+                            },
+                            "text": {
+                                "title": "Value"
+                            }
+                        },
+                        "title": "Await User Input"
+                    },
+                    "await-select": {
+                        "inputs": {
+                            "json": {
+                                "title": "Options List",
+                                "tooltip": "Array of <code>{value, label}</code>"
+                            },
+                            "list": {
+                                "title": "Options List",
+                                "tooltip": "Comma separated list of <code>value:Label</code><br>Label can be a localization key<br>You can omit the <code>:Label</code> part"
+                            }
+                        },
+                        "ouputs": {
+                            "value": {
+                                "title": "Selected"
+                            }
+                        },
+                        "states": {
+                            "json": "JSON",
+                            "list": "List"
+                        },
+                        "title": "Await Selection"
+                    },
                     "console-log": {
                         "title": "Console Log"
+                    },
+                    "create-behavior": {
+                        "inputs": {
+                            "events": {
+                                "title": "Events",
+                                "tooltip": "Comma separated list of behavior events"
+                            },
+                            "source": {
+                                "title": "System Source"
+                            }
+                        },
+                        "states": {
+                            "source": "Source Code",
+                            "terrain": "Difficult Terrain",
+                            "trigger": "Trigger Event"
+                        },
+                        "title": "Create Region Behavior"
                     },
                     "create-message": {
                         "title": "Create Chat Message",
@@ -258,6 +434,32 @@
                     "delete-item": {
                         "title": "Delete Item"
                     },
+                    "execute-animation": {
+                        "groups": {
+                            "custom": "Custom Inputs"
+                        },
+                        "inputs": {
+                            "await": {
+                                "title": "Await Execution?",
+                                "tooltip": "Should the node wait for the animation to finish before executing the next one?"
+                            },
+                            "name": {
+                                "title": "Name",
+                                "tooltip": "The name of the animation, filtering which animations are triggered"
+                            },
+                            "options": {
+                                "title": "Options",
+                                "tooltip": "A list of string options that can be used to modify the effect (e.g. pf2e roll options)"
+                            },
+                            "sources": {
+                                "title": "Sources"
+                            },
+                            "user": {
+                                "title": "User Context"
+                            }
+                        },
+                        "title": "Execute Animation"
+                    },
                     "execute-script": {
                         "inputs": {
                             "macro": {
@@ -265,6 +467,9 @@
                             },
                             "script": {
                                 "title": "Script Code"
+                            },
+                            "user": {
+                                "tooltip": "If you want it executed in another <u>User</u> client"
                             }
                         },
                         "states": {
@@ -273,13 +478,54 @@
                         },
                         "title": "Execute Script"
                     },
+                    "execute-trigger": {
+                        "specials": {
+                            "warning": "Be careful not to create infinite loops with this"
+                        },
+                        "title": "Execute Trigger"
+                    },
+                    "move-region": {
+                        "inputs": {
+                            "point": {
+                                "title": "Target Position"
+                            }
+                        },
+                        "states": {
+                            "coord": "Coordinates"
+                        },
+                        "title": "Move Scene Region"
+                    },
                     "update-item": {
                         "inputs": {
                             "path": {
                                 "title": "System Path"
+                            },
+                            "values": {
+                                "title": "Values"
                             }
                         },
+                        "states": {
+                            "array": "Array",
+                            "regular": "Regular"
+                        },
                         "title": "Update Item"
+                    },
+                    "user-targets": {
+                        "alias": {
+                            "only": {
+                                "title": "Get Only Target"
+                            }
+                        },
+                        "outputs": {
+                            "target": {
+                                "tooltip": "Returns a target only when a single one exist"
+                            }
+                        },
+                        "states": {
+                            "all": "All Targets",
+                            "only": "Only Target"
+                        },
+                        "title": "Get User Targets"
                     }
                 },
                 "condition": {
@@ -292,6 +538,9 @@
                             }
                         },
                         "title": "Test If Truthy"
+                    },
+                    "inside-region": {
+                        "title": "Is Inside Region"
                     },
                     "is-combatant": {
                         "title": "Is Current Combatant"
@@ -312,11 +561,17 @@
                     "create-combatant-event": {
                         "title": "Combatant Created"
                     },
+                    "create-item-event": {
+                        "title": "Item Added to Actor"
+                    },
                     "create-token-event": {
                         "title": "Token Created"
                     },
                     "delete-combatant-event": {
                         "title": "Combatant Removed"
+                    },
+                    "delete-item-event": {
+                        "title": "Item Removed from Actor"
                     },
                     "delete-token-event": {
                         "title": "Token Removed"
@@ -324,19 +579,40 @@
                     "execute-event": {
                         "title": "Execute Event"
                     },
+                    "hook-called-event": {
+                        "inputs": {
+                            "gm": {
+                                "title": "GM Only",
+                                "tooltip": "A single GM user will execute this trigger"
+                            },
+                            "name": {
+                                "title": "Hook Name"
+                            }
+                        },
+                        "title": "On Hook Called"
+                    },
                     "move-token-event": {
                         "title": "Token Moved"
                     },
                     "region-event": {
                         "outputs": {
                             "event": {
-                                "title": "Event"
+                                "title": "Event Name"
                             }
                         },
-                        "title": "Scene Region"
+                        "title": "Region Triggered"
                     },
                     "test-event": {
                         "title": "Test Event"
+                    },
+                    "update-item-event": {
+                        "outputs": {
+                            "paths": {
+                                "title": "Update Paths",
+                                "tooltip": "Flattened data paths that were updated"
+                            }
+                        },
+                        "title": "Embedded Item Updated"
                     }
                 },
                 "extractor": {
@@ -346,12 +622,19 @@
                     "extract-item": {
                         "title": "Extract From Item"
                     },
+                    "extract-region": {
+                        "title": "Extract From Region"
+                    },
                     "filter-targets": {
-                        "title": "Filter Targets",
-                        "titles": {
-                            "find": "Find Target",
-                            "loop": "Loop Over Targets"
-                        }
+                        "alias": {
+                            "find": {
+                                "title": "Find Target"
+                            },
+                            "loop": {
+                                "title": "Loop Over Targets"
+                            }
+                        },
+                        "title": "Filter Targets"
                     }
                 },
                 "logic": {
@@ -359,12 +642,13 @@
                         "title": "Actors Match"
                     },
                     "break-loop": {
-                        "title": "Break Current Loop"
+                        "title": "Break Current Process"
                     },
                     "compare-numbers": {
                         "inputs": {
                             "compare": {
                                 "options": {
+                                    "diff": "Different from",
                                     "eq": "Equal to",
                                     "gt": "Greater than",
                                     "gte": "Greater than or equal to",
@@ -392,6 +676,14 @@
                         "title": "Format Text"
                     },
                     "resolve-formula": {
+                        "inputs": {
+                            "actor": {
+                                "title": "actor"
+                            },
+                            "item": {
+                                "title": "item"
+                            }
+                        },
                         "title": "Resolve Formula"
                     },
                     "texts-match": {
@@ -429,10 +721,36 @@
                 },
                 "value": {
                     "current-combatant": {
-                        "title": "Current Combatant"
+                        "title": "Cached Current Combatant"
+                    },
+                    "list-value": {
+                        "inputs": {
+                            "entry": {
+                                "title": "Entries",
+                                "tooltip": "Comma separated list"
+                            }
+                        },
+                        "title": "Cached Text List"
+                    },
+                    "number-value": {
+                        "title": "Cached Number"
                     },
                     "scene-targets": {
-                        "title": "Scene Targets"
+                        "title": "Cached Scene Tokens"
+                    },
+                    "text-value": {
+                        "inputs": {
+                            "content": {
+                                "title": "Enriched Text"
+                            },
+                            "plain": {
+                                "title": "Text"
+                            }
+                        },
+                        "states": {
+                            "description": "Enriched Text"
+                        },
+                        "title": "Cached Text"
                     },
                     "user-value": {
                         "inputs": {
@@ -446,7 +764,7 @@
                                 }
                             }
                         },
-                        "title": "World User"
+                        "title": "Cached World User"
                     }
                 }
             },
@@ -455,14 +773,42 @@
                 "path": "Trigger Path"
             },
             "shared": {
-				"extract": {
+                "extract": {
                     "input": {
                         "label": "Path"
+                    }
+                },
+                "item-event": {
+                    "type": {
+                        "label": "Item Type",
+                        "tooltip": "Comma separated list of item types"
+                    }
+                },
+                "loop": {
+                    "after": {
+                        "label": "After Loop",
+                        "tooltip": "Is executed only once after the full loop is done, even if a <strong>Break Current Process</strong> node is used"
                     }
                 },
                 "numbers": {
                     "disable": {
                         "tooltip": "Set to <code>0</code> to disable"
+                    },
+                    "override": {
+                        "tooltip": "Set to <code>0</code> to not override"
+                    }
+                },
+                "strings": {
+                    "localize": {
+                        "tooltip": "Can be a localization key"
+                    }
+                },
+                "user-query": {
+                    "timeout": {
+                        "label": "Timeout (s)"
+                    },
+                    "title": {
+                        "label": "Dialog Title"
                     }
                 },
                 "variables": {
@@ -472,9 +818,11 @@
             "special": {
                 "break": "Can break current process",
                 "custom": "Has Custom Entries",
+                "delay": "Can Delay Execution",
                 "emit": "Awaits User Input",
                 "loop": "Can Loop Over",
                 "state": "Has Multiple States",
+                "stop": "May not call the next node",
                 "warning": "Be very careful when using this node"
             },
             "state": {
@@ -486,6 +834,9 @@
                 "plain": "Plain Text"
             },
             "tag": {
+                "animation": {
+                    "title": "Animation"
+                },
                 "chat": {
                     "title": "Chat"
                 },
@@ -501,6 +852,9 @@
                 "dialog": {
                     "title": "Dialog"
                 },
+                "if": {
+                    "title": "If"
+                },
                 "loop": {
                     "title": "Loop"
                 },
@@ -509,6 +863,9 @@
                 },
                 "region": {
                     "title": "Region"
+                },
+                "time": {
+                    "title": "Time"
                 },
                 "token": {
                     "title": "Token"
@@ -521,14 +878,12 @@
             "yes": "Save & Close",
             "no": "Close w/o Saving"
         },
-        "confirm-dialog": {
-            "title": "Confirm Dialog"
-        },
         "edit-entry": {
             "array": "Is Array",
             "input": "Input",
             "label": "Label",
             "required": "The field <strong>{name}</strong> is required.",
+            "type": "Type",
             "types": "Types",
             "validation": "The field <strong>{name}</strong> must match the pattern <strong>{pattern}</strong>.",
             "yes": {
@@ -547,7 +902,7 @@
             "name": "Trigger Name",
             "priority": {
                 "label": "Priority",
-                "tooltip": "Tooltips with higher priority will be executed first."
+                "tooltip": "Tooltips with higher priority will be executed first"
             },
             "tags": "Trigger Tags",
             "yes": {
@@ -605,6 +960,7 @@
                 "event": "Events",
                 "gate": "Gates",
                 "node": "Nodes",
+                "special": "Specials",
                 "variable": "Variables"
             },
             "clipboard": {
@@ -613,8 +969,7 @@
             },
             "event": "Event",
             "search": {
-                "label": "Search Node",
-                "placeholder": "Node Name"
+                "label": "Search Node"
             },
             "tags": {
                 "label": "Filter Tags"
@@ -627,6 +982,7 @@
                 }
             },
             "convertor": {
+                "item-text": "The item's sourceId (not its uuid)",
                 "outcome-number": "A number between -1 and 3",
                 "outcome-text": "null, criticalFailure, failure, success, criticalSuccess",
                 "target-text": "The signature value"
@@ -652,6 +1008,9 @@
                 "counter": {
                     "title": "Counter"
                 },
+                "dc": {
+                    "title": "DC"
+                },
                 "effect": {
                     "title": "Effect"
                 },
@@ -660,6 +1019,9 @@
                 },
                 "identifier": {
                     "title": "Identifier"
+                },
+                "level": {
+                    "title": "Level"
                 },
                 "name": {
                     "title": "Name"
@@ -682,6 +1044,12 @@
                 "private": {
                     "title": "Private"
                 },
+                "rank": {
+                    "title": "Proficiency"
+                },
+                "region": {
+                    "title": "Region"
+                },
                 "reroll": {
                     "title": "Is Reroll"
                 },
@@ -691,11 +1059,18 @@
                 "slug": {
                     "title": "Slug"
                 },
+                "traits": {
+                    "title": "Traits"
+                },
+                "type": {
+                    "title": "Type"
+                },
                 "when": {
                     "title": "Triggers When"
                 }
             },
             "group": {
+                "choiceset": "ChoiceSet Selections",
                 "duration": "Duration Data",
                 "roll": "Roll Data",
                 "rule": "Rule Elements",
@@ -712,18 +1087,22 @@
                     "create-effect": {
                         "title": "Create Effect"
                     },
-                    "create-item": {
+                    "create-effect-source": {
                         "customs": {
                             "inputs": {
-                                "choices": {
-                                    "label": "ChoiceSet",
-                                    "tooltip": "<ul><li>flag:&lt;flag&gt;:&lt;index&gt;</li><li>rollOption:&lt;rollOption&gt;:&lt;index&gt;</li></ul>"
+                                "marks": {
+                                    "label": "TokenMark",
+                                    "tooltip": "<ul><li>slug:&lt;slug&gt;:&lt;uuid&gt;</li></ul>"
                                 }
                             }
                         },
                         "groups": {
-                            "choices": "ChoiceSet Selections"
+                            "marks": "TokenMark Selections",
+                            "origin": "system.context"
                         },
+                        "title": "Create Effect From Source"
+                    },
+                    "create-item": {
                         "inputs": {
                             "duplicate": {
                                 "title": "Allow Duplicate"
@@ -733,9 +1112,6 @@
                     },
                     "create-persistent": {
                         "inputs": {
-                            "dc": {
-                                "title": "DC"
-                            },
                             "die": {
                                 "title": "Die"
                             },
@@ -752,35 +1128,43 @@
                         "title": "Decrease Condition"
                     },
                     "effect-badge": {
-                        "title": "Update Effect Badge",
-                        "titles": {
-                            "decrease": "Decrease Effect Badge",
-                            "increase": "Increase Effect Badge"
-                        }
+                        "alias": {
+                            "decrease": {
+                                "title": "Decrease Effect Badge"
+                            },
+                            "increase": {
+                                "title": "Increase Effect Badge"
+                            }
+                        },
+                        "title": "Update Effect Badge"
                     },
                     "effect-duration": {
+                        "alias": {
+                            "decrease": {
+                                "title": "Decrease Effect Duration"
+                            },
+                            "increase": {
+                                "title": "Increase Effect Duration"
+                            }
+                        },
                         "outputs": {
                             "delete": {
                                 "title": "Deleted"
                             }
                         },
-                        "title": "Update Effect Duration",
-                        "titles": {
-                            "decrease": "Decrease Effect Duration",
-                            "increase": "Increase Effect Duration"
-                        }
+                        "title": "Update Effect Duration"
                     },
                     "increase-condition": {
                         "title": "Increase Condition"
                     },
-					"move-time": {
+                    "move-time": {
                         "states": {
                             "threshold": "Thresholds",
                             "unit": "Units"
                         },
                         "title": "Move Time"
                     },
-					"remove-condition": {
+                    "remove-condition": {
                         "title": "Remove Condition"
                     },
                     "roll-damage": {
@@ -811,17 +1195,61 @@
                         },
                         "title": "Send Item to Chat"
                     },
+                    "toggle-option": {
+                        "inputs": {
+                            "checked": {
+                                "title": "Enabled"
+                            },
+                            "item": {
+                                "title": "itemId"
+                            },
+                            "option": {
+                                "title": "option"
+                            }
+                        },
+                        "title": "Toggle RollOption"
+                    },
+                    "update-initiative": {
+                        "alias": {
+                            "after": {
+                                "title": "Move After Combatant"
+                            },
+                            "before": {
+                                "title": "Move Before Combatant"
+                            }
+                        },
+                        "inputs": {
+                            "other": {
+                                "title": "Other Combatant"
+                            }
+                        },
+                        "outputs": {
+                            "value": {
+                                "title": "Initiative"
+                            }
+                        },
+                        "states": {
+                            "after": "After Combatant",
+                            "before": "Before Combatant",
+                            "value": "Set Value"
+                        },
+                        "title": "Update Initiative"
+                    },
                     "update-resource": {
+                        "alias": {
+                            "decrease": {
+                                "title": "Decrease Special Resource"
+                            },
+                            "increase": {
+                                "title": "Increase Special Resource"
+                            }
+                        },
                         "inputs": {
                             "slug": {
                                 "title": "Resource Slug"
                             }
                         },
-                        "title": "Update Special Resource",
-                        "titles": {
-                            "decrease": "Decrease Resource",
-                            "increase": "Increase Resource"
-                        }
+                        "title": "Update Special Resource"
                     }
                 },
                 "condition": {
@@ -832,25 +1260,15 @@
                         "title": "Has Immunity"
                     },
                     "has-item": {
-                        "inputs": {
-                            "slug": {
-                                "title": "Item Slug"
-                            }
-                        },
-                        "outputs": {
-                            "target": {
-                                "title": "Parent"
-                            }
-                        },
-                        "states": {
-                            "slug": "Slug"
-                        },
-                        "title": "Has Item"
+                        "title": "Has Item with Source UUID"
+                    },
+                    "has-item-slug": {
+                        "title": "Has Item with Slug"
                     },
                     "has-option": {
                         "title": "Has Roll Option"
                     },
-					"has-resource": {
+                    "has-resource": {
                         "inputs": {
                             "slug": {
                                 "title": "Resource Slug"
@@ -874,17 +1292,20 @@
                         "title": "Is In Range"
                     },
                     "inside-aura": {
-                        "inputs": {
-                            "once": {
-                                "title": "Execute Once"
-                            }
-                        },
                         "outputs": {
                             "target": {
                                 "title": "Aura Target"
                             }
                         },
                         "title": "Is Inside Aura"
+                    },
+                    "inside-template": {
+                        "inputs": {
+                            "name": {
+                                "title": "Origin Slug"
+                            }
+                        },
+                        "title": "Is Inside Template"
                     },
                     "is-alliance": {
                         "title": "Is of Alliance"
@@ -894,15 +1315,19 @@
                     }
                 },
                 "event": {
-					"action-chat-event": {
-                        "title": "Action Sent to Chat",
+                    "action-chat-event": {
                         "inputs": {
                             "slug": {
                                 "title": "Action Slug"
                             }
-                        }
+                        },
+                        "title": "Action Used",
+                        "titles": {
+                            "regular": "Action Sent to Chat"
+                        },
+                        "tooltip": "If the <u>All Actionable</u> feature of the <u>PF2e Toolbelt</u> module is enabled, this event will only trigger on actual <u>Use</u>"
                     },
-					"attack-roll-event": {
+                    "attack-roll-event": {
                         "title": "Attack Rolled"
                     },
                     "aura-enter-event": {
@@ -964,6 +1389,11 @@
                         }
                     },
                     "damage-taken-event": {
+                        "alias": {
+                            "everything": {
+                                "title": "Damage Taken & Heal Received"
+                            }
+                        },
                         "inputs": {
                             "requires": {
                                 "tooltip": "Must originate from an Actor",
@@ -979,7 +1409,28 @@
                                 }
                             }
                         },
+                        "outputs": {
+                            "types": {
+                                "tooltip": "Type slugs list",
+                                "title": "Types"
+                            }
+                        },
+                        "states": {
+                            "everything": "Everything",
+                            "select": "Select"
+                        },
                         "title": "Damage Taken"
+                    },
+                    "spell-cast-event": {
+                        "outputs": {
+                            "rank": {
+                                "title": "Cast Rank"
+                            }
+                        },
+                        "title": "Spell Cast"
+                    },
+                    "template-placed-event": {
+                        "title": "Template Placed"
                     },
                     "turn-end-event": {
                         "title": "Turn End"
@@ -1000,7 +1451,7 @@
                                 "title": "flag"
                             },
                             "option": {
-                                "title": "rolloPtion"
+                                "title": "rollOption"
                             }
                         },
                         "outputs": {
@@ -1009,6 +1460,9 @@
                             }
                         },
                         "title": "Get ChoiceSet Selection"
+                    },
+                    "find-item": {
+                        "title": "Find Item Instances"
                     },
                     "item-formula": {
                         "title": "Extract Item Formula"
@@ -1039,14 +1493,19 @@
                     "compare-outcomes": {
                         "title": "Compare Degree of Success"
                     },
+                    "compare-ranks": {
+                        "title": "Compare Proficiencies"
+                    },
                     "distance-between": {
                         "inputs": {
-                            "distance": {
-                                "title": "Distance"
-                            },
                             "strict": {
                                 "title": "Strict",
                                 "tooltip": "Do not fallback to active tokens"
+                            }
+                        },
+                        "outputs": {
+                            "distance": {
+                                "title": "Distance"
                             }
                         },
                         "title": "Distance Between Tokens"
@@ -1063,6 +1522,9 @@
                 "splitter": {
                     "split-outcome": {
                         "title": "Split Degree of Success"
+                    },
+                    "split-rank": {
+                        "title": "Split Proficiency"
                     }
                 },
                 "value": {
@@ -1077,6 +1539,11 @@
                 "name": "PF2e Triggers Menu"
             },
             "shared": {
+                "aura": {
+                    "origin": {
+                        "title": "Include Origin"
+                    }
+                },
                 "difficulty-class": {
                     "adjustment": {
                         "title": "Adjustment"
@@ -1091,6 +1558,15 @@
                     },
                     "sf2e": {
                         "title": "SF2e Image Path"
+                    }
+                },
+                "item": {
+                    "choiceset": {
+                        "label": "ChoiceSet",
+                        "tooltip": "<ul><li>flag:&lt;flag&gt;:&lt;index&gt;</li><li>rollOption:&lt;rollOption&gt;:&lt;index&gt;</li></ul>"
+                    },
+                    "slug": {
+                        "title": "Item Slug"
                     }
                 },
                 "item-extraction": {
@@ -1109,6 +1585,12 @@
                         "title": "Extra Traits"
                     }
                 },
+                "toolbelt": {
+                    "targets": {
+                        "title": "Toolbelt Targets",
+                        "tooltip": "Only used if the <u>Target Helper</u> feature of the <u>PF2e Toolbelt</u> module is enabled"
+                    }
+                },
                 "uuid": {
                     "pf2e": {
                         "title": "PF2e Source UUID"
@@ -1120,6 +1602,7 @@
             },
             "state": {
                 "fixed": "Fixed",
+                "split": "Split",
                 "timed": "Timed"
             },
             "tag": {
@@ -1143,6 +1626,9 @@
                 },
                 "save": {
                     "title": "Save"
+                },
+                "spell": {
+                    "title": "Spell"
                 },
                 "turn": {
                     "title": "Turn"

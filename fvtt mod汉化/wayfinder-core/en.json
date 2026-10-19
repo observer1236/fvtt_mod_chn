@@ -14,7 +14,9 @@
       "RosterHint": "Wayfinder modules currently active and registered with the control panel.",
       "HeroEyebrow": "Immersion & Convenience",
       "HeroTitle": "Wayfinder Modules",
-      "HeroAria": "Wayfinder Modules — open wayfindermodules.com in a new tab"
+      "HeroAria": "Wayfinder Modules — open wayfindermodules.com in a new tab",
+      "UpdateBadge": "Update",
+      "UpdateTooltip": "A newer release is available — open the changelog"
     },
     "Theme": {
       "Modern": "Modern (Foundry)",
@@ -44,7 +46,9 @@
     "Settings": {
       "MenuName": "Wayfinder Control Panel",
       "MenuLabel": "Open Dashboard",
-      "MenuHint": "Manage all Wayfinder modules."
+      "MenuHint": "Manage all Wayfinder modules.",
+      "UpdateCheckName": "Check for module updates",
+      "UpdateCheckHint": "Enable to see any modules that have updates available in the module list in Wayfinder Control Panel."
     }
   }
 }

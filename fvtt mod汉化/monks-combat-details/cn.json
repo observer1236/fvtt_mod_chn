@@ -1,6 +1,6 @@
-{"MonksCombatDetails.Turn": "轮到你了 {{combatant.name}}，你要做什么？",
+{
+	"MonksCombatDetails.Turn": "轮到你了 {{combatant.name}}，你要做什么？",
 	"MonksCombatDetails.Next": "准备行动 {{combatant.name}}，下一个就是你",
-
 	"MonksCombatDetails.shownextup.name": "显示'下一个'通知",
 	"MonksCombatDetails.shownextup.hint": "向玩家显示即将轮到他们的通知",
 	"MonksCombatDetails.next-sound.name": "下一回合音效",
@@ -18,7 +18,7 @@
 	"MonksCombatDetails.combat-position.name": "战斗对话框位置",
 	"MonksCombatDetails.combat-position.hint": "设置战斗对话框打开时的位置，而非屏幕中央",
 	"MonksCombatDetails.opencombat.name": "弹出战斗对话框",
-	"MonksCombatDetails.opencombat.hint": "战斗开始时弹出对话框，并切换到聊天窗口",
+	"MonksCombatDetails.opencombat.hint": "当遭遇开始时，弹出战斗列表，并跳转聊天栏",
 	"MonksCombatDetails.switch-combat-tab.name": "切换到战斗标签",
 	"MonksCombatDetails.switch-combat-tab.hint": "创建战斗时自动切换到战斗标签",
 	"MonksCombatDetails.switch-chat-tab.name": "切换到聊天标签",
@@ -93,17 +93,16 @@
 	"MonksCombatDetails.placeholder-image.hint": "默认占位符Token使用的图片",
 	"MonksCombatDetails.show-combat-cr-in-combat.name": "战斗中显示CR",
 	"MonksCombatDetails.show-combat-cr-in-combat.hint": "战斗时在战斗追踪器中显示遭遇CR",
-
 	"MonksCombatDetails.Round": "轮",
 	"MonksCombatDetails.RoundEnd": "每轮结束",
 	"MonksCombatDetails.RoundStart": "每轮开始",
 	"MonksCombatDetails.NotAllInitTitle": "并非所有先攻已掷骰",
 	"MonksCombatDetails.NotAllInitContent": "<p>有战斗者尚未掷先攻。<br/>是否继续开始战斗？</p>",
-	"MonksCombatDetails.HideDefeated": "隐藏战败者？",
+	"MonksCombatDetails.HideDefeated": "隐藏战败？",
 	"MonksCombatDetails.HideDefeatedHint": "自动隐藏标记为战败的战斗者？需要启用跳过战败者",
 	"MonksCombatDetails.CantChangeSpells": "战斗中无法变更已准备法术",
 	"MonksCombatDetails.CreatePlaceholder": "创建占位符",
-	"MonksCombatDetails.SetCurrentCombatant": "设为当前战斗者",
+	"MonksCombatDetails.SetCurrentCombatant": "设置为当前战斗角色",
 	"MonksCombatDetails.SetCombatantPositionTitle": "设置战斗位置",
 	"MonksCombatDetails.SetCombatantPositionContent": "确定要设置当前战斗者吗？",
 	"MonksCombatDetails.Target": "目标",
@@ -119,50 +118,46 @@
 	"MonksCombatDetails.CombatPlaylistHint": "选择战斗开始时播放的列表。当前播放曲目将在战斗期间暂停，战斗结束后恢复",
 	"MonksCombatDetails.ShowCombatCR": "显示遭遇CR",
 	"MonksCombatDetails.ShowCombatCRHint": "在战斗追踪器中显示遭遇的预估CR",
-
 	"MonksCombatDetails.PreventTokenMessage": "进入战斗后，Token只能通过遭遇界面移除",
-
 	"MonksCombatDetails.CombatPreparation": "战斗准备",
 	"MonksCombatDetails.CombatDetails": "战斗详情",
 	"MonksCombatDetails.CombatTracker": "战斗追踪自动化",
 	"MonksCombatDetails.CombatBars": "战斗状态条",
 	"MonksCombatDetails.CombatTurn": "战斗回合通知",
-
 	"MonksCombatDetails.CombatDisplayBars": "战斗显示条:",
-
 	"MonksCombatDetails.PlaceholderCombatantName": "占位符",
-
 	"MonksCombatDetails.unknown": "-",
 	"MonksCombatDetails.easy": "简单",
 	"MonksCombatDetails.average": "普通",
 	"MonksCombatDetails.challenging": "挑战",
 	"MonksCombatDetails.hard": "困难",
 	"MonksCombatDetails.epic": "史诗",
-
 	"MonksCombatDetails.trivial": "轻微",
 	"MonksCombatDetails.low": "低",
 	"MonksCombatDetails.moderate": "中等",
 	"MonksCombatDetails.severe": "严重",
 	"MonksCombatDetails.extreme": "极端",
-
 	"MonksCombatDetails.combatopen.none": "不打开战斗窗口",
 	"MonksCombatDetails.combatopen.everyone": "所有人",
 	"MonksCombatDetails.combatopen.gm": "仅GM",
 	"MonksCombatDetails.combatopen.players": "仅玩家",
-
 	"MonksCombatDetails.autodefeated.none": "无",
 	"MonksCombatDetails.autodefeated.npc-zero": "NPC 0 HP",
 	"MonksCombatDetails.autodefeated.npc-negative": "NPC负HP",
 	"MonksCombatDetails.autodefeated.all-zero": "所有人 0 HP",
 	"MonksCombatDetails.autodefeated.all-negative": "所有人负HP",
-
 	"MonksCombatDetails.placeholderoptions.sidebar": "侧边栏",
 	"MonksCombatDetails.placeholderoptions.popout": "弹出",
 	"MonksCombatDetails.placeholderoptions.both": "两者",
 	"MonksCombatDetails.placeholderoptions.none": "无",
-
 	"MonksCombatDetails.spelloptions.prevent": "阻止变更",
 	"MonksCombatDetails.spelloptions.both": "阻止变更并显示聊天消息",
 	"MonksCombatDetails.spelloptions.true": "显示聊天消息",
-	"MonksCombatDetails.spelloptions.false": "忽略"
+	"MonksCombatDetails.spelloptions.false": "忽略",
+	"MonksCombatDetails.nextup-file.name": "下一个模板",
+	"MonksCombatDetails.nextup-file.hint": "Set the template file to use for the next up notification, leave blank to use notifications instead",
+	"MonksCombatDetails.turn-file.name": "轮到你了模板",
+	"MonksCombatDetails.turn-file.hint": "Set the template file to use for your turn notification, leave blank to use notifications instead",
+	"MonksCombatDetails.hide-defeated-main.name": "隐藏失败的侧面板",
+	"MonksCombatDetails.hide-defeated-main.hint": "If Hide Defeated is turned on for combats, also hide the combatants on the side bar 先攻 tracker"
 }

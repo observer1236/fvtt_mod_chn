@@ -1,13 +1,19 @@
 {
   "revolutionary-piratenames": {
     "message": {
+      "speaker": "Pirate Name Generator",
       "flavor": {
-        "given": "Draws a {gender} {nation} given name.",
-        "surname": "Draws a {nation} surname.",
-        "full": "Draws a {gender} {nation} name.",
-        "ship": "Draws a {nation} ship name."
+        "personal": "Draws a personal name.",
+        "ship": "Draws a name for a {nation} {role}."
       },
-      "speaker": "Pirate Name Generator"
+      "ship": "<p class=\"revolutionary-piratenames-ship-whisper\"><img src=\"{src}\" alt=\"{alt}\" />{name}</p>",
+      "versions": {
+        "lede": "<p><em>A {gender} {nationality} name&hellip;</em></p>",
+        "full": "<p><em>Full Name:</em> {full}</p>",
+        "short": "<p><em>Short Form:</em> {short}</p>",
+        "personal": "<p><em>Personal:</em> {personal}</p>",
+        "formal": "<p><em>Formal:</em> {formal}</p>"
+      }
     },
     "dialog": {
       "person": {
@@ -32,7 +38,7 @@
             "Portuguese": "Portuguese",
             "Scottish": "Scottish",
             "Spanish": "Spanish",
-            "Taino": "Taíno",
+            "Taíno": "Taíno",
             "Welsh": "Welsh",
             "Yoruba": "Yoruba"
           }
@@ -41,19 +47,18 @@
           "label": "Gender",
           "hint": "What gender should the name reflect?",
           "options": {
-            "Random": "Random",
+            "Random Gender": "Random Gender",
             "Masculine": "Masculine",
             "Feminine": "Feminine"
           }
         },
         "actions": {
-          "generate": "Generate Name",
-          "cancel": "Cancel"
+          "generate": "Generate Name"
         }
       },
       "ship": {
         "title": "Generate a Ship’s Name",
-        "nationalities": {
+        "colors": {
           "label": "Colors",
           "options": {
             "Random": "Random",
@@ -64,23 +69,17 @@
             "Pirate": "Pirates"
           }
         },
-        "type": {
-          "label": "Type",
+        "role": {
+          "label": "Role",
           "hint": "Is this a merchantman or a man-of-war?",
           "options": {
-            "Commercial": {
-              "label": "Merchantman",
-              "hint": "Generate a name for a civilian vessel built for commerce and trade."
-            },
-            "Martial": {
-              "label": "Man-of-War",
-              "hint": "Generate a name for a vessel built for war, either a naval vessel or a privateer."
-            }
+            "Random": "Random Role",
+            "Merchantman": "Merchantman",
+            "Man-of-War": "Man-of-War"
           }
         },
         "actions": {
-          "generate": "Generate Name",
-          "cancel": "Cancel"
+          "generate": "Generate Name"
         }
       }
     }

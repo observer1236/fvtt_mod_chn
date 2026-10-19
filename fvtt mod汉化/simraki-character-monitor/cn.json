@@ -1,137 +1,148 @@
 {
-    "simraki-character-monitor": {
-        "SettingChoices": {
-            "NpcMonitorMode": {
-                "Disabled": "禁用",
-                "Owned": "玩家控制",
-                "All": "全部"
-            },
-            "VisibilityMode": {
-                "Disabled": "禁用",
-                "GM": "仅 GM",
-                "Owner": "GM 与 Token 所有者",
-                "All": "所有人"
-            }
-        },
-        "Settings": {
-            "NpcMonitorMode": {
-                "Name": "NPC 监控",
-                "Hint": "追踪对非玩家角色（NPC）所做的更改。"
-            },
-            "MonitorHP": {
-                "Name": "监控生命值",
-                "Hint": "追踪角色生命值的变化"
-            },
-            "MonitorHitDice": {
-                "Name": "监控生命骰",
-                "Hint": "追踪角色生命骰的变化"
-            },
-
-            "MonitorXP": {
-                "Name": "监控经验值",
-                "Hint": "追踪角色卡上经验值的变化"
-            },
-            "MonitorLevel": {
-                "Name": "监控等级",
-                "Hint": "追踪角色卡上的等级变化"
-            },
-            "MonitorSpellPrep": {
-                "Name": "监控法术准备",
-                "Hint": "追踪角色准备或取消准备法术"
-            },
-            "MonitorSpellSlots": {
-                "Name": "监控法术位",
-                "Hint": "追踪角色卡上法术位数量的变化"
-            },
-            "MonitorAC": {
-                "Name": "监控护甲等级（AC）",
-                "Hint": "追踪角色护甲等级（AC）的变化"
-            },
-            "MonitorAbility": {
-                "Name": "监控属性",
-                "Hint": "追踪角色属性值的变化"
-            },
-            "MonitorSkillProficiency": {
-                "Name": "监控技能熟练项",
-                "Hint": "追踪角色技能熟练项的变化"
-            },
-            "MonitorSaveProficiency": {
-                "Name": "监控豁免检定熟练项",
-                "Hint": "追踪角色豁免检定熟练项的变化"
-            },
-            "MonitorToolProficiency": {
-                "Name": "监控工具熟练项",
-                "Hint": "追踪角色工具熟练项的变化"
-            },
-            "MonitorCurrency": {
-                "Name": "监控货币",
-                "Hint": "追踪角色卡上货币的变化"
-            },
-            "MonitorEffects": {
-                "Name": "监控主动效果",
-                "Hint": "追踪角色卡上主动效果的变化"
-            },
-            "MonitorItemQuantity": {
-                "Name": "监控物品数量",
-                "Hint": "追踪角色持有物品数量的变化"
-            },
-            "MonitorItemNameDesc": {
-                "Name": "监控物品名称与描述",
-                "Hint": "追踪角色卡上物品名称和/或描述的变化"
-            },
-            "MonitorItemEquip": {
-                "Name": "监控装备",
-                "Hint": "追踪角色装备或卸下物品"
-            },
-            "MonitorItemAttune": {
-                "Name": "监控调谐",
-                "Hint": "追踪角色与物品调谐或失去调谐"
-            },
-            "MonitorItemIdentify": {
-                "Name": "监控物品鉴定",
-                "Hint": "追踪物品已鉴定/未鉴定状态的变化"
-            },
-            "MonitorItemCharges": {
-                "Name": "监控物品充能",
-                "Hint": "追踪角色卡上物品充能的变化"
-            },
-            "MonitorSheetMode": {
-                "Name": "监控角色卡模式",
-                "Hint": "追踪角色卡在游戏与编辑模式之间的切换"
-            },
-            "MonitorInspiration": {
-                "Name": "监控激励",
-                "Hint": "追踪角色卡上激励的变化"
-            },
-            "MonitorDeathSave": {
-                "Name": "监控死亡豁免",
-                "Hint": "追踪角色卡上死亡豁免检定结果的变化"
-            }
-        },
-        "ChatMessage": {
-            "SheetMode": "角色卡模式",
-            "Description": "描述",
-            "DescriptionChanged": "描述已更改",
-            "HP": {
-                "Value": "生命值",
-                "Max": "最大生命值",
-                "Temp": "临时生命值",
-                "Tempmax": "临时最大生命值"
-            },
-            "Equipped": "装备",
-            "Unequipped": "卸下",
-            "Prepared": "准备",
-            "Unprepared": "取消准备",
-            "AttunesTo": "调谐",
-            "BreaksAttune": "解除调谐",
-            "Enabled": "启用",
-            "Disabled": "禁用",
-            "Added": "添加",
-            "Deleted": "删除",
-            "Identified": "鉴定",
-            "Unidentified": "取消鉴定",
-            "Old": "旧",
-            "New": "新"
-        }
-    }
+	"simraki-character-monitor": {
+		"SettingChoices": {
+			"NpcMonitorMode": {
+				"Disabled": "禁用",
+				"Owned": "玩家控制",
+				"All": "全部"
+			},
+			"VisibilityMode": {
+				"Disabled": "禁用",
+				"GM": "仅 GM",
+				"Owner": "GM 与 Token 所有者",
+				"All": "所有人"
+			}
+		},
+		"Settings": {
+			"NpcMonitorMode": {
+				"Name": "NPC 监控",
+				"Hint": "追踪对非玩家角色（NPC）所做的更改。"
+			},
+			"MonitorHP": {
+				"Name": "监控生命值",
+				"Hint": "追踪角色生命值的变化"
+			},
+			"MonitorHitDice": {
+				"Name": "监控生命骰",
+				"Hint": "追踪角色生命骰的变化"
+			},
+			"MonitorXP": {
+				"Name": "监控经验值",
+				"Hint": "追踪角色卡上经验值的变化"
+			},
+			"MonitorLevel": {
+				"Name": "监控等级",
+				"Hint": "追踪角色卡上的等级变化"
+			},
+			"MonitorSpellPrep": {
+				"Name": "监控法术准备",
+				"Hint": "追踪角色准备或取消准备法术"
+			},
+			"MonitorSpellSlots": {
+				"Name": "监控法术位",
+				"Hint": "追踪角色卡上法术位数量的变化"
+			},
+			"MonitorAC": {
+				"Name": "监控护甲等级（AC）",
+				"Hint": "追踪角色护甲等级（AC）的变化"
+			},
+			"MonitorAbility": {
+				"Name": "监控属性",
+				"Hint": "追踪角色属性值的变化"
+			},
+			"MonitorSkillProficiency": {
+				"Name": "监控技能熟练项",
+				"Hint": "追踪角色技能熟练项的变化"
+			},
+			"MonitorSaveProficiency": {
+				"Name": "监控豁免检定熟练项",
+				"Hint": "追踪角色豁免检定熟练项的变化"
+			},
+			"MonitorToolProficiency": {
+				"Name": "监控工具熟练项",
+				"Hint": "追踪角色工具熟练项的变化"
+			},
+			"MonitorCurrency": {
+				"Name": "监控货币",
+				"Hint": "追踪角色卡上货币的变化"
+			},
+			"MonitorEffects": {
+				"Name": "监控主动效果",
+				"Hint": "追踪角色卡上主动效果的变化"
+			},
+			"MonitorItemQuantity": {
+				"Name": "监控物品数量",
+				"Hint": "追踪角色持有物品数量的变化"
+			},
+			"MonitorItemNameDesc": {
+				"Name": "监控物品名称与描述",
+				"Hint": "追踪角色卡上物品名称和/或描述的变化"
+			},
+			"MonitorItemEquip": {
+				"Name": "监控装备",
+				"Hint": "追踪角色装备或卸下物品"
+			},
+			"MonitorItemAttune": {
+				"Name": "监控调谐",
+				"Hint": "追踪角色与物品调谐或失去调谐"
+			},
+			"MonitorItemIdentify": {
+				"Name": "监控物品鉴定",
+				"Hint": "追踪物品已鉴定/未鉴定状态的变化"
+			},
+			"MonitorItemCharges": {
+				"Name": "监控物品充能",
+				"Hint": "追踪角色卡上物品充能的变化"
+			},
+			"MonitorSheetMode": {
+				"Name": "监控角色卡模式",
+				"Hint": "追踪角色卡在游戏与编辑模式之间的切换"
+			},
+			"MonitorInspiration": {
+				"Name": "监控激励",
+				"Hint": "追踪角色卡上激励的变化"
+			},
+			"MonitorDeathSave": {
+				"Name": "监控死亡豁免",
+				"Hint": "追踪角色卡上死亡豁免检定结果的变化"
+			},
+			"PartyMonitor.Name": "队伍图纸监视",
+			"PartyMonitor.Hint": "监视队伍图纸的更改：成员、货币和共享背包",
+			"MonitorPartyMembers.Name": "监视队伍成员",
+			"MonitorPartyMembers.Hint": "监视队伍成员的加入和移除",
+			"ShowChangedBy.Name": "显示修改人员",
+			"ShowChangedBy.Hint": "在每条消息中添加进行修改的玩家（或 GM）的名称",
+			"MonitorItemContainer.Name": "监视容器物品移动",
+			"MonitorItemContainer.Hint": "监视物品移入容器、移出容器或在容器之间的移动"
+		},
+		"ChatMessage": {
+			"SheetMode": "角色卡模式",
+			"Description": "描述",
+			"DescriptionChanged": "描述已更改",
+			"HP": {
+				"Value": "生命值",
+				"Max": "最大生命值",
+				"Temp": "临时生命值",
+				"Tempmax": "临时最大生命值"
+			},
+			"Equipped": "装备",
+			"Unequipped": "卸下",
+			"Prepared": "准备",
+			"Unprepared": "取消准备",
+			"AttunesTo": "调谐",
+			"BreaksAttune": "解除调谐",
+			"Enabled": "启用",
+			"Disabled": "禁用",
+			"Added": "添加",
+			"Deleted": "删除",
+			"Identified": "鉴定",
+			"Unidentified": "取消鉴定",
+			"Old": "旧",
+			"New": "新",
+			"MemberAdded": "添加了成员",
+			"MemberRemoved": "移除了成员",
+			"ChangedBy": "修改者: {name}",
+			"Inventory": "背包"
+		}
+	}
 }

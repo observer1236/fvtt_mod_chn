@@ -17,7 +17,72 @@
       "journalTheme": "Journal Theme",
       "journalHeaderFont": "Header Font",
       "journalBodyFont": "Body Font",
-      "highconstrast": "High-Constrast"
+      "highconstrast": "High-Constrast",
+      "custom": "Custom",
+      "header": "Header",
+      "color": "Text Color",
+      "sidebar": "Sidebar",
+      "content": "Content",
+      "borderStyle": {
+        "none": "None",
+        "solid": "Solid",
+        "dashed": "Dashed",
+        "dotted": "Dotted",
+        "double": "Double"
+      },
+      "height": "Header Height",
+      "width": "Header Width",
+      "borderWidth": "Border Width",
+      "backgroundRepeat": {
+        "name": "Background Repeat",
+        "repeat": "Repeat",
+        "repeatX": "Repeat Horizontally",
+        "repeatY": "Repeat Vertically",
+        "noRepeat": "No Repeat",
+        "space": "Space",
+        "round": "Round"
+      },
+      "backgroundSize": {
+        "name": "Background Size",
+        "auto": "Auto",
+        "cover": "Cover",
+        "contain": "Contain"
+      },
+      "backgroundBlendMode": {
+        "name": "Background Mode",
+        "normal": "Normal",
+        "multiply": "Multiply",
+        "screen": "Screen",
+        "overlay": "Overlay",
+        "darken": "Darken",
+        "lighten": "Lighten",
+        "colorDodge": "Color Dodge",
+        "colorBurn": "Color Burn",
+        "softLight": "Soft Light",
+        "hardLight": "Hard Light",
+        "difference": "Difference",
+        "exclusion": "Exclusion"
+      },
+      "background": {
+        "name": "Background",
+        "color": "Select Background Color",
+        "coloOpacity": "Select Background Color Opcity",
+        "colorGradient": "Usie ccolor gradient for background",
+        "coloOpacityr2": "Select ssecond Background Color",
+        "color2": "Select second Background Color"
+      },
+      "border": {
+        "width": "Border Width",
+        "style": "Border Style",
+        "color": "Border Color",
+        "radius": {
+          "topLeft": "Top Left Radius",
+          "topRight": "Top Right Radius",
+          "bottomRight": "Bottom Right Radius",
+          "bottomLeft": "Bottom Left Radius"
+        }
+      },
+      "inputInPX": "Input numeric vallu follow by px, like 10px"
     },
     "JOURNAL": {
       "ThemeTooltip": "Click to open the Theme and Font selector",

@@ -1,4 +1,5 @@
-{"MonksWallEnhancement.show-drag-points-together.name": "同时显示拖动点",
+{
+	"MonksWallEnhancement.show-drag-points-together.name": "同时显示拖动点",
 	"MonksWallEnhancement.show-drag-points-together.hint": "在墙面工具上显示一个切换按钮，如果点完全重叠，该按钮会将点拖到一起",
 	"MonksWallEnhancement.allow-doubleclick.name": "允许双击分割",
 	"MonksWallEnhancement.allow-doubleclick.hint": "允许双击一行将墙体一分为二",
@@ -26,16 +27,16 @@
 	"MonksWallEnhancement.swap-wall-direction.hint": "双击右键可切换墙体的方向",
 	"MonksWallEnhancement.snap-tolerance.name": "吸附容差",
 	"MonksWallEnhancement.snap-tolerance.hint": "将墙点吸附到另一个墙点所需的最小距离",
-	
 	"MonksWallEnhancement.DragPointsTogether": "一起拖拽点",
 	"MonksWallEnhancement.FreehandDrawWall": "自由手绘墙",
 	"MonksWallEnhancement.JoinWallPoints": "合并墙点",
 	"MonksWallEnhancement.SnapToPoint": "嵌入最近的墙壁点",
 	"MonksWallEnhancement.ToggleWallsDisplay": "切换墙体显示",
 	"MonksWallEnhancement.AdjustWalls": "调整墙体",
-
 	"MonksWallEnhancement.Save": "保存",
 	"MonksWallEnhancement.Cancel": "取消",
 	"MonksWallEnhancement.EditWallPoints": "编辑墙点",
-	"MonksWallEnhancement.Points": "点"
+	"MonksWallEnhancement.Points": "点",
+	"MonksWallEnhancement.join-tolerance.name": "连接点公差",
+	"MonksWallEnhancement.join-tolerance.hint": "考虑加入点所需的距离。"
 }

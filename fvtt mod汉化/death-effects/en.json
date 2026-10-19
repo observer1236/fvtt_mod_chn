@@ -34,7 +34,8 @@
         "LABEL": "Import Effects",
         "PASTED": "Configuration read from clipboard",
         "PRESET": "Import Preset",
-        "UPLOAD": "Upload JSON"
+        "UPLOAD": "Upload JSON",
+        "DIALOGMESSAGE": "Paste the JSON below"
       },
       "REMOVEEFFECT": {
         "MESSAGE": "Are you sure you wish to remove this effect?",

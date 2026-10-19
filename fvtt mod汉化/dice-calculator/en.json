@@ -7,8 +7,8 @@
 		"Disadvantage": "Disadvantage",
 		"FateDice": "Fate Dice",
 		"For": "For",
-		"Fortune": "Fortune (kh)",
-		"Misfortune": "Misfortune (kl)",
+		"Fortune": "Fortune",
+		"Misfortune": "Misfortune",
 		"Mis": "Mis",
 		"Wild": "Wild",
 		"Ace": "Ace",
@@ -48,24 +48,28 @@
 			"Color": {
 				"name": "Color",
 				"hint": "The color that fills the image."
+			},
+			"Alternative": {
+				"name": "Alternative Display",
+				"hint": "Select this option if the image isn't being loaded."
 			}
 		},
 
 		"DiceRows": {
+			"Preview": "Preview",
+			"Pool": "Dice Pool",
 			"compactMode": {
-				"label": "Compact Mode",
-				"hint": "Disables any additional dice rows and merges the original two rows together."
+				"label": "Compact Mode"
 			},
 			"hideNumberInput": {
-				"label": "Hide Number Input"
+				"label": "Hide Modifier Input"
 			},
 			"hideNumberButtons": {
-				"label": "Hide +/- Buttons"
+				"label": "Hide Modifier Buttons"
 			},
 			"hideRollButton": {
 				"label": "Hide Roll Button"
-			},
-			"Instruction1": "Click any dice button to edit it. Right-Click any dice button to delete it."
+			}
 		},
 
 		"KEYBINGINDS": {
@@ -75,7 +79,7 @@
 		},
 
 		"SETTINGS": {
-			"DiceCreator": "Dice Creator",
+			"DiceCreator": "Die Editor",
 			"DiceRowSettings": "Dice Rows Configuration",
 			"autoOpenPopout": {
 				"name": "Auto Open Popout",

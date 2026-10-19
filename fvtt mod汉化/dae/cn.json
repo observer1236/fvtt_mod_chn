@@ -1,4 +1,5 @@
-{"dae.str": "力量",
+{
+	"dae.str": "力量",
 	"dae.dex": "敏捷",
 	"dae.con": "体质",
 	"dae.wis": "感知",
@@ -254,10 +255,10 @@
 	"dae.Bonus Action": "1 次附赠动作：角色执行下个附赠动作时结束。",
 	"dae.Reaction": "1 次反应：角色执行下个反应时结束。",
 	"dae.Turn Action": "激活类型动作的下一个物品使用时失效。",
-	"dae.1Attack": "1 次攻击: 角色下次攻击时结束",
+	"dae.1Attack": "1 次攻击：角色下一次进行 {type} 时失效",
 	"dae.1Spell": "1 次法术: 在角色下一次施法（任何法术）时结束",
 	"dae.1Reaction": "1 次反应: 在引发反应的攻击结束后结束",
-	"dae.1Hit": "1 次命中: 角色下次命中时",
+	"dae.1Hit": "1 次命中：角色下一次 {type} 命中时失效",
 	"dae.1Critical": "1 次大成功: 角色下次大成功时结束",
 	"dae.1Fumble": "1 次大失败: 角色下次大失败时结束",
 	"dae.DamageDealt": "伤害造成: 角色造成伤害时结束",
@@ -475,2098 +476,2146 @@
 			"description": "详见\"特殊特质\"。"
 		}
 	},
-  "dae.Macros.fieldData": {
-	"macro.actorUpdate": {
-	  "name": "更新角色字段",
-	  "description": "允许你更新角色身上的某个字段，并（可选地）在效果失效时撤销该更新。不过它并不会锁定字段值，而是通过 actor.update 来实现变更。这样你就能编写各种效果，而无需为它们单独创建宏。详情查阅FVTT中文教程—自动化教程—macro.actorUpdate使用方法"
+	"dae.Macros.fieldData": {
+		"macro.actorUpdate": {
+			"name": "更新角色字段",
+			"description": "允许你更新角色身上的某个字段，并（可选地）在效果失效时撤销该更新。不过它并不会锁定字段值，而是通过 actor.update 来实现变更。这样你就能编写各种效果，而无需为它们单独创建宏。详情查阅FVTT中文教程—自动化教程—macro.actorUpdate使用方法"
+		},
+		"macro.CE": {
+			"name": "应用DCE效果",
+			"description": ""
+		},
+		"macro.createItem": {
+			"name": "创建物品",
+			"description": "值为要创建物品的UUID，你可以直接将物品拖到值的框中自动生成，此键值允许你在效果创建时为效果应用的目标创建一个物品，并在效果移除时自动删除它。"
+		},
+		"macro.createItemRunMacro": {
+			"name": "创建物品并运行宏",
+			"description": "其行为与 macro.createItem 相同，但此外，当物品在角色身上创建时，DAE 将运行该物品的物品宏，args[0] 设置为onCreate，允许你将创建物品的 uuid（在 lastArg 中传递）保存到某处以供将来参考。"
+		},
+		"macro.execute": {
+			"name": "执行的宏",
+			"description": "效果创建/删除/每回合执行宏。详情查阅FVTT中文教程—自动化教程—主动效果（AE）系统综述-DAE宏"
+		},
+		"macro.execute.GM": {
+			"name": "GM执行的宏",
+			"description": "与\"macro.execute\"相同，但宏执行强制由GM进行。"
+		},
+		"macro.execute.local": {
+			"name": "本地执行的宏",
+			"description": "与\"macro.execute\"相同，但宏执行强制在本地客户端进行。"
+		},
+		"macro.itemMacro": {
+			"name": "执行物品宏/DIME",
+			"description": "效果创建/删除/每回合执行物品上存储的宏/DIME(midi标签页上的宏)。详情查阅FVTT中文教程—自动化教程—主动效果（AE）系统综述-DAE宏"
+		},
+		"macro.itemMacro.GM": {
+			"name": "以GM身份执行物品宏/DIME",
+			"description": "与\"macro.itemMacro\"相同，但宏执行强制由GM进行。"
+		},
+		"macro.itemMacro.local": {
+			"name": "本地执行物品宏/DIME",
+			"description": "与\"macro.itemMacro\"相同，但宏执行强制在本地客户端进行。"
+		},
+		"macro.StatusEffect": {
+			"name": "应用状态效果",
+			"description": "实际上与在详情页选择状态相同，但以编程方式创建状态，并且不强制显示被动效果。"
+		}
 	},
-	"macro.CE": {
-	  "name": "应用DCE效果",
-	  "description": ""
+	"dae.SystemAbilities.fieldData": {
+		"bonuses.check": {
+			"name": "{ability}检定加值",
+			"description": ""
+		},
+		"bonuses.save": {
+			"name": "{ability}豁免加值",
+			"description": ""
+		},
+		"check.roll.max": {
+			"name": "{ability}检定最大值",
+			"description": "注意：5.1.0版本前无效。{ability}检定时D20可投出的最大D20掷骰值。。"
+		},
+		"check.roll.min": {
+			"name": "{ability}检定最小值",
+			"description": "注意：5.1.0版本前无效。{ability}检定时D20可投出的最小D20掷骰值。。"
+		},
+		"check.roll.mode": {
+			"name": "{ability}检定掷骰模式",
+			"description": "注意：5.1.0版本前无效。{ability}检定的掷骰模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
+		},
+		"max": {
+			"name": "{ability}最大属性值",
+			"description": ""
+		},
+		"mod": {
+			"name": "{ability}调整值",
+			"description": ""
+		},
+		"proficient": {
+			"name": "{ability}豁免熟练项",
+			"description": ""
+		},
+		"save.roll.max": {
+			"name": "{ability}豁免最大值",
+			"description": "注意：5.1.0版本前无效。{ability}豁免时D20可投出的最大D20掷骰值。。"
+		},
+		"save.roll.min": {
+			"name": "{ability}豁免最小值",
+			"description": "注意：5.1.0版本前无效。{ability}豁免时D20可投出的最小D20掷骰值。。"
+		},
+		"save.roll.mode": {
+			"name": "{ability}豁免检定模式",
+			"description": "注意：5.1.0版本前无效。{ability}豁免的掷骰模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
+		},
+		"save": {
+			"name": "{ability}豁免调整值",
+			"description": ""
+		},
+		"value": {
+			"name": "{ability}属性值",
+			"description": ""
+		}
 	},
-	"macro.createItem": {
-	  "name": "创建物品",
-	  "description": "值为要创建物品的UUID，你可以直接将物品拖到值的框中自动生成，此键值允许你在效果创建时为效果应用的目标创建一个物品，并在效果移除时自动删除它。"
+	"dae.SystemSkills.fieldData": {
+		"ability": {
+			"name": "{skill}属性",
+			"description": "{skill}检定使用哪个属性。"
+		},
+		"bonuses.check": {
+			"name": "{skill}检定加值",
+			"description": ""
+		},
+		"bonuses.passive": {
+			"name": "被动{skill}加值",
+			"description": ""
+		},
+		"roll.max": {
+			"name": "{skill}最大值",
+			"description": "{skill}检定时D20可投出的最大D20掷骰值。。"
+		},
+		"roll.min": {
+			"name": "{skill}最小值",
+			"description": "{skill}检定时D20可投出的最小D20掷骰值。。"
+		},
+		"roll.mode": {
+			"name": "{skill}掷骰模式",
+			"description": "{skill}检定的掷骰模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
+		},
+		"value": {
+			"name": "{skill}熟练度",
+			"description": ""
+		}
 	},
-	"macro.createItemRunMacro": {
-	  "name": "创建物品并运行宏",
-	  "description": "其行为与 macro.createItem 相同，但此外，当物品在角色身上创建时，DAE 将运行该物品的物品宏，args[0] 设置为onCreate，允许你将创建物品的 uuid（在 lastArg 中传递）保存到某处以供将来参考。"
+	"dae.SystemAttributes.fieldData": {
+		"system.attributes.ac.AR": {
+			"name": "(Midi)护甲减免",
+			"description": "详情请参阅midi-qol说明文档中的\"挑战模式\"部分。"
+		},
+		"system.attributes.ac.armor": {
+			"name": "AC(护甲)",
+			"description": "穿戴护甲提供的AC加值(通常仅通过装备护甲物品提供-仅在未穿戴护甲时有效)。"
+		},
+		"system.attributes.ac.bonus": {
+			"name": "AC加值",
+			"description": "AC加值。"
+		},
+		"system.attributes.ac.calc": {
+			"name": "AC计算方式",
+			"description": ""
+		},
+		"system.attributes.ac.cover": {
+			"name": "AC(掩护)",
+			"description": "掩护效果，必须通过主动效果或模组设置"
+		},
+		"system.attributes.ac.EC": {
+			"name": "(Midi)闪避等级",
+			"description": "详情请参阅midi-qol说明文档中的\"挑战模式\"部分。"
+		},
+		"system.attributes.ac.flat": {
+			"name": "AC(固定值)",
+			"description": "需要AC计算方式(system.attributes.ac.calc)设置为固定值(AC=此值)或天生护甲(AC=基础值+任何其他加值)。如果为固定值则为最终AC值，如果为天生护甲则作为基础值。"
+		},
+		"system.attributes.ac.formula": {
+			"name": "AC公式",
+			"description": "需要AC计算方式(system.attributes.ac.calc)设置为自定义公式。"
+		},
+		"system.attributes.ac.min": {
+			"name": "最低AC",
+			"description": "如果AC最终值低于此数值，将提升至此数值。"
+		},
+		"system.attributes.ac.shield": {
+			"name": "AC(盾牌)",
+			"description": "由已装备盾牌提供的 AC 加值。"
+		},
+		"system.attributes.ac.value": {
+			"name": "AC(最终)",
+			"description": "最终 AC 值。ac.base + ac.shield + ac.bonus + ac.cover 相加的结果。不要使用此项：请使用AC计算方式(system.attributes.ac.calc)设置为固定值(AC=此值)或天生护甲(AC=基础值+任何其他加值)，并使用system.attributes.ac.flat作为你想要的值来覆盖AC值，或使用system.attributes.ac.bonus来添加加值。"
+		},
+		"system.attributes.attunement.max": {
+			"name": "最大同调数量",
+			"description": "同调槽位最大数量"
+		},
+		"system.attributes.concentration.ability": {
+			"name": "专注属性",
+			"description": "专注豁免使用哪个属性。"
+		},
+		"system.attributes.concentration.bonuses.save": {
+			"name": "专注豁免加值",
+			"description": ""
+		},
+		"system.attributes.concentration.limit": {
+			"name": "专注上限",
+			"description": "可同时专注的法术最大数量。"
+		},
+		"system.attributes.concentration.roll.max": {
+			"name": "专注最大值",
+			"description": "专注豁免时D20可投出的最大D20掷骰值。。"
+		},
+		"system.attributes.concentration.roll.min": {
+			"name": "专注最小值",
+			"description": "专注豁免时D20可投出的最小D20掷骰值。。"
+		},
+		"system.attributes.concentration.roll.mode": {
+			"name": "专注豁免模式",
+			"description": "专注豁免的掷骰模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
+		},
+		"system.attributes.death.bonuses.save": {
+			"name": "死亡豁免加值",
+			"description": ""
+		},
+		"system.attributes.death.failure": {
+			"name": "死亡豁免失败次数",
+			"description": "死亡豁免失败次数。"
+		},
+		"system.attributes.death.roll.max": {
+			"name": "死亡豁免最大值",
+			"description": "死亡豁免时D20可投出的最大D20掷骰值。。"
+		},
+		"system.attributes.death.roll.min": {
+			"name": "死亡豁免最小值",
+			"description": "死亡豁免时D20可投出的最小D20掷骰值。。"
+		},
+		"system.attributes.death.roll.mode": {
+			"name": "死亡豁免模式",
+			"description": "死亡豁免的掷骰模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
+		},
+		"system.attributes.death.success": {
+			"name": "死亡豁免成功次数",
+			"description": "死亡豁免成功次数。"
+		},
+		"system.attributes.encumbrance.bonuses.encumbered": {
+			"name": "重载阈值加值",
+			"description": "\"重载\"阈值的加值。"
+		},
+		"system.attributes.encumbrance.bonuses.heavilyEncumbered": {
+			"name": "超载阈值加值",
+			"description": "\"超载\"阈值的加值。"
+		},
+		"system.attributes.encumbrance.bonuses.maximum": {
+			"name": "最大负重加值",
+			"description": "最大负重的加值。"
+		},
+		"system.attributes.encumbrance.bonuses.overall": {
+			"name": "总体负重加值",
+			"description": "每个负重阈值和最大负重的加值。"
+		},
+		"system.attributes.encumbrance.multipliers.encumbered": {
+			"name": "重载阈值乘数",
+			"description": "\"重载\"阈值的乘数。"
+		},
+		"system.attributes.encumbrance.multipliers.heavilyEncumbered": {
+			"name": "超载阈值乘数",
+			"description": "\"超载\"阈值的乘数。"
+		},
+		"system.attributes.encumbrance.multipliers.maximum": {
+			"name": "最大负重乘数",
+			"description": "最大负重的乘数。"
+		},
+		"system.attributes.encumbrance.multipliers.overall": {
+			"name": "总体负重乘数",
+			"description": "每个负重阈值和最大负重的乘数。"
+		},
+		"system.attributes.hp.bonuses.level": {
+			"name": "每等级HP加值",
+			"description": "每个角色等级应用的HP加值(仅对具有职业等级的角色有效)。"
+		},
+		"system.attributes.hp.bonuses.overall": {
+			"name": "HP总体加值",
+			"description": "HP的加值(仅对具有职业等级的角色有效)。"
+		},
+		"system.attributes.hp.max": {
+			"name": "最大HP（勿修改）",
+			"description": "不应在有职业等级的角色上修改此项-请使用system.attributes.hp.bonuses.level、system.attributes.hp.bonuses.overall或system.attributes.hp.tempmax之一。"
+		},
+		"system.attributes.hp.temp": {
+			"name": "临时HP（勿修改）",
+			"description": "不应在主动效果中修改此项-请使用\"治疗\"行动。"
+		},
+		"system.attributes.hp.tempmax": {
+			"name": "暂时调整最大生命值",
+			"description": "暂时增加角色最大生命值的物品或法术（例如援助术）。"
+		},
+		"system.attributes.hp.value": {
+			"name": "当前HP（勿修改）",
+			"description": "不应在主动效果中修改此项-请通过行动组合施加伤害。"
+		},
+		"system.attributes.init.ability": {
+			"name": "先攻属性",
+			"description": "先攻检定使用哪个属性。"
+		},
+		"system.attributes.init.bonus": {
+			"name": "先攻检定加值",
+			"description": ""
+		},
+		"system.attributes.init.roll.max": {
+			"name": "先攻检定最大值",
+			"description": "先攻检定时D20可投出的最大D20掷骰值。。"
+		},
+		"system.attributes.init.roll.min": {
+			"name": "先攻检定最小值",
+			"description": "先攻检定时D20可投出的最小D20掷骰值。。"
+		},
+		"system.attributes.init.roll.mode": {
+			"name": "先攻检定模式",
+			"description": "先攻检定的模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
+		},
+		"system.attributes.movement.all": {
+			"name": "(DAE)移动速度(全部)",
+			"description": "调整所有移动类型。例如\"+5\"或\"*2\"将分别对所有现有移动类型(忽略角色没有的移动类型)加5或乘以2。"
+		},
+		"system.attributes.movement.burrow": {
+			"name": "移动速度(掘穴)",
+			"description": ""
+		},
+		"system.attributes.movement.climb": {
+			"name": "移动速度(攀爬)",
+			"description": ""
+		},
+		"system.attributes.movement.fly": {
+			"name": "移动速度(飞行)",
+			"description": ""
+		},
+		"system.attributes.movement.hover": {
+			"name": "移动(悬浮)",
+			"description": "可以悬浮吗？"
+		},
+		"system.attributes.movement.swim": {
+			"name": "移动速度(游泳)",
+			"description": ""
+		},
+		"system.attributes.movement.units": {
+			"name": "移动单位",
+			"description": ""
+		},
+		"system.attributes.movement.walk": {
+			"name": "移动速度(步行)",
+			"description": ""
+		},
+		"system.attributes.prof": {
+			"name": "熟练加值",
+			"description": ""
+		},
+		"system.attributes.senses.blindsight": {
+			"name": "感官(盲视)",
+			"description": ""
+		},
+		"system.attributes.senses.darkvision": {
+			"name": "感官(黑暗视觉)",
+			"description": ""
+		},
+		"system.attributes.senses.special": {
+			"name": "感官(特殊)",
+			"description": "接受分号分隔的值。"
+		},
+		"system.attributes.senses.tremorsense": {
+			"name": "感官(震颤感知)",
+			"description": ""
+		},
+		"system.attributes.senses.truesight": {
+			"name": "感官(真实视觉)",
+			"description": ""
+		},
+		"system.attributes.senses.units": {
+			"name": "感官单位",
+			"description": ""
+		},
+		"system.attributes.spellcasting": {
+			"name": "施法属性",
+			"description": ""
+		},
+		"system.attributes.hd.max": {
+			"name": "最大生命骰",
+			"description": "仅对NPC可用"
+		}
 	},
-	"macro.execute": {
-	  "name": "执行的宏",
-	  "description": "效果创建/删除/每回合执行宏。详情查阅FVTT中文教程—自动化教程—主动效果（AE）系统综述-DAE宏"
+	"dae.SystemBonuses.fieldData": {
+		"system.bonuses.abilities.check": {
+			"name": "属性检定加值",
+			"description": "所有属性检定的加值。"
+		},
+		"system.bonuses.abilities.save": {
+			"name": "豁免检定加值",
+			"description": "所有豁免检定的加值。"
+		},
+		"system.bonuses.abilities.skill": {
+			"name": "技能检定加值",
+			"description": "所有技能检定的加值。"
+		},
+		"system.bonuses.All-Attacks": {
+			"name": "(DAE)攻击检定加值",
+			"description": "所有攻击检定的加值。"
+		},
+		"system.bonuses.All-Damage": {
+			"name": "(DAE)攻击伤害加值",
+			"description": "所有攻击行动伤害掷骰的加值。"
+		},
+		"system.bonuses.check.damage": {
+			"name": "(DAE)检定伤害加值",
+			"description": "所有检定行动伤害掷骰的加值。"
+		},
+		"system.bonuses.heal.damage": {
+			"name": "(DAE)治疗伤害加值",
+			"description": "所有治疗行动伤害掷骰的加值。"
+		},
+		"system.bonuses.msak.attack": {
+			"name": "攻击检定加值(近战法术攻击)",
+			"description": "所有\"近战法术攻击\"攻击检定的加值。"
+		},
+		"system.bonuses.msak.damage": {
+			"name": "攻击伤害加值(近战法术攻击)",
+			"description": "所有\"近战法术攻击\"伤害掷骰的加值。"
+		},
+		"system.bonuses.mwak.attack": {
+			"name": "攻击检定加值(近战武器攻击)",
+			"description": "所有\"近战武器攻击\"攻击检定的加值。"
+		},
+		"system.bonuses.mwak.damage": {
+			"name": "攻击伤害加值(近战武器攻击)",
+			"description": "所有\"近战武器攻击\"伤害掷骰的加值。"
+		},
+		"system.bonuses.rsak.attack": {
+			"name": "攻击检定加值(远程法术攻击)",
+			"description": "所有\"远程法术攻击\"攻击检定的加值。"
+		},
+		"system.bonuses.rsak.damage": {
+			"name": "攻击伤害加值(远程法术攻击)",
+			"description": "所有\"远程法术攻击\"伤害掷骰的加值。"
+		},
+		"system.bonuses.rwak.attack": {
+			"name": "攻击检定加值(远程武器攻击)",
+			"description": "所有\"远程武器攻击\"攻击检定的加值。"
+		},
+		"system.bonuses.rwak.damage": {
+			"name": "攻击伤害加值(远程武器攻击)",
+			"description": "所有\"远程武器攻击\"伤害掷骰的加值。"
+		},
+		"system.bonuses.save.damage": {
+			"name": "(DAE)豁免伤害加值",
+			"description": "所有豁免行动伤害掷骰的加值。"
+		},
+		"system.bonuses.spell.all.damage": {
+			"name": "(DAE)伤害加值(法术)",
+			"description": "所有法术伤害掷骰的加值。"
+		},
+		"system.bonuses.spell.attack": {
+			"name": "(DAE)攻击检定加值(法术)",
+			"description": "所有法术攻击检定的加值。"
+		},
+		"system.bonuses.spell.damage": {
+			"name": "(DAE)攻击伤害加值(法术)",
+			"description": "所有攻击行动法术伤害掷骰的加值。"
+		},
+		"system.bonuses.spell.dc": {
+			"name": "法术豁免DC加值",
+			"description": "法术豁免DC的加值。"
+		},
+		"system.bonuses.weapon.attack": {
+			"name": "(DAE)攻击检定加值(武器)",
+			"description": "所有武器攻击检定的加值。"
+		},
+		"system.bonuses.weapon.damage": {
+			"name": "(DAE)攻击伤害加值(武器)",
+			"description": "所有攻击行动武器伤害掷骰的加值。"
+		}
 	},
-	"macro.execute.GM": {
-	  "name": "GM执行的宏",
-	  "description": "与\"macro.execute\"相同，但宏执行强制由GM进行。"
+	"dae.SystemTraits.fieldData": {
+		"system.traits.armorProf.all": {
+			"name": "(DAE)全部护甲熟练",
+			"description": "授予所有护甲的熟练。"
+		},
+		"system.traits.armorProf.custom": {
+			"name": "自定义护甲熟练",
+			"description": "接受分号分隔的值。"
+		},
+		"system.traits.armorProf.value": {
+			"name": "单独护甲熟练",
+			"description": "使用\"加\"模式并选择要添加的护甲熟练。使用\"-proficiency\"改为移除对应护甲熟练。"
+		},
+		"system.traits.ci.all": {
+			"name": "(DAE)全部状态免疫",
+			"description": "授予对所有状态的免疫。"
+		},
+		"system.traits.ci.custom": {
+			"name": "自定义状态免疫",
+			"description": "接受分号分隔的值。"
+		},
+		"system.traits.ci.value": {
+			"name": "单独状态免疫",
+			"description": "使用\"加\"模式并选择要添加的状态免疫。使用\"-condition\"改为移除对应状态免疫。"
+		},
+		"system.traits.da.all": {
+			"name": "(Midi)全部伤害吸收",
+			"description": "填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.custom": {
+			"name": "(Midi)自定义伤害吸收",
+			"description": "接受分号分隔的值。"
+		},
+		"da": {
+			"name": "(Midi)伤害吸收({damage})",
+			"description": "{damage}伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.bypasses": {
+			"name": "(Midi)忽略伤害吸收",
+			"description": "忽略伤害吸收的物品/武器属性。"
+		},
+		"system.traits.da.midi.all": {
+			"name": "(Midi)伤害吸收(全部)",
+			"description": "所有伤害类型的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.heal": {
+			"name": "(Midi)伤害吸收(治疗行动)",
+			"description": "治疗行动的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.magical": {
+			"name": "(Midi)伤害吸收(魔法)",
+			"description": "魔法伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.msak": {
+			"name": "(Midi)伤害吸收(近战法术攻击)",
+			"description": "近战法术攻击的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.mwak": {
+			"name": "(Midi)伤害吸收(近战武器攻击)",
+			"description": "近战武器攻击的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.non-adamant-physical": {
+			"name": "(Midi)伤害吸收(非精金物理)",
+			"description": "非精金物理伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.non-magical": {
+			"name": "(Midi)伤害吸收(非魔法)",
+			"description": "非魔法伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.non-magical-physical": {
+			"name": "(Midi)伤害吸收(非魔法物理)",
+			"description": "非魔法物理伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.non-physical": {
+			"name": "(Midi)伤害吸收(非物理)",
+			"description": "非物理伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.non-silver-physical": {
+			"name": "(Midi)伤害吸收(非银质物理)",
+			"description": "非银质物理伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.non-spell": {
+			"name": "(Midi)伤害吸收(非法术)",
+			"description": "非法术伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.physical": {
+			"name": "(Midi)伤害吸收(物理)",
+			"description": "物理伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.rsak": {
+			"name": "(Midi)伤害吸收(远程法术攻击)",
+			"description": "远程法术攻击的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.rwak": {
+			"name": "(Midi)伤害吸收(远程武器攻击)",
+			"description": "远程武器攻击的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.da.midi.save": {
+			"name": "(Midi)伤害吸收(豁免行动)",
+			"description": "豁免行动的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
+		},
+		"system.traits.di.all": {
+			"name": "(DAE)全部伤害免疫",
+			"description": "授予对所有伤害类型的免疫。"
+		},
+		"system.traits.di.bypasses": {
+			"name": "忽略伤害免疫",
+			"description": "忽略伤害免疫的物品/武器属性。"
+		},
+		"system.traits.di.custom": {
+			"name": "自定义伤害免疫",
+			"description": "接受分号分隔的值。"
+		},
+		"system.traits.di.value": {
+			"name": "单独伤害免疫",
+			"description": "使用\"加\"模式并选择要添加的伤害类型免疫，使用\"-type\"改为移除对应伤害免疫。"
+		},
+		"dm.amount": {
+			"name": "伤害调整({damage})",
+			"description": "{damage}伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.bypasses": {
+			"name": "忽略伤害调整",
+			"description": "忽略伤害调整的物品/武器属性。"
+		},
+		"system.traits.dm.midi.all": {
+			"name": "(Midi)伤害调整(全部)",
+			"description": "所有伤害类型的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.heal": {
+			"name": "(Midi)伤害调整(治疗行动)",
+			"description": "治疗行动的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.magical": {
+			"name": "(Midi)伤害调整(魔法)",
+			"description": "魔法伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.msak": {
+			"name": "(Midi)伤害调整(近战法术攻击)",
+			"description": "近战法术攻击的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.mwak": {
+			"name": "(Midi)伤害调整(近战武器攻击)",
+			"description": "近战武器攻击的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.non-adamant-physical": {
+			"name": "(Midi)伤害调整(非精金物理)",
+			"description": "非精金物理伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.non-magical": {
+			"name": "(Midi)伤害调整(非魔法)",
+			"description": "非魔法伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.non-magical-physical": {
+			"name": "(Midi)伤害调整(非魔法物理)",
+			"description": "非魔法物理伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.non-physical": {
+			"name": "(Midi)伤害调整(非物理)",
+			"description": "非物理伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.non-silver-physical": {
+			"name": "(Midi)伤害调整(非银质物理)",
+			"description": "非银质物理伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.non-spell": {
+			"name": "(Midi)伤害调整(非法术)",
+			"description": "非法术伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.physical": {
+			"name": "(Midi)伤害调整(物理)",
+			"description": "物理伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.rsak": {
+			"name": "(Midi)伤害调整(远程法术攻击)",
+			"description": "远程法术攻击的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.rwak": {
+			"name": "(Midi)伤害调整(远程武器攻击)",
+			"description": "远程武器攻击的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dm.midi.save": {
+			"name": "(Midi)伤害调整(豁免行动)",
+			"description": "豁免行动的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
+		},
+		"system.traits.dr.all": {
+			"name": "(DAE)全部伤害抗性",
+			"description": "授予对所有伤害类型的抗性。"
+		},
+		"system.traits.dr.bypasses": {
+			"name": "忽略伤害抗性",
+			"description": "忽略伤害抗性的物品/武器属性。"
+		},
+		"system.traits.dr.custom": {
+			"name": "自定义伤害抗性",
+			"description": "接受分号分隔的值。"
+		},
+		"system.traits.dr.value": {
+			"name": "单独伤害抗性",
+			"description": "使用\"加\"模式并选择要添加的伤害类型抗性。使用\"-type\"改为移除对应伤害抗性。"
+		},
+		"system.traits.dv.all": {
+			"name": "(DAE)全部伤害易伤",
+			"description": "授予对所有伤害类型的易伤。"
+		},
+		"system.traits.dv.bypasses": {
+			"name": "忽略伤害易伤",
+			"description": "忽略伤害易伤的物品/武器属性。"
+		},
+		"system.traits.dv.custom": {
+			"name": "自定义伤害易伤",
+			"description": "接受分号分隔的值。"
+		},
+		"system.traits.dv.value": {
+			"name": "单独伤害易伤",
+			"description": "使用\"加\"模式并选择要添加的伤害类型易伤。使用\"-type\"改为移除对应伤害易伤。"
+		},
+		"system.traits.languages.all": {
+			"name": "(DAE)全部语言",
+			"description": "授予所有语言。"
+		},
+		"system.traits.languages.custom": {
+			"name": "自定义语言",
+			"description": "接受分号分隔的值。"
+		},
+		"system.traits.languages.value": {
+			"name": "单独语言",
+			"description": "使用\"加\"模式并选择要添加的语言。"
+		},
+		"system.traits.size": {
+			"name": "角色体型",
+			"description": ""
+		},
+		"system.traits.weaponProf.all": {
+			"name": "(DAE)全部武器熟练",
+			"description": "授予所有武器的熟练。"
+		},
+		"system.traits.weaponProf.custom": {
+			"name": "自定义武器熟练",
+			"description": "接受分号分隔的值。"
+		},
+		"system.traits.weaponProf.value": {
+			"name": "单独武器熟练",
+			"description": "使用\"加\"模式并选择要添加的武器熟练。使用\"-proficiency\"改为移除对应武器熟练。"
+		}
 	},
-	"macro.execute.local": {
-	  "name": "本地执行的宏",
-	  "description": "与\"macro.execute\"相同，但宏执行强制在本地客户端进行。"
+	"dae.Other.fieldData": {
+		"StatusEffect": {
+			"name": "",
+			"description": ""
+		},
+		"StatusEffectLabel": {
+			"name": "",
+			"description": ""
+		},
+		"StatusEffectName": {
+			"name": "",
+			"description": ""
+		},
+		"flags.dae": {
+			"name": "",
+			"description": ""
+		},
+		"flags.dae.onUpdateSource": {
+			"name": "(DAE)更新来源角色时",
+			"description": "详情查阅FVTT中文教程—自动化教程—主动效果（AE）系统综述-flags.dae.onUpdateSource。"
+		},
+		"flags.dae.onUpdateTarget": {
+			"name": "(DAE)更新目标角色时",
+			"description": "详情查阅FVTT中文教程—自动化教程—主动效果（AE）系统综述-flags.dae.flags.dae.onUpdateTarget。"
+		},
+		"system.favorites": {
+			"name": "收藏",
+			"description": ""
+		},
+		"system.attributes.movement.air": {
+			"name": "空中移动",
+			"description": ""
+		},
+		"system.attributes.movement.land": {
+			"name": "陆地移动",
+			"description": ""
+		},
+		"system.attributes.movement.water": {
+			"name": "水中移动",
+			"description": ""
+		},
+		"system.description.full": {
+			"name": "完整描述",
+			"description": ""
+		},
+		"system.description.summary": {
+			"name": "摘要描述",
+			"description": ""
+		},
+		"system.members": {
+			"name": "成员",
+			"description": ""
+		},
+		"system.type.value": {
+			"name": "类型值",
+			"description": ""
+		},
+		"system.attributes.hd.spent": {
+			"name": "已使用生命骰",
+			"description": ""
+		},
+		"system.attributes.hp.formula": {
+			"name": "HP公式",
+			"description": ""
+		},
+		"system.details.cr": {
+			"name": "挑战等级",
+			"description": ""
+		},
+		"system.details.environment": {
+			"name": "环境",
+			"description": ""
+		},
+		"system.details.source.book": {
+			"name": "来源书籍",
+			"description": ""
+		},
+		"system.details.source.custom": {
+			"name": "来源自定义标签",
+			"description": ""
+		},
+		"system.details.source.license": {
+			"name": "来源许可",
+			"description": ""
+		},
+		"system.details.source.page": {
+			"name": "来源页码",
+			"description": ""
+		},
+		"system.attributes.spell.level": {
+			"name": "法术环阶",
+			"description": ""
+		},
+		"system.details.type.custom": {
+			"name": "自定义类型",
+			"description": ""
+		},
+		"system.details.type.subtype": {
+			"name": "子类型",
+			"description": ""
+		},
+		"system.details.type.swarm": {
+			"name": "集群大小",
+			"description": ""
+		},
+		"system.details.type.value": {
+			"name": "类型",
+			"description": ""
+		},
+		"system.resources.lair.initiative": {
+			"name": "巢穴动作",
+			"description": ""
+		},
+		"system.resources.lair.value": {
+			"name": "拥有巢穴",
+			"description": ""
+		},
+		"system.resources.legact.value": {
+			"name": "传奇动作",
+			"description": ""
+		},
+		"system.resources.legres.value": {
+			"name": "传奇抗性",
+			"description": ""
+		},
+		"system.attributes.ac.motionless": {
+			"name": "静止(Motionless)时AC",
+			"description": ""
+		},
+		"system.attributes.actions.stations": {
+			"name": "动作站位",
+			"description": ""
+		},
+		"system.attributes.actions.thresholds.0": {
+			"name": "动作阈值0",
+			"description": ""
+		},
+		"system.attributes.actions.thresholds.1": {
+			"name": "动作阈值1",
+			"description": ""
+		},
+		"system.attributes.actions.thresholds.2": {
+			"name": "动作阈值2",
+			"description": ""
+		},
+		"system.attributes.actions.value": {
+			"name": "动作值",
+			"description": ""
+		},
+		"system.attributes.capacity.cargo": {
+			"name": "货物容量",
+			"description": ""
+		},
+		"system.attributes.capacity.creature": {
+			"name": "生物容量",
+			"description": ""
+		},
+		"system.attributes.hp.dt": {
+			"name": "伤害阈值",
+			"description": ""
+		},
+		"system.attributes.hp.mt": {
+			"name": "最小阈值",
+			"description": ""
+		},
+		"system.cargo.crew": {
+			"name": "乘员容量",
+			"description": ""
+		},
+		"system.cargo.passengers": {
+			"name": "乘客容量",
+			"description": ""
+		},
+		"system.traits.dimensions": {
+			"name": "尺寸",
+			"description": ""
+		},
+		"system.vehicleType": {
+			"name": "载具类型",
+			"description": ""
+		},
+		"system.currency.cp": {
+			"name": "铜币",
+			"description": "不要使用此项，它会在角色每次更新时更新。"
+		},
+		"system.currency.ep": {
+			"name": "银金币",
+			"description": "不要使用此项，它会在角色每次更新时更新。"
+		},
+		"system.currency.gp": {
+			"name": "金币",
+			"description": "不要使用此项，它会在角色每次更新时更新。"
+		},
+		"system.currency.pp": {
+			"name": "铂金币",
+			"description": "不要使用此项，它会在角色每次更新时更新。"
+		},
+		"system.currency.sp": {
+			"name": "银币",
+			"description": "不要使用此项，它会在角色每次更新时更新。"
+		},
+		"system.details.age": {
+			"name": "年龄",
+			"description": ""
+		},
+		"system.details.alignment": {
+			"name": "阵营",
+			"description": ""
+		},
+		"system.details.appearance": {
+			"name": "外貌",
+			"description": ""
+		},
+		"system.details.background": {
+			"name": "背景",
+			"description": ""
+		},
+		"system.details.biography.public": {
+			"name": "传记(公开)",
+			"description": ""
+		},
+		"system.details.biography.value": {
+			"name": "传记(完整)",
+			"description": ""
+		},
+		"system.details.bond": {
+			"name": "羁绊",
+			"description": ""
+		},
+		"system.details.eyes": {
+			"name": "眼睛",
+			"description": ""
+		},
+		"system.details.faith": {
+			"name": "信仰",
+			"description": ""
+		},
+		"system.details.flaw": {
+			"name": "缺陷",
+			"description": ""
+		},
+		"system.details.gender": {
+			"name": "性别",
+			"description": ""
+		},
+		"system.details.hair": {
+			"name": "头发",
+			"description": ""
+		},
+		"system.details.height": {
+			"name": "身高",
+			"description": ""
+		},
+		"system.details.ideal": {
+			"name": "理想",
+			"description": ""
+		},
+		"system.details.level": {
+			"name": "等级",
+			"description": "这只会改变角色表上的外观，并允许你将等级提升到20级以上。所有其他基于等级的属性(如熟练加值)已经调整。"
+		},
+		"system.details.originalClass": {
+			"name": "源职业",
+			"description": ""
+		},
+		"system.details.race": {
+			"name": "种族/物种",
+			"description": ""
+		},
+		"system.details.skin": {
+			"name": "皮肤",
+			"description": ""
+		},
+		"system.details.trait": {
+			"name": "特质",
+			"description": ""
+		},
+		"system.details.weight": {
+			"name": "体重",
+			"description": ""
+		},
+		"system.details.xp.value": {
+			"name": "经验值",
+			"description": ""
+		},
+		"system.resources.legact.max": {
+			"name": "最大传奇动作",
+			"description": ""
+		},
+		"system.resources.legres.max": {
+			"name": "最大传奇抗性",
+			"description": ""
+		},
+		"system.resources.primary.label": {
+			"name": "资源 1 标签",
+			"description": "注意：资源已被弃用。"
+		},
+		"system.resources.primary.lr": {
+			"name": "资源 1 长休恢复",
+			"description": "注意：资源已被弃用。长休时恢复(1/0)。"
+		},
+		"system.resources.primary.max": {
+			"name": "资源 1 最大值",
+			"description": "注意：资源已被弃用。"
+		},
+		"system.resources.primary.sr": {
+			"name": "资源 1 短休恢复",
+			"description": "注意：资源已被弃用。短休时恢复(1/0)。"
+		},
+		"system.resources.primary.value": {
+			"name": "资源 1 值",
+			"description": "注意：资源已被弃用。"
+		},
+		"system.resources.secondary.label": {
+			"name": "资源 2 标签",
+			"description": "注意：资源已被弃用。"
+		},
+		"system.resources.secondary.lr": {
+			"name": "资源 2 长休恢复",
+			"description": "注意：资源已被弃用。长休时恢复(1/0)。"
+		},
+		"system.resources.secondary.max": {
+			"name": "资源 2 最大值",
+			"description": "注意：资源已被弃用。"
+		},
+		"system.resources.secondary.sr": {
+			"name": "资源 2 短休恢复",
+			"description": "注意：资源已被弃用。短休时恢复(1/0)。"
+		},
+		"system.resources.secondary.value": {
+			"name": "资源 2 值",
+			"description": "注意：资源已被弃用。"
+		},
+		"system.resources.tertiary.label": {
+			"name": "资源 3 标签",
+			"description": "注意：资源已被弃用。"
+		},
+		"system.resources.tertiary.lr": {
+			"name": "资源 3 长休恢复",
+			"description": "注意：资源已被弃用。长休时恢复(1/0)。"
+		},
+		"system.resources.tertiary.max": {
+			"name": "资源 3 最大值",
+			"description": "注意：资源已被弃用。"
+		},
+		"system.resources.tertiary.sr": {
+			"name": "资源 3 短休恢复",
+			"description": "注意：资源已被弃用。短休时恢复(1/0)。"
+		},
+		"system.resources.tertiary.value": {
+			"name": "资源 3 值",
+			"description": "注意：资源已被弃用。"
+		},
+		"system.spells.pact.level": {
+			"name": "契约法术环阶",
+			"description": ""
+		},
+		"system.spells.pact.max": {
+			"name": "最大契约法术位",
+			"description": ""
+		},
+		"system.spells.pact.override": {
+			"name": "覆盖契约法术位",
+			"description": ""
+		},
+		"system.spells.spell1.max": {
+			"name": "最大1环法术位",
+			"description": ""
+		},
+		"system.spells.spell1.override": {
+			"name": "覆盖1环法术位",
+			"description": ""
+		},
+		"system.spells.spell2.max": {
+			"name": "最大2环法术位",
+			"description": ""
+		},
+		"system.spells.spell2.override": {
+			"name": "覆盖2环法术位",
+			"description": ""
+		},
+		"system.spells.spell3.max": {
+			"name": "最大3环法术位",
+			"description": ""
+		},
+		"system.spells.spell3.override": {
+			"name": "覆盖3环法术位",
+			"description": ""
+		},
+		"system.spells.spell4.max": {
+			"name": "最大4环法术位",
+			"description": ""
+		},
+		"system.spells.spell4.override": {
+			"name": "覆盖4环法术位",
+			"description": ""
+		},
+		"system.spells.spell5.max": {
+			"name": "最大5环法术位",
+			"description": ""
+		},
+		"system.spells.spell5.override": {
+			"name": "覆盖5环法术位",
+			"description": ""
+		},
+		"system.spells.spell6.max": {
+			"name": "最大6环法术位",
+			"description": ""
+		},
+		"system.spells.spell6.override": {
+			"name": "覆盖6环法术位",
+			"description": ""
+		},
+		"system.spells.spell7.max": {
+			"name": "最大7环法术位",
+			"description": ""
+		},
+		"system.spells.spell7.override": {
+			"name": "覆盖7环法术位",
+			"description": ""
+		},
+		"system.spells.spell8.max": {
+			"name": "最大8环法术位",
+			"description": ""
+		},
+		"system.spells.spell8.override": {
+			"name": "覆盖8环法术位",
+			"description": ""
+		},
+		"system.spells.spell9.max": {
+			"name": "最大9环法术位",
+			"description": ""
+		},
+		"system.spells.spell9.override": {
+			"name": "覆盖9环法术位",
+			"description": ""
+		},
+		"system.tools.alchemist.ability": {
+			"name": "炼金工具属性",
+			"description": "炼金工具检定使用哪个属性。"
+		},
+		"system.tools.alchemist.bonuses.check": {
+			"name": "炼金工具检定加值",
+			"description": ""
+		},
+		"system.tools.alchemist.prof": {
+			"name": "炼金工具熟练度",
+			"description": ""
+		},
+		"system.tools.art.ability": {
+			"name": "工匠工具属性",
+			"description": "工匠工具检定使用哪个属性。"
+		},
+		"system.tools.art.bonuses.check": {
+			"name": "工匠工具检定加值",
+			"description": ""
+		},
+		"system.tools.art.prof": {
+			"name": "工匠工具熟练度",
+			"description": ""
+		},
+		"system.tools.bagpipes.ability": {
+			"name": "风笛属性",
+			"description": "风笛检定使用哪个属性。"
+		},
+		"system.tools.bagpipes.bonuses.check": {
+			"name": "风笛检定加值",
+			"description": ""
+		},
+		"system.tools.bagpipes.prof": {
+			"name": "风笛熟练度",
+			"description": ""
+		},
+		"system.tools.brewer.ability": {
+			"name": "酿酒工具属性",
+			"description": "酿酒工具检定使用哪个属性。"
+		},
+		"system.tools.brewer.bonuses.check": {
+			"name": "酿酒工具检定加值",
+			"description": ""
+		},
+		"system.tools.brewer.prof": {
+			"name": "酿酒工具熟练度",
+			"description": ""
+		},
+		"system.tools.calligrapher.ability": {
+			"name": "书法工具属性",
+			"description": "书法工具检定使用哪个属性。"
+		},
+		"system.tools.calligrapher.bonuses.check": {
+			"name": "书法工具检定加值",
+			"description": ""
+		},
+		"system.tools.calligrapher.prof": {
+			"name": "书法工具熟练度",
+			"description": ""
+		},
+		"system.tools.card.ability": {
+			"name": "纸牌属性",
+			"description": "纸牌检定使用哪个属性。"
+		},
+		"system.tools.card.bonuses.check": {
+			"name": "纸牌检定加值",
+			"description": ""
+		},
+		"system.tools.card.prof": {
+			"name": "纸牌熟练度",
+			"description": ""
+		},
+		"system.tools.carpenter.ability": {
+			"name": "木匠工具属性",
+			"description": "木匠工具检定使用哪个属性。"
+		},
+		"system.tools.carpenter.bonuses.check": {
+			"name": "木匠工具检定加值",
+			"description": ""
+		},
+		"system.tools.carpenter.prof": {
+			"name": "木匠工具熟练度",
+			"description": ""
+		},
+		"system.tools.cartographer.ability": {
+			"name": "制图工具属性",
+			"description": "制图工具检定使用哪个属性。"
+		},
+		"system.tools.cartographer.bonuses.check": {
+			"name": "制图工具检定加值",
+			"description": ""
+		},
+		"system.tools.cartographer.prof": {
+			"name": "制图工具熟练度",
+			"description": ""
+		},
+		"system.tools.chess.ability": {
+			"name": "龙棋属性",
+			"description": "龙棋检定使用哪个属性。"
+		},
+		"system.tools.chess.bonuses.check": {
+			"name": "龙棋检定加值",
+			"description": ""
+		},
+		"system.tools.chess.prof": {
+			"name": "龙棋熟练度",
+			"description": ""
+		},
+		"system.tools.cobbler.ability": {
+			"name": "鞋匠工具属性",
+			"description": "鞋匠工具检定使用哪个属性。"
+		},
+		"system.tools.cobbler.bonuses.check": {
+			"name": "鞋匠工具检定加值",
+			"description": ""
+		},
+		"system.tools.cobbler.prof": {
+			"name": "鞋匠工具熟练度",
+			"description": ""
+		},
+		"system.tools.cook.ability": {
+			"name": "厨具属性",
+			"description": "厨具检定使用哪个属性。"
+		},
+		"system.tools.cook.bonuses.check": {
+			"name": "厨具检定加值",
+			"description": ""
+		},
+		"system.tools.cook.prof": {
+			"name": "厨具熟练度",
+			"description": ""
+		},
+		"system.tools.dice.ability": {
+			"name": "骰子属性",
+			"description": "骰子检定使用哪个属性。"
+		},
+		"system.tools.dice.bonuses.check": {
+			"name": "骰子检定加值",
+			"description": ""
+		},
+		"system.tools.dice.prof": {
+			"name": "骰子熟练度",
+			"description": ""
+		},
+		"system.tools.disg.ability": {
+			"name": "伪装工具属性",
+			"description": "伪装工具检定使用哪个属性。"
+		},
+		"system.tools.disg.bonuses.check": {
+			"name": "伪装工具检定加值",
+			"description": ""
+		},
+		"system.tools.disg.prof": {
+			"name": "伪装工具熟练度",
+			"description": ""
+		},
+		"system.tools.drum.ability": {
+			"name": "鼓属性",
+			"description": "鼓检定使用哪个属性。"
+		},
+		"system.tools.drum.bonuses.check": {
+			"name": "鼓检定加值",
+			"description": ""
+		},
+		"system.tools.drum.prof": {
+			"name": "鼓熟练度",
+			"description": ""
+		},
+		"system.tools.dulcimer.ability": {
+			"name": "扬琴属性",
+			"description": "扬琴检定使用哪个属性。"
+		},
+		"system.tools.dulcimer.bonuses.check": {
+			"name": "扬琴检定加值",
+			"description": ""
+		},
+		"system.tools.dulcimer.prof": {
+			"name": "扬琴熟练度",
+			"description": ""
+		},
+		"system.tools.flute.ability": {
+			"name": "长笛属性",
+			"description": "长笛检定使用哪个属性。"
+		},
+		"system.tools.flute.bonuses.check": {
+			"name": "长笛检定加值",
+			"description": ""
+		},
+		"system.tools.flute.prof": {
+			"name": "长笛熟练度",
+			"description": ""
+		},
+		"system.tools.forg.ability": {
+			"name": "伪造工具属性",
+			"description": "伪造工具检定使用哪个属性。"
+		},
+		"system.tools.forg.bonuses.check": {
+			"name": "伪造工具检定加值",
+			"description": ""
+		},
+		"system.tools.forg.prof": {
+			"name": "伪造工具熟练度",
+			"description": ""
+		},
+		"system.tools.game.ability": {
+			"name": "赌具属性",
+			"description": "赌具检定使用哪个属性。"
+		},
+		"system.tools.game.bonuses.check": {
+			"name": "赌具检定加值",
+			"description": ""
+		},
+		"system.tools.game.prof": {
+			"name": "赌具熟练度",
+			"description": ""
+		},
+		"system.tools.glassblower.ability": {
+			"name": "玻璃匠工具属性",
+			"description": "玻璃匠工具检定使用哪个属性。"
+		},
+		"system.tools.glassblower.bonuses.check": {
+			"name": "玻璃匠工具检定加值",
+			"description": ""
+		},
+		"system.tools.glassblower.prof": {
+			"name": "玻璃匠工具熟练度",
+			"description": ""
+		},
+		"system.tools.herb.ability": {
+			"name": "草药工具属性",
+			"description": "草药工具检定使用哪个属性。"
+		},
+		"system.tools.herb.bonuses.check": {
+			"name": "草药工具检定加值",
+			"description": ""
+		},
+		"system.tools.herb.prof": {
+			"name": "草药工具熟练度",
+			"description": ""
+		},
+		"system.tools.horn.ability": {
+			"name": "角号属性",
+			"description": "角号检定使用哪个属性。"
+		},
+		"system.tools.horn.bonuses.check": {
+			"name": "角号检定加值",
+			"description": ""
+		},
+		"system.tools.horn.prof": {
+			"name": "角号熟练度",
+			"description": ""
+		},
+		"system.tools.jeweler.ability": {
+			"name": "珠宝匠工具属性",
+			"description": "珠宝匠工具检定使用哪个属性。"
+		},
+		"system.tools.jeweler.bonuses.check": {
+			"name": "珠宝匠工具检定加值",
+			"description": ""
+		},
+		"system.tools.jeweler.prof": {
+			"name": "珠宝匠工具熟练度",
+			"description": ""
+		},
+		"system.tools.leatherworker.ability": {
+			"name": "皮匠工具属性",
+			"description": "皮匠工具检定使用哪个属性。"
+		},
+		"system.tools.leatherworker.bonuses.check": {
+			"name": "皮匠工具检定加值",
+			"description": ""
+		},
+		"system.tools.leatherworker.prof": {
+			"name": "皮匠工具熟练度",
+			"description": ""
+		},
+		"system.tools.lute.ability": {
+			"name": "鲁特琴属性",
+			"description": "鲁特琴检定使用哪个属性。"
+		},
+		"system.tools.lute.bonuses.check": {
+			"name": "鲁特琴检定加值",
+			"description": ""
+		},
+		"system.tools.lute.prof": {
+			"name": "鲁特琴熟练度",
+			"description": ""
+		},
+		"system.tools.lyre.ability": {
+			"name": "里拉琴属性",
+			"description": "里拉琴检定使用哪个属性。"
+		},
+		"system.tools.lyre.bonuses.check": {
+			"name": "里拉琴检定加值",
+			"description": ""
+		},
+		"system.tools.lyre.prof": {
+			"name": "里拉琴熟练度",
+			"description": ""
+		},
+		"system.tools.mason.ability": {
+			"name": "石匠工具属性",
+			"description": "石匠工具检定使用哪个属性。"
+		},
+		"system.tools.mason.bonuses.check": {
+			"name": "石匠工具检定加值",
+			"description": ""
+		},
+		"system.tools.mason.prof": {
+			"name": "石匠工具熟练度",
+			"description": ""
+		},
+		"system.tools.music.ability": {
+			"name": "乐器属性",
+			"description": "乐器检定使用哪个属性。"
+		},
+		"system.tools.music.bonuses.check": {
+			"name": "乐器检定加值",
+			"description": ""
+		},
+		"system.tools.music.prof": {
+			"name": "乐器熟练度",
+			"description": ""
+		},
+		"system.tools.navg.ability": {
+			"name": "导航工具属性",
+			"description": "导航工具检定使用哪个属性。"
+		},
+		"system.tools.navg.bonuses.check": {
+			"name": "导航工具检定加值",
+			"description": ""
+		},
+		"system.tools.navg.prof": {
+			"name": "导航工具熟练度",
+			"description": ""
+		},
+		"system.tools.painter.ability": {
+			"name": "画家工具属性",
+			"description": "画家工具检定使用哪个属性。"
+		},
+		"system.tools.painter.bonuses.check": {
+			"name": "画家工具检定加值",
+			"description": ""
+		},
+		"system.tools.painter.prof": {
+			"name": "画家工具熟练度",
+			"description": ""
+		},
+		"system.tools.panflute.ability": {
+			"name": "排箫属性",
+			"description": "排箫检定使用哪个属性。"
+		},
+		"system.tools.panflute.bonuses.check": {
+			"name": "排箫检定加值",
+			"description": ""
+		},
+		"system.tools.panflute.prof": {
+			"name": "排箫熟练度",
+			"description": ""
+		},
+		"system.tools.pois.ability": {
+			"name": "毒药工具属性",
+			"description": "毒药工具检定使用哪个属性。"
+		},
+		"system.tools.pois.bonuses.check": {
+			"name": "毒药工具检定加值",
+			"description": ""
+		},
+		"system.tools.pois.prof": {
+			"name": "毒药工具熟练度",
+			"description": ""
+		},
+		"system.tools.potter.ability": {
+			"name": "陶匠工具属性",
+			"description": "陶匠工具检定使用哪个属性。"
+		},
+		"system.tools.potter.bonuses.check": {
+			"name": "陶匠工具检定加值",
+			"description": ""
+		},
+		"system.tools.potter.prof": {
+			"name": "陶匠工具熟练度",
+			"description": ""
+		},
+		"system.tools.shawm.ability": {
+			"name": "芦笛属性",
+			"description": "芦笛检定使用哪个属性。"
+		},
+		"system.tools.shawm.bonuses.check": {
+			"name": "芦笛检定加值",
+			"description": ""
+		},
+		"system.tools.shawm.prof": {
+			"name": "芦笛熟练度",
+			"description": ""
+		},
+		"system.tools.smith.ability": {
+			"name": "铁匠工具属性",
+			"description": "铁匠工具检定使用哪个属性。"
+		},
+		"system.tools.smith.bonuses.check": {
+			"name": "铁匠工具检定加值",
+			"description": ""
+		},
+		"system.tools.smith.prof": {
+			"name": "铁匠工具熟练度",
+			"description": ""
+		},
+		"system.tools.thief.ability": {
+			"name": "盗贼工具属性",
+			"description": "盗贼工具检定使用哪个属性。"
+		},
+		"system.tools.thief.bonuses.check": {
+			"name": "盗贼工具检定加值",
+			"description": ""
+		},
+		"system.tools.thief.prof": {
+			"name": "盗贼工具熟练度",
+			"description": ""
+		},
+		"system.tools.tinker.ability": {
+			"name": "修补工具属性",
+			"description": "修补工具检定使用哪个属性。"
+		},
+		"system.tools.tinker.bonuses.check": {
+			"name": "修补工具检定加值",
+			"description": ""
+		},
+		"system.tools.tinker.prof": {
+			"name": "修补工具熟练度",
+			"description": ""
+		},
+		"system.tools.vehicle.ability": {
+			"name": "载具属性",
+			"description": "载具检定使用哪个属性。"
+		},
+		"system.tools.vehicle.bonuses.check": {
+			"name": "载具检定加值",
+			"description": ""
+		},
+		"system.tools.vehicle.prof": {
+			"name": "载具熟练度",
+			"description": ""
+		},
+		"system.tools.viol.ability": {
+			"name": "提琴属性",
+			"description": "提琴检定使用哪个属性。"
+		},
+		"system.tools.viol.bonuses.check": {
+			"name": "提琴检定加值",
+			"description": ""
+		},
+		"system.tools.viol.prof": {
+			"name": "提琴熟练度",
+			"description": ""
+		},
+		"system.tools.weaver.ability": {
+			"name": "织布工具属性",
+			"description": "织布工具检定使用哪个属性。"
+		},
+		"system.tools.weaver.bonuses.check": {
+			"name": "织布工具检定加值",
+			"description": ""
+		},
+		"system.tools.weaver.prof": {
+			"name": "织布工具熟练度",
+			"description": ""
+		},
+		"system.tools.woodcarver.ability": {
+			"name": "木雕工具属性",
+			"description": "木雕工具检定使用哪个属性。"
+		},
+		"system.tools.woodcarver.bonuses.check": {
+			"name": "木雕工具检定加值",
+			"description": ""
+		},
+		"system.tools.woodcarver.prof": {
+			"name": "木雕工具熟练度",
+			"description": ""
+		}
 	},
-	"macro.itemMacro": {
-	  "name": "执行物品宏/DIME",
-	  "description": "效果创建/删除/每回合执行物品上存储的宏/DIME(midi标签页上的宏)。详情查阅FVTT中文教程—自动化教程—主动效果（AE）系统综述-DAE宏"
+	"dae.Unknown.fieldData": {
+		"system.ability": {
+			"name": "攻击使用的属性",
+			"description": "注意：等同于\"activities[attack].attack.ability\"。"
+		},
+		"system.attack.bonus": {
+			"name": "攻击行动的攻击检定加值",
+			"description": "注意：等同于\"activities[attack].attack.bonus\"。"
+		},
+		"system.attack.flat": {
+			"name": "固定命中加值",
+			"description": "若为true，则攻击计算加值时只计算行动本身的加值而无视熟练加值与属性调整值。注意：等同于\"activities[attack].attack.flat\"。"
+		},
+		"system.damage.bonus": {
+			"name": "伤害加值",
+			"description": "所有造成伤害行动的伤害加值。"
+		},
+		"system.damageBonus": {
+			"name": "伤害加值",
+			"description": "注意：应使用 \"system.damage.bonus\" 代替。"
+		},
+		"system.damage.parts": {
+			"name": "额外伤害",
+			"description": "允许你以特定格式添加额外伤害(例如[[\"1d6\", \"fire\"]])。将向所有造成伤害的行动添加额外伤害，不仅仅是攻击。"
+		},
+		"system.damage.types": {
+			"name": "伤害类型",
+			"description": ""
+		},
+		"activities[attack].attack.ability": {
+			"name": "攻击行动的属性",
+			"description": "攻击使用的属性"
+		},
+		"activities[attack].attack.bonus": {
+			"name": "攻击行动的攻击检定加值",
+			"description": "攻击行动的攻击检定加值"
+		},
+		"activities[attack].attack.critical.threshold": {
+			"name": "攻击行动的重击阈值",
+			"description": "若改变模式为“加”则在原本的阈值上进行加或减，若改变模式为“降级”则直接覆盖为指定阈值"
+		},
+		"activities[attack].attack.flat": {
+			"name": "攻击行动是否固定命中加值",
+			"description": "若为true，则攻击计算加值时只计算行动本身的加值而无视熟练加值与属性调整值"
+		},
+		"activities[attack].attack.type.value": {
+			"name": "攻击行动的类型",
+			"description": "决定攻击是近战攻击还是远程攻击"
+		},
+		"activities[attack].attack.type.classification": {
+			"name": "攻击行动的分类",
+			"description": "决定攻击类型：武器，法术或徒手"
+		},
+		"activities[attack].damage.includeBase": {
+			"name": "攻击行动是否包含基础伤害",
+			"description": "即武器详情页伤害"
+		},
+		"activities[cast].spell.ability": {
+			"name": "施法行动的属性",
+			"description": ""
+		},
+		"activities[cast].spell.challenge.attack": {
+			"name": "施法行动的法术攻击加值",
+			"description": "同时将\"activities[cast].spell.challenge.override\"设置为\"true\"。"
+		},
+		"activities[cast].spell.challenge.save": {
+			"name": "施法行动的法术豁免公式",
+			"description": "同时将\"activities[cast].spell.challenge.override\"设置为\"true\"。"
+		},
+		"activities[cast].spell.challenge.override": {
+			"name": "施法行动的法术攻击/豁免覆盖",
+			"description": ""
+		},
+		"activities[cast].spell.level": {
+			"name": "施法行动的法术环阶",
+			"description": ""
+		},
+		"activities[cast].spell.properties": {
+			"name": "施法行动的施法成分",
+			"description": ""
+		},
+		"activities[cast].spell.spellbook": {
+			"name": "施法行动的法术书",
+			"description": "在法术书中显示该施法行动的法术"
+		},
+		"activities[cast].spell.uuid": {
+			"name": "施法行动的UUID",
+			"description": ""
+		},
+		"activities[check].check.ability": {
+			"name": "检定行动的属性",
+			"description": ""
+		},
+		"activities[check].check.associated": {
+			"name": "检定行动的关联技能或工具",
+			"description": ""
+		},
+		"activities[check].check.dc.calculation": {
+			"name": "检定行动的DC计算",
+			"description": ""
+		},
+		"activities[check].check.dc.formula": {
+			"name": "检定行动的DC公式",
+			"description": "如果使用此属性，\"activities[check].check.dc.calculation\"应设置为\"自定义公式\"。"
+		},
+		"activities[damage].damage.critical.allow": {
+			"name": "检定行动是否可以大成功",
+			"description": ""
+		},
+		"activities[enchant].enchant.identifier": {
+			"name": "附魔行动的职业标识符",
+			"description": ""
+		},
+		"activities[enchant].restrictions.allowMagical": {
+			"name": "附魔行动限制：允许魔法",
+			"description": ""
+		},
+		"activities[enchant].restrictions.categories": {
+			"name": "附魔行动限制：有效物品类别",
+			"description": ""
+		},
+		"activities[enchant].restrictions.properties": {
+			"name": "附魔行动限制：有效物品属性",
+			"description": ""
+		},
+		"activities[enchant].restrictions.type": {
+			"name": "附魔行动限制：物品类型",
+			"description": ""
+		},
+		"activities[forward].activity.id": {
+			"name": "转进行动的ID",
+			"description": ""
+		},
+		"activities[heal].healing.number": {
+			"name": "治疗行动的骰子数量",
+			"description": ""
+		},
+		"activities[heal].healing.denomination": {
+			"name": "治疗行动的骰子面数",
+			"description": ""
+		},
+		"activities[heal].healing.bonus": {
+			"name": "治疗行动的加值",
+			"description": ""
+		},
+		"activities[heal].healing.types": {
+			"name": "治疗行动的类型",
+			"description": ""
+		},
+		"activities[heal].healing.custom.enabled": {
+			"name": "治疗行动的自定义公式启用",
+			"description": ""
+		},
+		"activities[heal].healing.custom.formula": {
+			"name": "治疗行动的自定义公式",
+			"description": "同时将\"activities[heal].healing.custom.enabled\"设置为\"true\"。"
+		},
+		"activities[heal].healing.scaling.mode": {
+			"name": "治疗行动的比例模式",
+			"description": ""
+		},
+		"activities[heal].healing.scaling.number": {
+			"name": "治疗行动的比例数量",
+			"description": "每比例等级额外掷骰的骰子数量。"
+		},
+		"activities[heal].healing.scaling.formula": {
+			"name": "治疗行动的比例公式",
+			"description": "每比例等级额外添加的公式。"
+		},
+		"activities[save].damage.onSave": {
+			"name": "豁免行动豁免成功时的伤害",
+			"description": ""
+		},
+		"activities[save].save.ability": {
+			"name": "豁免行动的属性",
+			"description": ""
+		},
+		"activities[save].save.dc.calculation": {
+			"name": "豁免行动的DC计算",
+			"description": ""
+		},
+		"activities[save].save.dc.formula": {
+			"name": "豁免行动的DC公式",
+			"description": "如果使用此属性，\"activities[save].save.dc.calculation\"应设置为\"自定义公式\"。"
+		},
+		"activities[summon].bonuses.ac": {
+			"name": "召唤行动的AC加值公式",
+			"description": ""
+		},
+		"activities[summon].bonuses.hd": {
+			"name": "召唤行动的生命骰加值公式",
+			"description": ""
+		},
+		"activities[summon].bonuses.hp": {
+			"name": "召唤行动的HP加值公式",
+			"description": ""
+		},
+		"activities[summon].bonuses.attackDamage": {
+			"name": "召唤行动的攻击伤害加值",
+			"description": ""
+		},
+		"activities[summon].bonuses.saveDamage": {
+			"name": "召唤行动的豁免伤害加值",
+			"description": ""
+		},
+		"activities[summon].bonuses.healing": {
+			"name": "召唤行动的治疗加值",
+			"description": ""
+		},
+		"activities[summon].creatureSizes": {
+			"name": "召唤行动的生物体型",
+			"description": ""
+		},
+		"activities[summon].creatureTypes": {
+			"name": "召唤行动的生物类型",
+			"description": ""
+		},
+		"activities[summon].match.ability": {
+			"name": "召唤行动的匹配属性",
+			"description": "用于匹配攻击/豁免的召唤者属性值。"
+		},
+		"activities[summon].match.attacks": {
+			"name": "召唤行动的匹配攻击加值",
+			"description": ""
+		},
+		"activities[summon].match.proficiency": {
+			"name": "召唤行动的匹配熟练",
+			"description": ""
+		},
+		"activities[summon].match.saves": {
+			"name": "召唤行动的匹配豁免DC",
+			"description": ""
+		},
+		"activities[summon].summon.identifier": {
+			"name": "召唤行动的职业标识符",
+			"description": ""
+		},
+		"activities[summon].summon.mode": {
+			"name": "召唤行动的模式",
+			"description": ""
+		},
+		"activities[summon].summon.prompt": {
+			"name": "召唤行动的提示",
+			"description": ""
+		},
+		"activities[transform].settings.effects": {
+			"name": "变形行动的效果",
+			"description": "变形时保留哪些类型的效果。"
+		},
+		"activities[transform].settings.keep": {
+			"name": "变形行动的保留",
+			"description": "变形时保留哪些细节。"
+		},
+		"activities[transform].settings.merge": {
+			"name": "变形行动的合并",
+			"description": "变形时合并哪些熟练。"
+		},
+		"activities[transform].settings.other": {
+			"name": "变形行动的其他配置",
+			"description": ""
+		},
+		"activities[transform].settings.preset": {
+			"name": "变形行动的预设配置",
+			"description": ""
+		},
+		"activities[transform].settings.tempFormula": {
+			"name": "变形行动的临时生命值公式",
+			"description": ""
+		},
+		"activities[transform].settings.transformTokens": {
+			"name": "变形行动的链接Token",
+			"description": ""
+		},
+		"activities[transform].transform.customize": {
+			"name": "变形行动的自定义配置",
+			"description": ""
+		},
+		"activities[transform].transform.identifier": {
+			"name": "变形行动的职业标识符",
+			"description": ""
+		},
+		"activities[transform].transform.preset": {
+			"name": "变形行动的预设",
+			"description": ""
+		},
+		"activities[utility].roll.formula": {
+			"name": "效用行动的掷骰公式",
+			"description": ""
+		},
+		"activities[utility].roll.name": {
+			"name": "效用行动的掷骰名称",
+			"description": ""
+		},
+		"activities[utility].roll.prompt": {
+			"name": "效用行动的掷骰提示",
+			"description": ""
+		},
+		"activities[utility].roll.visible": {
+			"name": "效用行动的掷骰可见",
+			"description": ""
+		}
 	},
-	"macro.itemMacro.GM": {
-	  "name": "以GM身份执行物品宏/DIME",
-	  "description": "与\"macro.itemMacro\"相同，但宏执行强制由GM进行。"
+	"dae.genericSuffixes": {
+		"name": {
+			"name": "名称",
+			"description": ""
+		},
+		"img": {
+			"name": "图标",
+			"description": ""
+		},
+		"sort": {
+			"name": "排序",
+			"description": ""
+		},
+		"activation.type": {
+			"name": "激活类型",
+			"description": ""
+		},
+		"activation.value": {
+			"name": "激活消耗数量",
+			"description": "需要的激活类型数量（如果适用）"
+		},
+		"activation.condition": {
+			"name": "激活条件",
+			"description": ""
+		},
+		"activation.override": {
+			"name": "激活覆盖",
+			"description": "在附魔菜单中不相关。"
+		},
+		"consumption.scaling.allowed": {
+			"name": "允许递增",
+			"description": ""
+		},
+		"consumption.scaling.max": {
+			"name": "最大递增",
+			"description": ""
+		},
+		"consumption.spellSlot": {
+			"name": "耗用法术位",
+			"description": ""
+		},
+		"consumption.targets": {
+			"name": "消耗目标",
+			"description": ""
+		},
+		"description.chatFlavor": {
+			"name": "聊天描述",
+			"description": ""
+		},
+		"duration.value": {
+			"name": "持续时间",
+			"description": ""
+		},
+		"duration.units": {
+			"name": "持续时间时长单位",
+			"description": ""
+		},
+		"duration.special": {
+			"name": "特殊持续时间",
+			"description": ""
+		},
+		"duration.concentration": {
+			"name": "专注",
+			"description": ""
+		},
+		"duration.override": {
+			"name": "持续时间覆盖",
+			"description": "在附魔菜单中不相关。"
+		},
+		"effects": {
+			"name": "应用效应",
+			"description": "一个对象数组，其中\"_id\"等于物品上应在使用行动时应用的效应id。"
+		},
+		"range.value": {
+			"name": "射程",
+			"description": ""
+		},
+		"range.units": {
+			"name": "射程单位",
+			"description": ""
+		},
+		"range.special": {
+			"name": "特殊射程",
+			"description": ""
+		},
+		"range.override": {
+			"name": "射程覆盖",
+			"description": "在附魔菜单中不相关。"
+		},
+		"target.template.count": {
+			"name": "测量板数量",
+			"description": ""
+		},
+		"target.template.contiguous": {
+			"name": "测量板连续",
+			"description": "真或假。"
+		},
+		"target.template.type": {
+			"name": "测量板形状",
+			"description": ""
+		},
+		"target.template.size": {
+			"name": "测量板大小",
+			"description": ""
+		},
+		"target.template.width": {
+			"name": "测量板宽度",
+			"description": ""
+		},
+		"target.template.height": {
+			"name": "测量板高度",
+			"description": ""
+		},
+		"target.template.units": {
+			"name": "测量板单位",
+			"description": ""
+		},
+		"target.affects.count": {
+			"name": "目标数量",
+			"description": ""
+		},
+		"target.affects.type": {
+			"name": "目标类型",
+			"description": ""
+		},
+		"target.affects.choice": {
+			"name": "选择目标",
+			"description": ""
+		},
+		"target.affects.special": {
+			"name": "特殊目标",
+			"description": ""
+		},
+		"target.override": {
+			"name": "目标覆盖",
+			"description": "在附魔菜单中不相关。"
+		},
+		"target.prompt": {
+			"name": "测量板提示",
+			"description": ""
+		},
+		"uses.spent": {
+			"name": "已消耗次数",
+			"description": ""
+		},
+		"uses.max": {
+			"name": "最大使用次数",
+			"description": ""
+		},
+		"uses.recovery": {
+			"name": "使用次数恢复",
+			"description": "表示恢复的对象数组。"
+		},
+		"damage.critical.bonus": {
+			"name": "额外重击伤害",
+			"description": ""
+		},
+		"damage.parts": {
+			"name": "伤害部分",
+			"description": ""
+		},
+		"profiles": {
+			"name": "配置文件",
+			"description": ""
+		}
 	},
-	"macro.itemMacro.local": {
-	  "name": "本地执行物品宏/DIME",
-	  "description": "与\"macro.itemMacro\"相同，但宏执行强制在本地客户端进行。"
-	},
-	"macro.StatusEffect": {
-	  "name": "应用状态效果",
-	  "description": "实际上与在详情页选择状态相同，但以编程方式创建状态，并且不强制显示被动效果。"
-	}
-  },
-  "dae.SystemAbilities.fieldData": {
-    "bonuses.check": {
-      "name": "{ability}检定加值",
-      "description": ""
-    },
-    "bonuses.save": {
-      "name": "{ability}豁免加值",
-      "description": ""
-    },
-    "check.roll.max": {
-      "name": "{ability}检定最大值",
-      "description": "注意：5.1.0版本前无效。{ability}检定时D20可投出的最大D20掷骰值。。"
-    },
-    "check.roll.min": {
-      "name": "{ability}检定最小值",
-      "description": "注意：5.1.0版本前无效。{ability}检定时D20可投出的最小D20掷骰值。。"
-    },
-    "check.roll.mode": {
-      "name": "{ability}检定掷骰模式",
-      "description": "注意：5.1.0版本前无效。{ability}检定的掷骰模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
-    },
-    "max": {
-      "name": "{ability}最大属性值",
-      "description": ""
-    },
-    "mod": {
-      "name": "{ability}调整值",
-      "description": ""
-    },
-    "proficient": {
-      "name": "{ability}豁免熟练项",
-      "description": ""
-    },
-    "save.roll.max": {
-      "name": "{ability}豁免最大值",
-      "description": "注意：5.1.0版本前无效。{ability}豁免时D20可投出的最大D20掷骰值。。"
-    },
-    "save.roll.min": {
-      "name": "{ability}豁免最小值",
-      "description": "注意：5.1.0版本前无效。{ability}豁免时D20可投出的最小D20掷骰值。。"
-    },
-    "save.roll.mode": {
-      "name": "{ability}豁免检定模式",
-      "description": "注意：5.1.0版本前无效。{ability}豁免的掷骰模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
-    },
-    "save": {
-      "name": "{ability}豁免调整值",
-      "description": ""
-    },
-    "value": {
-      "name": "{ability}属性值",
-      "description": ""
-    }
-  },
-  "dae.SystemSkills.fieldData": {
-    "ability": {
-      "name": "{skill}属性",
-      "description": "{skill}检定使用哪个属性。"
-    },
-    "bonuses.check": {
-      "name": "{skill}检定加值",
-      "description": ""
-    },
-    "bonuses.passive": {
-      "name": "被动{skill}加值",
-      "description": ""
-    },
-    "roll.max": {
-      "name": "{skill}最大值",
-      "description": "{skill}检定时D20可投出的最大D20掷骰值。。"
-    },
-    "roll.min": {
-      "name": "{skill}最小值",
-      "description": "{skill}检定时D20可投出的最小D20掷骰值。。"
-    },
-    "roll.mode": {
-      "name": "{skill}掷骰模式",
-      "description": "{skill}检定的掷骰模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
-    },
-    "value": {
-      "name": "{skill}熟练度",
-      "description": ""
-    }
-  },
-  "dae.SystemAttributes.fieldData": {
-    "system.attributes.ac.AR": {
-      "name": "(Midi)护甲减免",
-      "description": "详情请参阅midi-qol说明文档中的\"挑战模式\"部分。"
-    },
-    "system.attributes.ac.armor": {
-      "name": "AC(护甲)",
-      "description": "穿戴护甲提供的AC加值(通常仅通过装备护甲物品提供-仅在未穿戴护甲时有效)。"
-    },
-    "system.attributes.ac.bonus": {
-      "name": "AC加值",
-      "description": "AC加值。"
-    },
-    "system.attributes.ac.calc": {
-      "name": "AC计算方式",
-      "description": ""
-    },
-    "system.attributes.ac.cover": {
-      "name": "AC(掩护)",
-      "description": "掩护效果，必须通过主动效果或模组设置"
-    },
-    "system.attributes.ac.EC": {
-      "name": "(Midi)闪避等级",
-      "description": "详情请参阅midi-qol说明文档中的\"挑战模式\"部分。"
-    },
-    "system.attributes.ac.flat": {
-      "name": "AC(固定值)",
-      "description": "需要AC计算方式(system.attributes.ac.calc)设置为固定值(AC=此值)或天生护甲(AC=基础值+任何其他加值)。如果为固定值则为最终AC值，如果为天生护甲则作为基础值。"
-    },
-    "system.attributes.ac.formula": {
-      "name": "AC公式",
-      "description": "需要AC计算方式(system.attributes.ac.calc)设置为自定义公式。"
-    },
-    "system.attributes.ac.min": {
-      "name": "最低AC",
-      "description": "如果AC最终值低于此数值，将提升至此数值。"
-    },
-    "system.attributes.ac.shield": {
-      "name": "AC(盾牌)",
-      "description": "由已装备盾牌提供的 AC 加值。"
-    },
-    "system.attributes.ac.value": {
-      "name": "AC(最终)",
-      "description": "最终 AC 值。ac.base + ac.shield + ac.bonus + ac.cover 相加的结果。不要使用此项：请使用AC计算方式(system.attributes.ac.calc)设置为固定值(AC=此值)或天生护甲(AC=基础值+任何其他加值)，并使用system.attributes.ac.flat作为你想要的值来覆盖AC值，或使用system.attributes.ac.bonus来添加加值。"
-    },
-    "system.attributes.attunement.max": {
-      "name": "最大同调数量",
-      "description": "同调槽位最大数量"
-    },
-    "system.attributes.concentration.ability": {
-      "name": "专注属性",
-      "description": "专注豁免使用哪个属性。"
-    },
-    "system.attributes.concentration.bonuses.save": {
-      "name": "专注豁免加值",
-      "description": ""
-    },
-    "system.attributes.concentration.limit": {
-      "name": "专注上限",
-      "description": "可同时专注的法术最大数量。"
-    },
-    "system.attributes.concentration.roll.max": {
-      "name": "专注最大值",
-      "description": "专注豁免时D20可投出的最大D20掷骰值。。"
-    },
-    "system.attributes.concentration.roll.min": {
-      "name": "专注最小值",
-      "description": "专注豁免时D20可投出的最小D20掷骰值。。"
-    },
-    "system.attributes.concentration.roll.mode": {
-      "name": "专注豁免模式",
-      "description": "专注豁免的掷骰模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
-    },
-    "system.attributes.death.bonuses.save": {
-      "name": "死亡豁免加值",
-      "description": ""
-    },
-    "system.attributes.death.failure": {
-      "name": "死亡豁免失败次数",
-      "description": "死亡豁免失败次数。"
-    },
-    "system.attributes.death.roll.max": {
-      "name": "死亡豁免最大值",
-      "description": "死亡豁免时D20可投出的最大D20掷骰值。。"
-    },
-    "system.attributes.death.roll.min": {
-      "name": "死亡豁免最小值",
-      "description": "死亡豁免时D20可投出的最小D20掷骰值。。"
-    },
-    "system.attributes.death.roll.mode": {
-      "name": "死亡豁免模式",
-      "description": "死亡豁免的掷骰模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
-    },
-    "system.attributes.death.success": {
-      "name": "死亡豁免成功次数",
-      "description": "死亡豁免成功次数。"
-    },
-    "system.attributes.encumbrance.bonuses.encumbered": {
-      "name": "重载阈值加值",
-      "description": "\"重载\"阈值的加值。"
-    },
-    "system.attributes.encumbrance.bonuses.heavilyEncumbered": {
-      "name": "超载阈值加值",
-      "description": "\"超载\"阈值的加值。"
-    },
-    "system.attributes.encumbrance.bonuses.maximum": {
-      "name": "最大负重加值",
-      "description": "最大负重的加值。"
-    },
-    "system.attributes.encumbrance.bonuses.overall": {
-      "name": "总体负重加值",
-      "description": "每个负重阈值和最大负重的加值。"
-    },
-    "system.attributes.encumbrance.multipliers.encumbered": {
-      "name": "重载阈值乘数",
-      "description": "\"重载\"阈值的乘数。"
-    },
-    "system.attributes.encumbrance.multipliers.heavilyEncumbered": {
-      "name": "超载阈值乘数",
-      "description": "\"超载\"阈值的乘数。"
-    },
-    "system.attributes.encumbrance.multipliers.maximum": {
-      "name": "最大负重乘数",
-      "description": "最大负重的乘数。"
-    },
-    "system.attributes.encumbrance.multipliers.overall": {
-      "name": "总体负重乘数",
-      "description": "每个负重阈值和最大负重的乘数。"
-    },
-    "system.attributes.hp.bonuses.level": {
-      "name": "每等级HP加值",
-      "description": "每个角色等级应用的HP加值(仅对具有职业等级的角色有效)。"
-    },
-    "system.attributes.hp.bonuses.overall": {
-      "name": "HP总体加值",
-      "description": "HP的加值(仅对具有职业等级的角色有效)。"
-    },
-    "system.attributes.hp.max": {
-      "name": "最大HP（勿修改）",
-      "description": "不应在有职业等级的角色上修改此项-请使用system.attributes.hp.bonuses.level、system.attributes.hp.bonuses.overall或system.attributes.hp.tempmax之一。"
-    },
-    "system.attributes.hp.temp": {
-      "name": "临时HP（勿修改）",
-      "description": "不应在主动效果中修改此项-请使用\"治疗\"行动。"
-    },
-    "system.attributes.hp.tempmax": {
-      "name": "暂时调整最大生命值",
-      "description": "暂时增加角色最大生命值的物品或法术（例如援助术）。"
-    },
-    "system.attributes.hp.value": {
-      "name": "当前HP（勿修改）",
-      "description": "不应在主动效果中修改此项-请通过行动组合施加伤害。"
-    },
-    "system.attributes.init.ability": {
-      "name": "先攻属性",
-      "description": "先攻检定使用哪个属性。"
-    },
-    "system.attributes.init.bonus": {
-      "name": "先攻检定加值",
-      "description": ""
-    },
-    "system.attributes.init.roll.max": {
-      "name": "先攻检定最大值",
-      "description": "先攻检定时D20可投出的最大D20掷骰值。。"
-    },
-    "system.attributes.init.roll.min": {
-      "name": "先攻检定最小值",
-      "description": "先攻检定时D20可投出的最小D20掷骰值。。"
-    },
-    "system.attributes.init.roll.mode": {
-      "name": "先攻检定模式",
-      "description": "先攻检定的模式。\"加\"—添加优势来源(1)或劣势来源(-1)。\"覆盖\"—强制优势(1)、劣势(-1)或正常掷骰(0)。"
-    },
-    "system.attributes.movement.all": {
-      "name": "(DAE)移动速度(全部)",
-      "description": "调整所有移动类型。例如\"+5\"或\"*2\"将分别对所有现有移动类型(忽略角色没有的移动类型)加5或乘以2。"
-    },
-    "system.attributes.movement.burrow": {
-      "name": "移动速度(掘穴)",
-      "description": ""
-    },
-    "system.attributes.movement.climb": {
-      "name": "移动速度(攀爬)",
-      "description": ""
-    },
-    "system.attributes.movement.fly": {
-      "name": "移动速度(飞行)",
-      "description": ""
-    },
-    "system.attributes.movement.hover": {
-      "name": "移动(悬浮)",
-      "description": "可以悬浮吗？"
-    },
-    "system.attributes.movement.swim": {
-      "name": "移动速度(游泳)",
-      "description": ""
-    },
-    "system.attributes.movement.units": {
-      "name": "移动单位",
-      "description": ""
-    },
-    "system.attributes.movement.walk": {
-      "name": "移动速度(步行)",
-      "description": ""
-    },
-    "system.attributes.prof": {
-      "name": "熟练加值",
-      "description": ""
-    },
-    "system.attributes.senses.blindsight": {
-      "name": "感官(盲视)",
-      "description": ""
-    },
-    "system.attributes.senses.darkvision": {
-      "name": "感官(黑暗视觉)",
-      "description": ""
-    },
-    "system.attributes.senses.special": {
-      "name": "感官(特殊)",
-      "description": "接受分号分隔的值。"
-    },
-    "system.attributes.senses.tremorsense": {
-      "name": "感官(震颤感知)",
-      "description": ""
-    },
-    "system.attributes.senses.truesight": {
-      "name": "感官(真实视觉)",
-      "description": ""
-    },
-    "system.attributes.senses.units": {
-      "name": "感官单位",
-      "description": ""
-    },
-    "system.attributes.spellcasting": {
-      "name": "施法属性",
-      "description": ""
-    },
-    "system.attributes.hd.max": {
-      "name": "最大生命骰",
-      "description": "仅对NPC可用"
-    }
-  },
-  "dae.SystemBonuses.fieldData": {
-    "system.bonuses.abilities.check": {
-      "name": "属性检定加值",
-      "description": "所有属性检定的加值。"
-    },
-    "system.bonuses.abilities.save": {
-      "name": "豁免检定加值",
-      "description": "所有豁免检定的加值。"
-    },
-    "system.bonuses.abilities.skill": {
-      "name": "技能检定加值",
-      "description": "所有技能检定的加值。"
-    },
-    "system.bonuses.All-Attacks": {
-      "name": "(DAE)攻击检定加值",
-      "description": "所有攻击检定的加值。"
-    },
-    "system.bonuses.All-Damage": {
-      "name": "(DAE)攻击伤害加值",
-      "description": "所有攻击行动伤害掷骰的加值。"
-    },
-    "system.bonuses.check.damage": {
-      "name": "(DAE)检定伤害加值",
-      "description": "所有检定行动伤害掷骰的加值。"
-    },
-    "system.bonuses.heal.damage": {
-      "name": "(DAE)治疗伤害加值",
-      "description": "所有治疗行动伤害掷骰的加值。"
-    },
-    "system.bonuses.msak.attack": {
-      "name": "攻击检定加值(近战法术攻击)",
-      "description": "所有\"近战法术攻击\"攻击检定的加值。"
-    },
-    "system.bonuses.msak.damage": {
-      "name": "攻击伤害加值(近战法术攻击)",
-      "description": "所有\"近战法术攻击\"伤害掷骰的加值。"
-    },
-    "system.bonuses.mwak.attack": {
-      "name": "攻击检定加值(近战武器攻击)",
-      "description": "所有\"近战武器攻击\"攻击检定的加值。"
-    },
-    "system.bonuses.mwak.damage": {
-      "name": "攻击伤害加值(近战武器攻击)",
-      "description": "所有\"近战武器攻击\"伤害掷骰的加值。"
-    },
-    "system.bonuses.rsak.attack": {
-      "name": "攻击检定加值(远程法术攻击)",
-      "description": "所有\"远程法术攻击\"攻击检定的加值。"
-    },
-    "system.bonuses.rsak.damage": {
-      "name": "攻击伤害加值(远程法术攻击)",
-      "description": "所有\"远程法术攻击\"伤害掷骰的加值。"
-    },
-    "system.bonuses.rwak.attack": {
-      "name": "攻击检定加值(远程武器攻击)",
-      "description": "所有\"远程武器攻击\"攻击检定的加值。"
-    },
-    "system.bonuses.rwak.damage": {
-      "name": "攻击伤害加值(远程武器攻击)",
-      "description": "所有\"远程武器攻击\"伤害掷骰的加值。"
-    },
-    "system.bonuses.save.damage": {
-      "name": "(DAE)豁免伤害加值",
-      "description": "所有豁免行动伤害掷骰的加值。"
-    },
-    "system.bonuses.spell.all.damage": {
-      "name": "(DAE)伤害加值(法术)",
-      "description": "所有法术伤害掷骰的加值。"
-    },
-    "system.bonuses.spell.attack": {
-      "name": "(DAE)攻击检定加值(法术)",
-      "description": "所有法术攻击检定的加值。"
-    },
-    "system.bonuses.spell.damage": {
-      "name": "(DAE)攻击伤害加值(法术)",
-      "description": "所有攻击行动法术伤害掷骰的加值。"
-    },
-    "system.bonuses.spell.dc": {
-      "name": "法术豁免DC加值",
-      "description": "法术豁免DC的加值。"
-    },
-    "system.bonuses.weapon.attack": {
-      "name": "(DAE)攻击检定加值(武器)",
-      "description": "所有武器攻击检定的加值。"
-    },
-    "system.bonuses.weapon.damage": {
-      "name": "(DAE)攻击伤害加值(武器)",
-      "description": "所有攻击行动武器伤害掷骰的加值。"
-    }
-  },
-  "dae.SystemTraits.fieldData": {
-    "system.traits.armorProf.all": {
-      "name": "(DAE)全部护甲熟练",
-      "description": "授予所有护甲的熟练。"
-    },
-    "system.traits.armorProf.custom": {
-      "name": "自定义护甲熟练",
-      "description": "接受分号分隔的值。"
-    },
-    "system.traits.armorProf.value": {
-      "name": "单独护甲熟练",
-      "description": "使用\"加\"模式并选择要添加的护甲熟练。使用\"-proficiency\"改为移除对应护甲熟练。"
-    },
-    "system.traits.ci.all": {
-      "name": "(DAE)全部状态免疫",
-      "description": "授予对所有状态的免疫。"
-    },
-    "system.traits.ci.custom": {
-      "name": "自定义状态免疫",
-      "description": "接受分号分隔的值。"
-    },
-    "system.traits.ci.value": {
-      "name": "单独状态免疫",
-      "description": "使用\"加\"模式并选择要添加的状态免疫。使用\"-condition\"改为移除对应状态免疫。"
-    },
-    "system.traits.da.all": {
-      "name": "(Midi)全部伤害吸收",
-      "description": "填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.custom": {
-      "name": "(Midi)自定义伤害吸收",
-      "description": "接受分号分隔的值。"
-    },
-    "da": {
-      "name": "(Midi)伤害吸收({damage})",
-      "description": "{damage}伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.bypasses": {
-      "name": "(Midi)忽略伤害吸收",
-      "description": "忽略伤害吸收的物品/武器属性。"
-    },
-    "system.traits.da.midi.all": {
-      "name": "(Midi)伤害吸收(全部)",
-      "description": "所有伤害类型的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.heal": {
-      "name": "(Midi)伤害吸收(治疗行动)",
-      "description": "治疗行动的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.magical": {
-      "name": "(Midi)伤害吸收(魔法)",
-      "description": "魔法伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.msak": {
-      "name": "(Midi)伤害吸收(近战法术攻击)",
-      "description": "近战法术攻击的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.mwak": {
-      "name": "(Midi)伤害吸收(近战武器攻击)",
-      "description": "近战武器攻击的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.non-adamant-physical": {
-      "name": "(Midi)伤害吸收(非精金物理)",
-      "description": "非精金物理伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.non-magical": {
-      "name": "(Midi)伤害吸收(非魔法)",
-      "description": "非魔法伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.non-magical-physical": {
-      "name": "(Midi)伤害吸收(非魔法物理)",
-      "description": "非魔法物理伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.non-physical": {
-      "name": "(Midi)伤害吸收(非物理)",
-      "description": "非物理伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.non-silver-physical": {
-      "name": "(Midi)伤害吸收(非银质物理)",
-      "description": "非银质物理伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.non-spell": {
-      "name": "(Midi)伤害吸收(非法术)",
-      "description": "非法术伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.physical": {
-      "name": "(Midi)伤害吸收(物理)",
-      "description": "物理伤害的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.rsak": {
-      "name": "(Midi)伤害吸收(远程法术攻击)",
-      "description": "远程法术攻击的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.rwak": {
-      "name": "(Midi)伤害吸收(远程武器攻击)",
-      "description": "远程武器攻击的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.da.midi.save": {
-      "name": "(Midi)伤害吸收(豁免行动)",
-      "description": "豁免行动的伤害吸收，填写所受到伤害的乘数。例如，值为'-1'将使所有伤害转化为治疗而非造成伤害。"
-    },
-    "system.traits.di.all": {
-      "name": "(DAE)全部伤害免疫",
-      "description": "授予对所有伤害类型的免疫。"
-    },
-    "system.traits.di.bypasses": {
-      "name": "忽略伤害免疫",
-      "description": "忽略伤害免疫的物品/武器属性。"
-    },
-    "system.traits.di.custom": {
-      "name": "自定义伤害免疫",
-      "description": "接受分号分隔的值。"
-    },
-    "system.traits.di.value": {
-      "name": "单独伤害免疫",
-      "description": "使用\"加\"模式并选择要添加的伤害类型免疫，使用\"-type\"改为移除对应伤害免疫。"
-    },
-    "dm.amount": {
-      "name": "伤害调整({damage})",
-      "description": "{damage}伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.bypasses": {
-      "name": "忽略伤害调整",
-      "description": "忽略伤害调整的物品/武器属性。"
-    },
-    "system.traits.dm.midi.all": {
-      "name": "(Midi)伤害调整(全部)",
-      "description": "所有伤害类型的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.heal": {
-      "name": "(Midi)伤害调整(治疗行动)",
-      "description": "治疗行动的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.magical": {
-      "name": "(Midi)伤害调整(魔法)",
-      "description": "魔法伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.msak": {
-      "name": "(Midi)伤害调整(近战法术攻击)",
-      "description": "近战法术攻击的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.mwak": {
-      "name": "(Midi)伤害调整(近战武器攻击)",
-      "description": "近战武器攻击的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.non-adamant-physical": {
-      "name": "(Midi)伤害调整(非精金物理)",
-      "description": "非精金物理伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.non-magical": {
-      "name": "(Midi)伤害调整(非魔法)",
-      "description": "非魔法伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.non-magical-physical": {
-      "name": "(Midi)伤害调整(非魔法物理)",
-      "description": "非魔法物理伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.non-physical": {
-      "name": "(Midi)伤害调整(非物理)",
-      "description": "非物理伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.non-silver-physical": {
-      "name": "(Midi)伤害调整(非银质物理)",
-      "description": "非银质物理伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.non-spell": {
-      "name": "(Midi)伤害调整(非法术)",
-      "description": "非法术伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.physical": {
-      "name": "(Midi)伤害调整(物理)",
-      "description": "物理伤害的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.rsak": {
-      "name": "(Midi)伤害调整(远程法术攻击)",
-      "description": "远程法术攻击的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.rwak": {
-      "name": "(Midi)伤害调整(远程武器攻击)",
-      "description": "远程武器攻击的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dm.midi.save": {
-      "name": "(Midi)伤害调整(豁免行动)",
-      "description": "豁免行动的伤害调整。正数表示额外受到的伤害，负数表示减少受到的伤害。"
-    },
-    "system.traits.dr.all": {
-      "name": "(DAE)全部伤害抗性",
-      "description": "授予对所有伤害类型的抗性。"
-    },
-    "system.traits.dr.bypasses": {
-      "name": "忽略伤害抗性",
-      "description": "忽略伤害抗性的物品/武器属性。"
-    },
-    "system.traits.dr.custom": {
-      "name": "自定义伤害抗性",
-      "description": "接受分号分隔的值。"
-    },
-    "system.traits.dr.value": {
-      "name": "单独伤害抗性",
-      "description": "使用\"加\"模式并选择要添加的伤害类型抗性。使用\"-type\"改为移除对应伤害抗性。"
-    },
-    "system.traits.dv.all": {
-      "name": "(DAE)全部伤害易伤",
-      "description": "授予对所有伤害类型的易伤。"
-    },
-    "system.traits.dv.bypasses": {
-      "name": "忽略伤害易伤",
-      "description": "忽略伤害易伤的物品/武器属性。"
-    },
-    "system.traits.dv.custom": {
-      "name": "自定义伤害易伤",
-      "description": "接受分号分隔的值。"
-    },
-    "system.traits.dv.value": {
-      "name": "单独伤害易伤",
-      "description": "使用\"加\"模式并选择要添加的伤害类型易伤。使用\"-type\"改为移除对应伤害易伤。"
-    },
-    "system.traits.languages.all": {
-      "name": "(DAE)全部语言",
-      "description": "授予所有语言。"
-    },
-    "system.traits.languages.custom": {
-      "name": "自定义语言",
-      "description": "接受分号分隔的值。"
-    },
-    "system.traits.languages.value": {
-      "name": "单独语言",
-      "description": "使用\"加\"模式并选择要添加的语言。"
-    },
-    "system.traits.size": {
-      "name": "角色体型",
-      "description": ""
-    },
-    "system.traits.weaponProf.all": {
-      "name": "(DAE)全部武器熟练",
-      "description": "授予所有武器的熟练。"
-    },
-    "system.traits.weaponProf.custom": {
-      "name": "自定义武器熟练",
-      "description": "接受分号分隔的值。"
-    },
-    "system.traits.weaponProf.value": {
-      "name": "单独武器熟练",
-      "description": "使用\"加\"模式并选择要添加的武器熟练。使用\"-proficiency\"改为移除对应武器熟练。"
-    }
-  },
-  "dae.Other.fieldData": {
-    "StatusEffect": {
-      "name": "",
-      "description": ""
-    },
-    "StatusEffectLabel": {
-      "name": "",
-      "description": ""
-    },
-    "StatusEffectName": {
-      "name": "",
-      "description": ""
-    },
-    "flags.dae": {
-      "name": "",
-      "description": ""
-    },
-    "flags.dae.onUpdateSource": {
-      "name": "(DAE)更新来源角色时",
-      "description": "详情查阅FVTT中文教程—自动化教程—主动效果（AE）系统综述-flags.dae.onUpdateSource。"
-    },
-    "flags.dae.onUpdateTarget": {
-      "name": "(DAE)更新目标角色时",
-      "description": "详情查阅FVTT中文教程—自动化教程—主动效果（AE）系统综述-flags.dae.flags.dae.onUpdateTarget。"
-    },
-    "system.favorites": {
-      "name": "收藏",
-      "description": ""
-    },
-    "system.attributes.movement.air": {
-      "name": "空中移动",
-      "description": ""
-    },
-    "system.attributes.movement.land": {
-      "name": "陆地移动",
-      "description": ""
-    },
-    "system.attributes.movement.water": {
-      "name": "水中移动",
-      "description": ""
-    },
-    "system.description.full": {
-      "name": "完整描述",
-      "description": ""
-    },
-    "system.description.summary": {
-      "name": "摘要描述",
-      "description": ""
-    },
-    "system.members": {
-      "name": "成员",
-      "description": ""
-    },
-    "system.type.value": {
-      "name": "类型值",
-      "description": ""
-    },
-    "system.attributes.hd.spent": {
-      "name": "已使用生命骰",
-      "description": ""
-    },
-    "system.attributes.hp.formula": {
-      "name": "HP公式",
-      "description": ""
-    },
-    "system.details.cr": {
-      "name": "挑战等级",
-      "description": ""
-    },
-    "system.details.environment": {
-      "name": "环境",
-      "description": ""
-    },
-    "system.details.source.book": {
-      "name": "来源书籍",
-      "description": ""
-    },
-    "system.details.source.custom": {
-      "name": "来源自定义标签",
-      "description": ""
-    },
-    "system.details.source.license": {
-      "name": "来源许可",
-      "description": ""
-    },
-    "system.details.source.page": {
-      "name": "来源页码",
-      "description": ""
-    },
-    "system.attributes.spell.level": {
-      "name": "法术环阶",
-      "description": ""
-    },
-    "system.details.type.custom": {
-      "name": "自定义类型",
-      "description": ""
-    },
-    "system.details.type.subtype": {
-      "name": "子类型",
-      "description": ""
-    },
-    "system.details.type.swarm": {
-      "name": "集群大小",
-      "description": ""
-    },
-    "system.details.type.value": {
-      "name": "类型",
-      "description": ""
-    },
-    "system.resources.lair.initiative": {
-      "name": "巢穴动作",
-      "description": ""
-    },
-    "system.resources.lair.value": {
-      "name": "拥有巢穴",
-      "description": ""
-    },
-    "system.resources.legact.value": {
-      "name": "传奇动作",
-      "description": ""
-    },
-    "system.resources.legres.value": {
-      "name": "传奇抗性",
-      "description": ""
-    },
-    "system.attributes.ac.motionless": {
-      "name": "静止(Motionless)时AC",
-      "description": ""
-    },
-    "system.attributes.actions.stations": {
-      "name": "动作站位",
-      "description": ""
-    },
-    "system.attributes.actions.thresholds.0": {
-      "name": "动作阈值0",
-      "description": ""
-    },
-    "system.attributes.actions.thresholds.1": {
-      "name": "动作阈值1",
-      "description": ""
-    },
-    "system.attributes.actions.thresholds.2": {
-      "name": "动作阈值2",
-      "description": ""
-    },
-    "system.attributes.actions.value": {
-      "name": "动作值",
-      "description": ""
-    },
-    "system.attributes.capacity.cargo": {
-      "name": "货物容量",
-      "description": ""
-    },
-    "system.attributes.capacity.creature": {
-      "name": "生物容量",
-      "description": ""
-    },
-    "system.attributes.hp.dt": {
-      "name": "伤害阈值",
-      "description": ""
-    },
-    "system.attributes.hp.mt": {
-      "name": "最小阈值",
-      "description": ""
-    },
-    "system.cargo.crew": {
-      "name": "乘员容量",
-      "description": ""
-    },
-    "system.cargo.passengers": {
-      "name": "乘客容量",
-      "description": ""
-    },
-    "system.traits.dimensions": {
-      "name": "尺寸",
-      "description": ""
-    },
-    "system.vehicleType": {
-      "name": "载具类型",
-      "description": ""
-    },
-    "system.currency.cp": {
-      "name": "铜币",
-      "description": "不要使用此项，它会在角色每次更新时更新。"
-    },
-    "system.currency.ep": {
-      "name": "银金币",
-      "description": "不要使用此项，它会在角色每次更新时更新。"
-    },
-    "system.currency.gp": {
-      "name": "金币",
-      "description": "不要使用此项，它会在角色每次更新时更新。"
-    },
-    "system.currency.pp": {
-      "name": "铂金币",
-      "description": "不要使用此项，它会在角色每次更新时更新。"
-    },
-    "system.currency.sp": {
-      "name": "银币",
-      "description": "不要使用此项，它会在角色每次更新时更新。"
-    },
-    "system.details.age": {
-      "name": "年龄",
-      "description": ""
-    },
-    "system.details.alignment": {
-      "name": "阵营",
-      "description": ""
-    },
-    "system.details.appearance": {
-      "name": "外貌",
-      "description": ""
-    },
-    "system.details.background": {
-      "name": "背景",
-      "description": ""
-    },
-    "system.details.biography.public": {
-      "name": "传记(公开)",
-      "description": ""
-    },
-    "system.details.biography.value": {
-      "name": "传记(完整)",
-      "description": ""
-    },
-    "system.details.bond": {
-      "name": "羁绊",
-      "description": ""
-    },
-    "system.details.eyes": {
-      "name": "眼睛",
-      "description": ""
-    },
-    "system.details.faith": {
-      "name": "信仰",
-      "description": ""
-    },
-    "system.details.flaw": {
-      "name": "缺陷",
-      "description": ""
-    },
-    "system.details.gender": {
-      "name": "性别",
-      "description": ""
-    },
-    "system.details.hair": {
-      "name": "头发",
-      "description": ""
-    },
-    "system.details.height": {
-      "name": "身高",
-      "description": ""
-    },
-    "system.details.ideal": {
-      "name": "理想",
-      "description": ""
-    },
-    "system.details.level": {
-      "name": "等级",
-      "description": "这只会改变角色表上的外观，并允许你将等级提升到20级以上。所有其他基于等级的属性(如熟练加值)已经调整。"
-    },
-    "system.details.originalClass": {
-      "name": "源职业",
-      "description": ""
-    },
-    "system.details.race": {
-      "name": "种族/物种",
-      "description": ""
-    },
-    "system.details.skin": {
-      "name": "皮肤",
-      "description": ""
-    },
-    "system.details.trait": {
-      "name": "特质",
-      "description": ""
-    },
-    "system.details.weight": {
-      "name": "体重",
-      "description": ""
-    },
-    "system.details.xp.value": {
-      "name": "经验值",
-      "description": ""
-    },
-    "system.resources.legact.max": {
-      "name": "最大传奇动作",
-      "description": ""
-    },
-    "system.resources.legres.max": {
-      "name": "最大传奇抗性",
-      "description": ""
-    },
-    "system.resources.primary.label": {
-      "name": "资源 1 标签",
-      "description": "注意：资源已被弃用。"
-    },
-    "system.resources.primary.lr": {
-      "name": "资源 1 长休恢复",
-      "description": "注意：资源已被弃用。长休时恢复(1/0)。"
-    },
-    "system.resources.primary.max": {
-      "name": "资源 1 最大值",
-      "description": "注意：资源已被弃用。"
-    },
-    "system.resources.primary.sr": {
-      "name": "资源 1 短休恢复",
-      "description": "注意：资源已被弃用。短休时恢复(1/0)。"
-    },
-    "system.resources.primary.value": {
-      "name": "资源 1 值",
-      "description": "注意：资源已被弃用。"
-    },
-    "system.resources.secondary.label": {
-      "name": "资源 2 标签",
-      "description": "注意：资源已被弃用。"
-    },
-    "system.resources.secondary.lr": {
-      "name": "资源 2 长休恢复",
-      "description": "注意：资源已被弃用。长休时恢复(1/0)。"
-    },
-    "system.resources.secondary.max": {
-      "name": "资源 2 最大值",
-      "description": "注意：资源已被弃用。"
-    },
-    "system.resources.secondary.sr": {
-      "name": "资源 2 短休恢复",
-      "description": "注意：资源已被弃用。短休时恢复(1/0)。"
-    },
-    "system.resources.secondary.value": {
-      "name": "资源 2 值",
-      "description": "注意：资源已被弃用。"
-    },
-    "system.resources.tertiary.label": {
-      "name": "资源 3 标签",
-      "description": "注意：资源已被弃用。"
-    },
-    "system.resources.tertiary.lr": {
-      "name": "资源 3 长休恢复",
-      "description": "注意：资源已被弃用。长休时恢复(1/0)。"
-    },
-    "system.resources.tertiary.max": {
-      "name": "资源 3 最大值",
-      "description": "注意：资源已被弃用。"
-    },
-    "system.resources.tertiary.sr": {
-      "name": "资源 3 短休恢复",
-      "description": "注意：资源已被弃用。短休时恢复(1/0)。"
-    },
-    "system.resources.tertiary.value": {
-      "name": "资源 3 值",
-      "description": "注意：资源已被弃用。"
-    },
-    "system.spells.pact.level": {
-      "name": "契约法术环阶",
-      "description": ""
-    },
-    "system.spells.pact.max": {
-      "name": "最大契约法术位",
-      "description": ""
-    },
-    "system.spells.pact.override": {
-      "name": "覆盖契约法术位",
-      "description": ""
-    },
-    "system.spells.spell1.max": {
-      "name": "最大1环法术位",
-      "description": ""
-    },
-    "system.spells.spell1.override": {
-      "name": "覆盖1环法术位",
-      "description": ""
-    },
-    "system.spells.spell2.max": {
-      "name": "最大2环法术位",
-      "description": ""
-    },
-    "system.spells.spell2.override": {
-      "name": "覆盖2环法术位",
-      "description": ""
-    },
-    "system.spells.spell3.max": {
-      "name": "最大3环法术位",
-      "description": ""
-    },
-    "system.spells.spell3.override": {
-      "name": "覆盖3环法术位",
-      "description": ""
-    },
-    "system.spells.spell4.max": {
-      "name": "最大4环法术位",
-      "description": ""
-    },
-    "system.spells.spell4.override": {
-      "name": "覆盖4环法术位",
-      "description": ""
-    },
-    "system.spells.spell5.max": {
-      "name": "最大5环法术位",
-      "description": ""
-    },
-    "system.spells.spell5.override": {
-      "name": "覆盖5环法术位",
-      "description": ""
-    },
-    "system.spells.spell6.max": {
-      "name": "最大6环法术位",
-      "description": ""
-    },
-    "system.spells.spell6.override": {
-      "name": "覆盖6环法术位",
-      "description": ""
-    },
-    "system.spells.spell7.max": {
-      "name": "最大7环法术位",
-      "description": ""
-    },
-    "system.spells.spell7.override": {
-      "name": "覆盖7环法术位",
-      "description": ""
-    },
-    "system.spells.spell8.max": {
-      "name": "最大8环法术位",
-      "description": ""
-    },
-    "system.spells.spell8.override": {
-      "name": "覆盖8环法术位",
-      "description": ""
-    },
-    "system.spells.spell9.max": {
-      "name": "最大9环法术位",
-      "description": ""
-    },
-    "system.spells.spell9.override": {
-      "name": "覆盖9环法术位",
-      "description": ""
-    },
-    "system.tools.alchemist.ability": {
-      "name": "炼金工具属性",
-      "description": "炼金工具检定使用哪个属性。"
-    },
-    "system.tools.alchemist.bonuses.check": {
-      "name": "炼金工具检定加值",
-      "description": ""
-    },
-    "system.tools.alchemist.prof": {
-      "name": "炼金工具熟练度",
-      "description": ""
-    },
-    "system.tools.art.ability": {
-      "name": "工匠工具属性",
-      "description": "工匠工具检定使用哪个属性。"
-    },
-    "system.tools.art.bonuses.check": {
-      "name": "工匠工具检定加值",
-      "description": ""
-    },
-    "system.tools.art.prof": {
-      "name": "工匠工具熟练度",
-      "description": ""
-    },
-    "system.tools.bagpipes.ability": {
-      "name": "风笛属性",
-      "description": "风笛检定使用哪个属性。"
-    },
-    "system.tools.bagpipes.bonuses.check": {
-      "name": "风笛检定加值",
-      "description": ""
-    },
-    "system.tools.bagpipes.prof": {
-      "name": "风笛熟练度",
-      "description": ""
-    },
-    "system.tools.brewer.ability": {
-      "name": "酿酒工具属性",
-      "description": "酿酒工具检定使用哪个属性。"
-    },
-    "system.tools.brewer.bonuses.check": {
-      "name": "酿酒工具检定加值",
-      "description": ""
-    },
-    "system.tools.brewer.prof": {
-      "name": "酿酒工具熟练度",
-      "description": ""
-    },
-    "system.tools.calligrapher.ability": {
-      "name": "书法工具属性",
-      "description": "书法工具检定使用哪个属性。"
-    },
-    "system.tools.calligrapher.bonuses.check": {
-      "name": "书法工具检定加值",
-      "description": ""
-    },
-    "system.tools.calligrapher.prof": {
-      "name": "书法工具熟练度",
-      "description": ""
-    },
-    "system.tools.card.ability": {
-      "name": "纸牌属性",
-      "description": "纸牌检定使用哪个属性。"
-    },
-    "system.tools.card.bonuses.check": {
-      "name": "纸牌检定加值",
-      "description": ""
-    },
-    "system.tools.card.prof": {
-      "name": "纸牌熟练度",
-      "description": ""
-    },
-    "system.tools.carpenter.ability": {
-      "name": "木匠工具属性",
-      "description": "木匠工具检定使用哪个属性。"
-    },
-    "system.tools.carpenter.bonuses.check": {
-      "name": "木匠工具检定加值",
-      "description": ""
-    },
-    "system.tools.carpenter.prof": {
-      "name": "木匠工具熟练度",
-      "description": ""
-    },
-    "system.tools.cartographer.ability": {
-      "name": "制图工具属性",
-      "description": "制图工具检定使用哪个属性。"
-    },
-    "system.tools.cartographer.bonuses.check": {
-      "name": "制图工具检定加值",
-      "description": ""
-    },
-    "system.tools.cartographer.prof": {
-      "name": "制图工具熟练度",
-      "description": ""
-    },
-    "system.tools.chess.ability": {
-      "name": "龙棋属性",
-      "description": "龙棋检定使用哪个属性。"
-    },
-    "system.tools.chess.bonuses.check": {
-      "name": "龙棋检定加值",
-      "description": ""
-    },
-    "system.tools.chess.prof": {
-      "name": "龙棋熟练度",
-      "description": ""
-    },
-    "system.tools.cobbler.ability": {
-      "name": "鞋匠工具属性",
-      "description": "鞋匠工具检定使用哪个属性。"
-    },
-    "system.tools.cobbler.bonuses.check": {
-      "name": "鞋匠工具检定加值",
-      "description": ""
-    },
-    "system.tools.cobbler.prof": {
-      "name": "鞋匠工具熟练度",
-      "description": ""
-    },
-    "system.tools.cook.ability": {
-      "name": "厨具属性",
-      "description": "厨具检定使用哪个属性。"
-    },
-    "system.tools.cook.bonuses.check": {
-      "name": "厨具检定加值",
-      "description": ""
-    },
-    "system.tools.cook.prof": {
-      "name": "厨具熟练度",
-      "description": ""
-    },
-    "system.tools.dice.ability": {
-      "name": "骰子属性",
-      "description": "骰子检定使用哪个属性。"
-    },
-    "system.tools.dice.bonuses.check": {
-      "name": "骰子检定加值",
-      "description": ""
-    },
-    "system.tools.dice.prof": {
-      "name": "骰子熟练度",
-      "description": ""
-    },
-    "system.tools.disg.ability": {
-      "name": "伪装工具属性",
-      "description": "伪装工具检定使用哪个属性。"
-    },
-    "system.tools.disg.bonuses.check": {
-      "name": "伪装工具检定加值",
-      "description": ""
-    },
-    "system.tools.disg.prof": {
-      "name": "伪装工具熟练度",
-      "description": ""
-    },
-    "system.tools.drum.ability": {
-      "name": "鼓属性",
-      "description": "鼓检定使用哪个属性。"
-    },
-    "system.tools.drum.bonuses.check": {
-      "name": "鼓检定加值",
-      "description": ""
-    },
-    "system.tools.drum.prof": {
-      "name": "鼓熟练度",
-      "description": ""
-    },
-    "system.tools.dulcimer.ability": {
-      "name": "扬琴属性",
-      "description": "扬琴检定使用哪个属性。"
-    },
-    "system.tools.dulcimer.bonuses.check": {
-      "name": "扬琴检定加值",
-      "description": ""
-    },
-    "system.tools.dulcimer.prof": {
-      "name": "扬琴熟练度",
-      "description": ""
-    },
-    "system.tools.flute.ability": {
-      "name": "长笛属性",
-      "description": "长笛检定使用哪个属性。"
-    },
-    "system.tools.flute.bonuses.check": {
-      "name": "长笛检定加值",
-      "description": ""
-    },
-    "system.tools.flute.prof": {
-      "name": "长笛熟练度",
-      "description": ""
-    },
-    "system.tools.forg.ability": {
-      "name": "伪造工具属性",
-      "description": "伪造工具检定使用哪个属性。"
-    },
-    "system.tools.forg.bonuses.check": {
-      "name": "伪造工具检定加值",
-      "description": ""
-    },
-    "system.tools.forg.prof": {
-      "name": "伪造工具熟练度",
-      "description": ""
-    },
-    "system.tools.game.ability": {
-      "name": "赌具属性",
-      "description": "赌具检定使用哪个属性。"
-    },
-    "system.tools.game.bonuses.check": {
-      "name": "赌具检定加值",
-      "description": ""
-    },
-    "system.tools.game.prof": {
-      "name": "赌具熟练度",
-      "description": ""
-    },
-    "system.tools.glassblower.ability": {
-      "name": "玻璃匠工具属性",
-      "description": "玻璃匠工具检定使用哪个属性。"
-    },
-    "system.tools.glassblower.bonuses.check": {
-      "name": "玻璃匠工具检定加值",
-      "description": ""
-    },
-    "system.tools.glassblower.prof": {
-      "name": "玻璃匠工具熟练度",
-      "description": ""
-    },
-    "system.tools.herb.ability": {
-      "name": "草药工具属性",
-      "description": "草药工具检定使用哪个属性。"
-    },
-    "system.tools.herb.bonuses.check": {
-      "name": "草药工具检定加值",
-      "description": ""
-    },
-    "system.tools.herb.prof": {
-      "name": "草药工具熟练度",
-      "description": ""
-    },
-    "system.tools.horn.ability": {
-      "name": "角号属性",
-      "description": "角号检定使用哪个属性。"
-    },
-    "system.tools.horn.bonuses.check": {
-      "name": "角号检定加值",
-      "description": ""
-    },
-    "system.tools.horn.prof": {
-      "name": "角号熟练度",
-      "description": ""
-    },
-    "system.tools.jeweler.ability": {
-      "name": "珠宝匠工具属性",
-      "description": "珠宝匠工具检定使用哪个属性。"
-    },
-    "system.tools.jeweler.bonuses.check": {
-      "name": "珠宝匠工具检定加值",
-      "description": ""
-    },
-    "system.tools.jeweler.prof": {
-      "name": "珠宝匠工具熟练度",
-      "description": ""
-    },
-    "system.tools.leatherworker.ability": {
-      "name": "皮匠工具属性",
-      "description": "皮匠工具检定使用哪个属性。"
-    },
-    "system.tools.leatherworker.bonuses.check": {
-      "name": "皮匠工具检定加值",
-      "description": ""
-    },
-    "system.tools.leatherworker.prof": {
-      "name": "皮匠工具熟练度",
-      "description": ""
-    },
-    "system.tools.lute.ability": {
-      "name": "鲁特琴属性",
-      "description": "鲁特琴检定使用哪个属性。"
-    },
-    "system.tools.lute.bonuses.check": {
-      "name": "鲁特琴检定加值",
-      "description": ""
-    },
-    "system.tools.lute.prof": {
-      "name": "鲁特琴熟练度",
-      "description": ""
-    },
-    "system.tools.lyre.ability": {
-      "name": "里拉琴属性",
-      "description": "里拉琴检定使用哪个属性。"
-    },
-    "system.tools.lyre.bonuses.check": {
-      "name": "里拉琴检定加值",
-      "description": ""
-    },
-    "system.tools.lyre.prof": {
-      "name": "里拉琴熟练度",
-      "description": ""
-    },
-    "system.tools.mason.ability": {
-      "name": "石匠工具属性",
-      "description": "石匠工具检定使用哪个属性。"
-    },
-    "system.tools.mason.bonuses.check": {
-      "name": "石匠工具检定加值",
-      "description": ""
-    },
-    "system.tools.mason.prof": {
-      "name": "石匠工具熟练度",
-      "description": ""
-    },
-    "system.tools.music.ability": {
-      "name": "乐器属性",
-      "description": "乐器检定使用哪个属性。"
-    },
-    "system.tools.music.bonuses.check": {
-      "name": "乐器检定加值",
-      "description": ""
-    },
-    "system.tools.music.prof": {
-      "name": "乐器熟练度",
-      "description": ""
-    },
-    "system.tools.navg.ability": {
-      "name": "导航工具属性",
-      "description": "导航工具检定使用哪个属性。"
-    },
-    "system.tools.navg.bonuses.check": {
-      "name": "导航工具检定加值",
-      "description": ""
-    },
-    "system.tools.navg.prof": {
-      "name": "导航工具熟练度",
-      "description": ""
-    },
-    "system.tools.painter.ability": {
-      "name": "画家工具属性",
-      "description": "画家工具检定使用哪个属性。"
-    },
-    "system.tools.painter.bonuses.check": {
-      "name": "画家工具检定加值",
-      "description": ""
-    },
-    "system.tools.painter.prof": {
-      "name": "画家工具熟练度",
-      "description": ""
-    },
-    "system.tools.panflute.ability": {
-      "name": "排箫属性",
-      "description": "排箫检定使用哪个属性。"
-    },
-    "system.tools.panflute.bonuses.check": {
-      "name": "排箫检定加值",
-      "description": ""
-    },
-    "system.tools.panflute.prof": {
-      "name": "排箫熟练度",
-      "description": ""
-    },
-    "system.tools.pois.ability": {
-      "name": "毒药工具属性",
-      "description": "毒药工具检定使用哪个属性。"
-    },
-    "system.tools.pois.bonuses.check": {
-      "name": "毒药工具检定加值",
-      "description": ""
-    },
-    "system.tools.pois.prof": {
-      "name": "毒药工具熟练度",
-      "description": ""
-    },
-    "system.tools.potter.ability": {
-      "name": "陶匠工具属性",
-      "description": "陶匠工具检定使用哪个属性。"
-    },
-    "system.tools.potter.bonuses.check": {
-      "name": "陶匠工具检定加值",
-      "description": ""
-    },
-    "system.tools.potter.prof": {
-      "name": "陶匠工具熟练度",
-      "description": ""
-    },
-    "system.tools.shawm.ability": {
-      "name": "芦笛属性",
-      "description": "芦笛检定使用哪个属性。"
-    },
-    "system.tools.shawm.bonuses.check": {
-      "name": "芦笛检定加值",
-      "description": ""
-    },
-    "system.tools.shawm.prof": {
-      "name": "芦笛熟练度",
-      "description": ""
-    },
-    "system.tools.smith.ability": {
-      "name": "铁匠工具属性",
-      "description": "铁匠工具检定使用哪个属性。"
-    },
-    "system.tools.smith.bonuses.check": {
-      "name": "铁匠工具检定加值",
-      "description": ""
-    },
-    "system.tools.smith.prof": {
-      "name": "铁匠工具熟练度",
-      "description": ""
-    },
-    "system.tools.thief.ability": {
-      "name": "盗贼工具属性",
-      "description": "盗贼工具检定使用哪个属性。"
-    },
-    "system.tools.thief.bonuses.check": {
-      "name": "盗贼工具检定加值",
-      "description": ""
-    },
-    "system.tools.thief.prof": {
-      "name": "盗贼工具熟练度",
-      "description": ""
-    },
-    "system.tools.tinker.ability": {
-      "name": "修补工具属性",
-      "description": "修补工具检定使用哪个属性。"
-    },
-    "system.tools.tinker.bonuses.check": {
-      "name": "修补工具检定加值",
-      "description": ""
-    },
-    "system.tools.tinker.prof": {
-      "name": "修补工具熟练度",
-      "description": ""
-    },
-    "system.tools.vehicle.ability": {
-      "name": "载具属性",
-      "description": "载具检定使用哪个属性。"
-    },
-    "system.tools.vehicle.bonuses.check": {
-      "name": "载具检定加值",
-      "description": ""
-    },
-    "system.tools.vehicle.prof": {
-      "name": "载具熟练度",
-      "description": ""
-    },
-    "system.tools.viol.ability": {
-      "name": "提琴属性",
-      "description": "提琴检定使用哪个属性。"
-    },
-    "system.tools.viol.bonuses.check": {
-      "name": "提琴检定加值",
-      "description": ""
-    },
-    "system.tools.viol.prof": {
-      "name": "提琴熟练度",
-      "description": ""
-    },
-    "system.tools.weaver.ability": {
-      "name": "织布工具属性",
-      "description": "织布工具检定使用哪个属性。"
-    },
-    "system.tools.weaver.bonuses.check": {
-      "name": "织布工具检定加值",
-      "description": ""
-    },
-    "system.tools.weaver.prof": {
-      "name": "织布工具熟练度",
-      "description": ""
-    },
-    "system.tools.woodcarver.ability": {
-      "name": "木雕工具属性",
-      "description": "木雕工具检定使用哪个属性。"
-    },
-    "system.tools.woodcarver.bonuses.check": {
-      "name": "木雕工具检定加值",
-      "description": ""
-    },
-    "system.tools.woodcarver.prof": {
-      "name": "木雕工具熟练度",
-      "description": ""
-    }
-  },
-  "dae.Unknown.fieldData": {
-    "system.ability": {
-      "name": "攻击使用的属性",
-      "description": "注意：等同于\"activities[attack].attack.ability\"。"
-    },
-    "system.attack.bonus": {
-      "name": "攻击行动的攻击检定加值",
-      "description": "注意：等同于\"activities[attack].attack.bonus\"。"
-    },
-    "system.attack.flat": {
-      "name": "固定命中加值",
-      "description": "若为true，则攻击计算加值时只计算行动本身的加值而无视熟练加值与属性调整值。注意：等同于\"activities[attack].attack.flat\"。"
-    },
-    "system.damage.bonus": {
-      "name": "伤害加值",
-      "description": "所有造成伤害行动的伤害加值。"
-    },
-    "system.damageBonus": {
-      "name": "伤害加值",
-	  "description": "注意：应使用 \"system.damage.bonus\" 代替。"
-    },
-    "system.damage.parts": {
-      "name": "额外伤害",
-      "description": "允许你以特定格式添加额外伤害(例如[[\"1d6\", \"fire\"]])。将向所有造成伤害的行动添加额外伤害，不仅仅是攻击。"
-    },
-    "system.damage.types": {
-      "name": "伤害类型",
-      "description": ""
-    },
-    "activities[attack].attack.ability": {
-      "name": "攻击行动的属性",
-      "description": "攻击使用的属性"
-    },
-    "activities[attack].attack.bonus": {
-      "name": "攻击行动的攻击检定加值",
-      "description": "攻击行动的攻击检定加值"
-    },
-    "activities[attack].attack.critical.threshold": {
-      "name": "攻击行动的重击阈值",
-      "description": "若改变模式为“加”则在原本的阈值上进行加或减，若改变模式为“降级”则直接覆盖为指定阈值"
-    },
-    "activities[attack].attack.flat": {
-      "name": "攻击行动是否固定命中加值",
-      "description": "若为true，则攻击计算加值时只计算行动本身的加值而无视熟练加值与属性调整值"
-    },
-    "activities[attack].attack.type.value": {
-      "name": "攻击行动的类型",
-      "description": "决定攻击是近战攻击还是远程攻击"
-    },
-    "activities[attack].attack.type.classification": {
-      "name": "攻击行动的分类",
-      "description": "决定攻击类型：武器，法术或徒手"
-    },
-    "activities[attack].damage.includeBase": {
-      "name": "攻击行动是否包含基础伤害",
-      "description": "即武器详情页伤害"
-    },
-    "activities[cast].spell.ability": {
-      "name": "施法行动的属性",
-      "description": ""
-    },
-    "activities[cast].spell.challenge.attack": {
-      "name": "施法行动的法术攻击加值",
-      "description": "同时将\"activities[cast].spell.challenge.override\"设置为\"true\"。"
-    },
-    "activities[cast].spell.challenge.save": {
-      "name": "施法行动的法术豁免公式",
-      "description": "同时将\"activities[cast].spell.challenge.override\"设置为\"true\"。"
-    },
-    "activities[cast].spell.challenge.override": {
-      "name": "施法行动的法术攻击/豁免覆盖",
-      "description": ""
-    },
-    "activities[cast].spell.level": {
-      "name": "施法行动的法术环阶",
-      "description": ""
-    },
-    "activities[cast].spell.properties": {
-      "name": "施法行动的施法成分",
-      "description": ""
-    },
-    "activities[cast].spell.spellbook": {
-      "name": "施法行动的法术书",
-      "description": "在法术书中显示该施法行动的法术"
-    },
-    "activities[cast].spell.uuid": {
-      "name": "施法行动的UUID",
-      "description": ""
-    },
-    "activities[check].check.ability": {
-      "name": "检定行动的属性",
-      "description": ""
-    },
-    "activities[check].check.associated": {
-      "name": "检定行动的关联技能或工具",
-      "description": ""
-    },
-    "activities[check].check.dc.calculation": {
-      "name": "检定行动的DC计算",
-      "description": ""
-    },
-    "activities[check].check.dc.formula": {
-      "name": "检定行动的DC公式",
-      "description": "如果使用此属性，\"activities[check].check.dc.calculation\"应设置为\"自定义公式\"。"
-    },
-    "activities[damage].damage.critical.allow": {
-      "name": "检定行动是否可以大成功",
-      "description": ""
-    },
-    "activities[enchant].enchant.identifier": {
-      "name": "附魔行动的职业标识符",
-      "description": ""
-    },
-    "activities[enchant].restrictions.allowMagical": {
-      "name": "附魔行动限制：允许魔法",
-      "description": ""
-    },
-    "activities[enchant].restrictions.categories": {
-      "name": "附魔行动限制：有效物品类别",
-      "description": ""
-    },
-    "activities[enchant].restrictions.properties": {
-      "name": "附魔行动限制：有效物品属性",
-      "description": ""
-    },
-    "activities[enchant].restrictions.type": {
-      "name": "附魔行动限制：物品类型",
-      "description": ""
-    },
-    "activities[forward].activity.id": {
-      "name": "转进行动的ID",
-      "description": ""
-    },
-    "activities[heal].healing.number": {
-      "name": "治疗行动的骰子数量",
-      "description": ""
-    },
-    "activities[heal].healing.denomination": {
-      "name": "治疗行动的骰子面数",
-      "description": ""
-    },
-    "activities[heal].healing.bonus": {
-      "name": "治疗行动的加值",
-      "description": ""
-    },
-    "activities[heal].healing.types": {
-      "name": "治疗行动的类型",
-      "description": ""
-    },
-    "activities[heal].healing.custom.enabled": {
-      "name": "治疗行动的自定义公式启用",
-      "description": ""
-    },
-    "activities[heal].healing.custom.formula": {
-      "name": "治疗行动的自定义公式",
-      "description": "同时将\"activities[heal].healing.custom.enabled\"设置为\"true\"。"
-    },
-    "activities[heal].healing.scaling.mode": {
-      "name": "治疗行动的比例模式",
-      "description": ""
-    },
-    "activities[heal].healing.scaling.number": {
-      "name": "治疗行动的比例数量",
-      "description": "每比例等级额外掷骰的骰子数量。"
-    },
-    "activities[heal].healing.scaling.formula": {
-      "name": "治疗行动的比例公式",
-      "description": "每比例等级额外添加的公式。"
-    },
-    "activities[save].damage.onSave": {
-      "name": "豁免行动豁免成功时的伤害",
-      "description": ""
-    },
-    "activities[save].save.ability": {
-      "name": "豁免行动的属性",
-      "description": ""
-    },
-    "activities[save].save.dc.calculation": {
-      "name": "豁免行动的DC计算",
-      "description": ""
-    },
-    "activities[save].save.dc.formula": {
-      "name": "豁免行动的DC公式",
-      "description": "如果使用此属性，\"activities[save].save.dc.calculation\"应设置为\"自定义公式\"。"
-    },
-    "activities[summon].bonuses.ac": {
-      "name": "召唤行动的AC加值公式",
-      "description": ""
-    },
-    "activities[summon].bonuses.hd": {
-      "name": "召唤行动的生命骰加值公式",
-      "description": ""
-    },
-    "activities[summon].bonuses.hp": {
-      "name": "召唤行动的HP加值公式",
-      "description": ""
-    },
-    "activities[summon].bonuses.attackDamage": {
-      "name": "召唤行动的攻击伤害加值",
-      "description": ""
-    },
-    "activities[summon].bonuses.saveDamage": {
-      "name": "召唤行动的豁免伤害加值",
-      "description": ""
-    },
-    "activities[summon].bonuses.healing": {
-      "name": "召唤行动的治疗加值",
-      "description": ""
-    },
-    "activities[summon].creatureSizes": {
-      "name": "召唤行动的生物体型",
-      "description": ""
-    },
-    "activities[summon].creatureTypes": {
-      "name": "召唤行动的生物类型",
-      "description": ""
-    },
-    "activities[summon].match.ability": {
-      "name": "召唤行动的匹配属性",
-      "description": "用于匹配攻击/豁免的召唤者属性值。"
-    },
-    "activities[summon].match.attacks": {
-      "name": "召唤行动的匹配攻击加值",
-      "description": ""
-    },
-    "activities[summon].match.proficiency": {
-      "name": "召唤行动的匹配熟练",
-      "description": ""
-    },
-    "activities[summon].match.saves": {
-      "name": "召唤行动的匹配豁免DC",
-      "description": ""
-    },
-    "activities[summon].summon.identifier": {
-      "name": "召唤行动的职业标识符",
-      "description": ""
-    },
-    "activities[summon].summon.mode": {
-      "name": "召唤行动的模式",
-      "description": ""
-    },
-    "activities[summon].summon.prompt": {
-      "name": "召唤行动的提示",
-      "description": ""
-    },
-    "activities[transform].settings.effects": {
-      "name": "变形行动的效果",
-      "description": "变形时保留哪些类型的效果。"
-    },
-    "activities[transform].settings.keep": {
-      "name": "变形行动的保留",
-      "description": "变形时保留哪些细节。"
-    },
-    "activities[transform].settings.merge": {
-      "name": "变形行动的合并",
-      "description": "变形时合并哪些熟练。"
-    },
-    "activities[transform].settings.other": {
-      "name": "变形行动的其他配置",
-      "description": ""
-    },
-    "activities[transform].settings.preset": {
-      "name": "变形行动的预设配置",
-      "description": ""
-    },
-    "activities[transform].settings.tempFormula": {
-      "name": "变形行动的临时生命值公式",
-      "description": ""
-    },
-    "activities[transform].settings.transformTokens": {
-      "name": "变形行动的链接Token",
-      "description": ""
-    },
-    "activities[transform].transform.customize": {
-      "name": "变形行动的自定义配置",
-      "description": ""
-    },
-    "activities[transform].transform.identifier": {
-      "name": "变形行动的职业标识符",
-      "description": ""
-    },
-    "activities[transform].transform.preset": {
-      "name": "变形行动的预设",
-      "description": ""
-    },
-    "activities[utility].roll.formula": {
-      "name": "效用行动的掷骰公式",
-      "description": ""
-    },
-    "activities[utility].roll.name": {
-      "name": "效用行动的掷骰名称",
-      "description": ""
-    },
-    "activities[utility].roll.prompt": {
-      "name": "效用行动的掷骰提示",
-      "description": ""
-    },
-    "activities[utility].roll.visible": {
-      "name": "效用行动的掷骰可见",
-      "description": ""
-    }
-  },
-  "dae.genericSuffixes": {
-    "name": {
-      "name": "名称",
-      "description": ""
-    },
-    "img": {
-      "name": "图标",
-      "description": ""
-    },
-    "sort": {
-      "name": "排序",
-      "description": ""
-    },
-    "activation.type": {
-      "name": "激活类型",
-      "description": ""
-    },
-    "activation.value": {
-      "name": "激活消耗数量",
-      "description": "需要的激活类型数量（如果适用）"
-    },
-    "activation.condition": {
-      "name": "激活条件",
-      "description": ""
-    },
-    "activation.override": {
-      "name": "激活覆盖",
-      "description": "在附魔菜单中不相关。"
-    },
-    "consumption.scaling.allowed": {
-      "name": "允许递增",
-      "description": ""
-    },
-    "consumption.scaling.max": {
-      "name": "最大递增",
-      "description": ""
-    },
-    "consumption.spellSlot": {
-      "name": "耗用法术位",
-      "description": ""
-    },
-    "consumption.targets": {
-      "name": "消耗目标",
-      "description": ""
-    },
-    "description.chatFlavor": {
-      "name": "聊天描述",
-      "description": ""
-    },
-    "duration.value": {
-      "name": "持续时间",
-      "description": ""
-    },
-    "duration.units": {
-      "name": "持续时间时长单位",
-      "description": ""
-    },
-    "duration.special": {
-      "name": "特殊持续时间",
-      "description": ""
-    },
-    "duration.concentration": {
-      "name": "专注",
-      "description": ""
-    },
-    "duration.override": {
-      "name": "持续时间覆盖",
-      "description": "在附魔菜单中不相关。"
-    },
-    "effects": {
-      "name": "应用效应",
-      "description": "一个对象数组，其中\"_id\"等于物品上应在使用行动时应用的效应id。"
-    },
-    "range.value": {
-      "name": "射程",
-      "description": ""
-    },
-    "range.units": {
-      "name": "射程单位",
-      "description": ""
-    },
-    "range.special": {
-      "name": "特殊射程",
-      "description": ""
-    },
-    "range.override": {
-      "name": "射程覆盖",
-      "description": "在附魔菜单中不相关。"
-    },
-    "target.template.count": {
-      "name": "测量板数量",
-      "description": ""
-    },
-    "target.template.contiguous": {
-      "name": "测量板连续",
-      "description": "真或假。"
-    },
-    "target.template.type": {
-      "name": "测量板形状",
-      "description": ""
-    },
-    "target.template.size": {
-      "name": "测量板大小",
-      "description": ""
-    },
-    "target.template.width": {
-      "name": "测量板宽度",
-      "description": ""
-    },
-    "target.template.height": {
-      "name": "测量板高度",
-      "description": ""
-    },
-    "target.template.units": {
-      "name": "测量板单位",
-      "description": ""
-    },
-    "target.affects.count": {
-      "name": "目标数量",
-      "description": ""
-    },
-    "target.affects.type": {
-      "name": "目标类型",
-      "description": ""
-    },
-    "target.affects.choice": {
-      "name": "选择目标",
-      "description": ""
-    },
-    "target.affects.special": {
-      "name": "特殊目标",
-      "description": ""
-    },
-    "target.override": {
-      "name": "目标覆盖",
-      "description": "在附魔菜单中不相关。"
-    },
-    "target.prompt": {
-      "name": "测量板提示",
-      "description": ""
-    },
-    "uses.spent": {
-      "name": "已消耗次数",
-      "description": ""
-    },
-    "uses.max": {
-      "name": "最大使用次数",
-      "description": ""
-    },
-    "uses.recovery": {
-      "name": "使用次数恢复",
-      "description": "表示恢复的对象数组。"
-    },
-    "damage.critical.bonus": {
-      "name": "额外重击伤害",
-      "description": ""
-    },
-    "damage.parts": {
-      "name": "伤害部分",
-      "description": ""
-    },
-    "profiles": {
-      "name": "配置文件",
-      "description": ""
-    }
-  }
+	"dae.expiryAction.delete": "删除",
+	"dae.coreExpiryAction.delete": "删除",
+	"dae.expiryMode.delete": "删除",
+	"dae.expiryTurnStart": "回合开始",
+	"dae.expiryTurnEnd": "回合结束",
+	"dae.MigrateNow.Label": "立即迁移",
+	"dae.ValueCheck.Ternary": "条件 (?:) 不是公式。将值包装在 dae.eval(...) 中。",
+	"dae.joinCombat": "加入战斗",
+	"dae.Phase": "阶段 — 应用此更改时",
+	"dae.PhaseReadOnly": "当应用此更改时。由字段设置，不可编辑：在错误的阶段应用的更改不起作用。",
+	"dae.PhaseHeader": "阶段",
+	"dae.expireRoundEffectsOnCombatEnd.Name": "战斗结束时回合效果失效",
+	"dae.expireRoundEffectsOnCombatEnd.Hint": "启用后，具有回合/回合持续时间的效果将在战斗结束或战斗员被移除时过期",
+	"dae.expiryEvent.updateWorldTime": "经过时间",
+	"dae.expiryEvent.sourceStart": "源转动开始",
+	"dae.expiryEvent.sourceEnd": "源转端",
+	"dae.expiryEvent.targetStart": "目标回合开始",
+	"dae.expiryEvent.targetEnd": "目标回合结束",
+	"dae.deleteExpiredEffects": "删除过期效果",
+	"dae.expiryAction.Name": "特别期限到期行动",
+	"dae.expiryAction.Hint": "控制当特殊持续时间（1Hit、1Action、DamageDealt 等）使效果到期时会发生什么情况。 “默认”使用核心 Foundry 到期操作设置。 “删除”总是会删除效果。 “标记过期”总是抑制效果，但将其保留在角色上。",
+	"dae.expiryAction.default": "默认（使用核心设置）",
+	"dae.expiryAction.update": "标记已过期（禁止）",
+	"dae.coreExpiryAction.Name": "效果到期操作",
+	"dae.coreExpiryAction.Hint": "控制当效果因时间或战斗而过期时会发生什么。 “标记已过期”会抑制该效果，但将其保留在角色上。 “删除”会完全删除该效果。",
+	"dae.coreExpiryAction.update": "标记已过期（禁止）",
+	"dae.coreExpiryAction.none": "什么都不做",
+	"dae.expiryMode.Name": "到期模式",
+	"dae.expiryMode.Hint": "控制该效果到期时发生的情况。默认使用全局设置。",
+	"dae.expiryMode.default": "默认（使用全局设置）",
+	"dae.expiryMode.suppress": "抑制（标记已过期）",
+	"dae.resetStartTime": "将开始重置为现在",
+	"dae.combatActorOverride": "到期战斗者",
+	"dae.combatActorDefault": "默认（现役战斗员）",
+	"dae.combatActorSource": "源战斗者",
+	"dae.combatActorTarget": "目标战斗者",
+	"dae.durationExpiry": "到期日",
+	"EFFECT.TABS.dae": "DAE",
+	"dae.EnableAutoMigration.Name": "更新时自动迁移",
+	"dae.EnableAutoMigration.Hint": "更新 DAE 时自动迁移已弃用的 DAE 效果数据。建议大型世界通过“立即迁移”按钮手动运行。",
+	"dae.MigrateNow.Name": "迁移 DAE 数据",
+	"dae.MigrateNow.Hint": "扫描所有世界角色和物品以获取已弃用的 DAE 效果数据并更新它。首先备份您的世界。",
+	"dae.AtlCompatibility.Name": "ATL → Token.* 迁移政策",
+	"dae.AtlCompatibility.Hint": "如何在 Foundry v14 上处理旧版 ATL.* 效果键。 Foundry v14 原生支持 Token.* 效果键； ATL.* 已弃用。选择“旧版”以保留当前行为（ATL 模块处理 ATL.* 键）。 “仅运行时”在应用时重写而不触及保存的数据。 “迁移”会重写一次世界数据并标准化任何新的编辑。 “完整”为未迁移的内容添加了运行时回退，并在迁移期间自动解锁锁定的合集。需要重新加载。",
+	"dae.AtlCompatibility.legacy": "旧版 — ATL.* 密钥传递到 ATL 模块",
+	"dae.AtlCompatibility.runtime": "仅运行时 - 在应用时重写，磁盘不受影响",
+	"dae.AtlCompatibility.migrate": "Migrate — 一次性世界迁移 + 预写规范化",
+	"dae.AtlCompatibility.full": "完整 — 迁移 + 运行时回退 + 自动解锁 合集"
 }

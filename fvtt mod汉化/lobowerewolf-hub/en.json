@@ -6,18 +6,31 @@
     "tool-registered": "lobowerewolf-hub | Tool successfully registered: {name}",
     "about-title": "About LoboWerewolf",
     "about": {
-      "heading": "LoboWerewolf",
-      "tagline": "Premium Tools for Foundry VTT",
-      "links": {
-        "patreon": "Patreon",
-        "discord": "Join Discord"
-      },
+      "tagline": "Free and premium modules for Foundry VTT.",
       "sections": {
-        "our-modules": "Our Modules"
+        "our-modules": "Modules"
       },
-      "versionPrefix": "v",
-      "footer": {
-        "copyright": "© 2025 LoboWerewolf"
+      "links": {
+        "patreon": "PATREON",
+        "discord": "DISCORD"
+      },
+      "modulesWord": "modules"
+    },
+    "sheetDock": {
+      "title": "LoboWerewolf",
+      "outdatedHub": "{module} needs LoboWerewolf Hub {version} or newer. Update the Hub to get the unified sheet button.",
+      "groups": {
+        "economy": "Economy",
+        "inventory": "Inventory",
+        "crafting": "Crafting",
+        "automation": "Automation",
+        "narrative": "Narrative",
+        "media": "Media",
+        "utilities": "Utilities",
+        "scenario": "Scenario",
+        "magic": "Magic",
+        "minigames": "Minigames",
+        "other": "Other"
       }
     }
   }

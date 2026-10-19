@@ -72,7 +72,7 @@
 		"tooltipItemDisable": "Disable for players",
 		"tooltipItemEnable": "Enable for players",
 		"notification": {
-			"noCharacter": "Dem Spieler muss ein Charakter zugewiesen sein."
+			"noCharacter": "The player must be assigned a character."
 		}
 	}
 }

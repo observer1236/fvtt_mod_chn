@@ -6,7 +6,7 @@
 		"EFFECT_LABEL": "奥术守御",
 		"EFFECT_CREATED": "<p>一道魔法能量的微光笼罩着<strong>{actor}</strong>，保护其免受伤害。</p>",
 		"WARD_AT_MAX": "<p><strong>{actor}</strong>的奥术守御已处于最大充能。</p>",
-		"ABSORBED_MESSAGE_BASE":"<p><strong>{actor}的奥术守御</strong>能量涌动，吸收了此次攻击，承受了<strong>{amount}点伤害</strong>。</p>",
+		"ABSORBED_MESSAGE_BASE": "<p><strong>{actor}的奥术守御</strong>能量涌动，吸收了此次攻击，承受了<strong>{amount}点伤害</strong>。</p>",
 		"ABSORBED_MESSAGE_0HP": "<p><strong>{actor}的奥术守御</strong>已被削弱，无法再保护<strong>{actor}</strong>",
 		"ABSORBED_MESSAGE_REMAINING_DMG": "，且<strong>{actor}</strong>受到<strong>{remaining}点伤害</strong>。</p>",
 		"ABSORBED_MESSAGE_NO_DMG": "，但<strong>{actor}</strong>未受到任何伤害。</p>",
@@ -14,12 +14,12 @@
 		"LONG_REST": "<p><strong>{actor}</strong>进行了长休，<strong>奥术守御</strong>逐渐消散。</p>",
 		"WARD_HEALED": "<p><strong>{actor}</strong>的奥术守御感受到防护法术的涌动而变得更加强大！</p>",
 		"UPDATE_AVAILABLE": "<p><strong>Arcane Warding</strong> update available: <strong>{latestVersion}</strong> (you have {currentVersion}). <a href=\"https://github.com/averagejoe77/arcane-warding/releases/latest\" target=\"_blank\">Download the latest release</a>.</p>",
-		"DIALOG" : {
-			"ARCANE_WARD" : {
+		"DIALOG": {
+			"ARCANE_WARD": {
 				"TITLE": "{actor}：创建奥术守御？",
 				"CONTENT": "<p>你刚刚施放了<strong>{spell}</strong>防护学派法术。</p><p>是否要利用法术的魔法能量为自己施加奥术守御？</p>"
 			},
-			"PROJECTED_WARD" : {
+			"PROJECTED_WARD": {
 				"TITLE": "{actor}：用你的奥术守御保护{target}？",
 				"CONTENT": "<p>{attacker}即将用{spell}攻击{target}。是否要延伸你的奥术守御来保护{target}？</p>"
 			}
@@ -73,6 +73,9 @@
 				"3": "我打赌你以为那招会管用是吧？",
 				"4": "就差<em>那么</em>一点点就打中我了！"
 			}
-		}
+		},
+		"SETTINGS.TELEMETRY.NAME": "分享匿名使用数据",
+		"PROJECTED_EFFECT_NAME": "预计病房",
+		"SETTINGS.TELEMETRY.HINT": "发送匿名 ping（随机生成的 ID 以及模块、Foundry 和游戏系统版本号），以便开发人员可以查看有多少游戏正在积极使用 Arcane Warding 模块。不会发送或记录任何类型的帐户信息、世界内容信息或玩家数据。只有主主持人的铸造客户会发送报告，玩家不受影响。您可以取消选中此设置以选择退出。"
 	}
-} 
+}

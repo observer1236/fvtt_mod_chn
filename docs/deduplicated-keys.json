@@ -1,0 +1,134 @@
+[
+	{
+		"path": "fvtt mod汉化/agnostic-light/cn.json",
+		"keys": [
+			"agnostic-light.ui.inTown",
+			"agnostic-light.ui.infravison",
+			"agnostic-light.ui.custom1",
+			"agnostic-light.controlPanel.visionSettings",
+			"agnostic-light.controlPanel.confighintVision"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/campaign-codex/cn.json",
+		"keys": [
+			"faction"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/campaign-codex/en.json",
+		"keys": [
+			"faction"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/em-tile-utilities/cn.json",
+		"keys": [
+			"TileImageHint",
+			"DC",
+			"DCHint"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/em-tile-utilities/en.json",
+		"keys": [
+			"TileImageHint",
+			"DC",
+			"DCHint"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/fabricate/cn.json",
+		"keys": [
+			"node"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/fabricate/en.json",
+		"keys": [
+			"node"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/isometric-perspective/cn.json",
+		"keys": [
+			"isometric-perspective._comment",
+			"isometric-perspective._comment",
+			"isometric-perspective._comment",
+			"isometric-perspective._comment",
+			"isometric-perspective._comment",
+			"isometric-perspective._comment",
+			"isometric-perspective._comment"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/isometric-perspective/en.json",
+		"keys": [
+			"isometric-perspective._comment",
+			"isometric-perspective._comment",
+			"isometric-perspective._comment",
+			"isometric-perspective._comment",
+			"isometric-perspective._comment",
+			"isometric-perspective._comment",
+			"isometric-perspective._comment"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/phils-day-night-cycle/cn.json",
+		"keys": [
+			"Orientation",
+			"OrientAbove",
+			"OrientLeft",
+			"OrientAuto",
+			"OrientRight",
+			"OrientBelow",
+			"Save",
+			"Cancel",
+			"DungeonMode",
+			"Tooltips",
+			"Wizard"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/phils-day-night-cycle/en.json",
+		"keys": [
+			"Orientation",
+			"OrientAbove",
+			"OrientLeft",
+			"OrientAuto",
+			"OrientRight",
+			"OrientBelow",
+			"Save",
+			"Cancel",
+			"DungeonMode",
+			"Tooltips",
+			"Wizard"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/rarity-colors/cn.json",
+		"keys": [
+			"rarity-colors.setting.common.hint",
+			"rarity-colors.setting.uncommon.hint"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/rarity-colors/en.json",
+		"keys": [
+			"rarity-colors.setting.common.hint",
+			"rarity-colors.setting.uncommon.hint"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/tokencover/cn.json",
+		"keys": [
+			"tokencover.coverbook.import-cover-description"
+		]
+	},
+	{
+		"path": "fvtt mod汉化/tokencover/en.json",
+		"keys": [
+			"tokencover.coverbook.import-cover-description"
+		]
+	}
+]

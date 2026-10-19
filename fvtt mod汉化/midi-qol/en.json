@@ -29,7 +29,6 @@
   },
   "midi-qol.AutoApplyDamage.Name": "Auto apply damage to target",
   "midi-qol.AutoApplyDamage.Hint": "Auto apply damage to hit targets (if auto check hits on) or targets user has selected",
-  "midi-qol.DamageCardStyle.Name": "Damage card style",
   "midi-qol.PlayerDamageCard.Name": "Show a player's damage card",
   "midi-qol.PlayerDamageCard.Hint": "A simpler version of the damage card. Only displayed if the GM card is displayed. Card is not shown to the GM",
   "midi-qol.PlayerCardDamageDifferent.Name": "Display the player damage card if the rolled damage does not match the applied damage for some target",
@@ -74,8 +73,8 @@
   "midi-qol.damage-applied": "Hit Points Updated",
   "midi-qol.noItemNamed": "Your selected token does not have an item named",
   "midi-qol.noTokens": "Cannot apply effect - no token targeted",
-  "midi-qol.HideNPCNames.Name": "Hide token names",
-  "midi-qol.HideNPCNames.Hint": "Hide token names in hit/save chat messages",
+  "midi-qol.HideNPCNames.Name": "Hide NPC names",
+  "midi-qol.HideNPCNames.Hint": "The name players see for creatures with no player owner, on chat cards and the damage tray. Blank shows the real name. Anonymous or Hide NPC Names, when active, decide instead.",
   "midi-qol.noTemplateSeen": "Template has not been placed",
   "midi-qol.AutoTarget.Name": "Auto target on template draw",
   "midi-qol.AutoTarget.Hint": "When placing a template (e.g. spell) auto target tokens inside the template. If 'Center + Levels' is set in ranged targeting Levels Volumetric Templates will be used (if installed)",
@@ -296,10 +295,6 @@
     "yesCardMisses": "Yes + damage card + misses",
     "yesCardNPC": "Yes(NPC) No(PC) + damage card"
   },
-  "midi-qol.damageCardStyleOptions": {
-    "flexbox": "Flexbox layout",
-    "classic": "Classic (table)"
-  },
   "midi-qol.playerDamageCardOptions": {
     "none": "Don't show",
     "playerresults": "Show player results",
@@ -386,7 +381,6 @@
     "detailsDSN": "Roll Formula but show DSN roll",
     "details": "Roll Formula",
     "d20Only": "Show attack D20 + Damage total",
-    "d20DamageDSN": "Show attack D20 + Damage total + Damage DSN",
     "hitDamage": "Show Hit/Miss + damage total",
     "hitCriticalDamage": "Show Hit/Miss/Critical/Fumble + damage total",
     "attackTotalOnly": "Show the attack roll total only",
@@ -397,7 +391,6 @@
       "detailsDSN": "Hide the roll formulas but still roll DSN dice so players see the animation.",
       "details": "Hide the roll formula and don't show DSN dice.",
       "d20Only": "Show the attack d20 roll and damage total only.",
-      "d20DamageDSN": "Show the attack d20 roll and damage total, and show DSN animation for the damage dice.",
       "hitDamage": "Show hit/miss plus the damage total.",
       "hitCriticalDamage": "Show hit/miss/critical/fumble plus the damage total.",
       "attackTotalOnly": "Show the attack roll total only.",
@@ -449,6 +442,16 @@
       "show": "Players see the full DSN dice animation.",
       "ghost": "Players see translucent ghost dice.",
       "none": "No DSN dice animation shown to players."
+    }
+  },
+  "midi-qol.BlindRollDisplay.Name": "Blind roll display",
+  "midi-qol.BlindRollDisplay.Hint": "How rolls forced blind (by the settings above) appear to players. Hidden keeps the current behaviour (players see nothing); Obscured shows the roll card but replaces the result with ?? for players.",
+  "midi-qol.blindRollDisplayOptions": {
+    "hidden": "Hidden (players see nothing)",
+    "obscured": "Obscured (card shown, result ??)",
+    "expandedHints": {
+      "hidden": "The roll is whispered to the GM only; players see no message at all.",
+      "obscured": "The roll card is shown to players but the result is displayed as ?? (and the 3D dice are kept private). The GM sees the real result. Note: the value is hidden on screen but still present in the message data, so a player inspecting the console could read it."
     }
   },
   "midi-qol.RollOtherDamageOptions": {
@@ -603,26 +606,49 @@
   "midi-qol.WallsBlockRangeOptionsNew": {
     "none": "No",
     "center": "Center Check",
-    "centerLevels": "Center + Levels",
     "levelsautocover": "Levels Auto Cover",
     "simbuls-cover-calculator": "Simbul's Cover Calculator",
     "tokencover": "Alternative Token Cover",
     "simplecover5e": "Simple Cover 5e",
     "expandedHints": {
       "none": "Walls do not block ranged attack checks.",
-      "center": "Check line of sight from token center to target center. If a wall blocks the line, the attack is blocked.",
-      "centerLevels": "Center-to-center check using the Levels module to determine wall blocking LOS. Also uses Levels volumetric templates for template targeting. Requires the Levels module.",
+      "center": "Check line of sight from token center to target center. If a wall blocks the line, the attack is blocked. Cross-elevation lines are also tested against region surfaces.",
       "levelsautocover": "Use the Levels Auto Cover module to calculate cover. Total cover blocks the attack. Requires the Levels Auto Cover module.",
       "simbuls-cover-calculator": "Use Simbul's Cover Calculator module to calculate cover. Total cover blocks the attack. Requires the Simbul's Cover Calculator module.",
       "tokencover": "Use the Alternative Token Cover module to calculate cover. Total cover blocks the attack. Requires the Alternative Token Cover module.",
       "simplecover5e": "Use the Simple Cover 5e module to calculate cover. Total cover blocks the attack. Requires the Simple Cover 5e module."
     }
   },
+  "midi-qol.VisionTestHeight.Name": "Vision test point height",
+  "midi-qol.VisionTestHeight.Hint": "Which elevation to test for token visibility. Affects both Foundry's rendering and midi's vision checks.",
+  "midi-qol.SurfaceOcclusion.Name": "Occlude upper floor surfaces",
+  "midi-qol.SurfaceOcclusion.Hint": "In multi-level scenes, make upper floor surfaces transparent when viewing from a lower floor, even if the token is not directly underneath.",
+  "midi-qol.SurfaceVisionFog.Name": "Dim lower floors through surface holes",
+  "midi-qol.SurfaceVisionFog.Hint": "In multi-level scenes, dim areas visible through gaps in floor surfaces where the viewing angle blocks line of sight to the floor below.",
+  "midi-qol.VisionTestHeightOptions": {
+    "center": "Center",
+    "top": "Top",
+    "expandedHints": {
+      "center": "Test visibility at the token's center height (Foundry default: elevation + depth/2).",
+      "top": "Test visibility at the top of the token (elevation + depth). Affects both the source token's vision origin and target test points. Useful for multi-level scenes where tokens near floor edges should be more visible."
+    }
+  },
+  "midi-qol.TemplateOriginHeight.Name": "Template Origin Height",
+  "midi-qol.TemplateOriginHeight.Hint": "The height of the caster that activity templates are measured from: a sphere is centred on it, a cylinder, cube or line stands on it. An activity can override this in its Region settings.",
+  "midi-qol.TemplateOriginHeightOptions": {
+    "base": "Caster's base",
+    "top": "Caster's top",
+    "eye": "Caster's eye level",
+    "expandedHints": {
+      "base": "The caster token's elevation.",
+      "top": "The caster token's elevation plus its height.",
+      "eye": "The caster's vision height, as used for its line of sight (Vision Test Height, or the token's vision source height)."
+    }
+  },
   "midi-qol.NearbyAllyRanged.Name": "(House Rule) Ranged Attacks at foes near allies have disadvantage",
   "midi-qol.WallsBlockRangeOptions": {
     "none": "No",
-    "center": "Center Check",
-    "centerLevels": "Center + Levels"
+    "center": "Center Check"
   },
   "midi-qol.CoverCalculation.Name": "Calculate Cover",
   "midi-qol.CoverCalculation.Hint": "Calculate AC bonus for targets in cover - settings taken from the selected module",
@@ -643,8 +669,6 @@
   "midi-qol.RemoveHiddenInvis.Name": "Attacking removes hidden (use CE/CV/CUB/core foundry specialStatus )",
   "midi-qol.CriticalSaves.Name": "(House Rule) Critical/Fumble always succeed/fail for saving throws",
   "midi-qol.MaxDRValue.Name": "(House rule) Enabling this means that only the most effective Damage Reduction will apply. Off means DR accumulates",
-  "midi-qol.DRAllPerDamageDetail.Name": "(House Rule) DRALL (DR.rwak/...) is deducted from BOTH attack damage and Other damage",
-  "midi-qol.DRAllPerDamageDetail.Hint": "Unchecked means DRALL applies just once to the total damage",
   "midi-qol.invisible": "Invisible",
   "midi-qol.hidden": "Hiding",
   "midi-qol.nevertarget": "Never Target",
@@ -737,10 +761,6 @@
   "midi-qol.DistanceMeasurementOptions.center": "Grid Square Centers",
   "midi-qol.DistanceMeasurementOptions.perimeter": "Token Perimeters",
   "midi-qol.NoSocketLib": "Midi-qol requires socketlib installed and enabled",
-  "midi-qol.chatlogPruneWarning": "Warning",
-  "midi-qol.chatlogPruneDeprecated": "Midi-qol's built-in chat log pruning is deprecated. It will be removed in version 13.1.",
-  "midi-qol.chatlogPruneInstallHint": "Please install and activate the 'chatlog-prune' module. Remember to activate chat log pruning in the module settings.",
-  "midi-qol.chatlogPruneEnableHint": "The 'chatlog-prune' module is installed but chat log pruning is not enabled. Please activate it in the chatlog-prune module settings.",
   "midi-qol.confirm": "Confirmation Dialog",
   "midi-qol.ExportConfig": "Export midi-qol settings to json file",
   "midi-qol.ImportConfig": "Import midi-qol settings from json file",
@@ -865,7 +885,6 @@
   "midi-qol.KeysOther.Hint": "Roll Other formula as damage",
   "midi-qol.FixStickyKeys.Name": "Fix sticky alt/ctrl/shift",
   "midi-qol.FixStickyKeys.Hint": "If set midi will attempt to resolve alt/ctrl/shift being stuck 'on'",
-  "midi-qol.DisplaySaveAdvantage.Name": "Display if save had Advantage/Disadvantage",
   "midi-qol.QuickSettingsBlurb": "Quick settings let you set a combination of settings at once.<br>When one of the buttons below is pushed the changes are immediately made to your settings<br>A list of changes is displayed once the application is complete<br>Suggestions for improvements welcome",
   "midi-qol.Reaction.Title": "Reaction Processing",
   "midi-qol.GMDoReactionsOptions": {
@@ -1016,6 +1035,33 @@
   "midi-qol.VitalityDeathRequires.VitalityAndHP": "Vitality of 0 AND HP of 0",
   "midi-qol.AutoRerollInitiative.Name": "Auto reroll initiative",
   "midi-qol.AutoRerollInitiative.Hint": "Auto reroll initiative for all combatants at the start of a new round. Warning: can break round/turn effect expiry",
+  "midi-qol.Overlaps.Title": "midi-qol: possible setting conflicts",
+  "midi-qol.Overlaps.Intro": "These settings may conflict.",
+  "midi-qol.Overlaps.OpenTroubleShooter": "Open TroubleShooter",
+  "midi-qol.Overlaps.Dismiss": "Don't remind me",
+  "midi-qol.Overlaps.Dismissed": "midi-qol: these overlaps won't be reported again unless the systems involved change.",
+  "midi-qol.Overlaps.Acknowledged": "dismissed",
+  "midi-qol.Overlaps.wounded.Feature": "Wounded / bloodied marker",
+  "midi-qol.Overlaps.wounded.Advice": "A wounded creature gets a marker from each system. Turn all but one off.",
+  "midi-qol.Overlaps.dead.Feature": "Dead / unconscious marker",
+  "midi-qol.Overlaps.dead.Advice": "Each system marks a creature at 0 HP, and they can disagree (e.g. dead and unconscious). Turn all but one off.",
+  "midi-qol.Overlaps.deadStatusMissing.Feature": "Status for HP = 0 not available",
+  "midi-qol.Overlaps.deadStatusMissing.Advice": "midi's Add effect when HP = 0 is set to use a status that no longer exists (e.g. hidden in Custom D&D 5e's Conditions config), so nothing is added at 0 HP. Show the status again, or choose an available one in midi's Mechanics settings.",
+  "midi-qol.Overlaps.Settings.statusMissing": "dead / unconscious status hidden or removed",
+  "midi-qol.Overlaps.StatusEffects": "Status effects",
+  "midi-qol.Overlaps.initiative.Feature": "Initiative rerolled each round",
+  "midi-qol.Overlaps.initiative.Advice": "Initiative is rolled twice each round. Turn one off; TroubleShooter Auto Fix turns off midi Auto reroll initiative, which can also break round/turn effect expiry.",
+  "midi-qol.Overlaps.averageDamage.Feature": "Average damage",
+  "midi-qol.Overlaps.averageDamage.Advice": "Custom D&D 5e's Average damage replaces the damage roll, so midi applies no damage. Use midi's 'All damage/critical rolls are average results' instead (same choices) and set Custom D&D 5e's to neither. TroubleShooter's Auto Fix does both.",
+  "midi-qol.Overlaps.Settings.customAverageDamage": "Average damage",
+  "midi-qol.Overlaps.damageReplaced.Feature": "Damage rolled outside midi",
+  "midi-qol.Overlaps.damageReplaced.Advice": "Custom D&D 5e Mob and Probabilistic damage replace the attack and damage, so midi applies no damage for those uses. Turn them off to keep midi damage application; TroubleShooter Auto Fix turns both off.",
+  "midi-qol.Overlaps.Settings.customApplyBloodied": "Bloodied: apply status",
+  "midi-qol.Overlaps.Settings.customApplyDead": "Apply Dead / Apply Unconscious",
+  "midi-qol.Overlaps.Settings.monksAutoDefeated": "Auto defeated",
+  "midi-qol.Overlaps.Settings.customRerollInitiative": "Reroll initiative each round / Speed factor initiative",
+  "midi-qol.Overlaps.Settings.midiDamage": "damage application",
+  "midi-qol.Overlaps.Settings.customDamage": "Mob / Probabilistic damage",
   "midi-qol.RollChecksBlind.Name": "Which ability checks are rolled blind",
   "midi-qol.RollSavesBlind.Name": "Which ability saves are rolled blind",
   "midi-qol.RollSkillsBlind.Name": "Which skill checks are rolled blind",
@@ -1125,6 +1171,8 @@
   "midi-qol.TargetConfirmationAllies": "Confirm targets if any target is an ally",
   "midi-qol.OutOfRange": "Out of Range",
   "midi-qol.TemplateOutOfRange": "Template placement is out of range",
+  "midi-qol.SingleDamageCalculation.Name": "Single Damage Calculation",
+  "midi-qol.SingleDamageCalculation.Hint": "Calculate base, other and bonus damage in one pass. Damage modification (dm) and midi damage reduction are budgets shared across all of an activity's damage rather than being applied once per damage category. Disable to restore the per-category behaviour.",
   "midi-qol.SaveDROrder.Name": "Damage Reduction Save Order",
   "midi-qol.SaveDROrder.Hint": "Order in which damage reduction is applied.<br>dm.midi is midi specific damage reduction. <br>dm is dnd5e damage reduction",
   "midi-qol.SaveDROrderOptions": {
@@ -1264,7 +1312,7 @@
       },
       "effectConditionText": {
         "label": "Active Effect Condition",
-        "hint": "Condition to apply active effects"
+        "hint": "Checked for each target; its effects, including Always Apply ones, apply only where it is true."
       },
       "otherActivityId": {
         "label": "Use Other Activity",
@@ -1405,6 +1453,11 @@
             "label": "Modification",
             "short": "Ignore Modification",
             "hint": "Ignore damage modification when applying damage"
+          },
+          "ddi": {
+            "label": "Downgrade Immunity",
+            "short": "Downgrade Immunity",
+            "hint": "Treat damage immunity as resistance (half damage) rather than ignoring it. Ignoring an immunity leaves the target taking full damage."
           }
         },
         "autoCEEffects": {
@@ -1901,6 +1954,8 @@
   "midi-qol.flagTemplate.grants.noDisadvantage.tool.description": "{label} checks will not have disadvantage.",
   "midi-qol.flagTemplate.DR.damageType.name": "Damage Reduction ({label})",
   "midi-qol.flagTemplate.DR.damageType.description": "{label} Damage Reduction.",
+  "dae.1Miss": "1 Miss: Expires on the next {type} attack by the character that hits no target",
+  "dae.isMissed": "is Missed: Expires if the character is attacked by a weapon/spell attack and missed",
   "dae.MidiQOL.fieldData": {
     "flags.midi-qol.advantage.ability.all": {
       "name": "Advantage All Ability",
@@ -2185,6 +2240,14 @@
     "flags.midi-qol.uncanny-dodge": {
       "name": "Uncanny Dodge",
       "description": ""
+    },
+    "token.flags.midi-qol.visionSourceHeight": {
+      "name": "Vision Source Height %",
+      "description": "Override where this token sees from (0=feet, 50=center, 100=top). Unset uses the midi Vision Test Height setting."
+    },
+    "token.flags.midi-qol.visionTargetHeight": {
+      "name": "Vision Target Height %",
+      "description": "Override where this token is tested for visibility (0=feet, 50=center, 100=top). Unset uses the midi Vision Test Height setting."
     }
   },
   "midi-qol.OverTimeEditor.Title": "OverTime Editor",
@@ -2271,5 +2334,104 @@
   "midi-qol.ModuleReview.Installed": "Installed",
   "midi-qol.ModuleReview.NotInstalled": "Not Installed",
   "midi-qol.ModuleReview.NoChanges": "All selected modules are already active.",
-  "midi-qol.ModuleReview.ReloadPrompt": "Module configuration updated. Reloading world."
+  "midi-qol.ModuleReview.ReloadPrompt": "Module configuration updated. Reloading world.",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.label": "Midi Region Activity",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.hint": "Apply activity effects to tokens entering/exiting the region, and trigger activities on turn start/end.",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.sourceItemUuid.label": "Source Item UUID",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.sourceItemUuid.hint": "UUID of the spell or feature item that created this behavior.",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.sourceActorUuid.label": "Source Actor UUID",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.sourceActorUuid.hint": "UUID of the actor that cast the spell or used the feature.",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.rules.label": "Region Rules",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.rules.trigger.label": "Trigger",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.rules.action.label": "Action",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.rules.targetUuid.label": "Target",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.dispositionFilter.label": "Disposition Filter",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.dispositionFilter.hint": "Which tokens to affect: enemies (-1), all (0), or allies (1) relative to the caster.",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.castLevel.label": "Cast Level",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.excludeSource.label": "Exclude Source Token",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.oncePerTurn.label": "Once Per Turn",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.activationEntry.label": "Entry On Activation",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.activationEntry.hint": "Tokens already inside count as entering when the behavior is created or enabled. Off when the casting activity already affected them.",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.moveDistance.label": "Move Each Turn",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.moveDirection.label": "Move Direction",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.moveTiming.label": "Move On",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.wallRestriction.label": "Wall Restriction",
+  "BEHAVIOR.TYPES.midi-qol.regionActivity.FIELDS.wallRestriction.hint": "Set the region's edge restriction type. Walls of the selected type will block the region boundary.",
+  "midi-qol.REGION_BEHAVIOR.header": "Region Behaviour",
+  "midi-qol.REGION_BEHAVIOR.editor.title": "Region Behaviour Editor",
+  "midi-qol.REGION_BEHAVIOR.editor.hint": "Configure region behaviour for this activity's template",
+  "midi-qol.REGION_BEHAVIOR.editor.general": "General Settings",
+  "midi-qol.REGION_BEHAVIOR.editor.rules": "Region Rules",
+  "midi-qol.REGION_BEHAVIOR.editor.trigger": "Trigger",
+  "midi-qol.REGION_BEHAVIOR.editor.action": "Action",
+  "midi-qol.REGION_BEHAVIOR.editor.target": "Target",
+  "midi-qol.REGION_BEHAVIOR.editor.effects": "Effects",
+  "midi-qol.REGION_BEHAVIOR.triggers.entry": "Token Enters",
+  "midi-qol.REGION_BEHAVIOR.triggers.exit": "Token Exits",
+  "midi-qol.REGION_BEHAVIOR.triggers.turnStart": "Turn Start",
+  "midi-qol.REGION_BEHAVIOR.triggers.turnEnd": "Turn End",
+  "midi-qol.REGION_BEHAVIOR.actions.useActivity": "Use Activity",
+  "midi-qol.REGION_BEHAVIOR.actions.applyEffect": "Apply Effect",
+  "midi-qol.REGION_BEHAVIOR.actions.removeEffect": "Remove Effect",
+  "midi-qol.REGION_BEHAVIOR.disposition.enemies": "Enemies",
+  "midi-qol.REGION_BEHAVIOR.disposition.all": "All",
+  "midi-qol.REGION_BEHAVIOR.disposition.allies": "Allies",
+  "midi-qol.REGION_BEHAVIOR.config.addRule": "Add Rule",
+  "midi-qol.REGION_BEHAVIOR.config.deleteRule": "Delete Rule",
+  "midi-qol.SHARED.FIELDS.regionBehavior.enabled.label": "Enable Region Behaviour",
+  "midi-qol.SHARED.FIELDS.regionBehavior.enabled.hint": "Attach a midi-qol activity behaviour to the region created by this activity's template.",
+  "midi-qol.SHARED.FIELDS.regionBehavior.dispositionFilter.label": "Disposition Filter",
+  "midi-qol.SHARED.FIELDS.regionBehavior.excludeSource.label": "Exclude Source Token",
+  "midi-qol.SHARED.FIELDS.regionBehavior.oncePerTurn.label": "Once Per Turn",
+  "midi-qol.SHARED.FIELDS.regionBehavior.oncePerTurn.hint": "Each activity triggers at most once per turn per creature (e.g. Spirit Guardians).",
+  "midi-qol.SHARED.FIELDS.regionBehavior.moveDistance.label": "Move Each Turn",
+  "midi-qol.SHARED.FIELDS.regionBehavior.moveDistance.hint": "In combat, the region moves this far (0: never) at the start or end of the caster's turn: away from the caster, or in a direction the caster's owner chooses (e.g. Cloudkill, Incendiary Cloud). Creatures it passes over enter it.",
+  "midi-qol.REGION_BEHAVIOR.moveDirection.away": "Away from caster",
+  "midi-qol.REGION_BEHAVIOR.moveDirection.choose": "Caster chooses",
+  "midi-qol.REGION_BEHAVIOR.moveTiming.start": "Start of caster's turn",
+  "midi-qol.REGION_BEHAVIOR.moveTiming.end": "End of caster's turn",
+  "midi-qol.REGION_BEHAVIOR.move.prompt": "Move {distance}:",
+  "midi-qol.REGION_BEHAVIOR.move.away": "Away",
+  "midi-qol.REGION_BEHAVIOR.move.stay": "Don't move",
+  "midi-qol.REGION_BEHAVIOR.move.noDirection": "{name} is centred on its caster, so has no direction away; not moved.",
+  "midi-qol.SHARED.FIELDS.regionBehavior.wallRestriction.label": "Wall Restriction",
+  "midi-qol.SHARED.FIELDS.regionBehavior.wallRestriction.hint": "Set the region's edge restriction type. Walls of the selected type will block the region boundary.",
+  "midi-qol.REGION_BEHAVIOR.wallRestriction.none": "None",
+  "midi-qol.SHARED.FIELDS.regionBehavior.regionVisibility.label": "Region Visibility",
+  "midi-qol.SHARED.FIELDS.regionBehavior.regionVisibility.hint": "Controls when the region is visible. 'Always' shows the region on all layers; other options restrict visibility to the region layer or by permission.",
+  "midi-qol.SHARED.FIELDS.regionBehavior.attachToken.label": "Attach Region To",
+  "midi-qol.SHARED.FIELDS.regionBehavior.attachToken.hint": "Attach the placed template's region to a token so it follows that token's movement. 'Stationary (default)' leaves the region in place; 'Caster' attaches it to the caster's token; 'Target' picks (or prompts for) one of the activity's targets. Attachment is translation-only; the region will not rotate with the token.",
+  "midi-qol.REGION_BEHAVIOR.attachToken.default": "Stationary (default)",
+  "midi-qol.REGION_BEHAVIOR.attachToken.caster": "Caster",
+  "midi-qol.REGION_BEHAVIOR.attachToken.target": "Target (prompt if multiple)",
+  "midi-qol.REGION_BEHAVIOR.attachToken.pickerTitle": "Choose Attachment Target",
+  "midi-qol.REGION_BEHAVIOR.attachToken.pickerHint": "Select the targeted token the region should follow.",
+  "midi-qol.REGION_BEHAVIOR.attachToken.noTarget": "Region attachment set to 'target' but no target was selected. Region will not follow any token.",
+  "midi-qol.SHARED.FIELDS.regionBehavior.templateOrigin.label": "Template Origin Height",
+  "midi-qol.SHARED.FIELDS.regionBehavior.templateOrigin.hint": "The height of the caster this activity's template is measured from. 'Default' follows the Template Origin Height setting.",
+  "midi-qol.REGION_BEHAVIOR.templateOrigin.default": "Default (setting)",
+  "midi-qol.REGION_BEHAVIOR.templateOrigin.base": "Caster's base",
+  "midi-qol.REGION_BEHAVIOR.templateOrigin.top": "Caster's top",
+  "midi-qol.REGION_BEHAVIOR.templateOrigin.eye": "Caster's eye level",
+  "BEHAVIOR.TYPES.midi-qol.regionLight.label": "Midi Region Light",
+  "BEHAVIOR.TYPES.midi-qol.regionLight.hint": "Create an ambient light at the region center that follows the region.",
+  "BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.dim.label": "Dim Light Radius",
+  "BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.bright.label": "Bright Light Radius",
+  "BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.color.label": "Light Color",
+  "BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.alpha.label": "Light Alpha",
+  "BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.luminosity.label": "Luminosity",
+  "BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.animationType.label": "Animation Type",
+  "BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.animationSpeed.label": "Animation Speed",
+  "BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.animationIntensity.label": "Animation Intensity",
+  "BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.lightDocId.label": "Light Document ID",
+  "midi-qol.DefaultOtherActivityOptions": {
+    "auto": "Auto - roll a single matching activity",
+    "none": "None - roll nothing"
+  },
+  "midi-qol.DefaultOtherActivityOptions.expandedHints": {
+    "auto": "An attack with exactly one compatible activity rolls it as its other activity.",
+    "none": "Nothing is rolled unless the activity names an other activity."
+  },
+  "midi-qol.defaultOtherActivity.Name": "Other Activity Default",
+  "midi-qol.defaultOtherActivity.Hint": "What <b>Default</b> means in an activity's Other Activity field. Many dnd5e items pair an attack with a save - poison, say - without linking the two."
 }

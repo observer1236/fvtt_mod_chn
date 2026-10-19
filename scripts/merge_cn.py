@@ -1,51 +1,69 @@
 #!/usr/bin/env python3
-"""将 "fvtt mod汉化/" 下所有 mod 文件夹里的 cn.json 合并为仓库根目录的一份 cn.json。
+"""Build cn.json without mixed dotted/nested key loss.
 
-每个 mod 文件夹内的 cn.json 保存了该 mod 的翻译条目，其顶层键既可能是
-形如 "5edndnpc.name" 的扁平 i18n 键，也可能是形如 "about-face" 的命名空间对象
-（Foundry VTT 的 Localization 会自动展平）。本脚本按文件夹名字典序对所有文件做
-深度合并，遇到同名键时靠后的文件覆盖靠前的值，保证结果可复现。
-
-用法：在仓库根目录执行 `python scripts/merge_cn.py`，输出根目录 cn.json。
+For shared keys, a translation matching an audited v14 English snapshot takes
+precedence over a legacy alias. Equal-priority entries retain the historical
+folder-name order (last wins). Every conflicting value is recorded for review.
 """
 import json
 from pathlib import Path
+from localization import expand, flatten, read_json
 
 ROOT = Path(__file__).resolve().parent.parent
-MOD_DIR = ROOT / "fvtt mod汉化"
-OUT = ROOT / "cn.json"
 
-
-def deep_merge(base, extra):
-    """把 extra 深度合并进 base，同名标量键由 extra 覆盖。"""
-    for key, value in extra.items():
-        if key in base and isinstance(base[key], dict) and isinstance(value, dict):
-            deep_merge(base[key], value)
-        else:
-            base[key] = value
-    return base
-
+def merge_files(mod_dir, records):
+    current = {r["id"] for r in records if r["status"] == "source_ready"}
+    merged, owners, priorities, sequence = {}, {}, {}, {}
+    collisions = []
+    files = sorted(mod_dir.rglob("cn.json"), key=lambda p: p.relative_to(mod_dir).as_posix())
+    if not files:
+        raise ValueError("No module cn.json files found")
+    for order, path in enumerate(files):
+        relative = path.relative_to(mod_dir)
+        module_id = relative.parts[0]
+        data = read_json(path)
+        if not isinstance(data, dict):
+            raise ValueError(f"Not a JSON object: {path}")
+        source = mod_dir / module_id / "en.json"
+        fresh = flatten(read_json(source)) if module_id in current and len(relative.parts) == 2 and source.exists() else {}
+        for key, value in flatten(data).items():
+            rank = int(key in fresh)
+            wins = key not in merged or rank >= priorities[key]
+            if key in merged and merged[key] != value:
+                collisions.append({"key": key, "previous": owners[key], "incoming": relative.as_posix(), "winner": relative.as_posix() if wins else owners[key]})
+            if wins:
+                merged[key], owners[key], priorities[key] = value, relative.as_posix(), rank
+                sequence[key] = order
+    # A v14 object can replace a legacy scalar (or vice versa). JSON cannot
+    # represent both at the same property, so apply the same priority rule.
+    removed = set()
+    for key in sorted(merged):
+        if key in removed:
+            continue
+        parts = key.split(".")
+        for end in range(1, len(parts)):
+            parent = ".".join(parts[:end])
+            if parent not in merged or parent in removed:
+                continue
+            child_wins = (priorities[key], sequence[key]) >= (priorities[parent], sequence[parent])
+            winner, loser = (key, parent) if child_wins else (parent, key)
+            collisions.append({"key": key, "parent_key": parent, "type": "parent_child", "previous": owners[parent], "incoming": owners[key], "winner": owners[winner]})
+            removed.add(loser)
+            if not child_wins:
+                break
+    for key in removed:
+        del merged[key]
+    return expand(merged), collisions, len(files)
 
 def main():
-    files = sorted(MOD_DIR.rglob("cn.json"))
-    if not files:
-        raise SystemExit(f"未在 {MOD_DIR} 下找到任何 cn.json")
-
-    merged = {}
-    for path in files:
-        with path.open("r", encoding="utf-8") as fh:
-            data = json.load(fh)
-        if not isinstance(data, dict):
-            raise SystemExit(f"不是 JSON 对象：{path}")
-        deep_merge(merged, data)
-
-    # 保留中文（不转义非 ASCII），键排序以保证输出稳定
-    with OUT.open("w", encoding="utf-8") as fh:
-        json.dump(merged, fh, ensure_ascii=False, indent="\t", sort_keys=True)
-        fh.write("\n")
-
-    print(f"已合并 {len(files)} 个文件 -> {OUT}（顶层键 {len(merged)} 个）")
-
+    audit = ROOT / "docs" / "v14-audit.json"
+    records = read_json(audit)["modules"] if audit.exists() else []
+    merged, collisions, count = merge_files(ROOT / "fvtt mod汉化", records)
+    (ROOT / "cn.json").write_text(json.dumps(merged, ensure_ascii=False, indent="\t", sort_keys=True) + "\n", encoding="utf-8")
+    report = ROOT / "docs" / "merge-conflicts.json"
+    report.parent.mkdir(exist_ok=True)
+    report.write_text(json.dumps(collisions, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Merged {count} files; {len(flatten(merged))} keys; {len(collisions)} shared-key conflicts recorded")
 
 if __name__ == "__main__":
     main()

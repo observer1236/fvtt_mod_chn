@@ -2,6 +2,13 @@
   "SWIPE_VTT": {
     "ModuleTitle": "Swipe VTT",
     "Settings": {
+      "ApprovalPolicy": {
+        "Name": "Standalone Approval Policy",
+        "Hint": "When a player tries to join via the standalone web client, control whether the GM is prompted to approve.",
+        "Always": "Always ask",
+        "Trusted": "Auto-approve players I've approved before",
+        "Never": "Auto-approve everyone (dev only)"
+      },
       "MenuTitle": "Swipe VTT Settings",
       "MenuButton": {
         "Name": "Swipe VTT Settings",
@@ -9,9 +16,9 @@
         "Hint": "Open the Swipe VTT settings dialog"
       },
       "PremiumMenu": {
-        "Name": "Amethyst Club features",
+        "Name": "Amethyst Circle features",
         "Label": "Connect to Patreon",
-        "Hint": "GM must connect their Patreon account for access to Amethyst Club features, like mobile character sheets for supported systems"
+        "Hint": "GM must connect their Patreon account for access to Amethyst Circle features, like mobile character sheets for supported systems"
       },
       "ImageOptimizerMenu": {
         "Name": "Image Optimizer",
@@ -20,14 +27,14 @@
       },
       "ImageOptimizerPrompt": {
         "Title": "SWIPE | Create mobile images automatically?",
-        "Content1": "If confirmed, Swipe will create smaller versions of scene images just for mobile devices. This happens automatically when the GM views a scene that has large images.",
-        "Content2": "This does not change the original images or scene config. You can do this manually later in Swipe VTT settings.",
+        "Content1": "If confirmed, Swipe will create smaller copies of scene images for mobile devices and save them as new files on the server, in the folder below. This happens automatically when the GM views a scene that has large images.",
+        "Content2": "The original images and scene config are never changed; only new files are added. You can turn this off or run it manually later in Swipe VTT settings.",
         "FolderLabel": "Folder to save optimized images to:",
         "SelectFolder": "Select Folder"
       },
       "AutoOptimizeScenes": {
         "Name": "Auto-Optimize Scene Images",
-        "Hint": "Automatically create mobile-optimized versions of scene images. This does not change the original images or scene config."
+        "Hint": "Automatically create mobile-optimized copies of scene images when the GM views a scene. The copies are saved as new files on the server in the optimized images folder; the original images and scene config are never changed."
       },
       "DisableLargeMapWarnings": {
         "Name": "Disable Large Map Warnings",
@@ -35,14 +42,18 @@
       },
       "Tabs": {
         "General": "General",
+        "Interface": "Interface",
         "Performance": "Performance",
         "Users": "Users"
       },
       "Fieldsets": {
         "SheetAndChat": "Sheet & Chat",
-        "Controls": "Controls",
+        "Background": "Background",
+        "ShowHideControls": "Show & Hide Controls",
+        "Controls": "Map Controls",
         "CameraViews": "Camera Views",
-        "SystemSettings": "System Settings"
+        "SystemSettings": "System Settings",
+        "Other": "Other"
       },
       "System": {
         "PF2E": {
@@ -57,16 +68,26 @@
       "Save": "Save Settings",
       "ToggleHints": "Toggle Hints",
       "AdvancedSettings": "Advanced Settings",
+      "CollapseFieldset": "Collapse",
+      "ExpandFieldset": "Expand",
       "Saved": "Swipe VTT settings saved",
       "OpenGameSettings": "Open Game Settings",
-      "MobileOnlyNote": "These settings only apply when using a mobile or tablet device.",
+      "Scope": {
+        "World": "World Settings (GM)",
+        "Device": "Client Settings",
+        "DeviceOnlyHint": "Only applies on phones and tablets."
+      },
+      "Locks": {
+        "Toggle": "Lock for players. Click to cycle: open, soft (your value is applied once, players can change it), locked (players always get your value). Right-click or Alt+click: locked for players while you keep your own value.",
+        "Locked": "Locked by the GM"
+      },
       "Enabled": {
         "Name": "Enable Mobile Mode on Desktop",
         "Hint": "Toggle to force mobile UI on desktop for testing - on mobile devices, it is automatically enabled."
       },
       "DisableIncompatible": {
         "Name": "Disable Heavy FX Modules",
-        "Hint": "Automatically disable performance-heavy effect modules (FXMaster, Token Magic FX) on this device for better performance."
+        "Hint": "Disable performance-heavy visual effects on this device: FXMaster, and everything played through Sequencer (BLFX, JB2A, Automated Animations). Token movement animations still play."
       },
       "LargeMapThreshold": {
         "Name": "Large Map Threshold",
@@ -100,26 +121,42 @@
       },
       "OpenChatOnMessage": {
         "Name": "Auto-Show Chat",
-        "Hint": "When to automatically show the chat popup after your actions.",
+        "Hint": "When to automatically show the chat popup: for any new message, or only after your own actions.",
+        "Everyone": "Any new message",
         "All": "All actions from user",
         "Rolls": "Only roll actions",
         "UseCast": "Only use / cast",
         "None": "No actions"
       },
+      "ChatAutoHide": {
+        "Name": "Chat Auto-Hide",
+        "Hint": "Hide the auto-shown chat popup again after a delay. When off, it stays open until you close it."
+      },
       "ChatAutoHideSeconds": {
         "Name": "Chat Auto-Hide Delay",
         "Hint": "Seconds before the auto-shown chat popup hides. (2-10)"
       },
+      "WakeLock": {
+        "Name": "Screen stays awake",
+        "Hint": "While Swipe is open, your screen won't dim or lock on its own. Browsers only allow this on secure connections (https:// or localhost).",
+        "Active": "active",
+        "Inactive": "not active right now (tap anywhere to retry)",
+        "Blocked": "blocked by the browser (battery saver may be on)",
+        "Insecure": "unavailable: needs an https:// connection (turn on Keep Awake for a fallback)",
+        "Video": "active (Keep Awake fallback for http://)",
+        "Unsupported": "not supported by this browser"
+      },
       "KeepAwake": {
         "Name": "Keep Awake",
-        "Hint": "Play silent audio to prevent the browser from suspending when your screen turns off. Keeps your connection to the game alive. Uses a small amount of battery."
-      },
-      "Controls": {
-        "TouchOnly": "These settings only apply when using a touch device (phone or tablet)."
+        "Hint": "Play silent audio to prevent the browser from suspending when your screen turns off. Keeps your connection to the game alive. Uses a small amount of battery. On http:// connections it also keeps the screen on. On Android, other apps' audio may play a little quieter while it runs."
       },
       "HideQuickControls": {
         "Name": "Hide Quick Controls",
-        "Hint": "Hide the floating quick controls and settings button. On phones, the settings button remains visible since Foundry's sidebar is hidden."
+        "Hint": "Hide the floating quick controls. The settings button stays while Swipe controls are on, since Foundry's sidebar is hidden."
+      },
+      "SwipeInterface": {
+        "Name": "Enable Swipe controls (mobile)",
+        "Hint": "Use Swipe's quick controls, button stack and chat drawer instead of Foundry's sidebar, scene controls, players list and hotbar. Starts checked on screens smaller than 1280x600 and unchecked on larger ones; you can change it at any size, and your choice stays until the screen crosses that size. Touch gestures, mobile sheets and the avatar carousel work either way. Worlds with the canvas disabled always use Swipe's controls."
       },
       "HideAvatarCarousel": {
         "Name": "Hide Avatar Carousel",
@@ -152,9 +189,17 @@
         "Name": "Invite URL Override",
         "Hint": "Custom base URL for the Connect Phone QR code (e.g. http://26.x.x.x:30000). Use this when players connect via VPN (Radmin, Hamachi, ZeroTier, etc.) or a reverse proxy. Leave empty for auto-detection."
       },
+      "AutoCreateMobileDuplicate": {
+        "Name": "Auto-Create Mobile Profile",
+        "Hint": "When a GM opens the Swipe QR Code dialog for a player, automatically create a '(Swipe)' duplicate user for phone login. The duplicate shares the player's character and ownership. Disable to require manual creation via the dialog's Create button."
+      },
       "StandaloneSkipAuth": {
         "Name": "Skip Standalone Authentication",
         "Hint": "Allow players to access the standalone phone app without entering a password. Enable this if you use an external hosting service (e.g. Sqyre) or if your players have trouble connecting."
+      },
+      "AutoApproveStandalone": {
+        "Name": "Auto-approve mobile connection requests",
+        "Hint": "When enabled, players joining via the standalone web client are admitted automatically without an approval prompt. Leave off to manually approve each join."
       },
       "ModuleEnabled": {
         "Name": "Enable Swipe in this client",
@@ -193,12 +238,16 @@
         "Name": "Disable Dice So Nice",
         "Hint": "Disable 3D dice animations on this device to improve performance."
       },
+      "DSNShadowsOff": {
+        "Name": "Dice So Nice: No Shadows",
+        "Hint": "Turn off 3D dice shadows on this device. Shadows are the heaviest part of the dice render and can crash the GPU on some phones, which blanks the map until reload."
+      },
       "DisableCanvas": {
         "Name": "Disable Canvas",
         "Hint": "If your device really struggles, disable the game canvas entirely to use the sheet/roll functionality. "
       },
       "ExpandedSheet": {
-        "Name": "Expanded Sheet (Tablet)",
+        "Name": "Use Full Page Sheets (Tablets)",
         "Hint": "When canvas is disabled, show multiple character sheet sections side-by-side using the full screen. Requires canvas to be disabled."
       },
       "Override": {
@@ -236,7 +285,7 @@
         "DialogNotNow": "Not Now",
         "DialogDontAsk": "Don't ask again"
       },
-      "PremiumFeature": "Amethyst Club feature - Connect to unlock",
+      "PremiumFeature": "Amethyst Circle feature - Connect to unlock",
       "NoCanvasBackgroundEnabled": {
         "Name": "Background Image (Sheet-only Mode)",
         "Hint": "Show a background image when canvas is disabled. Uncheck for a black background."
@@ -252,6 +301,12 @@
         "Name": "Party Actor",
         "Hint": "Select a Group actor to use as the party. Members will appear in the carousel for all players who have at least Limited permission.",
         "None": "— None —"
+      },
+      "OneFingerDrag": {
+        "Name": "One finger drag on map canvas",
+        "Hint": "What a single finger dragged across the map canvas does. \"Move the map\" pans (two fingers still pan and pinch-zoom); toggle the Select Tokens quick control to draw a selection rectangle instead. \"Select tokens\" keeps Foundry's drag-to-select.",
+        "Pan": "Move the map",
+        "Select": "Select tokens"
       }
     },
     "Notifications": {
@@ -339,13 +394,21 @@
       "Buttons": {
         "close": "Close"
       },
-      "NoItems": "No items"
+      "NoItems": "No items",
+      "MoveRow": "Move",
+      "ExpandTable": "Show full table"
     },
     "CanvasFreeze": {
       "RefreshTooltip": "Tap to refresh canvas"
     },
+    "WebGLLost": {
+      "Title": "Graphics memory ran out",
+      "Body": "Your device ran low on memory and the map had to stop rendering. Close other browser tabs and background apps to free memory, then reload.",
+      "Reload": "Reload"
+    },
     "Chat": {
       "ToggleTooltip": "Toggle Chat",
+      "ToggleInput": "Toggle chat input",
       "NoMessages": "No chat messages to show"
     },
     "QuickControls": {
@@ -365,15 +428,25 @@
       "LogoutConfirmTitle": "Confirm Logout",
       "LogoutConfirmMessage": "Are you sure you want to log out?",
       "Volume": "Volume",
+      "Combat": "Combat Tracker",
       "Journal": "Journal",
       "Compendium": "Compendium",
-      "Scenes": "Scenes"
+      "Scenes": "Scenes",
+      "SelectTokens": "Select Tokens",
+      "TargetSelected": "Target Selected Tokens",
+      "Actors": "Actors",
+      "DeleteSelectedRegionsTitle": "Delete Selected Regions",
+      "DeleteSelectedRegionsConfirm": "Delete {count} selected region(s)? This can't be undone.",
+      "DeletedRegions": "{count} region(s) deleted",
+      "NoTemplatesSelectRegion": "No templates on canvas. Tap a region to select it, then tap the trash to delete it.",
+      "DeleteTemplatesFailed": "Could not delete: you don't have permission to remove these."
     },
     "Sheet": {
       "OpenSheet": "Open Character Sheet",
       "CloseSheet": "Close Character Sheet",
       "Notes": "Notes",
       "NotesPlaceholder": "Add your notes here...",
+      "BiographyPlaceholder": "Write your character's story...",
       "RotateToPortrait": "Please Rotate Your Device",
       "RotateToPortraitHint": "This sheet works best in portrait orientation",
       "SkillsFilter": {
@@ -389,8 +462,15 @@
       "Healing": "Healing",
       "Damage": "Damage",
       "Apply": "Apply",
+      "LimitedPermission": "You have limited access to this character.",
+      "Characteristics": "Characteristics",
+      "DeleteConfirmTitle": "Delete {name}",
+      "DeleteConfirmContent": "<p>Delete <strong>{name}</strong>?</p>",
+      "Delete": "Delete",
+      "Cancel": "Cancel",
       "PF2E": {
         "View": "View",
+        "NoPublicDetails": "Nothing has been shared about this character.",
         "Delete": "Delete",
         "Cancel": "Cancel",
         "Use": "Use",
@@ -426,6 +506,10 @@
         "Attack": "Attack",
         "EmptySlot": "Empty Slot",
         "EmptySlotRemaining": "Empty Slot ({remaining} remaining)",
+        "PrepareFormula": "Prepare Formula",
+        "NoValidFormulas": "No known formulas can be prepared here",
+        "SearchFormulas": "Search formulas…",
+        "TemporaryItem": "Temporary: expires during daily preparations",
         "Prepare": "Prepare {rank}",
         "PrepareBtn": "Prepare",
         "Spells": "Spells",
@@ -440,6 +524,19 @@
         "Encounter": "Encounter",
         "Exploration": "Exploration",
         "Downtime": "Downtime",
+        "ActionOptions": "Action Options",
+        "Reload": "Reload",
+        "NoAmmoLoaded": "No ammo loaded",
+        "NoAmmoSelected": "Select ammunition",
+        "NoAmmo": "No ammunition",
+        "SelectAmmo": "Select ammunition",
+        "NoCompatibleAmmo": "No compatible ammunition in inventory",
+        "AmmoFull": "Weapon is already fully loaded",
+        "ReloadFailed": "Could not reload this weapon",
+        "AddItem": "Add Item",
+        "SearchEquipment": "Search equipment…",
+        "Loading": "Loading…",
+        "NoResults": "No matching items",
         "Strike": "Strike",
         "Damage": "Damage",
         "Critical": "Critical",
@@ -484,7 +581,11 @@
       }
     },
     "Sheets": {
-      "MobileCharacter": "Mobile Character Sheet"
+      "MobileCharacter": "Mobile Character Sheet",
+      "DisableMobileSheet": "Disable Swipe sheet",
+      "EnableMobileSheet": "Enable Swipe sheet",
+      "AddToCarousel": "Add to avatar carousel",
+      "RemoveFromCarousel": "Remove from avatar carousel"
     },
     "DiceRoller": {
       "Title": "Dice Roller",
@@ -492,7 +593,7 @@
       "SelectDice": "Select which dice to roll",
       "CustomRoll": "Custom Roll"
     },
-"Daggerheart": {
+    "Daggerheart": {
       "Loadout": "Loadout",
       "Vault": "Vault",
       "NoCardsEquipped": "No cards equipped",
@@ -545,6 +646,157 @@
       "NoFeatures": "No features",
       "ReactionRoll": "Reaction Roll"
     },
+    "WOD5E": {
+      "Details": "Details",
+      "Powers": "Powers",
+      "Effects": "Effects",
+      "Damage": "Damage",
+      "Heal": "Heal",
+      "CrinosHealth": "Crinos Health",
+      "EndFrenzy": "End frenzy",
+      "RemoveBox": "Remove a {track} box",
+      "AddBox": "Add a {track} box",
+      "RageCheck": "Rage check",
+      "Attributes": "Attributes",
+      "NoPublicDetails": "Nothing shared yet.",
+      "NoPowers": "No powers yet",
+      "Level": "Level {level}",
+      "PayCost": "Pay cost",
+      "Identity": "Identity",
+      "PatronSpirit": "Patron spirit",
+      "Backgrounds": "Backgrounds",
+      "Merits": "Merits",
+      "Flaws": "Flaws",
+      "CustomRolls": "Custom rolls",
+      "Traits": "Traits",
+      "None": "None",
+      "Weapons": "Weapons",
+      "Armor": "Armor",
+      "Gear": "Gear",
+      "Talismans": "Talismans",
+      "DamageValue": "Damage",
+      "ArmorValue": "Armor",
+      "Suppressed": "Suppressed",
+      "Active": "Active",
+      "ActiveEffects": "Active effects",
+      "InactiveEffects": "Inactive effects",
+      "XpRemaining": "Remaining",
+      "XpTotal": "Total",
+      "XpSpent": "Spent",
+      "XpAdd": "Add",
+      "XpSpend": "Spend",
+      "TrueAge": "True age",
+      "Chat": "Chat",
+      "Roll": "Roll",
+      "Rouse": "Rouse check",
+      "UseOne": "Use",
+      "Restore": "Restore",
+      "View": "View",
+      "Add": "Add",
+      "Delete": "Delete",
+      "Rating": "Rating",
+      "FullSheet": "Open full sheet",
+      "StatusEffects": "Status effects",
+      "ShiftForm": "Shift",
+      "Members": "Members",
+      "GroupType": "Group type",
+      "ViewArtwork": "View Character Artwork",
+      "ViewTokenArtwork": "View Token Artwork",
+      "ChangeArtwork": "Change Character Artwork",
+      "ChangeTokenArtwork": "Change Token Artwork",
+      "AddMember": "Add member",
+      "RemoveMember": "Remove member",
+      "FullEditor": "Open full editor",
+      "NoSpecialties": "No specialties yet",
+      "DeleteTitle": "Delete {name}",
+      "DeleteContent": "Delete <strong>{name}</strong>?"
+    },
+    "CoC7": {
+      "Details": "Details",
+      "Arcana": "Arcana",
+      "Bio": "Bio",
+      "Restore": "Restore",
+      "Spend": "Spend",
+      "Regain": "Regain",
+      "Lose": "Lose",
+      "SetTo": "Set to",
+      "Conditions": "Conditions",
+      "DyingCheck": "Dying check",
+      "SanLoss": "SAN loss (pass / fail)",
+      "HardExtreme": "Hard / Extreme",
+      "NoSkills": "No skills",
+      "NoWeapons": "No weapons",
+      "NoArmor": "No armor",
+      "NoItems": "No items",
+      "NoBooks": "No books",
+      "NoSpells": "No spells",
+      "NoTalents": "No talents",
+      "NoStatuses": "No phobias or manias",
+      "Weapons": "Weapons",
+      "Armor": "Armor",
+      "Items": "Items",
+      "Books": "Books",
+      "Spells": "Spells",
+      "Talents": "Talents",
+      "Statuses": "Phobias & Manias",
+      "Attack": "Attack",
+      "Damage": "Damage",
+      "Reload": "Reload",
+      "Ammo": "Ammo",
+      "Range": "Range",
+      "Malfunction": "Malf.",
+      "LinkedSkill": "Skill",
+      "Normal": "Normal",
+      "Long": "Long",
+      "Extreme": "Extreme",
+      "Development": "Development",
+      "FlagForDevelopment": "Flag for development",
+      "Unflag": "Remove development flag",
+      "DevelopmentPhase": "Run development phase",
+      "DevelopLuck": "Luck recovery roll",
+      "AddSkill": "Add skill",
+      "SearchSkills": "Search skills...",
+      "SkillsFilter": "Filter skills",
+      "Money": "Money",
+      "Cash": "Cash",
+      "Assets": "Assets",
+      "SpendingLevel": "Spending level",
+      "CreditRating": "Credit Rating",
+      "Backstory": "Backstory",
+      "NoBackstory": "No backstory written",
+      "Infos": "Personal details",
+      "SanityLossEvents": "Sanity loss events",
+      "NoSanityLossEvents": "No sanity loss events",
+      "ActiveEffects": "Active Effects",
+      "InactiveEffects": "Inactive Effects",
+      "NoActiveEffects": "No active effects",
+      "NoInactiveEffects": "No inactive effects",
+      "EnableEffect": "Enable effect",
+      "DisableEffect": "Disable effect",
+      "DeleteEffect": "Delete effect",
+      "View": "View",
+      "Use": "Use",
+      "Quantity": "Quantity",
+      "Weight": "Weight",
+      "Cost": "Cost",
+      "SanLossSpell": "SAN loss",
+      "MpCost": "MP cost",
+      "LuckSpend": "Spend Luck",
+      "LuckAvoidUnconsciousness": "Avoid unconsciousness",
+      "LuckHeal": "Heal 1D6 HP",
+      "LuckAvoidDeath": "Avoid death",
+      "LuckSecondAttack": "Second attack",
+      "LuckLookOutMaster": "Look out, Master!",
+      "DailySan": "Daily SAN",
+      "DailySanReset": "Reset daily sanity loss",
+      "DailySanResetHint": "Reset the daily sanity loss counter to 0?",
+      "PrimaryAttributes": "Primary Attributes",
+      "SecondaryDerived": "Secondary / Derived",
+      "GroupCardHint": "Difficulty and bonus dice are set on the card for each participant.",
+      "Identity": "Identity",
+      "AddItem": "Add",
+      "DeleteItem": "Delete item"
+    },
     "PerformanceMode": {
       "DialogTitle": "Performance Mode",
       "Intro": "Based on device's capabilities, Swipe suggests {recommendedMode} mode.",
@@ -552,6 +804,7 @@
       "Recommended": "Recommended",
       "Apply": "Apply",
       "Reset": "Reset",
+      "SaveFailed": "Could not save your choice — the GM is offline. Try again once they are online.",
       "Applied": "Performance mode set to {mode}",
       "ChangeMode": "Change Performance Mode",
       "CurrentMode": "Current Mode",
@@ -578,8 +831,10 @@
       },
       "Standalone": {
         "Name": "Standalone",
-        "Desc": "Lightweight standalone page that bypasses Foundry's client. Best for access to character sheet on iPhones or low-memory devices, but lacks many Foundry features."
+        "Desc": "Lightweight standalone page that bypasses Foundry's client. Best for access to character sheet on iPhones or low-memory devices, but lacks many Foundry features.",
+        "Unavailable": "Not available right now — the GM needs to connect Swipe VTT to Patreon in this world."
       },
+      "StandaloneLegacy": "Standalone (unavailable on V14 — treated as Sheet-Only)",
       "Escalation": {
         "Title": "Performance Still Low",
         "Message": "Your device is experiencing low frame rates ({fps} FPS). Would you like to try {nextMode} mode?",
@@ -595,11 +850,38 @@
     "ConnectPhone": {
       "Title": "Swipe QR Code",
       "ButtonName": "Swipe QR Code",
-      "Instructions": "Scan this QR code on your phone to connect as the same user.",
+      "Instructions": "Scan this QR code on your phone to connect with the mobile user.",
       "NetworkNote": "",
       "CopyUrl": "Copy Link",
       "Copied": "Link copied to clipboard!",
-      "DontShowAgain": "Don't show this on load (reopen on user config dialog)"
+      "DontShowAgain": "Don't show this on load (reopen on user config dialog)",
+      "Disconnect": "Disconnect user",
+      "DisconnectHint": "Revoke this user's standalone access. They must be approved again to reconnect.",
+      "DisconnectTitle": "Disconnect Standalone User",
+      "DisconnectConfirm": "Revoke standalone access for {name}? Any active standalone session will be disconnected and they'll need approval to reconnect.",
+      "Disconnected": "Disconnected {name} ({count} session(s) revoked)."
+    },
+    "MobileDuplicate": {
+      "LoginAs": "Log in on phone as",
+      "Create": "Create Mobile Profile",
+      "CreateHint": "Creates a paired '(Swipe)' user so this player can log in on a phone without conflicting with their desktop session.",
+      "Created": "Mobile profile '{name}' created. Player can now scan the QR to log in.",
+      "Resync": "Re-sync",
+      "ResyncHint": "Copy role, character, color, and actor ownership from the player to the mobile profile.",
+      "Resynced": "Mobile profile re-synced from player settings.",
+      "Delete": "Delete",
+      "DeleteHint": "Remove the mobile profile. The player will no longer be able to log in on a phone via this QR.",
+      "DeleteTitle": "Delete Mobile Profile",
+      "DeleteConfirm": "Remove the mobile profile? The player can no longer log in on a phone until you create it again.",
+      "Deleted": "Mobile profile deleted.",
+      "SetPassword": "Set Password",
+      "SetPasswordHint": "Set or clear the mobile profile's login password.",
+      "SetPasswordTitle": "Mobile Profile Password",
+      "PasswordHint": "Leave empty for login without password. This only affects the Swipe mobile account - password is not copied from original user.",
+      "PasswordPlaceholder": "(no password)",
+      "PasswordSave": "Save",
+      "PasswordSet": "Mobile profile password updated.",
+      "ActiveOnPhone": "Connected on phone"
     },
     "SettingsCleanup": {
       "MenuButton": {
@@ -655,7 +937,7 @@
       "EstimatedTotalHint": "JS Heap (includes module code + documents) + GPU Textures",
       "CollectionCounts": "Collection Counts",
       "ToConsider": "To Consider",
-      "DocumentsIntro": "Everything in the World sidebar is loaded into memory for every connected client. Keep actors, items, and scenes in compendium packs when not actively in use \u2014 they are only loaded on demand and won\u2019t slow down your world.",
+      "DocumentsIntro": "Everything in the World sidebar is loaded into memory for every connected client. Keep actors, items, and scenes in compendium packs when not actively in use — they are only loaded on demand and won’t slow down your world.",
       "Name": "Name",
       "Type": "Type",
       "DataSize": "Data Size",
@@ -714,9 +996,9 @@
       "UsageUntouchedTotal": "Total memory tied up in untouched documents: {size}. This is roughly how much the world-document portion of the heap could shrink if everything in this state were moved to compendiums (or never instantiated in the first place)."
     },
     "Premium": {
-      "DialogTitle": "Amethyst Club features",
+      "DialogTitle": "Amethyst Circle features",
       "TabAuthentication": "Authentication",
-      "Description": "Connect your Patreon account to unlock complete mobile character sheets and image optimization features.",
+      "Description": "Connect your Patreon account to use all Swipe features, like optimized character sheets.",
       "PatreonAuth": "Patreon Authentication",
       "Status": "Connection Status",
       "Connected": "Connected",
@@ -727,28 +1009,36 @@
       "PatronTier": "Tier",
       "PatronInfo": "Patron Information",
       "LoadedFeatures": "Loaded Features",
-      "RequiredTier": "Amethyst Club features require ${required}/month tier",
+      "RequiredTier": "Amethyst Circle features require ${required}/month tier",
       "GracePeriod": "offline mode - {days} days remaining",
       "ConnectPatreon": "Connect with Patreon",
       "RefreshStatus": "Refresh",
       "RefreshBundles": "Reload Features",
       "Logout": "Disconnect",
-      "InfoText": "Amethyst Club features include complete mobile character sheets and image optimization. Connect your Patreon account (on free tier!) to unlock these features.",
-      "ConnectionSuccess": "Connected as {name}! Amethyst Club features are now available.",
+      "InfoText": "Amethyst Circle features include complete mobile character sheets for supported systems. Connect your Patreon account (any tier, including free) to unlock them.",
+      "ConnectionSuccess": "Connected as {name}! Amethyst Circle features are now available.",
       "ConnectionFailed": "Failed to connect. Please try again.",
       "NotPatron": "Your account is not linked to an active Patreon membership.",
-      "InsufficientTier": "Your tier (${current}/month) doesn't meet the minimum (${required}/month) for Amethyst Club features.",
-      "InsufficientTierWarning": "Your current tier doesn't include Amethyst Club features.",
+      "InsufficientTier": "Your tier (${current}/month) doesn't meet the minimum (${required}/month) for Amethyst Circle features.",
+      "InsufficientTierWarning": "Your current tier doesn't include Amethyst Circle features.",
       "UpgradeTier": "Upgrade on Patreon",
       "PopupBlocked": "Popup was blocked. Please allow popups for this site and try again.",
-      "LoggedOut": "Disconnected from Patreon. Amethyst Club features disabled.",
-      "RefreshingBundles": "Refreshing Amethyst Club features...",
-      "BundlesRefreshed": "Amethyst Club features refreshed.",
+      "LoggedOut": "Disconnected from Patreon. Amethyst Circle features disabled.",
+      "RefreshingBundles": "Refreshing Amethyst Circle features...",
+      "BundlesRefreshed": "Amethyst Circle features refreshed.",
       "PatronNameUnknown": "(unknown)",
       "FeatureLocked": "Connect to Patreon",
-      "UpgradeHint": "GM must connect their Patreon account on any tier to unlock this section of character sheet.",
+      "UpgradeHint": "Optimized sheets are exclusive to Patreon members. Connect or use regular Foundry sheets.",
+      "AskGMToConnect": "Ask GM to connect",
+      "UseRegularSheets": "Use regular sheets",
+      "UseRegularSheetsConfirm": "This device will use regular Foundry sheets. You can turn mobile sheets back on in Swipe settings. Reload now?",
+      "ConnectRequestSent": "Your GM was asked to connect Patreon.",
+      "ConnectRequestNoGM": "No GM is online right now. Ask them to connect Patreon once they join.",
+      "ConnectRequestFailed": "Could not reach the GM. Make sure socketlib is enabled.",
+      "GMConnectRequest": "{name} asked you to connect Patreon so they can use optimized character sheets.",
+      "SheetsForcedOn": "Your GM has turned mobile sheets on for your account, so they can't be disabled here.",
       "TokenExpired": "Swipe Patreon session expired. GM should reconnect with Patreon to unlock features.",
-      "GMReloadRequest": "GM loaded Amethyst Club features. Reloading...",
+      "GMReloadRequest": "GM loaded Amethyst Circle features. Reloading...",
       "LinkCodeFieldset": "Authenticate with Link Code",
       "LinkCodeHint": "Can't use popups? Get a code from another device.",
       "GetLinkCode": "Click to Get an Auth Code",
@@ -805,7 +1095,34 @@
       "NoUsers": "No non-GM users in this world.",
       "ForcedByGM": "Set by GM",
       "ReloadTitle": "Settings Changed",
-      "ReloadPrompt": "Your GM has updated your mobile settings. A reload is required for changes to take effect."
+      "ReloadPrompt": "Your GM has updated your mobile settings. A reload is required for changes to take effect.",
+      "Duplicate": "Add Mobile Profile",
+      "DuplicateHint": "Create a paired '(Swipe)' user so this player can log in on a phone without conflicting with their desktop session.",
+      "RemoveDuplicate": "Remove Mobile Profile",
+      "RemoveDuplicateHint": "Delete the player's '(Swipe)' user. The QR code on their User Config will stop working until you create a new one."
+    },
+    "JoinApproval": {
+      "Title": "Player Joining",
+      "Pending": "{count} user(s) joining from Standalone link",
+      "AutoApprove": "Auto-approve mobile connection requests",
+      "Approve": "Approve",
+      "Deny": "Deny",
+      "NoRequests": "No pending requests."
+    },
+    "ActorDirectory": {
+      "AddToScene": "Add to Scene",
+      "AddToSceneDenied": "You do not own that actor, so the GM declined to place it.",
+      "AddedToScene": "Actor '{name}' added to scene",
+      "AddToSceneUnavailable": "No GM client could place the token. Ask the GM to reload Foundry so Swipe's handlers are registered."
+    },
+    "TokenHud": {
+      "Delete": "Delete token",
+      "DeleteTitle": "Delete Token",
+      "DeleteConfirm": "Delete this token? This can't be undone.",
+      "Deleted": "Token '{name}' deleted",
+      "DeleteDenied": "You do not own that token's actor, so the GM declined to delete it.",
+      "DeleteUnavailable": "No GM client could delete the token. Ask the GM to reload Foundry so Swipe's handlers are registered.",
+      "Rotate": "Rotate token"
     }
   }
 }

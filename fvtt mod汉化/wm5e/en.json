@@ -1,8 +1,38 @@
 {
 	"WM5E": {
+		"LinksMenu": {
+			"Name": "Module Support",
+			"Label": "Links",
+			"Hint": "Open WM5E documentation, issue tracker, and support links.",
+			"Title": "Resources & Support",
+			"GitHubMessage": "GitHub links",
+			"DiscordMessage": "Community",
+			"SupportMessage": "Toss a Coin to your Bugbear"
+		},
+		"WeaponIdsMenu": {
+			"Name": "Custom Weapon IDs",
+			"Label": "Configure",
+			"Hint": "Map arbitrary base item keys to Item UUIDs for the dnd5e weapon mastery picker.",
+			"Title": "Custom Weapon IDs",
+			"BaseItem": "Base Item",
+			"BaseItemPlaceholder": "eg: psychicBlade",
+			"Uuid": "Item UUID",
+			"UuidPlaceholder": "Drag a compendium Item or paste its UUID",
+			"HintText": "Choose a short custom key, then link it to a compendium Item by dragging the Item here or pasting its UUID. Weapons using that same key as their base item and a configured mastery can then appear in dnd5e weapon mastery choices.",
+			"Add": "Add"
+		},
 		"AutoMasteries": {
-			"Name": "Automatically Trigger Masteries",
-			"Hint": "When enabled (each user must enable separately), relevant weapon masteries will be automatically triggered when making attacks with applicable weapons."
+			"Name": "Automatic Masteries",
+			"Hint": "Choose which user clients automatically trigger relevant weapon masteries.",
+			"SelectAll": "Select All"
+		},
+		"NickReminder": {
+			"Name": "Post Nick Reminder",
+			"Hint": "When enabled, Nick posts its reminder message when the attack roll completes."
+		},
+		"NpcMasteries": {
+			"Name": "Enable NPC Masteries",
+			"Hint": "When enabled, NPC weapons with a configured mastery can use that mastery when making attacks."
 		},
 		"Effects": {
 			"Sap": "Sap",

@@ -38,6 +38,7 @@
       "GuidelinesTableButton": "Guidelines Table",
       "ApplyButton": "Apply",
       "RevertButton": "Revert",
+      "CreateButton": "Create Actor",
       "MultipleSelectedHint": "Multiple selected: changes apply to all.",
       "TokenNamePlaceholderSingle": "Leave blank to keep current name.",
       "TokenNamePlaceholderMulti": "New name for all selected (optional)."
@@ -109,7 +110,8 @@
       "NoGuidelineEntry": "No guideline entry for CR {cr}.",
       "RevertedActors": "Actor Rollback Successful",
       "TargetCrClamped": "{name}: Target CR clamped to {cr} (limit {limit} steps from {min} to {max}).",
-      "AppliedActors": "Actor Updated!"
+      "AppliedActors": "Actor Updated!",
+      "CreateActor": "Actor Created!"
     },
     "Common": {
       "InfoOnly": "info only",

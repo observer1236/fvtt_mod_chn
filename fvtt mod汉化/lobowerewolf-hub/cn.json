@@ -1,23 +1,38 @@
-{"lobowerewolf-hub": {
-    "hub-title": "LoboWerewolf Hub",
-    "initializing": "lobowerewolf-hub | 正在初始化 LoboWerewolf Hub",
-    "tool-register-error": "lobowerewolf-hub | 工具注册失败：数据无效",
-    "tool-registered": "lobowerewolf-hub | 工具成功注册：{name}",
-    "about-title": "关于 LoboWerewolf",
-    "about": {
-      "heading": "LoboWerewolf",
-      "tagline": "FVTT 高级工具",
-      "links": {
-        "patreon": "Patreon",
-        "discord": "加入 Discord"
-      },
-      "sections": {
-        "our-modules": "我们的模组"
-      },
-      "versionPrefix": "v",
-      "footer": {
-        "copyright": "© 2025 LoboWerewolf"
-      }
-    }
-  }
+{
+	"lobowerewolf-hub": {
+		"hub-title": "LoboWerewolf Hub",
+		"initializing": "lobowerewolf-hub | 正在初始化 LoboWerewolf Hub",
+		"tool-register-error": "lobowerewolf-hub | 工具注册失败：数据无效",
+		"tool-registered": "lobowerewolf-hub | 工具成功注册：{name}",
+		"about-title": "关于 LoboWerewolf",
+		"about": {
+			"heading": "LoboWerewolf",
+			"tagline": "Foundry VTT 的免费和高级模块。",
+			"links": {
+				"patreon": "帕特龙",
+				"discord": "不和谐"
+			},
+			"sections": {
+				"our-modules": "模组"
+			},
+			"versionPrefix": "v",
+			"footer": {
+				"copyright": "© 2025 LoboWerewolf"
+			},
+			"modulesWord": "模块"
+		},
+		"sheetDock.title": "LoboWerewolf",
+		"sheetDock.groups.automation": "自动化",
+		"sheetDock.groups.narrative": "叙事",
+		"sheetDock.groups.media": "媒体",
+		"sheetDock.groups.magic": "魔法",
+		"sheetDock.outdatedHub": "{module} 需要 LoboWerewolf Hub {version} 或更新版本。更新 Hub 以获取统一的工作表按钮。",
+		"sheetDock.groups.economy": "经济",
+		"sheetDock.groups.inventory": "库存",
+		"sheetDock.groups.crafting": "制作",
+		"sheetDock.groups.utilities": "公用事业",
+		"sheetDock.groups.scenario": "场景",
+		"sheetDock.groups.minigames": "小游戏",
+		"sheetDock.groups.other": "其他"
+	}
 }
