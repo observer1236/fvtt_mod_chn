@@ -1351,7 +1351,7 @@
 	"CUSTOM_DND5E.speedFactorInitiative.action.dash.desc": "在剩下的回合中，给自己额外的移动量，等于你的速度。",
 	"CUSTOM_DND5E.speedFactorInitiative.action.disengage.desc": "在接下来的回合中，你的移动不会引发借机攻击。",
 	"CUSTOM_DND5E.speedFactorInitiative.action.disengage.label": "脱离",
-	"CUSTOM_DND5E.speedFactorInitiative.action.dodge.desc": "在你的下一个回合开始之前，对你的攻击掷骰具有劣势，并且你以优势进行灵巧的豁免检定。如果您处于失能状态或您的速度为 0，您将失去此福利。",
+	"CUSTOM_DND5E.speedFactorInitiative.action.dodge.desc": "在你的下一个回合开始之前，对你的攻击掷骰具有劣势，并且你以优势进行敏捷豁免检定。如果您处于失能状态或您的速度为 0，您将失去此福利。",
 	"CUSTOM_DND5E.speedFactorInitiative.action.dodge.label": "闪避",
 	"CUSTOM_DND5E.speedFactorInitiative.action.fast.desc": "快速行动。",
 	"CUSTOM_DND5E.speedFactorInitiative.action.heavy.desc": "使用重型近战武器攻击。",

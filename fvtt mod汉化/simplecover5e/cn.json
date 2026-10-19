@@ -206,8 +206,8 @@
 			},
 			"Save": {
 				"none": "没有盖子。",
-				"half": "<strong>+2</strong> 为灵巧豁免检定。",
-				"threeQuarters": "<strong>+5</strong> 为灵巧豁免检定。",
+				"half": "<strong>+2</strong> 为敏捷豁免检定。",
+				"threeQuarters": "<strong>+5</strong> 为敏捷豁免检定。",
 				"total": "无法直接针对。"
 			},
 			"CoverModeChanged": "掩护模式已更改",

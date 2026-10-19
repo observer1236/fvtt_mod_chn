@@ -1393,7 +1393,7 @@
                 "Message": "选择一个敌人以及最多等同于你熟练加值数量的盟友作为目标！"
             },
             "Disengage": {
-                "CunningAction": "灵巧动作",
+                "CunningAction": "狡诈动作",
                 "StepOfTheWind": "疾步如风"
             },
             "DivineIntervention": {
