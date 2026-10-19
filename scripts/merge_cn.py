@@ -23,8 +23,8 @@ barbrawl bases batch-media-optimizer bbh bbmm beavers-crafting
 beavers-gamepad beavers-mobile beavers-system-interface beneos-module betterroofs bg3-hud-core
 bg3-hud-dnd5e blind-death-saves blind-skill-rolls boss-beat boss-loot-assets-free boss-loot-monster-tools
 boss-loot-token-manager boss-splash bossbar bounty-board breaktime bsa-dnd5e
-bulk-tasks campaign-builder campaign-codex canvas-layers card-hands-list cascade-folder-permissions
-CautiousGamemastersPack change-log character-chat-selector character-tracker chat-media chat-trimmer
+bulk-tasks campaign-builder campaign-codex canvas-layers card-hands-list cascade-folder-permissions cat
+CautiousGamemastersPack change-log character-chat-selector character-tracker chris-premades chat-media chat-trimmer
 chatedit-new chatgpt-item-generator chatlog-prune classic-ui cleaner-sheet-title-bar ClueBook
 combat-exhaustion combat-hp-display combat-spell-timer combat-stats combat-theme-expansion-pack combat-tracker-dock
 combatbooster complete-card-management conditional-visibility connection-monitor consent-form critically-fumbled

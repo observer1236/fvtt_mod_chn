@@ -1,0 +1,1539 @@
+{
+	"CAT": {
+		"MEDKIT": {
+			"Title": "CAT 配置：{name}",
+			"HeaderLabel": "CAT 配置面板（Medkit）",
+			"LockedPack": "{pack} 已锁定。在合集解锁之前，不会保存此处所做的更改。",
+			"NoPermission": "您无权修改此选项卡。",
+			"ReloadWarning": "在世界重新加载之前，注册的自动化不会反映您的更改！",
+			"TABS": {
+				"Automation": "信息",
+				"Automations": "自动化",
+				"Configuration": "配置",
+				"Generic": "通用自动化",
+				"Embedded": "嵌入式宏",
+				"Macros": "已注册宏",
+				"DocProps": "文档属性",
+				"PlacedRegion": "已放置区域",
+				"Backups": "备份"
+			},
+			"MassApply": {
+				"Counts": {
+					"UpToDate": "已是最新",
+					"Available": "可用",
+					"Outdated": "过时"
+				},
+				"Label": "批量应用/更新",
+				"Button": "批量应用/更新",
+				"Tooltip": "为此文档下的全部物品应用或更新自动化。",
+				"ConfirmTitle": "批量应用自动化吗？",
+				"ConfirmPrompt": "是否为此文档下的全部物品应用已注册的自动化？此操作将重写物品数据，且无法撤销。",
+				"Started": "已开始批量应用。",
+				"Progress": "应用 {done}/{total} — {name}",
+				"Done": "批量应用完成。",
+				"PackLocked": "{pack} 已锁定。将其复制到另一个合集并在那里应用自动化。",
+				"Destination": "目的地",
+				"NewCompendium": "新合集",
+				"Replace": "替换",
+				"Modes": {
+					"Matching": "同名文档",
+					"All": "合集内全部内容"
+				},
+				"PackLockedTitle": "合集已锁定",
+				"PackTitle": "应用到模组或系统附带的合集吗？",
+				"PackWarning": "{pack} 属于 {package}，并非世界自有合集。更新 {package} 时，会覆盖此处应用的所有内容。",
+				"CycleWarning": "检测到物品间存在循环依赖，部分更新可能无法按正确顺序执行！",
+				"NoUpdates": "没有需要更新的物品！",
+				"ChooseSource": "选择来源",
+				"Tabs": {
+					"Characters": "玩家角色",
+					"NPCs": "NPC",
+					"Other": "其他"
+				}
+			},
+			"Identifier": {
+				"Label": "文档标识符",
+				"Hint": "物品和行动的标识符必须在各自的文档表单中修改。",
+				"OverrideHint": "覆盖匹配此文档与自动化时使用的标识符。默认为由名称转换的短标识名。"
+			},
+			"Source": {
+				"Label": "自动化源",
+				"Hint": "选择哪个模块为本文档提供自动化功能。",
+				"HintNone": "没有自动化源已为此文档注册自动化。"
+			},
+			"SourceType": {
+				"Label": "授予者",
+				"Hint": "表示授予此文档的职业、专长或种族等来源的键，例如 'class:cleric'。"
+			},
+			"Version": {
+				"Label": "自动化版本",
+				"Hint": "由选定的自动化源报告。"
+			},
+			"Notes": {
+				"Label": "自动化说明"
+			},
+			"IgnoreItem": {
+				"Label": "忽略物品",
+				"Hint": "批量应用或更新时跳过此物品。"
+			},
+			"Sections": {
+				"Rules": "规则",
+				"Automation": "自动化",
+				"Embedded": "嵌入式宏"
+			},
+			"Embedded": {
+				"Count": "此文档包含 {count} 个嵌入宏。",
+				"Empty": "本文档中没有嵌入宏。",
+				"Add": "添加宏",
+				"Edit": "编辑宏"
+			},
+			"EmbeddedMacros": {
+				"Title": "嵌入宏：{name}",
+				"Invalid": "保存前，宏“{name}”必须填写名称、事件和执行阶段。",
+				"Duplicate": "本文档中已存在名为“{name}”的宏。",
+				"Fields": {
+					"Name": "名称",
+					"Event": "事件",
+					"Pass": "执行阶段",
+					"Priority": "优先级",
+					"Macro": "宏",
+					"Distance": "距离",
+					"ConfigDistance": "距离配置键",
+					"Dispositions": "敌友关系",
+					"ConfigDispositions": "敌友关系配置键",
+					"Disabled": "跳过指定目标",
+					"ConfigDisabled": "跳过目标的配置键"
+				},
+				"Disposition": {
+					"All": "全部",
+					"Ally": "盟友",
+					"Enemy": "敌人"
+				},
+				"Disabled": {
+					"Incapacitated": "失能",
+					"Dead": "死亡",
+					"Unconscious": "昏迷"
+				}
+			},
+			"DocProps": {
+				"Add": "添加",
+				"Empty": "没有定义。",
+				"Hint": "文档属性为 dnd5e 补丁提供数据（{list}）。",
+				"InvalidValue": "需要一个值。",
+				"NotDefined": "“{type}”不是注册属性！",
+				"Title": "{type}: {name}",
+				"Props": {
+					"Ability": {
+						"Field": "属性",
+						"Hint": "符合条件的攻击、检定或豁免行动可改用的其他属性。",
+						"Label": "行动备选属性"
+					},
+					"ACAbility": {
+						"Field": "属性",
+						"Hint": "替换默认护甲等级计算中使用的敏捷，例如半身板甲：15 + int（上限 2）。",
+						"Label": "护甲等级备选属性"
+					},
+					"ACFormula": {
+						"Field": "公式",
+						"Hint": "作为备选的护甲等级公式。使用计算结果最高的一项作为基础护甲等级。",
+						"Label": "备选护甲等级公式"
+					},
+					"DamageFormula": {
+						"Field": "公式",
+						"Hint": "作为备选的掷骰公式，使用掷骰结果最高的一项。",
+						"Label": "替代伤害公式"
+					},
+					"Range": {
+						"Field": "法术射程",
+						"Hint": "加入符合条件法术射程的公式，可叠加。",
+						"Label": "法术射程加值"
+					},
+					"RollModifier": {
+						"Field": "修饰符",
+						"Hint": "以逗号分隔的骰子修饰符（例如 x、min1、kh1）。",
+						"Invalid": "至少需要一个修饰符。",
+						"Label": "伤害掷骰修饰符"
+					}
+				},
+				"otherAbilities": {
+					"Field": "属性",
+					"Hint": "此攻击可改用的其他属性。",
+					"Label": "其他属性"
+				},
+				"Restrictions": {
+					"Legend": "限制",
+					"Hint": "限制项留空则跳过该项限制。自由输入的多个值用逗号分隔。",
+					"Invert": "反转",
+					"RequireAll": "需要全部",
+					"ExcludeAll": "如果匹配全部则排除",
+					"Ability": {
+						"Label": "属性",
+						"Hint": "匹配使用任一所选属性的法术。",
+						"InvertedHint": "排除使用所选属性的法术。"
+					},
+					"Armor": {
+						"Label": "已装备护甲",
+						"Hint": "必须装备所选内容中的任意一项或全部，取决于“需要全部”设置。",
+						"InvertedHint": "不得装备所选内容中的任意一项或全部，取决于“需要全部”设置。"
+					},
+					"DamagePart": {
+						"Label": "伤害分项",
+						"Hint": "选择匹配物品上要处理的伤害分项。留空默认为“基础伤害”。",
+						"Base": "基础伤害",
+						"First": "第一部分",
+						"Second": "第二部分",
+						"Third": "第三部分"
+					},
+					"DamageType": {
+						"Label": "伤害类型",
+						"Hint": "匹配任一所选伤害类型。",
+						"InvertedHint": "排除所选伤害类型。"
+					},
+					"HasActivity": {
+						"Label": "有行动",
+						"Hint": "匹配任一所选行动类型。",
+						"InvertedHint": "排除所选行动类型。"
+					},
+					"Identifier": {
+						"Label": "目标标识符",
+						"Hint": "以逗号分隔，通过标识符匹配特定物品，格式为 item|activity|partIndex。"
+					},
+					"Level": {
+						"Label": "法术环阶",
+						"Hint": "匹配任意选定的法术环阶。",
+						"InvertedHint": "排除所选法术环阶。"
+					},
+					"Method": {
+						"Label": "施法方式",
+						"Hint": "匹配任何选定的施法方法。",
+						"InvertedHint": "排除选定的施法方法。"
+					},
+					"MinimumBaseRange": {
+						"Label": "基础射程下限",
+						"Hint": "未经修正的射程必须不小于此值。"
+					},
+					"Property": {
+						"Label": "属性",
+						"Hint": "匹配所选物品属性中的任意一项或全部。",
+						"InvertedHint": "排除具有所选物品属性中任意一项或全部的物品。"
+					},
+					"RangeUnits": {
+						"Label": "射程单位",
+						"Hint": "匹配任何选定的单位。",
+						"InvertedHint": "排除选定的单位。"
+					},
+					"School": {
+						"Label": "法术学派",
+						"Hint": "匹配任一所选法术学派。",
+						"InvertedHint": "排除所选法术学派"
+					},
+					"SourceType": {
+						"Label": "来源类型",
+						"Hint": "以逗号分隔的来源键，例如 'class:cleric' 或 'race:human'。匹配由这些来源授予的物品。"
+					},
+					"Type": {
+						"Label": "物品类型",
+						"Hint": "匹配任何选定的物品类型。",
+						"InvertedHint": "排除选定的物品类型。"
+					},
+					"Weapon": {
+						"Label": "装备武器",
+						"Hint": "必须装备所选内容中的任意一项或全部，取决于“需要全部”设置。",
+						"InvertedHint": "不得装备所选内容中的任意一项或全部，取决于“需要全部”设置。"
+					},
+					"WeaponType": {
+						"Label": "武器类型",
+						"Hint": "匹配任何选定的武器类型。",
+						"InvertedHint": "排除选定的武器类型。"
+					}
+				}
+			},
+			"Hero": {
+				"Unavailable": {
+					"Heading": "没有注册自动化",
+					"Copy": "没有来源为该物品提供自动化。"
+				},
+				"Available": {
+					"Heading": "自动化可用！",
+					"CTA": "应用选定的源"
+				},
+				"Outdated": {
+					"Heading": "可用更新",
+					"Copy": "{source} 提供了较新版本的自动化。",
+					"CTA": "立即更新"
+				},
+				"UpToDate": {
+					"Heading": "已是最新",
+					"Copy": "从 {source} 运行最新版本。"
+				},
+				"Configurable": {
+					"CTA": "配置>"
+				},
+				"Generic": {
+					"CTA": "管理特性 >"
+				}
+			},
+			"Notif": {
+				"Updated": "将 {identifier} 从 v{before} 更新为 v{after}。",
+				"Applied": "应用 {source} v{version}。"
+			},
+			"Footer": {
+				"Cancel": "取消",
+				"Close": "关闭",
+				"CancelTooltip": "放弃挂起的更改并关闭。",
+				"Save": "保存",
+				"SaveTooltip": "提交待处理的更改。",
+				"SaveClose": "保存并关闭",
+				"SaveCloseTooltip": "提交待处理的更改并关闭。",
+				"DiscardTitle": "放弃更改？",
+				"DiscardPrompt": "您有未保存的更改。丢弃它们并关闭？"
+			},
+			"Dirty": {
+				"Label": "未保存",
+				"Tooltip": "你有未保存的更改。"
+			},
+			"RulesToggle": {
+				"2014": "2014",
+				"2024": "2024",
+				"Current": "现行规则",
+				"Hint": "在 2014 年（旧版）和 2024 年（现代）规则集之间切换。",
+				"OtherRulesAvailable": "自动化可在 {otherRulesLabel} 规则下使用。",
+				"NotApplicable": "规则选择不适用于本文档。"
+			},
+			"STATUSES": {
+				"HasUnregistered": "未注册的自动化",
+				"Available": "自动化可用",
+				"Outdated": "自动化过时",
+				"UpToDate": "最新的自动化",
+				"Configurable": "自动化可配置",
+				"Generic": "已应用通用特性",
+				"Unavailable": "未找到自动化"
+			},
+			"Indicator": {
+				"configuration": {
+					"One": "{count} 个可配置选项",
+					"Other": "{count} 个可配置选项"
+				},
+				"generic": {
+					"One": "{count} 个通用自动化",
+					"Other": "{count} 个通用自动化"
+				},
+				"inherited": {
+					"One": "{count} 个嵌套通用自动化",
+					"Other": "{count} 个嵌套通用自动化"
+				},
+				"embedded": {
+					"One": "{count} 个嵌入宏",
+					"Other": "{count} 个嵌入宏"
+				},
+				"macros": {
+					"One": "{count} 个已注册宏",
+					"Other": "{count} 个已注册宏"
+				},
+				"docprops": {
+					"One": "{count} 个文档属性",
+					"Other": "{count} 个文档属性"
+				},
+				"region": {
+					"One": "{count} 个区域行动",
+					"Other": "{count} 个区域行动"
+				}
+			},
+			"Tree": {
+				"Legend": "相关自动化",
+				"Config": {
+					"config": "已配置",
+					"genericConfig": "通用",
+					"macros": "宏",
+					"embeddedMacros": "嵌入式",
+					"alternateAttributes": "文档属性",
+					"placed": "区域",
+					"animation": "动画"
+				},
+				"Kind": {
+					"Item": "物品",
+					"Activity": "行动",
+					"ActiveEffect": "效果",
+					"Region": "区域",
+					"Token": "Token："
+				}
+			},
+			"Configuration": {
+				"None": "此自动化没有可配置的选项。"
+			},
+			"ClassBonus": {
+				"Label": "职业施法加值",
+				"Hint": "装备此物品时，按职业给予固定的法术豁免 DC 和法术攻击加值，例如血井瓶。",
+				"Empty": "尚未设置职业加值。",
+				"Class": "职业",
+				"DC": "豁免 DC",
+				"Attack": "攻击",
+				"Add": "添加职业加值",
+				"AddPlaceholder": "职业标识符：",
+				"Duplicate": "已存在职业“{identifier}”的加值。"
+			},
+			"FeatureRollMode": {
+				"Add": "添加行动标识符",
+				"AddPlaceholder": "行动标识符",
+				"Duplicate": "标识符“{identifier}”的条目已存在。"
+			},
+			"Categories": {
+				"behavior": {
+					"Label": "行为",
+					"Tooltip": "自动化如何触发及其应用。"
+				},
+				"tuning": {
+					"Label": "参数调整",
+					"Tooltip": "调整自动化的数值及可选参数。"
+				},
+				"visuals": {
+					"Label": "视觉",
+					"Tooltip": "图标、图像及其他视觉效果设置。"
+				},
+				"linked": {
+					"Label": "关联物品",
+					"Tooltip": "此自动化引用的文档。"
+				},
+				"general": {
+					"Label": "一般",
+					"Tooltip": "常规设置"
+				},
+				"homebrew": {
+					"Label": "自制",
+					"Tooltip": "对自动化的可选自制调整。"
+				},
+				"mechanics": {
+					"Label": "机制",
+					"Tooltip": "自动化如何实现规则机制。"
+				},
+				"utility": {
+					"Label": "实用功能",
+					"Tooltip": "通用的实用功能自动化。"
+				},
+				"targeting": {
+					"Label": "目标",
+					"Tooltip": "自动化如何选择目标。"
+				},
+				"damage": {
+					"Label": "伤害",
+					"Tooltip": "自动化应用的伤害调整。"
+				},
+				"movement": {
+					"Label": "移动",
+					"Tooltip": "自动化应用的运动效果。"
+				},
+				"summons": {
+					"Label": "召唤物",
+					"Tooltip": "召唤的生物及其配置。"
+				},
+				"animations": {
+					"Label": "动画",
+					"Tooltip": "自动化播放的视觉动画。"
+				}
+			},
+			"Documents": {
+				"Placeholder": "粘贴 UUID 或将文档拖至此处",
+				"Add": "添加文档",
+				"InvalidUuid": "找不到该 UUID 的文档。",
+				"WrongType": "需要 {type} 文档。"
+			},
+			"Summons": {
+				"Actor": "召唤物角色",
+				"Name": "名称覆盖",
+				"AvatarImg": "角色图像覆盖",
+				"TokenImg": "覆盖 Token 图像",
+				"Animation": "动画",
+				"Initiative": "先攻",
+				"InitiativeStandard": "掷骰先攻",
+				"InitiativeFollows": "跟随召唤者",
+				"InitiativeNone": "无",
+				"SoundPlaced": "出现音效",
+				"SoundRemoved": "移除音效",
+				"SoundDeath": "死亡音效",
+				"CompendiumPick": "从合集中选择角色",
+				"Add": "添加召唤",
+				"Item": "物品",
+				"MatchDC": "同步豁免 DC",
+				"MatchAttack": "同步攻击加值",
+				"Equip": "装备",
+				"Attune": "同调",
+				"Method": "施法方式",
+				"Prepared": "准备状态",
+				"UsesMax": "最大使用次数",
+				"UsesRecovery": "使用次数恢复",
+				"RechargeValue": "充能阈值",
+				"Description": "描述覆盖",
+				"ItemCompendiumPick": "从合集中选择物品",
+				"AddItem": "添加物品",
+				"Profile": "召唤配置",
+				"ProfileHint": "此条目要覆盖的系统原生召唤配置。",
+				"Count": "计数",
+				"CountHint": "创建数量的公式。支持@castLevel.",
+				"Disposition": "敌友关系",
+				"DispositionOwner": "与召唤师相同",
+				"Size": "体型",
+				"DismissAtZero": "生命值归零时遣散",
+				"FollowUp": "后续行动",
+				"FollowUpHint": "此召唤物执行的后续行动，会覆盖行为中的“后续行动”设置。",
+				"Identifier": "召唤物标识符",
+				"IdentifierHint": "默认为源角色的标识符。",
+				"AddUpdate": "添加角色更新",
+				"Update": "角色更新",
+				"UpdatePath": "数据路径",
+				"UpdateValue": "值",
+				"UpdateMode": "值类型",
+				"UpdateModeFormula": "公式",
+				"UpdateModeLiteral": "字面值",
+				"ItemName": "名称覆盖",
+				"ItemNameHint": "可使用 {attacks} 代表攻击次数。",
+				"ItemIdentifier": "标识符覆盖",
+				"ItemIdentifierHint": "替换召唤物自身拥有此标识符的物品。",
+				"Attacks": "攻击次数",
+				"AttacksHint": "多重攻击次数的公式，结果会写入名称。",
+				"DamageNumber": "伤害骰数量",
+				"DamageBonus": "伤害加值",
+				"DamageTypes": "伤害类型",
+				"HealingNumber": "治疗骰数量",
+				"HealingBonus": "治疗加成",
+				"UsesMaxFormula": "使用次数上限公式",
+				"CompendiumTypes": "合集生物类型",
+				"CompendiumHint": "设置任意合集筛选字段后，会从怪物合集中选择生物，替代指定的召唤物角色。",
+				"CompendiumSubtypes": "合集亚型",
+				"CompendiumNames": "合集名称",
+				"CompendiumMaxCR": "合集挑战等级上限",
+				"CompendiumTiers": "合集挑战等级档位",
+				"CompendiumRandomTier": "掷骰选择档位",
+				"CompendiumTiersHint": "选择生物前提供的档位选项，格式为 CR|count，多个选项以分号分隔。数量可填写公式。",
+				"Weight": "预算权重",
+				"WeightHint": "此生物消耗的召唤额度，默认为 1。",
+				"DamageDenomination": "伤害骰面数"
+			},
+			"PackFolder": {
+				"Folder": "文件夹",
+				"Pack": "合集包"
+			},
+			"Sequencer": {
+				"Browse": "浏览 Sequencer 素材库"
+			},
+			"Animation": {
+				"Categories": {
+					"attack": "攻击",
+					"classFeature": "职业特性",
+					"default": "其他",
+					"generic": "通用",
+					"rangedAttack": "远程攻击",
+					"spell": "法术",
+					"weaponAttacks": "武器攻击"
+				},
+				"Credits": "动画制作者",
+				"Discord": "Discord",
+				"Patreon": "Patreon"
+			},
+			"Region": {
+				"Visibility": "能见度",
+				"MagicalDarkness": {
+					"Label": "魔法性的黑暗",
+					"Hint": "区域内的 Token 不会被非魔法光源照亮。"
+				},
+				"Obscured": {
+					"Label": "遮蔽",
+					"Hint": "区域内的 Token 处于重度遮蔽状态。"
+				}
+			},
+			"Actor": {
+				"Ability": {
+					"All": "全部"
+				},
+				"Automations": "自动化",
+				"ConditionResistance": {
+					"Label": "状态抗性",
+					"Hint": "此角色具有抗性的状态。点击“全部”适用于任意豁免，或选择特定属性以限制适用范围。"
+				},
+				"ConditionVulnerability": {
+					"Label": "状态易伤",
+					"Hint": "此角色具有易伤的状态。点击“全部”适用于任意豁免，或选择特定属性以限制适用范围。"
+				},
+				"FeatureFailure": {
+					"Label": "特性自动失败",
+					"Hint": "使此角色自动豁免失败的行动标识符。点击“全部”适用于任意豁免，或选择特定属性以限制适用范围。"
+				},
+				"FeatureImmunity": {
+					"Label": "特性免疫",
+					"Hint": "使此角色自动豁免成功的行动标识符。点击“全部”适用于任意豁免，或选择特定属性以限制适用范围。"
+				},
+				"FeatureResistance": {
+					"Label": "特性抗性",
+					"Hint": "此角色具有抗性的行动标识符。点击“全部”适用于任意豁免，或选择特定属性以限制适用范围。"
+				},
+				"FeatureVulnerability": {
+					"Label": "特性易伤",
+					"Hint": "此角色具有易伤的行动标识符。点击“全部”适用于任意豁免，或选择特定属性以限制适用范围。"
+				},
+				"IgnoreActor": {
+					"Label": "忽略角色",
+					"Hint": "批量更新合集或场景时，跳过此角色。"
+				},
+				"Name": {
+					"Label": "匹配名称",
+					"Hint": "将此角色与不同名称下的自动化相匹配。"
+				},
+				"Backups": {
+					"Label": "备份",
+					"Hint": "恢复时会用备份替换该角色。首先备份当前状态。",
+					"Backup": "备份",
+					"Restore": "恢复",
+					"RestoreConfirm": "用 {date} 的备份替换 {name}？",
+					"None": "还没有该角色的备份。",
+					"NoPack": "在备份设置中选择一个备份合集。"
+				}
+			},
+			"Activity": {
+				"SpellIdentifier": {
+					"Label": "法术标识符",
+					"Hint": "此施法行动关联的法术。使用 CatKit 更新时，会将关联替换为“法术合集”中的首个匹配法术。"
+				},
+				"Hidden": {
+					"Label": "隐藏行动",
+					"Hint": "在行动使用选择窗口中隐藏此行动。",
+					"Badge": "此行动由自动化管理。请仅在了解其机制时直接编辑。"
+				},
+				"PlacedRegion": {
+					"Hint": "应用于此行动创建的所有区域的配置。"
+				},
+				"Effects": {
+					"Label": "区域效果",
+					"Field": "应用效果",
+					"Hint": "将此物品的效果应用于此行动所创建区域内的 Token。",
+					"None": "该物品没有可应用的效果。"
+				},
+				"RegionMacros": {
+					"Label": "区域已注册宏",
+					"Hint": "复制到此行动所创建区域的已注册宏。"
+				},
+				"Activities": {
+					"Label": "区域行动",
+					"Field": "触发行动",
+					"Hint": "当 Token 与此行动所创建的区域交互时，触发此物品的指定行动。",
+					"NoneAvailable": "此物品没有可供触发的其他行动。",
+					"Triggers": "触发器",
+					"Disposition": "目标",
+					"OncePerTurn": "每回合一次",
+					"DependentEffects": "离开时移除",
+					"DependentEffectsHint": "生物离开区域或区域被删除时，移除此行动应用的效果。生物仍带有其中任一效果时，不会再次触发此行动。",
+					"PerDistance": "按移动距离触发",
+					"PerDistanceHint": "使用“Token 在区域内移动”触发事件时，每移动此数值的场景距离单位触发一次。留空则每次移动只触发一次。"
+				},
+				"Triggers": {
+					"enter": "Token进入",
+					"left": "Token 离开",
+					"stay": "Token 保持在内",
+					"passedThrough": "Token 穿过",
+					"entered": "区域移至 Token 上",
+					"exited": "区域移离 Token",
+					"stayed": "区域保持覆盖",
+					"passedOver": "区域移过 Token",
+					"turnStart": "回合开始",
+					"turnEnd": "回合结束",
+					"everyTurn": "每回合",
+					"moved": "Token 在区域内移动"
+				},
+				"Disposition": {
+					"all": "全部",
+					"ally": "盟友",
+					"enemy": "敌人"
+				},
+				"AttachToCaster": {
+					"Label": "附于施法者",
+					"Hint": "区域随施法者的 Token 移动。"
+				}
+			},
+			"Effect": {
+				"Conditions": {
+					"Label": "状态",
+					"Hint": "此效果生效期间，对角色施加的状态。"
+				},
+				"DisableCondition": {
+					"Label": "禁用条件",
+					"Hint": "自动禁用此效果的触发器。"
+				},
+				"DisableConditions": {
+					"combatTurn": "在回合中启用"
+				},
+				"SpecialDuration": {
+					"Label": "特殊持续时间：",
+					"Hint": "自动消除此效果的触发器。"
+				},
+				"SpecialDurations": {
+					"endOfWorkflow": "工作流结束",
+					"forceSave": "迫使目标进行豁免",
+					"dealtDamage": "造成伤害",
+					"turnStart": "这个生物的回合开始",
+					"turnEnd": "这个生物的回合结束",
+					"damaged": "受到伤害",
+					"damagedByAlly": "被盟友伤害",
+					"damagedByEnemy": "被敌人伤害",
+					"damagedBySourceOrAlly": "受到效果来源或其盟友的伤害",
+					"damagedBySourceAlly": "被效果源的盟友伤害",
+					"hitByAnotherCreature": "被其他生物击中",
+					"attackedByAnotherCreature": "被其他生物攻击",
+					"hitBySource": "被效果源命中",
+					"attackedBySource": "受到效果源攻击",
+					"moveFinished": "移动结束",
+					"zeroSpeed": "速度减至零",
+					"tempHP": "失去临时生命值",
+					"tempMaxHP": "失去临时生命值上限",
+					"Groups": {
+						"Workflow": "工作流",
+						"Turn": "回合",
+						"Movement": "移动",
+						"HitPoints": "生命值",
+						"ConditionAdded": "获得状态",
+						"ConditionRemoved": "状态已移除",
+						"Equipped": "装备护甲",
+						"Unequipped": "卸下护甲",
+						"ToolRolled": "进行工具检定",
+						"ToolFailed": "工具检定失败",
+						"ToolSucceeded": "工具检定成功"
+					}
+				},
+				"Animation": "动画",
+				"NoAnimation": {
+					"Label": "禁用动画",
+					"Hint": "不播放此效果应用或移除时的动画。"
+				},
+				"AnimationCreate": {
+					"Label": "应用动画",
+					"Tooltip": "应用此效果时播放的动画。"
+				},
+				"AnimationDelete": {
+					"Label": "移除动画",
+					"Tooltip": "移除此效果后播放的动画。"
+				},
+				"AnimationApply": "应用",
+				"AnimationRemove": "移除"
+			},
+			"Generic": {
+				"SelectLabel": "通用特性",
+				"SelectField": "应用特性",
+				"NoMacros": "没有已注册的通用特性。",
+				"NoneSelected": "未选择通用特性。",
+				"NoConfig": "此特性没有可配置项。",
+				"IdentifierPlaceholder": "标识符",
+				"AddIdentifier": "添加标识符"
+			},
+			"Macros": {
+				"Picker": {
+					"Label": "已注册宏",
+					"Field": "应用已注册宏",
+					"Hint": "选择在此文档上运行的已注册宏。每个选定的宏都会为其声明的每个事件触发。"
+				},
+				"None": "全局注册表中没有注册宏。"
+			}
+		},
+		"Region": {
+			"AttackerCantSeeTarget": "攻击者无法看到目标",
+			"TargetCantSeeAttacker": "目标看不到攻击者"
+		},
+		"Dialog": {
+			"Remember": {
+				"Combat": "这场战斗不要再问",
+				"Cast": "本次施法不再询问",
+				"Permanent": "不再询问。可在此物品的 CAT 配置选项卡中清除已保存的选择。"
+			},
+			"Request": {
+				"Approved": "已批准",
+				"Automatic": "自动批准",
+				"Declined": "拒绝",
+				"Pending": "待定",
+				"Request": "请求",
+				"Self": "自身请求"
+			},
+			"Combobox": {
+				"Filter": "输入要过滤的内容...",
+				"NoMatches": "没有匹配项"
+			},
+			"HitDieLabel": "{className}：{remaining}/{max} {denomination}",
+			"SkipDeadAndUnconscious": "跳过死亡或昏迷的目标",
+			"Total": "总计",
+			"UnknownTarget": "未知目标",
+			"Use": "使用{document}？",
+			"UseExtraCost": "使用 {document} 吗？（消耗 {quantity} {resource}）",
+			"UseRecover": "使用{document}恢复{spent}/{max} {resource}？",
+			"UseRollTotal": "使用{document}？ （掷骰总数：{rollTotal}）",
+			"UseForRollTotal": "为 {name} 使用 {document} 吗？（掷骰总值：{rollTotal}）"
+		},
+		"Common": {
+			"AttackType": {
+				"attack": "攻击",
+				"meleeAttack": "近战攻击",
+				"meleeSpellAttack": "近战法术攻击",
+				"meleeWeaponAttack": "近战武器攻击",
+				"rangedAttack": "远程攻击",
+				"rangedSpellAttack": "远程法术攻击",
+				"rangedWeaponAttack": "远程武器攻击",
+				"spellAttack": "法术攻击",
+				"weaponAttack": "武器攻击"
+			},
+			"Cover": "{amount} {cover}"
+		},
+		"Skill": {
+			"Title": "技能检定"
+		},
+		"Check": {
+			"Title": "属性检定"
+		},
+		"Save": {
+			"Title": "豁免检定"
+		},
+		"Tool": {
+			"Title": "工具检定"
+		},
+		"Manual": {
+			"MethodLabel": "Coven's Automation Toolkit",
+			"Title": "掷骰！",
+			"Part": {
+				"Mod": "调整值",
+				"Prof": "熟练",
+				"Magic": "魔法",
+				"Bonus": "加值",
+				"Situational": "情境"
+			},
+			"Context": {
+				"weapon": {
+					"attack": "{source} 使用 {item} 攻击 {target}",
+					"attackNoTarget": "{source} 使用 {item} 进行攻击",
+					"damage": "{source} 用 {item} 击中 {target}，掷骰伤害！",
+					"damageNoTarget": "{source} 使用 {item} 命中，请进行伤害掷骰！"
+				},
+				"spell": {
+					"attack": "{source} 对 {target} 施放 {item}，请进行攻击检定！",
+					"attackNoTarget": "{source} 施放 {item}，请进行攻击检定！",
+					"damage": "{source} 对 {target} 施放 {item}，掷骰伤害！",
+					"damageNoTarget": "{source}施放{item}，掷骰伤害！"
+				},
+				"feat": {
+					"attack": "{source} 对 {target} 使用 {item}，请进行攻击检定！",
+					"attackNoTarget": "{source} 使用 {item}，请进行攻击检定！",
+					"damage": "{source} 在 {target} 上使用 {item}，掷骰伤害！",
+					"damageNoTarget": "{source} 使用{item}，掷骰伤害！"
+				}
+			},
+			"SaveContext": "{source} 对你使用 {type}，请进行豁免检定！",
+			"SaveLine": "DC {dc} {ability}豁免检定",
+			"SaveLineNoDC": "{ability}豁免检定",
+			"UnknownSource": "有人",
+			"WithAdvantage": "具有优势",
+			"WithDisadvantage": "具有劣势",
+			"ItemType": {
+				"spell": "法术",
+				"weapon": "武器",
+				"feat": "特性",
+				"consumable": "物品"
+			},
+			"Unknown": "看不见的目标",
+			"DiceTotal": "骰子总计",
+			"RollTotal": "掷骰总数",
+			"RerollDepth": "已达到重掷或爆骰的递归层数上限，请先手动结算骰子修饰符，再输入总值。",
+			"Submit": "提交掷骰结果",
+			"Outcome": {
+				"Fumble": "大失败",
+				"Miss": "未命中",
+				"Hit": "命中",
+				"Critical": "重击",
+				"Failure": "失败",
+				"Success": "成功"
+			}
+		},
+		"Senses": {
+			"DevilsSight": "魔鬼视界"
+		},
+		"Settings": {
+			"FixDescriptionEnrichers": {
+				"Name": "修复描述内联指令",
+				"Hint": "应用自动化时，为没有参数的 [[/damage]] 和 [[/save]] 内联指令补充参数。"
+			},
+			"Automation": {
+				"Name": "自动化来源",
+				"Label": "配置自动化源",
+				"Hint": "启用自动化源，设置其优先级，并选择额外的合集来使用。"
+			},
+			"ManualRolls": {
+				"Name": "手动掷骰",
+				"Label": "配置手动掷骰",
+				"Hint": "CAT 手动掷骰结算器的设置。"
+			},
+			"ManualRollsEnabled": {
+				"Name": "手动掷骰",
+				"Hint": "为未完成的掷骰启用掷骰解析器。"
+			},
+			"ManualRollsUsers": {
+				"Name": "允许手动掷骰的用户",
+				"Hint": "设置哪些用户可以使用手动掷骰。"
+			},
+			"ManualRollsInclusion": {
+				"0": "不使用手动掷骰",
+				"1": "全部角色",
+				"2": "仅玩家角色",
+				"3": "仅关联角色",
+				"4": "仅玩家拥有的关联角色",
+				"5": "玩家拥有或控制的全部角色",
+				"Name": "手动掷骰范围",
+				"Hint": "哪些角色可以被提示手动掷骰。"
+			},
+			"ManualRollsPromptOnMiss": {
+				"Name": "未命中提示",
+				"Hint": "攻击未命中时，也提示进行伤害掷骰。"
+			},
+			"ManualRollsPromptNoData": {
+				"Name": "无数据提示",
+				"Hint": "对没有相关数据的掷骰也显示提示，通常用于宏。"
+			},
+			"ManualRollsEntryMode": {
+				"Name": "手动掷骰输入",
+				"Hint": "手动完成掷骰时，如何输入骰子结果。",
+				"rollTotal": "掷骰总值——包含调整值",
+				"diceTotal": "骰子总值——不含调整值",
+				"perDie": "逐骰输入——每颗骰子的结果"
+			},
+			"ManualRollsGMFulfill": {
+				"Name": "由主持人完成掷骰",
+				"Hint": "启用后，由主持人完成全部掷骰。"
+			},
+			"ManualRollsRichContext": {
+				"Name": "手动掷骰的详细提示",
+				"Hint": "在提示中显示完整的掷骰信息，包括目标、豁免 DC 和伤害说明。"
+			},
+			"AutomationSources": {
+				"Name": "自动化来源",
+				"Hint": "用于自动化的来源和合集。最低值优先。",
+				"Disabled": "未启用",
+				"Disable": "禁用",
+				"Enable": "启用",
+				"SourceTag": "来源",
+				"PackTag": "合集包"
+			},
+			"Backups": {
+				"Name": "备份",
+				"Label": "配置备份",
+				"Hint": "自动创建角色备份的设置。"
+			},
+			"Compendiums": {
+				"Name": "合集包",
+				"Label": "配置合集",
+				"Hint": "配置合集，自动化将从中检索文档。"
+			},
+			"MonsterCompendiums": {
+				"Name": "怪物",
+				"Hint": "搜索怪物自动化所用的合集，数值越小优先级越高。"
+			},
+			"ItemCompendiums": {
+				"Name": "物品",
+				"Hint": "搜索物品自动化所用的合集，数值越小优先级越高。"
+			},
+			"SpellCompendiums": {
+				"Name": "法术",
+				"Hint": "搜索法术自动化所用的合集，数值越小优先级越高。"
+			},
+			"MacroCompendiums": {
+				"Name": "宏",
+				"Hint": "这些合集中的脚本宏会返回宏数据，替换具有相同来源、标识符和规则版本的已注册宏。新宏从模板创建。数值越小优先级越高。"
+			},
+			"Devtools": {
+				"Name": "开发工具",
+				"Label": "配置开发工具",
+				"Hint": "开发者设置。"
+			},
+			"DisplayDebugLogs": {
+				"Name": "显示调试日志",
+				"Hint": "启用后，控制台将显示调试日志。"
+			},
+			"DisplayDebugEventData": {
+				"Name": "显示事件数据",
+				"Hint": "启用后，控制台将显示每个事件的示例事件数据。"
+			},
+			"Help": {
+				"Name": "疑难解答",
+				"Label": "打开疑难解答",
+				"Hint": "帮助进行所需的模块设置和 CAT 自动化故障排除。"
+			},
+			"HideNames": {
+				"Name": "隐藏 Token 名称",
+				"Hint": "启用后，各提示窗口不显示敌方 Token 的名称。"
+			},
+			"HideActivitiesOnActorSheet": {
+				"Name": "在角色表上隐藏隐藏行动",
+				"Hint": "启用后，CatKit 中标记为隐藏的行动不会显示在角色表中，物品表仍会显示。"
+			},
+			"DiceSoNice": {
+				"Name": "Dice So Nice",
+				"Hint": "启用后，Dice So Nice 的伤害骰动画会在全部伤害掷骰宏完成后播放。"
+			},
+			"AnimationPriority": {
+				"Name": "动画优先级",
+				"Hint": "物品同时配置了 CAT 动画，以及 Automated Animations 或 Boss Loot FX 动画时，选择优先播放哪种动画。",
+				"Cat": "CAT（阻止 Automated Animations 和 Boss Loot FX 自动播放动画）",
+				"Module": "Automated Animations 和 Boss Loot FX（跳过 CAT 动画）",
+				"Both": "同时播放"
+			},
+			"General": {
+				"Name": "一般",
+				"Label": "配置设置",
+				"Hint": "常规模块和 API 设置。"
+			},
+			"Integration": {
+				"Name": "整合",
+				"Label": "配置集成",
+				"Hint": "各种模块集成的设置。"
+			},
+			"Interface": {
+				"Name": "界面",
+				"Label": "配置界面",
+				"Hint": "UI选项设置"
+			},
+			"EffectDescriptions": {
+				"Name": "自动效果详情描述",
+				"Hint": "启用后，若效果没有描述，则自动从来源物品复制描述。"
+			},
+			"AutoRecharge": {
+				"Name": "为玩家特性充能",
+				"Hint": "非 NPC 的回合开始时，自动掷骰检查特性充能。"
+			},
+			"PlacedRegionVisibility": {
+				"Name": "放置区域可见性",
+				"Hint": "选择行动放置的区域在哪些视图中显示。无论是否显示，区域效果都会生效。",
+				"layer": "仅区域层",
+				"always": "总是"
+			},
+			"EffectDescriptionsNPC": {
+				"Name": "隐藏npc效果详情描述",
+				"Hint": "启用后，“自动效果描述”不处理 NPC 创建的效果。"
+			},
+			"Mechanics": {
+				"Name": "机制",
+				"Label": "配置机制",
+				"Hint": "游戏机制自动化的设置。"
+			},
+			"Permissions": {
+				"Name": "权限",
+				"Label": "配置权限",
+				"Hint": "CAT 自动化和配置菜单的用户权限设置。"
+			},
+			"PermissionsAutomation": {
+				"Name": "自动化选项卡",
+				"Hint": "允许修改“自动化”选项卡的最低用户角色。"
+			},
+			"PermissionsConfiguration": {
+				"Name": "配置选项卡",
+				"Hint": "允许修改“配置”选项卡的最低用户角色。"
+			},
+			"PermissionsGeneric": {
+				"Name": "通用选项卡",
+				"Hint": "允许修改“通用”选项卡的最低用户角色。"
+			},
+			"PermissionsEmbedded": {
+				"Name": "嵌入宏选项卡",
+				"Hint": "允许修改嵌入宏选项卡的最低用户角色。"
+			},
+			"PermissionsDocProps": {
+				"Name": "文档属性选项卡",
+				"Hint": "允许修改“文档属性”选项卡的最低用户角色。"
+			},
+			"PermissionsMacros": {
+				"Name": "注册宏标签",
+				"Hint": "允许修改“注册宏”选项卡的最低用户角色。"
+			},
+			"PermissionsPlacedRegion": {
+				"Name": "放置区域选项卡",
+				"Hint": "允许修改“已放置区域”选项卡的最低用户角色。"
+			},
+			"Summons": {
+				"Name": "召唤物",
+				"Label": "配置召唤物",
+				"Hint": "召唤物使用和管理的设置。"
+			},
+			"AutomaticBackups": {
+				"Name": "玩家角色自动备份",
+				"Hint": "当世界加载时，将玩家拥有的角色备份到备份合集。"
+			},
+			"BackupCompendium": {
+				"Name": "备份合集",
+				"Hint": "保存备份的世界角色合集。"
+			},
+			"BackupFrequency": {
+				"Name": "备份间隔",
+				"Hint": "自动备份之间的时间。"
+			},
+			"BackupRetention": {
+				"Name": "备份时长",
+				"Hint": "自动和手动备份保留多长时间。"
+			}
+		},
+		"DAE": {
+			"CV": {
+				"Category": "CAT 状态易伤",
+				"Name": "{condition} 状态易伤",
+				"Description": "对 {condition} 具有状态易伤，豁免具有劣势。填写 1/true 可适用于全部豁免，或填写以逗号分隔的属性列表（例如 str,dex）。"
+			},
+			"CR": {
+				"Category": "CAT 状态抗性",
+				"Name": "{condition} 状态抗性",
+				"Description": "对 {condition} 具有状态抗性，豁免具有优势。填写 1/true 可适用于全部豁免，或填写以逗号分隔的属性列表（例如 str,dex）。"
+			},
+			"FeatureRollModes": "CAT 特性掷骰模式",
+			"FF": {
+				"Name": "特性自动失败",
+				"Description": "对指定标识符的行动自动豁免失败。请将 'identifier' 替换为自己的标识符。填写 1/true 可适用于全部豁免，或填写以逗号分隔的属性列表（例如 str,dex）。"
+			},
+			"FI": {
+				"Name": "特性免疫",
+				"Description": "对指定标识符的行动自动豁免成功。请将 'identifier' 替换为自己的标识符。填写 1/true 可适用于全部豁免，或填写以逗号分隔的属性列表（例如 str,dex）。"
+			},
+			"FV": {
+				"Name": "特性易伤",
+				"Description": "对指定标识符的行动进行豁免时具有劣势。请将 'identifier' 替换为自己的标识符。填写 1/true 可适用于全部豁免，或填写以逗号分隔的属性列表（例如 str,dex）。"
+			},
+			"FR": {
+				"Name": "特性抗性",
+				"Description": "对指定标识符的行动进行豁免时具有优势。请将 'identifier' 替换为自己的标识符。填写 1/true 可适用于全部豁免，或填写以逗号分隔的属性列表（例如 str,dex）。"
+			},
+			"IgnoreDifficultTerrainTokens": {
+				"Name": "忽略困难地形：其他 Token",
+				"Description": "这个角色不认为其他Token是困难的地形。"
+			},
+			"Other": "CAT 其他"
+		},
+		"Generic": {
+			"Disabled": "禁用",
+			"Chat": "聊天",
+			"Ok": "确认",
+			"Cancel": "取消",
+			"Name": "名称",
+			"DamageGroups": {
+				"Physical": "物理",
+				"Elemental": "元素",
+				"Other": "其他"
+			},
+			"Resize": "调整大小"
+		},
+		"QuickConditions": {
+			"Legend": "可用条件",
+			"Placeholder": "点击下方添加条件",
+			"Title": "CAT 快速条件",
+			"Unknown": {
+				"Tooltip": "无法匹配到任何条件搜索键"
+			},
+			"Logic": {
+				"And": "并且",
+				"Or": "或"
+			},
+			"Comparators": {
+				"lt": "小于",
+				"le": "至多",
+				"gt": "大于",
+				"ge": "至少"
+			},
+			"Not": {
+				"Is": "是",
+				"IsNot": "不是"
+			},
+			"Conditions": {
+				"typeOrRace": "类型或种族",
+				"checkNearby": "查看附近",
+				"reaction": "反应",
+				"targetActorSize": "目标体型",
+				"activityType": "行动类型",
+				"damageType": "伤害类型",
+				"critical": "重击",
+				"alignment": "阵营",
+				"ability": "属性值",
+				"hasCondition": "具有状态",
+				"itemType": "物品类型"
+			}
+		},
+		"Summons": {
+			"SummonFolder": "召唤物"
+		},
+		"Teleport": {
+			"Title": "传送",
+			"WhichLevel": "哪个级别？",
+			"Current": "{name}（当前）"
+		},
+		"Crosshairs": {
+			"Invalid": "该空间无法选择。",
+			"PathMustClose": "通过单击形状的第一个点来闭合形状。",
+			"PathTooLong": "闭合形状会使其比允许的长度更长。",
+			"Help": {
+				"AddPanel": "在最近的端点添加墙板",
+				"AddPoint": "添加一个点",
+				"Back": "回去继续画",
+				"Cancel": "取消",
+				"ChooseSide": "指向要生效的一侧",
+				"Close": "闭合形状",
+				"Confirm": "确认侧面",
+				"Finish": "完成线段",
+				"FinishPanels": "使用较少墙板完成",
+				"FreeAngle": "任意角度，不吸附网格",
+				"Free": "不吸附网格放置",
+				"Keys": {
+					"Click": "点击",
+					"Enter": "Enter",
+					"Esc": "ESC",
+					"FirstPoint": "单击第一个点",
+					"LastPoint": "Enter / 点击最后一点",
+					"Move": "移动",
+					"RightClick": "右键单击",
+					"Scroll": "滚动",
+					"Shift": "Shift",
+					"F": "F"
+				},
+				"LengthUsed": "所有长度均已使用。单击任意位置或按 Enter 键完成。",
+				"PanelsStart": "点击第一块墙板的起点。每块墙板必须与另一块的端点相连。",
+				"PlaceEnd": "放置线的末端",
+				"PlaceRing": "放置圆环",
+				"Resize": "改变尺寸",
+				"Start": "单击线条开始的位置。",
+				"StartPanels": "开始绘制第一块墙板",
+				"StartStraight": "单击线条开始的位置，然后单击结束的位置。",
+				"Undo": "删除最后一个点",
+				"UndoPanel": "移除最后一块墙板",
+				"AddFlat": "添加水平墙板",
+				"FlatHeight": "升高或降低水平墙板",
+				"ToggleFlat": "切换竖直墙板与水平墙板"
+			},
+			"Sides": {
+				"Inside": "里面",
+				"Left": "左",
+				"Outside": "外面",
+				"Right": "右"
+			},
+			"PanelNotConnected": "每个面板必须接触另一个面板。",
+			"FlatAt": "水平，高度 {elevation} {units}"
+		},
+		"Movement": {
+			"Forced": "强制移动"
+		},
+		"Config": {
+			"AvatarImg": "肖像图像",
+			"ImgPriority": "图像优先级",
+			"TokenImg": "Token图片：",
+			"None": "无",
+			"Dispositions": "敌友关系",
+			"CreatureTypes": "生物类型",
+			"Effect": "效果"
+		},
+		"Error": {
+			"MissingCostActivity": "此特性缺少资源消耗行动！",
+			"NoAnimations": "此自动化的动画需要尚未安装的素材模组，其 ID 为 {module}。",
+			"NoMonsterCompendiums": "您没有在设置中启用任何怪物合集！",
+			"NoSequencer": "Sequencer 未启用或未安装，播放动画需要此模组！",
+			"NoSpellCompendiums": "你尚未在设置中启用任何法术合集！",
+			"OutdatedSequencer": "Sequencer 版本过旧！播放 CAT 动画至少需要 {minSequencerVersion} 版。",
+			"UnregisteredSpellList": "未为键 {key} 注册法术列表。"
+		},
+		"Troubleshooter": {
+			"Title": "CAT 疑难解答",
+			"Open": "打开疑难解答",
+			"BothJB2A": "检测到 JB2A 付费版和 JB2A 免费版。请移除或禁用免费版。",
+			"World": "世界",
+			"Empty": "没什么可报告的。",
+			"Copied": "疑难解答报告已复制到剪贴板。",
+			"Discord": "复制报告并打开 Discord",
+			"Sections": {
+				"required": "所需设置",
+				"info": "信息",
+				"modules": "模块",
+				"foundry": "Foundry",
+				"permissions": "权限",
+				"importer": "导入器",
+				"settings": "设置",
+				"logs": "日志",
+				"options": "选项"
+			},
+			"Tags": {
+				"Required": "必需",
+				"Optional": "可选",
+				"AutomationSource": "自动化源",
+				"AnimationsLibrary": "动画",
+				"Defunct": "已废弃",
+				"Incompatible": "不兼容"
+			},
+			"Groups": {
+				"Core": "核心",
+				"CatRelated": "CAT 相关",
+				"Active": "已启用模组",
+				"Inactive": "未启用模组",
+				"Conflicts": "冲突",
+				"Automations": "自动化",
+				"Scene": "场景",
+				"Game": "游戏",
+				"Errors": "错误"
+			},
+			"Status": {
+				"pass": "执行阶段",
+				"warn": "警告",
+				"fail": "传送失败",
+				"info": "信息"
+			},
+			"Footer": {
+				"FixAll": "全部修复",
+				"Save": "保存疑难解答"
+			},
+			"Save": {
+				"Title": "保存疑难解答",
+				"Drop": "可将遇到问题的角色或物品拖到此处，以便检查。",
+				"Saved": "疑难解答报告已保存。"
+			},
+			"HideWarnings": {
+				"Name": "隐藏疑难解答警告",
+				"Hint": "不再向主持人发送疑难解答的启动警告密语卡片。"
+			},
+			"StripDialog": {
+				"Name": "导出时询问是否去除描述",
+				"Hint": "导出文档数据时，询问是否去除描述。"
+			},
+			"Fix": {
+				"Title": "应用修复",
+				"Content": "以下内容将被更改，然后 Foundry 会要求重新加载：",
+				"Label": "修复",
+				"Disable": "禁用模块"
+			},
+			"Required": {
+				"Expected": "{value} → {fix}",
+				"ClientScope": "（客户端设置）",
+				"GmAutoDamage": "主持人自动掷骰伤害"
+			},
+			"Card": {
+				"settings": "CAT 依赖的某些设置未按预期设置：",
+				"modules": "部分已启用模组已废弃或与 CAT 冲突：",
+				"fix": "修复",
+				"open": "疑难解答"
+			},
+			"Export": {
+				"Title": "导出数据",
+				"Strip": "去除描述",
+				"Settings": "导出设置",
+				"Exported": "已导出 CAT 设置。",
+				"Imported": "导入 {count} CAT 设置。",
+				"ImportSettings": "导入设置",
+				"ImportTitle": "导入 CAT 设置",
+				"ImportContent": "使用导入的文件覆盖您的 CAT 设置？"
+			},
+			"Report": {
+				"Inactive": "未启用",
+				"NotInstalled": "未安装",
+				"Defunct": "失效模块",
+				"Incompatible": "不兼容的模块",
+				"ASEFork": "Chris 维护的分支",
+				"ModuleAnimation": "{module} 也为这个物品制作了动画",
+				"Language": "语言",
+				"GridType": "网格型",
+				"GridUnits": "网格单位",
+				"GridDistance": "网格距离",
+				"ActorlessTokens": "未关联角色的 Token",
+				"LinkedMultiple": "拥有多个关联 Token 的角色",
+				"Invalid": "无效 {type}",
+				"Token": "当前控制的 Token",
+				"Actor": "角色",
+				"UserCount": "{count}用户",
+				"Importer": {
+					"Label": "检测到的导入器",
+					"None": "无",
+					"Molten": "Scruvy"
+				},
+				"Permissions": {
+					"Users": "允许：{allowed}；被拒绝：{denied}"
+				}
+			}
+		},
+		"Summon": {
+			"DeadTitle": "CAT召唤物",
+			"DeadContext": "召唤物 {name} 的生命值降至 0，是否删除其角色与 Token？"
+		},
+		"OptionalBonus": {
+			"Applied": "已应用",
+			"Content": "选择并配置本次掷骰的加值。",
+			"Contextual": "情境加值",
+			"DamageType": "伤害类型",
+			"DamageTypeChoice": "选择类型",
+			"Failure": "失败",
+			"Hit": "命中",
+			"Invalid": "加值已禁用：{reason}",
+			"InvalidResources": "资源不够！",
+			"Miss": "未命中",
+			"NoDC": "无 DC",
+			"NoRequest": "加值没有请求处理程序！",
+			"Optional": "可选加值",
+			"Phase": {
+				"PostResult": "结果出来后",
+				"PreResult": "结果出炉前",
+				"PreRoll": "掷骰前",
+				"All": "任何阶段"
+			},
+			"Scaleable": "可调整数值",
+			"Scaling": "缩放",
+			"Success": "成功",
+			"Targeted": "按目标应用",
+			"Targets": "目标",
+			"ThirdParty": "第三方加值",
+			"Title": "可选加值",
+			"Unknown": "?"
+		},
+		"CompendiumBrowser": {
+			"SpellPicker": "从 {lists} 列表中选择法术：",
+			"Title": "CAT合集浏览器"
+		},
+		"GrappleShove": {
+			"Grapple": "擒抱",
+			"GrappledBy": "被{name}擒抱",
+			"GrappleEscape": "挣脱擒抱",
+			"Grappling": "擒抱 {name}",
+			"GrappleImmune": "目标无法被擒抱!",
+			"GrappleSize": "目标过大，无法被擒抱!",
+			"ShoveSize": "目标太大，推不动！",
+			"ShoveProneImmune": "目标不能被推倒！",
+			"Surrendered": "袭击者投降"
+		},
+		"Macros": {
+			"Aura": {
+				"CreatureTypesHint": "仅影响所列生物类型的 Token。此检查不限制来源本身。",
+				"DispositionsHint": "光环能影响哪些 Token。",
+				"EffectHint": "将此物品的指定效果复制到光环内的每个 Token。在效果更改值中填写 @auraValue，可代入光环的数值。",
+				"EnemyEffect": "敌人效果",
+				"EnemyEffectHint": "设置后，“效果”应用于盟友，此项效果应用于敌人，忽略“敌友关系”设置。其余设置由两种效果共用。",
+				"EnterActivity": "进入时行动",
+				"EnterActivityHint": "Token 进入光环时，对其执行的行动。",
+				"EnterOnCreate": "创建时视为进入",
+				"EnterOnCreateHint": "光环出现时，已位于其中的 Token 也视为进入光环。",
+				"ExitActivity": "离开时行动",
+				"ExitActivityHint": "Token 离开光环时，对其执行的行动。",
+				"Filter": "过滤器",
+				"FilterHint": "为范围内每个 Token 运行的光环筛选宏。仅在返回 true 时应用光环。嵌入筛选宏使用 aura 事件和 filter 执行阶段。",
+				"IncludeSelf": "包括自身",
+				"IncludeSelfHint": "来源 Token 也处于自身光环内。",
+				"OncePerTurn": "每回合一次",
+				"OncePerTurnHint": "每个行动对每个 Token 每回合至多掷骰一次。",
+				"Radius": "半径",
+				"RadiusHint": "光环半径，以场景距离单位计。可使用来源的掷骰数据填写公式。",
+				"SourceDisable": "使来源失效的状态",
+				"SourceDisableHint": "来源带有任一所列状态时，光环停止生效。",
+				"SourceStatuses": "要求来自来源的状态",
+				"SourceStatusesHint": "仅影响带有光环来源施加的任一所列状态的 Token。",
+				"StackHighest": "使用最高数值",
+				"StackHighestHint": "多个来源投射此光环时，使用数值最高的来源；关闭后，使用距离最近的来源。",
+				"TargetDisable": "使目标失效的状态",
+				"TargetDisableHint": "带有任一所列状态的 Token 不受影响。",
+				"TurnEndActivity": "回合结束时行动",
+				"TurnEndActivityHint": "Token 在光环内结束回合时，对其执行的行动。",
+				"TurnStartActivity": "回合开始时行动",
+				"TurnStartActivityHint": "Token 在光环内开始回合时，对其执行的行动。",
+				"Value": "数值公式",
+				"ValueHint": "使用来源掷骰数据计算的公式，结果代入 @auraValue。",
+				"Walls": "被墙壁阻挡",
+				"WallsHint": "来源与 Token 之间的墙壁会阻挡光环。"
+			},
+			"Summon": {
+				"Activity": "召唤行动",
+				"ActivityHint": "创建召唤物的行动。留空则适用于此物品的全部召唤行动。",
+				"Summons": "召唤物",
+				"SummonsHint": "此行动创建的生物。对于召唤行动，可将条目关联至召唤配置以覆盖该配置；未关联条目的配置沿用其原有角色与数量。",
+				"Range": "放置范围",
+				"RangeHint": "召唤物可放置在距召唤者多少英尺内。设为 0 则使用行动射程。",
+				"CommandActivities": "命令行动",
+				"CommandActivitiesHint": "此物品的召唤物存在时，显示这些行动。",
+				"HostileOnParentEnd": "专注结束时转为敌对",
+				"HostileOnParentEndHint": "专注结束时保留召唤物并使其转为敌对，不将其遣散。",
+				"ReplaceExisting": "替换现有的",
+				"ReplaceExistingHint": "创建新召唤物前，先遣散此物品已有的召唤物。",
+				"MaxDistance": "最大距离",
+				"MaxDistanceHint": "召唤物或召唤者移动时，若双方距离超过此数值，则遣散召唤物，以英尺计。设为 0 可禁用。",
+				"PlaceActivity": "放置行动",
+				"PlaceActivityHint": "将此物品尚未置于画布上的召唤物放入场景的行动。",
+				"RecallActivity": "召回行动",
+				"RecallActivityHint": "将这个物品的召唤物从画布上移除的行动。",
+				"MoveActivity": "移动行动",
+				"MoveActivityHint": "移动此物品已放置召唤物的行动，移动距离不超过该行动射程。",
+				"Favorite": "收藏的行动",
+				"FavoriteHint": "召唤物存在期间，将命令行动加入收藏。",
+				"FollowUpActivity": "后续行动",
+				"FollowUpActivityHint": "对各召唤物附近选定生物执行的行动，不消耗使用次数或法术位。",
+				"FollowUpTiming": "后续行动时机",
+				"FollowUpTimingHint": "在召唤后、移动后，或两个时机都执行后续行动。",
+				"FollowUpTimingOptions": {
+					"both": "两者",
+					"create": "召唤后",
+					"move": "移动后"
+				},
+				"FollowUpRange": "后续范围",
+				"FollowUpRangeHint": "可选后续行动目标与召唤物的最大距离，以英尺计。",
+				"FollowUpTarget": "选择后续目标。",
+				"FollowUpTargets": "后续目标",
+				"FollowUpTargetsHint": "为每个召唤物选择一个附近生物，或对范围内全部生物执行行动。“所有生物”遵循行动的目标类型：目标为盟友时包括召唤者，其他类型均排除召唤者。",
+				"FollowUpTargetsOptions": {
+					"one": "一个生物",
+					"all": "所有生物"
+				},
+				"MissingActor": "找不到召唤角色。",
+				"NoSummons": "未配置召唤生物。",
+				"AcBonus": "AC加值",
+				"HpBonus": "生命值加值",
+				"HdBonus": "生命骰加值",
+				"TempHP": "临时生命值",
+				"AttackDamageBonus": "攻击伤害加值",
+				"SaveDamageBonus": "豁免伤害加值",
+				"HealingBonus": "治疗加成",
+				"NativeHint": "填写公式。设置后覆盖召唤行动中的对应数值，支持 @item.level 和 @summon。",
+				"MatchAttacks": "同步攻击",
+				"MatchAttacksHint": "召唤物自身的攻击使用召唤者的攻击加值。",
+				"MatchSaves": "同步豁免",
+				"MatchSavesHint": "召唤物自身的豁免 DC 使用召唤者的豁免 DC。",
+				"MatchProficiency": "同步熟练加值",
+				"MatchProficiencyHint": "召唤物使用召唤者的熟练加值。",
+				"Tier": "{count} × CR {cr} 或更低",
+				"TierPrompt": "选择出现的生物数量。",
+				"Pick": "选择最多 {count} 个生物。",
+				"NoMatching": "怪物合集中没有生物与该召唤相匹配。",
+				"PickMode": "生物选择",
+				"PickModeHint": "“全部”会创建全部条目。“额度”允许用户分配召唤额度，各条目按其权重消耗额度。",
+				"PickOptions": {
+					"all": "全部",
+					"budget": "额度"
+				},
+				"Budget": "额度",
+				"BudgetHint": "“生物选择”设为“额度”时，可选总权重的计算公式。"
+			}
+		},
+		"Backups": {
+			"Title": "备份",
+			"MissingPack": "备份合集丢失。在备份设置中选择一项。",
+			"Started": "正在备份角色。",
+			"Progress": "备份 {done}/{total} — {name}",
+			"Done": "已备份 {total} 个角色。",
+			"BackedUp": "已备份 {name}。",
+			"Created": "创建备份：",
+			"Deleted": "已删除过期备份：",
+			"Restored": "从 {date} 的备份恢复 {name}。",
+			"Daily": "每日",
+			"Weekly": "每周",
+			"Monthly": "每月",
+			"Forever": "永久",
+			"OneWeek": "一周",
+			"TwoWeeks": "两周",
+			"OneMonth": "一个月",
+			"ThreeMonths": "三个月",
+			"SixMonths": "六个月",
+			"OneYear": "一年"
+		},
+		"CustomMacros": {
+			"NoReturn": "自定义宏 {name} 没有返回宏数据。",
+			"ScriptOnly": "只有脚本宏可以进入自定义宏合集。",
+			"Hint": {
+				"Title": "CAT宏指令",
+				"Intro": "当世界加载时，CAT 运行这个宏。它返回一个列表，每个宏一个条目，因此一个自定义宏可以更改多个宏。此示例替换了两个规则集的猎人印记：",
+				"Override": "更改已有宏时，必须返回其来源、标识符和规则版本。你的条目将替换该宏的全部执行阶段。",
+				"New": "添加新宏时，返回自己的来源和标识符，再到文档 CatKit 的“已注册宏”选项卡中选择。",
+				"Scope": "CAT 实用程序可按名称使用。在控制台中运行<code>console.log(cat.utils)</code>以列出它们。",
+				"Links": "请参阅 <a href=\"{wiki}\" target=\"_blank\" rel=\"noopener\">wiki</a>，或到 <a href=\"{discord}\" target=\"_blank\" rel=\"noopener\">Discord 社区</a> 寻求帮助。"
+			}
+		}
+	}
+}

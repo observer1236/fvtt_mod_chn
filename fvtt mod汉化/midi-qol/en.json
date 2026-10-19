@@ -1,4 +1,15 @@
 {
+  "midi-qol.DamageAbsorption": "Damage Absorption",
+  "midi-qol.RollField.all": "All",
+  "midi-qol.RollField.skills": "All Skills",
+  "midi-qol.RollField.tools": "All Tools",
+  "midi-qol.RollField.death": "Death Save",
+  "midi-qol.RollField.concentration": "Concentration",
+  "midi-qol.RollField.init": "Initiative",
+  "midi-qol.RollField.fail.label": "Auto Fail",
+  "midi-qol.RollField.fail.hint": "Midi QOL: a condition; when it is true the roll fails automatically (e.g. 1, or target.statuses.has(\"prone\")).",
+  "midi-qol.RollField.success.label": "Auto Success",
+  "midi-qol.RollField.success.hint": "Midi QOL: a condition; when it is true the roll succeeds automatically.",
   "midi-qol.ResetDefaults.Name": "Reset All Settings",
   "midi-qol.ResetDefaults.Title": "Reset All Settings to Defaults",
   "midi-qol.ResetDefaults.Content": "This will reset ALL midi-qol settings to their default values. This includes ConfigSettings and all game settings. This action cannot be undone. Are you sure you want to continue?",
@@ -36,12 +47,6 @@
   "midi-qol.ItemRollButtons.Hint": "Add Roll Buttons to item description - these buttons support ctrl/alt/shift to skip the dialog",
   "midi-qol.AddChatDamageButtons.Name": "Add damage buttons to chat message",
   "midi-qol.AddChatDamageButtons.Hint": "Enable the dnd5e damage tray on chat messages.",
-  "midi-qol.AddChatDamageButtonsOptions": {
-    "none": "None",
-    "gm": "Only add buttons for GM",
-    "pc": "Only add buttons for Players",
-    "both": "Add buttons for everyone"
-  },
   "midi-qol.AutoRollDamage.Name": "Auto roll Damage",
   "midi-qol.AutoRollDamage.Hint": "Automatically roll Damage when an attack roll is made. If auto roll damage is set to attack-hits midi will roll damage if no targets are selected, the attack hits (see auto check hits) or hits are not being checked",
   "midi-qol.AutoCheckSaves.Name": "Auto check Saves",
@@ -182,6 +187,8 @@
   "midi-qol.FriendlyAutoFail": "Friendly Auto Fail",
   "midi-qol.FriendlyAutoSuccess": "Friendly Auto Success",
   "midi-qol.KeyPress": "Key Press",
+  "midi-qol.Dnd5eRollMode.Actor": "dnd5e roll mode (actor)",
+  "midi-qol.Dnd5eRollMode.Effect": "{name} (dnd5e roll mode)",
   "midi-qol.ForcedKeyPress": "Forced Key Press",
   "midi-qol.RollOptions": "Roll Options",
   "midi-qol.WorkflowOptions": "Workflow Options",
@@ -253,6 +260,18 @@
       "wallsBlockIgnoreIncapacitated": "Tokens are targeted if no wall blocks them from the template origin. Incapacitated and dead tokens are excluded.",
       "wallsBlockIgnoreDefeated": "Tokens are targeted if no wall blocks them from the template origin. Dead/defeated tokens are excluded.",
       "walledtemplates": "Delegates targeting to the Walled Templates module, which reshapes the template area around walls. Requires the Walled Templates module."
+    }
+  },
+  "midi-qol.SaveSummaryStyle.Name": "Save summary style",
+  "midi-qol.SaveSummaryStyle.Hint": "With dnd5e's \"Summarize chat cards\" on, a card's saving throws are shown on the card instead of as separate messages. midi: midi's saves section (DC, success/failure, damage) is the summary. dnd5e: dnd5e's per-roll summaries, with midi's section listing only saves rolled through other modules. What players see follows Auto check Saves either way. With \"Summarize chat cards\" off the saves show as separate messages.",
+  "midi-qol.SaveDamageLine.Name": "Show damage after each save",
+  "midi-qol.SaveDamageLine.Hint": "Under a target's save result, when the save spares it some damage: the damage of each type it takes after its save (before resistances), and the feature that changed it (e.g. Super Saver).",
+  "midi-qol.saveSummaryStyleOptions": {
+    "midi": "midi saves section",
+    "dnd5e": "dnd5e summaries",
+    "expandedHints": {
+      "midi": "midi's saves section is the card's summary of its saving throws; dnd5e's per-roll summaries are not drawn.",
+      "dnd5e": "dnd5e's per-roll summaries are drawn; midi's saves section lists only saves without one, such as those rolled through other modules."
     }
   },
   "midi-qol.autoCheckSavesOptions": {
@@ -504,6 +523,8 @@
     "isSaveFailure": "Target failed a saving throw",
     "preTargetDamageApplication": "Target is about to be damaged by an item",
     "postTargetEffectApplication": "Target has an effect applied by a rolled item",
+    "preTeleport": "Before a Teleport (can cancel or change who moves)",
+    "postTeleport": "After a Teleport",
     "isDamaged": "Target is damaged by an attack",
     "all": "All"
   },
@@ -674,6 +695,9 @@
   "midi-qol.nevertarget": "Never Target",
   "midi-qol.DamageCardMultHeader": "Mult",
   "midi-qol.DamageCardUndoHeader": "Undo",
+  "midi-qol.DamageCardViewAsPlayer": "View as player",
+  "midi-qol.DamageCardPlayerView": "Player view",
+  "midi-qol.DamageCardPlayerViewHidden": "Player view (not shown to players)",
   "midi-qol.DamageCardApplyHeader": "Apply",
   "midi-qol.DamageCardCalc": "Calc",
   "midi-qol.DamageCardHeal": "Heal",
@@ -1017,8 +1041,6 @@
   "midi-qol.AutoUndoTransformations.Name": "Auto undo transformations on effect/concentration expiry/removal",
   "midi-qol.AutoUndoTransformations.Hint": "When transforming a target add an effect/concentration to the caster that tracks the transformations and automatically revert the target to their original form on expiry/concentration removal",
   "midi-qol.AttackPerTarget.Name": "Roll a separate attack per target",
-  "midi-qol.SkillAbilityCheckAdvantage.Name": "Ability Check Advantage gives Skill Advantage",
-  "midi-qol.SkillAbilityCheckAdvantage.Hint": "If an actor has advantage/disadvantage on ability checks, skills based on that ability also have advantage/disadvantage",
   "midi-qol.ignoreTotalCover": "No Full cover (Deprecated)",
   "midi-qol.InitPromptTitle": "Initiative Roll",
   "midi-qol.HighlightSuccess.Name": "Color code Hit/Miss/Save Display",
@@ -1154,7 +1176,7 @@
   },
   "midi-qol.GriddedGridless.Name": "Gridless Grid",
   "midi-qol.GridlessFudge.Name": "Fudge factor",
-  "midi-qol.GridlessFudge.Hint": "Subtract the fudge factor from the measured distance when checking range. Specified in grid scale units, i.e. ft/m",
+  "midi-qol.GridlessFudge.Hint": "Subtracted from measured distances when checking range, on every grid type. Edge-to-edge token distances never drop below one grid unit; centre-to-centre and path distances can reach 0. Specified in grid scale units, i.e. ft/m",
   "midi-qol.GriddedGridless.Hint": "If set midi will use the square grid for all distance calculations in gridless scenes",
   "midi-qol.targetConfirmationPosition": "Target Confirmation Position",
   "midi-qol.TargetConfirmationEnabled": "Enable Target Confirmation",
@@ -1180,8 +1202,6 @@
     "SaveDRDr": "Saves -> dm.midi/dm.dnd5e -> (dr/dv/di)",
     "SaveDrDR": "Saves -> dm -> (dr/dv/di) -> dm.midi"
   },
-  "midi-qol.WaitingForPreviousWorkflow": "Previous roll of {name} has not completed.",
-  "midi-qol.ResolvePreviousWorkflow": "Choose what to do with the previous roll",
   "midi-qol.ConfirmTargetOptions": {
     "default": "Midi Settings",
     "always": "Always",
@@ -1288,8 +1308,8 @@
     "chat": "Default dnd5e behavior",
     "auto": "Auto trigger self targeted activities"
   },
-  "midi-qol.dummyCards.Name": "Always display attack/damage cards for hidden merge cards",
-  "midi-qol.dummyCards.Hint": "(Experimental) For GM rolls (self, private, blind) display an attack/damage roll card which will trigger a 'gm rollsed some dice' card on the players chats. Only for the case that you want the players to know you rolled something, but not what it was",
+  "midi-qol.dummyCards.Name": "Show players when the GM rolls privately",
+  "midi-qol.dummyCards.Hint": "When the GM rolls with a private, self or blind roll mode, other players see the card as a 'rolled some dice' stand-in instead of nothing, so they know a roll was made but not what it was. \"Really hide private/blind/self rolls\" still hides it.",
   "midi-qol.dnd5eConcentrationTrackingDisabled": "<br><strong><center>DND5E Concentration Tracking Disabled</strong><br></center><br><center>Concentration Tracking is disabled in the dnd5e system settings.</center><center>Enable in DND5E settings to enable midi concentration settings</center><br>",
   "midi-qol.ItemSheetMidiTab": "Midi QoL",
   "midi-qol.AddOnUseMacro": "Add On-Use Macro",
@@ -1679,6 +1699,49 @@
       "other": "Midi Transforms"
     },
     "AlreadyTransformed": "{name} already Transformed"
+  },
+  "midi-qol.TELEPORT": {
+    "Title": {
+      "one": "Midi Teleport",
+      "other": "Midi Teleports"
+    },
+    "FIELDS": {
+      "midiTeleport": {
+        "label": "Midi Teleport",
+        "movers": {
+          "label": "Who Teleports",
+          "hint": "Caster and targets: the caster plans their move and you place each target within 5 ft of the caster's destination. Targets: you place each target within the teleport distance of the caster (use a save activity that triggers this one to move only those that fail)."
+        },
+        "blocked": {
+          "label": "Blocked Destination",
+          "hint": "Refuse: an occupied space, a wall, or (if required) a space the caster can't see is refused and you pick again. Fail: the teleport fails for everyone and the item's damage activity is used on the travellers (Dimension Door)."
+        },
+        "requireSight": {
+          "label": "Destination Must Be Seen",
+          "hint": "The caster must be able to see the destination (Misty Step: \"a space you can see\")."
+        }
+      }
+    },
+    "Movers": {
+      "default": "Controlled Tokens (dnd5e)",
+      "caster": "Caster",
+      "casterAndTargets": "Caster and Targets",
+      "targets": "Targets"
+    },
+    "BlockedModes": {
+      "refuse": "Refuse",
+      "fail": "Fail"
+    },
+    "Blocked": "{name} can't teleport there: {reason}.",
+    "Occupied": "the space is occupied",
+    "InWall": "the space is inside a wall",
+    "BehindWall": "a wall is in the way",
+    "NotSeen": "the caster can't see it",
+    "OutsideScene": "it is outside the scene",
+    "TooFar": "it is too far",
+    "NoSpace": "No free space for {name} next to the destination; it stays where it is.",
+    "NoGM": "{name} wasn't moved: a GM must be online to move a token you don't own.",
+    "Failed": "The teleport fails: a destination is occupied or blocked."
   },
   "midi-qol.fields": {
     "use-condition-header": "Midi Activity Allow Use Condition",
@@ -2433,5 +2496,6 @@
     "none": "Nothing is rolled unless the activity names an other activity."
   },
   "midi-qol.defaultOtherActivity.Name": "Other Activity Default",
-  "midi-qol.defaultOtherActivity.Hint": "What <b>Default</b> means in an activity's Other Activity field. Many dnd5e items pair an attack with a save - poison, say - without linking the two."
+  "midi-qol.defaultOtherActivity.Hint": "What <b>Default</b> means in an activity's Other Activity field. Many dnd5e items pair an attack with a save - poison, say - without linking the two.",
+  "midi-qol.TargetNotEvaluated": "Added to the card after the roll: not checked by midi."
 }

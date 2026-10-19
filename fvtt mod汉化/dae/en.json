@@ -1,5 +1,4 @@
 {
-  "dae.ValueCheck.Ternary": "A condition (? :) is not a formula. Wrap the value in dae.eval(…).",
   "dae.str": "Strength",
   "dae.dex": "Dexterity",
   "dae.con": "Constitution",
@@ -293,6 +292,7 @@
   "dae.expireRoundEffectsOnCombatEnd.Name": "Expire Round Effects on Combat End",
   "dae.expireRoundEffectsOnCombatEnd.Hint": "When enabled, effects with round/turn durations are expired when combat ends or a combatant is removed",
   "dae.expiryEvent.updateWorldTime": "Elapsed Time",
+  "dae.expiryThen": "{duration}, then {event}",
   "dae.expiryEvent.sourceStart": "Source Turn Start",
   "dae.expiryEvent.sourceEnd": "Source Turn End",
   "dae.expiryEvent.targetStart": "Target Turn Start",
@@ -389,8 +389,6 @@
   "dae.lightAnimation": "Light Animation",
   "dae.lightAlpha": "Light ALpha",
   "dae.lightAngle": "Light Angle",
-  "dae.DAEUntestedSystems.Name": "Load DAE for untested game systems",
-  "dae.DAEUntestedSystems.Hint": "If checked DAE will load for any system not marked compatible. If unchecked DAE will only load for systems marked compatible. Requires reload",
   "dae.SelfTarget.Name": "Apply to self when item applies target effects",
   "dae.SelfTarget.Hint": "Effect is applied to the user of the item, not the targets if the item is applying effects to targets",
   "dae.SelfTargetAlways.Name": "Apply to self when item is rolled",
@@ -399,14 +397,42 @@
   "dae.ShowIcon.Hint": "Display the effect Icon on the token and combat display",
   "dae.DontApply.Name": "Don't apply the effect",
   "dae.DontApply.Hint": "When Dae (and midi) applies active effects, skip this one",
+  "dae.DiceValue.Converted": "Dice changed to a silent inline roll ([[[...]]]): this field cannot roll dice each time the actor is prepared, so it is rolled once - when the effect is applied, or for a passive effect when its item reaches an actor.",
+  "dae.DiceValue.Unfixable": "This field cannot roll dice when the actor is prepared, so this change will be skipped. Put the dice in an inline roll, [[...]], to roll it once.",
+  "dae.ValueCheck.UnknownReference": "Not in any actor's data, so it will not resolve: {refs}.",
+  "dae.ValueCheck.InvalidFormula": "Not a valid formula.",
+  "dae.ValueCheck.Ternary": "A condition (? :) is not a formula. Use the change's conditions, or wrap the value in dae.eval(…).",
+  "dae.HpMaxNote": "A change to max HP sets a stored value, replacing a character's calculated max. To raise max HP on any creature use system.attributes.hp.tempmax (as dnd5e's Aid does); for a character's calculated max, system.attributes.hp.bonuses.overall; to give an NPC extra rolled hit points when its token is placed, add to system.attributes.hp.formula (needs dnd5e's Roll NPC hit points setting).",
+  "dae.DeprecatedKey.Note": "Deprecated: use {key}; DAE applies this change to it.",
+  "dae.DeprecatedKey.Convert": "Convert",
+  "dae.RaiseCurrentHp.Label": "Also raise current HP",
+  "dae.RaiseCurrentHp.Hint": "When this change starts applying (the effect is created, or its item gained), current HP rises by the same amount, once. When it stops, current HP above the new maximum is lost; damage taken meanwhile stands.",
+  "dae.LegacyApplication.Name": "Effect application",
+  "dae.LegacyApplication.Hint": "Legacy DAE fills every @ reference from the caster when the effect is applied, as DAE did before dnd5e 6. dnd5e follows each change's Replacement setting: Origin from the caster, Target from the target, and none left to be worked out on the target. ## defers a reference to the target either way.",
+  "dae.LegacyApplication.UseDefault": "World default",
+  "dae.LegacyApplication.PackDefault": "DAE: Effects follow the world default application",
+  "dae.DefaultApplicationMode.Name": "Default effect application",
+  "dae.DefaultApplicationMode.Hint": "How DAE fills the @ references of an effect it applies, unless the effect chooses otherwise. Legacy DAE fills every reference from the caster, as DAE did before dnd5e 6. dnd5e follows each change's Replacement setting. An effect already applied keeps the way it was applied.",
+  "dae.ApplicationMode.default": "World default ({mode})",
+  "dae.ApplicationMode.dnd5e": "dnd5e (per Replacement setting)",
+  "dae.ApplicationMode.legacy": "Legacy DAE (from the caster)",
+  "dae.LegacyApplication.ItemControl": "DAE: Effect application",
+  "dae.LegacyApplication.PackLegacy": "DAE: Effects use legacy application",
+  "dae.LegacyApplication.PackDnd5e": "DAE: Effects use dnd5e application",
+  "dae.LegacyApplication.DialogTitle": "Effect application for {name}",
+  "dae.LegacyApplication.DialogContent": "How should DAE fill the @ references of this item's effects when it applies them?",
+  "dae.LegacyApplication.UseLegacy": "Legacy DAE (from the caster)",
+  "dae.LegacyApplication.UseDnd5e": "dnd5e (per Replacement setting)",
+  "dae.LegacyApplication.Updated": "DAE: {count} effects updated in {name}",
+  "dae.LegacyApplication.Locked": "DAE: {name} is locked - unlock it first",
   "dae.DIMEditor.Name": "DIME",
   "dae.IncapacitatedDisabled": "Effect disabled if actor incapacitated",
   "dae.halfHealthEffectLabel": "Half Health",
   "dae.DAEAddHalfHealthEffect.Name": "Add Half Health Effect",
   "dae.DAEAddHalfHealthEffect.Hint": "Add a half health status effect to set the actor's max hit points to half its normal max",
   "dae.TabChanges": "Changes",
-  "dae.DisableCondition": "An expression which if true will disable the effect",
-  "dae.EnableCondition": "An expression which if false will remove the effect from the actor",
+  "dae.DisableCondition": "An expression which if true will disable the effect. For a plain field comparison prefer the effect's own Conditions, which the system re-evaluates automatically.",
+  "dae.EnableCondition": "An expression which if false will remove the effect from the actor. To stop an effect applying without deleting it, use the effect's own Conditions instead.",
   "dae.ConditionalEffectsItem": "DAEConditionalEffects",
   "dae.IconTint": "Icon Tint",
   "dae.IconOverlay.Name": "Icon Overlay",
@@ -637,6 +663,10 @@
       "name": "(Midi) Armor Reduction",
       "description": "See \"Challenge Mode\" details in midi-qol readme."
     },
+    "system.attributes.ac.EC": {
+      "name": "(Midi) Evasion Class",
+      "description": "See \"Challenge Mode\" details in midi-qol readme."
+    },
     "system.attributes.ac.armor": {
       "name": "AC (Armor)",
       "description": "Bonus to AC provided by worn armor (usually provided only via equipped armor item - will only have an effect if not wearing armor)."
@@ -652,10 +682,6 @@
     "system.attributes.ac.cover": {
       "name": "AC (Cover)",
       "description": "AC cover bonus (usually provided only via cover status effects)."
-    },
-    "system.attributes.ac.EC": {
-      "name": "(Midi) Evasion Class",
-      "description": "See \"Challenge Mode\" details in midi-qol readme."
     },
     "system.attributes.ac.flat": {
       "name": "AC (Flat)",
@@ -685,7 +711,7 @@
       "name": "Concentration Ability",
       "description": "Which ability to use for Concentration saves."
     },
-    "system.attributes.concentration.bonuses.save": {
+    "system.attributes.concentration.roll.bonus": {
       "name": "Concentration Save Bonus",
       "description": ""
     },
@@ -761,6 +787,10 @@
       "name": "Overall Encumbrance Multiplier",
       "description": "Multiplier to each encumbrance threshold, and maximum encumbrance."
     },
+    "system.attributes.hd.max": {
+      "name": "Maximum Hit Dice",
+      "description": "Only available for NPCs"
+    },
     "system.attributes.hp.bonuses.level": {
       "name": "HP Bonus Per Level",
       "description": "Bonus to HP applied for each character level (only works for classed actors)."
@@ -809,57 +839,61 @@
       "name": "(DAE) Movement Speed (All)",
       "description": "A flat number will result in all movement types being set to that number. Otherwise, \"+5\" or \"*2\" for instance would add 5 to or multiply by 2 all existing movement types (ignoring types which the actor has no movement in), respectively."
     },
-    "system.attributes.movement.burrow": {
-      "name": "Movement Speed (Burrow)",
-      "description": ""
-    },
-    "system.attributes.movement.climb": {
-      "name": "Movement Speed (Climb)",
-      "description": ""
-    },
-    "system.attributes.movement.fly": {
-      "name": "Movement Speed (Fly)",
-      "description": ""
-    },
     "system.attributes.movement.hover": {
       "name": "Movement (Hover)",
       "description": "Can hover?"
     },
-    "system.attributes.movement.swim": {
+    "system.attributes.movement.speeds.burrow": {
+      "name": "Movement Speed (Burrow)",
+      "description": ""
+    },
+    "system.attributes.movement.speeds.climb": {
+      "name": "Movement Speed (Climb)",
+      "description": ""
+    },
+    "system.attributes.movement.speeds.fly": {
+      "name": "Movement Speed (Fly)",
+      "description": ""
+    },
+    "system.attributes.movement.speeds.jump": {
+      "name": "Movement Speed (Jump)",
+      "description": ""
+    },
+    "system.attributes.movement.speeds.swim": {
       "name": "Movement Speed (Swim)",
+      "description": ""
+    },
+    "system.attributes.movement.speeds.walk": {
+      "name": "Movement Speed (Walk)",
       "description": ""
     },
     "system.attributes.movement.units": {
       "name": "Movement Units",
       "description": ""
     },
-    "system.attributes.movement.walk": {
-      "name": "Movement Speed (Walk)",
-      "description": ""
-    },
     "system.attributes.prof": {
       "name": "Proficiency Bonus",
       "description": ""
     },
-    "system.attributes.senses.blindsight": {
+    "system.attributes.senses.ranges.blindsight": {
       "name": "Senses (Blindsight)",
       "description": ""
     },
-    "system.attributes.senses.darkvision": {
+    "system.attributes.senses.ranges.darkvision": {
       "name": "Senses (Darkvision)",
+      "description": ""
+    },
+    "system.attributes.senses.ranges.tremorsense": {
+      "name": "Senses (Tremorsense)",
+      "description": ""
+    },
+    "system.attributes.senses.ranges.truesight": {
+      "name": "Senses (Truesight)",
       "description": ""
     },
     "system.attributes.senses.special": {
       "name": "Senses (Special)",
       "description": "Accepts semicolon-separated values."
-    },
-    "system.attributes.senses.tremorsense": {
-      "name": "Senses (Tremorsense)",
-      "description": ""
-    },
-    "system.attributes.senses.truesight": {
-      "name": "Senses (Truesight)",
-      "description": ""
     },
     "system.attributes.senses.units": {
       "name": "Senses Units",
@@ -868,10 +902,6 @@
     "system.attributes.spellcasting": {
       "name": "Spellcasting Ability",
       "description": ""
-    },
-    "system.attributes.hd.max": {
-      "name": "Maximum Hit Dice",
-      "description": "Only available for NPCs"
     }
   },
   "dae.SystemBonuses.fieldData": {
@@ -2602,10 +2632,75 @@
   "dae.MigrateNow.Name": "Migrate DAE Data",
   "dae.MigrateNow.Label": "Migrate Now",
   "dae.MigrateNow.Hint": "Scan all world actors and items for deprecated DAE effect data and update it. Back up your world first.",
-  "dae.AtlCompatibility.Name": "ATL → token.* migration policy",
-  "dae.AtlCompatibility.Hint": "How to handle legacy ATL.* effect keys on Foundry v14. Foundry v14 natively supports token.* effect keys; ATL.* is deprecated. Pick 'Legacy' to keep current behavior (ATL module handles ATL.* keys). 'Runtime only' rewrites at apply time without touching saved data. 'Migrate' rewrites world data once and normalises any new edits. 'Full' adds runtime fallback for unmigrated content and auto-unlocks locked compendiums during migration. Requires reload.",
-  "dae.AtlCompatibility.legacy": "Legacy — ATL.* keys passed to the ATL module",
-  "dae.AtlCompatibility.runtime": "Runtime only — rewrite at apply time, disk untouched",
-  "dae.AtlCompatibility.migrate": "Migrate — one-shot world migration + pre-write normalisation",
-  "dae.AtlCompatibility.full": "Full — Migrate + runtime fallback + auto-unlock compendiums"
+  "dae.phase.Label": "Application Phase",
+  "dae.phase.initial": "Initial",
+  "dae.phase.final": "Final",
+  "dae.ConditionBuilder.Open": "Condition builder",
+  "dae.ConditionBuilder.Title": "Conditions",
+  "dae.ConditionBuilder.Hint": "Checked against the target's data when the effect is prepared.",
+  "dae.ConditionBuilder.Unsupported": "This condition uses features the builder cannot show, such as a nested filter inside \"has\". Edit it with the filter button instead.",
+  "dae.ConditionBuilder.AddCondition": "Condition",
+  "dae.ConditionBuilder.AddGroup": "Group",
+  "dae.ConditionBuilder.CommonFields": "Add common field...",
+  "dae.ConditionBuilder.ListHint": "Comma separated",
+  "dae.ConditionBuilder.NoActor": "No actor to test against.",
+  "dae.ConditionBuilder.Passes": "On {actor}: passes",
+  "dae.ConditionBuilder.Fails": "On {actor}: fails",
+  "dae.ConditionBuilder.Group.AND": "All of",
+  "dae.ConditionBuilder.Group.OR": "Any of",
+  "dae.ConditionBuilder.Group.NOR": "None of",
+  "dae.ConditionBuilder.Group.NAND": "Not all of",
+  "dae.ConditionBuilder.Group.XOR": "XOR",
+  "dae.ConditionBuilder.Group.NOT": "Not",
+  "dae.ConditionBuilder.Op.exact": "=",
+  "dae.ConditionBuilder.Op.ne": "≠",
+  "dae.ConditionBuilder.Op.gt": ">",
+  "dae.ConditionBuilder.Op.gte": "≥",
+  "dae.ConditionBuilder.Op.lt": "<",
+  "dae.ConditionBuilder.Op.lte": "≤",
+  "dae.ConditionBuilder.Op.has": "has",
+  "dae.ConditionBuilder.Op.hasany": "has any of",
+  "dae.ConditionBuilder.Op.hasall": "has all of",
+  "dae.ConditionBuilder.Op.in": "is one of",
+  "dae.ConditionBuilder.Op.subsetof": "only contains",
+  "dae.ConditionBuilder.Op.empty": "is empty",
+  "dae.ConditionBuilder.Op.contains": "contains",
+  "dae.ConditionBuilder.Op.icontains": "contains (any case)",
+  "dae.ConditionBuilder.Op.startswith": "starts with",
+  "dae.ConditionBuilder.Op.istartswith": "starts with (any case)",
+  "dae.ConditionBuilder.Op.endswith": "ends with",
+  "dae.ConditionBuilder.Op.iendswith": "ends with (any case)",
+  "dae.ConditionBuilder.FieldGroup.status": "Status",
+  "dae.ConditionBuilder.FieldGroup.creature": "Creature",
+  "dae.ConditionBuilder.FieldGroup.health": "Health",
+  "dae.ConditionBuilder.FieldGroup.defences": "Defences",
+  "dae.ConditionBuilder.FieldGroup.progress": "Progress",
+  "dae.ConditionBuilder.FieldGroup.item": "Item",
+  "dae.ConditionBuilder.Field.statuses": "Statuses",
+  "dae.ConditionBuilder.Field.conditionImmunities": "Condition immunities",
+  "dae.ConditionBuilder.Field.creatureType": "Creature type",
+  "dae.ConditionBuilder.Field.size": "Size",
+  "dae.ConditionBuilder.Field.actorType": "Actor type",
+  "dae.ConditionBuilder.Field.hpPercent": "HP %",
+  "dae.ConditionBuilder.Field.hp": "HP",
+  "dae.ConditionBuilder.Field.tempHp": "Temporary HP",
+  "dae.ConditionBuilder.Field.resistances": "Damage resistances",
+  "dae.ConditionBuilder.Field.immunities": "Damage immunities",
+  "dae.ConditionBuilder.Field.vulnerabilities": "Damage vulnerabilities",
+  "dae.ConditionBuilder.Field.level": "Level",
+  "dae.ConditionBuilder.Field.cr": "Challenge rating",
+  "dae.ConditionBuilder.Field.spellLevel": "Spell level",
+  "dae.ConditionBuilder.Field.spellSchool": "Spell school",
+  "dae.ConditionBuilder.Field.itemProperties": "Item properties",
+  "dae.ConditionBuilder.FieldGroup.abilities": "Abilities",
+  "dae.ConditionBuilder.FieldGroup.attributes": "Attributes",
+  "dae.ConditionBuilder.Field.abilityScore": "{ability} score",
+  "dae.ConditionBuilder.Field.abilityMod": "{ability} modifier",
+  "dae.ConditionBuilder.Field.ac": "Armor class",
+  "dae.ConditionBuilder.Field.speed": "Walking speed",
+  "dae.ConditionBuilder.Field.proficiency": "Proficiency bonus",
+  "dae.ConditionBuilder.Field.spellDC": "Spell save DC",
+  "dae.ConditionBuilder.Field.initiative": "Initiative",
+  "dae.ConditionBuilder.Field.exhaustion": "Exhaustion level",
+  "dae.ConditionBuilder.Field.darkvision": "Darkvision range"
 }
