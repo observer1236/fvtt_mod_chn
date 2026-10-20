@@ -395,7 +395,7 @@
 					"Tooltip": "此自动化引用的文档。"
 				},
 				"general": {
-					"Label": "一般",
+					"Label": "常规",
 					"Tooltip": "常规设置"
 				},
 				"homebrew": {
@@ -976,7 +976,7 @@
 				"Both": "同时播放"
 			},
 			"General": {
-				"Name": "一般",
+				"Name": "常规",
 				"Label": "配置设置",
 				"Hint": "常规模块和 API 设置。"
 			},
