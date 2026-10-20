@@ -53,7 +53,7 @@
 			},
 			"Identifier": {
 				"Label": "文档标识符",
-				"Hint": "物品和行动的标识符必须在各自的文档表单中修改。",
+				"Hint": "物品和行动的标识符必须在各自的文档卡中修改。",
 				"OverrideHint": "覆盖匹配此文档与自动化时使用的标识符。默认为由名称转换的短标识名。"
 			},
 			"Source": {
@@ -149,10 +149,10 @@
 						"Label": "施法距离加值"
 					},
 					"RollModifier": {
-						"Field": "修饰符",
-						"Hint": "以逗号分隔的骰子修饰符（例如 x、min1、kh1）。",
-						"Invalid": "至少需要一个修饰符。",
-						"Label": "伤害掷骰修饰符"
+						"Field": "调整值",
+						"Hint": "以逗号分隔的骰子调整值（例如 x、min1、kh1）。",
+						"Invalid": "至少需要一个调整值。",
+						"Label": "伤害掷骰调整值"
 					}
 				},
 				"otherAbilities": {
@@ -353,9 +353,9 @@
 				"Kind": {
 					"Item": "物品",
 					"Activity": "行动",
-					"ActiveEffect": "效果",
+					"ActiveEffect": "主动效果",
 					"Region": "区域",
-					"Token": "Token："
+					"Token": "Token"
 				}
 			},
 			"Configuration": {
@@ -494,7 +494,7 @@
 				"DamageBonus": "伤害加值",
 				"DamageTypes": "伤害类型",
 				"HealingNumber": "治疗骰数量",
-				"HealingBonus": "治疗加成",
+				"HealingBonus": "治疗加值",
 				"UsesMaxFormula": "使用次数上限公式",
 				"CompendiumTypes": "合集生物类型",
 				"CompendiumHint": "设置任意合集筛选字段后，会从怪物合集中选择生物，替代指定的召唤物角色。",
@@ -833,7 +833,7 @@
 			"Unknown": "看不见的目标",
 			"DiceTotal": "骰子总计",
 			"RollTotal": "掷骰总数",
-			"RerollDepth": "已达到重掷或爆骰的递归层数上限，请先手动结算骰子修饰符，再输入总值。",
+			"RerollDepth": "已达到重掷或爆骰的递归层数上限，请先手动结算骰子调整值，再输入总值。",
 			"Submit": "提交掷骰结果",
 			"Outcome": {
 				"Fumble": "大失败",
@@ -1480,7 +1480,7 @@
 				"TempHP": "临时生命值",
 				"AttackDamageBonus": "攻击伤害加值",
 				"SaveDamageBonus": "豁免伤害加值",
-				"HealingBonus": "治疗加成",
+				"HealingBonus": "治疗加值",
 				"NativeHint": "填写公式。设置后覆盖召唤行动中的对应数值，支持 @item.level 和 @summon。",
 				"MatchAttacks": "同步攻击",
 				"MatchAttacksHint": "召唤物自身的攻击使用召唤者的攻击加值。",

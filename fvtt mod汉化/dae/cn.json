@@ -51,7 +51,7 @@
 	"dae.InitiativeHalfProf": "先攻获得半熟练加值",
 	"dae.Powerful_Build": "身强力壮",
 	"dae.Savage_Attacks": "凶蛮攻击",
-	"dae.Spell_DC Bonus": "法术豁免DC加值(数值)",
+	"dae.Spell_DC Bonus": "法术豁免 DC 加值（数值）",
 	"dae.Critical_Hit Threshold": "重击范围",
 	"dae.mwak": "近战武器",
 	"dae.rwak": "远程武器",
@@ -59,7 +59,7 @@
 	"dae.rsak": "远程法术",
 	"dae.attack": "攻击",
 	"dae.damage": "伤害",
-	"dae.heal": "治愈",
+	"dae.heal": "治疗",
 	"dae.check": "检定",
 	"dae.save": "豁免",
 	"dae.saveBonusDE": "豁免加值",
@@ -200,7 +200,7 @@
 	"dae.attackAdvantage": "攻击优势",
 	"dae.conditions": "状态",
 	"dae.calculateArmor.Name": "自动计算AC",
-	"dae.calculateArmor.Hint": "开启后，动态效果将会根据物品栏里的护甲与盾牌来自动计算 AC。其他物品仍可以调整AC",
+	"dae.calculateArmor.Hint": "开启后，主动效果将会根据物品栏里的护甲与盾牌来自动计算 AC。其他物品仍可以调整AC",
 	"dae.applyBaseAC.Name": "自动计算基础AC",
 	"dae.applyBaseAC.Hint": "启用后，角色（不包含NPC）基础AC会设置为10 + dex.mod(敏捷调整值)",
 	"dae.applyingEffects": "应用效果",
@@ -222,7 +222,7 @@
 	"dae.temporaryFilter": "限时效果",
 	"dae.Priority": "优先级",
 	"dae.Stackable": "可叠加",
-	"dae.EffectSheetLabel": "DAE 主动效果表",
+	"dae.EffectSheetLabel": "DAE 主动效果卡",
 	"dae.confirm": "确认对话框",
 	"dae.sure": "你确定吗？",
 	"dae.dae": "DAE",
@@ -241,7 +241,7 @@
 	"dae.isAttacked": "被攻击: 角色被攻击时结束",
 	"dae.isMoved": "被移动: 在 Token 被移动时结束",
 	"dae.isDamaged": "受伤: 角色受到伤害时结束",
-	"dae.isHealed": "被治愈: 角色被治愈后结束",
+	"dae.isHealed": "被治疗: 角色被治疗后结束",
 	"dae.ZeroHP": "0 生命值: 角色 HP 为 0 时结束",
 	"dae.isHit": "被命中: 如果角色被任何武器/法术攻击击中，即使该武器/法术没有造成伤害，也会结束",
 	"dae.isHitCritical": "重击：如果角色被武器/法术攻击命中并造成重击，则失效。",
@@ -364,9 +364,9 @@
 	"dae.DAEUntestedSystems.Name": "在未测试的游戏系统中加载 DAE",
 	"dae.DAEUntestedSystems.Hint": "若选中，即使在未标记为兼容的系统中 DAE 也会加载；若不选中，DAE 只会在标记为兼容的系统中加载。该功能重新载入后生效",
 	"dae.SelfTarget.Name": "效果应用时应用于自身",
-	"dae.SelfTarget.Hint": "勾选此项后，在效果应用时不会应用到目标身上而是物品使用者身上。例如，当你使用豁免行动向目标施加名为效果A的效应，并且效果A勾选了此项，那么在目标将被应用效果（例如豁免失败/被命中）时，效果应用于施法者/物品使用者身上而非目标；注意，效果仅会在应当应用于目标时触发此选项，即如果效果A只在豁免失败时会应用，则目标豁免成功后该效果不会应用于物品使用者身上。",
+	"dae.SelfTarget.Hint": "勾选此项后，在效果应用时不会应用到目标身上而是物品使用者身上。例如，当你使用豁免行动向目标施加名为效果A的效果，并且效果A勾选了此项，那么在目标将被应用效果（例如豁免失败/被命中）时，效果应用于施法者/物品使用者身上而非目标；注意，效果仅会在应当应用于目标时触发此选项，即如果效果A只在豁免失败时会应用，则目标豁免成功后该效果不会应用于物品使用者身上。",
 	"dae.SelfTargetAlways.Name": "物品掷骰时应用效果于自身",
-	"dae.SelfTargetAlways.Hint": "勾选此项后，在物品掷骰（Item Roll）时效果会直接作用于物品使用者身上，与物品掷骰时应用到自身不同的是，不论掷骰结果如何，该效果都将应用于物品使用者身上，例如，攻击行动的效应若勾选此项无论是否命中都将应用自身，豁免行动的效应若勾选此项无论目标豁免是否成功都将应用于自身。",
+	"dae.SelfTargetAlways.Hint": "勾选此项后，在物品掷骰（Item Roll）时效果会直接作用于物品使用者身上，与物品掷骰时应用到自身不同的是，不论掷骰结果如何，该效果都将应用于物品使用者身上，例如，攻击行动的效果若勾选此项无论是否命中都将应用自身，豁免行动的效果若勾选此项无论目标豁免是否成功都将应用于自身。",
 	"dae.ShowIcon.Name": "始终显示效果图标",
 	"dae.ShowIcon.Hint": "在 Token 和战斗面板上显示效果图标",
 	"dae.DontApply.Name": "不应用效果",
@@ -948,8 +948,8 @@
 			"description": "所有攻击行动法术伤害掷骰的加值。"
 		},
 		"system.bonuses.spell.dc": {
-			"name": "法术豁免DC加值",
-			"description": "法术豁免DC的加值。"
+			"name": "法术豁免 DC 加值",
+			"description": "法术豁免 DC 的加值。"
 		},
 		"system.bonuses.weapon.attack": {
 			"name": "(DAE)攻击检定加值(武器)",
@@ -2354,7 +2354,7 @@
 			"description": ""
 		},
 		"activities[summon].match.saves": {
-			"name": "召唤行动的匹配豁免DC",
+			"name": "召唤行动的匹配豁免 DC",
 			"description": ""
 		},
 		"activities[summon].summon.identifier": {

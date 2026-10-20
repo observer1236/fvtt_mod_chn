@@ -47,8 +47,8 @@
 	"midi-qol.AutoRollDamage.Hint": "在进行攻击检定时，自动掷伤害骰。设置为'攻击命中时'后，将会在没有选中目标时、攻击命中时(查看'自动确认攻击命中目标')或者不确认攻击是否命中时，自动掷伤害骰",
 	"midi-qol.AutoCheckSaves.Name": "自动确认豁免结果",
 	"midi-qol.AutoCheckSaves.Hint": "自动确认豁免检定结果。禁用后会假设所有目标的豁免全部失败。",
-	"midi-qol.DisplaySaveDC.Name": "展示豁免DC",
-	"midi-qol.DisplaySaveDC.Hint": "关闭后会对玩家隐藏豁免DC(仅限合并卡片)",
+	"midi-qol.DisplaySaveDC.Name": "展示豁免 DC",
+	"midi-qol.DisplaySaveDC.Hint": "关闭后会对玩家隐藏豁免 DC（仅限合并卡片）",
 	"midi-qol.AutoRemoveTargets.Name": "回合结束时取消选择目标",
 	"midi-qol.AutoRemoveTargets.Hint": "选择一种情况，在你的回合结束时，将会自动取消选择相应的目标",
 	"midi-qol.buttons.roll": "标准掷骰",
@@ -89,7 +89,7 @@
 	"midi-qol.ColoredBorders.Name": "消息边框着色",
 	"midi-qol.ColoredBorders.Hint": "每条聊天消息的边框颜色改为玩家角色的颜色",
 	"midi-qol.AutoEffects.Name": "自动应用物品效果",
-	"midi-qol.AutoEffects.Hint": "若目标被命中、豁免失败或者未豁免，自动对其应用物品的动态主动效果。同时最好使用 about-time或times-up。",
+	"midi-qol.AutoEffects.Hint": "若目标被命中、豁免失败或者未豁免，自动对其应用物品的主动效果。同时最好使用 about-time或times-up。",
 	"midi-qol.AutoEffectsOptions": {
 		"off": "不自动应用效果",
 		"applyNoButton": "应用效果不显示按钮",
@@ -239,20 +239,20 @@
 	"midi-qol.autoTargetOptions": {
 		"none": "从不",
 		"always": "始终",
-		"alwaysIgnoreIncapacitated": "始终 - 忽略失能/死亡",
-		"alwaysIgnoreDefeated": "始终 - 忽略死亡",
+		"alwaysIgnoreIncapacitated": "始终 - 忽略失能/战败",
+		"alwaysIgnoreDefeated": "始终 - 忽略战败",
 		"wallsBlock": "墙壁遮挡",
-		"wallsBlockIgnoreIncapacitated": "墙壁遮挡 - 忽略失能/死亡",
-		"wallsBlockIgnoreDefeated": "墙壁遮挡 - 忽略死亡",
+		"wallsBlockIgnoreIncapacitated": "墙壁遮挡 - 忽略失能/战败",
+		"wallsBlockIgnoreDefeated": "墙壁遮挡 - 忽略战败",
 		"walledtemplates": "使用Walled Template模组",
 		"expandedHints": {
 			"none": "测量板不会自动选择目标Token。玩家必须手动选择目标。",
 			"always": "测量板区域内的所有Token都会被自动选择为目标，无论是否有墙壁阻挡。",
-			"alwaysIgnoreIncapacitated": "测量板区域内的所有Token都会被选择为目标，但失能和死亡的Token会被排除。",
-			"alwaysIgnoreDefeated": "测量板区域内的所有Token都会被选择为目标，但死亡/被击败的Token会被排除。",
+			"alwaysIgnoreIncapacitated": "测量板区域内的所有Token都会被选择为目标，但失能和战败的Token会被排除。",
+			"alwaysIgnoreDefeated": "测量板区域内的所有Token都会被选择为目标，但已战败的Token会被排除。",
 			"wallsBlock": "只有当测量板起点与Token之间没有墙壁阻挡时，测量板区域内的Token才会被选择为目标。",
-			"wallsBlockIgnoreIncapacitated": "如果没有墙壁阻挡测量板起点与Token之间的视线，Token会被选择为目标。失能和死亡的Token会被排除。",
-			"wallsBlockIgnoreDefeated": "如果没有墙壁阻挡测量板起点与Token之间的视线，Token会被选择为目标。死亡/被击败的Token会被排除。",
+			"wallsBlockIgnoreIncapacitated": "如果没有墙壁阻挡测量板起点与Token之间的视线，Token会被选择为目标。失能和战败的Token会被排除。",
+			"wallsBlockIgnoreDefeated": "如果没有墙壁阻挡测量板起点与Token之间的视线，Token会被选择为目标。已战败的Token会被排除。",
 			"walledtemplates": "将目标选择委托给Walled Templates模组，该模组会根据墙壁重塑测量板区域。需要安装Walled Templates模组。"
 		}
 	},
@@ -275,11 +275,11 @@
 	"midi-qol.rangeTargetOptions": {
 		"none": "关闭",
 		"always": "始终",
-		"alwaysIgnoreIncapacitated": "始终 - 忽略失能/死亡",
-		"alwaysIgnoreDefeated": "始终 - 忽略死亡",
+		"alwaysIgnoreIncapacitated": "始终 - 忽略失能/战败",
+		"alwaysIgnoreDefeated": "始终 - 忽略战败",
 		"wallsBlock": "墙壁遮挡",
-		"wallsBlockIgnoreIncapacitated": "墙壁遮挡 - 忽略失能/死亡",
-		"wallsBlockIgnoreDefeated": "墙壁遮挡 - 忽略死亡"
+		"wallsBlockIgnoreIncapacitated": "墙壁遮挡 - 忽略失能/战败",
+		"wallsBlockIgnoreDefeated": "墙壁遮挡 - 忽略战败"
 	},
 	"midi-qol.autoRollDamageOptions": {
 		"none": "从不",
@@ -489,8 +489,8 @@
 		"postSave": "在豁免检定后",
 		"preDamageRollConfig": "伤害配置前",
 		"preDamageApplication": "在伤害应用前",
-		"preActiveEffects": "在动态主动效果生效前",
-		"postActiveEffects": "在动态主动效果生效后",
+		"preActiveEffects": "在主动效果生效前",
+		"postActiveEffects": "在主动效果生效后",
 		"isTargeted": "目标已被标记，但物品尚未掷骰",
 		"isPreAttacked": "目标即将受到攻击，在做出反应之前",
 		"isAttacked": "目标受到攻击",
@@ -522,7 +522,7 @@
 	"midi-qol.RollOtherDamage.Name": "远程武器/近战武器攻击时掷其他伤害公式",
 	"midi-qol.RollOtherSpellDamage.Name": "为法术掷其他伤害公式",
 	"midi-qol.RollOtherDamage.Hint": "<strong>关闭</strong> 不自动掷其他伤害骰。<br><strong>true条件 & 当前豁免</strong> 如果条件不为空且结果为true，或者物品有豁免且激活条件不为false。<br><strong>条件</strong>  如果其他伤害条件为空或结果为 true，则掷骰其他伤害",
-	"midi-qol.ApplyEffects": "应用动态主动效果",
+	"midi-qol.ApplyEffects": "应用主动效果",
 	"midi-qol.spell-damage": "法术伤害",
 	"midi-qol.RemoveButtons.Name": "掷骰后移除聊天卡片按钮",
 	"midi-qol.ActiveConcentrationSpell.Title": "专注法术激活",
@@ -654,7 +654,7 @@
 	"midi-qol.DamageCardUndoHeader": "撤销",
 	"midi-qol.DamageCardApplyHeader": "应用",
 	"midi-qol.DamageCardCalc": "计算",
-	"midi-qol.DamageCardHeal": "治愈",
+	"midi-qol.DamageCardHeal": "治疗",
 	"midi-qol.DamageCardAll": "全部",
 	"midi-qol.StatsTitle": "掷骰统计",
 	"midi-qol.RollStats": "统计数据",
@@ -773,7 +773,7 @@
 	"midi-qol.convenientEffectsOn": "应用便捷效果",
 	"midi-qol.convenientEffectsOff": "不应用便捷效果",
 	"midi-qol.ConsumeResource.Name": "跳过消耗资源对话框",
-	"midi-qol.ConsumeResource.Hint": "启用后，跳过消耗资源对话框(消耗默认资源/法术位并放置测量板)，除非已无对应环级的法术位可用，或者在点击时按下优势+劣势键",
+	"midi-qol.ConsumeResource.Hint": "启用后，跳过消耗资源对话框(消耗默认资源/法术位并放置测量板)，除非已无对应环阶的法术位可用，或者在点击时按下优势+劣势键",
 	"midi-qol.ConsumeResourceOptions": {
 		"none": "不自动消耗",
 		"spell": "自动消耗法术位",
@@ -1968,7 +1968,7 @@
 			"description": "请使用 system.traits.dm 字段。"
 		},
 		"flags.midi-qol.DR.healing": {
-			"name": "伤害减免(治愈)(已弃用)",
+			"name": "伤害减免（治疗）（已弃用）",
 			"description": "请使用 system.traits.dm 字段。"
 		},
 		"flags.midi-qol.DR.midi-none": {
@@ -2136,7 +2136,7 @@
 			"description": "D20掷骰的最小值，用于专注豁免。"
 		},
 		"flags.midi-qol.neverTarget": {
-			"name": "范围效应从不选择此生物",
+			"name": "范围效果从不选择此生物",
 			"description": "token不能被选择为目标"
 		},
 		"flags.midi-qol.onUseMacroName": {
@@ -2327,7 +2327,7 @@
 	"midi-qol.SurfaceOcclusion.Name": "遮挡上层地板表面",
 	"midi-qol.SurfaceOcclusion.Hint": "在多层场景中，从下层查看时，使上层表面透明，即使Token不在正下方。",
 	"midi-qol.SurfaceVisionFog.Name": "通过表面孔调暗较低的楼层",
-	"midi-qol.SurfaceVisionFog.Hint": "在多层次场景中，通过地板表面的间隙可以看到昏暗的区域，其中视角阻挡了下方地板的视线。",
+	"midi-qol.SurfaceVisionFog.Hint": "在多层次场景中，通过地板表面的间隙可以看到微光区域，其中视角阻挡了下方地板的视线。",
 	"midi-qol.VisionTestHeightOptions.center": "中心",
 	"midi-qol.VisionTestHeightOptions.top": "顶部",
 	"midi-qol.VisionTestHeightOptions.expandedHints.center": "在 Token 中心高度处检测可见性（Foundry 默认值：底部高度 + 深度/2）。",

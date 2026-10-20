@@ -200,7 +200,7 @@
             },
             "CombatOnly": "仅在战斗中启用",
             "CompendiumName": "{option} 合集名字：",
-            "Conditions": "条件",
+            "Conditions": "状态",
             "CreatureTypes": "生物类型",
             "CriticalOnly": "仅重击",
             "DC": "DC",
@@ -295,7 +295,7 @@
             "Attacker": "攻击者",
             "AttackType.Label": "攻击类型",
             "BaseMaxSummons": "基础召唤数量上限",
-            "BlockingConditions": "阻止条件",
+            "BlockingConditions": "阻止状态",
             "Bonus": "加值",
             "CustomAvatar": "自定义头像",
             "CustomName": "自定义名称",
@@ -597,7 +597,7 @@
                     "Label": "场景情境"
                 },
                 "sceneUtilityRollComplete": {
-                    "Label": "场景效应掷骰完成"
+                    "Label": "场景效果掷骰完成"
                 },
                 "short": {
                     "Label": "短休"
@@ -636,7 +636,7 @@
                     "Label": "目标情境"
                 },
                 "targetUtilityRollComplete": {
-                    "Label": "目标效应掷骰完成"
+                    "Label": "目标效果掷骰完成"
                 },
                 "timeUpdated": {
                     "Label": "时间更新"
@@ -666,7 +666,7 @@
                     "Label": "已更新"
                 },
                 "utilityRollComplete": {
-                    "Label": "效应掷骰完成"
+                    "Label": "效果掷骰完成"
                 }
             },
             "Priority": {
@@ -790,7 +790,7 @@
             "MissingScale": "角色未设置 {scaleName} 的比例值!",
             "Never": "从不",
             "No": "取消",
-            "NoEffect": "{itemName} 必须有效果才能使用其通用怪物特征!",
+            "NoEffect": "{itemName} 必须有效果才能使用其通用怪物特性!",
             "NoMoreResource": "缺少必要的资源!",
             "NoType": "无类型",
             "None": "无",
@@ -799,7 +799,7 @@
             "Prompt": "提示",
             "PromptForTargets": "提示选择目标：",
             "ProtectWithItem": "使用 {item} 保护 {token} 吗？",
-            "Range": "范围",
+            "Range": "射程",
             "RangedSpells": "远程法术",
             "RangedWeapons": "远程武器",
             "Recharge": "充能：",
@@ -885,7 +885,7 @@
         },
         "Light": {
             "Bright": "明亮",
-            "Dim": "昏暗"
+            "Dim": "微光"
         },
         "MACROS": {
             "AuraOfVitality": {
@@ -1034,7 +1034,7 @@
                 "Healing": "活力灵光: 治疗"
             },
             "AutoGrapple": {
-                "DC": "挣脱擒抱的固定豁免DC (如果为 0则进行对抗)：",
+                "DC": "挣脱擒抱的固定豁免 DC (如果为 0则进行对抗)：",
                 "Disadvantage": "在挣脱检定中给予劣势：",
                 "IgnoreLimit": "忽略擒抱体型差异限制：",
                 "Name": "自动擒抱",
@@ -1164,7 +1164,7 @@
                 "None": "没有法术位可恢复!",
                 "Regain": "恢复法术位",
                 "Select": "选择哪个增益？",
-                "SlotRegained": "法术位 (等级 {slotLevel}) 已恢复!"
+                "SlotRegained": "法术位（环阶 {slotLevel}）已恢复！"
             },
             "BoomingBlade": {
                 "Moved": "轰雷剑: 移动",
@@ -1357,7 +1357,7 @@
             },
             "CrystalBlade": {
                 "Bright": "激活武器光亮 (明亮)",
-                "Dim": "激活武器光亮 (昏暗)",
+                "Dim": "激活武器光亮 (微光)",
                 "Douse": "熄灭武器光亮",
                 "Heal": "水晶刀锋: 治疗",
                 "Light": "水晶刀锋: 光亮"
@@ -1529,10 +1529,10 @@
                 "Protector": "防御者",
                 "SelectType": "选择魔能炮台的类型",
                 "Size": "选择多大体型的 {cannonName} 炮台？",
-                "SpendPact": "以一个契约法术位来创建一个魔能炮台？剩余 ({slotValue} 最大 {slotMax} )",
-                "SpendPactAgain": "以一个契约法术位来创建第二个魔能炮台？ ({slotValue} of {slotMax} remaining)",
-                "SpendSlot": "以一个等级{slotLevel}法术位来创建一个魔能炮台？（{slotValue} / {slotMax} 剩余）",
-                "SpendSlotAgain": "以一个等级{slotLevel}法术位来创建第二个魔能炮台？（{slotValue} / {slotMax} 剩余)"
+                "SpendPact": "以一个契约法术位来创建一个魔能炮台？（{slotValue} / {slotMax} 剩余）",
+                "SpendPactAgain": "以一个契约法术位来创建第二个魔能炮台？（{slotValue} / {slotMax} 剩余）",
+                "SpendSlot": "以一个 {slotLevel} 环法术位来创建一个魔能炮台？（{slotValue} / {slotMax} 剩余）",
+                "SpendSlotAgain": "以一个 {slotLevel} 环法术位来创建第二个魔能炮台？（{slotValue} / {slotMax} 剩余）"
             },
             "EldritchSmite": {
                 "Prone": "将目标击倒？"
@@ -1588,14 +1588,14 @@
                 "Boldness": "实验性灵药: 气魄",
                 "Flight": "实验性灵药: 飞行",
                 "Healing": "实验性灵药: 治疗",
-                "MakeAnother": "以一个等级 {slotLevel} 法术位来创造另一个药水？（{slotValue} / {slotMax} 剩余）",
-                "MakeAnotherPact": "以一个契约法术位来创造另一个药水？（{slotValue} / {slotMax} 剩余",
+                "MakeAnother": "以一个 {slotLevel} 环法术位来创造另一个药水？（{slotValue} / {slotMax} 剩余）",
+                "MakeAnotherPact": "以一个契约法术位来创造另一个药水？（{slotValue} / {slotMax} 剩余）",
                 "Resilience": "实验性灵药: 韧性",
                 "Swiftness": "实验性灵药: 疾速",
                 "Transformation": "实验性灵药: 变形"
             },
             "ExpertDivination": {
-                "Select": "你想要恢复哪个等级的法术位？"
+                "Select": "你想要恢复哪个环阶的法术位？"
             },
             "EyesOfMinuteSeeing": {
                 "Close": "此检定针对的是距离 1 英尺内的事物"
@@ -2031,11 +2031,11 @@
                 "Skill": "此检定用于导航或追踪"
             },
             "LandsAid": {
-                "Select": "你想要治愈谁？"
+                "Select": "你想要治疗谁？"
             },
             "LanternOfRevealing": {
                 "Bright": "点亮提灯 (明亮)",
-                "Dim": "点亮提灯 (昏暗)",
+                "Dim": "点亮提灯 (微光)",
                 "Extinguish": "熄灭提灯"
             },
             "LastWord": {
@@ -3060,7 +3060,7 @@
             "All.Jump.LowObstacle": "是否有低矮障碍物？",
             "All.LayOnHands.NoDisease": "目标没有患病。",
             "All.LayOnHands.NoPoison": "目标没有中毒。",
-            "All.OneWithShadows.Bright": "您只能在昏暗的光线或黑暗中使用此功能。",
+            "All.OneWithShadows.Bright": "您只能在微光光照或黑暗中使用此功能。",
             "All.Protection": "消耗反应保护 {name} 吗？",
             "All.ProtectionFromEvilAndGood.ConditionsHint": "目标不会因所列生物类型的能力而陷入这些状态。若已陷入其中一种状态，则为结束该状态而进行的豁免具有优势。",
             "All.Rage.AllowConcentration": "允许专注：",
@@ -3353,9 +3353,9 @@
             "Generic.RedirectAttack.SizesHint": "仅可选择所列体型的新目标。",
             "Generic.RedirectAttack.SwapPlaces": "交换位置",
             "Generic.RedirectAttack.SwapPlacesHint": "被攻击的生物和新目标交换位置。",
-            "Generic.ReduceMaxHP.LongRestCures": "长休治愈",
+            "Generic.ReduceMaxHP.LongRestCures": "长休治疗",
             "Generic.ReduceMaxHP.ReduceByRoll": "通过掷骰减少",
-            "Generic.ReduceMaxHP.ShortRestCures": "短休治愈",
+            "Generic.ReduceMaxHP.ShortRestCures": "短休治疗",
             "Generic.RerollWithBonus.Consume": "消耗",
             "Generic.RerollWithBonus.ConsumeSuccess": "成功时消耗",
             "Generic.RerollWithBonus.ConsumeSuccessHint": "仅在加入加值后检定成功时，消耗资源。",
@@ -3534,8 +3534,8 @@
             "Legacy.DrakeCompanion.Summon": "是: 龙兽伙伴",
             "Legacy.EldritchSmite.Prone": "使目标倒地吗？",
             "Legacy.ExpertDivination.MaxSlotLevel": "法术位环阶上限",
-            "Legacy.ExpertDivination.Select": "你想要恢复哪个等级的法术位？",
-            "Legacy.ExpertDivination.SlotRegained": "法术位 (等级 {slotLevel}) 已恢复!",
+            "Legacy.ExpertDivination.Select": "你想要恢复哪个环阶的法术位？",
+            "Legacy.ExpertDivination.SlotRegained": "法术位（环阶 {slotLevel}）已恢复！",
             "Legacy.FeyPresence.Select": "选择要施加的状态。",
             "Legacy.FindSteed.Ask": "每次询问",
             "Legacy.FindSteed.Choose": "选择坐骑形态。",
@@ -3791,7 +3791,7 @@
             "Modern.StalkersFlurry.Use": "使用{item}？",
             "Modern.StalkersFlurry.IncludeSelf": "包括自身",
             "Modern.StealBlood.Validate": "在使用偷血之前必须先激活偷袭！",
-            "Modern.StepsOfTheFey.Select": "选择一种生物来治愈。",
+            "Modern.StepsOfTheFey.Select": "选择一种生物来治疗。",
             "Modern.SummonAberration.EyeRay": "眼波射线",
             "Modern.SummonAberration.PsychicSlam": "灵能猛击",
             "Modern.SummonAberration.Regeneration": "再生",
@@ -3944,14 +3944,14 @@
                         "RollMode": "overtime物品掷骰的形式：",
                         "RollType": "掷骰类型：",
                         "SaveAbility": "使用的技能或属性：",
-                        "SaveDC": "豁免DC：",
-                        "SaveDCAbility": "基于属性的DC：",
-                        "SaveDCNumber": "固定DC：",
+                        "SaveDC": "豁免 DC：",
+                        "SaveDCAbility": "基于属性的 DC：",
+                        "SaveDCNumber": "固定 DC：",
                         "SaveDamage": "豁免成功时受伤情况：",
-                        "SaveMagic": "是否为魔法效应：",
+                        "SaveMagic": "是否为魔法效果：",
                         "SaveRemove": "豁免成功时移除效果：",
                         "SelfRoll": "自骰",
-                        "Spellcasting": "施法方式DC",
+                        "Spellcasting": "施法方式 DC",
                         "Start": "回合开始时",
                         "Turn": "触发："
                     }
