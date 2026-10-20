@@ -896,8 +896,8 @@
 				"perDie": "逐骰输入——每颗骰子的结果"
 			},
 			"ManualRollsGMFulfill": {
-				"Name": "由主持人完成掷骰",
-				"Hint": "启用后，由主持人完成全部掷骰。"
+				"Name": "由GM完成掷骰",
+				"Hint": "启用后，由GM完成全部掷骰。"
 			},
 			"ManualRollsRichContext": {
 				"Name": "手动掷骰的详细提示",
@@ -1285,7 +1285,7 @@
 			},
 			"HideWarnings": {
 				"Name": "隐藏疑难解答警告",
-				"Hint": "不再向主持人发送疑难解答的启动警告密语卡片。"
+				"Hint": "不再向GM发送疑难解答的启动警告密语卡片。"
 			},
 			"StripDialog": {
 				"Name": "导出时询问是否去除描述",
@@ -1300,7 +1300,7 @@
 			"Required": {
 				"Expected": "{value} → {fix}",
 				"ClientScope": "（客户端设置）",
-				"GmAutoDamage": "主持人自动掷骰伤害"
+				"GmAutoDamage": "GM自动掷骰伤害"
 			},
 			"Card": {
 				"settings": "CAT 依赖的某些设置未按预期设置：",

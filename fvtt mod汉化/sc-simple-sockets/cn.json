@@ -521,7 +521,7 @@
 			"InsertionCheck.Failure.Choices.Break": "宝石碎了",
 			"InsertionCheck.Failure.Choices.Lose": "宝石丢失了",
 			"InsertionCheck.Gm.Name": "GM也掷骰子",
-			"InsertionCheck.Gm.Hint": "默认情况下，主持人镶嵌宝石无需检定。",
+			"InsertionCheck.Gm.Hint": "默认情况下，GM镶嵌宝石无需检定。",
 			"RemovalCheck.Section": "宝石移除检查",
 			"RemovalCheck.Enabled.Name": "需要检查才能移除宝石",
 			"RemovalCheck.Enabled.Hint": "When enabled, a player removing a gem from a socket must pass a check against a DC.检查失败可能会丢失或损坏宝石。",
@@ -540,9 +540,9 @@
 			"RemovalCheck.Failure.Choices.Lose": "宝石丢失了",
 			"RemovalCheck.Failure.Choices.Stay": "宝石留在插槽中",
 			"RemovalCheck.Gm.Name": "GM也掷骰子",
-			"RemovalCheck.Gm.Hint": "默认情况下，主持人无需掷骰即可移除宝石。",
+			"RemovalCheck.Gm.Hint": "默认情况下，GM无需掷骰即可移除宝石。",
 			"ConcealUnidentified.Name": "隐藏不明物品的宝石",
-			"ConcealUnidentified.Hint": "玩家查看镶嵌在未鉴定物品中的宝石，或本身未鉴定的宝石时，看不到宝石的真实名称、图像和说明。主持人始终能看到真实宝石。"
+			"ConcealUnidentified.Hint": "玩家查看镶嵌在未鉴定物品中的宝石，或本身未鉴定的宝石时，看不到宝石的真实名称、图像和说明。GM始终能看到真实宝石。"
 		},
 		"SupportCard": {
 			"Description": "支持我的工作，获取独家模组并了解开发进度。",

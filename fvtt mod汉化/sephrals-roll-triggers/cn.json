@@ -250,7 +250,7 @@
 	"SRT.DialogHint.TriggerExtraMatch": "同一次掷骰还必须满足此条件。每个条件都会独立检查整个掷骰。",
 	"SRT.DialogHint.TriggerExtraMatchAdd": "添加额外条件。只有同一次掷骰同时满足主要匹配条件及所有附加条件时才触发。例如，一颗骰子为 1，并且另一颗为 2。",
 	"SRT.DialogHint.TriggerExtraMatchRemove": "从触发器中移除此“且”条件。",
-	"SRT.Notification.NoActiveGm": "没有在线主持人可执行此触发器。",
+	"SRT.Notification.NoActiveGm": "没有在线GM可执行此触发器。",
 	"SRT.Action.ApplyEffect": "应用状态或效果",
 	"SRT.Action.ChangeResource": "改变资源",
 	"SRT.Action.ShowImage": "显示图片",
@@ -334,7 +334,7 @@
 	"SRT.TestBench.Filter.Visibility": "掷骰子可见度",
 	"SRT.TestBench.Filter.PrivateRoll": "私人骰子",
 	"SRT.TestBench.Mode.Automatic": "立即运行",
-	"SRT.TestBench.Mode.ConfirmGm": "先问主持人",
+	"SRT.TestBench.Mode.ConfirmGm": "先问GM",
 	"SRT.TestBench.Mode.ChatButton": "在聊天消息上显示一个按钮",
 	"SRT.TestBench.Mode.GmWhisperLog": "只告诉GM，不采取任何行动",
 	"SRT.TestBench.Mode.Disabled": "执行模式被禁用，没有任何运行"

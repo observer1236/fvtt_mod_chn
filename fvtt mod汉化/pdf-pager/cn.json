@@ -46,7 +46,7 @@
 		"showFieldMenus.Hint": "将每个可编辑字段替换为下拉菜单，可从中选择角色/物品中的字段(如果字段已配置使用getter/setter函数，则该字段不可编辑)",
 		"showTitleBarButtons.Name": "在角色卡控件菜单中显示按钮",
 		"showTitleBarButtons.Hint": "选中后，会在角色/PDF物品表的表控制菜单中显示有用的按钮",
-		"showGmButtons.Name": "在角色卡控制菜单中显示主持人按钮",
+		"showGmButtons.Name": "在角色卡控制菜单中显示GM按钮",
 		"showGmButtons.Hint": "在角色卡控制菜单中显示“记录 PDF 字段”和“检查数据”按钮",
 		"autoScrollToc.Name": "自动滚动目录",
 		"autoScrollToc.Hint": "当PDF视图变化时，自动滚动日志目录以确保当前视图可见",

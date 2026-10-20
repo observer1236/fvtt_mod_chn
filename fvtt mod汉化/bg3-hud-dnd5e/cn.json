@@ -29,7 +29,7 @@
 			"ShowHPControls": "显示生命值控件按钮",
 			"ShowHPControlsHint": "在立绘生命值控件中显示击杀（骷髅）和治疗（心形）按钮",
 			"HideDeathSaves": "对玩家隐藏死亡豁免结果",
-			"HideDeathSavesHint": "仅限主持人。启用后，玩家只能看到死亡豁免的掷骰按钮（骷髅），结果会私下发送给主持人。主持人仍能看见成功与失败标记。",
+			"HideDeathSavesHint": "仅限GM。启用后，玩家只能看到死亡豁免的掷骰按钮（骷髅），结果会私下发送给GM。GM仍能看见成功与失败标记。",
 			"IgnoreGroupActors": "忽略群组角色",
 			"IgnoreGroupActorsHint": "启用后，类型为 'group' 的角色会被排除在 BG3 HUD 兼容性检查之外",
 			"EnableCPRGenericActions": "启用CPR通用动作按钮",

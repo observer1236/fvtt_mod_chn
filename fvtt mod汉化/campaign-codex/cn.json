@@ -266,8 +266,8 @@
 				"name": "重置为默认设置",
 				"hint": "启用此选项并保存以将设置重置为默认"
 			},
-			"disableServicePurchasesWithoutGM.name": "没有主持人在线时禁用服务购买",
-			"disableServicePurchasesWithoutGM.hint": "除非连接了活动的主持人，否则阻止玩家购买服务。",
+			"disableServicePurchasesWithoutGM.name": "没有GM在线时禁用服务购买",
+			"disableServicePurchasesWithoutGM.hint": "除非连接了活动的GM，否则阻止玩家购买服务。",
 			"pf2eTreasureMarkupOverride.name": "PF2e 物品类型宝藏标记覆盖",
 			"pf2eTreasureMarkupOverride.hint": "在 PF2e 或 SF2e 中启用时，玩家销售宝藏物品时使用宝藏加价，而不是商店或以旧换新柜台销售乘数。默认禁用。",
 			"pf2eTreasureMarkup.name": "PF2e 物品类型宝藏标记",
@@ -942,7 +942,7 @@
 		"WIDGETS.tradeIn.actorItemsOnly": "只有角色拥有的物品才能出售。",
 		"WIDGETS.tradeIn.offerCapped": "优惠受可用商店资金的限制。",
 		"WIDGETS.tradeIn.confirmSale": "出售 <strong>{quantity}x {item}</strong> 换 <strong>{amount} {currency}</strong>？",
-		"WIDGETS.tradeIn.noActiveGM": "没有可用的活跃主持人来处理此销售。"
+		"WIDGETS.tradeIn.noActiveGM": "没有可用的活跃GM来处理此销售。"
 	},
 	"TYPES.Item.backpack": "背包",
 	"Item.backpack": "背包",

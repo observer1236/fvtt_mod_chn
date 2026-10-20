@@ -11,7 +11,7 @@
 			"PremiumMenu": {
 				"Name": "紫晶圈特点",
 				"Label": "连接到 Patreon",
-				"Hint": "主持人必须连接其 Patreon 帐户才能访问 Amethyst Circle 功能，例如支持系统的移动角色卡"
+				"Hint": "GM必须连接其 Patreon 帐户才能访问 Amethyst Circle 功能，例如支持系统的移动角色卡"
 			},
 			"ImageOptimizerMenu": {
 				"Name": "图像优化器",
@@ -20,14 +20,14 @@
 			},
 			"ImageOptimizerPrompt": {
 				"Title": "SWIPE | 自动创建移动端图片？",
-				"Content1": "如果确认，Swipe 将为移动设备创建场景图像的较小副本，并将它们作为新文件保存在服务器上的下面的文件夹中。当主持人查看具有大图像的场景时，这种情况会自动发生。",
+				"Content1": "如果确认，Swipe 将为移动设备创建场景图像的较小副本，并将它们作为新文件保存在服务器上的下面的文件夹中。当GM查看具有大图像的场景时，这种情况会自动发生。",
 				"Content2": "原始图像和场景配置从未改变；仅添加新文件。您可以关闭此功能或稍后在 Swipe VTT 设置中手动运行它。",
 				"FolderLabel": "保存优化图片的文件夹：",
 				"SelectFolder": "选择文件夹"
 			},
 			"AutoOptimizeScenes": {
 				"Name": "自动优化场景图片",
-				"Hint": "当主持人查看场景时，自动创建针对移动设备优化的场景图像副本。副本将作为新文件保存在服务器上的优化图像文件夹中；原始图像和场景配置从未改变。"
+				"Hint": "当GM查看场景时，自动创建针对移动设备优化的场景图像副本。副本将作为新文件保存在服务器上的优化图像文件夹中；原始图像和场景配置从未改变。"
 			},
 			"DisableLargeMapWarnings": {
 				"Name": "禁用大地图警告",
@@ -261,7 +261,7 @@
 			"CollapseFieldset": "折叠",
 			"Scope.World": "世界设置（GM）",
 			"ApprovalPolicy.Name": "独立审批政策",
-			"ApprovalPolicy.Hint": "当玩家尝试通过独立 Web 客户端加入时，控制是否提示主持人批准。",
+			"ApprovalPolicy.Hint": "当玩家尝试通过独立 Web 客户端加入时，控制是否提示GM批准。",
 			"ApprovalPolicy.Always": "总是问",
 			"ApprovalPolicy.Trusted": "自动批准我之前批准过的玩家",
 			"ApprovalPolicy.Never": "自动批准所有人（仅限开发人员）",
@@ -269,7 +269,7 @@
 			"Scope.Device": "客户端设置",
 			"Scope.DeviceOnlyHint": "仅适用于手机和平板电脑。",
 			"Locks.Toggle": "锁定玩家。点击循环：打开、软（你的值应用一次，玩家可以更改）、锁定（玩家始终获得你的值）。右键单击或Alt+单击：对玩家锁定，同时保留您自己的价值。",
-			"Locks.Locked": "被主持人锁定",
+			"Locks.Locked": "被GM锁定",
 			"ChatAutoHide.Name": "聊天自动隐藏",
 			"ChatAutoHide.Hint": "自动显示聊天弹窗后，经过一段时间再次隐藏。关闭时，弹窗会保持打开，直到你手动关闭。",
 			"WakeLock.Name": "屏幕保持唤醒状态",
@@ -283,7 +283,7 @@
 			"SwipeInterface.Name": "启用滑动控件（移动设备）",
 			"SwipeInterface.Hint": "使用 Swipe 的快速控件、按钮堆栈和聊天抽屉，而不是 Foundry 的侧边栏、场景控件、玩家列表和热栏。在小于 1280x600 的屏幕上开始选中，在较大的屏幕上取消选中；您可以将其更改为任何尺寸，并且您的选择将一直保留，直到屏幕超过该尺寸。触摸手势、移动表格和头像轮播都可以使用。禁用画布的世界始终使用 Swipe 控件。",
 			"AutoCreateMobileDuplicate.Name": "自动创建移动配置文件",
-			"AutoCreateMobileDuplicate.Hint": "当主持人打开播放器的“刷卡二维码”对话框时，会自动创建一个“（刷卡）”重复用户用于手机登录。复制品共享玩家的角色和所有权。禁用以要求通过对话框的“创建”按钮手动创建。",
+			"AutoCreateMobileDuplicate.Hint": "当GM打开播放器的“刷卡二维码”对话框时，会自动创建一个“（刷卡）”重复用户用于手机登录。复制品共享玩家的角色和所有权。禁用以要求通过对话框的“创建”按钮手动创建。",
 			"AutoApproveStandalone.Name": "自动批准移动连接请求",
 			"AutoApproveStandalone.Hint": "启用后，通过独立网络客户端加入的玩家将自动被接纳，无需批准提示。不再手动批准每个加入。",
 			"DSNShadowsOff.Name": "骰子真好：没有阴影",
@@ -659,7 +659,7 @@
 			"Standalone": {
 				"Name": "独立页面",
 				"Desc": "轻量级独立页面，绕过 FVTT 客户端。最适合在 iPhone 或低内存设备上访问角色卡，但缺少许多 FVTT 功能。",
-				"Unavailable": "目前不可用——主持人需要将 Swipe VTT 连接到这个世界的 Patreon。"
+				"Unavailable": "目前不可用——GM需要将 Swipe VTT 连接到这个世界的 Patreon。"
 			},
 			"Escalation": {
 				"Title": "性能仍然较低",
@@ -672,7 +672,7 @@
 			"ReloadPrompt": "性能模式设置已保存。需要重新加载页面才能使所有更改生效。",
 			"ReloadNow": "立即重新加载",
 			"ReloadLater": "稍后",
-			"SaveFailed": "无法保存您的选择 - 主持人离线。他们上线后重试。",
+			"SaveFailed": "无法保存您的选择 - GM离线。他们上线后重试。",
 			"StandaloneLegacy": "独立（在 V14 上不可用 — 视为仅角色卡）"
 		},
 		"ConnectPhone": {
@@ -836,21 +836,21 @@
 			"FeatureLocked": "连接 Patreon 账户",
 			"UpgradeHint": "优化角色卡专供 Patreon 会员使用。连接或使用常规 Foundry 角色卡。",
 			"TokenExpired": "SwipePatreon 会话已过期。GM 需重新连接 Patreon 以解锁功能。",
-			"GMReloadRequest": "主持人加载紫晶圈功能。正在重新加载...",
+			"GMReloadRequest": "GM加载紫晶圈功能。正在重新加载...",
 			"LinkCodeFieldset": "使用链接代码认证",
 			"LinkCodeHint": "无法使用弹出窗口？从其他设备获取代码。",
 			"GetLinkCode": "点击获取认证代码",
 			"SaveCode": "保存",
 			"EnterCode": "请输入链接代码",
 			"InvalidCode": "无效或已过期的代码",
-			"AskGMToConnect": "请求主持人连接",
+			"AskGMToConnect": "请求GM连接",
 			"UseRegularSheets": "使用普通卡片",
 			"UseRegularSheetsConfirm": "此设备将使用常规 Foundry 角色卡。你可在 Swipe 设置中重新启用移动端角色卡。现在重新加载？",
-			"ConnectRequestSent": "您的主持人被要求连接 Patreon。",
-			"ConnectRequestNoGM": "当前没有主持人在线。请在主持人加入后，请其连接 Patreon。",
-			"ConnectRequestFailed": "无法联系主持人。请确认 socketlib 已启用。",
+			"ConnectRequestSent": "您的GM被要求连接 Patreon。",
+			"ConnectRequestNoGM": "当前没有GM在线。请在GM加入后，请其连接 Patreon。",
+			"ConnectRequestFailed": "无法联系GM。请确认 socketlib 已启用。",
 			"GMConnectRequest": "{name} 请求你连接 Patreon，以便使用优化的角色卡。",
-			"SheetsForcedOn": "您的主持人已为您的帐户启用移动端角色卡，因此无法在此处禁用它们。"
+			"SheetsForcedOn": "您的GM已为您的帐户启用移动端角色卡，因此无法在此处禁用它们。"
 		},
 		"Diagnostics": {
 			"CollectionActors": "角色",
@@ -1085,14 +1085,14 @@
 		"JoinApproval.AutoApprove": "自动批准移动连接请求",
 		"JoinApproval.NoRequests": "没有待处理的请求。",
 		"ActorDirectory.AddToScene": "Add to 场景",
-		"ActorDirectory.AddToSceneDenied": "您不拥有该角色，因此主持人拒绝放置它。",
+		"ActorDirectory.AddToSceneDenied": "您不拥有该角色，因此GM拒绝放置它。",
 		"ActorDirectory.AddedToScene": "角色 '{name}' added to 场景",
-		"ActorDirectory.AddToSceneUnavailable": "没有主持人客户端能够放置 Token。请让主持人重新加载 Foundry，以注册 Swipe 的处理程序。",
+		"ActorDirectory.AddToSceneUnavailable": "没有GM客户端能够放置 Token。请让GM重新加载 Foundry，以注册 Swipe 的处理程序。",
 		"TokenHud.Delete": "删除 Token",
 		"TokenHud.DeleteConfirm": "删除这个Token吗？这无法撤消。",
 		"TokenHud.Deleted": "Token“{name}”已删除",
-		"TokenHud.DeleteDenied": "您不拥有该Token的角色，因此主持人拒绝删除它。",
-		"TokenHud.DeleteUnavailable": "没有主持人客户端能够删除 Token。请让主持人重新加载 Foundry，以注册 Swipe 的处理程序。",
+		"TokenHud.DeleteDenied": "您不拥有该Token的角色，因此GM拒绝删除它。",
+		"TokenHud.DeleteUnavailable": "没有GM客户端能够删除 Token。请让GM重新加载 Foundry，以注册 Swipe 的处理程序。",
 		"TokenHud.Rotate": "旋转 Token"
 	}
 }

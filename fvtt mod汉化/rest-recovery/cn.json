@@ -388,7 +388,7 @@
 				},
 				"EnablePromptRestTimePassing": {
 					"Title": "启用提示休息后自动计时功能",
-					"Hint": "主持人提示玩家休息时，让世界时间相应流逝。这可能使角色身上按时间计的主动效果到期。"
+					"Hint": "GM提示玩家休息时，让世界时间相应流逝。这可能使角色身上按时间计的主动效果到期。"
 				},
 				"EnableCalendarIntegration": {
 					"Title": "启用日历整合",

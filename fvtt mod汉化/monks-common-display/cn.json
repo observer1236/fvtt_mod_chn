@@ -75,6 +75,6 @@
 	"MonksCommonDisplay.close-journal-after.name": "自动关闭日记弹出窗口",
 	"MonksCommonDisplay.close-journal-after.hint": "自动关闭弹出的日志窗口前的等待时间（秒）",
 	"MonksCommonDisplay.close-journal-on-close.name": "关闭日记弹出窗口",
-	"MonksCommonDisplay.close-journal-on-close.hint": "主持人关闭弹出日志窗口时，同时关闭公共屏幕上的弹出日志",
+	"MonksCommonDisplay.close-journal-on-close.hint": "GM关闭弹出日志窗口时，同时关闭公共屏幕上的弹出日志",
 	"MonksCommonDisplay.allow-fade.hint": "允许公共屏幕使用界面淡出效果"
 }

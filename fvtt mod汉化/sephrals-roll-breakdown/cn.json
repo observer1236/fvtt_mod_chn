@@ -96,12 +96,12 @@
 	"SRB.Settings.Language.Name": "语言",
 	"SRB.Settings.Language.Hint": "选择让 Roll Breakdown 跟随 Foundry 的语言，或使用固定的模块语言。",
 	"SRB.Settings.Visibility.Name": "故障可见性",
-	"SRB.Settings.Visibility.Hint": "选择谁能看见掷骰明细面板。“拥有者”指执行掷骰或拥有发言角色的玩家。主持人始终可见。",
-	"SRB.Settings.HideNpcRolls.Name": "对玩家隐藏 NPC 和主持人掷骰",
-	"SRB.Settings.HideNpcRolls.Hint": "若掷骰来自没有玩家拥有的角色，或由主持人发起且发言角色不属于玩家，则不向玩家显示面板，以保密怪物的加值。",
+	"SRB.Settings.Visibility.Hint": "选择谁能看见掷骰明细面板。“拥有者”指执行掷骰或拥有发言角色的玩家。GM始终可见。",
+	"SRB.Settings.HideNpcRolls.Name": "对玩家隐藏 NPC 和GM掷骰",
+	"SRB.Settings.HideNpcRolls.Hint": "若掷骰来自没有玩家拥有的角色，或由GM发起且发言角色不属于玩家，则不向玩家显示面板，以保密怪物的加值。",
 	"SRB.Language.De": "德语",
 	"SRB.Language.En": "英语",
-	"SRB.Visibility.Gm": "仅限主持人",
-	"SRB.Visibility.Owners": "所有者和主持人",
+	"SRB.Visibility.Gm": "仅限GM",
+	"SRB.Visibility.Owners": "所有者和GM",
 	"SRB.Visibility.All": "大家"
 }

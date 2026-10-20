@@ -43,7 +43,7 @@
 			"SettingsButton.IconLabel": "图标",
 			"SettingsButton.ApplicationClassLabel": "应用类",
 			"SettingsButtons": "设置按钮",
-			"SettingsButton.GmOnlyLabel": "仅限主持人",
+			"SettingsButton.GmOnlyLabel": "仅限GM",
 			"SettingsButton.NoSettingsButtons": "没有为 {moduleId} 注册设置按钮"
 		},
 		"Settings": {

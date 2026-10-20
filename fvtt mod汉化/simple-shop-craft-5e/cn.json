@@ -307,7 +307,7 @@
 			"FillFromTableResultMultiple": "添加了 {count} 物品。",
 			"FillFromTablePartial": "Added {count} 物品 ({skipped} results weren't usable 物品).",
 			"HagglingSomeLocked": "最近失败的尝试中使用的技能有 24 小时的冷却时间。",
-			"NoActiveGM": "当前没有主持人在线 - 此操作需要连接主持人。",
+			"NoActiveGM": "当前没有GM在线 - 此操作需要连接GM。",
 			"OpeningHours": "开放时间",
 			"OpeningHoursFrom": "来自",
 			"OpeningHoursTo": "至",
@@ -383,8 +383,8 @@
 			"Total": "总计",
 			"Balance": "余额",
 			"InsufficientFunds": "资金不足",
-			"NoActiveGM": "当前没有在线主持人——购买只能在主持人在线时完成。",
-			"PurchaseRequested": "购买请求已发送——等待主持人确认。"
+			"NoActiveGM": "当前没有在线GM——购买只能在GM在线时完成。",
+			"PurchaseRequested": "购买请求已发送——等待GM确认。"
 		},
 		"PurchaseCard": {
 			"Buyer": "购买者",
@@ -409,7 +409,7 @@
 			"Threshold": "所需",
 			"FillWithGold": "用金币补足",
 			"Start": "开始制作",
-			"Requested": "制作请求已发送——等待主持人确认。",
+			"Requested": "制作请求已发送——等待GM确认。",
 			"Spell": "法术",
 			"ChooseSpell": "选择法术",
 			"RemoveSpell": "移除法术",
@@ -458,7 +458,7 @@
 		"Accept": "接受",
 		"Reject": "拒绝",
 		"Status": {
-			"Pending": "等待主持人确认……",
+			"Pending": "等待GM确认……",
 			"Accepted": "已接受",
 			"Rejected": "已拒绝"
 		},

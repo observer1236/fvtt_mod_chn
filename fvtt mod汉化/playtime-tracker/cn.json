@@ -24,8 +24,8 @@
 	"PLAYTIME-TRACKER.resetWarning": "这会将所有用户累计的游玩时长永久清零。当前在线的玩家会从重置时刻开始重新计时。",
 	"PLAYTIME-TRACKER.cancel": "取消",
 	"PLAYTIME-TRACKER.resetComplete": "全部游玩时长已重置。",
-	"PLAYTIME-TRACKER.resetGMOnly": "Only a 主持人 can reset playtime.",
-	"PLAYTIME-TRACKER.resetPrimaryGMOnly": "Only the active 主持人 can reset playtime.",
+	"PLAYTIME-TRACKER.resetGMOnly": "Only a GM can reset playtime.",
+	"PLAYTIME-TRACKER.resetPrimaryGMOnly": "Only the active GM can reset playtime.",
 	"PLAYTIME-TRACKER.error.dialog": "无法打开游玩时长统计。",
 	"PLAYTIME-TRACKER.error.save": "无法保存游玩时长数据。"
 }

@@ -170,7 +170,7 @@
 	"SPN.Directory.Button": "玩家笔记",
 	"SPN.Orphans.MissingActor": "缺少角色",
 	"SPN.Settings.ActorDirectoryButton.Name": "角色目录按钮",
-	"SPN.Settings.ActorDirectoryButton.Hint": "在角色目录中显示仅主持人可见的“玩家笔记”按钮，用于打开管理面板。",
+	"SPN.Settings.ActorDirectoryButton.Hint": "在角色目录中显示仅GM可见的“玩家笔记”按钮，用于打开管理面板。",
 	"SPN.Api.ActorNotFound": "没有找到 {actor} 的角色。",
 	"SPN.Api.InvalidValue": "{field}“{value}”无效。允许：{allowed}。"
 }

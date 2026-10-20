@@ -84,5 +84,5 @@
 	"sunder.popup.safe": "抵抗了破损！",
 	"SUNDER.Dialog.AttackRoll": "攻击检定",
 	"SUNDER.Settings.AutoRollBreakageChecks.Name": "自动掷骰子破损检查",
-	"SUNDER.Settings.AutoRollBreakageChecks.Hint": "自动掷骰破损检查，而不是显示主持人/玩家掷骰对话框。"
+	"SUNDER.Settings.AutoRollBreakageChecks.Hint": "自动掷骰破损检查，而不是显示GM/玩家掷骰对话框。"
 }

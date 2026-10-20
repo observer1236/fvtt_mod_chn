@@ -428,7 +428,7 @@
 					"hook-called-event.inputs.gm.title": "仅GM",
 					"create-item-event.title": "物品已添加至角色",
 					"delete-item-event.title": "物品 Removed from 角色",
-					"hook-called-event.inputs.gm.tooltip": "单个主持人用户将执行此触发器",
+					"hook-called-event.inputs.gm.tooltip": "单个GM用户将执行此触发器",
 					"hook-called-event.inputs.name.title": "钩子名称",
 					"hook-called-event.title": "钩子被调用时",
 					"update-item-event.outputs.paths.title": "更新路径",

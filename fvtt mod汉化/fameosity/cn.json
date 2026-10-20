@@ -211,7 +211,7 @@
 			"add-to-tracking": "开始追踪该角色的声誉",
 			"announce-wanted": "宣布通缉状态并通知所有人",
 			"cycle-mode": "切换模式（自动 / 混合 / 手动）",
-			"toggle-hidden": "对玩家显示/隐藏（隐藏的条目对主持人仍然可见）",
+			"toggle-hidden": "对玩家显示/隐藏（隐藏的条目对GM仍然可见）",
 			"add-relation": "添加个人意见",
 			"add-faction-relation": "添加该角色对某个派系的看法",
 			"add-faction-to-faction-relation": "添加一个派系对另一派系的态度",

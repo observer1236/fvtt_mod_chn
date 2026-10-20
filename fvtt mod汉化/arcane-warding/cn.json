@@ -76,6 +76,6 @@
 		},
 		"SETTINGS.TELEMETRY.NAME": "分享匿名使用数据",
 		"PROJECTED_EFFECT_NAME": "预计病房",
-		"SETTINGS.TELEMETRY.HINT": "发送匿名 ping（随机生成的 ID 以及模块、Foundry 和游戏系统版本号），以便开发人员可以查看有多少游戏正在积极使用 Arcane Warding 模块。不会发送或记录任何类型的帐户信息、世界内容信息或玩家数据。只有主主持人的Foundry 客户端会发送报告，玩家不受影响。您可以取消选中此设置以选择退出。"
+		"SETTINGS.TELEMETRY.HINT": "发送匿名 ping（随机生成的 ID 以及模块、Foundry 和游戏系统版本号），以便开发人员可以查看有多少游戏正在积极使用 Arcane Warding 模块。不会发送或记录任何类型的帐户信息、世界内容信息或玩家数据。只有主GM的Foundry 客户端会发送报告，玩家不受影响。您可以取消选中此设置以选择退出。"
 	}
 }

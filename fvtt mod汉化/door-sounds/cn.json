@@ -26,6 +26,6 @@
 	"DOORSOUNDS.confirmText": "确定要删除此音效配置吗？",
 	"DOORSOUNDS.allowVolumeLabel": "允许调节音量吗？",
 	"DOORSOUNDS.allowVolumeHint": "将音量滑块添加到墙壁配置并更改墙壁可放置以使用它。",
-	"DOORSOUNDS.gmModeLabel": "主持人听到门是玩家的声音吗？",
-	"DOORSOUNDS.gmModeHint": "勾选后，主持人会像玩家一样听到门声，警告：这意味着您（主持人）选择了一个Token，并且您的Token超出了范围，您将不会听到门打开的声音，可能会错过玩家正在做什么的提示。"
+	"DOORSOUNDS.gmModeLabel": "GM听到门是玩家的声音吗？",
+	"DOORSOUNDS.gmModeHint": "勾选后，GM会像玩家一样听到门声，警告：这意味着您（GM）选择了一个Token，并且您的Token超出了范围，您将不会听到门打开的声音，可能会错过玩家正在做什么的提示。"
 }

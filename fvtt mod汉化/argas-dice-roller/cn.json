@@ -119,7 +119,7 @@
 			"chatNoPermission": "无权限",
 			"chatComplete": "完成",
 			"bennyTooltip": "使用本尼重掷",
-			"bennyTooltipNPC": "与 Benny 重掷（NPC 的 Bennies，否则主持人 Benny）",
+			"bennyTooltipNPC": "与 Benny 重掷（NPC 的 Bennies，否则GM Benny）",
 			"fumbleCheckBtn1": "检查大失败",
 			"fumbleCheckBtn2": "使用 d6？",
 			"fumbleCheckNone": "<u>无</u>大失败",
@@ -177,7 +177,7 @@
 				"noBennies": "没有剩余的本尼。",
 				"noGMBennies": "GM 没有剩余的本尼。",
 				"invalidModifier": "请输入介于 {min} 和 {max} 之间的值。",
-				"noActiveGM": "没有主持人在线，无法保存结果。请等待主持人上线。"
+				"noActiveGM": "没有GM在线，无法保存结果。请等待GM上线。"
 			},
 			"dramatic": {
 				"presetStandard": "标准（3/3）",
@@ -395,14 +395,14 @@
 		},
 		"diceTypes.menuName": "显示的骰子类型",
 		"diceTypes.menuHint": "选择骰子窗口中提供的骰子类型。",
-		"diceTypes.menuLabel": "选择（仅限主持人）",
+		"diceTypes.menuLabel": "选择（仅限GM）",
 		"diceTypes.windowTitle": "显示的骰子类型",
 		"diceTypes.intro": "选择在骰子窗口中显示哪些类型的骰子以及隐藏哪些类型的骰子。",
 		"diceTypes.coin": "抛硬币",
 		"diceTypes.fudge": "软糖骰子",
 		"buttons.menuName": "显示按钮",
 		"buttons.menuHint": "选择每个人都可以使用哪些按钮。",
-		"buttons.menuLabel": "选择（仅限主持人）",
+		"buttons.menuLabel": "选择（仅限GM）",
 		"buttons.windowTitle": "显示按钮",
 		"buttons.systemNote": "以下设置特定于某些游戏系统："
 	}

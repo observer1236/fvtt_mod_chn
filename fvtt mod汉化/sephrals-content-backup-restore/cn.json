@@ -77,7 +77,7 @@
 	"scbr.backup.safetyName": "恢复前 ({timestamp})",
 	"scbr.backup.versionWarning": "这个备份是用{backupEnvironment}做的，这个世界运行的是{worldEnvironment}。 Foundry 迁移数据，但检查结果。",
 	"scbr.backup.madeWith": "创建环境：{environment}",
-	"scbr.api.gmOnly": "只有主持人才能使用 Sephral 的内容备份和恢复 API。",
+	"scbr.api.gmOnly": "只有GM才能使用 Sephral 的内容备份和恢复 API。",
 	"scbr.api.unsupportedDocument": "备份仅适用于该世界的场景、角色、物品、日志边界、掷骰表、卡片、播放列表、宏和战斗。",
 	"scbr.api.backupNotFound": "未找到 ID 为“{backupId}”的备份。",
 	"scbr.api.documentExists": "'{documentName}' still exists.相反，恢复备份。",

@@ -37,7 +37,7 @@
 			},
 			"coverHintsGmMessage": {
 				"Name": "封面变化指标",
-				"Hint": "当骰子对话框中的封面发生变化时，添加一个警告图标来攻击目标行和豁免检定总数。 Visible to the 主持人 only."
+				"Hint": "当骰子对话框中的封面发生变化时，添加一个警告图标来攻击目标行和豁免检定总数。 Visible to the GM only."
 			},
 			"CreaturesHalfOnly": {
 				"Name": "生物至多提供半身掩护",

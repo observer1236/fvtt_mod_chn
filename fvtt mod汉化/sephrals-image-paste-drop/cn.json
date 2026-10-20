@@ -1,6 +1,6 @@
 {
 	"SIPD.Settings.AllowPlayerToolUse.Label": "允许玩家使用 SIPD",
-	"SIPD.Settings.AllowPlayerToolUse.Hint": "启用后，非主持人用户可以打开导入对话框并始终使用预览。更多目标在“其他玩家目标”下设置。默认情况下，只有主持人可以使用该工具。",
+	"SIPD.Settings.AllowPlayerToolUse.Hint": "启用后，非GM用户可以打开导入对话框并始终使用预览。更多目标在“其他玩家目标”下设置。默认情况下，只有GM可以使用该工具。",
 	"SIPD.Settings.Language.Label": "语言",
 	"SIPD.Settings.Language.Hint": "选择 Image Paste & Drop 是跟随 Foundry 还是使用固定的模块语言。",
 	"SIPD.Language.Default": "跟随 Foundry",
@@ -74,7 +74,7 @@
 	"SIPD.Settings.StorageFolder.Label": "存储文件夹",
 	"SIPD.Settings.StorageFolder.Hint": "所有图像 SIPD 存储的基本文件夹。将其留空以使用默认值：世界文件夹或 The Forge 上资源库中的文件夹。 Example: assets/handouts",
 	"SIPD.Settings.PlayerActions.Label": "额外的玩家目标",
-	"SIPD.Settings.PlayerActions.Hint": "除了预览之外，玩家还可以使用目标。玩家还需要 Foundry 权限“上传文件”和“创建日志边境”日志图像。他们的文件转到剪贴板图像/播放器和剪贴板图像/共享；主机客户端创建这些文件夹。 场景、图块和地图图钉目标始终需要主持人。Token和肖像目标只会改变玩家拥有的Token和角色。",
+	"SIPD.Settings.PlayerActions.Hint": "除了预览之外，玩家还可以使用目标。玩家还需要 Foundry 权限“上传文件”和“创建日志边境”日志图像。他们的文件转到剪贴板图像/播放器和剪贴板图像/共享；主机客户端创建这些文件夹。 场景、图块和地图图钉目标始终需要GM。Token和肖像目标只会改变玩家拥有的Token和角色。",
 	"SIPD.Settings.MaxImageSize.Label": "缩小大图",
 	"SIPD.Settings.MaxImageSize.Hint": "长边超过此尺寸的图像在上传之前会在浏览器中按比例缩小。 GIF、SVG 和动画图像保持不变。",
 	"SIPD.Settings.MaxImageSize.Off": "关闭",
@@ -132,7 +132,7 @@
 	"SIPD.Notification.BatchTilesCreated": "创建了 {count} 瓷砖。",
 	"SIPD.Notification.BatchSkipped": "{count} 图像无法加载并被跳过。",
 	"SIPD.Notification.BatchUnavailable": "您没有同时针对多个图像的目标。",
-	"SIPD.Error.PlayerUploadFailed": "上传失败。启用播放器目标后，主持人必须登录一次，以便上传文件夹存在。",
+	"SIPD.Error.PlayerUploadFailed": "上传失败。启用播放器目标后，GM必须登录一次，以便上传文件夹存在。",
 	"SIPD.Error.NoToken": "首先选择至少一个您拥有的Token。",
 	"SIPD.Error.NoActor": "请先选择一个 Token，或为自己分配一个角色。"
 }

@@ -1120,7 +1120,7 @@
 	"gmm.condition.cursed.died": "{name} 被诅咒并以 0 生命值死亡。",
 	"gmm.condition.exhaustion.gained": "{source} 将 {name} 带到耗尽级别 {level}。",
 	"gmm.terrain.unstable.prone": "{name} 在不稳定的地面上结束回合并摔倒。",
-	"gmm.routing.failed": "Monster Maker 需要主持人协助完成此操作，但未能完成。详情请查看控制台。",
+	"gmm.routing.failed": "Monster Maker 需要GM协助完成此操作，但未能完成。详情请查看控制台。",
 	"gmm.monster.artifact.paragon_actions.depleted": "{name} 没有剩余的典范动作。",
 	"gmm.monster.artifact.paragon_defenses.legendary_overlap": "传奇抗性和典范防御不适合在同一个生物上同时使用。",
 	"gmm.monster.artifact.paragon_defenses.resisted": "二手 Paragon Defense",

@@ -37,7 +37,7 @@
 	"EAR.Radio.Config.Mode": "播放模式",
 	"EAR.Radio.Config.ModeHint": "顺序和随机播放模式自动前进。重复循环当前曲目。",
 	"EAR.Radio.Config.Noise": "静态轨道变化",
-	"EAR.Radio.Config.GmOnly": "只有主持人可以配置广播点",
+	"EAR.Radio.Config.GmOnly": "只有GM可以配置广播点",
 	"EAR.Radio.Mode.Repeat": "重复一",
 	"EAR.Radio.LegacyWarning": "禁用单独的 AG 无线电模块：无线电已集成到增强型音频资源中。",
 	"EAR.Collapse": "折叠播放列表",

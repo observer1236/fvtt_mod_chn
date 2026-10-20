@@ -95,7 +95,7 @@
 				"trackingModeSmoothTip": "对GM平移路径进行移动平均平滑。",
 				"trackingModeDragReleaseTip": "暂停更新，直到GM停止平移后发送单个最终位置。",
 				"coDMsHeader": "联合GM",
-				"coDMsEmpty": "此世界中只有你拥有GM权限。一旦至少再有一名用户被授予游戏主持人或助理GM角色，联合GM选项卡将允许你将镜头控制权交给其他GM。",
+				"coDMsEmpty": "此世界中只有你拥有GM权限。一旦至少再有一名用户被授予GM或助理GM角色，联合GM选项卡将允许你将镜头控制权交给其他GM。",
 				"codmInControl": "控制中",
 				"codmOffline": "离线",
 				"takeControl": "接管控制",

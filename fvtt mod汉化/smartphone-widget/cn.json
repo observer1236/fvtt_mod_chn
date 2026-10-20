@@ -1141,7 +1141,7 @@
       "system": "系统",
       "editPost": "编辑帖子",
       "noDeviceAssigned": "未分配设备",
-      "noDeviceHint": "请让你的主持人（GM）为你分配设备。",
+      "noDeviceHint": "请让你的GM（GM）为你分配设备。",
       "targetAccount": "目标账户",
       "masterPhone": "主控手机",
       "observationMode": "观察模式",

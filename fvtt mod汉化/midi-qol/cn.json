@@ -1242,8 +1242,8 @@
 		"chat": "默认dnd5e行为",
 		"auto": "自动触发标记自身行动"
 	},
-	"midi-qol.dummyCards.Name": "主持人私密掷骰时通知玩家",
-	"midi-qol.dummyCards.Hint": "主持人使用私密、自骰或盲骰模式时，其他玩家会看到“掷了一些骰子”的占位卡片，以便知道有人掷骰，但无法得知内容。“完全隐藏私密/盲骰/自骰”仍会隐藏此卡片。",
+	"midi-qol.dummyCards.Name": "GM私密掷骰时通知玩家",
+	"midi-qol.dummyCards.Hint": "GM使用私密、自骰或盲骰模式时，其他玩家会看到“掷了一些骰子”的占位卡片，以便知道有人掷骰，但无法得知内容。“完全隐藏私密/盲骰/自骰”仍会隐藏此卡片。",
 	"midi-qol.dnd5eConcentrationTrackingDisabled": "<br><strong><center>DND5E专注追踪已禁用</strong><br></center><br><center>专注追踪已在dnd5e系统设置中禁用。</center><center>请在DND5E设置中启用以启用midi专注设置</center><br>",
 	"midi-qol.ItemSheetMidiTab": "Midi QoL",
 	"midi-qol.AddOnUseMacro": "添加物品调用宏",
@@ -2320,8 +2320,8 @@
 	"midi-qol.BlindRollDisplay.Hint": "通过上述设置强制进行盲掷时，如何向玩家显示。隐藏：保持原有行为，玩家看不到任何内容；遮蔽：显示掷骰卡，但将玩家看到的结果替换为 ??。",
 	"midi-qol.blindRollDisplayOptions.hidden": "隐藏（玩家看不到任何内容）",
 	"midi-qol.blindRollDisplayOptions.obscured": "遮蔽（显示卡片，结果显示为 ??）",
-	"midi-qol.blindRollDisplayOptions.expandedHints.hidden": "掷骰仅密语发送给主持人；玩家完全看不到这条消息。",
-	"midi-qol.blindRollDisplayOptions.expandedHints.obscured": "向玩家显示掷骰卡，但结果显示为 ??，3D 骰子也仅对主持人可见。主持人能看到真实结果。注意：数值只在屏幕上被隐藏，仍然存在于消息数据中，因此查看控制台的玩家可能读到它。",
+	"midi-qol.blindRollDisplayOptions.expandedHints.hidden": "掷骰仅密语发送给GM；玩家完全看不到这条消息。",
+	"midi-qol.blindRollDisplayOptions.expandedHints.obscured": "向玩家显示掷骰卡，但结果显示为 ??，3D 骰子也仅对GM可见。GM能看到真实结果。注意：数值只在屏幕上被隐藏，仍然存在于消息数据中，因此查看控制台的玩家可能读到它。",
 	"midi-qol.VisionTestHeight.Name": "可见性检测点高度",
 	"midi-qol.VisionTestHeight.Hint": "检测 Token 可见性时使用哪个高度。同时影响 Foundry 的渲染和 Midi 的视线检测。",
 	"midi-qol.SurfaceOcclusion.Name": "遮挡上层地板表面",
@@ -2478,7 +2478,7 @@
 	"midi-qol.TELEPORT.OutsideScene": "该处位于场景之外",
 	"midi-qol.TELEPORT.TooFar": "距离过远",
 	"midi-qol.TELEPORT.NoSpace": "目的地附近没有可供 {name} 容身的空位，该对象留在原处。",
-	"midi-qol.TELEPORT.NoGM": "未移动 {name}：移动你没有控制权限的 Token 需要主持人在线。",
+	"midi-qol.TELEPORT.NoGM": "未移动 {name}：移动你没有控制权限的 Token 需要GM在线。",
 	"midi-qol.TELEPORT.Failed": "传送失败：目的地被占用或受到阻挡。",
 	"midi-qol.TargetNotEvaluated": "此目标在掷骰后才加入卡片，Midi 未对其进行检查。"
 }

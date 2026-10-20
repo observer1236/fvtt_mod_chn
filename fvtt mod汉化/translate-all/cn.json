@@ -1,6 +1,6 @@
 {
 	"translate-all.settings.apiKey.name": "OpenAI API密钥",
-	"translate-all.settings.apiKey.hint": "用于访问 ChatGPT 的秘密 API 密钥。仅存储在此浏览器中，因此永远不会发送给您的玩家。 Each 主持人 enters their own.",
+	"translate-all.settings.apiKey.hint": "用于访问 ChatGPT 的秘密 API 密钥。仅存储在此浏览器中，因此永远不会发送给您的玩家。 Each GM enters their own.",
 	"translate-all.settings.apiEndpoint.name": "API端点",
 	"translate-all.settings.apiEndpoint.hint": "API使用的端点地址。如果使用代理或其他兼容API，请修改此项。",
 	"translate-all.settings.language.name": "目标语言",
@@ -37,7 +37,7 @@
 	"translate-all.settings.outputMode.choices.append": "在原文之后添加翻译",
 	"translate-all.settings.outputMode.choices.prepend": "在原文之前添加翻译",
 	"translate-all.settings.minimumRole.name": "翻译的最低角色",
-	"translate-all.settings.minimumRole.hint": "使用“翻译”按钮所需的最低用户权限级别。翻译会消耗所配置 API 密钥的额度，因此默认为主持人。低于此权限级别的用户看不到按钮。",
+	"translate-all.settings.minimumRole.hint": "使用“翻译”按钮所需的最低用户权限级别。翻译会消耗所配置 API 密钥的额度，因此默认为GM。低于此权限级别的用户看不到按钮。",
 	"translate-all.settings.model.refresh": "使用上面当前输入的密钥和端点从 API 端点重新加载模型列表。",
 	"translate-all.settings.model.placeholder": "型号名称",
 	"translate-all.settings.customPrompt.name": "自定义提示词",

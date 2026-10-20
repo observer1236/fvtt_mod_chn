@@ -190,7 +190,7 @@
 			"duplicateTab": "AFK Tavern 已在另一个标签页中打开。使用多个标签页可能导致意外行为。",
 			"playerTavernOpened": "<strong>{name}</strong>走进酒馆玩游戏。",
 			"playerTavernJoined": "<strong>{name}</strong>加入酒馆。",
-			"playerTavernDisabled": "主持人禁止玩家在休息时间之外进入酒馆。"
+			"playerTavernDisabled": "GM禁止玩家在休息时间之外进入酒馆。"
 		},
 		"dialog": {
 			"endEarlyTitle": "提前结束休息？",

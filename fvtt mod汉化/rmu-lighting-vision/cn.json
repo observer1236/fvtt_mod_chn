@@ -73,7 +73,7 @@
 	"rmu.lighting.heatmap.generating": "RMU Lighting：生成热图中...请稍候。",
 	"rmu.lighting.heatmap.complete": "RMU Lighting：热图完成。",
 	"rmu.keybinds.heatmap.name": "切换诊断热力图",
-	"rmu.keybinds.heatmap.hint": "切换显示 RMU 各光照等级数学边界的可视化覆盖层。仅限主持人使用。",
+	"rmu.keybinds.heatmap.hint": "切换显示 RMU 各光照等级数学边界的可视化覆盖层。仅限GM使用。",
 	"rmu.light.isConstant.name": "环境光 / 恒定照明",
 	"rmu.light.isConstant.hint": "防止光照衰减。所选基础光照等级会覆盖整个手动指定的半径，适用于月光、星光或其他环境光源。"
 }

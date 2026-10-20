@@ -127,7 +127,7 @@
 		"PermissionPlayer": "玩家",
 		"PermissionTrusted": "受信任玩家",
 		"PermissionAssistant": "助理 GM",
-		"PermissionGM": "游戏主持人",
+		"PermissionGM": "GM",
 		"ManageCustomCalendars": "管理自定义日历",
 		"ManageCustomCalendarsHint": "创建或导入自定义日历定义。",
 		"TimeMachine": "时间机器",

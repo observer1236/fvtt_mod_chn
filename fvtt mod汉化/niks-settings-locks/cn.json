@@ -41,8 +41,8 @@
 			"OpenManagerHint": "打开一个专用窗口，用于管理所有设置和控制锁定。",
 			"MinRoleName": "锁定管理的最低角色",
 			"MinRoleHint": "查看和管理锁定所需的最低用户角色。更高级别的角色始终包含在内（例如，选择受信任玩家也会授予助理 GM 和 GM 的访问权限）。",
-			"RoleGM": "游戏主持人",
-			"RoleAssistant": "助理游戏主持人",
+			"RoleGM": "GM",
+			"RoleAssistant": "助理 GM",
 			"RoleTrusted": "受信任玩家"
 		},
 		"Manager": {
