@@ -1001,7 +1001,7 @@
 	"TOKENIZER-2.RING_GEN.ParamChoice.brigadier": "准将",
 	"TOKENIZER-2.RING_GEN.ParamChoice.majorGeneral": "少将",
 	"TOKENIZER-2.RING_GEN.ParamChoice.lieutenantGeneral": "中将",
-	"TOKENIZER-2.RING_GEN.ParamChoice.general": "一般",
+	"TOKENIZER-2.RING_GEN.ParamChoice.general": "常规",
 	"TOKENIZER-2.RING_GEN.ParamChoice.fieldMarshal": "陆军元帅",
 	"TOKENIZER-2.RING_GEN.OrnamentPreset.rank-lanceCorporal": "军衔：准下士",
 	"TOKENIZER-2.RING_GEN.OrnamentPreset.rank-corporal": "军衔：下士",

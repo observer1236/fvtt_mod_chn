@@ -1012,7 +1012,7 @@
           "RitualOnly": "仪式施法：你只能通过仪式施展鉴定术。"
         },
         "IntellectFortress": {
-          "SelectedMoreTokensThan": "你选择了多于法术等级允许的token，请重新选择。",
+          "SelectedMoreTokensThan": "你选择了多于法术环阶允许的 Token，请重新选择。",
           "TargetsNotWithinRange": "你选择的两个token不在互相30尺范围内，请重新选择。",
           "UnableSee": "你无法看到看到选择的生物，请重新选择。"
         },

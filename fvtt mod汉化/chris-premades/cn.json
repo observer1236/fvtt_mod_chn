@@ -312,7 +312,7 @@
             "FavoriteActivities": "收藏的行动",
             "FlatDC": "固定DC",
             "HalfDamage": "半额伤害",
-            "HealingType": "治愈类型：",
+            "HealingType": "治疗类型：",
             "Identifier": "标识符",
             "Identifiers": "标识符",
             "Magical": "魔法",
@@ -2050,7 +2050,7 @@
                 "TargetNotPoisoned": "目标未中毒！"
             },
             "Lifesteal": {
-                "HealingType": "治愈类型：",
+                "HealingType": "治疗类型：",
                 "MaxHPCure": "最大 HP 降低恢复：",
                 "Name": "生命窃取",
                 "ReduceMaxHP": "降低最大 HP：",

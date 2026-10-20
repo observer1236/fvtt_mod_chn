@@ -56,7 +56,7 @@
 			"Summary.SyntaxError": "语法错误",
 			"Summary.RuntimeError": "评价误差",
 			"Summary.EffectGate": "效果整体的条件为 {state}，因此此项更改仍被抑制。",
-			"Summary.ScopeEffect": "一般",
+			"Summary.ScopeEffect": "常规",
 			"Summary.OpenEffectHint": "打开整个主动效果的条件设置。",
 			"Summary.OpenChangeHint": "仅开放此更改的条件。",
 			"Summary.NoCondition": "无条件",

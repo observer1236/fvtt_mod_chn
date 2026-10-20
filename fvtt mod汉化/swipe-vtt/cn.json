@@ -203,7 +203,7 @@
 				"Hint": "如果设备性能严重不足，可完全禁用游戏画布，仅保留角色卡/掷骰功能。"
 			},
 			"ExpandedSheet": {
-				"Name": "使用整页纸（平板电脑）",
+				"Name": "使用整页角色卡（平板电脑）",
 				"Hint": "当画布被禁用时，使用全屏并排显示多个角色卡部分。需要禁用画布功能。"
 			},
 			"Override": {
@@ -997,7 +997,7 @@
 		"WOD5E.Rouse": "唤血检定",
 		"WOD5E.Add": "添加",
 		"WOD5E.Rating": "评级",
-		"WOD5E.FullSheet": "打开整张纸",
+		"WOD5E.FullSheet": "打开完整角色卡",
 		"WOD5E.StatusEffects": "状态效果",
 		"WOD5E.GroupType": "团体类型",
 		"WOD5E.ViewArtwork": "查看角色立绘",

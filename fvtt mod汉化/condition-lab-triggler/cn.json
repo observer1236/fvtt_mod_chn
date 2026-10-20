@@ -60,7 +60,7 @@
 			"OptionConfig": {
 				"Title": "选项配置",
 				"Heading": "选项",
-				"Description": "此状态的一般选项",
+				"Description": "此状态的通用选项",
 				"SpecialStatusEffects": {
 					"Heading": "特殊状态效果",
 					"Description": "使用原生FVTT功能应用的特殊效果。"

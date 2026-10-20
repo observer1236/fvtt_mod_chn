@@ -407,7 +407,7 @@
 		"behaviors.display.FIELDS.pulse.label": "脉冲",
 		"behaviors.display.FIELDS.pulse.hint": "慢慢地变亮和褪色发光，将注意力吸引到该区域。",
 		"behaviors.display.FIELDS.color.hint": "除非配置文件设置了颜色，否则配置文件的颜色是该区域自己的颜色。",
-		"behaviors.display.profileGroups.general": "一般",
+		"behaviors.display.profileGroups.general": "常规",
 		"behaviors.display.profileGroups.status": "条件和状态",
 		"behaviors.display.profileGroups.custom": "定制配置文件",
 		"behaviors.display.texture.image": "图片",

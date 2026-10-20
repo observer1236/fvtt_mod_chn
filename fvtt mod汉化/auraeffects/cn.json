@@ -109,7 +109,7 @@
 			"HighlightMode.Hint": "配置光环区域是否应突出显示真实形状或覆盖的网格空间。",
 			"HighlightMode.Name": "光环高亮模式"
 		},
-		"SHEETS.AuraActiveEffectSheet": "Aura Effect表"
+		"SHEETS.AuraActiveEffectSheet": "光环效果卡"
 	},
 	"EFFECT.TABS": {
 		"aura": "光环"
