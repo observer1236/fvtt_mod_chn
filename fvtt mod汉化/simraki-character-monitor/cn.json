@@ -83,8 +83,8 @@
 				"Hint": "追踪角色装备或卸下物品"
 			},
 			"MonitorItemAttune": {
-				"Name": "监控调谐",
-				"Hint": "追踪角色与物品调谐或失去调谐"
+				"Name": "监控同调",
+				"Hint": "追踪角色与物品同调或解除同调"
 			},
 			"MonitorItemIdentify": {
 				"Name": "监控物品鉴定",
@@ -129,8 +129,8 @@
 			"Unequipped": "卸下",
 			"Prepared": "准备",
 			"Unprepared": "取消准备",
-			"AttunesTo": "调谐",
-			"BreaksAttune": "解除调谐",
+			"AttunesTo": "同调",
+			"BreaksAttune": "解除同调",
 			"Enabled": "启用",
 			"Disabled": "禁用",
 			"Added": "添加",

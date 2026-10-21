@@ -36,7 +36,7 @@
 		"notify": {
 			"legacyGranted": "符文传承：「{name}」已授予 {actor}。",
 			"legacyEquipRequired": "符文传承：「{item}」必须已装备才能使该授予生效。",
-			"legacyAttuneRequired": "符文传承：「{item}」必须已装备并调谐才能使该授予生效。",
+			"legacyAttuneRequired": "符文传承：「{item}」必须已装备并同调才能使该授予生效。",
 			"grantedBy": "由 {item} 授予",
 			"cacheCleared": "[符文物品] 合集缓存已清空。",
 			"cacheReady": "[符文物品] 缓存就绪 — 共 {packs} 个合集、{feats} 个专长、{spells} 个法术。"
