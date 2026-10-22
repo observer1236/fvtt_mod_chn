@@ -11,10 +11,10 @@
 	"AC5E.ShowToolTipsChoicesNone": "不显示",
 	"AC5E.ShowModuleNameInTooltipsName": "在提示框中显示模组名称",
 	"AC5E.ShowTooltipChatVisibility.Name": "向玩家显示聊天工具提示",
-	"AC5E.ShowTooltipChatVisibility.Hint": "选择谁的掷骰玩家可以看到 AC5E 聊天工具提示。没有人向所有玩家隐藏它们。 GM 绕过此过滤器，但仍遵循自己的“显示 AC5E 工具提示”设置。",
-	"AC5E.ShowTooltipChatVisibility.All": "所有角色",
+	"AC5E.ShowTooltipChatVisibility.Hint": "选择哪些玩家的掷骰会显示 AC5E 聊天提示。“无”会向所有玩家隐藏这些提示。GM 不受此过滤器限制，但仍遵循自己的“显示 AC5E 提示”设置。",
+	"AC5E.ShowTooltipChatVisibility.All": "所有玩家",
 	"AC5E.ShowTooltipChatVisibility.None": "无",
-	"AC5E.ShowTooltipChatVisibility.Owned": "拥有",
+	"AC5E.ShowTooltipChatVisibility.Owned": "拥有者",
 	"AC5E.ShowTooltipChatVisibility.Players": "玩家",
 	"AC5E.ExpandedConditionsName": "扩展状态",
 	"AC5E.ExpandedConditionsHint": "为额外状态与战斗状态启用自动化，例如闪避、躲藏、狂暴施法限制以及水下战斗。",
@@ -24,7 +24,7 @@
 	},
 	"AC5E.ActivityUse": {
 		"Name": "物品使用规则",
-		"Hint": "控制 AC5E 在掷骰前是允许、警告还是阻止无效的行动使用。适用于使用阶段的检查，例如失能动作、施法限制以及非攻击性超出范围失败。攻击超出范围失败会在稍后使用所选攻击模式进行攻击检定配置时处理。",
+		"Hint": "控制 AC5E 在掷骰前是允许、警告还是阻止无效的行动使用。适用于使用阶段的检查，例如失能动作、施法限制以及非攻击性超出射程失败。攻击超出射程失败会在稍后使用所选攻击模式进行攻击检定配置时处理。",
 		"Choices": {
 			"Off": "允许",
 			"Enforce": "按情况阻止/失败",
@@ -51,12 +51,12 @@
 	},
 	"AC5E.AutoRangeChecks": {
 		"Name": "射程规则",
-		"Hint": "启用自动化的近战与远程射程规则，包括近战触及、超出范围失败、临近敌人劣势以及长距离劣势。近战对角线触及将所有相邻方格视为处于触及范围内，覆盖对角线网格距离规则。超出范围失败在验证射程时应用：非攻击行动在使用时，攻击行动在使用所选攻击模式进行攻击检定配置时。",
+		"Hint": "启用自动化的近战与远程射程规则，包括近战触及、超出射程失败、附近敌人劣势以及远程劣势。近战对角线触及将所有相邻方格视为处于触及范围内，覆盖对角线网格距离规则。超出射程失败在验证射程时应用：非攻击行动在使用时，攻击行动在使用所选攻击模式进行攻击检定配置时。",
 		"MeleeDiagonals": "近战对角线触及",
-		"MeleeOutOfRange": "近战超出范围",
-		"RangedNearbyFoes": "远程临近敌人",
-		"RangedLongDisadvantage": "远程长距离劣势",
-		"RangedOutOfRange": "远程超出范围"
+		"MeleeOutOfRange": "近战超出射程",
+		"RangedNearbyFoes": "远程附近敌人",
+		"RangedLongDisadvantage": "远程劣势",
+		"RangedOutOfRange": "远程超出射程"
 	},
 	"AC5E.AutoExhaustionName": "力竭规则",
 	"AC5E.AutoExhaustionHint": "使用旧版 D&D 5e 规则时启用 AC5E 的力竭处理。",
@@ -67,7 +67,7 @@
 		"Hint": "控制在未选择目标或选择多个目标时 AC5E 如何处理攻击检定。",
 		"Choices": {
 			"Source": "忽略目标状态与标志",
-			"Enforce": "沉默取消掷骰",
+			"Enforce": "静默取消掷骰",
 			"Warn": "警告提示并取消掷骰"
 		},
 		"MultipleTargetsAttack": {
@@ -99,12 +99,12 @@
 	"AC5E.Rage": "狂暴",
 	"AC5E.Raging": "狂暴中",
 	"AC5E.SubtleSpell": "精妙法术",
-	"AC5E.OutOfRange": "超出范围",
+	"AC5E.OutOfRange": "超出射程",
 	"AC5E.Item": "物品",
 	"AC5E.Feats": {
 		"CrossbowExpert": "强弩专家",
 		"Sharpshooter": "神射手",
-		"SpellSniper": "法术射手"
+		"SpellSniper": "法术狙击手"
 	},
 	"AC5E.Equipment": "装备",
 	"AC5E.NearbyFoe": "附近敌人",
@@ -127,20 +127,20 @@
 		}
 	},
 	"AC5E.AdvantageKeypress": "优势按键",
-	"AC5E.CriticalKeypress": "大成功按键",
+	"AC5E.CriticalKeypress": "重击按键",
 	"AC5E.DisadvantageKeypress": "劣势按键",
 	"AC5E.NoCriticalKeypress": "普通按键",
 	"AC5E.OverrideAdvantage": "覆盖优势按键",
-	"AC5E.OverrideCritical": "覆盖大成功按键",
+	"AC5E.OverrideCritical": "覆盖重击按键",
 	"AC5E.OverrideDisadvantage": "覆盖劣势按键",
 	"AC5E.OverrideNoCritical": "覆盖普通按键",
 	"AC5E.ForcedAdvantage": "系统强制优势",
 	"AC5E.ForcedDisadvantage": "系统强制劣势",
 	"AC5E.NoAdvantage": "不会具有优势",
-	"AC5E.NoCritical": "不会大成功",
+	"AC5E.NoCritical": "不会重击",
 	"AC5E.NoDisadvantage": "不会承受劣势",
 	"AC5E.TargetGrantsNoAdvantage": "与该目标对抗的生物不会具有优势",
-	"AC5E.TargetGrantsNoCritical": "与该目标对抗的生物不会大成功",
+	"AC5E.TargetGrantsNoCritical": "与该目标对抗的生物不会重击",
 	"AC5E.TargetGrantsNoDisadvantage": "与该目标对抗的生物不会承受劣势",
 	"AC5E.CannotSeeTarget": "无法看见目标",
 	"AC5E.TargetCannotSeeAttacker": "目标无法看见攻击者",
@@ -149,7 +149,7 @@
 	"AC5E.Success": "成功",
 	"AC5E.AbbreviationAdvantage": "优势",
 	"AC5E.AbbreviationDisadvantage": "劣势",
-	"AC5E.AbbreviationCritical": "大成功",
+	"AC5E.AbbreviationCritical": "重击",
 	"AC5E.Grants": "与该目标对抗",
 	"AC5E.Attacker": "攻击者",
 	"AC5E.Flags": "标志",
@@ -157,12 +157,12 @@
 	"AC5E.FlagsInitiativeDisadv": "先攻系统劣势",
 	"AC5E.TargetGrantsAdvantageAbbreviated": "与该目标对抗的生物具有优势",
 	"AC5E.TargetGrantsDisadvantageAbbreviated": "与该目标对抗的生物承受劣势",
-	"AC5E.TargetGrantsCriticalAbbreviated": "与该目标对抗的生物必定大成功",
+	"AC5E.TargetGrantsCriticalAbbreviated": "与该目标对抗的生物必定重击",
 	"AC5E.TargetGrantsFail": "与该目标对抗的生物进行的检定失败",
 	"AC5E.TargetGrantsFumble": "与该目标对抗的生物进行的检定大失败",
 	"AC5E.TargetGrantsSuccess": "与该目标对抗的生物进行的检定成功",
 	"AC5E.TargetGrantsBonus": "与该目标对抗的生物获得加值",
-	"AC5E.TargetGrantsModifier": "与该目标对抗的生物掷骰公式修饰符调整",
+	"AC5E.TargetGrantsModifier": "与该目标对抗的生物掷骰公式调整值",
 	"AC5E.TargetGrantsExtraDice": "与该目标对抗的生物获得额外骰子",
 	"AC5E.NoChanges": "无变化",
 	"AC5E.SystemMode": "系统模式",
@@ -192,8 +192,8 @@
 	"AC5E.OptinDescription.AppliesRollModifierWithValue": "应用掷骰调整值（{value}）",
 	"AC5E.OptinDescription.SetsMinimumDiceRoll": "将掷骰最小结果设为 {value}",
 	"AC5E.OptinDescription.SetsMaximumDiceRoll": "将掷骰最大结果设为 {value}",
-	"AC5E.OptinDescription.AppliesDiceRollModifier": "应用掷骰修饰",
-	"AC5E.OptinDescription.AppliesDiceRollModifierWithValue": "应用掷骰修饰（{value}）",
+	"AC5E.OptinDescription.AppliesDiceRollModifier": "应用掷骰调整值",
+	"AC5E.OptinDescription.AppliesDiceRollModifierWithValue": "应用掷骰调整值（{value}）",
 	"AC5E.OptinDescription.SetsCriticalThreshold": "将重击阈值设为{value}",
 	"AC5E.OptinDescription.ModifiesCriticalThreshold": "调整重击阈值",
 	"AC5E.OptinDescription.SetsFumbleThreshold": "将大失败阈值设为{value}",
@@ -204,7 +204,7 @@
 	"AC5E.OptinDescription.UpgradesDamageDiceWithValue": "增大伤害骰（{value}）",
 	"AC5E.OptinDescription.DowngradesDamageDice": "减小伤害骰",
 	"AC5E.OptinDescription.DowngradesDamageDiceWithValue": "减小伤害骰（{value}）",
-	"AC5E.OptinDescription.ModifiesAttackRange": "调整攻击距离行为",
+	"AC5E.OptinDescription.ModifiesAttackRange": "调整攻击射程行为",
 	"AC5E.OptinDescription.FinalStandDropsTo": "最终站立（降至{value}）",
 	"AC5E.Chance.Triggered": "已触发",
 	"AC5E.Chance.TriggeredWithRoll": "已触发（掷出{roll}）",
@@ -231,7 +231,7 @@
 		},
 		"flags.automated-condition-5e.spellSniper": {
 			"name": "法术射手",
-			"description": "2024 规则下，在敌人5尺范围内施放射程至少10尺的远程法术时不会承受劣势，并额外增加60尺射程"
+			"description": "2024 规则下，在敌人 5 尺范围内施放射程至少 10 尺的远程法术时不会承受劣势，并使射程增加 60 尺。"
 		},
 		"flags.automated-conditions-5e.attack.criticalThreshold": {
 			"name": "调整重击阈值",
@@ -259,15 +259,15 @@
 		},
 		"flags.automated-conditions-5e.damage.extraDice": {
 			"name": "增加或减少掷骰的骰子数量",
-			"description": "使用 bonus=4 增加4个骰子数量"
+			"description": "使用 bonus=4 增加 4 个伤害骰。"
 		},
 		"flags.automated-conditions-5e.grants.damage.extraDice": {
 			"name": "为攻击者的伤害增加或减少掷骰的骰子数量",
-			"description": "使用 bonus=-1 减少1个骰子数量"
+			"description": "使用 bonus=-1 减少 1 个伤害骰。"
 		},
 		"flags.automated-conditions-5e.aura.damage.extraDice": {
 			"name": "光环：增加或减少范围内生物掷骰的骰子数量",
-			"description": "使用 bonus=2; radius=10 在10距离单位半径内生物掷骰的骰子数量增加 2"
+			"description": "使用 bonus=2; radius=10 使半径 10 个单位内的生物增加 2 个伤害骰。"
 		},
 		"flags.automated-conditions-5e.damage.typeOverride": {
 			"name": "覆盖基础伤害掷骰的伤害类型集合",
@@ -283,15 +283,15 @@
 		},
 		"flags.automated-conditions-5e.modifyAC": {
 			"name": "调整角色的AC",
-			"description": "使用 bonus=5 增加5点AC或 set=15 设置为15。可以使用掷骰数据、骰子公式和评估条件"
+			"description": "使用 bonus=5 增加 5 点 AC，或 set=15 将其设为 15。可使用掷骰数据、骰子公式和条件表达式。"
 		},
 		"flags.automated-conditions-5e.grant.modifyAC": {
 			"name": "调整与该目标对抗生物的AC",
-			"description": "使用 bonus=-5 减少5点AC或 set=15 设置为15。可以使用掷骰数据、骰子公式和评估条件"
+			"description": "使用 bonus=-5 减少 5 点 AC，或 set=15 将其设为 15。可使用掷骰数据、骰子公式和条件表达式。"
 		},
 		"flags.automated-conditions-5e.aura.modifyAC": {
 			"name": "光环：调整范围内生物的AC",
-			"description": "使用 radius=10;bonus=1d4; 或 radius=15;set=15。前者将给予AC加值，后者将设置为提供的值"
+			"description": "使用 radius=10;bonus=1d4; 或 radius=15;set=15。前者提供 AC 加值，后者将 AC 设为指定值。"
 		},
 		"flags.automated-conditions-5e.ACTIONTYPE": {
 			"advantage": {
@@ -303,7 +303,7 @@
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。示例：bonus=1d4 + 5 - rollingActor.abilities.dex.mod;"
 			},
 			"critical": {
-				"name": "掷骰强制大成功(N20或重击伤害)",
+				"name": "掷骰强制重击（N20 或重击伤害）",
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。"
 			},
 			"disadvantage": {
@@ -311,7 +311,7 @@
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。"
 			},
 			"modifier": {
-				"name": "D20检定的最小和最大修饰符，伤害掷骰的最大和任意修饰符",
+				"name": "D20 检定的最小和最大调整值，伤害掷骰的最大和任意调整值",
 				"description": "将 ACTIONTYPE 替换为以下之一：d20/attack/check/concentration/damage/death/initiative/save/skill/tool。示例：modifier=(rollingActor.attributes.hp.pct < 50 ? max8 : min12)"
 			},
 			"modifyDC": {
@@ -323,7 +323,7 @@
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。"
 			},
 			"noCritical": {
-				"name": "不会大成功",
+				"name": "不会重击",
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/damage。"
 			},
 			"noDisadvantage": {
@@ -357,7 +357,7 @@
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。以 bonus= 开头，使用 ; 分隔。示例：bonus=1d4 + 5 - opponentActor.abilities.dex.mod;"
 			},
 			"critical": {
-				"name": "与该目标对抗的生物掷骰强制大成功(N20或重击伤害)",
+				"name": "与该目标对抗的生物掷骰强制重击（N20 或重击伤害）",
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。"
 			},
 			"disadvantage": {
@@ -365,7 +365,7 @@
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。"
 			},
 			"modifier": {
-				"name": "与该目标对抗的生物掷骰公式修饰符调整，D20检定的最小和最大修饰符，伤害掷骰的最大和任意修饰符",
+				"name": "与该目标对抗的生物掷骰公式调整值，D20 检定的最小和最大调整值，伤害掷骰的最大和任意调整值",
 				"description": "将 ACTIONTYPE 替换为以下之一：d20/attack/check/concentration/damage/death/initiative/save/skill/tool。示例：modifier=min10"
 			},
 			"modifyDC": {
@@ -377,7 +377,7 @@
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。"
 			},
 			"noCritical": {
-				"name": "与该目标对抗的生物不会大成功",
+				"name": "与该目标对抗的生物不会重击",
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/damage。"
 			},
 			"noDisadvantage": {
@@ -411,7 +411,7 @@
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。以先攻 ACTIONTYPE 为例，将效果值设为 radius=20;bonus=-auraActor.abilities.cha.mod;opponentActor.statuses.surprised，会使 20 英尺内所有处于突袭状态的目标在掷骰时减去来源角色的魅力调整值。"
 			},
 			"critical": {
-				"name": "光环：掷骰强制大成功(N20或重击伤害)",
+				"name": "光环：掷骰强制重击（N20 或重击伤害）",
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。效果值格式：radius=Number; 后接 allies 或 enemies，省略表示全部目标；然后填写其他条件。"
 			},
 			"disadvantage": {
@@ -419,7 +419,7 @@
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。效果值格式：radius=Number; 后接 allies 或 enemies，省略表示全部目标；然后填写其他条件。"
 			},
 			"modifier": {
-				"name": "光环：D20检定的最小和最大修饰符，伤害掷骰的最大和任意修饰符",
+				"name": "光环：D20 检定的最小和最大调整值，伤害掷骰的最大和任意调整值",
 				"description": "将 ACTIONTYPE 替换为以下之一：d20/attack/check/concentration/damage/death/initiative/save/skill/tool。示例：modifier=min10; radius=(rollingActor.details.level < 10 ? 15 : 30); modifier=min10"
 			},
 			"modifyDC": {
@@ -431,7 +431,7 @@
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。按通常方式设置 radius。"
 			},
 			"noCritical": {
-				"name": "光环：不会大成功",
+				"name": "光环：不会重击",
 				"description": "将 ACTIONTYPE 替换为以下之一：all/d20/attack/damage。按通常方式设置 radius。"
 			},
 			"noDisadvantage": {
@@ -501,13 +501,13 @@
 	"AC5E.EffectValueEditor.Assist.Root": "根目录",
 	"AC5E.EffectValueEditor.Assist.DamageTypes": "伤害类型",
 	"AC5E.EffectValueEditor.Assist.HealingTypes": "治疗行动的类型",
-	"AC5E.Optin.UpdateSummary.ExhaustionLevel": "层级",
+	"AC5E.Optin.UpdateSummary.ExhaustionLevel": "等级",
 	"AC5E.RegistryImport.InvalidSnapshot": "AC5E：此文件不是此注册表支持的 JSON 导出。",
-	"AC5E.RegistryImport.InvalidEntry": "AC5E：条目 {index} 无效或重复密钥或 ID。没有导入任何条目。",
-	"AC5E.RegistryImport.NoActiveGM": "AC5E：需要活动GM才能导入对持久条目的更改。",
+	"AC5E.RegistryImport.InvalidEntry": "AC5E：条目 {index} 无效或重复键或 ID。没有导入任何条目。",
+	"AC5E.RegistryImport.NoActiveGM": "AC5E：需要活跃 GM 才能导入对持久条目的更改。",
 	"AC5E.RegistryImport.SaveFailed": "AC5E：无法保存导入的条目。之前的注册表状态已恢复。",
 	"AC5E.RegistryExport.Skipped": "AC5E：在 JSON 导出期间跳过 {count} 条目，因为它们包含回调或 JSON 无法保留的其他值。请参阅下面跳过的条目。",
-	"AC5E.StatusEffectsOverrides.ConditionError": "AC5E：{status}/{hook}/{type} 的状态覆盖“{name}”（id：{id}）已被跳过。状况：{condition}。错误：{error}。使用具有相同 ID 的 ac5e.statusEffectsOverrides.register 更正其状况，或使用 ac5e.statusEffectsOverrides.remove({removeId}) 删除它。禁止访问游戏/画布标识符；请改用沙箱字段。允许使用包含这些单词的引用名称。",
+	"AC5E.StatusEffectsOverrides.ConditionError": "AC5E：{status}/{hook}/{type} 的状态覆盖“{name}”（id：{id}）已被跳过。状态：{condition}。错误：{error}。使用具有相同 ID 的 ac5e.statusEffectsOverrides.register 更正其状态，或使用 ac5e.statusEffectsOverrides.remove({removeId}) 删除它。禁止访问游戏/画布标识符；请改用沙箱字段。允许使用包含这些单词的引用名称。",
 	"AC5E.Ui.Name": "禁用 AC5E 用户界面",
 	"AC5E.Ui.Hint": "禁用主动效果值编辑器的 AC5E 魔杖按钮。",
 	"AC5E.LinksMenu.Name": "模块支持",
@@ -556,49 +556,49 @@
 	"AC5E.EffectValueEditor.ChangeHeader": "{effect}（变更索引：{index}）",
 	"AC5E.EffectValueEditor.Label.Effect": "效果",
 	"AC5E.EffectValueEditor.Label.ToggleBehavior": "切换行为",
-	"AC5E.EffectValueEditor.Label.Cadence": "节奏",
+	"AC5E.EffectValueEditor.Label.Cadence": "触发频率",
 	"AC5E.EffectValueEditor.Label.Name": "名称",
 	"AC5E.EffectValueEditor.Label.Description": "描述",
 	"AC5E.EffectValueEditor.Label.UsesCount": "使用次数",
 	"AC5E.EffectValueEditor.Label.Condition": "条件",
-	"AC5E.EffectValueEditor.Label.Modifier": "修饰符",
+	"AC5E.EffectValueEditor.Label.Modifier": "调整值",
 	"AC5E.EffectValueEditor.Label.AddTo": "添加到",
-	"AC5E.EffectValueEditor.Label.Set": "套装",
+	"AC5E.EffectValueEditor.Label.Set": "设定",
 	"AC5E.EffectValueEditor.Label.Radius": "半径",
-	"AC5E.EffectValueEditor.Label.Chance": "机会",
+	"AC5E.EffectValueEditor.Label.Chance": "概率",
 	"AC5E.EffectValueEditor.Label.EnforceMode": "强制模式",
-	"AC5E.EffectValueEditor.Label.Optin": "选择",
-	"AC5E.EffectValueEditor.Label.OptinId": "选择 ID",
-	"AC5E.EffectValueEditor.Label.OptinPreselected": "选择预选",
-	"AC5E.EffectValueEditor.Label.ItemLimited": "物品有限公司",
-	"AC5E.EffectValueEditor.Label.CriticalStatic": "临界静电",
-	"AC5E.EffectValueEditor.Label.Cancel": "取消掷骰子",
-	"AC5E.EffectValueEditor.Label.ShortRange": "短距离",
-	"AC5E.EffectValueEditor.Label.Reach": "达到",
-	"AC5E.EffectValueEditor.Label.RangeAuraBehavior": "范围/光环行为",
-	"AC5E.EffectValueEditor.Label.RangeBehavior": "范围行为",
+	"AC5E.EffectValueEditor.Label.Optin": "可选",
+	"AC5E.EffectValueEditor.Label.OptinId": "可选 ID",
+	"AC5E.EffectValueEditor.Label.OptinPreselected": "预选可选",
+	"AC5E.EffectValueEditor.Label.ItemLimited": "物品限定",
+	"AC5E.EffectValueEditor.Label.CriticalStatic": "固定重击",
+	"AC5E.EffectValueEditor.Label.Cancel": "取消掷骰",
+	"AC5E.EffectValueEditor.Label.ShortRange": "短射程",
+	"AC5E.EffectValueEditor.Label.Reach": "触及",
+	"AC5E.EffectValueEditor.Label.RangeAuraBehavior": "射程/光环行为",
+	"AC5E.EffectValueEditor.Label.RangeBehavior": "射程行为",
 	"AC5E.EffectValueEditor.Label.AuraBehavior": "光环行为",
-	"AC5E.EffectValueEditor.Label.IncludeSelf": "包括自我",
-	"AC5E.EffectValueEditor.Label.SingleAura": "单光环",
-	"AC5E.EffectValueEditor.Label.WallsBlock": "墙块",
-	"AC5E.EffectValueEditor.Label.LongDisadvantage": "龙劣势",
-	"AC5E.EffectValueEditor.Label.NoLongDisadvantage": "劣势不再",
+	"AC5E.EffectValueEditor.Label.IncludeSelf": "包含自身",
+	"AC5E.EffectValueEditor.Label.SingleAura": "单一光环",
+	"AC5E.EffectValueEditor.Label.WallsBlock": "墙壁阻挡",
+	"AC5E.EffectValueEditor.Label.LongDisadvantage": "远程劣势",
+	"AC5E.EffectValueEditor.Label.NoLongDisadvantage": "无远程劣势",
 	"AC5E.EffectValueEditor.Label.NearbyFoeDisadvantage": "附近敌人劣势",
-	"AC5E.EffectValueEditor.Label.NoNearbyFoeDisadvantage": "无近敌劣势",
-	"AC5E.EffectValueEditor.Label.OutOfRangeFail": "超出范围失败",
-	"AC5E.EffectValueEditor.Label.NoOutOfRangeFail": "无超出范围失败",
+	"AC5E.EffectValueEditor.Label.NoNearbyFoeDisadvantage": "无附近敌人劣势",
+	"AC5E.EffectValueEditor.Label.OutOfRangeFail": "超出射程失败",
+	"AC5E.EffectValueEditor.Label.NoOutOfRangeFail": "超出射程不失败",
 	"AC5E.EffectValueEditor.Label.Scaling": "缩放",
 	"AC5E.EffectValueEditor.Label.Min": "最小",
 	"AC5E.EffectValueEditor.Label.Max": "最大",
-	"AC5E.EffectValueEditor.Label.Step": "步骤",
+	"AC5E.EffectValueEditor.Label.Step": "步长",
 	"AC5E.EffectValueEditor.Label.Spellcasting": "施法",
 	"AC5E.EffectValueEditor.Label.BonusDamage": "额外伤害",
-	"AC5E.EffectValueEditor.Label.SelectedOptin": "选择选择",
-	"AC5E.EffectValueEditor.Label.IncludeTypes": "包括类型",
+	"AC5E.EffectValueEditor.Label.SelectedOptin": "已选可选",
+	"AC5E.EffectValueEditor.Label.IncludeTypes": "包含类型",
 	"AC5E.EffectValueEditor.Label.ExcludeTypes": "排除类型",
 	"AC5E.EffectValueEditor.Label.UpdateTarget": "更新目标",
-	"AC5E.EffectValueEditor.Label.Amount": "金额",
-	"AC5E.EffectValueEditor.Cadence.Once": "曾经",
+	"AC5E.EffectValueEditor.Label.Amount": "数量",
+	"AC5E.EffectValueEditor.Cadence.Once": "一次",
 	"AC5E.EffectValueEditor.Cadence.OncePerTurn": "每回合一次",
 	"AC5E.EffectValueEditor.Cadence.OncePerRound": "每轮一次",
 	"AC5E.EffectValueEditor.Cadence.OncePerCombat": "每场战斗一次",
@@ -607,72 +607,72 @@
 	"AC5E.EffectValueEditor.Button.Roots": "根源",
 	"AC5E.EffectValueEditor.Button.Back": "返回",
 	"AC5E.EffectValueEditor.Title.Edit": "编辑{label}",
-	"AC5E.EffectValueEditor.Assist.Values": "价值观",
-	"AC5E.EffectValueEditor.Assist.Operators": "运营商",
-	"AC5E.EffectValueEditor.Assist.UsesCountQuickTargets": "使用计数快速目标（具有此效果的角色）",
-	"AC5E.EffectValueEditor.Assist.UpdateQuickTargets": "更新快速目标",
+	"AC5E.EffectValueEditor.Assist.Values": "值",
+	"AC5E.EffectValueEditor.Assist.Operators": "运算符",
+	"AC5E.EffectValueEditor.Assist.UsesCountQuickTargets": "使用次数快捷目标（拥有此效果的角色）",
+	"AC5E.EffectValueEditor.Assist.UpdateQuickTargets": "更新快捷目标",
 	"AC5E.EffectValueEditor.Assist.AddTypeChoices": "添加到现有类型选择",
 	"AC5E.EffectValueEditor.Assist.AddTypeChoicesHint": "将选定的类型添加到每个受影响部分的现有下拉选项中，而不是替换它们。不增加额外伤害。在覆盖值中存储 + 前缀。",
-	"AC5E.EffectValueEditor.Assist.AbilityOverrideEntries": "能力覆盖条目",
-	"AC5E.EffectValueEditor.Assist.WhichDamageParts": "哪些零件伤害",
-	"AC5E.EffectValueEditor.Assist.SelectedOptin": "选择选择",
-	"AC5E.EffectValueEditor.Assist.TypeFilters": "类型过滤器",
+	"AC5E.EffectValueEditor.Assist.AbilityOverrideEntries": "属性覆盖条目",
+	"AC5E.EffectValueEditor.Assist.WhichDamageParts": "伤害分项",
+	"AC5E.EffectValueEditor.Assist.SelectedOptin": "已选可选",
+	"AC5E.EffectValueEditor.Assist.TypeFilters": "类型筛选",
 	"AC5E.EffectValueEditor.Assist.ActorEntries": "角色条目",
 	"AC5E.EffectValueEditor.Assist.ItemActivityEntries": "物品/行动条目",
-	"AC5E.EffectValueEditor.Assist.RollAwareEntries": "骰子感知条目",
-	"AC5E.EffectValueEditor.Assist.Functions": "AC5E功能",
-	"AC5E.EffectValueEditor.Assist.Ternary": "三元",
+	"AC5E.EffectValueEditor.Assist.RollAwareEntries": "感知掷骰的条目",
+	"AC5E.EffectValueEditor.Assist.Functions": "AC5E 功能",
+	"AC5E.EffectValueEditor.Assist.Ternary": "三元表达式",
 	"AC5E.EffectValueEditor.Assist.PathFields": "路径字段：{path}",
 	"AC5E.EffectValueEditor.Assist.Idle": "键入或选择支持的根/路径以浏览可用条目。",
 	"AC5E.EffectValueEditor.Assist.NoPaths": "没有可用的路径",
 	"AC5E.EffectValueEditor.Assist.NoEntries": "没有条目",
-	"AC5E.EffectValueEditor.Placeholder.AddToExamples": "示例： 基础 |奖金 |类型（火，冷）|碱，！类型（酸）",
-	"AC5E.EffectValueEditor.Placeholder.UsesCountAmount": "1或=5",
-	"AC5E.EffectValueEditor.Placeholder.UpdateAmount": "1、-1或=5",
-	"AC5E.EffectValueEditor.Hint.AttributeKey": "有关 AC5E 密钥和示例，请参阅 <a href=\"https://github.com/thatlonelybugbear/automated-conditions-5e/wiki\"> wiki</a>。",
+	"AC5E.EffectValueEditor.Placeholder.AddToExamples": "示例：base | bonus | types(fire,cold) | base,!types(acid)",
+	"AC5E.EffectValueEditor.Placeholder.UsesCountAmount": "1 或 =5",
+	"AC5E.EffectValueEditor.Placeholder.UpdateAmount": "1、-1 或 =5",
+	"AC5E.EffectValueEditor.Hint.AttributeKey": "有关 AC5E 键名和示例，请参阅 <a href=\"https://github.com/thatlonelybugbear/automated-conditions-5e/wiki\"> wiki</a>。",
 	"AC5E.EffectValueEditor.Hint.OptinPreselected": "对话框打开时默认启用此可选条目。",
-	"AC5E.EffectValueEditor.Hint.ShowCadence": "显示节奏控制（一次、每回合、回合或战斗一次）。",
+	"AC5E.EffectValueEditor.Hint.ShowCadence": "显示触发频率控制（一次、每回合、每轮或每场战斗一次）。",
 	"AC5E.EffectValueEditor.Hint.ShowName": "包括此条目的自定义显示名称。",
 	"AC5E.EffectValueEditor.Hint.ShowDescription": "包括显示/工具提示文本的简短描述。",
-	"AC5E.EffectValueEditor.Hint.ShowUsesCount": "为此条目启用使用计数配置。",
+	"AC5E.EffectValueEditor.Hint.ShowUsesCount": "为此条目启用使用次数配置。",
 	"AC5E.EffectValueEditor.Hint.ShowUpdate": "启用此条目的角色更新配置。",
-	"AC5E.EffectValueEditor.Hint.SetMode": "将奖金字段视为绝对设定值而不是附加奖金。",
+	"AC5E.EffectValueEditor.Hint.SetMode": "将加值字段视为绝对设定值，而不是额外加值。",
 	"AC5E.EffectValueEditor.Hint.EnableUsesCountScaling": "为 usesCount 消耗值启用最小值、最大值和步长的缩放输入。启用缩放后，可在公式或条件中使用 scaleValue 引用计算出的缩放值。",
 	"AC5E.EffectValueEditor.Hint.UsesCountAmount": "正值消耗。负值恢复。使用 =value 设置绝对值。",
 	"AC5E.EffectValueEditor.Hint.UpdateAmount": "正值会增加。负值相减。使用 =value 设置绝对值。",
-	"AC5E.EffectValueEditor.Hint.UpdateAmountStatus": "正值或 =1 应用该状态。零、负值或 =0 将其删除。",
-	"AC5E.EffectValueEditor.Hint.UpdateAmountConcentration": "正值或 =1 应用通用集中状态。零、负值或 =0 将其删除。",
-	"AC5E.EffectValueEditor.Hint.UpdateAmountInspiration": "正值或 =1 授予灵感。零、负值或 =0 将其删除。",
-	"AC5E.EffectValueEditor.Hint.UpdateAmountExhaustion": "正值会增加疲劳程度。负值会移除级别。使用 =0 清除耗尽。",
-	"AC5E.EffectValueEditor.Hint.ToggleOptin": "将此条目显示为可选，以便用户启用每掷骰。",
-	"AC5E.EffectValueEditor.Hint.ToggleCancel": "当此信息条目适用时，取消骰子评估之前的掷骰。对于选择加入、取消需要选择。选定的更新和usesCount消耗仍然适用。",
-	"AC5E.EffectValueEditor.Hint.ToggleItemLimited": "仅当原始物品/行动与有限源上下文匹配时才适用。",
-	"AC5E.EffectValueEditor.Hint.ToggleCriticalStatic": "按原样应用此伤害加值或额外骰子，而不遵循正常的暴击规则。",
-	"AC5E.EffectValueEditor.Hint.ToggleAllies": "光环适用于联盟Token。",
-	"AC5E.EffectValueEditor.Hint.ToggleEnemies": "光环适用于敌方Token。",
-	"AC5E.EffectValueEditor.Hint.ToggleIncludeSelf": "光环也适用于源角色。",
-	"AC5E.EffectValueEditor.Hint.ToggleSingleAura": "一次只允许申请一个活跃的光环源。",
-	"AC5E.EffectValueEditor.Hint.ToggleWallsBlock": "墙壁可以阻挡光环的到达/路径。",
-	"AC5E.EffectValueEditor.Hint.ToggleRecover": "反向使用消耗并恢复配置的数量。",
+	"AC5E.EffectValueEditor.Hint.UpdateAmountStatus": "正值或 =1 应用该状态。零、负值或 =0 将其移除。",
+	"AC5E.EffectValueEditor.Hint.UpdateAmountConcentration": "正值或 =1 应用通用专注状态。零、负值或 =0 将其移除。",
+	"AC5E.EffectValueEditor.Hint.UpdateAmountInspiration": "正值或 =1 授予灵感。零、负值或 =0 将其移除。",
+	"AC5E.EffectValueEditor.Hint.UpdateAmountExhaustion": "正值增加力竭等级。负值移除等级。使用 =0 清除力竭。",
+	"AC5E.EffectValueEditor.Hint.ToggleOptin": "将此条目显示为可选，让用户可为每次掷骰启用。",
+	"AC5E.EffectValueEditor.Hint.ToggleCancel": "当此条目适用时，在掷骰评估前取消该掷骰。取消需要先选中该条目；已选的更新与 usesCount 消耗仍会生效。",
+	"AC5E.EffectValueEditor.Hint.ToggleItemLimited": "仅当原始物品/行动与限定来源上下文匹配时才适用。",
+	"AC5E.EffectValueEditor.Hint.ToggleCriticalStatic": "按原样应用此伤害加值或额外骰子，而不遵循正常的重击规则。",
+	"AC5E.EffectValueEditor.Hint.ToggleAllies": "光环适用于友方 Token。",
+	"AC5E.EffectValueEditor.Hint.ToggleEnemies": "光环适用于敌方 Token。",
+	"AC5E.EffectValueEditor.Hint.ToggleIncludeSelf": "光环也适用于来源角色。",
+	"AC5E.EffectValueEditor.Hint.ToggleSingleAura": "同一时间只允许一个生效的光环源。",
+	"AC5E.EffectValueEditor.Hint.ToggleWallsBlock": "墙壁可以阻挡光环的传播/路径。",
+	"AC5E.EffectValueEditor.Hint.ToggleRecover": "反向使用：消耗并恢复配置的数量。",
 	"AC5E.EffectValueEditor.Hint.UsesCountSet": "使用 =amount 语法将目标设置为绝对数量。",
-	"AC5E.EffectValueEditor.Hint.TogglePartialConsume": "允许花费可用的资金，而不是在短缺时阻止。",
+	"AC5E.EffectValueEditor.Hint.TogglePartialConsume": "允许消耗当前可用数量，而不是在不足时阻止。",
 	"AC5E.EffectValueEditor.Hint.ToggleRangeLongDisadvantage": "强制开启远程劣势。",
-	"AC5E.EffectValueEditor.Hint.ToggleRangeNoLongDisadvantage": "强制远程劣势关闭。",
-	"AC5E.EffectValueEditor.Hint.ToggleRangeNearbyFoeDisadvantage": "迫使附近的敌人处于劣势。",
-	"AC5E.EffectValueEditor.Hint.ToggleRangeNoNearbyFoeDisadvantage": "迫使附近的敌人处于劣势。",
-	"AC5E.EffectValueEditor.Hint.ToggleRangeOutOfRangeFail": "强制超出范围的使用失败。",
-	"AC5E.EffectValueEditor.Hint.ToggleRangeNoOutOfRangeFail": "强制超出范围的使用不会失败。",
-	"AC5E.EffectValueEditor.Hint.RangeShort": "使用 +value、-value 或裸值来设置修改短范围。",
-	"AC5E.EffectValueEditor.Hint.RangeLong": "使用 +value、-value 或裸值来设置修改长范围。",
-	"AC5E.EffectValueEditor.Hint.RangeReach": "使用+值、-值或裸值来设置修改近战范围。",
-	"AC5E.EffectValueEditor.Hint.RangeBonus": "使用 +value、-value 或要设置的裸值修改每个匹配范围值。",
+	"AC5E.EffectValueEditor.Hint.ToggleRangeNoLongDisadvantage": "强制关闭远程劣势。",
+	"AC5E.EffectValueEditor.Hint.ToggleRangeNearbyFoeDisadvantage": "强制附近敌人处于劣势。",
+	"AC5E.EffectValueEditor.Hint.ToggleRangeNoNearbyFoeDisadvantage": "取消附近敌人劣势。",
+	"AC5E.EffectValueEditor.Hint.ToggleRangeOutOfRangeFail": "强制超出射程的使用失败。",
+	"AC5E.EffectValueEditor.Hint.ToggleRangeNoOutOfRangeFail": "强制超出射程的使用不会失败。",
+	"AC5E.EffectValueEditor.Hint.RangeShort": "使用 +value、-value 或裸值来设置/修改短射程。",
+	"AC5E.EffectValueEditor.Hint.RangeLong": "使用 +value、-value 或裸值来设置/修改长射程。",
+	"AC5E.EffectValueEditor.Hint.RangeReach": "使用 +value、-value 或裸值来设置/修改触及距离。",
+	"AC5E.EffectValueEditor.Hint.RangeBonus": "使用 +value、-value 或裸值修改每个匹配的射程值。",
 	"AC5E.Optin.UpdateSummary.Updates": "更新 {target}",
 	"AC5E.Optin.UpdateSummary.UpdatesCompact": "更新 {target}",
 	"AC5E.Optin.UpdateSummary.Sets": "将 {target} 设置为 {value}",
-	"AC5E.Optin.UpdateSummary.AppliesTo": "适用于 {value} 至 {target}",
-	"AC5E.Optin.UpdateSummary.RemovesFrom": "从 {target} 中删除 {value}",
-	"AC5E.Optin.UpdateSummary.AppliesWithUnit": "适用 {value} {target} {unit}",
-	"AC5E.Optin.UpdateSummary.RemovesWithUnit": "删除 {value} {target} {unit}",
-	"AC5E.Optin.UpdateSummary.Exhaustion": "精疲力尽",
-	"AC5E.Optin.UpdateSummary.ExhaustionLevels": "级别"
+	"AC5E.Optin.UpdateSummary.AppliesTo": "对 {target} 应用 {value}",
+	"AC5E.Optin.UpdateSummary.RemovesFrom": "从 {target} 移除 {value}",
+	"AC5E.Optin.UpdateSummary.AppliesWithUnit": "对 {target} 应用 {value} {unit}",
+	"AC5E.Optin.UpdateSummary.RemovesWithUnit": "从 {target} 移除 {value} {unit}",
+	"AC5E.Optin.UpdateSummary.Exhaustion": "力竭",
+	"AC5E.Optin.UpdateSummary.ExhaustionLevels": "等级"
 }
