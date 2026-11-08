@@ -2738,5 +2738,11 @@
 	"dae.ConditionBuilder.Field.spellDC": "法术豁免 DC",
 	"dae.ConditionBuilder.Field.initiative": "先攻",
 	"dae.ConditionBuilder.Field.exhaustion": "力竭等级",
-	"dae.ConditionBuilder.Field.darkvision": "黑暗视觉范围"
+	"dae.ConditionBuilder.Field.darkvision": "黑暗视觉范围",
+	"dae.OriginReplacement.Menu": "DAE：将变更转换为起源替换",
+	"dae.OriginReplacement.Title": "转换为起源替换：{name}",
+	"dae.OriginReplacement.Content": "<p>{effects} 个效果中的 {changes} 项变更没有替换项，将被设为 <strong>起源</strong>：应用效果时，其 @ 引用会像旧版 DAE 那样从施法者填充。## 引用仍在目标上解析。转移效果和附魔不会更改。</p><p>此操作无法撤销。</p>",
+	"dae.OriginReplacement.Nothing": "DAE：{name} 没有可转换的变更",
+	"dae.OriginReplacement.Done": "DAE：已在 {name} 中将 {effects} 个效果里的 {changes} 项变更设为起源替换",
+	"dae.OriginReplacement.Locked": "DAE：{name} 已锁定——请先解锁"
 }

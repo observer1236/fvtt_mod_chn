@@ -75,10 +75,10 @@
 	"midi-qol.noItemNamed": "你选择的token没有对应名称的物品",
 	"midi-qol.noTokens": "无法应用效果 - 无目标Token",
 	"midi-qol.HideNPCNames.Name": "隐藏 NPC 名称",
-	"midi-qol.HideNPCNames.Hint": "聊天卡和伤害托盘中，玩家看到的无玩家拥有者生物的名称。留空则显示真实名称。如果启用了 Anonymous 或 Hide NPC Names 模块，将由这些模块决定显示名称。",
+	"midi-qol.HideNPCNames.Hint": "聊天卡和伤害托盘中，玩家看到的无玩家拥有者生物的名称。留空则显示真实名称。启用 Hide NPC Names 时，由该模组决定显示名称。",
 	"midi-qol.noTemplateSeen": "测量板尚未放置",
 	"midi-qol.AutoTarget.Name": "自动选中测量板上的目标",
-	"midi-qol.AutoTarget.Hint": "放置测量板（例如施法）时，自动将其中的 Token 选为目标。如果远程目标选择设为“Center + Levels”，则使用 Levels 的体积测量板功能（需要安装对应模组）。",
+	"midi-qol.AutoTarget.Hint": "放置测量板（例如施法）时，自动将其中的 Token 选为目标。若安装了 Levels Volumetric Templates，则由它负责选择目标。",
 	"midi-qol.undoDamageFrom": "撤销伤害-来自",
 	"midi-qol.noGM": "只有当GM用户在线时才能应用效果或者更新HP",
 	"midi-qol.noSelection": "未选中token或角色",
@@ -89,7 +89,7 @@
 	"midi-qol.ColoredBorders.Name": "消息边框着色",
 	"midi-qol.ColoredBorders.Hint": "每条聊天消息的边框颜色改为玩家角色的颜色",
 	"midi-qol.AutoEffects.Name": "自动应用物品效果",
-	"midi-qol.AutoEffects.Hint": "若目标被命中、豁免失败或者未豁免，自动对其应用物品的主动效果。同时最好使用 about-time或times-up。",
+	"midi-qol.AutoEffects.Hint": "若目标被命中、豁免失败或未进行豁免，自动对其应用物品的主动效果。",
 	"midi-qol.AutoEffectsOptions": {
 		"off": "不自动应用效果",
 		"applyNoButton": "应用效果不显示按钮",
@@ -143,7 +143,7 @@
 	"midi-qol.ConfigTitle": "Midi-QOL 配置",
 	"midi-qol.WorkflowSettings": "工作流设置",
 	"midi-qol.ActivitySheetTabs": {
-		"modConditions": "条件",
+		"modConditions": "使用",
 		"workflowSettings": "工作流",
 		"activityManagement": "行动",
 		"overtime": "OverTime",
@@ -573,7 +573,7 @@
 	"midi-qol.AttackMacro.Hint": "在计算攻击检定结果是否命中目标时调用的宏的列表，用逗号分隔",
 	"midi-qol.DAEMidiQOL": "DAE/Midi-QOL特定",
 	"midi-qol.OptionalRules.Name": "游戏规则",
-	"midi-qol.OptionalRules.Hint": "你可能希望启用的一些DND5E游戏规则。通常无法与better rolls协同使用。",
+	"midi-qol.OptionalRules.Hint": "你可能希望启用的游戏规则。",
 	"midi-qol.InvisAdvantage.Name": "隐藏/隐身攻击者在攻击时获得优势/劣势",
 	"midi-qol.RAW2014Invisible.Hint": "<strong>RAW(2014)</strong> 隐形状态总是提供优势/劣势；其他感官（盲视、震颤感知）会抵消来自不可见的优势/劣势。",
 	"midi-qol.RAW2024Invisible.Hint": "<strong>RAW(2024)</strong> 仅当其他生物无法<em>看见</em>你时提供优势/劣势——盲视/真实视觉可抵消，但震颤感知不能。",
@@ -586,11 +586,13 @@
 	"midi-qol.InvisVision.Name": "检查时强制视觉",
 	"midi-qol.InvisVision.Hint": "<strong>勾选：</strong>所有 Token 都已启用视觉。<br><strong>未勾选：</strong> 没有视觉的 Token 可以看到一切",
 	"midi-qol.HiddenAdvantage.Name": "隐匿的攻击者在进行攻击检定时获得优势/劣势",
-	"midi-qol.HiddenAdvantage.Hint": "隐匿的攻击者在进行攻击检定时获得优势。如果被攻击目标为隐匿，则对其进行的攻击检定承受劣势",
+	"midi-qol.HiddenAdvantage.Hint": "具有隐匿状态（执行躲藏行动）的生物如何被处理。“按观察者”：对每个未察觉它的生物而言，它在地图上以及未察觉攻击者/目标规则中视为隐形（包括自身、盟友、没有视力的 Token，除非检查时启用强制视觉；识破隐形、真实视觉、盲视、震颤感知，以及房规选项中被动词查不低于躲藏 DC 者除外）。“Perceptive”：由 Perceptive 模组决定谁发现谁。",
 	"midi-qol.HiddenAdvantageOptions": {
 		"none": "不应用",
 		"effect": "检查'隐藏Hidden'状态",
-		"perceptive": "察觉Perceptive"
+		"perceptive": "察觉Perceptive",
+		"perObserver": "隐匿对每个未察觉它的观察者视为隐形",
+		"perObserverPassive": "同上；若被动察觉不低于隐匿 DC，则能察觉（房规）"
 	},
 	"midi-qol.CantSeeAdvantage.Hint": "<strong>使用 Token 视觉：</strong>隐形的攻击者对看不到他们的目标所进行的进行攻击检定获得优势。如果攻击者看不到隐形目标，则对其进行的攻击检定承受劣势。",
 	"midi-qol.CheckRange.Name": "攻击时检查武器射程",
@@ -612,7 +614,7 @@
 		"simplecover5e": "Simple Cover 5e",
 		"expandedHints": {
 			"none": "墙壁不阻挡远程攻击检定。",
-			"center": "检查从 Token 中心到目标中心的视线。若墙壁阻挡视线，则判定攻击被阻挡。起点与终点高度不同时，还会检测视线是否被区域表面阻挡。",
+			"center": "检查从 Token 中心到目标中心的连线。若阻挡移动的墙壁穿过连线（完全掩护），则攻击被阻挡；黑暗和仅阻挡视线的墙壁不会阻挡。跨高度连线也会对区域表面进行检测。",
 			"centerLevels": "使用 Levels 模组确定墙壁是否阻挡视线，进行中心到中心的检查。同时使用 Levels 的体积模板进行模板目标定位。需要 Levels 模组。",
 			"levelsautocover": "使用 Levels Auto Cover 模组计算掩护。完全掩护会阻挡攻击。需要 Levels Auto Cover 模组。",
 			"simbuls-cover-calculator": "使用 Simbul's Cover Calculator 模组计算掩护。完全掩护会阻挡攻击。需要 Simbul's Cover Calculator 模组。",
@@ -627,18 +629,19 @@
 		"centerLevels": "中心 + Levels"
 	},
 	"midi-qol.CoverCalculation.Name": "计算掩护",
-	"midi-qol.CoverCalculation.Hint": "为掩护中的目标计算 AC 加值 - 设置取自所选模组",
+	"midi-qol.CoverCalculation.Hint": "为掩护中的目标计算 AC 加值——设置取自所选模组。除非选择“无”，否则处于完全掩护的目标（完全掩护状态或模组判定）不能被选为目标。",
 	"midi-qol.CoverCalculationOptions": {
 		"none": "禁用",
 		"simbuls-cover-calculator": "Simbul's Cover Calculator",
 		"simplecover5e": "Simple Cover 5e",
 		"levelsautocover": "Levels Auto Cover",
-		"tokencover": "Alternative Token Cover"
+		"tokencover": "Alternative Token Cover",
+		"dnd5eStatus": "仅 dnd5e 掩护状态"
 	},
 	"midi-qol.NearbyAllyRanged.Hint": "对距离盟友5尺内的敌人(小于w*h体型)进行远程攻击带有劣势。0为禁用",
 	"midi-qol.Incapacitated.Name": "当失能角色采取行动时，MidiQOL 应该",
 	"midi-qol.IncapacitatedOptions": {
-		"nothing": "不管",
+		"nothing": "允许",
 		"enforce": "禁止",
 		"warn": "警告"
 	},
@@ -949,7 +952,7 @@
 	"midi-qol.Flanked": "被夹击",
 	"midi-qol.Flanking": "夹击",
 	"midi-qol.FlankingBonus.Name": "夹击奖励类型",
-	"midi-qol.FlankingBonus.Hint": "检测到夹击时，给予优势（默认）或按固定数值降低目标的实际护甲等级（AC）。",
+	"midi-qol.FlankingBonus.Hint": "检测到夹击时，给予优势（默认）或为攻击检定添加固定加值。夹击适用于对单一目标的近战攻击（若启用“为每个目标单独掷攻击”，每次掷骰分别计算）。",
 	"midi-qol.SharpShooter": "神射手",
 	"midi-qol.SpellSniper": "法术射手",
 	"midi-qol.FlankingRequiresVisibility.Name": "夹击需要目标能感知到夹击者",
@@ -964,12 +967,12 @@
 	"midi-qol.FlankingBonusOptions.5": "命中+5",
 	"midi-qol.FlankingLabel": "夹击",
 	"midi-qol.RollAlternate.Name": "移动掷骰公式到提示中",
-	"midi-qol.RollAlternate.Hint": "在合并卡上使用另一种掷骰显示，将掷骰公式移到提示中并添加的优势注解",
+	"midi-qol.RollAlternate.Hint": "将掷骰公式移入掷骰的展开明细。优势归因选项也会在那里列出优势/劣势来源；这些选项已弃用，因为掷骰标签上的信息图标会显示它们。",
 	"midi-qol.RollAlternateOptions": {
 		"off": "默认提示",
 		"formula": "公式 -> 提示",
-		"adv": "优势注解",
-		"formulaadv": "公式 -> 提示 + 优势注解"
+		"adv": "优势归因（已弃用）",
+		"formulaadv": "公式 -> 提示 + 优势归因（已弃用）"
 	},
 	"midi-qol.OptionalCritRule.Name": "(房规)重击余量",
 	"midi-qol.OptionalCritRule.Hint": "攻击检定超过 AC 的差值超过此值，均为重击。设为 -1 以禁用",
@@ -1319,7 +1322,7 @@
 				},
 				"autoTargetAction": {
 					"label": "在测量板绘制时选择目标",
-					"hint": "当放置测量板(例如法术)时，选择测量板内的目标token。如果在远程目标设置中启用了'中心 + Levels'，则将使用Levels Volumetric Templates(如果已安装)"
+					"hint": "放置测量板（例如施法）时，选择其中的目标 Token。若安装了 Levels Volumetric Templates，则由它负责选择目标。"
 				},
 				"automationOnly": {
 					"label": "仅自动化",
@@ -1415,6 +1418,22 @@
 				"autoCEEffects": {
 					"label": "应用DCE效果",
 					"hint": "使用物品时，应用与行动名称(若无匹配则使用物品名称)相匹配的DCE效果。此功能需要同时启用自动应用主动效果。"
+				},
+				"targetMustBeSeen": {
+					"label": "你能看见的目标",
+					"hint": "只能选择你能看见的目标（例如“射程内你能看见的一个生物”）。由“你能看见的目标”设置强制执行。"
+				},
+				"followUp": {
+					"label": "后续按钮",
+					"hint": "当此物品的另一个行动被使用时，将此行动作为其卡片上的按钮提供，并按“后续目标”执行（重击按重击处理）。"
+				},
+				"followUpTargets": {
+					"label": "后续目标",
+					"hint": "后续行动作用的对象。若本次使用有目标但后续无人（攻击未命中、无豁免失败），则不提供按钮。"
+				},
+				"followUpCondition": {
+					"label": "后续条件",
+					"hint": "仅当此条件为真时提供按钮（在使用结束时评估，以第一个后续目标为目标）。"
 				}
 			},
 			"friendlySummon": {
@@ -1514,11 +1533,15 @@
 			},
 			"attackRollPerTarget": {
 				"label": "每个目标单独攻击检定",
-				"hint": "为每个目标单独进行攻击检定。为每个目标生成一个聊天卡片。"
+				"hint": "为每个目标单独进行攻击检定，各自生成聊天卡。使用时会先放置其测量板并确认目标，然后依次攻击每个目标。"
 			},
 			"fumbleThreshold": {
 				"label": "失误阈值",
 				"hint": "如果攻击检定结果小于或等于此值，则视为自动失败"
+			},
+			"ammunitionPerTarget": {
+				"label": "弹药",
+				"hint": "攻击有多个目标时消耗的弹药：每次攻击检定 1 个、整次使用 1 个（如霰弹枪），或每个目标 1 个（如箭矢齐射）。"
 			}
 		}
 	},
@@ -1607,7 +1630,8 @@
 				"label": "移除条件",
 				"hint": "移除效果的条件"
 			}
-		}
+		},
+		"Trigger": "在选定回合节点为每个具有效果且其变更满足 flags.midi-qol.ActivityOverTime = {identifier}（此行动的标识符或其 UUID）的生物运行。将该变更添加到物品应用的效果中。"
 	},
 	"midi-qol.SAVE": {
 		"Title": {
@@ -2214,11 +2238,11 @@
 	},
 	"midi-qol.OverTimeEditor.Title": "OverTime编辑",
 	"midi-qol.OverTimeEditor.Tooltip": "编辑OverTime",
-	"midi-qol.ConditionEditor.Title": "条件表达式",
+	"midi-qol.ConditionEditor.Title": "Midi 条件编辑器",
 	"midi-qol.ConditionEditor.Key": "标记键",
 	"midi-qol.ConditionEditor.Save": "保存",
 	"midi-qol.ConditionEditor.Cancel": "取消",
-	"midi-qol.ConditionEditor.Tooltip": "编辑条件表达式",
+	"midi-qol.ConditionEditor.Tooltip": "Midi 条件编辑器",
 	"midi-qol.OverTimeEditor.TimingSection": "时机",
 	"midi-qol.OverTimeEditor.Label": "标签",
 	"midi-qol.OverTimeEditor.Turn": "回合",
@@ -2419,7 +2443,7 @@
 	"midi-qol.REGION_BEHAVIOR.templateOrigin.top": "施法者顶部",
 	"midi-qol.REGION_BEHAVIOR.templateOrigin.eye": "施法者眼部高度",
 	"BEHAVIOR.TYPES.midi-qol.regionLight.label": "Midi 区域光照",
-	"BEHAVIOR.TYPES.midi-qol.regionLight.hint": "在区域中心创建环境光源，并使其跟随区域移动。",
+	"BEHAVIOR.TYPES.midi-qol.regionLight.hint": "在区域中心创建环境光源或黑暗光源，限制在区域内并跟随区域移动。",
 	"BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.dim.label": "微光光照半径",
 	"BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.color.label": "光照颜色",
 	"BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.alpha.label": "光照不透明度",
@@ -2459,7 +2483,7 @@
 	"midi-qol.TELEPORT.Title.other": "Midi 传送",
 	"midi-qol.TELEPORT.FIELDS.midiTeleport.label": "Midi 传送",
 	"midi-qol.TELEPORT.FIELDS.midiTeleport.movers.label": "传送对象",
-	"midi-qol.TELEPORT.FIELDS.midiTeleport.movers.hint": "“施法者和目标”：施法者先规划移动，再将各目标放到施法者目的地 5 英尺内。“目标”：将各目标放到施法者传送距离内；若仅传送豁免失败者，可让豁免行动触发此行动。",
+	"midi-qol.TELEPORT.FIELDS.midiTeleport.movers.hint": "“施法者和目标”：施法者规划移动，你将各目标放到施法者目的地 5 尺内。“目标”：将各目标放到施法者的传送距离内（可用触发此行动的豁免行动，仅移动豁免失败者）。“交换”：施法者与第一个目标在传送距离内交换位置。",
 	"midi-qol.TELEPORT.FIELDS.midiTeleport.blocked.label": "目的地受阻时",
 	"midi-qol.TELEPORT.FIELDS.midiTeleport.blocked.hint": "“重新选择”：目的地被占用、位于墙内，或要求可见但施法者看不到时，拒绝该位置并重新选择。“传送失败”：所有对象均传送失败，并对传送对象执行物品的伤害行动，例如任意门。",
 	"midi-qol.TELEPORT.FIELDS.midiTeleport.requireSight.label": "目的地必须可见",
@@ -2480,5 +2504,93 @@
 	"midi-qol.TELEPORT.NoSpace": "目的地附近没有可供 {name} 容身的空位，该对象留在原处。",
 	"midi-qol.TELEPORT.NoGM": "未移动 {name}：移动你没有控制权限的 Token 需要GM在线。",
 	"midi-qol.TELEPORT.Failed": "传送失败：目的地被占用或受到阻挡。",
-	"midi-qol.TargetNotEvaluated": "此目标在掷骰后才加入卡片，Midi 未对其进行检查。"
+	"midi-qol.TargetNotEvaluated": "此目标在掷骰后才加入卡片，Midi 未对其进行检查。",
+	"midi-qol.ChatCardSummaries.Name": "聊天卡摘要",
+	"midi-qol.ChatCardSummaries.Hint": "将卡片的豁免检定并入卡片（midi 的豁免区或 dnd5e 的摘要），或显示为独立消息。每个用户的选择跟随其 dnd5e“汇总聊天卡”设置；“始终”和“从不”会为所有人设定（设为“每个用户选择”时恢复各自选择）。",
+	"midi-qol.chatCardSummariesOptions.client": "每个用户选择",
+	"midi-qol.chatCardSummariesOptions.always": "始终",
+	"midi-qol.chatCardSummariesOptions.never": "从不",
+	"midi-qol.chatCardSummariesOptions.expandedHints.client": "由每个用户的 dnd5e“汇总聊天卡”设置决定。",
+	"midi-qol.chatCardSummariesOptions.expandedHints.always": "所有人的豁免都并入其卡片；日志中隐藏豁免消息。",
+	"midi-qol.chatCardSummariesOptions.expandedHints.never": "所有人的豁免都显示为独立消息；不绘制 midi 的豁免区。",
+	"midi-qol.FollowUp.Unavailable": "{name} 已无剩余使用次数",
+	"midi-qol.FollowUp.Targets.default": "攻击的命中目标；否则为所有目标",
+	"midi-qol.ConditionRules.Name": "应用状态规则",
+	"midi-qol.ConditionRules.Hint": "应用 dnd5e 未处理的状态规则，仅作用于启用后添加的状态，无论以何种方式添加：被恐惧、中毒、倒地或束缚的生物（或 2014 规则下力竭 3 级）进行攻击时具有劣势；对麻痹、石化、束缚、震慑或昏迷的生物进行攻击时具有优势，对倒地生物在 5 尺内具有优势、超出 5 尺具有劣势；对麻痹或昏迷生物在 5 尺内命中即为重击；麻痹、石化、震慑和昏迷生物的力量与敏捷豁免自动失败；恐惧生物的属性检定具有劣势；沉默生物无法施放带言语成分的法术；目盲仅当“无法看见”规则关闭时遵循这些规则。擒抱不包含在内。",
+	"midi-qol.TargetMustBeSeen.Name": "你能看见的目标",
+	"midi-qol.TargetMustBeSeen.Hint": "用于要求目标必须是你能看见的目标的行动。检查时使用强制视觉。",
+	"midi-qol.TargetMustBeSeenOptions.nothing": "不检查",
+	"midi-qol.TargetMustBeSeenOptions.enforce": "无法选择看不见的目标",
+	"midi-qol.TargetMustBeSeenOptions.warn": "仅发布警告",
+	"midi-qol.TargetMustBeSeenOptions.expandedHints.nothing": "不检查要求目标可见的行动。",
+	"midi-qol.TargetMustBeSeenOptions.expandedHints.enforce": "要求目标可见的行动不能以该 Token 看不见的目标使用。",
+	"midi-qol.TargetMustBeSeenOptions.expandedHints.warn": "对 Token 看不见的目标使用要求目标可见的行动时，会发布警告但继续执行。",
+	"midi-qol.TargetNotSeen": "{name} 需要能看见的目标：你看不见 {targets}",
+	"midi-qol.TargetingHeader": "Midi 目标选择",
+	"midi-qol.TargetTotalCover": "{name} 的目标处于完全掩护",
+	"midi-qol.RulesAlwaysApplied.Name": "始终应用的规则",
+	"midi-qol.RulesAlwaysApplied.Hint": "无论下方是否启用可选规则，这些规则都会生效。",
+	"midi-qol.ShowAttackRollDetails.Name": "显示攻击检定详情",
+	"midi-qol.ShowAttackRollDetails.Hint": "在攻击检定总值旁显示图标，标示其中的特殊项（夹击、目标给予的加值、效果加值、力竭），并在总值提示中列出掷骰的每一项。",
+	"midi-qol.HiddenGroundCue.Name": "标记看不见生物的较低楼层",
+	"midi-qol.HiddenGroundCue.Hint": "在多层场景中，开口处会绘制下层地板；但如果地板边缘或墙壁挡住你 Token 的视线，站在该处的生物就不可见。按下方选择的样式标记这些方格。",
+	"midi-qol.HiddenGroundCue.Style.Name": "隐藏地面样式",
+	"midi-qol.HiddenGroundCue.Style.Hint": "如何标记看不见生物的方格。",
+	"midi-qol.HiddenGroundCue.Style.tint": "色调",
+	"midi-qol.HiddenGroundCue.Style.dim": "变暗",
+	"midi-qol.HiddenGroundCue.Style.hatch": "斜线",
+	"midi-qol.HiddenGroundCue.Style.outline": "轮廓",
+	"midi-qol.HiddenGroundCue.Style.hatchOutline": "斜线与轮廓",
+	"midi-qol.HiddenGroundCue.Color.Name": "隐藏地面颜色",
+	"midi-qol.HiddenGroundCue.Color.Hint": "色调、斜线和轮廓的颜色（“变暗”始终为黑色）。",
+	"midi-qol.HiddenGroundCue.Opacity.Name": "隐藏地面不透明度",
+	"midi-qol.HiddenGroundCue.Opacity.Hint": "方格标记的强度。",
+	"midi-qol.TargetsTotalCover": "{name}：{targets} 处于完全掩护，无法被选为目标",
+	"midi-qol.MountedUseMountSpace.Name": "骑乘生物使用坐骑的空间",
+	"midi-qol.MountedUseMountSpace.Hint": "骑乘者的射程和触及从坐骑空间起算，对骑乘者的攻击也从坐骑空间计算。骑乘者是 flags.midi-qol.mount 设为其坐骑 Token id 的 Token，或 Rideable 的骑乘者（包括魔宠，不包括被擒抱的 Token）。若 Rideable 坐骑允许骑乘者在其中移动，则骑乘者使用自身空间。",
+	"midi-qol.EnforceDeathSaves.Name": "强制执行死亡豁免",
+	"midi-qol.EnforceDeathSaves.Hint": "生命值为 0 的角色受到伤害时承受一次死亡豁免失败；重击算两次；若伤害等于或超过其生命值上限，则算三次（死亡）。达到三次时，如同死亡豁免失败一样标记为死亡；撤销伤害卡可恢复计数与状态。",
+	"midi-qol.ActivityStatuses.Label": "应用的状态",
+	"midi-qol.ActivityStatuses.Hint": "直接应用于目标，与 Token HUD 切换的是同一状态，并遵循行动的效果：若豁免失败，或无论豁免结果；对攻击则仅在命中时应用。与效果一样受专注约束。已拥有该状态的生物会保留它。",
+	"midi-qol.ActivityStatuses.Add": "添加状态",
+	"midi-qol.ActivityStatuses.Delete": "移除状态",
+	"midi-qol.ActivityStatuses.Status": "状态",
+	"midi-qol.ActivityStatuses.SpecialDuration": "同时结束于",
+	"midi-qol.ActivityStatuses.AddDuration": "添加…",
+	"midi-qol.ActivityStatuses.DeleteDuration": "移除",
+	"midi-qol.ActivityStatuses.OnSave": "应用",
+	"midi-qol.ActivityStatuses.OnFailedSave": "若豁免失败",
+	"midi-qol.ActivityStatuses.WhateverTheSave": "无论豁免结果",
+	"midi-qol.InvisibleBrief": "隐形（直到它攻击、施法或造成伤害）",
+	"midi-qol.AttackTerm.RollBonus": "掷骰加值",
+	"midi-qol.AttackTerm.Situational": "情境",
+	"midi-qol.AttackTerm.Bonus": "加值",
+	"midi-qol.AttackTerm.Other": "其他",
+	"midi-qol.MacroNameDefault": "留空：此物品或行动的宏",
+	"midi-qol.DamageRollFailed": "{item}：伤害掷骰失败，使用已停止（{error}）",
+	"midi-qol.ContestWaiting": "正在等待 {name}（{roll}）",
+	"midi-qol.ContestNoResult": "{flavor}：没有结果，未进行掷骰",
+	"midi-qol.AmmunitionPerTargetOptions.default": "每次攻击检定 1 个",
+	"midi-qol.AmmunitionPerTargetOptions.use": "每次使用 1 个",
+	"midi-qol.AmmunitionPerTargetOptions.target": "每个目标 1 个",
+	"midi-qol.TELEPORT.FIELDS.midiTeleport.plan.label": "传送",
+	"midi-qol.TELEPORT.FIELDS.midiTeleport.plan.hint": "从卡片按钮，或在使用过程中、其效果与伤害之后（此时规划并放置；关闭后按钮保留）。",
+	"midi-qol.TELEPORT.Movers.swap": "交换施法者与目标",
+	"midi-qol.TELEPORT.PlanModes.button": "从卡片按钮",
+	"midi-qol.TELEPORT.PlanModes.auto": "在使用过程中",
+	"midi-qol.NotEnoughAmmunition": "攻击需要 {needed} 个 {name}；你的物品栏中有 {quantity} 个",
+	"midi-qol.OverTimeEditor.SavesRemaining": "剩余成功次数",
+	"midi-qol.OverTimeEditor.FailsRemaining": "剩余失败次数",
+	"BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.negative.label": "黑暗",
+	"BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.negative.hint": "作为黑暗光源而非光源：半径表示其黑暗范围，并使用黑暗动画。",
+	"BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.priority.label": "优先级",
+	"BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.priority.hint": "光源与黑暗重叠处，优先级更高的来源生效。",
+	"BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.walls.label": "受墙壁阻挡",
+	"BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.fill.label": "填充区域",
+	"BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.fill.hint": "调整光照大小以覆盖整个区域（全部明亮；若明亮光照半径为 0 则为微光），而不是使用上方半径。",
+	"BEHAVIOR.TYPES.midi-qol.regionLight.FIELDS.walls.hint": "墙壁会阻挡光照（或黑暗），如同环境光源。关闭：光照穿过墙壁。",
+	"midi-qol.RegionMagic.Magical": "魔法",
+	"midi-qol.RegionMagic.MagicalHint": "侦测魔法可感知此区域。由法术或魔法物品创建的区域本来就能被感知。",
+	"midi-qol.RegionMagic.School": "法术学派",
+	"midi-qol.RegionMagic.SchoolFromSpell": "创建它的法术的学派"
 }
