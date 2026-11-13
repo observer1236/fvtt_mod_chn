@@ -667,6 +667,9 @@
 					"Hint": "此处你可以配置在你的游戏中佛丹人Verdan黑血治疗Black Blood Healing特性名称。此项可为本地化的字符串。"
 				}
 			}
-		}
+		},
+		"DaysWorth": "一整天的量",
+		"MigrationBegun": "正在开始 Rest Recovery 5e 迁移……",
+		"MigrationComplete": "所有 Rest Recovery 5e 迁移已完成！"
 	}
 }

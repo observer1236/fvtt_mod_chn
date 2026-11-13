@@ -26,7 +26,11 @@
 			"ToppleRequiresSuccess": "失衡只能在攻击检定成功时使用。",
 			"ToppleAlreadyProne": "目标已处于倒地状态。",
 			"VexRequiresSuccess": "侵扰只能在攻击检定成功时使用。",
-			"VexAlreadyApplied": "目标已受到你的侵扰影响。"
+			"VexAlreadyApplied": "目标已受到你的侵扰影响。",
+			"MasteryGeometryUnavailable": "推离和横扫需要攻击所在的场景与层级可用。",
+			"CleaveAlreadyUsedAttack": "本次攻击已经使用过横扫。",
+			"CleaveAlreadyUsedTurn": "本回合已经使用过横扫。",
+			"ToppleImmuneProne": "目标免疫倒地。无法使用失衡！"
 		},
 		"WeaponIdsMenu.Label": "配置",
 		"WeaponIdsMenu.Uuid": "物品 UUID",
@@ -48,6 +52,10 @@
 		"NickReminder.Name": "帖子昵称提醒",
 		"NickReminder.Hint": "启用后，尼克会在攻击掷骰完成时发布提醒消息。",
 		"NpcMasteries.Name": "启用 NPC 精通",
-		"NpcMasteries.Hint": "启用后，具有配置的精通的 NPC 武器可以在攻击时使用该精通。"
+		"NpcMasteries.Hint": "启用后，具有配置的精通的 NPC 武器可以在攻击时使用该精通。",
+		"CrossLevelPush": {
+			"Name": "允许跨层级推离",
+			"Hint": "允许推离将目标移到另一个场景层级。默认禁用。目标当前层级内的、考虑高度的推离仍然可用。"
+		}
 	}
 }

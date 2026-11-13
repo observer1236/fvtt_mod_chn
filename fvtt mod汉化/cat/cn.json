@@ -49,7 +49,12 @@
 					"Characters": "玩家角色",
 					"NPCs": "NPC",
 					"Other": "其他"
-				}
+				},
+				"AddCompendiumTitle": "使用此合集吗？",
+				"AddCompendium": "是否优先在 {pack} 中搜索 {setting}？",
+				"SwitchSource": "切换全部来源",
+				"SwitchRules": "切换全部规则",
+				"PerItem": "逐物品"
 			},
 			"Identifier": {
 				"Label": "文档标识符",
@@ -359,7 +364,8 @@
 				}
 			},
 			"Configuration": {
-				"None": "此自动化没有可配置的选项。"
+				"None": "此自动化没有可配置的选项。",
+				"InvalidFormula": "{formula} 不是有效的公式。"
 			},
 			"ClassBonus": {
 				"Label": "职业施法加值",
@@ -604,7 +610,9 @@
 					"Label": "区域效果",
 					"Field": "应用效果",
 					"Hint": "将此物品的效果应用于此行动所创建区域内的 Token。",
-					"None": "该物品没有可应用的效果。"
+					"None": "该物品没有可应用的效果。",
+					"Disposition": "效果目标",
+					"DispositionHint": "区域内的哪些 Token 会获得这些效果。"
 				},
 				"RegionMacros": {
 					"Label": "区域已注册宏",
@@ -635,7 +643,8 @@
 					"turnStart": "回合开始",
 					"turnEnd": "回合结束",
 					"everyTurn": "每回合",
-					"moved": "Token 在区域内移动"
+					"moved": "Token 在区域内移动",
+					"created": "区域创建"
 				},
 				"Disposition": {
 					"all": "全部",
@@ -645,6 +654,17 @@
 				"AttachToCaster": {
 					"Label": "附于施法者",
 					"Hint": "区域随施法者的 Token 移动。"
+				},
+				"Behaviors": {
+					"Label": "区域行为",
+					"Hint": "添加到已放置区域的 Foundry 与系统行为。",
+					"Add": "添加行为",
+					"Delete": "删除行为",
+					"None": "没有行为。"
+				},
+				"Filter": {
+					"Label": "目标筛选",
+					"Hint": "决定区域影响哪些 Token 的光环筛选宏。"
 				}
 			},
 			"Effect": {
@@ -694,7 +714,8 @@
 						"ToolRolled": "进行工具检定",
 						"ToolFailed": "工具检定失败",
 						"ToolSucceeded": "工具检定成功"
-					}
+					},
+					"toolCheck": "任意工具"
 				},
 				"Animation": "动画",
 				"NoAnimation": {
@@ -728,6 +749,13 @@
 					"Hint": "选择在此文档上运行的已注册宏。每个选定的宏都会为其声明的每个事件触发。"
 				},
 				"None": "全局注册表中没有注册宏。"
+			},
+			"Loading": "CAT 仍在加载自动化。加载完成后此窗口会自动刷新。",
+			"DocumentMap": {
+				"Label": "名称",
+				"Count": "数量",
+				"Add": "添加条目",
+				"Unlink": "取消链接"
 			}
 		},
 		"Region": {
@@ -760,7 +788,8 @@
 			"UseExtraCost": "使用 {document} 吗？（消耗 {quantity} {resource}）",
 			"UseRecover": "使用{document}恢复{spent}/{max} {resource}？",
 			"UseRollTotal": "使用{document}？ （掷骰总数：{rollTotal}）",
-			"UseForRollTotal": "为 {name} 使用 {document} 吗？（掷骰总值：{rollTotal}）"
+			"UseForRollTotal": "为 {name} 使用 {document} 吗？（掷骰总值：{rollTotal}）",
+			"UseOn": "对 {target} 使用 {document}？"
 		},
 		"Common": {
 			"AttackType": {
@@ -910,7 +939,14 @@
 				"Disable": "禁用",
 				"Enable": "启用",
 				"SourceTag": "来源",
-				"PackTag": "合集包"
+				"PackTag": "合集包",
+				"Rank": "顺序",
+				"RankHint": "数值越小越靠前。",
+				"Recommended": "使用推荐顺序",
+				"RecommendedHint": "个人自制自动化优先，其次是自动化模块，官方内容或 SRD 放在最后。",
+				"MassApply": "批量应用",
+				"MassApplyHint": "批量应用时使用此来源。",
+				"ContentMassApplyWarning": "通常用于角色构建，不建议使用批量应用。"
 			},
 			"Backups": {
 				"Name": "备份",
@@ -973,7 +1009,8 @@
 				"Hint": "物品同时配置了 CAT 动画，以及 Automated Animations 或 Boss Loot FX 动画时，选择优先播放哪种动画。",
 				"Cat": "CAT（阻止 Automated Animations 和 Boss Loot FX 自动播放动画）",
 				"Module": "Automated Animations 和 Boss Loot FX（跳过 CAT 动画）",
-				"Both": "同时播放"
+				"Both": "同时播放",
+				"Off": "关闭"
 			},
 			"General": {
 				"Name": "常规",
@@ -1066,6 +1103,22 @@
 			"BackupRetention": {
 				"Name": "备份时长",
 				"Hint": "自动和手动备份保留多长时间。"
+			},
+			"AuraCombatOnly": {
+				"Name": "仅战斗中启用光环",
+				"Hint": "仅在已开始战斗的场景中，光环才会应用其效果和触发器。"
+			},
+			"WeaponMastery": {
+				"Name": "武器精通",
+				"Hint": "哪些角色可获得自动化的武器精通。",
+				"None": "无人",
+				"Pc": "玩家角色",
+				"Npc": "非玩家角色",
+				"Both": "所有人"
+			},
+			"AdvancedWeaponProficiency": {
+				"Name": "高级武器熟练",
+				"Hint": "角色需要拥有“高级武器熟练”专长，才能使用 Grim Hollow 高级武器的精通属性。"
 			}
 		},
 		"DAE": {
@@ -1100,7 +1153,10 @@
 				"Name": "忽略困难地形：其他 Token",
 				"Description": "这个角色不认为其他Token是困难的地形。"
 			},
-			"Other": "CAT 其他"
+			"Other": "CAT 其他",
+			"CI": {
+				"Name": "{condition} 状态免疫"
+			}
 		},
 		"Generic": {
 			"Disabled": "禁用",
@@ -1113,7 +1169,8 @@
 				"Elemental": "元素",
 				"Other": "其他"
 			},
-			"Resize": "调整大小"
+			"Resize": "调整大小",
+			"Rerolled": "正在重掷 {dice}"
 		},
 		"QuickConditions": {
 			"Legend": "可用条件",
@@ -1228,7 +1285,8 @@
 			"NoSequencer": "Sequencer 未启用或未安装，播放动画需要此模组！",
 			"NoSpellCompendiums": "你尚未在设置中启用任何法术合集！",
 			"OutdatedSequencer": "Sequencer 版本过旧！播放 CAT 动画至少需要 {minSequencerVersion} 版。",
-			"UnregisteredSpellList": "未为键 {key} 注册法术列表。"
+			"UnregisteredSpellList": "未为键 {key} 注册法术列表。",
+			"RequiresGM": "使用此自动化可能需要一名在线的 GM！"
 		},
 		"Troubleshooter": {
 			"Title": "CAT 疑难解答",
@@ -1266,7 +1324,8 @@
 				"Automations": "自动化",
 				"Scene": "场景",
 				"Game": "游戏",
-				"Errors": "错误"
+				"Errors": "错误",
+				"Versions": "模块版本"
 			},
 			"Status": {
 				"pass": "执行阶段",
@@ -1300,13 +1359,15 @@
 			"Required": {
 				"Expected": "{value} → {fix}",
 				"ClientScope": "（客户端设置）",
-				"GmAutoDamage": "GM自动掷骰伤害"
+				"GmAutoDamage": "GM自动掷骰伤害",
+				"Outdated": "{version}：需要 {minimum} 或更高版本"
 			},
 			"Card": {
 				"settings": "CAT 依赖的某些设置未按预期设置：",
 				"modules": "部分已启用模组已废弃或与 CAT 冲突：",
 				"fix": "修复",
-				"open": "疑难解答"
+				"open": "疑难解答",
+				"versions": "部分模块需要其依赖模块的更高版本。请更新："
 			},
 			"Export": {
 				"Title": "导出数据",
@@ -1342,8 +1403,13 @@
 				},
 				"Permissions": {
 					"Users": "允许：{allowed}；被拒绝：{denied}"
-				}
-			}
+				},
+				"BLFXOverride": "此物品上设置的 BLFX 动画仍会与 CAT 动画同时播放。请在 BLFX 的动画编辑器中移除它们，或将 CAT 动画设为“开启并延后”。"
+			},
+			"OneWayDoors": "Monk's Wall Enhancement 已启用单向门。如果光环出现卡顿，请关闭此设置。",
+			"ContentMassApply": "某个内容来源启用了批量应用，这会撤销你的自动化。",
+			"ArgonTargetPicker": "Argon - Combat HUD 已启用目标选择器。它要求每次计数对应一个唯一目标，这会破坏将攻击拆分到多个目标的自动化。请关闭此设置。",
+			"OutdatedDependency": "{module} 需要 {dependency} {minimum} 或更高版本，但当前安装的是 {version}。请更新 {dependency}。"
 		},
 		"Summon": {
 			"DeadTitle": "CAT召唤物",
@@ -1376,7 +1442,9 @@
 			"Targets": "目标",
 			"ThirdParty": "第三方加值",
 			"Title": "可选加值",
-			"Unknown": "?"
+			"Unknown": "?",
+			"Rider": "附加效果",
+			"RiderHint": "此选项提供的是额外效果，而非掷骰加值。"
 		},
 		"CompendiumBrowser": {
 			"SpellPicker": "从 {lists} 列表中选择法术：",
@@ -1496,10 +1564,20 @@
 				"PickModeHint": "“全部”会创建全部条目。“额度”允许用户分配召唤额度，各条目按其权重消耗额度。",
 				"PickOptions": {
 					"all": "全部",
-					"budget": "额度"
+					"budget": "额度",
+					"one": "一个"
 				},
 				"Budget": "额度",
-				"BudgetHint": "“生物选择”设为“额度”时，可选总权重的计算公式。"
+				"BudgetHint": "“生物选择”设为“额度”时，可选总权重的计算公式。",
+				"ControlActivity": "控制行动",
+				"ControlActivityHint": "用于打开已放置召唤物角色卡的行动。",
+				"ControlPrompt": "为选中的召唤物打开角色卡。",
+				"DismissActivity": "遣散行动",
+				"DismissActivityHint": "用于遣散此物品召唤物的行动。",
+				"FollowUpConsume": "后续行动消耗使用次数",
+				"FollowUpConsumeHint": "后续行动会消耗其行动的使用次数和资源。",
+				"PickOne": "选择一个生物。",
+				"PlaceSummonFirst": "必须先放置 {feature} 的召唤物，才能使用 {activity}！"
 			}
 		},
 		"Backups": {
@@ -1521,7 +1599,8 @@
 			"OneMonth": "一个月",
 			"ThreeMonths": "三个月",
 			"SixMonths": "六个月",
-			"OneYear": "一年"
+			"OneYear": "一年",
+			"LockedPack": "备份合集 {pack} 已锁定。请解锁后再保存备份。"
 		},
 		"CustomMacros": {
 			"NoReturn": "自定义宏 {name} 没有返回宏数据。",
@@ -1533,7 +1612,190 @@
 				"New": "添加新宏时，返回自己的来源和标识符，再到文档 CatKit 的“已注册宏”选项卡中选择。",
 				"Scope": "CAT 实用程序可按名称使用。在控制台中运行<code>console.log(cat.utils)</code>以列出它们。",
 				"Links": "请参阅 <a href=\"{wiki}\" target=\"_blank\" rel=\"noopener\">wiki</a>，或到 <a href=\"{discord}\" target=\"_blank\" rel=\"noopener\">Discord 社区</a> 寻求帮助。"
+			},
+			"MacroWarning": "这些宏存在错误或返回数据格式不正确。请查看宏编辑器中的说明以了解预期格式。",
+			"NotFound": "找不到宏！（uuid）{uuid}",
+			"PackWarning": "这些合集中存在大量无效的自定义宏。为避免运行这些宏产生意外副作用，已跳过各合集剩余部分的注册。",
+			"WarningMessage": "CAT 自定义宏"
+		},
+		"Devtools": {
+			"Marker": "CAT 开发工具已启用",
+			"MarkerHint": "调试日志已启用。正式跑团前请关闭。"
+		},
+		"Welcome": {
+			"Title": "Coven's Automation Toolkit",
+			"Content": "<p>Coven's Automation Toolkit 会应用并配置来自 Cauldron of Plentiful Resources 等模块的自动化。</p><p>如需帮助，请先查看 Coven Discord 中的 FAQ 频道，然后携带疑难解答的导出内容到 #support 提问。</p><a class=\"cat-welcome-discord\" href=\"https://discord.gg/BumxBcQDrT\" target=\"_blank\" rel=\"noopener\"><i class=\"fa-brands fa-discord\"></i> 加入 Coven 的 Discord</a><p class=\"cat-welcome-label\">引导教程</p><div class=\"cat-welcome-tours\"><button type=\"button\" data-cat-tour=\"cat.sources\"><i class=\"fa-solid fa-layer-group\"></i> 自动化来源</button><button type=\"button\" data-cat-tour=\"cat.catkit\"><i class=\"fa-solid fa-shield-cat\"></i> 应用自动化</button><button type=\"button\" data-cat-tour=\"cat.settings\"><i class=\"fa-solid fa-gears\"></i> CAT 设置</button></div>"
+		},
+		"Tours": {
+			"catkit": {
+				"Title": "应用自动化",
+				"Description": "使用 CatKit 应用并配置自动化。",
+				"intro": {
+					"Title": "CatKit 简介",
+					"Content": "所有自动化都通过 CatKit 应用和配置。"
+				},
+				"sheetControl": {
+					"Title": "打开 CatKit",
+					"Content": "点击角色卡控制菜单中的盾牌图标即可打开 CatKit。"
+				},
+				"status": {
+					"Title": "自动化状态",
+					"Content": "盾牌的颜色表示自动化状态。黄色：可用。红色：有可用更新。绿色：已是最新。蓝色：已是最新，且带有选项。粉色：所选来源没有此物品的自动化。"
+				},
+				"apply": {
+					"Title": "应用自动化",
+					"Content": "选择一个来源，然后点击对勾，用自动化版本替换该物品。"
+				},
+				"rules": {
+					"Title": "规则版本",
+					"Content": "应用前，请先设置与该物品相符的规则版本。"
+				},
+				"identifier": {
+					"Title": "标识符",
+					"Content": "自动化通过标识符进行匹配。如果 CatKit 找不到内容，请检查标识符是否与物品名称相符。"
+				},
+				"source": {
+					"Title": "自动化来源",
+					"Content": "在此选择一个模块，可为该物品覆盖“自动化来源”的优先顺序。"
+				},
+				"ignore": {
+					"Title": "忽略物品",
+					"Content": "批量更新会跳过被忽略的物品。"
+				},
+				"tabs": {
+					"Title": "其他选项卡",
+					"Content": "“配置”选项卡包含该自动化的各项选项。其他选项卡用于自行构建自动化。"
+				},
+				"troubleshooter": {
+					"Title": "疑难解答",
+					"Content": "点击听诊器图标可打开疑难解答。求助时请附上其导出内容。"
+				},
+				"actor": {
+					"Title": "整个角色",
+					"Content": "批量应用/更新可一次性为角色上的所有物品应用自动化。"
+				},
+				"compendium": {
+					"Title": "整个合集",
+					"Content": "在合集的 CatKit 中，可为其中所有物品应用自动化。已锁定的合集会先被复制。"
+				},
+				"outro": {
+					"Title": "完成",
+					"Content": "接下来，设置你的自动化来源。"
+				}
+			},
+			"sources": {
+				"Title": "自动化来源",
+				"Description": "选择由哪些模块提供自动化。",
+				"intro": {
+					"Title": "自动化来源",
+					"Content": "自动化来源决定 CatKit 使用哪些模块，以及哪个模块优先。"
+				},
+				"open": {
+					"Title": "打开列表",
+					"Content": "点击“配置自动化来源”即可打开该列表。"
+				},
+				"order": {
+					"Title": "优先顺序",
+					"Content": "将 Cauldron of Plentiful Resources 放在首位，其次是 Gambit's Premades 和 Midi Item Showcase（如果你使用它们），最后是 Midi-QOL 的示例物品。"
+				},
+				"content": {
+					"Title": "自动化，而非内容",
+					"Content": "在此请不要启用 D&D Beyond Importer、系统模块和规则书模块。"
+				},
+				"kinds": {
+					"Title": "来源与合集",
+					"Content": "蓝色的“来源”行代表模块。金色的“合集”行代表单个合集，用于你自己制作的自动化。"
+				},
+				"rank": {
+					"Title": "调整顺序",
+					"Content": "拖动行或直接输入序号。序号越小越靠前。"
+				},
+				"disable": {
+					"Title": "禁用来源",
+					"Content": "点击 X 即可禁用该来源。"
+				},
+				"inactive": {
+					"Title": "未启用的来源",
+					"Content": "已禁用的来源会留在这里。点击 + 按钮可将其重新添加。"
+				},
+				"confirm": {
+					"Title": "保存",
+					"Content": "点击“确认”即可保存列表。已应用的物品会保留其自动化，直到你进行更新。"
+				},
+				"compendiums": {
+					"Title": "合集",
+					"Content": "“合集”是另一份列表，用于指定完整文档（例如某个特性所添加的法术）的查找位置。"
+				},
+				"compendiumLists": {
+					"Title": "合集列表",
+					"Content": "按优先级列出包含完整内容的合集，靠前的优先。对于系统或规则书，请先用其 CatKit 为副本应用自动化，然后在列表中填该副本。"
+				},
+				"reapply": {
+					"Title": "修正已应用的物品",
+					"Content": "从错误来源应用的物品会保留该来源。请在物品的 CatKit 中选择正确的来源并重新应用。"
+				}
+			},
+			"settings": {
+				"Title": "CAT 设置",
+				"Description": "CAT 各设置菜单的引导教程。",
+				"intro": {
+					"Title": "CAT 设置",
+					"Content": "Cauldron of Plentiful Resources 没有单独的设置菜单，其选项都集中在这里。"
+				},
+				"help": {
+					"Title": "疑难解答",
+					"Content": "疑难解答会查找并修复设置冲突。求助时请附上其导出内容。"
+				},
+				"general": {
+					"Title": "常规",
+					"Content": "“常规”包含模块全局选项。"
+				},
+				"automation": {
+					"Title": "自动化来源",
+					"Content": "“自动化来源”有单独的引导教程。"
+				},
+				"backups": {
+					"Title": "备份",
+					"Content": "“备份”会按计划将玩家角色保存到合集中。"
+				},
+				"compendiums": {
+					"Title": "合集",
+					"Content": "“合集”列出完整文档的存放位置。"
+				},
+				"integration": {
+					"Title": "整合",
+					"Content": "“整合”涉及 Dice So Nice 和动画模块。"
+				},
+				"interface": {
+					"Title": "界面",
+					"Content": "“界面”用于调整 CAT 显示的内容。"
+				},
+				"manualRolls": {
+					"Title": "手动掷骰",
+					"Content": "“手动掷骰”用于设置实体骰子的掷骰结算器。"
+				},
+				"mechanics": {
+					"Title": "机制",
+					"Content": "“机制”包含规则自动化，例如充能掷骰。"
+				},
+				"permissions": {
+					"Title": "权限",
+					"Content": "“权限”设置哪些用户可以打开各个 CatKit 选项卡。"
+				},
+				"devtools": {
+					"Title": "开发工具",
+					"Content": "“开发工具”面向宏作者。跑团时请保持关闭。"
+				},
+				"outro": {
+					"Title": "完成",
+					"Content": "设置菜单的介绍就到这里。"
+				}
 			}
+		},
+		"WeaponMastery": {
+			"NoPush": "不推离",
+			"PushPrompt": "要将 {target} 推离多远？",
+			"CleavePrompt": "对第二个生物发动一次劈砍攻击吗？"
 		}
 	}
 }
