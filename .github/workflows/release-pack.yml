@@ -4,6 +4,11 @@ on:
   release:
     types: [published]
   workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version (e.g. 14.2); optional"
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -11,6 +16,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      RELEASE_TAG: ${{ github.event.release.tag_name }}
+      RELEASE_VERSION: ${{ inputs.version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,7 +29,29 @@ jobs:
           python-version: "3.12"
 
       - name: Build mod_chn.zip
-        run: python scripts/build_release.py
+        run: |
+          if [ -n "$RELEASE_TAG" ]; then
+            python scripts/build_release.py --release-tag "$RELEASE_TAG"
+          elif [ -n "$RELEASE_VERSION" ]; then
+            python scripts/build_release.py --version "$RELEASE_VERSION"
+          else
+            python scripts/build_release.py
+          fi
+
+      - name: Verify manifest
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          manifest = json.loads(Path("module.json").read_text(encoding="utf-8"))
+          assert manifest["version"], "module.json has no version"
+          assert manifest["manifest"].endswith("/releases/latest/download/module.json"), manifest["manifest"]
+          assert manifest["download"].endswith("/releases/latest/download/mod_chn.zip"), manifest["download"]
+          print(f"module.json: version={manifest['version']}")
+          print(f"manifest: {manifest['manifest']}")
+          print(f"download: {manifest['download']}")
+          PY
 
       - name: Upload to release
         if: github.event_name == 'release'
