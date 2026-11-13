@@ -9,7 +9,8 @@
 		}
 	],
 	"compatibility": {
-		"minimum": "14"
+		"minimum": "14",
+		"verified":"14"
 	},
 	"esmodules": [
 		"welcome.js"
