@@ -115,7 +115,7 @@
 		"name_SoftLock": "软锁定",
 		"lockDivergedTip": "你当前的值与锁定值不同。",
 		"controlsToggleName": "启用控制（按键绑定）同步",
-		"controlsToggleHint": "如果启用，GM 可以锁定或软锁定按键绑定，并将其推送给连接的玩家。",
+		"controlsToggleHint": "如果启用，GM 可以从按键绑定配置窗口向已连接的玩家推送按键绑定。按键绑定锁定由工具箱管理，不受此开关控制。",
 		"controlsSoftApplied": "按键绑定软锁定已应用。",
 		"enableModuleManagementName": "启用增强模组管理",
 		"enableModuleManagementHint": "启用后，BBMM将为所有用户替换原版模组管理列表，使用紧凑布局和注释界面。仅GM可更改此设置。",
@@ -187,8 +187,10 @@
 				"clearAllModuleTags": "清除所有模组标签",
 				"keyBindingInspector": "按键绑定检查器",
 				"resetChangelog": "重置更新日志",
-				"viewChangelog": "查看更新日志"
-			}
+				"viewChangelog": "查看更新日志",
+				"environmentReport": "环境报告"
+			},
+			"tabKeybindLocks": "按键绑定锁定"
 		},
 		"buttons": {
 			"yes": "是",
@@ -305,7 +307,9 @@
 			"autoForceReloadName": "强制玩家重新加载",
 			"autoForceReloadHint": "当新设置被锁定/同步时，强制玩家立即重新加载。",
 			"receiveImportantMessages": "接收重要推送消息：",
-			"receiveImportantMessagesHint": "启用后，当BBMM或你安装的模组出现紧急问题时，你可能会收到重要消息。这些消息仅在必要时发送，包含问题的重要信息及解决方法。你可以选择禁用此功能，但建议保持启用，以便及时了解可能影响游戏的关键问题。"
+			"receiveImportantMessagesHint": "启用后，当BBMM或你安装的模组出现紧急问题时，你可能会收到重要消息。这些消息仅在必要时发送，包含问题的重要信息及解决方法。你可以选择禁用此功能，但建议保持启用，以便及时了解可能影响游戏的关键问题。",
+			"settingsDriftCheckName": "设置偏离时提醒",
+			"settingsDriftCheckHint": "启用后，如果你当前的设置与上次保存或加载的设置预设不同，BBMM 会在加载时提醒你，以便你决定是否再次保存。仅检查该预设中包含的设置。"
 		},
 		"macro": {
 			"columnName": "名称",
@@ -440,7 +444,9 @@
 			"newModulesSelectNone": "全不选",
 			"newModulesDontAskAgain": "不再询问",
 			"newModulesAskLater": "稍后询问",
-			"newModulesNoneSelected": "未选择任何模组。"
+			"newModulesNoneSelected": "未选择任何模组。",
+			"previewModulePresetName": "应用前预览模组预设",
+			"previewModulePresetHint": "启用后，加载模组预设会打开一个交互式列表，你可以在应用前查看并调整哪些模组将被启用或禁用。禁用时，确认后将直接应用该预设。"
 		},
 		"lockPresets": {
 			"saveBtnLabel": "将当前锁定保存为预设",
@@ -558,6 +564,77 @@
 			"exportedList": "已导出列表。",
 			"exportedModulePreset": "已导出模组预设。"
 		},
-		"clickNameToFill": "单击以填写上面的名称字段（保存会覆盖此预设）"
+		"clickNameToFill": "单击以填写上面的名称字段（保存会覆盖此预设）",
+		"noteLabel": "注意！",
+		"lockedNotAffected": "以下模组已锁定，因此不会受到影响：",
+		"applyPreviewSummary": "将启用 {enable} 个、禁用 {disable} 个（{unchanged} 个未变更）",
+		"lockedUnaffectedNote": "已锁定的模组不受影响",
+		"lockedTooltip": "已锁定 - 不会被更改",
+		"filterModulesPlaceholder": "过滤模组…",
+		"keybindLocks": {
+			"intro": "强制按键绑定在每次加载时保持清除（未绑定）或固定为指定按键。此设置会在每次加载时重新应用，因此总是被还原的绑定会保持你在此处的设置。",
+			"reapplyHint": "锁定会在每次加载时重新应用。你仍可在游戏过程中更改按键；下次重新加载时会被重置。你的个人锁定会覆盖 GM 的锁定。",
+			"baselineLegend": "基准 - 适用于所有人",
+			"baselineHint": "推送给所有已连接的玩家，并在每个客户端加载时重新应用。玩家对同一操作的个性化锁定会覆盖此项。",
+			"personalLegend": "个人 - 仅你自己",
+			"personalHint": "仅应用于你。会覆盖同一操作的基准锁定。",
+			"enforcedLegend": "GM 强制锁定",
+			"enforcedHint": "由你的 GM 设置，并在每次加载时重新应用。你下方的个人锁定会在同一操作上覆盖它们。",
+			"noEnforced": "没有 GM 强制锁定。",
+			"addBaseline": "添加基准锁定",
+			"addPersonal": "添加个人锁定",
+			"saveApply": "保存并应用",
+			"push": "推送给玩家",
+			"pushed": "已将按键绑定锁定推送给玩家。",
+			"saved": "按键绑定锁定已保存并应用。",
+			"saveFailed": "保存按键绑定锁定失败。详情请查看控制台。",
+			"noLocks": "尚无锁定。点击「添加」创建一个。",
+			"remove": "移除此锁定",
+			"cleared": "已清除",
+			"keptUnbound": "保持未绑定",
+			"forcedTo": "强制为 {key}",
+			"unbound": "未绑定",
+			"core": "核心",
+			"addTitle": "添加按键绑定锁定",
+			"allNamespaces": "所有命名空间",
+			"searchPlaceholder": "按操作名称或当前按键搜索…",
+			"noMatch": "没有匹配搜索的操作。",
+			"selectAction": "请在上方选择一个操作…",
+			"modeClear": "清除（取消绑定）",
+			"modeSet": "设为按键",
+			"pressKey": "请按下一个按键…",
+			"pressKeyBtn": "按下按键",
+			"addKey": "添加按键",
+			"removeKey": "移除按键",
+			"noKeys": "尚未捕获任何按键。",
+			"change": "更改",
+			"cancel": "取消",
+			"close": "关闭",
+			"addLock": "添加锁定",
+			"added": "已为 {name} 添加 {mode} 锁定。",
+			"captureFirst": "请先捕获一个按键，或选择「清除」。"
+		},
+		"envReport": {
+			"title": "环境报告",
+			"copy": "复制",
+			"download": "下载",
+			"downloadFailed": "下载报告失败。详情请查看控制台。",
+			"showAll": "显示所有已安装项",
+			"markdown": "Markdown 表格",
+			"close": "关闭",
+			"buildFailed": "生成环境报告失败。详情请查看控制台。"
+		},
+		"drift": {
+			"title": "设置已更改",
+			"summary": "你当前的设置与预设 '{name}' 不同 - 共 {count} 处更改（{world} 项世界、{client} 项客户端、{user} 项用户）。打开你的预设以重新加载并恢复该预设、将其更新为当前设置，或保存一个新预设。",
+			"btnReview": "查看更改",
+			"btnManager": "打开预设",
+			"btnRemind": "提醒我",
+			"btnIgnore": "忽略",
+			"btnWhy": "为什么我会看到这个？",
+			"ignored": "BBMM 将不再提醒这些更改，直到你下次保存或加载预设。",
+			"onboardBody": "当你的设置偏离已保存的预设时，BBMM 可以向你发出警告，以便你保持预设最新（并在清除浏览器缓存后恢复它）。要启用此功能，请保存或加载一个设置预设，该预设将成为你的基准。你可以随时在 BBMM 设置中禁用这些警告。",
+			"btnLater": "暂不"
+		}
 	}
 }
