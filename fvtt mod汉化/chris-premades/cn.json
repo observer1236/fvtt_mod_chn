@@ -3355,7 +3355,6 @@
 			"Generic.MultiSingleTarget.Context": "选择多少个？（最多：{totalTargets}）",
 			"Generic.MultiSingleTarget.Reaction": "使用反应？",
 			"Generic.MultiSingleTarget.CombineAttacks": "合并攻击",
-			"Generic.MultiSingleTarget.CombineAttacksHint": "对每个目标仅进行一次攻击掷骰。攻击的第一项伤害按分配给该目标的攻击次数投掷相同数量的骰子。",
 			"Generic.NextHitRider.BonusDamageTypeHint": "额外伤害的类型。选择“无”则沿用攻击的伤害类型。",
 			"Generic.NextHitRider.BonusHint": "下次命中时附加的伤害。@scaling 为升环施法提高的环阶数。",
 			"Generic.NextHitRider.EndSpell": "结束法术",
@@ -3705,7 +3704,6 @@
 			"Legacy.SummonFey.Mirthful": "欢欣",
 			"Legacy.SummonFey.Shortsword": "短剑",
 			"Legacy.SummonFey.Tricksy": "诡诈",
-			"Legacy.ThrumOfTheLand.Attack": "+{bonus} 攻击掷骰",
 			"Legacy.ThrumOfTheLand.AttackBonus": "攻击检定加值",
 			"Legacy.ThrumOfTheLand.Concentration": "专注豁免具有优势，持续时间加倍",
 			"Legacy.ThrumOfTheLand.DC": "法术豁免 DC +{bonus}",
@@ -4185,6 +4183,9 @@
 						"SpreadFire": "散射",
 						"TwinnedBarrel": "双联枪管"
 					}
+				},
+				"MultiSingleTarget": {
+					"CombineAttacksHint": "对每个目标仅进行一次攻击检定。攻击的第一项伤害按分配给该目标的攻击次数投掷相同数量的骰子。"
 				}
 			},
 			"Legacy": {
@@ -4328,6 +4329,9 @@
 				"PariahsShield": {
 					"Protect": "使用你的反应和 {item} 代替 {name} 承受伤害？",
 					"MaxBonus": "最大 AC 加值"
+				},
+				"ThrumOfTheLand": {
+					"Attack": "+{bonus} 攻击检定"
 				}
 			},
 			"Modern": {
@@ -5591,7 +5595,7 @@
 				"Title": "帮助"
 			},
 			"2": {
-				"Content": "比如，法术 \"Fire Shield\" 被储存在 \"CPR Spells\" 合集包中。你可以从合集包中拖动这个法术到你的角色身上来使用它。",
+				"Content": "比如，法术“火焰护盾”被储存在“CPR Spells”合集包中。你可以从合集包中拖动这个法术到你的角色身上来使用它。",
 				"Title": "合集包"
 			},
 			"3": {
@@ -5599,7 +5603,7 @@
 				"Title": "物品医药箱"
 			},
 			"4": {
-				"Content": "医药箱展示了物品的状态。\nRed: 过时。\nYellow: 有可用的自动化。\nGreen: 物品是最新版。\nBlue: 物品是最新版，且有设置选项。",
+				"Content": "医药箱展示了物品的状态。\n红色：过时。\n黄色：有可用的自动化。\n绿色：物品是最新版。\n蓝色：物品是最新版，且有设置选项。",
 				"Title": "物品状态"
 			},
 			"5": {
@@ -5619,10 +5623,10 @@
 				"Title": "描述日志"
 			},
 			"9": {
-				"Content": "比如，法术 \"Dragon's Breath\" 会在目标角色身上创建一个叫做 \"Dragon Breath\" 的临时特性。 \n填写这个日志页面就会在创建该特性时自动填入描述。",
+				"Content": "比如，法术“龙息”会在目标角色身上创建一个叫做“龙息”的临时特性。\n填写这个日志页面就会在创建该特性时自动填入描述。",
 				"Title": "描述日志"
 			},
-			"Chat": "<hr>在此处观看cpr的教程：<br><button class=\"chris-tour\" type=\"button\">开始教程</button>",
+			"Chat": "<hr>在此处观看 CPR 的教程：<br><button class=\"chris-tour\" type=\"button\">开始教程</button>",
 			"Description": "开始CPR教程。",
 			"Hint": "开始cpr的指导教程。",
 			"Title": "CPR教程",
