@@ -2565,7 +2565,7 @@
 	"midi-qol.MountedUseMountSpace.Name": "骑乘生物使用坐骑的空间",
 	"midi-qol.MountedUseMountSpace.Hint": "骑乘者的射程和触及从坐骑空间起算，对骑乘者的攻击也从坐骑空间计算。骑乘者是 flags.midi-qol.mount 设为其坐骑 Token id 的 Token，或 Rideable 的骑乘者（包括魔宠，不包括被擒抱的 Token）。若 Rideable 坐骑允许骑乘者在其中移动，则骑乘者使用自身空间。",
 	"midi-qol.EnforceDeathSaves.Name": "强制执行死亡豁免",
-	"midi-qol.EnforceDeathSaves.Hint": "生命值为 0 的角色受到伤害时承受一次死亡豁免失败；重击算两次；若伤害等于或超过其生命值上限，则算三次（死亡）。达到三次时，如同死亡豁免失败一样标记为死亡；撤销伤害卡可恢复计数与状态。",
+	"midi-qol.EnforceDeathSaves.Hint": "生命值为 0 的角色受到伤害时承受一次死亡豁免失败；重击算两次；若伤害等于或超过其生命值上限，则算三次（死亡）。角色被降至 0 生命值时，若溢出的伤害等于或超过其生命值上限（巨量伤害），则直接死亡。达到三次时，如同死亡豁免失败一样标记为死亡；撤销伤害卡可恢复计数与状态。",
 	"midi-qol.ActivityStatuses.Label": "应用的状态",
 	"midi-qol.ActivityStatuses.Hint": "直接应用于目标，与 Token HUD 切换的是同一状态，并遵循行动的效果：若豁免失败，或无论豁免结果；对攻击则仅在命中时应用。与效果一样受专注约束。已拥有该状态的生物会保留它。",
 	"midi-qol.ActivityStatuses.Add": "添加状态",
@@ -2718,5 +2718,30 @@
 	"midi-qol.RulesText.Problem": "有 {count} 个物品没有规则文本（midi-qol 为 SRD 之外内容提供的示例物品）。",
 	"midi-qol.RulesText.Fixer": "“自动修复”会从官方模组、SRD 或规则文本合集中复制它们已有的文本。",
 	"midi-qol.RulesText.GMOnly": "只有 GM 可以为整个世界补全规则文本。",
-	"midi-qol.RulesText.FilledAll": "已为 {filled} 个物品补全规则文本；{missing} 个未找到（已在控制台中列出）。"
+	"midi-qol.RulesText.FilledAll": "已为 {filled} 个物品补全规则文本；{missing} 个未找到（已在控制台中列出）。",
+	"midi-qol": {
+		"RangeUnmeasurable": {
+			"noCanvas": "{name} 到 {target} 的距离无法检查：当前没有正在查看的场景",
+			"noPosition": "{name} 到 {target} 的距离无法检查：{name} 在该场景中没有 Token",
+			"differentScene": "{target} 与 {name} 不在同一个场景",
+			"notDrawn": "{name} 到 {target} 的距离无法检查：其中一方不在当前查看的层级上"
+		},
+		"Stanched": "{name}：已止血 {effects}",
+		"ConsumeOtherActivityResourceShort": "消耗其他",
+		"RefundOtherActivityResourceShort": "返还其他"
+	},
+	"dae": {
+		"MidiQOL": {
+			"fieldData": {
+				"flags": {
+					"midi-qol": {
+						"stanch": {
+							"name": "止血",
+							"description": "一次检定可结束此效果：dc=15、skill=med、range=5、healing=none|spell|magical|any。由该生物或范围内以它为目标的生物进行掷骰。"
+						}
+					}
+				}
+			}
+		}
+	}
 }

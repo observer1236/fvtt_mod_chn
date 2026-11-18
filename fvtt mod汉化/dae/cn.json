@@ -2744,5 +2744,62 @@
 	"dae.OriginReplacement.Content": "<p>{effects} 个效果中的 {changes} 项变更没有替换项，将被设为 <strong>来源</strong>：应用效果时，其 @ 引用会像旧版 DAE 那样从施法者填充。## 引用仍在目标上解析。转移效果和附魔不会更改。</p><p>此操作无法撤销。</p>",
 	"dae.OriginReplacement.Nothing": "DAE：{name} 没有可转换的变更",
 	"dae.OriginReplacement.Done": "DAE：已在 {name} 中将 {effects} 个效果里的 {changes} 项变更设为来源替换",
-	"dae.OriginReplacement.Locked": "DAE：{name} 已锁定——请先解锁"
+	"dae.OriginReplacement.Locked": "DAE：{name} 已锁定——请先解锁",
+	"dae": {
+		"ConditionBuilder": {
+			"RuleHint": "在每次 {key} 掷骰时，针对该掷骰检查：掷骰者、其物品以及掷骰自身的字段。",
+			"TestWith": "测试依据",
+			"NoRoll": "该角色没有此类掷骰可供测试。",
+			"RollPasses": "{roll}（{actor}）：通过",
+			"RollFails": "{roll}（{actor}）：失败",
+			"FieldGroup": {
+				"roll": "此掷骰"
+			},
+			"RuleField": {
+				"type": "掷骰类型",
+				"ability": "属性",
+				"proficient": "熟练",
+				"skill": "技能",
+				"tool": "工具",
+				"attackType": "攻击类型（近战/远程）",
+				"attackClassification": "攻击分类",
+				"attackMode": "攻击方式",
+				"damageType": "该伤害分项的伤害类型",
+				"properties": "物理属性",
+				"isCritical": "重击"
+			},
+			"RollType": {
+				"attack": "攻击",
+				"ability": "属性检定或豁免",
+				"skill": "技能检定",
+				"tool": "工具检定",
+				"initiative": "先攻",
+				"concentration": "专注",
+				"death": "死亡豁免"
+			},
+			"Sample": {
+				"attack": "攻击",
+				"damage": "伤害",
+				"healing": "治疗",
+				"check": "检定",
+				"skill": "技能",
+				"tool": "工具",
+				"save": "豁免"
+			}
+		},
+		"RuleKey": {
+			"D20": "D20 同时适用于攻击、检定和豁免。",
+			"Conditions": "此变更的条件会在每次掷骰时针对该掷骰检查。"
+		},
+		"RuleValue": {
+			"Advantage": {
+				"1": "优势",
+				"-1": "劣势",
+				"=1": "始终优势",
+				"=-1": "始终劣势",
+				">=0": "不能具有劣势",
+				"<=0": "不能具有优势"
+			}
+		}
+	}
 }
